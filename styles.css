@@ -840,6 +840,17 @@ body::before {
   background: var(--line-strong);
 }
 .phase__diff-dot.on { background: var(--c-amber); }
+.phase__diff-note {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--fg-dim);
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.4;
+}
 
 .phase__capstone-pill {
   display: inline-flex; align-items: center; gap: 8px;
@@ -1381,6 +1392,156 @@ body::before {
   }
   .instructor__cta { align-items: flex-start; justify-content: flex-start; }
   .dock { display: none !important; }
+}
+
+/* ============ OUT OF SCOPE ============ */
+.outscope {
+  padding: 12vh 8vw 6vh;
+  border-top: 1px solid var(--line);
+  position: relative; z-index: 2;
+}
+.outscope__head { max-width: 64ch; margin-bottom: 56px; }
+.outscope__eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--c-purple);
+  margin-bottom: 22px;
+}
+.outscope__title {
+  font-size: clamp(36px, 5.4vw, 68px);
+  font-weight: 500; line-height: 1.05;
+  letter-spacing: -0.035em; max-width: 18ch;
+}
+.outscope__title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400;
+  color: var(--c-purple);
+}
+.outscope__intro {
+  margin-top: 22px;
+  font-size: 17px; line-height: 1.6;
+  color: var(--fg-dim);
+}
+.outscope__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.outscope__card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 28px 26px;
+  position: relative;
+  display: flex; flex-direction: column;
+  gap: 14px;
+}
+.outscope__card::before {
+  content: ''; position: absolute;
+  left: 0; top: 22px; bottom: 22px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--c-purple), transparent);
+  border-radius: 0 3px 3px 0;
+}
+.outscope__card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--c-purple);
+}
+.outscope__card-title {
+  font-size: 22px; font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.2;
+  color: var(--fg);
+}
+.outscope__card-why {
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--fg-dim);
+}
+.outscope__card-pointer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 14px; line-height: 1.55;
+  color: var(--fg-dim);
+}
+.outscope__card-pointer-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--fg-faint);
+  margin-bottom: 6px;
+}
+
+/* ============ NEXT STEPS ============ */
+.next {
+  padding: 10vh 8vw 12vh;
+  position: relative; z-index: 2;
+}
+.next__head { max-width: 64ch; margin-bottom: 48px; }
+.next__eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--c-emerald);
+  margin-bottom: 22px;
+}
+.next__title {
+  font-size: clamp(36px, 5.4vw, 68px);
+  font-weight: 500; line-height: 1.05;
+  letter-spacing: -0.035em; max-width: 16ch;
+}
+.next__title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic; font-weight: 400;
+  color: var(--c-emerald);
+}
+.next__intro {
+  margin-top: 22px;
+  font-size: 17px; line-height: 1.6;
+  color: var(--fg-dim);
+}
+.next__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.next__card {
+  background: color-mix(in srgb, var(--c-emerald) 6%, var(--bg-card));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  position: relative;
+}
+.next__card::before {
+  content: ''; position: absolute;
+  left: 0; top: 22px; bottom: 22px;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--c-emerald), transparent);
+  border-radius: 0 3px 3px 0;
+}
+.next__card-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--c-emerald);
+  margin-bottom: 12px;
+}
+.next__card-title {
+  font-size: 21px; font-weight: 500;
+  letter-spacing: -0.02em; line-height: 1.25;
+  color: var(--fg);
+  margin-bottom: 14px;
+}
+.next__card-body {
+  font-size: 15.5px; line-height: 1.65;
+  color: var(--fg-dim);
+}
+
+@media (max-width: 900px) {
+  .outscope__grid, .next__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .outscope { padding: 64px 6vw 32px; }
+  .next { padding: 56px 6vw 80px; }
+  .outscope__card, .next__card { padding: 22px 20px; }
 }
 
 /* ============ COMMAND PALETTE (CMDK) ============ */

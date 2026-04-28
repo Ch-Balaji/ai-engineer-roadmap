@@ -565,6 +565,9 @@ function App() {
                     ))}
                   </span>
                 </div>
+                {phase.difficultyNote && (
+                  <div className="phase__diff-note">{phase.difficultyNote}</div>
+                )}
               </div>
               {phase.capstone && (
                 <div className="phase__capstone-pill">Capstone {phase.capstone}</div>
@@ -628,6 +631,52 @@ function App() {
         </div>
       </section>
 
+      {/* OUT OF SCOPE */}
+      <section className="outscope reveal" data-screen-label="Out of scope">
+        <div className="outscope__head">
+          <div className="outscope__eyebrow">◇ Out of scope (and why)</div>
+          <h2 className="outscope__title">What this roadmap <em>doesn't</em> cover.</h2>
+          <p className="outscope__intro">
+            Every roadmap is as much about what's left out as what's in. These topics are real and useful —
+            they're just not on the critical path to becoming a shipping AI engineer in 2026.
+          </p>
+        </div>
+        <div className="outscope__grid">
+          {window.OUT_OF_SCOPE.map((o, i) => (
+            <article key={i} className="outscope__card">
+              <div className="outscope__card-num">{String(i + 1).padStart(2, '0')}</div>
+              <h3 className="outscope__card-title">{o.title}</h3>
+              <p className="outscope__card-why">{o.why}</p>
+              <div className="outscope__card-pointer">
+                <span className="outscope__card-pointer-label">Where to look</span>
+                <span>{o.pointer}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* WHERE TO GO FROM HERE */}
+      <section className="next reveal" data-screen-label="Where to go from here">
+        <div className="next__head">
+          <div className="next__eyebrow">→ After the roadmap</div>
+          <h2 className="next__title">Where to go <em>from here.</em></h2>
+          <p className="next__intro">
+            You finished the curriculum and built three production systems. Now turn that work into interviews,
+            offers, and the next thing you ship.
+          </p>
+        </div>
+        <div className="next__grid">
+          {window.NEXT_STEPS.map((n, i) => (
+            <article key={i} className="next__card">
+              <div className="next__card-label">{n.label}</div>
+              <h3 className="next__card-title">{n.title}</h3>
+              <p className="next__card-body">{n.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       </main>
 
       <CommandPalette
@@ -640,7 +689,7 @@ function App() {
         <h2 className="footer__title">
           The journey ends where the <em>real work</em> begins.
         </h2>
-        <div className="footer__meta">26 weeks · 9 phases · 3 capstones · one engineer</div>
+        <div className="footer__meta">26 weeks · 9 phases · {totalSections} modules · 3 capstones · one engineer</div>
       </footer>
     </React.Fragment>
   );
