@@ -62,9 +62,9 @@ html, body {
   font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   line-height: 1.55;
 }
+body { overflow-x: clip; }
 
 :where(button, a):focus-visible {
   outline: 2px solid var(--c-rust);
