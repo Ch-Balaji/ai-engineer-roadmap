@@ -1132,6 +1132,110 @@ body::before {
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1.1s var(--ease-out), transform 1.1s var(--ease-out); }
 .reveal.in-view { opacity: 1; transform: translateY(0); }
 
+/* ============ SCROLL-DRIVEN ANIMATIONS (progressive enhancement) ============
+   These run only in modern browsers (Chromium 115+, Safari 26+).
+   Older browsers ignore the @supports block entirely — no JS, no jank. */
+@supports (animation-timeline: view()) {
+  /* Phase body slides up + fades in as it enters the viewport */
+  .phase__body {
+    animation: scrollFadeRise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 70%;
+  }
+  /* Sticky index column scales in subtly */
+  .phase__index {
+    animation: scrollSoftIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  /* Big phase number parallaxes against the body for depth */
+  .phase__num {
+    animation: scrollParallax linear both;
+    animation-timeline: view();
+    animation-range: entry 0% exit 100%;
+  }
+  /* Capstones rise as they enter */
+  .capstone {
+    animation: scrollFadeRise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  /* Tabbox softly scales in */
+  .tabbox {
+    animation: scrollSoftIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 65%;
+  }
+  /* Endstate slides in last */
+  .phase__endstate {
+    animation: scrollFadeRise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+  }
+  /* Hero blobs drift slowly as the user scrolls past the hero */
+  .hero__blob {
+    animation: blobDriftA linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+  .hero__blob-2 {
+    animation: blobDriftB linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+  .hero__blob-3 {
+    animation: blobDriftC linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 100vh;
+  }
+  /* Hero content gently fades as you scroll past it */
+  .hero__title, .hero__sub, .hero__stats, .hero__actions {
+    animation: heroFadeOut linear both;
+    animation-timeline: view();
+    animation-range: exit 0% exit 80%;
+  }
+}
+
+@keyframes scrollFadeRise {
+  from { opacity: 0; transform: translateY(48px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes scrollSoftIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes scrollParallax {
+  from { transform: translateY(40px); }
+  to { transform: translateY(-40px); }
+}
+@keyframes blobDriftA {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-4vw, 30vh, 0) scale(1.08); }
+}
+@keyframes blobDriftB {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(6vw, -20vh, 0) scale(1.05); }
+}
+@keyframes blobDriftC {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-3vw, -15vh, 0) scale(0.92); }
+}
+@keyframes heroFadeOut {
+  from { opacity: 1; transform: none; }
+  to { opacity: 0.15; transform: translateY(-40px); }
+}
+
+/* Mobile: opt out of all scroll-driven animations to keep it lightweight */
+@media (max-width: 700px) {
+  @supports (animation-timeline: view()) {
+    .phase__body, .phase__index, .phase__num, .capstone, .tabbox,
+    .phase__endstate, .hero__blob, .hero__blob-2, .hero__blob-3,
+    .hero__title, .hero__sub, .hero__stats, .hero__actions {
+      animation: none;
+    }
+  }
+}
+
 @media (max-width: 1100px) {
   .agenda__grid--phases { grid-template-columns: repeat(3, 1fr); }
   .tabbox { grid-template-columns: 240px 1fr; }

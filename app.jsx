@@ -597,7 +597,7 @@ function App() {
         <div className="capstone-grid">
           {window.CAPSTONES.map((c, i) => (
             <article key={c.n}
-              className="capstone"
+              className="capstone reveal"
               ref={el => capstoneRefs.current[i] = el}>
               <div className="capstone__left">
                 <div className="capstone__num">CAPSTONE {String(c.n).padStart(2, '0')}</div>
