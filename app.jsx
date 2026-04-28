@@ -34,8 +34,6 @@ function PhaseTabBox({ phase }) {
 }
 
 function App() {
-  const [activePhase, setActivePhase] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [dockVisible, setDockVisible] = useState(false);
   const [theme, setTheme] = useState(() => {
     if (typeof window === 'undefined') return 'dark';
@@ -49,7 +47,13 @@ function App() {
   const phaseRefs = useRef([]);
   const capstoneRefs = useRef([]);
   const agendaRef = useRef(null);
+  const dockNodeRefs = useRef([]);
+  const progressFillRef = useRef(null);
+  const progressDotRef = useRef(null);
   const scrollFrame = useRef(null);
+  const lastActiveIdx = useRef(-1);
+  const lastDockVisible = useRef(false);
+  const phaseMetrics = useRef([]);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -57,54 +61,72 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    const onScroll = () => {
-      if (scrollFrame.current) return;
-      scrollFrame.current = window.requestAnimationFrame(() => {
-        scrollFrame.current = null;
-        const scrollTop = window.scrollY;
-        const winH = window.innerHeight;
-        const firstPhase = phaseRefs.current[0];
-        const firstPhaseTop = firstPhase
-          ? firstPhase.getBoundingClientRect().top + window.scrollY
-          : winH;
-        setDockVisible(scrollTop > firstPhaseTop - winH * 0.15);
-
-        const phasePositions = phaseRefs.current
-          .filter(Boolean)
-          .map(el => {
-            const pt = parseFloat(window.getComputedStyle(el).paddingTop) || 0;
-            return el.getBoundingClientRect().top + window.scrollY + pt;
-          });
-
-        if (phasePositions.length > 1) {
-          const navOffset = window.innerWidth <= 700 ? 24 : 56;
-          const firstTop = phasePositions[0] - navOffset;
-          const lastTop = phasePositions[phasePositions.length - 1] - navOffset;
-          const phaseRange = lastTop - firstTop;
-          const phaseProgress = phaseRange <= 0 ? 0 : (scrollTop - firstTop) / phaseRange;
-          setScrollProgress(Math.min(1, Math.max(0, phaseProgress)));
-        }
-
-        const probeLine = window.innerWidth <= 700 ? 96 : 160;
-        let active = 0;
-        phaseRefs.current.forEach((el, i) => {
-          if (!el) return;
-          const rect = el.getBoundingClientRect();
-          const pt = parseFloat(window.getComputedStyle(el).paddingTop) || 0;
-          if (rect.top + pt <= probeLine) {
-            active = i;
-          }
-        });
-        setActivePhase(active);
+    const recomputeMetrics = () => {
+      phaseMetrics.current = phaseRefs.current.filter(Boolean).map(el => {
+        const pt = parseFloat(window.getComputedStyle(el).paddingTop) || 0;
+        return { el, paddingTop: pt };
       });
     };
+
+    const update = () => {
+      scrollFrame.current = null;
+      const scrollTop = window.scrollY;
+      const winH = window.innerHeight;
+      const metrics = phaseMetrics.current;
+      if (!metrics.length) return;
+
+      const firstPhaseTop = metrics[0].el.getBoundingClientRect().top + scrollTop;
+      const visible = scrollTop > firstPhaseTop - winH * 0.15;
+      if (visible !== lastDockVisible.current) {
+        lastDockVisible.current = visible;
+        setDockVisible(visible);
+      }
+
+      const navOffset = window.innerWidth <= 700 ? 24 : 56;
+      const firstTop = metrics[0].el.getBoundingClientRect().top + scrollTop + metrics[0].paddingTop - navOffset;
+      const lastM = metrics[metrics.length - 1];
+      const lastTop = lastM.el.getBoundingClientRect().top + scrollTop + lastM.paddingTop - navOffset;
+      const phaseRange = lastTop - firstTop;
+      const phaseProgress = phaseRange <= 0 ? 0 : (scrollTop - firstTop) / phaseRange;
+      const pct = Math.min(1, Math.max(0, phaseProgress)) * 100;
+      if (progressFillRef.current) progressFillRef.current.style.width = pct + '%';
+      if (progressDotRef.current) progressDotRef.current.style.left = pct + '%';
+
+      const probeLine = window.innerWidth <= 700 ? 96 : 160;
+      let active = 0;
+      for (let i = 0; i < metrics.length; i++) {
+        const rect = metrics[i].el.getBoundingClientRect();
+        if (rect.top + metrics[i].paddingTop <= probeLine) active = i;
+      }
+      if (active !== lastActiveIdx.current) {
+        const prev = lastActiveIdx.current;
+        lastActiveIdx.current = active;
+        dockNodeRefs.current.forEach((node, i) => {
+          if (!node) return;
+          node.classList.toggle('active', i === active);
+          node.classList.toggle('passed', i < active);
+        });
+      }
+    };
+
+    const onScroll = () => {
+      if (scrollFrame.current != null) return;
+      scrollFrame.current = window.requestAnimationFrame(update);
+    };
+
+    const onResize = () => {
+      recomputeMetrics();
+      onScroll();
+    };
+
+    recomputeMetrics();
+    update();
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
-    onScroll();
+    window.addEventListener('resize', onResize);
     return () => {
       window.removeEventListener('scroll', onScroll);
-      window.removeEventListener('resize', onScroll);
-      if (scrollFrame.current) window.cancelAnimationFrame(scrollFrame.current);
+      window.removeEventListener('resize', onResize);
+      if (scrollFrame.current != null) window.cancelAnimationFrame(scrollFrame.current);
     };
   }, []);
 
@@ -135,7 +157,6 @@ function App() {
   const scrollToPhase = (i) => {
     const el = phaseRefs.current[i];
     if (!el) return;
-    setActivePhase(i);
     scrollToElement(el, 24, 56, true);
   };
   const scrollToCapstone = (i) => scrollToElement(capstoneRefs.current[i], 24, 72, false);
@@ -326,7 +347,8 @@ function App() {
           <button key={p.id}
             type="button"
             aria-label={`Jump to phase ${String(p.id).padStart(2, '0')}: ${p.title}`}
-            className={`dock__node ${i < activePhase ? 'passed' : ''} ${i === activePhase ? 'active' : ''}`}
+            ref={el => dockNodeRefs.current[i] = el}
+            className="dock__node"
             data-color={p.color}
             onClick={() => scrollToPhase(i)}>
             {String(p.id).padStart(2, '0')}
@@ -334,8 +356,8 @@ function App() {
           </button>
         ))}
         <div className="dock__progress">
-          <div className="dock__progress-fill" style={{ width: `${scrollProgress * 100}%` }} />
-          <div className="dock__progress-dot" style={{ left: `${scrollProgress * 100}%` }} />
+          <div className="dock__progress-fill" ref={progressFillRef} />
+          <div className="dock__progress-dot" ref={progressDotRef} />
         </div>
       </div>
 

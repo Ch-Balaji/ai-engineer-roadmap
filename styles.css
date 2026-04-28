@@ -56,7 +56,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 html { transition: background 320ms var(--ease), color 320ms var(--ease); }
 
@@ -67,8 +66,8 @@ body::before {
   background-image: radial-gradient(rgba(255,255,255,var(--grain-opacity)) 1px, transparent 1px);
   background-size: 3px 3px;
   z-index: 1;
-  opacity: 0.6;
-  will-change: auto;
+  opacity: 0.5;
+  transform: translateZ(0);
 }
 [data-theme="light"] body::before {
   background-image: radial-gradient(rgba(26,24,20,0.025) 1px, transparent 1px);
@@ -267,26 +266,29 @@ body::before {
 
 @keyframes rise { to { opacity: 1; transform: translateY(0); } }
 
+.hero__blob,
+.hero__blob-2,
+.hero__blob-3 {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  transform: translateZ(0);
+  will-change: transform;
+}
 .hero__blob {
-  position: absolute; pointer-events: none;
   width: 60vw; height: 60vw; max-width: 900px;
   right: -10vw; top: 0;
-  background: radial-gradient(circle, color-mix(in srgb, var(--c-amber) 45%, transparent), transparent 60%);
-  filter: blur(60px); z-index: 0;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--c-amber) 38%, transparent), transparent 70%);
 }
 .hero__blob-2 {
-  position: absolute; pointer-events: none;
   width: 50vw; height: 50vw; max-width: 700px;
   left: -15vw; bottom: -10vh;
-  background: radial-gradient(circle, color-mix(in srgb, var(--c-rust) 22%, transparent), transparent 60%);
-  filter: blur(70px); z-index: 0;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--c-rust) 20%, transparent), transparent 70%);
 }
 .hero__blob-3 {
-  position: absolute; pointer-events: none;
   width: 40vw; height: 40vw;
   right: 20vw; bottom: 0;
-  background: radial-gradient(circle, color-mix(in srgb, var(--c-purple) 20%, transparent), transparent 60%);
-  filter: blur(70px); z-index: 0;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--c-purple) 18%, transparent), transparent 70%);
 }
 .hero > *:not([class*="blob"]) { position: relative; z-index: 2; }
 
@@ -577,7 +579,6 @@ body::before {
   background: linear-gradient(90deg, var(--c-rust), var(--c-amber), var(--c-purple));
   width: 0%;
   border-radius: inherit;
-  transition: width 180ms linear;
   will-change: width;
 }
 .dock__progress-dot {
@@ -588,7 +589,6 @@ body::before {
   background: var(--c-amber);
   box-shadow: 0 0 0 5px color-mix(in srgb, var(--c-amber) 20%, transparent), 0 0 22px color-mix(in srgb, var(--c-amber) 60%, transparent);
   transform: translate(-50%, -50%);
-  transition: left 180ms linear;
   will-change: left;
 }
 .dock__node {
@@ -665,6 +665,8 @@ body::before {
   grid-template-columns: minmax(280px, 340px) 1fr;
   gap: 80px;
   scroll-margin-top: 56px;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 .phase:first-of-type { border-top: none; padding-top: 6vh; }
 .phase__index {
