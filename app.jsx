@@ -38,12 +38,13 @@ function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [dockVisible, setDockVisible] = useState(false);
   const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'light';
-    return localStorage.getItem('roadmap-theme') || 'light';
+    if (typeof window === 'undefined') return 'dark';
+    return localStorage.getItem('roadmap-theme') || document.documentElement.dataset.theme || 'dark';
   });
   const phaseRefs = useRef([]);
   const capstoneRefs = useRef([]);
   const agendaRef = useRef(null);
+  const scrollFrame = useRef(null);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -52,37 +53,41 @@ function App() {
 
   useEffect(() => {
     const onScroll = () => {
-      const scrollTop = window.scrollY;
-      const winH = window.innerHeight;
-      setDockVisible(scrollTop > winH * 0.5);
+      if (scrollFrame.current) return;
+      scrollFrame.current = window.requestAnimationFrame(() => {
+        scrollFrame.current = null;
+        const scrollTop = window.scrollY;
+        const winH = window.innerHeight;
+        const firstPhase = phaseRefs.current[0];
+        const firstPhaseTop = firstPhase
+          ? firstPhase.getBoundingClientRect().top + window.scrollY
+          : winH;
+        setDockVisible(scrollTop > firstPhaseTop - winH * 0.35);
 
-      const phasePositions = phaseRefs.current
-        .filter(Boolean)
-        .map(el => el.getBoundingClientRect().top + window.scrollY);
+        const phasePositions = phaseRefs.current
+          .filter(Boolean)
+          .map(el => el.getBoundingClientRect().top + window.scrollY);
 
-      if (phasePositions.length > 1) {
-        const navOffset = 96;
-        const firstPhaseTop = phasePositions[0] - navOffset;
-        const lastPhaseTop = phasePositions[phasePositions.length - 1] - navOffset;
-        const phaseRange = lastPhaseTop - firstPhaseTop;
-        const phaseProgress = phaseRange <= 0 ? 0 : (scrollTop - firstPhaseTop) / phaseRange;
-        setScrollProgress(Math.min(1, Math.max(0, phaseProgress)));
-      }
-
-      const viewportCenter = winH / 2;
-      let active = 0;
-      let bestDist = Infinity;
-      phaseRefs.current.forEach((el, i) => {
-        if (!el) return;
-        const rect = el.getBoundingClientRect();
-        const center = rect.top + rect.height / 2;
-        const dist = Math.abs(center - viewportCenter);
-        if (dist < bestDist) {
-          bestDist = dist;
-          active = i;
+        if (phasePositions.length > 1) {
+          const navOffset = window.innerWidth <= 700 ? 24 : 56;
+          const firstTop = phasePositions[0] - navOffset;
+          const lastTop = phasePositions[phasePositions.length - 1] - navOffset;
+          const phaseRange = lastTop - firstTop;
+          const phaseProgress = phaseRange <= 0 ? 0 : (scrollTop - firstTop) / phaseRange;
+          setScrollProgress(Math.min(1, Math.max(0, phaseProgress)));
         }
+
+        const probeLine = window.innerWidth <= 700 ? 72 : 120;
+        let active = 0;
+        phaseRefs.current.forEach((el, i) => {
+          if (!el) return;
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= probeLine) {
+            active = i;
+          }
+        });
+        setActivePhase(active);
       });
-      setActivePhase(active);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
@@ -90,6 +95,7 @@ function App() {
     return () => {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onScroll);
+      if (scrollFrame.current) window.cancelAnimationFrame(scrollFrame.current);
     };
   }, []);
 
@@ -97,7 +103,7 @@ function App() {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
     }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-    document.querySelectorAll('.reveal, .phase').forEach(el => io.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     return () => io.disconnect();
   }, []);
 
@@ -106,7 +112,7 @@ function App() {
     if (!el) return;
 
     setActivePhase(i);
-    const navOffset = 96;
+    const navOffset = window.innerWidth <= 700 ? 24 : 56;
     const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
@@ -115,7 +121,7 @@ function App() {
     const el = capstoneRefs.current[i];
     if (!el) return;
 
-    const navOffset = 96;
+    const navOffset = window.innerWidth <= 700 ? 24 : 72;
     const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
@@ -124,7 +130,7 @@ function App() {
     const el = agendaRef.current;
     if (!el) return;
 
-    const navOffset = 88;
+    const navOffset = window.innerWidth <= 700 ? 24 : 72;
     const top = el.getBoundingClientRect().top + window.scrollY - navOffset;
     window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
