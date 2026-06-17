@@ -1,0 +1,53 @@
+{
+  "total": 8,
+  "playlists": [
+    {
+      "id": "PL8qeqP57-QAa048dYOZSvGwdAGqEMFMkc",
+      "title": "Agentic AI Full Course",
+      "video_count": 36,
+      "published_at": "2026-05-03T12:31:17.238363Z"
+    },
+    {
+      "id": "PL8qeqP57-QAabKzeYQG5VyCehbWB_tmUj",
+      "title": "WBD Hyderabad Office",
+      "video_count": 1,
+      "published_at": "2024-10-28T15:24:32.976625Z"
+    },
+    {
+      "id": "PL8qeqP57-QAYKt3ElK0wsxJ38dx_NAE4v",
+      "title": "Probability and Statstics",
+      "video_count": 5,
+      "published_at": "2024-05-04T18:50:27.739947Z"
+    },
+    {
+      "id": "PL8qeqP57-QAahFdt1VV-d4MjxBzH6pdIM",
+      "title": "Linear Algebra for Data Science",
+      "video_count": 8,
+      "published_at": "2024-04-07T12:20:21.862585Z"
+    },
+    {
+      "id": "PL8qeqP57-QAbNCiNeA3w-9Vl-2_iCbqrS",
+      "title": "[2024] Complete Numpy From Scratch",
+      "video_count": 3,
+      "published_at": "2024-03-06T09:13:23.153373Z"
+    },
+    {
+      "id": "PL8qeqP57-QAZrPEschcI6VaETev7jifKC",
+      "title": "[2024] Complete SQL from Scratch",
+      "video_count": 25,
+      "published_at": "2024-03-05T11:54:44.816488Z"
+    },
+    {
+      "id": "PL8qeqP57-QAZ5ekjIt6F9Z5bBxe8zwbEJ",
+      "title": "[2024] Complete Pandas from Scratch",
+      "video_count": 7,
+      "published_at": "2024-03-05T10:39:37.237118Z"
+    },
+    {
+      "id": "PL8qeqP57-QAZz8wi1x7toEWzPC_mW5NfO",
+      "title": "Python For Data Science",
+      "video_count": 33,
+      "published_at": "2024-01-23T11:38:02.38372Z"
+    }
+  ]
+}

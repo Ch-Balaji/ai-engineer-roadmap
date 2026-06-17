@@ -1,0 +1,127 @@
+{
+  "start_date": "2026-02-28",
+  "end_date": "2026-05-29",
+  "columns": [
+    "country",
+    "views",
+    "estimatedMinutesWatched"
+  ],
+  "results": [
+    {
+      "country": "IN",
+      "views": 204446,
+      "estimatedMinutesWatched": 857365
+    },
+    {
+      "country": "US",
+      "views": 46937,
+      "estimatedMinutesWatched": 217758
+    },
+    {
+      "country": "GB",
+      "views": 4090,
+      "estimatedMinutesWatched": 18646
+    },
+    {
+      "country": "CA",
+      "views": 2871,
+      "estimatedMinutesWatched": 12979
+    },
+    {
+      "country": "AU",
+      "views": 2189,
+      "estimatedMinutesWatched": 10503
+    },
+    {
+      "country": "SG",
+      "views": 1165,
+      "estimatedMinutesWatched": 6689
+    },
+    {
+      "country": "DE",
+      "views": 968,
+      "estimatedMinutesWatched": 4462
+    },
+    {
+      "country": "AE",
+      "views": 901,
+      "estimatedMinutesWatched": 4363
+    },
+    {
+      "country": "NL",
+      "views": 430,
+      "estimatedMinutesWatched": 1686
+    },
+    {
+      "country": "SE",
+      "views": 205,
+      "estimatedMinutesWatched": 910
+    },
+    {
+      "country": "IE",
+      "views": 166,
+      "estimatedMinutesWatched": 813
+    },
+    {
+      "country": "SA",
+      "views": 123,
+      "estimatedMinutesWatched": 649
+    },
+    {
+      "country": "NZ",
+      "views": 114,
+      "estimatedMinutesWatched": 488
+    },
+    {
+      "country": "PK",
+      "views": 73,
+      "estimatedMinutesWatched": 99
+    },
+    {
+      "country": "MY",
+      "views": 58,
+      "estimatedMinutesWatched": 280
+    },
+    {
+      "country": "JP",
+      "views": 42,
+      "estimatedMinutesWatched": 277
+    },
+    {
+      "country": "FR",
+      "views": 40,
+      "estimatedMinutesWatched": 228
+    },
+    {
+      "country": "CH",
+      "views": 28,
+      "estimatedMinutesWatched": 104
+    },
+    {
+      "country": "ZA",
+      "views": 26,
+      "estimatedMinutesWatched": 221
+    },
+    {
+      "country": "KW",
+      "views": 17,
+      "estimatedMinutesWatched": 66
+    },
+    {
+      "country": "KR",
+      "views": 14,
+      "estimatedMinutesWatched": 84
+    },
+    {
+      "country": "BE",
+      "views": 11,
+      "estimatedMinutesWatched": 38
+    },
+    {
+      "country": "DK",
+      "views": 11,
+      "estimatedMinutesWatched": 123
+    }
+  ],
+  "total_rows": 23
+}

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1180" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#9CA3AF">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#F97316">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="1180" fill="#111827" rx="12"/>
+
+  <text x="360" y="48" text-anchor="middle" font-size="22" font-weight="bold" fill="#F9FAFB">Job Application Agent Pipeline</text>
+  <text x="360" y="74" text-anchor="middle" font-size="13" fill="#9CA3AF">Multi-agent workflow - resume + JD in, interview prep out</text>
+
+  <rect x="160" y="100" width="400" height="52" rx="8" fill="#059669" stroke="#10B981" stroke-width="1.5"/>
+  <text x="360" y="132" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">USER INPUT (resume + JD)</text>
+
+  <line x1="360" y1="152" x2="360" y2="178" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="180" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="360" y="208" text-anchor="middle" font-size="14" font-weight="bold" fill="#60A5FA">Agent 1: JD EXTRACTOR</text>
+  <text x="360" y="232" text-anchor="middle" font-size="12" fill="#D1D5DB">reads the JD, extracts keywords, skills, seniority</text>
+
+  <line x1="360" y1="252" x2="360" y2="278" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="280" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="360" y="308" text-anchor="middle" font-size="14" font-weight="bold" fill="#60A5FA">Agent 2: RESUME MATCHER</text>
+  <text x="360" y="332" text-anchor="middle" font-size="12" fill="#D1D5DB">compares resume vs JD, scores the match, finds gaps</text>
+
+  <line x1="360" y1="352" x2="360" y2="378" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="380" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="360" y="408" text-anchor="middle" font-size="14" font-weight="bold" fill="#60A5FA">Agent 3: BULLET REWRITER</text>
+  <text x="360" y="432" text-anchor="middle" font-size="12" fill="#D1D5DB">rewrites weak bullets to align with JD keywords</text>
+
+  <line x1="360" y1="452" x2="360" y2="478" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="480" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="360" y="508" text-anchor="middle" font-size="14" font-weight="bold" fill="#60A5FA">Agent 4: COVER LETTER</text>
+  <text x="360" y="532" text-anchor="middle" font-size="12" fill="#D1D5DB">writes a 3-paragraph cover letter</text>
+
+  <line x1="360" y1="552" x2="360" y2="578" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="580" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#F59E0B" stroke-width="2"/>
+  <text x="360" y="608" text-anchor="middle" font-size="14" font-weight="bold" fill="#FBBF24">Agent 5: CRITIC</text>
+  <text x="360" y="632" text-anchor="middle" font-size="12" fill="#D1D5DB">reviews bullets + cover letter, scores 1-10</text>
+
+  <line x1="360" y1="652" x2="360" y2="678" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="682" width="320" height="88" rx="8" fill="#1E293B" stroke="#64748B" stroke-width="1.5"/>
+  <text x="360" y="712" text-anchor="middle" font-size="14" font-weight="bold" fill="#F9FAFB">Score &lt; 8?</text>
+  <text x="360" y="738" text-anchor="middle" font-size="11" fill="#F97316">YES - send back to Agent 3 + 4 with feedback</text>
+  <text x="360" y="756" text-anchor="middle" font-size="11" fill="#34D399">NO - continue</text>
+
+  <path d="M 200 726 Q 60 580 120 416" stroke="#F97316" stroke-width="2.5" fill="none" stroke-dasharray="8,4" marker-end="url(#arrow-orange)"/>
+  <text x="52" y="570" font-size="11" fill="#F97316" font-weight="bold" transform="rotate(-90 52 570)">REVISION LOOP</text>
+
+  <line x1="360" y1="770" x2="360" y2="796" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="798" width="480" height="72" rx="8" fill="url(#boxGrad)" stroke="#4B5563" stroke-width="1.5"/>
+  <text x="360" y="826" text-anchor="middle" font-size="14" font-weight="bold" fill="#60A5FA">Agent 6: INTERVIEW PREP</text>
+  <text x="360" y="850" text-anchor="middle" font-size="12" fill="#D1D5DB">generates targeted interview questions</text>
+
+  <line x1="360" y1="870" x2="360" y2="896" stroke="#6B7280" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="898" width="400" height="52" rx="8" fill="#7C3AED" stroke="#A78BFA" stroke-width="1.5"/>
+  <text x="360" y="930" text-anchor="middle" font-size="15" font-weight="bold" fill="#FFFFFF">FINAL OUTPUT</text>
+
+  <rect x="80" y="980" width="560" height="170" rx="10" fill="#1F2937" stroke="#374151" stroke-width="1.5"/>
+  <text x="360" y="1008" text-anchor="middle" font-size="13" font-weight="bold" fill="#9CA3AF">Saved output files</text>
+  <line x1="100" y1="1020" x2="620" y2="1020" stroke="#374151" stroke-width="1"/>
+
+  <text x="120" y="1048" font-size="12" fill="#D1D5DB">01_jd_analysis.md</text>
+  <text x="120" y="1070" font-size="12" fill="#D1D5DB">02_match_report.md</text>
+  <text x="120" y="1092" font-size="12" fill="#D1D5DB">03_tailored_resume.md</text>
+  <text x="380" y="1048" font-size="12" fill="#D1D5DB">04_cover_letter.md</text>
+  <text x="380" y="1070" font-size="12" fill="#D1D5DB">05_self_review.md</text>
+  <text x="380" y="1092" font-size="12" fill="#D1D5DB">06_interview_prep.md</text>
+
+  <text x="360" y="1132" text-anchor="middle" font-size="11" fill="#6B7280" font-style="italic">Each agent saves its step as a numbered markdown file</text>
+
+</svg>

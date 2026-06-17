@@ -1,0 +1,34 @@
+{
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-29",
+  "columns": [
+    "video",
+    "views",
+    "estimatedMinutesWatched",
+    "averageViewDuration",
+    "likes",
+    "comments",
+    "shares"
+  ],
+  "results": [
+    {
+      "video": "GzovBsI1Ah0",
+      "views": 7427,
+      "estimatedMinutesWatched": 2243,
+      "averageViewDuration": 25,
+      "likes": 494,
+      "comments": 24,
+      "shares": 5
+    },
+    {
+      "video": "XVjGjr-ba9E",
+      "views": 1518,
+      "estimatedMinutesWatched": 444,
+      "averageViewDuration": 26,
+      "likes": 51,
+      "comments": 0,
+      "shares": 7
+    }
+  ],
+  "total_rows": 2
+}

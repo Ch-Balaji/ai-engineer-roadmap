@@ -1,0 +1,77 @@
+{
+  "start_date": "2026-02-28",
+  "end_date": "2026-05-29",
+  "columns": [
+    "ageGroup",
+    "gender",
+    "viewerPercentage"
+  ],
+  "results": [
+    {
+      "ageGroup": "age25-34",
+      "gender": "male",
+      "viewerPercentage": 31.1
+    },
+    {
+      "ageGroup": "age35-44",
+      "gender": "male",
+      "viewerPercentage": 24.7
+    },
+    {
+      "ageGroup": "age18-24",
+      "gender": "male",
+      "viewerPercentage": 16.4
+    },
+    {
+      "ageGroup": "age45-54",
+      "gender": "male",
+      "viewerPercentage": 7.3
+    },
+    {
+      "ageGroup": "age25-34",
+      "gender": "female",
+      "viewerPercentage": 6.8
+    },
+    {
+      "ageGroup": "age18-24",
+      "gender": "female",
+      "viewerPercentage": 6
+    },
+    {
+      "ageGroup": "age35-44",
+      "gender": "female",
+      "viewerPercentage": 4.8
+    },
+    {
+      "ageGroup": "age55-64",
+      "gender": "male",
+      "viewerPercentage": 1.1
+    },
+    {
+      "ageGroup": "age45-54",
+      "gender": "female",
+      "viewerPercentage": 0.9
+    },
+    {
+      "ageGroup": "age13-17",
+      "gender": "male",
+      "viewerPercentage": 0.5
+    },
+    {
+      "ageGroup": "age13-17",
+      "gender": "female",
+      "viewerPercentage": 0.2
+    },
+    {
+      "ageGroup": "age65-",
+      "gender": "male",
+      "viewerPercentage": 0.2
+    },
+    {
+      "ageGroup": "age55-64",
+      "gender": "female",
+      "viewerPercentage": 0.1
+    }
+  ],
+  "total_rows": 13
+}

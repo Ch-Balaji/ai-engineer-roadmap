@@ -1,0 +1,27 @@
+{
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-29",
+  "columns": [
+    "views",
+    "estimatedMinutesWatched",
+    "averageViewDuration",
+    "subscribersGained",
+    "subscribersLost",
+    "likes",
+    "comments",
+    "shares"
+  ],
+  "results": [
+    {
+      "views": 270711,
+      "estimatedMinutesWatched": 1159712,
+      "averageViewDuration": 259,
+      "subscribersGained": 12886,
+      "subscribersLost": 854,
+      "likes": 11116,
+      "comments": 1388,
+      "shares": 7262
+    }
+  ],
+  "total_rows": 1
+}

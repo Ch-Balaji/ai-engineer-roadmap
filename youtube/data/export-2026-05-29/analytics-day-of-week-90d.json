@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "day": "Monday",
+      "avg_views": 3776.9,
+      "avg_minutes": 18091.5,
+      "sample_days": 13
+    },
+    {
+      "day": "Tuesday",
+      "avg_views": 3746.0,
+      "avg_minutes": 16829.7,
+      "sample_days": 13
+    },
+    {
+      "day": "Wednesday",
+      "avg_views": 3211.9,
+      "avg_minutes": 11961.2,
+      "sample_days": 12
+    },
+    {
+      "day": "Thursday",
+      "avg_views": 2708.5,
+      "avg_minutes": 10349.1,
+      "sample_days": 12
+    },
+    {
+      "day": "Friday",
+      "avg_views": 3059.3,
+      "avg_minutes": 12627.2,
+      "sample_days": 12
+    },
+    {
+      "day": "Saturday",
+      "avg_views": 2459.2,
+      "avg_minutes": 10565.8,
+      "sample_days": 13
+    },
+    {
+      "day": "Sunday",
+      "avg_views": 2856.1,
+      "avg_minutes": 12722.2,
+      "sample_days": 13
+    }
+  ],
+  "start_date": "2026-02-28",
+  "end_date": "2026-05-29"
+}

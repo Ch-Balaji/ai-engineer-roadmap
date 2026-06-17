@@ -1,0 +1,19 @@
+{
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-29",
+  "columns": [
+    "estimatedRevenue",
+    "estimatedAdRevenue",
+    "grossRevenue",
+    "estimatedRedPartnerRevenue"
+  ],
+  "results": [
+    {
+      "estimatedRevenue": 369.544,
+      "estimatedAdRevenue": 356.003,
+      "grossRevenue": 647.087,
+      "estimatedRedPartnerRevenue": 7.375
+    }
+  ],
+  "total_rows": 1
+}

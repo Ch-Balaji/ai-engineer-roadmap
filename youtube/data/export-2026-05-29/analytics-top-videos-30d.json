@@ -1,0 +1,466 @@
+{
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-29",
+  "columns": [
+    "video",
+    "views",
+    "estimatedMinutesWatched",
+    "averageViewDuration",
+    "likes",
+    "comments",
+    "shares"
+  ],
+  "results": [
+    {
+      "video": "Eze6D8jAMjI",
+      "views": 113984,
+      "estimatedMinutesWatched": 435089,
+      "averageViewDuration": 229,
+      "likes": 3868,
+      "comments": 356,
+      "shares": 4413
+    },
+    {
+      "video": "LJfUgSpq2PQ",
+      "views": 24310,
+      "estimatedMinutesWatched": 80482,
+      "averageViewDuration": 198,
+      "likes": 1864,
+      "comments": 480,
+      "shares": 849
+    },
+    {
+      "video": "xcRwOwL3plY",
+      "views": 23172,
+      "estimatedMinutesWatched": 132066,
+      "averageViewDuration": 341,
+      "likes": 838,
+      "comments": 83,
+      "shares": 396
+    },
+    {
+      "video": "svPdKlaxJHY",
+      "views": 19648,
+      "estimatedMinutesWatched": 106042,
+      "averageViewDuration": 323,
+      "likes": 664,
+      "comments": 104,
+      "shares": 337
+    },
+    {
+      "video": "YSbkYLD2bHk",
+      "views": 15418,
+      "estimatedMinutesWatched": 56262,
+      "averageViewDuration": 218,
+      "likes": 961,
+      "comments": 93,
+      "shares": 405
+    },
+    {
+      "video": "KsRuS0gkEac",
+      "views": 14934,
+      "estimatedMinutesWatched": 80819,
+      "averageViewDuration": 324,
+      "likes": 557,
+      "comments": 74,
+      "shares": 268
+    },
+    {
+      "video": "u-glihrL-Ko",
+      "views": 7107,
+      "estimatedMinutesWatched": 44767,
+      "averageViewDuration": 377,
+      "likes": 357,
+      "comments": 22,
+      "shares": 200
+    },
+    {
+      "video": "5VWvm3W9mOU",
+      "views": 4573,
+      "estimatedMinutesWatched": 25729,
+      "averageViewDuration": 337,
+      "likes": 231,
+      "comments": 30,
+      "shares": 56
+    },
+    {
+      "video": "iWmDSH21cTY",
+      "views": 4051,
+      "estimatedMinutesWatched": 8699,
+      "averageViewDuration": 128,
+      "likes": 80,
+      "comments": 5,
+      "shares": 37
+    },
+    {
+      "video": "ztEnaCr8X6A",
+      "views": 3452,
+      "estimatedMinutesWatched": 19733,
+      "averageViewDuration": 342,
+      "likes": 80,
+      "comments": 1,
+      "shares": 19
+    },
+    {
+      "video": "OTPKSlchkGc",
+      "views": 2394,
+      "estimatedMinutesWatched": 10949,
+      "averageViewDuration": 274,
+      "likes": 102,
+      "comments": 13,
+      "shares": 28
+    },
+    {
+      "video": "fvC2jcGyTWs",
+      "views": 2326,
+      "estimatedMinutesWatched": 10439,
+      "averageViewDuration": 269,
+      "likes": 60,
+      "comments": 3,
+      "shares": 15
+    },
+    {
+      "video": "BYdhkgGRnME",
+      "views": 1873,
+      "estimatedMinutesWatched": 7996,
+      "averageViewDuration": 256,
+      "likes": 86,
+      "comments": 12,
+      "shares": 30
+    },
+    {
+      "video": "lWzrUJN_iGQ",
+      "views": 1457,
+      "estimatedMinutesWatched": 9483,
+      "averageViewDuration": 390,
+      "likes": 38,
+      "comments": 2,
+      "shares": 6
+    },
+    {
+      "video": "M9MdMtlWjVQ",
+      "views": 1187,
+      "estimatedMinutesWatched": 5891,
+      "averageViewDuration": 297,
+      "likes": 29,
+      "comments": 2,
+      "shares": 5
+    },
+    {
+      "video": "02RL7UYbo-0",
+      "views": 1066,
+      "estimatedMinutesWatched": 8278,
+      "averageViewDuration": 465,
+      "likes": 30,
+      "comments": 2,
+      "shares": 4
+    },
+    {
+      "video": "RPWSQ1W7Xss",
+      "views": 922,
+      "estimatedMinutesWatched": 7072,
+      "averageViewDuration": 460,
+      "likes": 23,
+      "comments": 3,
+      "shares": 3
+    },
+    {
+      "video": "FzEHpiuGuV8",
+      "views": 747,
+      "estimatedMinutesWatched": 4351,
+      "averageViewDuration": 349,
+      "likes": 21,
+      "comments": 4,
+      "shares": 1
+    },
+    {
+      "video": "iwHWYQLraWs",
+      "views": 635,
+      "estimatedMinutesWatched": 4404,
+      "averageViewDuration": 416,
+      "likes": 17,
+      "comments": 1,
+      "shares": 3
+    },
+    {
+      "video": "m5OL19oMgWE",
+      "views": 581,
+      "estimatedMinutesWatched": 3538,
+      "averageViewDuration": 365,
+      "likes": 10,
+      "comments": 1,
+      "shares": 1
+    },
+    {
+      "video": "LwfGWgbBgr4",
+      "views": 525,
+      "estimatedMinutesWatched": 3309,
+      "averageViewDuration": 378,
+      "likes": 10,
+      "comments": 1,
+      "shares": 0
+    },
+    {
+      "video": "qEZ7nPLjt40",
+      "views": 484,
+      "estimatedMinutesWatched": 4468,
+      "averageViewDuration": 553,
+      "likes": 22,
+      "comments": 1,
+      "shares": 1
+    },
+    {
+      "video": "LdDBAaAIh90",
+      "views": 464,
+      "estimatedMinutesWatched": 2340,
+      "averageViewDuration": 302,
+      "likes": 9,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "Isv-Cntut6E",
+      "views": 441,
+      "estimatedMinutesWatched": 2029,
+      "averageViewDuration": 276,
+      "likes": 10,
+      "comments": 1,
+      "shares": 1
+    },
+    {
+      "video": "VPPFeZJvAKc",
+      "views": 431,
+      "estimatedMinutesWatched": 1341,
+      "averageViewDuration": 186,
+      "likes": 14,
+      "comments": 0,
+      "shares": 2
+    },
+    {
+      "video": "nd1Wh_FESeM",
+      "views": 390,
+      "estimatedMinutesWatched": 3688,
+      "averageViewDuration": 567,
+      "likes": 12,
+      "comments": 1,
+      "shares": 0
+    },
+    {
+      "video": "MkDn1ygA2V0",
+      "views": 385,
+      "estimatedMinutesWatched": 1838,
+      "averageViewDuration": 286,
+      "likes": 10,
+      "comments": 2,
+      "shares": 1
+    },
+    {
+      "video": "n0QbyAYLBcM",
+      "views": 377,
+      "estimatedMinutesWatched": 3246,
+      "averageViewDuration": 516,
+      "likes": 12,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "video": "16IMUjkgqm8",
+      "views": 376,
+      "estimatedMinutesWatched": 2397,
+      "averageViewDuration": 382,
+      "likes": 15,
+      "comments": 1,
+      "shares": 1
+    },
+    {
+      "video": "eDvLR4DuoI4",
+      "views": 326,
+      "estimatedMinutesWatched": 2895,
+      "averageViewDuration": 532,
+      "likes": 13,
+      "comments": 0,
+      "shares": 4
+    },
+    {
+      "video": "MlAycaXUNTA",
+      "views": 320,
+      "estimatedMinutesWatched": 1619,
+      "averageViewDuration": 303,
+      "likes": 12,
+      "comments": 1,
+      "shares": 1
+    },
+    {
+      "video": "_2vImJ_YJfo",
+      "views": 313,
+      "estimatedMinutesWatched": 1770,
+      "averageViewDuration": 339,
+      "likes": 17,
+      "comments": 2,
+      "shares": 2
+    },
+    {
+      "video": "zm07PrSK6is",
+      "views": 285,
+      "estimatedMinutesWatched": 2232,
+      "averageViewDuration": 469,
+      "likes": 6,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "video": "91C04FZUgKs",
+      "views": 273,
+      "estimatedMinutesWatched": 1383,
+      "averageViewDuration": 304,
+      "likes": 5,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "ma3SlNjF-NM",
+      "views": 267,
+      "estimatedMinutesWatched": 1126,
+      "averageViewDuration": 253,
+      "likes": 8,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "o4EjbjquAt0",
+      "views": 265,
+      "estimatedMinutesWatched": 2251,
+      "averageViewDuration": 509,
+      "likes": 9,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "video": "L5NdPKTUlWY",
+      "views": 264,
+      "estimatedMinutesWatched": 1979,
+      "averageViewDuration": 449,
+      "likes": 6,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "CCZd4drixXs",
+      "views": 253,
+      "estimatedMinutesWatched": 629,
+      "averageViewDuration": 149,
+      "likes": 4,
+      "comments": 0,
+      "shares": 3
+    },
+    {
+      "video": "heAWC5UQTZw",
+      "views": 239,
+      "estimatedMinutesWatched": 1194,
+      "averageViewDuration": 299,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "video": "iqE_80-O4J8",
+      "views": 232,
+      "estimatedMinutesWatched": 535,
+      "averageViewDuration": 138,
+      "likes": 5,
+      "comments": 0,
+      "shares": 2
+    },
+    {
+      "video": "aHVqzmmpPME",
+      "views": 208,
+      "estimatedMinutesWatched": 676,
+      "averageViewDuration": 195,
+      "likes": 6,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "9t9efVz302E",
+      "views": 110,
+      "estimatedMinutesWatched": 613,
+      "averageViewDuration": 334,
+      "likes": 2,
+      "comments": 0,
+      "shares": 3
+    },
+    {
+      "video": "O8AI02UgQZg",
+      "views": 105,
+      "estimatedMinutesWatched": 398,
+      "averageViewDuration": 227,
+      "likes": 2,
+      "comments": 0,
+      "shares": 1
+    },
+    {
+      "video": "OrDe_xqBPWg",
+      "views": 99,
+      "estimatedMinutesWatched": 414,
+      "averageViewDuration": 251,
+      "likes": 7,
+      "comments": 2,
+      "shares": 1
+    },
+    {
+      "video": "uR7G_tdQuJ8",
+      "views": 88,
+      "estimatedMinutesWatched": 123,
+      "averageViewDuration": 84,
+      "likes": 2,
+      "comments": 1,
+      "shares": 0
+    },
+    {
+      "video": "ZMY_36If8VY",
+      "views": 86,
+      "estimatedMinutesWatched": 93,
+      "averageViewDuration": 65,
+      "likes": 7,
+      "comments": 1,
+      "shares": 2
+    },
+    {
+      "video": "f72_qTV4TJo",
+      "views": 86,
+      "estimatedMinutesWatched": 359,
+      "averageViewDuration": 250,
+      "likes": 0,
+      "comments": 0,
+      "shares": 9
+    },
+    {
+      "video": "hCgIZZ0AiMs",
+      "views": 81,
+      "estimatedMinutesWatched": 301,
+      "averageViewDuration": 223,
+      "likes": 1,
+      "comments": 0,
+      "shares": 3
+    },
+    {
+      "video": "kHGQoOt--WY",
+      "views": 75,
+      "estimatedMinutesWatched": 184,
+      "averageViewDuration": 147,
+      "likes": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "video": "JAgXPCK-a8k",
+      "views": 73,
+      "estimatedMinutesWatched": 597,
+      "averageViewDuration": 490,
+      "likes": 1,
+      "comments": 0,
+      "shares": 0
+    }
+  ],
+  "total_rows": 50
+}

@@ -1,0 +1,1025 @@
+{
+  "total": 102,
+  "videos": [
+    {
+      "id": "vz0OLOatU5c",
+      "title": "How ChatGPT Is Built — What Nobody Explains for AI Engineers",
+      "published_at": "2026-05-28T20:23:28Z",
+      "duration": "PT33M18S",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=vz0OLOatU5c"
+    },
+    {
+      "id": "u-glihrL-Ko",
+      "title": "Generative AI vs AI Agents vs Agentic AI Explained with Examples",
+      "published_at": "2026-05-25T13:30:20Z",
+      "duration": "PT18M3S",
+      "views": 10216,
+      "likes": 457,
+      "comments": 30,
+      "url": "https://www.youtube.com/watch?v=u-glihrL-Ko"
+    },
+    {
+      "id": "PNggIRnMW6U",
+      "title": "Career Q&A LIVE: How to Build Your AI Career in the Agentic AI Era",
+      "published_at": "2026-05-24T15:07:37Z",
+      "duration": "PT59M30S",
+      "views": 3008,
+      "likes": 127,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=PNggIRnMW6U"
+    },
+    {
+      "id": "ue47uc024RE",
+      "title": "🚀 Live with Balaji Chippada | Data Science, Career & Reality Check",
+      "published_at": "2026-05-24T13:04:53Z",
+      "duration": "PT10M49S",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=ue47uc024RE"
+    },
+    {
+      "id": "fJKbbRN_Aos",
+      "title": "Career Q&A LIVE: How to Build Your AI Career in the Agentic AI Era",
+      "published_at": "2026-05-24T11:49:54Z",
+      "duration": "P0D",
+      "views": 0,
+      "likes": 5,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=fJKbbRN_Aos"
+    },
+    {
+      "id": "BYdhkgGRnME",
+      "title": "Stop Copy Pasting Python Classes  || Class Inheritance || Agentic AI Roadmap",
+      "published_at": "2026-05-22T13:30:00Z",
+      "duration": "PT17M58S",
+      "views": 2133,
+      "likes": 91,
+      "comments": 13,
+      "url": "https://www.youtube.com/watch?v=BYdhkgGRnME"
+    },
+    {
+      "id": "OTPKSlchkGc",
+      "title": "Python OOP Part 3: Classmethod, Staticmethod & Self | Agentic AI Roadmap",
+      "published_at": "2026-05-20T13:30:13Z",
+      "duration": "PT20M14S",
+      "views": 2514,
+      "likes": 104,
+      "comments": 15,
+      "url": "https://www.youtube.com/watch?v=OTPKSlchkGc"
+    },
+    {
+      "id": "svPdKlaxJHY",
+      "title": "Stop Wasting Tokens - How Claude / ChatGPT Actually Reads Your Prompt | Tokens Explained Visually",
+      "published_at": "2026-05-18T13:31:02Z",
+      "duration": "PT22M12S",
+      "views": 28697,
+      "likes": 865,
+      "comments": 113,
+      "url": "https://www.youtube.com/watch?v=svPdKlaxJHY"
+    },
+    {
+      "id": "2yi7JT0RIjY",
+      "title": "🚀 Live with Balaji Chippada | Data Science, Career & Reality Check",
+      "published_at": "2026-05-17T14:58:42Z",
+      "duration": "PT26M49S",
+      "views": 1795,
+      "likes": 74,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=2yi7JT0RIjY"
+    },
+    {
+      "id": "96dmoqA4QPg",
+      "title": "🚀 Live with Balaji Chippada | Data Science, Career & Reality Check",
+      "published_at": "2026-05-17T14:13:43Z",
+      "duration": "PT29M14S",
+      "views": 2998,
+      "likes": 142,
+      "comments": 16,
+      "url": "https://www.youtube.com/watch?v=96dmoqA4QPg"
+    },
+    {
+      "id": "QjOSnQ3XVp0",
+      "title": "Sunday Doubts LIVE — Code and Career | Balaji Chippada",
+      "published_at": "2026-05-17T13:35:00Z",
+      "duration": "PT1M41S",
+      "views": 882,
+      "likes": 50,
+      "comments": 22,
+      "url": "https://www.youtube.com/watch?v=QjOSnQ3XVp0"
+    },
+    {
+      "id": "xcRwOwL3plY",
+      "title": "You Can’t Build AI Agents Without This — APIs Explained (with a ChatGPT Project)",
+      "published_at": "2026-05-15T13:31:07Z",
+      "duration": "PT34M22S",
+      "views": 25250,
+      "likes": 890,
+      "comments": 96,
+      "url": "https://www.youtube.com/watch?v=xcRwOwL3plY"
+    },
+    {
+      "id": "GzovBsI1Ah0",
+      "title": "Thank you and Greatful! #agenticai #balajichippada #aiengineer",
+      "published_at": "2026-05-13T17:08:45Z",
+      "duration": "PT40S",
+      "views": 7677,
+      "likes": 508,
+      "comments": 21,
+      "url": "https://www.youtube.com/watch?v=GzovBsI1Ah0"
+    },
+    {
+      "id": "5VWvm3W9mOU",
+      "title": "Python OOPs Part2",
+      "published_at": "2026-05-13T13:30:06Z",
+      "duration": "PT21M31S",
+      "views": 4783,
+      "likes": 233,
+      "comments": 34,
+      "url": "https://www.youtube.com/watch?v=5VWvm3W9mOU"
+    },
+    {
+      "id": "KsRuS0gkEac",
+      "title": "Python OOP for Agentic AI Engineers — Classes, Objects & Methods in 30 Minutes",
+      "published_at": "2026-05-11T13:30:20Z",
+      "duration": "PT29M49S",
+      "views": 15397,
+      "likes": 561,
+      "comments": 85,
+      "url": "https://www.youtube.com/watch?v=KsRuS0gkEac"
+    },
+    {
+      "id": "LJfUgSpq2PQ",
+      "title": "This Free Agentic AI Course Is Not For Everyone | Detailed Course Plan",
+      "published_at": "2026-05-08T13:30:20Z",
+      "duration": "PT11M58S",
+      "views": 25214,
+      "likes": 1932,
+      "comments": 495,
+      "url": "https://www.youtube.com/watch?v=LJfUgSpq2PQ"
+    },
+    {
+      "id": "YSbkYLD2bHk",
+      "title": "I Built an AI Agent for Jobs | AI Agents Explained in Telugu",
+      "published_at": "2026-05-05T13:30:39Z",
+      "duration": "PT12M52S",
+      "views": 15762,
+      "likes": 977,
+      "comments": 127,
+      "url": "https://www.youtube.com/watch?v=YSbkYLD2bHk"
+    },
+    {
+      "id": "Eze6D8jAMjI",
+      "title": "99% People Learn AI Wrong | Agentic AI Engineer Roadmap 2026 in Telugu",
+      "published_at": "2026-05-03T13:00:06Z",
+      "duration": "PT23M55S",
+      "views": 120167,
+      "likes": 4000,
+      "comments": 548,
+      "url": "https://www.youtube.com/watch?v=Eze6D8jAMjI"
+    },
+    {
+      "id": "7p8ZWx_-aMs",
+      "title": "🚀 Live with Balaji Chippada | Data Science, Career & Reality Check",
+      "published_at": "2026-04-05T21:11:27Z",
+      "duration": "PT1H27M30S",
+      "views": 907,
+      "likes": 53,
+      "comments": 15,
+      "url": "https://www.youtube.com/watch?v=7p8ZWx_-aMs"
+    },
+    {
+      "id": "UzO8UXMy830",
+      "title": "Testing Youtube Live",
+      "published_at": "2026-04-03T19:48:24Z",
+      "duration": "PT9M52S",
+      "views": 216,
+      "likes": 13,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=UzO8UXMy830"
+    },
+    {
+      "id": "KnMiMUMeAvo",
+      "title": "Resume Reviews & Feedback | Ace Your Job Applications!",
+      "published_at": "2024-12-22T03:45:43Z",
+      "duration": "PT1H12M34S",
+      "views": 463,
+      "likes": 22,
+      "comments": 12,
+      "url": "https://www.youtube.com/watch?v=KnMiMUMeAvo"
+    },
+    {
+      "id": "_m4l8sv2uOs",
+      "title": "My Broadcast",
+      "published_at": "2024-12-21T09:57:33Z",
+      "duration": "PT2M43S",
+      "views": 2,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=_m4l8sv2uOs"
+    },
+    {
+      "id": "t0Y5gbyxAto",
+      "title": "Tetsing Broadcast",
+      "published_at": "2024-12-21T09:50:28Z",
+      "duration": "PT1M10S",
+      "views": 1,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=t0Y5gbyxAto"
+    },
+    {
+      "id": "uR7G_tdQuJ8",
+      "title": "7  symmetry skewness kurtosis",
+      "published_at": "2024-05-12T15:00:52Z",
+      "duration": "PT18M56S",
+      "views": 278,
+      "likes": 12,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=uR7G_tdQuJ8"
+    },
+    {
+      "id": "ZMY_36If8VY",
+      "title": "6  68 95 99 RULE",
+      "published_at": "2024-05-11T14:30:14Z",
+      "duration": "PT7M9S",
+      "views": 186,
+      "likes": 12,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=ZMY_36If8VY"
+    },
+    {
+      "id": "OrDe_xqBPWg",
+      "title": "Understanding Mean, Median, Mode, Variance & Standard Deviation in Detail with example.",
+      "published_at": "2024-05-09T15:00:21Z",
+      "duration": "PT14M14S",
+      "views": 333,
+      "likes": 18,
+      "comments": 5,
+      "url": "https://www.youtube.com/watch?v=OrDe_xqBPWg"
+    },
+    {
+      "id": "iEu01VBRJ-g",
+      "title": "The Ultimate Guide to PDF and CDF in Normal Distribution",
+      "published_at": "2024-05-08T15:00:39Z",
+      "duration": "PT12M39S",
+      "views": 308,
+      "likes": 9,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=iEu01VBRJ-g"
+    },
+    {
+      "id": "pUTcul2Ct8E",
+      "title": "Understanding the Normal Gaussian Distribution in Statistics",
+      "published_at": "2024-05-07T15:00:45Z",
+      "duration": "PT16M2S",
+      "views": 178,
+      "likes": 11,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=pUTcul2Ct8E"
+    },
+    {
+      "id": "oDgVrCYk6NM",
+      "title": "Population vs Sample: What Every Data Analyst / Scientist Should Know",
+      "published_at": "2024-05-06T15:00:38Z",
+      "duration": "PT14M41S",
+      "views": 200,
+      "likes": 7,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=oDgVrCYk6NM"
+    },
+    {
+      "id": "CCZd4drixXs",
+      "title": "Understanding Probability and Statistics: The Basics of Random Variables",
+      "published_at": "2024-05-05T14:30:06Z",
+      "duration": "PT13M38S",
+      "views": 553,
+      "likes": 18,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=CCZd4drixXs"
+    },
+    {
+      "id": "FLfOSWk45lQ",
+      "title": "Intercept intuitiuon",
+      "published_at": "2024-04-16T13:30:06Z",
+      "duration": "PT11M41S",
+      "views": 98,
+      "likes": 3,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=FLfOSWk45lQ"
+    },
+    {
+      "id": "3ZKgFb8WrkE",
+      "title": "Point lying inside Square 2D, 3D, ND - Rotation of Axis.",
+      "published_at": "2024-04-15T13:30:03Z",
+      "duration": "PT12M6S",
+      "views": 120,
+      "likes": 2,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=3ZKgFb8WrkE"
+    },
+    {
+      "id": "0ao1fP7zFD4",
+      "title": "Equation of Ellipse in 2D, 3D, ND",
+      "published_at": "2024-04-14T13:30:00Z",
+      "duration": "PT10M3S",
+      "views": 239,
+      "likes": 2,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=0ao1fP7zFD4"
+    },
+    {
+      "id": "zB2M7rhSBDo",
+      "title": "Equation of Circle (2D), Sphere (3D), Hypersphere (ND) #06",
+      "published_at": "2024-04-13T13:30:32Z",
+      "duration": "PT7M17S",
+      "views": 171,
+      "likes": 2,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=zB2M7rhSBDo"
+    },
+    {
+      "id": "8qNq1FKNfXQ",
+      "title": "Distance of Point from Plane - Intuition and Calculation #05",
+      "published_at": "2024-04-12T13:30:02Z",
+      "duration": "PT19M25S",
+      "views": 137,
+      "likes": 2,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=8qNq1FKNfXQ"
+    },
+    {
+      "id": "Fjh2zEBh4_Q",
+      "title": "Equation of a line (2-D), Plane(3-D) and Hyperplane (n-D) - #04",
+      "published_at": "2024-04-11T13:30:06Z",
+      "duration": "PT17M16S",
+      "views": 168,
+      "likes": 4,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=Fjh2zEBh4_Q"
+    },
+    {
+      "id": "AKLh5GXTJRY",
+      "title": "Dot Product and Angle Between 2 vectors || Linear algebra for Data Science #03",
+      "published_at": "2024-04-09T13:30:05Z",
+      "duration": "PT23M23S",
+      "views": 185,
+      "likes": 8,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=AKLh5GXTJRY"
+    },
+    {
+      "id": "12dZssO-U1k",
+      "title": "Introduction to Vectors 2D, 3D, 4D and nD || Row and column vector || #02",
+      "published_at": "2024-04-08T13:30:00Z",
+      "duration": "PT15M33S",
+      "views": 237,
+      "likes": 10,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=12dZssO-U1k"
+    },
+    {
+      "id": "aHVqzmmpPME",
+      "title": "#01 || What is Machine Learning and  Why to learn Linear Algebra",
+      "published_at": "2024-04-07T13:30:01Z",
+      "duration": "PT17M35S",
+      "views": 535,
+      "likes": 28,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=aHVqzmmpPME"
+    },
+    {
+      "id": "K5naHE74UaY",
+      "title": "SQL Part 25   Case When",
+      "published_at": "2024-04-04T13:30:10Z",
+      "duration": "PT14M28S",
+      "views": 239,
+      "likes": 9,
+      "comments": 11,
+      "url": "https://www.youtube.com/watch?v=K5naHE74UaY"
+    },
+    {
+      "id": "q0CRxpze43s",
+      "title": "SQL Part 24   Alter, Delete",
+      "published_at": "2024-04-03T13:30:24Z",
+      "duration": "PT5M44S",
+      "views": 144,
+      "likes": 6,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=q0CRxpze43s"
+    },
+    {
+      "id": "jVMF-19GNB8",
+      "title": "SQL Part 23   Create Table",
+      "published_at": "2024-04-02T13:30:18Z",
+      "duration": "PT12M12S",
+      "views": 165,
+      "likes": 9,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=jVMF-19GNB8"
+    },
+    {
+      "id": "6ZkgTTeZzdI",
+      "title": "SQL Part 22  Update, Delete",
+      "published_at": "2024-04-01T13:30:02Z",
+      "duration": "PT12M8S",
+      "views": 126,
+      "likes": 6,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=6ZkgTTeZzdI"
+    },
+    {
+      "id": "RcT0L2Per-A",
+      "title": "SQL Part 21  Insert Into Table",
+      "published_at": "2024-03-26T13:30:12Z",
+      "duration": "PT13M51S",
+      "views": 126,
+      "likes": 8,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=RcT0L2Per-A"
+    },
+    {
+      "id": "ipx85fDhPJA",
+      "title": "SQL Part 20   Sub Queries",
+      "published_at": "2024-03-25T13:30:30Z",
+      "duration": "PT22M30S",
+      "views": 191,
+      "likes": 9,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=ipx85fDhPJA"
+    },
+    {
+      "id": "0HJribyFQiw",
+      "title": "#19 || CROSS JOIN in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-24T13:30:00Z",
+      "duration": "PT8M11S",
+      "views": 143,
+      "likes": 15,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=0HJribyFQiw"
+    },
+    {
+      "id": "MRe0N_seqJM",
+      "title": "#18 || SELF JOIN in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-23T13:30:14Z",
+      "duration": "PT7M36S",
+      "views": 125,
+      "likes": 8,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=MRe0N_seqJM"
+    },
+    {
+      "id": "FlkFy6fFph4",
+      "title": "#17 || LEFT, RIGHT, FULL OUTER JOIN in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-22T13:30:14Z",
+      "duration": "PT15M13S",
+      "views": 149,
+      "likes": 7,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=FlkFy6fFph4"
+    },
+    {
+      "id": "k16ao6xKq9I",
+      "title": "#16 || INNER JOIN in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-21T13:30:31Z",
+      "duration": "PT10M56S",
+      "views": 201,
+      "likes": 9,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=k16ao6xKq9I"
+    },
+    {
+      "id": "jB1KjHppNHM",
+      "title": "#15 || HAVING in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-20T13:30:20Z",
+      "duration": "PT10M2S",
+      "views": 160,
+      "likes": 11,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=jB1KjHppNHM"
+    },
+    {
+      "id": "wv_pMm6WugA",
+      "title": "#14 || Group By in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-18T13:30:34Z",
+      "duration": "PT10M13S",
+      "views": 304,
+      "likes": 15,
+      "comments": 7,
+      "url": "https://www.youtube.com/watch?v=wv_pMm6WugA"
+    },
+    {
+      "id": "NFMy6Dvr-04",
+      "title": "#13 || Aggregators in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-16T18:30:16Z",
+      "duration": "PT10M40S",
+      "views": 532,
+      "likes": 23,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=NFMy6Dvr-04"
+    },
+    {
+      "id": "A4Uee7xjQQ8",
+      "title": "#12 || Operators in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-16T13:30:09Z",
+      "duration": "PT24M55S",
+      "views": 365,
+      "likes": 24,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=A4Uee7xjQQ8"
+    },
+    {
+      "id": "935XX8n8RQo",
+      "title": "#11 || WHERE in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-15T13:30:03Z",
+      "duration": "PT14M55S",
+      "views": 219,
+      "likes": 17,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=935XX8n8RQo"
+    },
+    {
+      "id": "1Lq8n4AzGtU",
+      "title": "#10 || SELECT DISTINCT in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-14T13:30:00Z",
+      "duration": "PT9M55S",
+      "views": 278,
+      "likes": 17,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=1Lq8n4AzGtU"
+    },
+    {
+      "id": "rzvP-zT46Ps",
+      "title": "#09 || ORDER BY in SQL-  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-13T13:30:33Z",
+      "duration": "PT11M5S",
+      "views": 278,
+      "likes": 15,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=rzvP-zT46Ps"
+    },
+    {
+      "id": "jNC1psPp7E0",
+      "title": "#08 || LIMIT & OFFSET in SQL -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-12T13:30:19Z",
+      "duration": "PT9M42S",
+      "views": 288,
+      "likes": 19,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=jNC1psPp7E0"
+    },
+    {
+      "id": "iWs9VziEzVk",
+      "title": "#07 || SQL SELECT -  Complete Tutorial  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-11T13:30:28Z",
+      "duration": "PT11M55S",
+      "views": 351,
+      "likes": 19,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=iWs9VziEzVk"
+    },
+    {
+      "id": "UrzFvWE1jkU",
+      "title": "#06 || SQL Commands - USE, DESCRIBE, SHOW TABLES || Complete SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-10T13:30:13Z",
+      "duration": "PT9M57S",
+      "views": 467,
+      "likes": 22,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=UrzFvWE1jkU"
+    },
+    {
+      "id": "f72_qTV4TJo",
+      "title": "#05 || How to load IMDB movies data into SQL Workbench  || Complete SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-09T13:30:28Z",
+      "duration": "PT14M33S",
+      "views": 1445,
+      "likes": 39,
+      "comments": 11,
+      "url": "https://www.youtube.com/watch?v=f72_qTV4TJo"
+    },
+    {
+      "id": "hCgIZZ0AiMs",
+      "title": "#04 || Complete Guide to Database / SQL Normalisation || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-08T13:30:16Z",
+      "duration": "PT11M5S",
+      "views": 551,
+      "likes": 29,
+      "comments": 5,
+      "url": "https://www.youtube.com/watch?v=hCgIZZ0AiMs"
+    },
+    {
+      "id": "9t9efVz302E",
+      "title": "#03 || Primary Key vs Foreign Key vs Composite Key || Relational DB  || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-07T13:30:10Z",
+      "duration": "PT15M5S",
+      "views": 752,
+      "likes": 36,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=9t9efVz302E"
+    },
+    {
+      "id": "XVjGjr-ba9E",
+      "title": "[FREE] Download the Notebooks for free!! #jupyternotebook  #pythonfordatascience #datascience",
+      "published_at": "2024-03-07T13:05:28Z",
+      "duration": "PT27S",
+      "views": 3329,
+      "likes": 150,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=XVjGjr-ba9E"
+    },
+    {
+      "id": "O8AI02UgQZg",
+      "title": "#02 || How to Install MySQL & Workbench on Mac and Windows 11 || SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-06T13:30:18Z",
+      "duration": "PT11M30S",
+      "views": 873,
+      "likes": 33,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=O8AI02UgQZg"
+    },
+    {
+      "id": "VPPFeZJvAKc",
+      "title": "#01 || What are Databases? || Complete SQL from Scratch #sql (2024)",
+      "published_at": "2024-03-05T13:30:13Z",
+      "duration": "PT15M13S",
+      "views": 2776,
+      "likes": 85,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=VPPFeZJvAKc"
+    },
+    {
+      "id": "1r-yodra1pg",
+      "title": "#32 || Join VS Merge VS Concat in DataFrames || Pandas from Scratch - Part 7",
+      "published_at": "2024-02-29T13:30:01Z",
+      "duration": "PT20M5S",
+      "views": 214,
+      "likes": 9,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=1r-yodra1pg"
+    },
+    {
+      "id": "ziJrKWsJB0g",
+      "title": "#31 || Filtering and GroupBy in DataFrames || Pandas from Scratch - Part 6",
+      "published_at": "2024-02-28T13:30:33Z",
+      "duration": "PT23M28S",
+      "views": 200,
+      "likes": 12,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=ziJrKWsJB0g"
+    },
+    {
+      "id": "nLqkyKZZXUs",
+      "title": "#30 || How to deal with Null Values in DataFrames ?|| Pandas from Scratch - Part 5",
+      "published_at": "2024-02-27T13:30:20Z",
+      "duration": "PT18M47S",
+      "views": 211,
+      "likes": 9,
+      "comments": 12,
+      "url": "https://www.youtube.com/watch?v=nLqkyKZZXUs"
+    },
+    {
+      "id": "LKb63TcJs9g",
+      "title": "#29 || Pandas from Scratch - Part 4 || Sort Rows, Sort Columns & Rearrange Columns in DataFrames",
+      "published_at": "2024-02-26T13:30:11Z",
+      "duration": "PT16M17S",
+      "views": 205,
+      "likes": 14,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=LKb63TcJs9g"
+    },
+    {
+      "id": "_zNo-CWzqew",
+      "title": "#28 || Pandas from Scratch Part3 || Loc vs iLoc in DataFrames with detailed Examples",
+      "published_at": "2024-02-25T13:30:16Z",
+      "duration": "PT15M11S",
+      "views": 228,
+      "likes": 12,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=_zNo-CWzqew"
+    },
+    {
+      "id": "JAgXPCK-a8k",
+      "title": "#27 || Complete Pandas from Scratch - Part 2 || Delete Records, Slicing & Indexing in DataFrames",
+      "published_at": "2024-02-24T13:30:09Z",
+      "duration": "PT22M15S",
+      "views": 280,
+      "likes": 14,
+      "comments": 10,
+      "url": "https://www.youtube.com/watch?v=JAgXPCK-a8k"
+    },
+    {
+      "id": "91C04FZUgKs",
+      "title": "#26 || Complete Pandas from Scratch - Part 1 || Python for DataScience #Pandas",
+      "published_at": "2024-02-23T13:30:04Z",
+      "duration": "PT25M20S",
+      "views": 690,
+      "likes": 20,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=91C04FZUgKs"
+    },
+    {
+      "id": "LdDBAaAIh90",
+      "title": "#25 || Complete Numpy from Scratch - Part 3 || Python for Data Science",
+      "published_at": "2024-02-22T13:30:16Z",
+      "duration": "PT30M18S",
+      "views": 806,
+      "likes": 28,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=LdDBAaAIh90"
+    },
+    {
+      "id": "heAWC5UQTZw",
+      "title": "#24 || Complete Numpy from Scratch - Part 2 || Python for Data Science",
+      "published_at": "2024-02-21T13:30:15Z",
+      "duration": "PT21M2S",
+      "views": 561,
+      "likes": 18,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=heAWC5UQTZw"
+    },
+    {
+      "id": "LwfGWgbBgr4",
+      "title": "#23 || Complete Numpy from Scratch - Part 1 || Python for Data Science",
+      "published_at": "2024-02-18T13:30:08Z",
+      "duration": "PT24M31S",
+      "views": 1128,
+      "likes": 32,
+      "comments": 5,
+      "url": "https://www.youtube.com/watch?v=LwfGWgbBgr4"
+    },
+    {
+      "id": "L5NdPKTUlWY",
+      "title": "#22 || File Handling in Python - Reading and writing to files || Python for Data Science",
+      "published_at": "2024-02-17T13:30:15Z",
+      "duration": "PT20M45S",
+      "views": 503,
+      "likes": 20,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=L5NdPKTUlWY"
+    },
+    {
+      "id": "kHGQoOt--WY",
+      "title": "Open Ai just Shocked Everyone!! Text to Video Tool  SORA - Many jobs are at risk?",
+      "published_at": "2024-02-16T14:56:26Z",
+      "duration": "PT12M21S",
+      "views": 1523,
+      "likes": 29,
+      "comments": 10,
+      "url": "https://www.youtube.com/watch?v=kHGQoOt--WY"
+    },
+    {
+      "id": "o4EjbjquAt0",
+      "title": "#21 || Exception Handling in Python || Try Except Finally explained in detail!",
+      "published_at": "2024-02-16T13:30:32Z",
+      "duration": "PT25M10S",
+      "views": 422,
+      "likes": 22,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=o4EjbjquAt0"
+    },
+    {
+      "id": "zm07PrSK6is",
+      "title": "#20 || Recursive Functions and Lambda Functions in Python || Python for Data Science",
+      "published_at": "2024-02-15T13:30:23Z",
+      "duration": "PT22M5S",
+      "views": 737,
+      "likes": 28,
+      "comments": 2,
+      "url": "https://www.youtube.com/watch?v=zm07PrSK6is"
+    },
+    {
+      "id": "nd1Wh_FESeM",
+      "title": "#19 || Map reduce filter in python || Inbuilt vs User Defined Functions in Python",
+      "published_at": "2024-02-14T13:30:19Z",
+      "duration": "PT26M36S",
+      "views": 564,
+      "likes": 24,
+      "comments": 1,
+      "url": "https://www.youtube.com/watch?v=nd1Wh_FESeM"
+    },
+    {
+      "id": "n0QbyAYLBcM",
+      "title": "#18 || Arguments vs Parameters in Functions || args vs kwargs || Python for Data Science",
+      "published_at": "2024-02-13T13:30:21Z",
+      "duration": "PT21M13S",
+      "views": 574,
+      "likes": 29,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=n0QbyAYLBcM"
+    },
+    {
+      "id": "qEZ7nPLjt40",
+      "title": "#17 || Functions in Python || Python for Data Science",
+      "published_at": "2024-02-12T13:30:31Z",
+      "duration": "PT26M45S",
+      "views": 756,
+      "likes": 32,
+      "comments": 7,
+      "url": "https://www.youtube.com/watch?v=qEZ7nPLjt40"
+    },
+    {
+      "id": "ma3SlNjF-NM",
+      "title": "#16 || Break 🆚 Continue 🆚 Pass Statement in Python || Python for Data Science",
+      "published_at": "2024-02-11T13:30:18Z",
+      "duration": "PT8M35S",
+      "views": 424,
+      "likes": 15,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=ma3SlNjF-NM"
+    },
+    {
+      "id": "eDvLR4DuoI4",
+      "title": "#15 || Python For Loop Tutorial || Real life examples || Python for data science",
+      "published_at": "2024-02-10T13:30:16Z",
+      "duration": "PT19M17S",
+      "views": 543,
+      "likes": 23,
+      "comments": 5,
+      "url": "https://www.youtube.com/watch?v=eDvLR4DuoI4"
+    },
+    {
+      "id": "_2vImJ_YJfo",
+      "title": "#14 || While Loops in Python || How to avoid infinite loops || Python for Data Science",
+      "published_at": "2024-02-09T13:30:16Z",
+      "duration": "PT11M32S",
+      "views": 472,
+      "likes": 24,
+      "comments": 7,
+      "url": "https://www.youtube.com/watch?v=_2vImJ_YJfo"
+    },
+    {
+      "id": "MlAycaXUNTA",
+      "title": "#13 || If else statement tutorial Python || Python for Data Science",
+      "published_at": "2024-02-08T13:30:12Z",
+      "duration": "PT10M43S",
+      "views": 465,
+      "likes": 17,
+      "comments": 6,
+      "url": "https://www.youtube.com/watch?v=MlAycaXUNTA"
+    },
+    {
+      "id": "16IMUjkgqm8",
+      "title": "#12 || Bitwise Operators in Python || 2's Complement ... || Python For Data Science",
+      "published_at": "2024-02-07T13:30:00Z",
+      "duration": "PT11M50S",
+      "views": 729,
+      "likes": 22,
+      "comments": 11,
+      "url": "https://www.youtube.com/watch?v=16IMUjkgqm8"
+    },
+    {
+      "id": "MkDn1ygA2V0",
+      "title": "#11 || Operators in Python || Part 1 || Python for Data Science",
+      "published_at": "2024-02-06T13:30:10Z",
+      "duration": "PT9M57S",
+      "views": 569,
+      "likes": 22,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=MkDn1ygA2V0"
+    },
+    {
+      "id": "Isv-Cntut6E",
+      "title": "#10 || Type Casting In Python || Very Easy || Python for Data Science",
+      "published_at": "2024-02-05T13:30:14Z",
+      "duration": "PT7M43S",
+      "views": 701,
+      "likes": 20,
+      "comments": 3,
+      "url": "https://www.youtube.com/watch?v=Isv-Cntut6E"
+    },
+    {
+      "id": "m5OL19oMgWE",
+      "title": "#09 || Dictionaries in Python || Methods and Manipulations || Python for Data Science",
+      "published_at": "2024-02-04T13:30:19Z",
+      "duration": "PT11M34S",
+      "views": 872,
+      "likes": 21,
+      "comments": 15,
+      "url": "https://www.youtube.com/watch?v=m5OL19oMgWE"
+    },
+    {
+      "id": "iwHWYQLraWs",
+      "title": "#08 || Sets in Python || Methods and Manipulations || Python for Data Science",
+      "published_at": "2024-02-03T13:30:17Z",
+      "duration": "PT13M3S",
+      "views": 868,
+      "likes": 32,
+      "comments": 8,
+      "url": "https://www.youtube.com/watch?v=iwHWYQLraWs"
+    },
+    {
+      "id": "FzEHpiuGuV8",
+      "title": "#07 || Tuples in Python || Mastering Immutable data structures || Python For Data Science",
+      "published_at": "2024-02-02T13:30:11Z",
+      "duration": "PT11M6S",
+      "views": 1130,
+      "likes": 39,
+      "comments": 12,
+      "url": "https://www.youtube.com/watch?v=FzEHpiuGuV8"
+    },
+    {
+      "id": "RPWSQ1W7Xss",
+      "title": "#06 || Lists in Python || Methods and Manipulation || Python For Data Science",
+      "published_at": "2024-02-01T13:30:10Z",
+      "duration": "PT16M46S",
+      "views": 1357,
+      "likes": 37,
+      "comments": 12,
+      "url": "https://www.youtube.com/watch?v=RPWSQ1W7Xss"
+    },
+    {
+      "id": "02RL7UYbo-0",
+      "title": "#05 || Numeric Data types & Strings  || Python For Data Science",
+      "published_at": "2024-01-31T13:30:00Z",
+      "duration": "PT17M24S",
+      "views": 1640,
+      "likes": 49,
+      "comments": 7,
+      "url": "https://www.youtube.com/watch?v=02RL7UYbo-0"
+    },
+    {
+      "id": "M9MdMtlWjVQ",
+      "title": "#04 || Data Types vs. Data Structures Explained || Python for Data Science",
+      "published_at": "2024-01-30T13:30:10Z",
+      "duration": "PT8M39S",
+      "views": 1571,
+      "likes": 52,
+      "comments": 10,
+      "url": "https://www.youtube.com/watch?v=M9MdMtlWjVQ"
+    },
+    {
+      "id": "lWzrUJN_iGQ",
+      "title": "#03 | Indentation & Statements & Variables || Python For Data Science",
+      "published_at": "2024-01-29T11:30:31Z",
+      "duration": "PT13M14S",
+      "views": 1897,
+      "likes": 58,
+      "comments": 4,
+      "url": "https://www.youtube.com/watch?v=lWzrUJN_iGQ"
+    },
+    {
+      "id": "fvC2jcGyTWs",
+      "title": "#02 || Keywords & Identifiers & Comments || Python For Data Science",
+      "published_at": "2024-01-28T11:40:58Z",
+      "duration": "PT9M38S",
+      "views": 3076,
+      "likes": 89,
+      "comments": 5,
+      "url": "https://www.youtube.com/watch?v=fvC2jcGyTWs"
+    },
+    {
+      "id": "ztEnaCr8X6A",
+      "title": "#01 || Google Colab Tutorial | Step-by-Step Guide for Beginners",
+      "published_at": "2024-01-27T12:45:01Z",
+      "duration": "PT13M42S",
+      "views": 4874,
+      "likes": 138,
+      "comments": 11,
+      "url": "https://www.youtube.com/watch?v=ztEnaCr8X6A"
+    },
+    {
+      "id": "iWmDSH21cTY",
+      "title": "Why Learn Python ? Mastering Data Science: Python Unveiled! 🚀 Explore, Learn, Excel!",
+      "published_at": "2024-01-23T11:39:12Z",
+      "duration": "PT5M3S",
+      "views": 5747,
+      "likes": 141,
+      "comments": 9,
+      "url": "https://www.youtube.com/watch?v=iWmDSH21cTY"
+    },
+    {
+      "id": "iqE_80-O4J8",
+      "title": "Unlocking Success: My 2024 Data Science Journey to High-Paying Jobs! 🚀💼 | Roadmap & Strategies",
+      "published_at": "2024-01-19T07:30:58Z",
+      "duration": "PT25M29S",
+      "views": 2397,
+      "likes": 72,
+      "comments": 23,
+      "url": "https://www.youtube.com/watch?v=iqE_80-O4J8"
+    },
+    {
+      "id": "Yahz68wOi6g",
+      "title": "Flavorful Chicken Pulao Recipe: Easy Cooking with The Hungry Balu",
+      "published_at": "2023-08-19T16:48:12Z",
+      "duration": "PT8M3S",
+      "views": 48,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=Yahz68wOi6g"
+    },
+    {
+      "id": "eZSBot4f6UI",
+      "title": "ABSOLUTE GAMING Live Stream",
+      "published_at": "2021-09-15T06:48:34Z",
+      "duration": "P0D",
+      "views": 0,
+      "likes": 0,
+      "comments": 0,
+      "url": "https://www.youtube.com/watch?v=eZSBot4f6UI"
+    }
+  ]
+}

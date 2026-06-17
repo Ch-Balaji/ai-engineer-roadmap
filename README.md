@@ -30,9 +30,10 @@ No build step is required.
 
 ## Run Locally
 
-From the project folder:
+From the `site/` folder:
 
 ```bash
+cd site
 python3 -m http.server 8000
 ```
 
@@ -42,15 +43,23 @@ Then open:
 http://localhost:8000/
 ```
 
+> **GitHub Pages:** After moving the site into `site/`, update the repo's Pages settings to publish from the `/site` folder (or copy `site/` contents to the branch root on deploy).
+
 ## Project Structure
 
 ```text
-index.html
-Roadmap.html
-app.jsx
-data.js
-styles.css
-uploads/
+site/                  # Roadmap website (HTML, CSS, JS)
+  index.html
+  Roadmap.html
+  app.jsx
+  data.js
+  styles.css
+  uploads/
+youtube/               # Scripts, skills, channel data
+projects/              # Code demos and apps
+media/                 # Audio, subtitles, thumbnails
+docs/                  # Planning documents
+partnerships/          # Partner agreements
 ```
 
 ## Contributing

@@ -1,0 +1,5360 @@
+1
+00:00:00,000 --> 00:00:01,980
+Open your phone right now
+
+2
+00:00:02,600 --> 00:00:04,940
+Yes, I am serious. Open your phone
+
+3
+00:00:05,840 --> 00:00:08,520
+After opening, either try opening
+
+4
+00:00:08,520 --> 00:00:09,700
+swiggy or Zomato
+
+5
+00:00:10,420 --> 00:00:12,080
+I will wait. Yeah, open it
+
+6
+00:00:13,360 --> 00:00:16,420
+So, after you open swiggy or Zomato
+
+7
+00:00:17,100 --> 00:00:20,300
+In real time, they are loading what
+
+8
+00:00:20,300 --> 00:00:22,060
+are all the nearby restaurants
+
+9
+00:00:22,060 --> 00:00:24,900
+And then, there are all the foods in
+
+10
+00:00:24,900 --> 00:00:25,500
+those restaurants
+
+11
+00:00:25,500 --> 00:00:27,700
+And the prices and the ratings that
+
+12
+00:00:27,700 --> 00:00:29,260
+the people has given to those foods
+
+13
+00:00:29,260 --> 00:00:32,880
+Isn't it? Every single thing loading
+
+14
+00:00:32,880 --> 00:00:35,400
+in your app in real time
+
+15
+00:00:35,400 --> 00:00:38,060
+Otherwise, swiggy or Zomato,
+
+16
+00:00:38,640 --> 00:00:40,480
+they don't own any of these
+
+17
+00:00:40,480 --> 00:00:41,120
+restaurants
+
+18
+00:00:41,120 --> 00:00:44,220
+Now, if they don't own these
+
+19
+00:00:44,220 --> 00:00:47,960
+restaurants, how do they know what
+
+20
+00:00:47,960 --> 00:00:48,600
+is being cooked in that restaurant,
+
+21
+00:00:48,780 --> 00:00:50,080
+in this kitchen, in this time?
+
+22
+00:00:52,800 --> 00:00:54,080
+Do you think it is magic?
+
+23
+00:00:55,040 --> 00:00:57,580
+No, it is not at all magic.
+
+24
+00:00:57,700 --> 00:01:00,580
+It is a one small technology which
+
+25
+00:01:00,580 --> 00:01:01,880
+is called API
+
+26
+00:01:01,880 --> 00:01:03,760
+It is a very important technology
+
+27
+00:01:03,760 --> 00:01:05,720
+Okay, so what is API?
+
+28
+00:01:06,240 --> 00:01:08,680
+API is Application Programming
+
+29
+00:01:08,680 --> 00:01:09,620
+Interface
+
+30
+00:01:09,620 --> 00:01:11,400
+So, using this API technology,
+
+31
+00:01:12,100 --> 00:01:14,240
+swiggy or Zomato or loading every
+
+32
+00:01:14,240 --> 00:01:16,100
+single thing in your app in real
+
+33
+00:01:16,100 --> 00:01:16,700
+time
+
+34
+00:01:17,160 --> 00:01:19,320
+So, by the end of this video,
+
+35
+00:01:19,660 --> 00:01:21,600
+you will understand what is API?
+
+36
+00:01:21,600 --> 00:01:23,000
+What is API? What is it used for?
+
+37
+00:01:23,140 --> 00:01:25,100
+When is it used? How is it used?
+
+38
+00:01:25,680 --> 00:01:29,560
+And not only that, how
+
+39
+00:01:29,560 --> 00:01:32,060
+can I build my own charge pt
+
+40
+00:01:32,060 --> 00:01:33,480
+application on my local machine
+
+41
+00:01:33,480 --> 00:01:36,400
+using just one charge pt API?
+
+42
+00:01:37,140 --> 00:01:39,180
+We will be able to do that
+
+43
+00:01:39,180 --> 00:01:40,600
+So, what is API?
+
+44
+00:01:40,780 --> 00:01:43,040
+Application Programming Interface
+
+45
+00:01:48,620 --> 00:01:51,620
+Just a fun fact, even these visuals
+
+46
+00:01:51,620 --> 00:01:53,440
+are made by cloud code
+
+47
+00:01:53,440 --> 00:01:55,700
+So, let's say you are building an
+
+48
+00:01:55,700 --> 00:01:57,020
+app and in that application,
+
+49
+00:01:57,320 --> 00:01:59,060
+you want to incorporate weather
+
+50
+00:01:59,060 --> 00:01:59,660
+information
+
+51
+00:02:00,100 --> 00:02:00,900
+If you want that weather
+
+52
+00:02:00,900 --> 00:02:03,420
+information, you can directly go and
+
+53
+00:02:03,420 --> 00:02:04,100
+build a satellite
+
+54
+00:02:04,700 --> 00:02:06,780
+So, there is some other company who
+
+55
+00:02:06,780 --> 00:02:07,980
+have already done that
+
+56
+00:02:07,980 --> 00:02:09,320
+So, what will you do?
+
+57
+00:02:09,320 --> 00:02:11,660
+So, you will go and ask the company,
+
+58
+00:02:11,660 --> 00:02:12,880
+let's say there is an open weather
+
+59
+00:02:12,880 --> 00:02:13,600
+company
+
+60
+00:02:13,600 --> 00:02:15,400
+They will go there and request for
+
+61
+00:02:15,400 --> 00:02:17,180
+the weather information and they
+
+62
+00:02:17,180 --> 00:02:17,920
+will put it in the app
+
+63
+00:02:18,700 --> 00:02:20,520
+And what that open weather company
+
+64
+00:02:20,520 --> 00:02:22,960
+will do is, it will send the data
+
+65
+00:02:22,960 --> 00:02:26,380
+back to you via a format called
+
+66
+00:02:26,380 --> 00:02:27,280
+API
+
+67
+00:02:27,280 --> 00:02:29,160
+And over the internet,
+
+68
+00:02:29,280 --> 00:02:30,460
+this communication is happening
+
+69
+00:02:30,460 --> 00:02:32,340
+Let's say you are building another
+
+70
+00:02:32,340 --> 00:02:35,020
+app and you want to use maps
+
+71
+00:02:35,020 --> 00:02:36,100
+So, if you want to use maps,
+
+72
+00:02:36,860 --> 00:02:37,980
+you can use a car and go around the
+
+73
+00:02:37,980 --> 00:02:39,800
+road and record the maps
+
+74
+00:02:40,820 --> 00:02:42,600
+Google has already done that
+
+75
+00:02:42,600 --> 00:02:43,900
+So, what you will do is,
+
+76
+00:02:43,900 --> 00:02:46,300
+you will go to Google and ask for
+
+77
+00:02:46,300 --> 00:02:47,620
+the maps
+
+78
+00:02:48,140 --> 00:02:49,880
+So, what Google will do is,
+
+79
+00:02:49,880 --> 00:02:51,320
+it will give you the details of the
+
+80
+00:02:51,320 --> 00:02:52,760
+maps via API
+
+81
+00:02:52,760 --> 00:02:54,820
+Maybe let's take one more example
+
+82
+00:02:54,820 --> 00:02:56,500
+You have to build a chart bot
+
+83
+00:02:56,500 --> 00:02:58,780
+To build a chart bot, you have to
+
+84
+00:02:58,780 --> 00:03:00,420
+spend 100 million dollars and train
+
+85
+00:03:00,420 --> 00:03:01,500
+a charge pt model
+
+86
+00:03:02,340 --> 00:03:03,700
+Because the charge pt has already
+
+87
+00:03:03,700 --> 00:03:04,420
+been done
+
+88
+00:03:04,420 --> 00:03:06,380
+Why do we need to spend 100s of
+
+89
+00:03:06,380 --> 00:03:07,120
+millions of dollars?
+
+90
+00:03:07,580 --> 00:03:08,500
+So, what will you do?
+
+91
+00:03:08,640 --> 00:03:10,680
+You will go to charge pt and charge
+
+92
+00:03:10,680 --> 00:03:11,860
+pt will send a question
+
+93
+00:03:11,860 --> 00:03:13,420
+Charge pt will process that question
+
+94
+00:03:13,420 --> 00:03:15,360
+and it will give you the answer back
+
+95
+00:03:15,360 --> 00:03:16,560
+via API
+
+96
+00:03:16,560 --> 00:03:18,260
+And then maybe let's take,
+
+97
+00:03:18,380 --> 00:03:19,860
+you want to make some payments
+
+98
+00:03:19,860 --> 00:03:21,260
+For that, you have built a bank,
+
+99
+00:03:21,600 --> 00:03:22,340
+right?
+
+100
+00:03:22,480 --> 00:03:23,840
+You will use something called as
+
+101
+00:03:23,840 --> 00:03:26,080
+Razorpay, Phonepay, Googlepay
+
+102
+00:03:26,080 --> 00:03:27,880
+All of these will support the
+
+103
+00:03:27,880 --> 00:03:29,900
+payments and even those will work
+
+104
+00:03:29,900 --> 00:03:30,740
+via APIs
+
+105
+00:03:30,740 --> 00:03:32,540
+And maybe let's take one more
+
+106
+00:03:32,540 --> 00:03:33,140
+example
+
+107
+00:03:33,140 --> 00:03:34,140
+You want to send emails
+
+108
+00:03:34,140 --> 00:03:35,780
+For that, you have built a world
+
+109
+00:03:35,780 --> 00:03:37,200
+wide web, right?
+
+110
+00:03:37,440 --> 00:03:38,540
+So, you use something which is
+
+111
+00:03:38,540 --> 00:03:39,320
+already built
+
+112
+00:03:39,320 --> 00:03:40,980
+So, what is API?
+
+113
+00:03:41,740 --> 00:03:43,800
+So, it's like an interface that you
+
+114
+00:03:43,800 --> 00:03:45,400
+can communicate with the third party
+
+115
+00:03:45,400 --> 00:03:46,000
+companies
+
+116
+00:03:46,000 --> 00:03:47,760
+That is what API is
+
+117
+00:03:47,760 --> 00:03:49,200
+So, let's look at the definition
+
+118
+00:03:49,200 --> 00:03:52,420
+An API is a doorway that lets your
+
+119
+00:03:52,420 --> 00:03:54,780
+app borrow another company's
+
+120
+00:03:54,780 --> 00:03:56,800
+capabilities over the internet
+
+121
+00:03:56,800 --> 00:03:58,680
+With a few lines of code
+
+122
+00:03:58,680 --> 00:04:00,320
+Very few lines of code
+
+123
+00:04:00,320 --> 00:04:02,380
+Maybe 10 lines max to max
+
+124
+00:04:02,380 --> 00:04:04,880
+You don't rebuild the world
+
+125
+00:04:04,880 --> 00:04:07,160
+You just ask what you need
+
+126
+00:04:07,160 --> 00:04:09,000
+That is what an API is
+
+127
+00:04:09,000 --> 00:04:10,400
+You might have a doubt in your mind
+
+128
+00:04:10,940 --> 00:04:12,880
+You are saying you will go and ask
+
+129
+00:04:12,880 --> 00:04:13,480
+the company
+
+130
+00:04:13,480 --> 00:04:14,800
+But how will you ask?
+
+131
+00:04:15,000 --> 00:04:16,000
+That is also important,
+
+132
+00:04:16,000 --> 00:04:16,660
+right?
+
+133
+00:04:16,780 --> 00:04:18,580
+And that is why we have something
+
+134
+00:04:18,580 --> 00:04:20,560
+called as request and response
+
+135
+00:04:21,200 --> 00:04:23,220
+For example, this is your local
+
+136
+00:04:23,220 --> 00:04:23,820
+machine
+
+137
+00:04:23,820 --> 00:04:25,660
+Maybe it can be a phone or laptop or
+
+138
+00:04:25,660 --> 00:04:26,260
+anything
+
+139
+00:04:26,260 --> 00:04:28,700
+Now, you are building an app
+
+140
+00:04:28,700 --> 00:04:32,560
+You need weather information in that
+
+141
+00:04:32,920 --> 00:04:34,100
+What you do is
+
+142
+00:04:34,100 --> 00:04:35,620
+Over the wifi, as you send a
+
+143
+00:04:35,620 --> 00:04:36,460
+WhatsApp message
+
+144
+00:04:36,460 --> 00:04:38,780
+You send a request to the company
+
+145
+00:04:38,780 --> 00:04:40,440
+Let's say open weather company
+
+146
+00:04:40,440 --> 00:04:41,660
+What they will ask is
+
+147
+00:04:41,660 --> 00:04:43,140
+I want to get today's weather
+
+148
+00:04:43,140 --> 00:04:44,680
+What will it do then?
+
+149
+00:04:44,860 --> 00:04:46,180
+It will validate that request
+
+150
+00:04:46,180 --> 00:04:47,540
+And it will send you the output
+
+151
+00:04:48,120 --> 00:04:49,660
+And then you will consume that
+
+152
+00:04:49,660 --> 00:04:50,820
+output in your application
+
+153
+00:04:50,820 --> 00:04:53,180
+To communicate like this
+
+154
+00:04:53,180 --> 00:04:55,140
+There is a package in python
+
+155
+00:04:55,140 --> 00:04:57,480
+And it's a very small and very easy
+
+156
+00:04:57,480 --> 00:04:58,080
+package
+
+157
+00:04:58,080 --> 00:04:59,660
+Which is called as request package
+
+158
+00:05:00,190 --> 00:05:01,860
+You can directly install it in
+
+159
+00:05:01,860 --> 00:05:02,460
+python
+
+160
+00:05:02,460 --> 00:05:04,460
+And within four lines of code
+
+161
+00:05:04,460 --> 00:05:06,600
+You can just get this request and
+
+162
+00:05:06,600 --> 00:05:07,200
+response
+
+163
+00:05:07,200 --> 00:05:08,500
+What are you doing first?
+
+164
+00:05:08,740 --> 00:05:10,160
+You are going to send a request
+
+165
+00:05:10,160 --> 00:05:11,880
+And this company is going to send
+
+166
+00:05:11,880 --> 00:05:12,600
+the response
+
+167
+00:05:12,600 --> 00:05:14,260
+And for that, you need an address,
+
+168
+00:05:14,260 --> 00:05:14,860
+right?
+
+169
+00:05:14,860 --> 00:05:16,300
+This company needs an address,
+
+170
+00:05:16,300 --> 00:05:16,900
+right?
+
+171
+00:05:16,900 --> 00:05:17,500
+They will go there and ask
+
+172
+00:05:18,060 --> 00:05:20,340
+That address is this URL
+
+173
+00:05:20,860 --> 00:05:23,900
+HTTP API openweather.org weather
+
+174
+00:05:24,530 --> 00:05:27,220
+So using the python package called
+
+175
+00:05:27,220 --> 00:05:27,820
+request
+
+176
+00:05:27,820 --> 00:05:29,980
+And using the URL which is the
+
+177
+00:05:29,980 --> 00:05:30,580
+address
+
+178
+00:05:30,580 --> 00:05:31,900
+You will send a request
+
+179
+00:05:31,900 --> 00:05:33,820
+And from there, you will get the
+
+180
+00:05:33,820 --> 00:05:34,420
+response
+
+181
+00:05:34,420 --> 00:05:36,060
+And the response is the output that
+
+182
+00:05:36,060 --> 00:05:36,660
+you want
+
+183
+00:05:36,660 --> 00:05:37,900
+Very simple
+
+184
+00:05:37,900 --> 00:05:39,280
+Four lines of code
+
+185
+00:05:39,280 --> 00:05:40,940
+And all of this communication
+
+186
+00:05:40,940 --> 00:05:43,680
+Will happen in the format of JSON
+
+187
+00:05:43,680 --> 00:05:46,780
+JSON is basically a structured data
+
+188
+00:05:46,780 --> 00:05:47,380
+structure
+
+189
+00:05:47,380 --> 00:05:49,320
+Which can be used in Java,
+
+190
+00:05:49,500 --> 00:05:51,940
+Python, C, C++
+
+191
+00:05:51,940 --> 00:05:54,700
+Anywhere you can use this language
+
+192
+00:05:54,700 --> 00:05:56,160
+That is why all of this
+
+193
+00:05:56,160 --> 00:05:57,800
+communication is being done
+
+194
+00:05:57,800 --> 00:05:59,400
+Via JSON format
+
+195
+00:05:59,400 --> 00:06:01,260
+JSON format is very simple guys
+
+196
+00:06:01,260 --> 00:06:02,120
+It's like a dictionary
+
+197
+00:06:02,120 --> 00:06:03,660
+And if you don't know dictionaries
+
+198
+00:06:03,660 --> 00:06:05,180
+Please watch my video on the python
+
+199
+00:06:05,180 --> 00:06:05,780
+dictionaries
+
+200
+00:06:05,780 --> 00:06:06,800
+You will understand every single
+
+201
+00:06:06,800 --> 00:06:07,400
+thing
+
+202
+00:06:07,400 --> 00:06:09,060
+So like this, when you send a
+
+203
+00:06:09,060 --> 00:06:09,660
+request
+
+204
+00:06:09,660 --> 00:06:11,820
+You will get the output in the form
+
+205
+00:06:11,820 --> 00:06:12,460
+of JSON
+
+206
+00:06:12,460 --> 00:06:13,940
+We will learn more about this in the
+
+207
+00:06:13,940 --> 00:06:14,800
+later part of this video
+
+208
+00:06:14,800 --> 00:06:15,400
+So don't worry
+
+209
+00:06:15,940 --> 00:06:17,740
+Maybe let's say you want to build
+
+210
+00:06:17,740 --> 00:06:19,020
+your charge bit application
+
+211
+00:06:19,020 --> 00:06:19,860
+Locally
+
+212
+00:06:19,860 --> 00:06:21,200
+So what will you do?
+
+213
+00:06:21,420 --> 00:06:22,980
+Instead of openweather here
+
+214
+00:06:22,980 --> 00:06:24,140
+You will have OpenAI
+
+215
+00:06:24,140 --> 00:06:26,300
+OpenAI has this capability,
+
+216
+00:06:26,780 --> 00:06:27,380
+right?
+
+217
+00:06:27,380 --> 00:06:28,300
+So you will send your request to
+
+218
+00:06:28,300 --> 00:06:28,900
+OpenAI
+
+219
+00:06:28,900 --> 00:06:31,340
+And OpenAI will validate your
+
+220
+00:06:31,340 --> 00:06:31,940
+request
+
+221
+00:06:31,940 --> 00:06:33,000
+And send you the output
+
+222
+00:06:33,000 --> 00:06:33,800
+Simple
+
+223
+00:06:33,800 --> 00:06:35,760
+So at the end of the day
+
+224
+00:06:35,760 --> 00:06:36,680
+How do you send it?
+
+225
+00:06:37,000 --> 00:06:39,060
+You need to find where you want to
+
+226
+00:06:39,060 --> 00:06:39,660
+hit
+
+227
+00:06:39,660 --> 00:06:40,260
+This is my machine
+
+228
+00:06:40,260 --> 00:06:41,880
+Whether you want to hit to OpenAI
+
+229
+00:06:41,880 --> 00:06:43,420
+Whether you want to hit to GitHub
+
+230
+00:06:43,420 --> 00:06:44,020
+API
+
+231
+00:06:44,020 --> 00:06:45,740
+Or whether you want to get to
+
+232
+00:06:45,740 --> 00:06:46,380
+weather API
+
+233
+00:06:46,380 --> 00:06:49,720
+Every company has their own APIs
+
+234
+00:06:50,220 --> 00:06:51,660
+So you will go and ask
+
+235
+00:06:51,660 --> 00:06:52,460
+You will get the data
+
+236
+00:06:52,460 --> 00:06:53,420
+You will go and ask
+
+237
+00:06:53,420 --> 00:06:54,080
+You will get the data
+
+238
+00:06:54,080 --> 00:06:54,920
+You will go and ask
+
+239
+00:06:54,920 --> 00:06:55,680
+You will get the data
+
+240
+00:06:55,680 --> 00:06:58,220
+That's how the request and response
+
+241
+00:06:58,220 --> 00:06:58,820
+works
+
+242
+00:06:58,820 --> 00:07:01,220
+via API in the format of JSON
+
+243
+00:07:01,220 --> 00:07:03,260
+It's good that you send it
+
+244
+00:07:03,260 --> 00:07:05,800
+Now there are many people in the
+
+245
+00:07:05,800 --> 00:07:06,400
+world
+
+246
+00:07:06,400 --> 00:07:07,500
+If everyone sends a request to
+
+247
+00:07:07,500 --> 00:07:09,000
+OpenAI or WeatherGun
+
+248
+00:07:09,000 --> 00:07:11,040
+Their servers will break,
+
+249
+00:07:11,040 --> 00:07:11,900
+right?
+
+250
+00:07:12,440 --> 00:07:13,320
+And who will get it?
+
+251
+00:07:14,160 --> 00:07:16,180
+So there should be something
+
+252
+00:07:16,180 --> 00:07:18,240
+Which should connect between you
+
+253
+00:07:18,240 --> 00:07:18,960
+securely
+
+254
+00:07:18,960 --> 00:07:21,460
+And that is what we call it as an
+
+255
+00:07:21,460 --> 00:07:22,060
+API key
+
+256
+00:07:22,060 --> 00:07:23,620
+What is API key?
+
+257
+00:07:24,040 --> 00:07:26,480
+You can think about it like a lock
+
+258
+00:07:26,480 --> 00:07:27,140
+to your house
+
+259
+00:07:27,140 --> 00:07:28,640
+If there is a lock in your house
+
+260
+00:07:28,640 --> 00:07:31,260
+Anyone can go to your house with
+
+261
+00:07:31,260 --> 00:07:31,860
+that lock
+
+262
+00:07:31,860 --> 00:07:32,460
+If they don't have a lock
+
+263
+00:07:32,460 --> 00:07:33,860
+They cannot enter your house,
+
+264
+00:07:33,860 --> 00:07:34,460
+right?
+
+265
+00:07:34,600 --> 00:07:36,540
+So what you do is
+
+266
+00:07:36,880 --> 00:07:38,640
+You go to OpenAI company
+
+267
+00:07:39,740 --> 00:07:40,620
+And you get registered
+
+268
+00:07:40,620 --> 00:07:41,620
+Register means
+
+269
+00:07:41,620 --> 00:07:44,760
+I want to communicate with you via
+
+270
+00:07:44,760 --> 00:07:45,380
+API
+
+271
+00:07:45,380 --> 00:07:48,100
+I want a key for that
+
+272
+00:07:48,100 --> 00:07:50,060
+Then OpenAI will provide a key for
+
+273
+00:07:50,060 --> 00:07:50,660
+you
+
+274
+00:07:50,660 --> 00:07:51,860
+So from next time
+
+275
+00:07:51,860 --> 00:07:54,180
+Whenever you are sending a request
+
+276
+00:07:54,180 --> 00:07:55,260
+Along with that request
+
+277
+00:07:55,260 --> 00:07:57,880
+You will send the key as well
+
+278
+00:07:57,880 --> 00:07:59,920
+So when you send a request to here
+
+279
+00:07:59,920 --> 00:08:01,280
+Along with the key
+
+280
+00:08:01,280 --> 00:08:02,800
+What OpenAI will do is
+
+281
+00:08:02,800 --> 00:08:03,980
+First it will validate
+
+282
+00:08:03,980 --> 00:08:06,440
+Whether the key is genuine or not
+
+283
+00:08:06,440 --> 00:08:08,040
+If the key is genuine
+
+284
+00:08:08,880 --> 00:08:10,760
+It will respond to your request
+
+285
+00:08:10,760 --> 00:08:12,440
+Otherwise it will not give the
+
+286
+00:08:12,440 --> 00:08:13,040
+response
+
+287
+00:08:13,040 --> 00:08:14,600
+So what happens because of this
+
+288
+00:08:14,600 --> 00:08:18,140
+Any company can control the number
+
+289
+00:08:18,140 --> 00:08:18,740
+of people
+
+290
+00:08:18,740 --> 00:08:20,320
+Who are sending these requests
+
+291
+00:08:20,320 --> 00:08:21,900
+And there is one more thing
+
+292
+00:08:21,900 --> 00:08:23,060
+You might be thinking of using a
+
+293
+00:08:23,060 --> 00:08:23,660
+chargpt
+
+294
+00:08:25,060 --> 00:08:26,460
+Maybe let's say
+
+295
+00:08:26,460 --> 00:08:27,980
+You pass a question like
+
+296
+00:08:27,980 --> 00:08:29,180
+What is a calculator?
+
+297
+00:08:32,480 --> 00:08:33,600
+So what should we do now?
+
+298
+00:08:33,780 --> 00:08:36,100
+This question will go to the chargpt
+
+299
+00:08:36,100 --> 00:08:38,840
+And chargpt will validate your key
+
+300
+00:08:38,840 --> 00:08:40,240
+And after that
+
+301
+00:08:40,240 --> 00:08:42,020
+Using a chargpt server
+
+302
+00:08:42,020 --> 00:08:43,520
+Using an intelligence
+
+303
+00:08:44,320 --> 00:08:45,660
+It will give you an answer
+
+304
+00:08:45,660 --> 00:08:47,000
+Maybe calculator is something
+
+305
+00:08:47,000 --> 00:08:48,180
+That you will want to do
+
+306
+00:08:48,180 --> 00:08:49,160
+The mathematical operations
+
+307
+00:08:49,800 --> 00:08:50,680
+And then
+
+308
+00:08:50,680 --> 00:08:52,760
+That response you are sending back
+
+309
+00:08:52,760 --> 00:08:55,620
+So here you are using the
+
+310
+00:08:55,620 --> 00:08:56,460
+capabilities
+
+311
+00:08:56,460 --> 00:08:57,680
+Of the company
+
+312
+00:08:57,680 --> 00:08:58,800
+Whether it is chargpt
+
+313
+00:08:58,800 --> 00:08:59,820
+Whether it is app
+
+314
+00:08:59,820 --> 00:09:01,140
+Whether it is github
+
+315
+00:09:01,140 --> 00:09:03,500
+So they are going to charge you
+
+316
+00:09:03,500 --> 00:09:04,660
+Some amount of money
+
+317
+00:09:04,660 --> 00:09:06,780
+Not every company will charge you
+
+318
+00:09:06,780 --> 00:09:07,380
+guys
+
+319
+00:09:07,380 --> 00:09:09,580
+At times chargpt will charge you
+
+320
+00:09:09,580 --> 00:09:10,400
+Some amount of money
+
+321
+00:09:10,400 --> 00:09:11,580
+Based on the number of requests
+
+322
+00:09:11,580 --> 00:09:12,380
+That you are doing
+
+323
+00:09:12,380 --> 00:09:13,300
+At times if you have github
+
+324
+00:09:13,300 --> 00:09:14,940
+Some github won't charge anything
+
+325
+00:09:14,940 --> 00:09:16,060
+So like that
+
+326
+00:09:16,060 --> 00:09:18,020
+Some companies have free APIs
+
+327
+00:09:18,020 --> 00:09:20,160
+Some companies have API keys
+
+328
+00:09:20,160 --> 00:09:21,480
+You will only get
+
+329
+00:09:21,480 --> 00:09:23,540
+Once you make the payments
+
+330
+00:09:26,330 --> 00:09:28,170
+What did you do?
+
+331
+00:09:28,350 --> 00:09:29,490
+You are sending a request
+
+332
+00:09:29,490 --> 00:09:30,650
+From your local machine
+
+333
+00:09:30,650 --> 00:09:31,830
+To the chargpt server
+
+334
+00:09:31,830 --> 00:09:32,950
+Or github server
+
+335
+00:09:32,950 --> 00:09:34,890
+You sent a request to some server
+
+336
+00:09:34,890 --> 00:09:36,350
+But did the request process
+
+337
+00:09:36,350 --> 00:09:37,190
+correctly or not?
+
+338
+00:09:37,430 --> 00:09:39,110
+Whether there are any issues or not?
+
+339
+00:09:39,390 --> 00:09:39,990
+How do you know?
+
+340
+00:09:40,750 --> 00:09:42,350
+So at times like that
+
+341
+00:09:42,350 --> 00:09:43,810
+We have these codes
+
+342
+00:09:44,430 --> 00:09:45,930
+Which are status codes
+
+343
+00:09:45,930 --> 00:09:47,550
+When you send a request
+
+344
+00:09:47,550 --> 00:09:48,890
+And when you get a response
+
+345
+00:09:48,890 --> 00:09:51,010
+You will get these status codes
+
+346
+00:09:51,010 --> 00:09:52,490
+Along with that response
+
+347
+00:09:52,490 --> 00:09:53,750
+In the form of JSON
+
+348
+00:09:54,270 --> 00:09:55,410
+Depending on these status codes
+
+349
+00:09:55,410 --> 00:09:57,030
+You can decide
+
+350
+00:09:57,030 --> 00:09:58,430
+Whether your request is a good
+
+351
+00:09:58,430 --> 00:09:59,030
+request
+
+352
+00:09:59,030 --> 00:10:00,550
+Or did you get a response or not?
+
+353
+00:10:01,150 --> 00:10:02,370
+If the status code is 200
+
+354
+00:10:03,100 --> 00:10:04,770
+The request you sent worked
+
+355
+00:10:04,770 --> 00:10:06,550
+There is also a response in the data
+
+356
+00:10:06,550 --> 00:10:08,330
+And then if the status code is 201
+
+357
+00:10:08,990 --> 00:10:10,590
+Something new was created
+
+358
+00:10:11,930 --> 00:10:13,150
+Common after post
+
+359
+00:10:13,150 --> 00:10:14,630
+Means you are sending some new data
+
+360
+00:10:15,150 --> 00:10:16,530
+And then 204
+
+361
+00:10:16,530 --> 00:10:17,430
+It worked
+
+362
+00:10:17,430 --> 00:10:19,870
+But we didn't get any response from
+
+363
+00:10:19,870 --> 00:10:20,470
+there
+
+364
+00:10:20,590 --> 00:10:22,550
+So if your status codes
+
+365
+00:10:22,550 --> 00:10:24,230
+Is in the form of 2xx
+
+366
+00:10:24,230 --> 00:10:26,210
+Which is 201 and 202
+
+367
+00:10:26,210 --> 00:10:28,330
+That means your request is getting
+
+368
+00:10:28,330 --> 00:10:28,970
+through
+
+369
+00:10:28,970 --> 00:10:30,130
+Maybe something happened
+
+370
+00:10:30,130 --> 00:10:31,270
+Sometimes you will get back
+
+371
+00:10:31,270 --> 00:10:32,470
+Sometimes you will not get back
+
+372
+00:10:32,470 --> 00:10:33,770
+But usually
+
+373
+00:10:33,770 --> 00:10:36,650
+You need to see request code as 200
+
+374
+00:10:36,650 --> 00:10:37,990
+That means you sent and got the
+
+375
+00:10:37,990 --> 00:10:38,590
+request code
+
+376
+00:10:38,590 --> 00:10:40,250
+So this is the first thing
+
+377
+00:10:40,250 --> 00:10:41,250
+And next
+
+378
+00:10:41,250 --> 00:10:43,090
+When you see the request codes
+
+379
+00:10:43,090 --> 00:10:44,750
+In the format of 4xx
+
+380
+00:10:44,750 --> 00:10:46,810
+That means it is going to be
+
+381
+00:10:46,810 --> 00:10:47,710
+something bad
+
+382
+00:10:47,710 --> 00:10:49,730
+Instead if you see the request code
+
+383
+00:10:49,730 --> 00:10:50,730
+as 400
+
+384
+00:10:50,730 --> 00:10:53,150
+That means in the request you sent
+
+385
+00:10:53,150 --> 00:10:54,590
+The data was not sent properly
+
+386
+00:10:54,590 --> 00:10:55,870
+It is in the wrong JSON
+
+387
+00:10:55,870 --> 00:10:57,550
+And 401 means
+
+388
+00:10:57,550 --> 00:10:58,590
+You have the API key
+
+389
+00:10:58,590 --> 00:11:00,710
+Maybe that API key is not valid
+
+390
+00:11:00,710 --> 00:11:03,030
+That is why we have the unauthorized
+
+391
+00:11:03,030 --> 00:11:03,630
+request
+
+392
+00:11:03,630 --> 00:11:04,230
+Because
+
+393
+00:11:04,230 --> 00:11:05,450
+There are API keys
+
+394
+00:11:06,010 --> 00:11:08,150
+That keys have a specific timeline
+
+395
+00:11:08,730 --> 00:11:10,690
+Maybe you have to work for one month
+
+396
+00:11:10,690 --> 00:11:11,970
+Maybe two months
+
+397
+00:11:11,970 --> 00:11:12,650
+Maybe three months
+
+398
+00:11:12,650 --> 00:11:13,270
+Maybe four months
+
+399
+00:11:13,270 --> 00:11:14,130
+Maybe a couple of days
+
+400
+00:11:14,130 --> 00:11:16,050
+Sometimes API will expire
+
+401
+00:11:16,050 --> 00:11:17,770
+That key will expire
+
+402
+00:11:17,770 --> 00:11:19,850
+Then you need to create a new key
+
+403
+00:11:19,850 --> 00:11:22,930
+So once your key is expired
+
+404
+00:11:22,930 --> 00:11:24,930
+Then if you use the same path key
+
+405
+00:11:24,930 --> 00:11:26,170
+If you send a request
+
+406
+00:11:26,170 --> 00:11:28,330
+You will get a code as unauthorized
+
+407
+00:11:28,330 --> 00:11:30,350
+And then maybe 403 is forbidden
+
+408
+00:11:30,350 --> 00:11:32,290
+And sometimes you get error code as
+
+409
+00:11:32,290 --> 00:11:33,390
+404
+
+410
+00:11:33,390 --> 00:11:34,250
+That means
+
+411
+00:11:34,250 --> 00:11:35,590
+The URL you sent
+
+412
+00:11:35,590 --> 00:11:38,410
+That URL or the address is wrong
+
+413
+00:11:38,410 --> 00:11:40,470
+You might have noticed it
+
+414
+00:11:40,470 --> 00:11:42,390
+When you don't have the internet
+
+415
+00:11:42,390 --> 00:11:43,510
+When you refresh
+
+416
+00:11:43,510 --> 00:11:45,550
+Error 404 will come
+
+417
+00:11:45,970 --> 00:11:47,470
+That is why this is
+
+418
+00:11:47,470 --> 00:11:48,610
+This is error 404
+
+419
+00:11:48,610 --> 00:11:52,150
+The URL is not working properly
+
+420
+00:11:52,150 --> 00:11:54,610
+And then there is 429
+
+421
+00:11:54,610 --> 00:11:56,310
+That means you are sending a lot of
+
+422
+00:11:56,310 --> 00:11:56,910
+requests
+
+423
+00:11:57,230 --> 00:11:59,410
+I will come to that point in a
+
+424
+00:11:59,410 --> 00:12:00,010
+minute
+
+425
+00:12:00,010 --> 00:12:00,930
+Which is called rate limiting
+
+426
+00:12:00,930 --> 00:12:03,230
+And then when you see some errors
+
+427
+00:12:03,230 --> 00:12:05,230
+Which are in the format of 5xx
+
+428
+00:12:05,230 --> 00:12:06,550
+That means
+
+429
+00:12:06,550 --> 00:12:07,950
+There is a server side problem
+
+430
+00:12:07,950 --> 00:12:09,270
+There is no problem on your side
+
+431
+00:12:09,270 --> 00:12:10,730
+When you see 500
+
+432
+00:12:10,730 --> 00:12:12,070
+Internal server issue
+
+433
+00:12:12,070 --> 00:12:13,930
+They are not working properly
+
+434
+00:12:13,930 --> 00:12:16,190
+And 502 is a bad gateway
+
+435
+00:12:16,190 --> 00:12:17,530
+And 503 means
+
+436
+00:12:17,530 --> 00:12:18,990
+The server is unavailable
+
+437
+00:12:19,710 --> 00:12:22,310
+Everything is fine as you send
+
+438
+00:12:22,310 --> 00:12:23,750
+But the server is not responding
+
+439
+00:12:23,750 --> 00:12:25,790
+So when you see 200 codes
+
+440
+00:12:25,790 --> 00:12:27,690
+That means everything is going good
+
+441
+00:12:27,690 --> 00:12:29,430
+When you see 400 codes
+
+442
+00:12:29,430 --> 00:12:30,710
+That means you are doing something
+
+443
+00:12:30,710 --> 00:12:31,310
+wrong
+
+444
+00:12:31,310 --> 00:12:33,030
+And when you see 500 codes
+
+445
+00:12:33,030 --> 00:12:34,350
+That means the server side is
+
+446
+00:12:34,350 --> 00:12:34,970
+something wrong
+
+447
+00:12:34,970 --> 00:12:36,410
+And then the next topic
+
+448
+00:12:36,410 --> 00:12:37,950
+Which is called rate limiting
+
+449
+00:12:37,950 --> 00:12:39,270
+What is this rate limiting
+
+450
+00:12:39,770 --> 00:12:41,150
+You have seen it before
+
+451
+00:12:41,150 --> 00:12:42,590
+You are sending from your laptop
+
+452
+00:12:42,590 --> 00:12:44,410
+You are sending to OpenAI
+
+453
+00:12:44,410 --> 00:12:45,630
+Let's say OpenAI
+
+454
+00:12:45,630 --> 00:12:48,270
+So like me
+
+455
+00:12:48,270 --> 00:12:49,610
+There are so many people
+
+456
+00:12:49,610 --> 00:12:51,430
+Who are going to send requests to
+
+457
+00:12:51,430 --> 00:12:52,030
+OpenAI
+
+458
+00:12:52,670 --> 00:12:53,990
+And every second
+
+459
+00:12:53,990 --> 00:12:56,750
+It needs to handle a lot of queries
+
+460
+00:12:56,750 --> 00:13:00,650
+But OpenAI is open to
+
+461
+00:13:00,650 --> 00:13:02,670
+every person in the world
+
+462
+00:13:02,670 --> 00:13:05,370
+So what do they do for that
+
+463
+00:13:05,630 --> 00:13:07,630
+They are going to limit you
+
+464
+00:13:07,630 --> 00:13:09,770
+Maybe per second
+
+465
+00:13:10,370 --> 00:13:12,630
+You put only 10 requests
+
+466
+00:13:12,630 --> 00:13:16,430
+So that this company needs to handle
+
+467
+00:13:16,430 --> 00:13:17,550
+to every other person
+
+468
+00:13:17,550 --> 00:13:19,890
+So they will put something called as
+
+469
+00:13:19,890 --> 00:13:20,570
+rate limiting
+
+470
+00:13:20,570 --> 00:13:22,290
+Each company will have something
+
+471
+00:13:22,290 --> 00:13:23,070
+like this
+
+472
+00:13:23,070 --> 00:13:24,510
+In the project I worked on
+
+473
+00:13:24,510 --> 00:13:27,510
+There is 1800 requests per second
+
+474
+00:13:28,150 --> 00:13:29,190
+So like this
+
+475
+00:13:29,190 --> 00:13:30,430
+Each company will have a rate
+
+476
+00:13:30,430 --> 00:13:31,030
+limiting
+
+477
+00:13:31,030 --> 00:13:33,270
+And we need to adhere to that rate
+
+478
+00:13:33,270 --> 00:13:34,130
+limiting policies
+
+479
+00:13:34,130 --> 00:13:34,790
+Otherwise
+
+480
+00:13:35,430 --> 00:13:36,930
+Maybe let's say
+
+481
+00:13:36,930 --> 00:13:38,970
+Let's say 10 requests per second
+
+482
+00:13:38,970 --> 00:13:40,250
+But you sent 11 requests
+
+483
+00:13:40,250 --> 00:13:42,330
+The 11th request will not process
+
+484
+00:13:42,330 --> 00:13:44,950
+Because RGPT cannot process more
+
+485
+00:13:44,950 --> 00:13:46,210
+than 10 requests per second
+
+486
+00:13:46,210 --> 00:13:47,470
+That is their limit
+
+487
+00:13:47,470 --> 00:13:49,690
+So whenever you are using any kind
+
+488
+00:13:49,690 --> 00:13:50,290
+of API
+
+489
+00:13:50,290 --> 00:13:52,650
+Always look at what is the rate
+
+490
+00:13:52,650 --> 00:13:53,250
+limiting
+
+491
+00:13:53,250 --> 00:13:54,510
+Let me do a reset
+
+492
+00:13:54,510 --> 00:13:55,250
+Now let's try
+
+493
+00:13:55,650 --> 00:13:57,190
+First it went OK
+
+494
+00:13:57,190 --> 00:13:58,930
+After that it cannot do
+
+495
+00:13:58,930 --> 00:14:01,510
+Because it will throw a 429 error
+
+496
+00:14:01,510 --> 00:14:03,050
+Which is too many requests
+
+497
+00:14:03,550 --> 00:14:05,270
+So these are all the basics
+
+498
+00:14:05,270 --> 00:14:07,670
+That everyone need to know about API
+
+499
+00:14:07,670 --> 00:14:09,470
+So let's summarize everything
+
+500
+00:14:09,470 --> 00:14:12,090
+API is an interface
+
+501
+00:14:12,090 --> 00:14:14,030
+That you can communicate between
+
+502
+00:14:14,030 --> 00:14:15,470
+companies via internet
+
+503
+00:14:15,470 --> 00:14:16,830
+In the form of JSON
+
+504
+00:14:16,830 --> 00:14:18,270
+So to hit an API request
+
+505
+00:14:19,030 --> 00:14:21,230
+You need a package called request
+
+506
+00:14:21,230 --> 00:14:23,170
+And in that you need an address with
+
+507
+00:14:23,170 --> 00:14:23,770
+URL
+
+508
+00:14:23,770 --> 00:14:25,950
+After that you can put the request
+
+509
+00:14:25,950 --> 00:14:26,610
+to any company
+
+510
+00:14:26,610 --> 00:14:27,670
+You will get the response
+
+511
+00:14:27,670 --> 00:14:28,930
+So to hit the response
+
+512
+00:14:29,470 --> 00:14:30,870
+You also need a key
+
+513
+00:14:30,870 --> 00:14:31,870
+Why the key?
+
+514
+00:14:31,950 --> 00:14:33,470
+Key is basically the gateway
+
+515
+00:14:33,470 --> 00:14:35,430
+That opens the door to the company
+
+516
+00:14:35,430 --> 00:14:38,970
+You need to put a key without anyone
+
+517
+00:14:38,970 --> 00:14:39,570
+doing it
+
+518
+00:14:39,570 --> 00:14:40,770
+And after that we have status codes
+
+519
+00:14:40,770 --> 00:14:42,150
+Whether the request you sent is
+
+520
+00:14:42,150 --> 00:14:43,510
+correct or not
+
+521
+00:14:43,510 --> 00:14:45,230
+Whether the server is working or not
+
+522
+00:14:45,230 --> 00:14:46,550
+To know all of these things
+
+523
+00:14:46,550 --> 00:14:48,170
+You will understand the server codes
+
+524
+00:14:48,170 --> 00:14:50,090
+And the next one is rate limiting
+
+525
+00:14:50,090 --> 00:14:52,150
+Such that the servers will be free
+
+526
+00:14:52,150 --> 00:14:52,910
+for everyone
+
+527
+00:14:52,910 --> 00:14:54,970
+And every company has their own rate
+
+528
+00:14:54,970 --> 00:14:55,570
+limiting
+
+529
+00:14:55,570 --> 00:14:56,970
+So we need to understand
+
+530
+00:14:56,970 --> 00:14:58,850
+How much rate limits are present for
+
+531
+00:14:58,850 --> 00:14:59,530
+every company
+
+532
+00:14:59,530 --> 00:15:01,310
+And we need to adhere to that
+
+533
+00:15:01,310 --> 00:15:03,510
+Now to understand all this
+
+534
+00:15:04,170 --> 00:15:06,670
+I created this IPython notebooks
+
+535
+00:15:06,670 --> 00:15:08,270
+Not.py files
+
+536
+00:15:08,270 --> 00:15:09,230
+If you don't know what IPython
+
+537
+00:15:09,230 --> 00:15:10,330
+notebooks are
+
+538
+00:15:10,330 --> 00:15:12,070
+I will link the video in the top
+
+539
+00:15:12,070 --> 00:15:12,690
+section here
+
+540
+00:15:12,690 --> 00:15:14,250
+You can go and watch it
+
+541
+00:15:14,250 --> 00:15:16,070
+You can use the same code in Google
+
+542
+00:15:16,070 --> 00:15:16,930
+collab as well
+
+543
+00:15:16,930 --> 00:15:18,210
+So if you don't have ES code
+
+544
+00:15:18,210 --> 00:15:20,170
+You can do it on there as well
+
+545
+00:15:20,170 --> 00:15:21,770
+So what we need to do is
+
+546
+00:15:21,770 --> 00:15:23,670
+First to talk to chargept
+
+547
+00:15:24,350 --> 00:15:27,250
+We will get an API key from the
+
+548
+00:15:27,250 --> 00:15:27,850
+machine
+
+549
+00:15:27,850 --> 00:15:28,990
+If you want a chargept API key
+
+550
+00:15:28,990 --> 00:15:30,170
+What we need to do is
+
+551
+00:15:30,170 --> 00:15:31,430
+We need to go to these links
+
+552
+00:15:31,430 --> 00:15:33,130
+And we need to sign up
+
+553
+00:15:33,130 --> 00:15:34,410
+So let me show you
+
+554
+00:15:34,410 --> 00:15:35,070
+See here
+
+555
+00:15:35,070 --> 00:15:36,070
+Go to the first link
+
+556
+00:15:36,070 --> 00:15:37,050
+You will get this one
+
+557
+00:15:37,050 --> 00:15:38,950
+And you go and log in with your
+
+558
+00:15:38,950 --> 00:15:39,550
+account
+
+559
+00:15:39,550 --> 00:15:40,590
+And look at here
+
+560
+00:15:40,590 --> 00:15:41,290
+API docs
+
+561
+00:15:41,290 --> 00:15:43,050
+You can look the API docs
+
+562
+00:15:43,050 --> 00:15:44,290
+If you want
+
+563
+00:15:44,290 --> 00:15:46,370
+There is another link here
+
+564
+00:15:46,370 --> 00:15:48,110
+This link if you open this one
+
+565
+00:15:48,110 --> 00:15:49,910
+You will get directly to this page
+
+566
+00:15:49,910 --> 00:15:50,930
+What we can do is
+
+567
+00:15:50,930 --> 00:15:52,170
+Once you logged in
+
+568
+00:15:52,170 --> 00:15:54,190
+You can create a secret key
+
+569
+00:15:54,190 --> 00:15:55,650
+What this means is
+
+570
+00:15:55,650 --> 00:15:57,910
+We are trying or asking the chargept
+
+571
+00:15:57,910 --> 00:15:59,990
+To create a key for us
+
+572
+00:15:59,990 --> 00:16:02,050
+For this we need to pay for it
+
+573
+00:16:02,050 --> 00:16:02,910
+Like credit card
+
+574
+00:16:02,910 --> 00:16:04,810
+We need to have some amount of money
+
+575
+00:16:04,810 --> 00:16:06,390
+To use chargept resources
+
+576
+00:16:06,390 --> 00:16:08,490
+If you don't have a credit card or
+
+577
+00:16:08,490 --> 00:16:09,470
+payment details
+
+578
+00:16:09,470 --> 00:16:11,330
+I will also show you a free
+
+579
+00:16:11,330 --> 00:16:11,930
+alternative
+
+580
+00:16:11,930 --> 00:16:12,970
+At the end of this video
+
+581
+00:16:12,970 --> 00:16:14,330
+So don't skip this part
+
+582
+00:16:14,330 --> 00:16:15,730
+So what we need to do is
+
+583
+00:16:15,730 --> 00:16:17,450
+We will create a new secret key
+
+584
+00:16:17,450 --> 00:16:20,770
+And I will say test secret key
+
+585
+00:16:20,770 --> 00:16:21,370
+Test key
+
+586
+00:16:22,190 --> 00:16:23,430
+And then default project
+
+587
+00:16:23,430 --> 00:16:25,690
+And I will give all the permissions
+
+588
+00:16:25,690 --> 00:16:26,690
+If you want
+
+589
+00:16:26,690 --> 00:16:28,190
+You can only give a little bit of
+
+590
+00:16:28,190 --> 00:16:28,890
+permissions as well
+
+591
+00:16:28,890 --> 00:16:29,810
+So that you don't have to use it
+
+592
+00:16:30,730 --> 00:16:32,830
+But let's not worry about that for
+
+593
+00:16:32,830 --> 00:16:33,430
+now
+
+594
+00:16:33,430 --> 00:16:34,930
+And I will create a secret key
+
+595
+00:16:34,930 --> 00:16:36,670
+And see
+
+596
+00:16:36,670 --> 00:16:38,170
+This is the key
+
+597
+00:16:38,170 --> 00:16:40,570
+That will be enabling us
+
+598
+00:16:40,570 --> 00:16:42,130
+To talk to the chargept
+
+599
+00:16:42,130 --> 00:16:43,650
+From our local machine
+
+600
+00:16:44,110 --> 00:16:45,790
+Once you generate this key
+
+601
+00:16:45,790 --> 00:16:47,330
+You need to copy it
+
+602
+00:16:47,330 --> 00:16:48,250
+Once you copy it
+
+603
+00:16:48,250 --> 00:16:49,110
+Just done
+
+604
+00:16:49,110 --> 00:16:49,890
+See here
+
+605
+00:16:49,890 --> 00:16:50,810
+Here the key came
+
+606
+00:16:50,810 --> 00:16:52,510
+So what I will do is
+
+607
+00:16:52,510 --> 00:16:53,970
+I will go to my VS code
+
+608
+00:16:53,970 --> 00:16:54,570
+Or cursor
+
+609
+00:16:54,570 --> 00:16:55,610
+Or any IDE
+
+610
+00:16:55,610 --> 00:16:58,030
+Here you need to save this key
+
+611
+00:16:58,030 --> 00:16:58,630
+securely
+
+612
+00:16:58,630 --> 00:16:59,850
+For that
+
+613
+00:16:59,850 --> 00:17:01,490
+I will create a file
+
+614
+00:17:01,490 --> 00:17:03,550
+Which is called an environment file
+
+615
+00:17:03,550 --> 00:17:06,050
+So maybe I will put it here
+
+616
+00:17:06,050 --> 00:17:06,950
+In this directory
+
+617
+00:17:06,950 --> 00:17:09,710
+I will put something like.env
+
+618
+00:17:09,710 --> 00:17:11,330
+.env means
+
+619
+00:17:11,330 --> 00:17:12,590
+It's an environment file
+
+620
+00:17:12,590 --> 00:17:14,250
+In this environment file
+
+621
+00:17:14,250 --> 00:17:15,790
+We will put all our keys
+
+622
+00:17:15,790 --> 00:17:17,010
+Why am I putting it here
+
+623
+00:17:17,010 --> 00:17:17,770
+If you know this key
+
+624
+00:17:18,510 --> 00:17:20,410
+You can even use this key
+
+625
+00:17:20,410 --> 00:17:22,070
+And you don't have to use it
+
+626
+00:17:22,070 --> 00:17:22,730
+I will get the bill
+
+627
+00:17:23,370 --> 00:17:25,010
+Once this video is public
+
+628
+00:17:25,010 --> 00:17:26,090
+I will delete the key
+
+629
+00:17:26,090 --> 00:17:27,390
+So that you can't use it
+
+630
+00:17:27,390 --> 00:17:29,150
+But to show it to you
+
+631
+00:17:29,150 --> 00:17:30,410
+I will put the key here
+
+632
+00:17:30,410 --> 00:17:31,010
+See
+
+633
+00:17:31,010 --> 00:17:31,990
+This is all a key
+
+634
+00:17:31,990 --> 00:17:33,330
+This is the key
+
+635
+00:17:33,330 --> 00:17:35,390
+That will enable us to talk to
+
+636
+00:17:35,390 --> 00:17:36,110
+charge party
+
+637
+00:17:36,110 --> 00:17:36,970
+But
+
+638
+00:17:36,970 --> 00:17:38,130
+When you put the key there
+
+639
+00:17:39,150 --> 00:17:41,530
+You need to save the key
+
+640
+00:17:41,530 --> 00:17:43,110
+Securely in a.env file
+
+641
+00:17:43,110 --> 00:17:44,170
+Step by step details
+
+642
+00:17:44,170 --> 00:17:45,430
+All are in the markdown file
+
+643
+00:17:45,430 --> 00:17:46,890
+You can look at it
+
+644
+00:17:46,890 --> 00:17:47,830
+So for that
+
+645
+00:17:47,830 --> 00:17:49,830
+I will just use this
+
+646
+00:17:49,830 --> 00:17:51,870
+OpenAI key equal to
+
+647
+00:17:51,870 --> 00:17:52,470
+And say
+
+648
+00:17:52,470 --> 00:17:53,650
+So what are we doing here
+
+649
+00:17:53,650 --> 00:17:55,290
+We can put multiple keys here
+
+650
+00:17:55,290 --> 00:17:56,550
+To say what that key is
+
+651
+00:17:56,550 --> 00:17:57,590
+We will say
+
+652
+00:17:57,590 --> 00:18:00,350
+OpenAI API key equal to
+
+653
+00:18:00,350 --> 00:18:00,950
+And say
+
+654
+00:18:00,950 --> 00:18:02,270
+We are keeping all of this key
+
+655
+00:18:02,270 --> 00:18:03,490
+We will save it here
+
+656
+00:18:03,490 --> 00:18:04,770
+We will save the file here
+
+657
+00:18:04,770 --> 00:18:05,410
+So now
+
+658
+00:18:05,410 --> 00:18:07,130
+Whenever you are writing your code
+
+659
+00:18:07,130 --> 00:18:07,850
+Here in the notebook
+
+660
+00:18:07,850 --> 00:18:09,870
+You will not copy paste the code
+
+661
+00:18:10,330 --> 00:18:11,570
+You will read the code
+
+662
+00:18:11,570 --> 00:18:13,470
+Directly from the environment file
+
+663
+00:18:13,470 --> 00:18:16,110
+Now to read in the environment file
+
+664
+00:18:16,110 --> 00:18:17,050
+You need a way
+
+665
+00:18:17,050 --> 00:18:19,290
+For that you need a package
+
+666
+00:18:19,290 --> 00:18:21,850
+Which is called.env
+
+667
+00:18:21,850 --> 00:18:23,270
+If you haven't installed these
+
+668
+00:18:23,270 --> 00:18:23,870
+packages
+
+669
+00:18:23,870 --> 00:18:25,510
+I highly recommend doing this step
+
+670
+00:18:25,510 --> 00:18:28,230
+PIP 3 install request package
+
+671
+00:18:28,230 --> 00:18:29,030
+Why request package
+
+672
+00:18:29,030 --> 00:18:31,510
+We are going to talk to the API
+
+673
+00:18:31,510 --> 00:18:32,890
+Via this API key
+
+674
+00:18:32,890 --> 00:18:34,230
+For that we need this request
+
+675
+00:18:34,230 --> 00:18:34,830
+package
+
+676
+00:18:34,830 --> 00:18:35,710
+And then
+
+677
+00:18:35,710 --> 00:18:37,750
+To read the file in our environment
+
+678
+00:18:38,210 --> 00:18:40,890
+We have this package called.env
+
+679
+00:18:40,890 --> 00:18:42,110
+And I will show you something
+
+680
+00:18:42,110 --> 00:18:43,250
+Which is called OpenAI
+
+681
+00:18:43,250 --> 00:18:45,210
+I will get to that point in a bit
+
+682
+00:18:45,210 --> 00:18:46,550
+And let's execute this
+
+683
+00:18:47,870 --> 00:18:50,050
+And I haven't set a kernel for this
+
+684
+00:18:50,050 --> 00:18:50,650
+yet
+
+685
+00:18:50,650 --> 00:18:51,370
+Let's say existing environments
+
+686
+00:18:51,370 --> 00:18:53,190
+And I will choose my virtual
+
+687
+00:18:53,190 --> 00:18:53,790
+environment
+
+688
+00:18:53,790 --> 00:18:55,930
+And it is going to connect to it
+
+689
+00:18:55,930 --> 00:18:57,210
+So that we can execute the code
+
+690
+00:18:57,990 --> 00:18:58,670
+And see
+
+691
+00:18:58,670 --> 00:19:01,110
+It is executing all of these things
+
+692
+00:19:01,110 --> 00:19:02,450
+Using cache memory
+
+693
+00:19:02,450 --> 00:19:04,050
+And installing the packages
+
+694
+00:19:04,050 --> 00:19:06,490
+It will install all the dependencies
+
+695
+00:19:06,490 --> 00:19:07,450
+What are we doing now
+
+696
+00:19:07,450 --> 00:19:08,750
+We are importing the OS
+
+697
+00:19:08,750 --> 00:19:09,930
+And from the package.env
+
+698
+00:19:10,410 --> 00:19:12,370
+We are calling this.env
+
+699
+00:19:12,370 --> 00:19:13,670
+Load.env
+
+700
+00:19:13,670 --> 00:19:15,170
+And we need to initialize this
+
+701
+00:19:15,170 --> 00:19:16,230
+You saw in the class
+
+702
+00:19:16,230 --> 00:19:17,410
+How to initialize a class
+
+703
+00:19:17,410 --> 00:19:18,930
+And after that
+
+704
+00:19:18,930 --> 00:19:20,730
+OS.getEnvironment
+
+705
+00:19:20,730 --> 00:19:21,470
+What does this mean
+
+706
+00:19:21,970 --> 00:19:23,650
+It is going to check
+
+707
+00:19:23,650 --> 00:19:25,050
+Any environment files
+
+708
+00:19:25,050 --> 00:19:26,550
+In those environment files
+
+709
+00:19:26,550 --> 00:19:27,490
+Here
+
+710
+00:19:27,490 --> 00:19:29,430
+It will check for this keyword
+
+711
+00:19:29,430 --> 00:19:31,190
+OpenAI API key
+
+712
+00:19:31,730 --> 00:19:32,970
+It also has the same thing
+
+713
+00:19:32,970 --> 00:19:34,250
+OpenAI API key
+
+714
+00:19:34,770 --> 00:19:35,670
+And make sure
+
+715
+00:19:35,670 --> 00:19:37,230
+When you are putting this API key
+
+716
+00:19:37,230 --> 00:19:37,830
+here
+
+717
+00:19:37,830 --> 00:19:39,130
+Let's not put any space
+
+718
+00:19:40,130 --> 00:19:41,910
+It will be just
+
+719
+00:19:41,910 --> 00:19:42,810
+Your key name
+
+720
+00:19:42,810 --> 00:19:44,090
+Equal to your key
+
+721
+00:19:44,090 --> 00:19:44,690
+That's it
+
+722
+00:19:44,690 --> 00:19:46,290
+And save it
+
+723
+00:19:46,290 --> 00:19:47,370
+And because of that
+
+724
+00:19:47,370 --> 00:19:48,970
+Now this package is able to read
+
+725
+00:19:48,970 --> 00:19:49,570
+this key
+
+726
+00:19:49,570 --> 00:19:50,930
+And then we are just printing
+
+727
+00:19:50,930 --> 00:19:51,530
+Key loaded
+
+728
+00:19:51,530 --> 00:19:53,610
+And we will not print this key here
+
+729
+00:19:53,610 --> 00:19:55,030
+Because we don't want to share the
+
+730
+00:19:55,030 --> 00:19:55,630
+key
+
+731
+00:19:55,630 --> 00:19:56,230
+With anyone else
+
+732
+00:19:56,230 --> 00:19:57,190
+Because if there is a key
+
+733
+00:19:57,190 --> 00:19:58,730
+Anyone can use it
+
+734
+00:19:59,450 --> 00:20:00,970
+And that billing will come to me
+
+735
+00:20:01,390 --> 00:20:03,610
+So I will not be doing that later on
+
+736
+00:20:04,370 --> 00:20:04,970
+After that
+
+737
+00:20:04,970 --> 00:20:05,610
+We got a nice key
+
+738
+00:20:06,010 --> 00:20:07,230
+Now we need a way
+
+739
+00:20:07,230 --> 00:20:08,410
+To talk to chargept
+
+740
+00:20:08,410 --> 00:20:10,350
+For that we have this
+
+741
+00:20:10,350 --> 00:20:11,030
+Request package
+
+742
+00:20:11,030 --> 00:20:12,670
+What we thought
+
+743
+00:20:12,670 --> 00:20:14,870
+Whenever we want to hit to an API
+
+744
+00:20:14,870 --> 00:20:16,250
+We need a URL
+
+745
+00:20:16,250 --> 00:20:17,890
+So this is the URL
+
+746
+00:20:17,890 --> 00:20:19,310
+You can find it in the API
+
+747
+00:20:19,310 --> 00:20:19,910
+documentation
+
+748
+00:20:19,910 --> 00:20:20,690
+See here
+
+749
+00:20:20,690 --> 00:20:21,470
+If you want
+
+750
+00:20:21,470 --> 00:20:22,870
+You can read these documentations
+
+751
+00:20:22,870 --> 00:20:24,270
+Usually that is good
+
+752
+00:20:24,270 --> 00:20:25,510
+And it is preferred actually
+
+753
+00:20:25,510 --> 00:20:26,470
+To read the documentation
+
+754
+00:20:26,470 --> 00:20:27,510
+But for now
+
+755
+00:20:27,510 --> 00:20:28,730
+I will not go through that
+
+756
+00:20:28,730 --> 00:20:29,870
+Because it will be
+
+757
+00:20:29,870 --> 00:20:30,950
+Like it will be a 2 hour video
+
+758
+00:20:31,590 --> 00:20:33,670
+So this is the URL that we want
+
+759
+00:20:33,670 --> 00:20:34,970
+And after that
+
+760
+00:20:34,970 --> 00:20:36,350
+We need to send our API key
+
+761
+00:20:36,350 --> 00:20:38,210
+Along with that URL
+
+762
+00:20:38,210 --> 00:20:39,530
+That is where we call it
+
+763
+00:20:39,530 --> 00:20:40,450
+As an authorization
+
+764
+00:20:40,450 --> 00:20:42,090
+This is called as headers
+
+765
+00:20:42,090 --> 00:20:43,310
+In authorization
+
+766
+00:20:44,010 --> 00:20:45,910
+You need to pass your key
+
+767
+00:20:45,910 --> 00:20:47,410
+Whatever your key is
+
+768
+00:20:47,410 --> 00:20:48,890
+And then you need to pass your
+
+769
+00:20:48,890 --> 00:20:49,610
+content type
+
+770
+00:20:49,610 --> 00:20:50,630
+Meaning you need to say
+
+771
+00:20:50,630 --> 00:20:51,230
+What is the method
+
+772
+00:20:51,590 --> 00:20:52,850
+What we thought in the beginning
+
+773
+00:20:52,850 --> 00:20:54,830
+All the communication between
+
+774
+00:20:54,830 --> 00:20:56,710
+The internet happens via
+
+775
+00:20:56,710 --> 00:20:57,950
+Format called JSON
+
+776
+00:20:57,950 --> 00:20:59,250
+What we are doing here
+
+777
+00:20:59,250 --> 00:21:01,510
+Content type application slash JSON
+
+778
+00:21:01,510 --> 00:21:02,230
+And in the body
+
+779
+00:21:02,230 --> 00:21:03,150
+We need to put a message
+
+780
+00:21:03,150 --> 00:21:03,930
+What we want to say with the charge
+
+781
+00:21:03,930 --> 00:21:04,630
+GPT
+
+782
+00:21:05,590 --> 00:21:07,150
+So this is the code here
+
+783
+00:21:07,150 --> 00:21:08,470
+Let me explain what is happening
+
+784
+00:21:08,470 --> 00:21:09,070
+here
+
+785
+00:21:09,070 --> 00:21:09,670
+See here
+
+786
+00:21:09,670 --> 00:21:10,830
+We have packaged the import request
+
+787
+00:21:11,390 --> 00:21:12,830
+And this is the URL
+
+788
+00:21:12,830 --> 00:21:13,710
+That we will use
+
+789
+00:21:13,710 --> 00:21:15,110
+To hit to the charge GPT
+
+790
+00:21:15,630 --> 00:21:17,250
+And then this is the header
+
+791
+00:21:17,250 --> 00:21:17,930
+Header means
+
+792
+00:21:17,930 --> 00:21:19,630
+This is where we will initialize
+
+793
+00:21:19,630 --> 00:21:20,410
+In a dictionary
+
+794
+00:21:21,230 --> 00:21:21,830
+Authorization
+
+795
+00:21:21,830 --> 00:21:23,870
+And we will put our API key here
+
+796
+00:21:23,870 --> 00:21:24,470
+In this place
+
+797
+00:21:24,470 --> 00:21:25,590
+Our API key will come
+
+798
+00:21:25,590 --> 00:21:26,770
+What is this SK hyphen
+
+799
+00:21:26,770 --> 00:21:27,630
+Something is there
+
+800
+00:21:27,630 --> 00:21:29,130
+That is what we are putting it here
+
+801
+00:21:29,130 --> 00:21:29,990
+In this format
+
+802
+00:21:29,990 --> 00:21:30,990
+And we are saying that
+
+803
+00:21:30,990 --> 00:21:33,130
+Content type application is done
+
+804
+00:21:33,130 --> 00:21:33,830
+That's all good
+
+805
+00:21:33,830 --> 00:21:35,830
+Now in charge GPT
+
+806
+00:21:35,830 --> 00:21:37,170
+There are different models
+
+807
+00:21:37,170 --> 00:21:40,330
+HGPT 4, HGPT 5, HGPT 5.5
+
+808
+00:21:40,330 --> 00:21:41,030
+Now we need to define
+
+809
+00:21:41,030 --> 00:21:43,230
+Which model we want to talk to
+
+810
+00:21:43,930 --> 00:21:44,530
+Because
+
+811
+00:21:44,530 --> 00:21:45,710
+Here is charge GPT
+
+812
+00:21:45,710 --> 00:21:47,030
+You will send a request
+
+813
+00:21:47,030 --> 00:21:48,870
+But which model you want to talk to
+
+814
+00:21:48,870 --> 00:21:50,350
+Even that needs to be specified
+
+815
+00:21:50,910 --> 00:21:52,110
+That is where you will say
+
+816
+00:21:52,110 --> 00:21:53,470
+You will declare everything in the
+
+817
+00:21:53,470 --> 00:21:54,070
+same body
+
+818
+00:21:54,070 --> 00:21:55,150
+You will create a dictionary
+
+819
+00:21:55,150 --> 00:21:56,090
+In that model
+
+820
+00:21:56,090 --> 00:21:57,910
+Which model you want to talk to
+
+821
+00:21:57,910 --> 00:22:00,050
+Which is GPT 4o mini
+
+822
+00:22:00,050 --> 00:22:01,350
+I want to use that
+
+823
+00:22:01,350 --> 00:22:02,430
+Why am I using this
+
+824
+00:22:02,430 --> 00:22:04,090
+This is a cheap model
+
+825
+00:22:04,090 --> 00:22:05,570
+You are talking
+
+826
+00:22:05,570 --> 00:22:06,870
+In every conversion
+
+827
+00:22:06,870 --> 00:22:08,530
+It is going to charge you money
+
+828
+00:22:08,970 --> 00:22:10,990
+So I don't want to use
+
+829
+00:22:10,990 --> 00:22:12,670
+GPT 5.5 high model
+
+830
+00:22:12,670 --> 00:22:14,290
+I don't want to get more billing
+
+831
+00:22:14,290 --> 00:22:15,650
+Because this is a demo purpose
+
+832
+00:22:15,650 --> 00:22:17,710
+If you want you can change this to
+
+833
+00:22:17,710 --> 00:22:18,910
+GPT 5.5
+
+834
+00:22:18,910 --> 00:22:20,430
+Do you have that documentation
+
+835
+00:22:20,430 --> 00:22:21,490
+You can find it in the
+
+836
+00:22:21,490 --> 00:22:22,190
+OpenAI documentation
+
+837
+00:22:22,190 --> 00:22:23,410
+I will put that link
+
+838
+00:22:23,410 --> 00:22:25,030
+In the description below as well
+
+839
+00:22:25,030 --> 00:22:25,890
+And then message
+
+840
+00:22:25,890 --> 00:22:27,250
+It is very important
+
+841
+00:22:27,250 --> 00:22:28,690
+First what you will do is
+
+842
+00:22:28,690 --> 00:22:29,790
+You will say role
+
+843
+00:22:29,790 --> 00:22:30,870
+That role is system
+
+844
+00:22:30,870 --> 00:22:32,370
+What are you telling the system
+
+845
+00:22:32,370 --> 00:22:32,970
+What are you telling
+
+846
+00:22:33,370 --> 00:22:36,450
+You are the helpful python tutor
+
+847
+00:22:36,450 --> 00:22:38,370
+Keep the replies under three lines
+
+848
+00:22:38,370 --> 00:22:40,110
+I don't want two big lines
+
+849
+00:22:40,110 --> 00:22:41,310
+Just wanted to see
+
+850
+00:22:41,310 --> 00:22:43,110
+Whether the API is working or not
+
+851
+00:22:43,110 --> 00:22:44,610
+After that role
+
+852
+00:22:44,610 --> 00:22:45,890
+User means you
+
+853
+00:22:45,890 --> 00:22:47,690
+This is what you are asking
+
+854
+00:22:47,690 --> 00:22:49,050
+What are you asking content
+
+855
+00:22:49,050 --> 00:22:50,710
+What is an API key
+
+856
+00:22:50,710 --> 00:22:51,310
+In one line
+
+857
+00:22:51,310 --> 00:22:52,930
+You can choose whatever you want
+
+858
+00:22:52,930 --> 00:22:55,030
+Hello, Hi, Where is
+
+859
+00:22:55,030 --> 00:22:56,110
+What are the famous places in
+
+860
+00:22:56,110 --> 00:22:56,710
+Hyderabad
+
+861
+00:22:56,710 --> 00:22:57,910
+You can put whatever you want
+
+862
+00:22:57,910 --> 00:22:59,290
+But this is the message
+
+863
+00:22:59,290 --> 00:23:00,250
+That you usually
+
+864
+00:23:00,250 --> 00:23:01,250
+Charging in the application
+
+865
+00:23:01,250 --> 00:23:02,110
+You talk a lot
+
+866
+00:23:02,530 --> 00:23:04,030
+That is what it is actually
+
+867
+00:23:04,030 --> 00:23:04,930
+What I am doing here
+
+868
+00:23:04,930 --> 00:23:05,870
+I will just put one line
+
+869
+00:23:05,870 --> 00:23:07,310
+What is an API key
+
+870
+00:23:08,270 --> 00:23:09,230
+And then
+
+871
+00:23:09,230 --> 00:23:09,990
+After all this
+
+872
+00:23:09,990 --> 00:23:11,530
+We need to send a request
+
+873
+00:23:12,150 --> 00:23:13,990
+That is what this line is
+
+874
+00:23:13,990 --> 00:23:15,270
+Request.post
+
+875
+00:23:15,270 --> 00:23:16,690
+You are sending it
+
+876
+00:23:16,690 --> 00:23:17,510
+What is with
+
+877
+00:23:17,510 --> 00:23:18,570
+You are sending url
+
+878
+00:23:18,570 --> 00:23:19,610
+What is my url
+
+879
+00:23:19,610 --> 00:23:20,390
+Along with that
+
+880
+00:23:20,390 --> 00:23:21,890
+What is my authorization tokens
+
+881
+00:23:21,890 --> 00:23:23,810
+This is my authorization token
+
+882
+00:23:23,810 --> 00:23:24,450
+And then
+
+883
+00:23:24,450 --> 00:23:25,050
+What is our body
+
+884
+00:23:25,050 --> 00:23:26,270
+We put the body in json
+
+885
+00:23:26,270 --> 00:23:27,550
+And then timeout
+
+886
+00:23:27,550 --> 00:23:28,150
+Remember
+
+887
+00:23:28,150 --> 00:23:30,510
+If you don't hit too much of time
+
+888
+00:23:30,510 --> 00:23:31,910
+It is going to break it
+
+889
+00:23:31,910 --> 00:23:32,570
+So that is why
+
+890
+00:23:32,570 --> 00:23:33,650
+We are keeping a timeout
+
+891
+00:23:33,650 --> 00:23:35,430
+And then we are printing a response
+
+892
+00:23:35,430 --> 00:23:36,270
+What is the code
+
+893
+00:23:36,270 --> 00:23:38,970
+Based on all of these things
+
+894
+00:23:38,970 --> 00:23:40,210
+You are going to
+
+895
+00:23:40,210 --> 00:23:42,210
+Connect from this local machine
+
+896
+00:23:42,210 --> 00:23:43,370
+To charge GPT servers
+
+897
+00:23:43,370 --> 00:23:44,750
+And after that
+
+898
+00:23:44,750 --> 00:23:45,870
+You are going to get a response
+
+899
+00:23:45,870 --> 00:23:46,650
+From charge GPT
+
+900
+00:23:46,650 --> 00:23:48,430
+Based on this authentication token
+
+901
+00:23:48,430 --> 00:23:49,630
+So execute this
+
+902
+00:23:50,370 --> 00:23:52,050
+And it is going to take some time
+
+903
+00:23:52,050 --> 00:23:53,470
+It took 2.2 seconds
+
+904
+00:23:53,470 --> 00:23:55,050
+And what is the response code
+
+905
+00:23:55,790 --> 00:23:56,390
+200
+
+906
+00:23:56,390 --> 00:23:57,910
+What is the response code 200
+
+907
+00:23:57,910 --> 00:23:59,230
+It is going through
+
+908
+00:23:59,230 --> 00:24:01,030
+And we got the output as well
+
+909
+00:24:01,030 --> 00:24:01,710
+But what is the output
+
+910
+00:24:02,330 --> 00:24:04,310
+That is where we have this
+
+911
+00:24:04,310 --> 00:24:05,710
+Response.status code
+
+912
+00:24:05,710 --> 00:24:08,130
+I can execute this piece of code
+
+913
+00:24:08,130 --> 00:24:09,750
+Means in response and json
+
+914
+00:24:09,750 --> 00:24:11,850
+We have something called as status
+
+915
+00:24:11,850 --> 00:24:12,450
+code
+
+916
+00:24:12,450 --> 00:24:13,350
+What is the status code
+
+917
+00:24:14,050 --> 00:24:14,650
+200
+
+918
+00:24:14,650 --> 00:24:16,390
+In output response.json
+
+919
+00:24:16,390 --> 00:24:17,710
+We have the output
+
+920
+00:24:18,330 --> 00:24:20,110
+Output will be in this
+
+921
+00:24:20,110 --> 00:24:21,870
+I will show you how to get this part
+
+922
+00:24:21,870 --> 00:24:23,110
+So just wait a minute
+
+923
+00:24:23,110 --> 00:24:24,670
+What is the reply here
+
+924
+00:24:24,670 --> 00:24:26,810
+An API key is a unique string of
+
+925
+00:24:26,810 --> 00:24:27,410
+characters
+
+926
+00:24:27,410 --> 00:24:29,230
+That grants access to an API
+
+927
+00:24:29,230 --> 00:24:31,070
+By identifying the user
+
+928
+00:24:31,070 --> 00:24:32,830
+Or application making the request
+
+929
+00:24:32,830 --> 00:24:33,690
+Means
+
+930
+00:24:33,690 --> 00:24:35,290
+We have given a question here
+
+931
+00:24:35,290 --> 00:24:36,030
+For this question
+
+932
+00:24:36,030 --> 00:24:38,130
+We got the answer here
+
+933
+00:24:38,130 --> 00:24:40,110
+Maybe let us try changing this
+
+934
+00:24:40,110 --> 00:24:40,710
+question
+
+935
+00:24:43,540 --> 00:24:45,400
+How to use Google collab
+
+936
+00:24:46,040 --> 00:24:47,260
+I have to use Google collab
+
+937
+00:24:47,260 --> 00:24:48,320
+And let us do this
+
+938
+00:24:48,320 --> 00:24:49,960
+And let us try to execute the same
+
+939
+00:24:49,960 --> 00:24:50,560
+thing again
+
+940
+00:24:50,560 --> 00:24:52,620
+And we are hitting the API one more
+
+941
+00:24:52,620 --> 00:24:53,220
+time
+
+942
+00:24:53,220 --> 00:24:54,980
+Every time when you want to send a
+
+943
+00:24:54,980 --> 00:24:55,580
+question
+
+944
+00:24:55,580 --> 00:24:56,920
+You are going to hit the API
+
+945
+00:24:56,920 --> 00:24:58,820
+And that is going to cost you some
+
+946
+00:24:58,820 --> 00:24:59,680
+amount of money
+
+947
+00:24:59,680 --> 00:25:01,040
+And what is the response code
+
+948
+00:25:01,040 --> 00:25:02,340
+200 again
+
+949
+00:25:02,340 --> 00:25:04,040
+Now let us see what is the output
+
+950
+00:25:04,040 --> 00:25:04,940
+now
+
+951
+00:25:04,940 --> 00:25:05,540
+Look
+
+952
+00:25:05,540 --> 00:25:06,520
+The response code is 200
+
+953
+00:25:06,520 --> 00:25:08,420
+To use the Google collab
+
+954
+00:25:08,420 --> 00:25:09,980
+Go to this collab website
+
+955
+00:25:09,980 --> 00:25:12,840
+www.collabreset.com and so on
+
+956
+00:25:12,840 --> 00:25:14,340
+And sign in with your Google account
+
+957
+00:25:14,340 --> 00:25:15,840
+And you can create your notebook
+
+958
+00:25:15,840 --> 00:25:16,920
+By choosing the file
+
+959
+00:25:16,920 --> 00:25:17,680
+New notebook
+
+960
+00:25:17,680 --> 00:25:20,200
+Or open an existing form of your
+
+961
+00:25:20,200 --> 00:25:20,800
+Google drive
+
+962
+00:25:20,800 --> 00:25:22,520
+And you can write and execute code
+
+963
+00:25:22,520 --> 00:25:23,360
+in the cells
+
+964
+00:25:23,360 --> 00:25:25,140
+And save your work directly to the
+
+965
+00:25:25,140 --> 00:25:25,740
+drive
+
+966
+00:25:25,740 --> 00:25:28,260
+So we are getting the answers
+
+967
+00:25:28,260 --> 00:25:28,980
+directly
+
+968
+00:25:28,980 --> 00:25:30,660
+From our local machine
+
+969
+00:25:31,720 --> 00:25:34,000
+You are not using charge jpt website
+
+970
+00:25:34,720 --> 00:25:36,540
+You are using the charge jpt models
+
+971
+00:25:36,540 --> 00:25:39,740
+But the output is coming via an API
+
+972
+00:25:39,740 --> 00:25:40,660
+through json
+
+973
+00:25:40,660 --> 00:25:42,160
+Hopefully it is clear
+
+974
+00:25:42,160 --> 00:25:44,240
+Now let us understand what is the
+
+975
+00:25:44,240 --> 00:25:45,540
+response clearly
+
+976
+00:25:45,540 --> 00:25:47,140
+So if you look at this one
+
+977
+00:25:47,140 --> 00:25:48,800
+This is what you will get as an
+
+978
+00:25:48,800 --> 00:25:49,400
+output
+
+979
+00:25:49,400 --> 00:25:51,040
+This is the full response json
+
+980
+00:25:51,040 --> 00:25:52,420
+So what is here
+
+981
+00:25:52,420 --> 00:25:53,920
+So first our id
+
+982
+00:25:53,920 --> 00:25:54,620
+What is this id
+
+983
+00:25:54,620 --> 00:25:55,460
+It is telling us that we are using a
+
+984
+00:25:55,460 --> 00:25:57,960
+charge completion API endpoint
+
+985
+00:25:58,780 --> 00:26:00,320
+And then this is what it is
+
+986
+00:26:00,320 --> 00:26:02,040
+And created when it was created
+
+987
+00:26:02,040 --> 00:26:03,920
+And whatever model we use
+
+988
+00:26:03,920 --> 00:26:04,900
+And then choices
+
+989
+00:26:04,900 --> 00:26:08,240
+Inside this we have the output
+
+990
+00:26:08,240 --> 00:26:09,720
+This is my output
+
+991
+00:26:10,480 --> 00:26:12,560
+So this entire thing is called a
+
+992
+00:26:12,560 --> 00:26:13,220
+json
+
+993
+00:26:13,220 --> 00:26:14,280
+In this json
+
+994
+00:26:14,280 --> 00:26:16,100
+Inside the choices
+
+995
+00:26:16,100 --> 00:26:17,340
+Inside the content
+
+996
+00:26:17,340 --> 00:26:18,480
+There is our response
+
+997
+00:26:19,240 --> 00:26:20,860
+And finish region stop
+
+998
+00:26:20,860 --> 00:26:23,320
+That means we have stopped naturally
+
+999
+00:26:23,320 --> 00:26:24,740
+And we have used many tokens
+
+1000
+00:26:25,480 --> 00:26:27,000
+So what are these tokens
+
+1001
+00:26:27,000 --> 00:26:28,240
+How much limit is there
+
+1002
+00:26:28,240 --> 00:26:28,900
+What should we do
+
+1003
+00:26:28,900 --> 00:26:30,540
+We will learn all of these things in
+
+1004
+00:26:30,540 --> 00:26:31,140
+detail
+
+1005
+00:26:31,140 --> 00:26:32,260
+Regarding the LLM phase
+
+1006
+00:26:32,260 --> 00:26:34,220
+So for now let us not worry about
+
+1007
+00:26:34,220 --> 00:26:34,820
+this
+
+1008
+00:26:34,820 --> 00:26:36,040
+So this is the entire json
+
+1009
+00:26:36,600 --> 00:26:38,780
+That is why what we have printed so
+
+1010
+00:26:38,780 --> 00:26:39,380
+far
+
+1011
+00:26:39,380 --> 00:26:39,980
+In response
+
+1012
+00:26:39,980 --> 00:26:40,680
+In choices
+
+1013
+00:26:40,680 --> 00:26:42,240
+We are printing content
+
+1014
+00:26:42,240 --> 00:26:43,920
+That is how you are getting the
+
+1015
+00:26:43,920 --> 00:26:45,420
+output as the
+
+1016
+00:26:45,420 --> 00:26:46,260
+Charge GPT output
+
+1017
+00:26:46,260 --> 00:26:47,240
+See here
+
+1018
+00:26:47,240 --> 00:26:47,840
+In responses
+
+1019
+00:26:47,840 --> 00:26:49,060
+In choices
+
+1020
+00:26:49,060 --> 00:26:49,740
+In messages
+
+1021
+00:26:49,740 --> 00:26:51,460
+We are printing content
+
+1022
+00:26:51,460 --> 00:26:52,280
+Choices
+
+1023
+00:26:52,280 --> 00:26:53,120
+Messages
+
+1024
+00:26:53,120 --> 00:26:53,720
+Content
+
+1025
+00:26:53,720 --> 00:26:55,440
+That is what the output that we are
+
+1026
+00:26:55,440 --> 00:26:56,040
+going to get
+
+1027
+00:26:56,040 --> 00:26:57,520
+So what are these fields
+
+1028
+00:26:57,840 --> 00:26:59,900
+I have given the description here
+
+1029
+00:26:59,900 --> 00:27:01,100
+Once the class is over
+
+1030
+00:27:01,100 --> 00:27:02,540
+You can just read these things
+
+1031
+00:27:02,540 --> 00:27:03,660
+And you will get more understanding
+
+1032
+00:27:04,400 --> 00:27:05,940
+So all this is complex
+
+1033
+00:27:05,940 --> 00:27:06,860
+Little bit
+
+1034
+00:27:06,860 --> 00:27:08,400
+I mean this much of code writer
+
+1035
+00:27:08,400 --> 00:27:09,920
+To hit an entire API
+
+1036
+00:27:09,920 --> 00:27:12,060
+But other than all this
+
+1037
+00:27:12,060 --> 00:27:13,520
+OpenAI company
+
+1038
+00:27:13,520 --> 00:27:15,300
+They have their own package
+
+1039
+00:27:15,300 --> 00:27:17,780
+Like Google has their own package
+
+1040
+00:27:17,780 --> 00:27:19,320
+Lama has their own package
+
+1041
+00:27:19,320 --> 00:27:20,400
+So like that
+
+1042
+00:27:20,400 --> 00:27:22,280
+We can use their own packages
+
+1043
+00:27:22,280 --> 00:27:24,160
+And the name of that package is
+
+1044
+00:27:24,160 --> 00:27:24,880
+OpenAI
+
+1045
+00:27:24,880 --> 00:27:26,560
+So from OpenAI
+
+1046
+00:27:26,560 --> 00:27:28,140
+We are importing OpenAI
+
+1047
+00:27:28,140 --> 00:27:30,520
+So till now we have kept all the
+
+1048
+00:27:30,520 --> 00:27:31,120
+urls
+
+1049
+00:27:31,120 --> 00:27:31,780
+Without keeping anything
+
+1050
+00:27:31,780 --> 00:27:33,740
+You can just directly call
+
+1051
+00:27:33,740 --> 00:27:34,580
+OpenAI
+
+1052
+00:27:34,580 --> 00:27:35,300
+See here
+
+1053
+00:27:35,300 --> 00:27:36,880
+We are calling the OpenAI package
+
+1054
+00:27:36,880 --> 00:27:38,740
+And then you are giving your API key
+
+1055
+00:27:38,740 --> 00:27:39,840
+What is our API key
+
+1056
+00:27:40,390 --> 00:27:41,100
+And here
+
+1057
+00:27:41,100 --> 00:27:42,940
+You are creating a client
+
+1058
+00:27:42,940 --> 00:27:45,420
+Which is an instance of a class
+
+1059
+00:27:45,420 --> 00:27:46,720
+And client dot
+
+1060
+00:27:46,720 --> 00:27:47,940
+ChartCompletion
+
+1061
+00:27:47,940 --> 00:27:48,840
+Dot create
+
+1062
+00:27:48,840 --> 00:27:50,700
+I mean we are telling you to
+
+1063
+00:27:50,700 --> 00:27:51,300
+complete the chart
+
+1064
+00:27:51,300 --> 00:27:52,940
+And what is the model you want to
+
+1065
+00:27:52,940 --> 00:27:53,540
+use
+
+1066
+00:27:53,540 --> 00:27:55,060
+And the message we have kept till
+
+1067
+00:27:55,060 --> 00:27:55,660
+now
+
+1068
+00:27:55,660 --> 00:27:56,260
+You are putting it here
+
+1069
+00:27:56,260 --> 00:27:56,880
+Nothing else
+
+1070
+00:27:56,880 --> 00:27:59,160
+But url, authorization token,
+
+1071
+00:27:59,300 --> 00:27:59,900
+header
+
+1072
+00:27:59,900 --> 00:28:00,580
+So we don't need anything
+
+1073
+00:28:01,150 --> 00:28:02,880
+And you will directly get the output
+
+1074
+00:28:02,880 --> 00:28:04,400
+In this clean format
+
+1075
+00:28:04,400 --> 00:28:05,420
+If you want
+
+1076
+00:28:05,420 --> 00:28:07,480
+You can even use OpenAI packages
+
+1077
+00:28:07,480 --> 00:28:08,480
+So see
+
+1078
+00:28:08,480 --> 00:28:09,840
+You will get the same response
+
+1079
+00:28:09,840 --> 00:28:11,860
+Not much difference actually
+
+1080
+00:28:11,860 --> 00:28:13,460
+An API key is a unique identifier
+
+1081
+00:28:13,460 --> 00:28:15,240
+Used to authenticate and authorize a
+
+1082
+00:28:15,240 --> 00:28:15,840
+request
+
+1083
+00:28:15,840 --> 00:28:16,440
+Made to an API
+
+1084
+00:28:16,440 --> 00:28:17,100
+So
+
+1085
+00:28:17,100 --> 00:28:18,580
+There will be questions in your
+
+1086
+00:28:18,580 --> 00:28:19,180
+brain
+
+1087
+00:28:19,180 --> 00:28:20,380
+Which one should you use
+
+1088
+00:28:20,380 --> 00:28:21,360
+Should I use request package
+
+1089
+00:28:21,360 --> 00:28:23,040
+Should I use OpenAI package
+
+1090
+00:28:23,040 --> 00:28:24,820
+Actually if you are learning
+
+1091
+00:28:24,820 --> 00:28:26,860
+Then I recommend using request
+
+1092
+00:28:26,860 --> 00:28:27,460
+package
+
+1093
+00:28:27,460 --> 00:28:28,060
+Because
+
+1094
+00:28:28,060 --> 00:28:30,040
+You will understand every small
+
+1095
+00:28:30,040 --> 00:28:30,640
+detail
+
+1096
+00:28:30,640 --> 00:28:31,240
+On the APIs
+
+1097
+00:28:31,680 --> 00:28:33,340
+If you already know these request
+
+1098
+00:28:33,340 --> 00:28:33,940
+package
+
+1099
+00:28:33,940 --> 00:28:34,540
+And everything
+
+1100
+00:28:34,540 --> 00:28:35,560
+Then start using OpenAI
+
+1101
+00:28:35,560 --> 00:28:37,260
+Because it is built by OpenAI
+
+1102
+00:28:37,260 --> 00:28:38,400
+And if you can use request package
+
+1103
+00:28:39,100 --> 00:28:41,440
+If you are calling multiple models
+
+1104
+00:28:41,440 --> 00:28:42,140
+together
+
+1105
+00:28:42,140 --> 00:28:43,220
+Maybe in your application
+
+1106
+00:28:43,220 --> 00:28:45,200
+You want to call to ChargPT
+
+1107
+00:28:45,200 --> 00:28:46,580
+And then you also want to call to
+
+1108
+00:28:46,580 --> 00:28:47,180
+Gemini
+
+1109
+00:28:47,180 --> 00:28:49,300
+You also want to call to Lama models
+
+1110
+00:28:49,300 --> 00:28:51,460
+You also want to call to Grok
+
+1111
+00:28:51,460 --> 00:28:52,440
+So if you want to call multiple
+
+1112
+00:28:52,440 --> 00:28:53,240
+models
+
+1113
+00:28:54,280 --> 00:28:57,040
+Instead of taking one package every
+
+1114
+00:28:57,040 --> 00:28:57,640
+time
+
+1115
+00:28:57,640 --> 00:28:58,780
+It is better if you use request
+
+1116
+00:28:58,780 --> 00:28:59,380
+package
+
+1117
+00:28:59,380 --> 00:29:01,840
+Because you just need to change the
+
+1118
+00:29:01,840 --> 00:29:02,440
+token
+
+1119
+00:29:02,440 --> 00:29:03,040
+That's it
+
+1120
+00:29:03,040 --> 00:29:05,120
+So everything has its own pros and
+
+1121
+00:29:05,120 --> 00:29:05,720
+cons
+
+1122
+00:29:05,720 --> 00:29:06,500
+Based on the usage
+
+1123
+00:29:06,500 --> 00:29:09,120
+You need to decide how to use it
+
+1124
+00:29:09,620 --> 00:29:11,020
+If you don't have money
+
+1125
+00:29:11,020 --> 00:29:12,700
+And you don't want to pay for
+
+1126
+00:29:12,700 --> 00:29:13,560
+ChargPT
+
+1127
+00:29:13,560 --> 00:29:15,220
+There are some open source models
+
+1128
+00:29:15,220 --> 00:29:17,540
+So open source models means
+
+1129
+00:29:17,540 --> 00:29:19,900
+You can use them for free of cost
+
+1130
+00:29:19,900 --> 00:29:21,300
+And there are two ways
+
+1131
+00:29:21,300 --> 00:29:23,260
+One is you can download the entire
+
+1132
+00:29:23,260 --> 00:29:24,100
+model locally
+
+1133
+00:29:24,100 --> 00:29:24,820
+And you need to have more power in
+
+1134
+00:29:24,820 --> 00:29:25,720
+the local machine
+
+1135
+00:29:26,280 --> 00:29:27,740
+To execute those models
+
+1136
+00:29:27,740 --> 00:29:28,540
+Otherwise
+
+1137
+00:29:28,540 --> 00:29:29,900
+There are some companies
+
+1138
+00:29:29,900 --> 00:29:32,100
+Which will provide you for free of
+
+1139
+00:29:32,100 --> 00:29:32,740
+cost APIs
+
+1140
+00:29:32,740 --> 00:29:34,240
+For those open source models
+
+1141
+00:29:34,240 --> 00:29:37,000
+And there are some limits obviously
+
+1142
+00:29:37,000 --> 00:29:38,640
+Because you are using it for free
+
+1143
+00:29:38,640 --> 00:29:40,420
+So there is a website which is
+
+1144
+00:29:40,420 --> 00:29:41,200
+called as Grok
+
+1145
+00:29:41,840 --> 00:29:43,020
+So GROQ
+
+1146
+00:29:43,020 --> 00:29:43,620
+Okay
+
+1147
+00:29:43,620 --> 00:29:44,800
+And we will go here
+
+1148
+00:29:44,800 --> 00:29:46,220
+You also log in here
+
+1149
+00:29:46,220 --> 00:29:48,060
+And we will put start building
+
+1150
+00:29:49,460 --> 00:29:51,020
+And then did you see here
+
+1151
+00:29:51,020 --> 00:29:52,640
+It has already logged in with my
+
+1152
+00:29:52,640 --> 00:29:53,240
+account
+
+1153
+00:29:53,240 --> 00:29:53,840
+So I will go here
+
+1154
+00:29:53,840 --> 00:29:55,200
+And I will put API keys
+
+1155
+00:29:55,200 --> 00:29:56,660
+Here you don't have to pay 20
+
+1156
+00:29:57,560 --> 00:29:59,700
+No credit card, no debit card
+
+1157
+00:29:59,700 --> 00:30:00,680
+Nothing else
+
+1158
+00:30:00,680 --> 00:30:02,700
+Here also let's create an API key
+
+1159
+00:30:02,700 --> 00:30:04,020
+And maybe let's say
+
+1160
+00:30:05,860 --> 00:30:07,060
+API testing
+
+1161
+00:30:07,060 --> 00:30:08,440
+I will name it
+
+1162
+00:30:08,440 --> 00:30:10,680
+And I will put an expiry date of
+
+1163
+00:30:11,140 --> 00:30:11,940
+7 days
+
+1164
+00:30:11,940 --> 00:30:13,400
+It will expire in 7 days
+
+1165
+00:30:14,060 --> 00:30:16,280
+And let's submit this key
+
+1166
+00:30:16,280 --> 00:30:19,020
+Now it will also provide an
+
+1167
+00:30:19,020 --> 00:30:20,080
+Key from the GROQ
+
+1168
+00:30:20,080 --> 00:30:21,840
+Let's copy this
+
+1169
+00:30:21,840 --> 00:30:22,620
+And done
+
+1170
+00:30:22,620 --> 00:30:23,780
+Now GROQ came to us
+
+1171
+00:30:23,780 --> 00:30:24,600
+Now where should we put the API key
+
+1172
+00:30:25,300 --> 00:30:27,520
+You will also put this API key
+
+1173
+00:30:27,520 --> 00:30:29,380
+Inside your environment
+
+1174
+00:30:29,380 --> 00:30:30,860
+So go to the environment file
+
+1175
+00:30:30,860 --> 00:30:32,980
+I will put it in the second line
+
+1176
+00:30:34,800 --> 00:30:36,200
+Let's put it here
+
+1177
+00:30:36,200 --> 00:30:37,160
+But it should have a name
+
+1178
+00:30:37,740 --> 00:30:39,280
+So what is the name of it
+
+1179
+00:30:39,280 --> 00:30:41,480
+I am putting it as GROQ API key
+
+1180
+00:30:41,480 --> 00:30:43,140
+You can put whatever the name you
+
+1181
+00:30:43,140 --> 00:30:43,740
+want
+
+1182
+00:30:43,740 --> 00:30:44,940
+I will put it here
+
+1183
+00:30:44,940 --> 00:30:45,860
+Equal to
+
+1184
+00:30:45,860 --> 00:30:47,060
+Now in our environment file
+
+1185
+00:30:47,060 --> 00:30:47,940
+We have GROQ API
+
+1186
+00:30:48,540 --> 00:30:49,860
+So what we are going to do is
+
+1187
+00:30:49,860 --> 00:30:51,680
+Now let's execute this piece of code
+
+1188
+00:30:51,680 --> 00:30:53,500
+And see GROQ API is also loaded in
+
+1189
+00:30:53,500 --> 00:30:54,100
+our notebook
+
+1190
+00:30:54,940 --> 00:30:56,560
+Now if you go here
+
+1191
+00:30:56,560 --> 00:30:57,940
+If you go to the playground
+
+1192
+00:30:57,940 --> 00:30:59,680
+There are these LLMs here
+
+1193
+00:30:59,680 --> 00:31:01,120
+You have all of these LLMs
+
+1194
+00:31:01,120 --> 00:31:02,860
+Alibaba, Gwennan
+
+1195
+00:31:02,860 --> 00:31:04,140
+And then Orpheus
+
+1196
+00:31:04,740 --> 00:31:06,420
+GROQ has its own models
+
+1197
+00:31:06,420 --> 00:31:08,800
+And also all the open source models
+
+1198
+00:31:08,800 --> 00:31:09,480
+from the Meta
+
+1199
+00:31:09,480 --> 00:31:10,480
+Lama 3.1
+
+1200
+00:31:10,480 --> 00:31:11,760
+8 billion parameter model
+
+1201
+00:31:11,760 --> 00:31:12,760
+Lama 3.3
+
+1202
+00:31:12,760 --> 00:31:14,100
+70 billion parameter model
+
+1203
+00:31:14,100 --> 00:31:15,300
+And you can use all of these
+
+1204
+00:31:15,300 --> 00:31:16,600
+And from OpenAI
+
+1205
+00:31:16,600 --> 00:31:18,140
+There are some open source models
+
+1206
+00:31:18,140 --> 00:31:19,720
+You can even use these things as
+
+1207
+00:31:19,720 --> 00:31:20,320
+well
+
+1208
+00:31:20,320 --> 00:31:21,580
+So what we are going to do is
+
+1209
+00:31:21,580 --> 00:31:22,320
+We will come here
+
+1210
+00:31:22,320 --> 00:31:24,260
+And we will put the URL again
+
+1211
+00:31:24,260 --> 00:31:25,180
+And then what is our authorization
+
+1212
+00:31:25,180 --> 00:31:25,780
+type
+
+1213
+00:31:25,780 --> 00:31:26,640
+What is the content type
+
+1214
+00:31:26,640 --> 00:31:28,360
+And we will use Lama 3.3
+
+1215
+00:31:28,360 --> 00:31:29,680
+70 billion versatile model
+
+1216
+00:31:29,680 --> 00:31:31,380
+And if you are using GROQ
+
+1217
+00:31:31,380 --> 00:31:33,080
+There are number of requests that
+
+1218
+00:31:33,080 --> 00:31:34,360
+you can send per day
+
+1219
+00:31:34,360 --> 00:31:35,740
+I think per day 1000 requests
+
+1220
+00:31:36,400 --> 00:31:37,260
+Now see
+
+1221
+00:31:37,260 --> 00:31:38,180
+Request package
+
+1222
+00:31:38,180 --> 00:31:39,340
+Well advantage is
+
+1223
+00:31:39,340 --> 00:31:41,340
+You are just changing the key
+
+1224
+00:31:41,340 --> 00:31:42,820
+And you are just changing the URL
+
+1225
+00:31:42,820 --> 00:31:44,220
+And then the model remaining
+
+1226
+00:31:44,220 --> 00:31:45,740
+Everything is going to stay same
+
+1227
+00:31:45,740 --> 00:31:47,640
+So I can execute this
+
+1228
+00:31:47,640 --> 00:31:49,000
+And see I got this
+
+1229
+00:31:49,000 --> 00:31:50,820
+An API key is a unique string of
+
+1230
+00:31:50,820 --> 00:31:51,420
+characters
+
+1231
+00:31:51,420 --> 00:31:52,640
+Used to authenticate and authorize
+
+1232
+00:31:52,640 --> 00:31:53,240
+access
+
+1233
+00:31:53,240 --> 00:31:54,820
+To specific application programming
+
+1234
+00:31:54,820 --> 00:31:55,420
+interface
+
+1235
+00:31:55,420 --> 00:31:56,340
+And we got the response
+
+1236
+00:31:56,340 --> 00:31:58,080
+And it is much faster compared to
+
+1237
+00:31:58,080 --> 00:31:59,060
+OpenAI as well
+
+1238
+00:31:59,060 --> 00:31:59,660
+See
+
+1239
+00:31:59,660 --> 00:32:01,220
+And tokens used 94
+
+1240
+00:32:01,220 --> 00:32:02,840
+And cost 0.00
+
+1241
+00:32:02,840 --> 00:32:06,300
+Because we didn't use any credit
+
+1242
+00:32:06,300 --> 00:32:06,900
+card dealers
+
+1243
+00:32:06,900 --> 00:32:07,860
+Or debit card details
+
+1244
+00:32:07,860 --> 00:32:09,280
+So just like that
+
+1245
+00:32:09,280 --> 00:32:10,420
+I said there is an application
+
+1246
+00:32:10,420 --> 00:32:11,020
+called GROQ
+
+1247
+00:32:11,020 --> 00:32:11,880
+With this website
+
+1248
+00:32:11,880 --> 00:32:13,580
+They are hosting these LLMs for free
+
+1249
+00:32:13,580 --> 00:32:14,240
+of cost
+
+1250
+00:32:14,240 --> 00:32:16,920
+But this is also compatible with
+
+1251
+00:32:16,920 --> 00:32:17,880
+OpenAI as well
+
+1252
+00:32:17,880 --> 00:32:19,260
+So what can I do now
+
+1253
+00:32:19,260 --> 00:32:20,120
+In OpenAI package
+
+1254
+00:32:20,120 --> 00:32:21,740
+I can use API key
+
+1255
+00:32:21,740 --> 00:32:23,980
+And change the URL here
+
+1256
+00:32:23,980 --> 00:32:25,640
+It is not fun to change the URL in
+
+1257
+00:32:25,640 --> 00:32:26,240
+the beginning
+
+1258
+00:32:26,240 --> 00:32:26,840
+In OpenAI
+
+1259
+00:32:26,840 --> 00:32:28,080
+Because it is by default from the
+
+1260
+00:32:28,080 --> 00:32:28,680
+OpenAI
+
+1261
+00:32:28,680 --> 00:32:30,000
+Now let's execute the same thing
+
+1262
+00:32:30,000 --> 00:32:31,040
+And we get the output
+
+1263
+00:32:31,040 --> 00:32:31,840
+See
+
+1264
+00:32:31,840 --> 00:32:33,820
+Now you are using OpenAI package
+
+1265
+00:32:33,820 --> 00:32:35,760
+You are hitting the GROQ server
+
+1266
+00:32:35,760 --> 00:32:37,200
+You are not hitting the OpenAI
+
+1267
+00:32:37,200 --> 00:32:37,800
+server
+
+1268
+00:32:37,800 --> 00:32:38,780
+So like this
+
+1269
+00:32:38,780 --> 00:32:41,480
+You can talk to any of these
+
+1270
+00:32:41,480 --> 00:32:42,080
+companies
+
+1271
+00:32:42,080 --> 00:32:44,660
+Via APIs using API key
+
+1272
+00:32:45,220 --> 00:32:47,080
+And then if you want to try
+
+1273
+00:32:47,080 --> 00:32:47,940
+different different models
+
+1274
+00:32:47,940 --> 00:32:49,080
+What have we done here
+
+1275
+00:32:49,080 --> 00:32:50,460
+I am trying different different
+
+1276
+00:32:50,460 --> 00:32:51,060
+models
+
+1277
+00:32:51,060 --> 00:32:52,260
+LAMA 3.370 billion
+
+1278
+00:32:52,260 --> 00:32:53,600
+LAMA 3.18 billion
+
+1279
+00:32:53,600 --> 00:32:55,080
+Gamma 2 9 bit
+
+1280
+00:32:55,080 --> 00:32:55,720
+There are models called ITI
+
+1281
+00:32:55,720 --> 00:32:58,540
+And we are creating a loop
+
+1282
+00:32:58,540 --> 00:32:59,280
+In that loop
+
+1283
+00:32:59,280 --> 00:33:00,940
+We are calling with different
+
+1284
+00:33:00,940 --> 00:33:01,540
+different models
+
+1285
+00:33:01,540 --> 00:33:02,560
+If you want to try
+
+1286
+00:33:02,560 --> 00:33:04,060
+How the response looks like
+
+1287
+00:33:04,060 --> 00:33:05,160
+With different different models
+
+1288
+00:33:05,160 --> 00:33:06,820
+You get the output as well
+
+1289
+00:33:06,820 --> 00:33:08,140
+Python is a great language
+
+1290
+00:33:08,140 --> 00:33:09,800
+See Python simplicity readability
+
+1291
+00:33:09,800 --> 00:33:11,100
+Depending on the model
+
+1292
+00:33:11,100 --> 00:33:12,480
+The output is changing
+
+1293
+00:33:12,480 --> 00:33:14,760
+Because of the intelligence of the
+
+1294
+00:33:14,760 --> 00:33:15,360
+model
+
+1295
+00:33:15,360 --> 00:33:15,960
+The output is changing
+
+1296
+00:33:15,960 --> 00:33:17,320
+So when you are building
+
+1297
+00:33:17,320 --> 00:33:18,840
+Production level applications
+
+1298
+00:33:18,840 --> 00:33:20,060
+We need to decide
+
+1299
+00:33:20,060 --> 00:33:21,240
+Which model works well for our
+
+1300
+00:33:21,240 --> 00:33:22,980
+specific task
+
+1301
+00:33:22,980 --> 00:33:24,500
+Claude will be good for some
+
+1302
+00:33:24,500 --> 00:33:25,240
+specific task
+
+1303
+00:33:25,240 --> 00:33:26,520
+Maybe charge GPT will be good for
+
+1304
+00:33:26,520 --> 00:33:27,520
+some other specific tasks
+
+1305
+00:33:27,520 --> 00:33:28,640
+So we need to decide
+
+1306
+00:33:28,640 --> 00:33:30,300
+Which model works best for us
+
+1307
+00:33:30,300 --> 00:33:32,280
+Based on how much costing it does
+
+1308
+00:33:32,280 --> 00:33:34,540
+Because every response and every hit
+
+1309
+00:33:34,540 --> 00:33:36,500
+It is going to cost us money
+
+1310
+00:33:37,580 --> 00:33:39,480
+And this is a recap of what we have
+
+1311
+00:33:39,480 --> 00:33:40,280
+learnt so far
+
+1312
+00:33:40,280 --> 00:33:41,100
+If you have learnt something from
+
+1313
+00:33:41,100 --> 00:33:41,700
+this video
+
+1314
+00:33:42,400 --> 00:33:43,780
+Please let me know in the comment
+
+1315
+00:33:43,780 --> 00:33:44,380
+section
+
+1316
+00:33:44,380 --> 00:33:45,280
+And in the next video
+
+1317
+00:33:45,280 --> 00:33:46,840
+We will also look at
+
+1318
+00:33:46,840 --> 00:33:48,220
+What we can do it better
+
+1319
+00:33:48,220 --> 00:33:49,340
+What have we done
+
+1320
+00:33:49,340 --> 00:33:51,000
+We just hit an OpenAI server
+
+1321
+00:33:51,000 --> 00:33:52,080
+And we got the response
+
+1322
+00:33:52,080 --> 00:33:53,960
+But like our charge GPT
+
+1323
+00:33:53,960 --> 00:33:55,420
+There is no conversation
+
+1324
+00:33:55,420 --> 00:33:56,420
+There is no memory
+
+1325
+00:33:56,420 --> 00:33:57,460
+Nothing at all
+
+1326
+00:33:57,460 --> 00:34:01,100
+So how to build agents from this one
+
+1327
+00:34:01,100 --> 00:34:03,500
+So it is just a basic information
+
+1328
+00:34:03,500 --> 00:34:05,380
+So using this information
+
+1329
+00:34:05,880 --> 00:34:08,320
+How you can expand this to build
+
+1330
+00:34:08,320 --> 00:34:08,920
+agents
+
+1331
+00:34:08,920 --> 00:34:10,060
+Multi -agent orchestration
+
+1332
+00:34:10,060 --> 00:34:11,220
+State level management
+
+1333
+00:34:11,220 --> 00:34:12,540
+There are many more topics
+
+1334
+00:34:12,540 --> 00:34:14,900
+But this is the core of the topic
+
+1335
+00:34:14,900 --> 00:34:16,700
+And if you are enjoying this video
+
+1336
+00:34:16,700 --> 00:34:17,560
+Please subscribe
+
+1337
+00:34:17,560 --> 00:34:19,360
+And share it with someone who needs
+
+1338
+00:34:19,360 --> 00:34:19,960
+this
+
+1339
+00:34:19,960 --> 00:34:20,880
+See you
+
+1340
+00:34:20,880 --> 00:34:21,480
+Bye bye
+

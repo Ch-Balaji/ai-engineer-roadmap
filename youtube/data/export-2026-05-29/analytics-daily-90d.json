@@ -1,0 +1,808 @@
+{
+  "start_date": "2026-02-28",
+  "end_date": "2026-05-29",
+  "columns": [
+    "day",
+    "views",
+    "estimatedMinutesWatched",
+    "averageViewDuration",
+    "subscribersGained",
+    "likes",
+    "shares"
+  ],
+  "results": [
+    {
+      "day": "2026-02-28",
+      "views": 80,
+      "estimatedMinutesWatched": 262,
+      "averageViewDuration": 204,
+      "subscribersGained": 90,
+      "likes": 1,
+      "shares": 2
+    },
+    {
+      "day": "2026-03-01",
+      "views": 61,
+      "estimatedMinutesWatched": 191,
+      "averageViewDuration": 209,
+      "subscribersGained": 3,
+      "likes": 1,
+      "shares": 1
+    },
+    {
+      "day": "2026-03-02",
+      "views": 58,
+      "estimatedMinutesWatched": 175,
+      "averageViewDuration": 188,
+      "subscribersGained": 9,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-03",
+      "views": 66,
+      "estimatedMinutesWatched": 450,
+      "averageViewDuration": 429,
+      "subscribersGained": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-04",
+      "views": 49,
+      "estimatedMinutesWatched": 283,
+      "averageViewDuration": 347,
+      "subscribersGained": 2,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-05",
+      "views": 70,
+      "estimatedMinutesWatched": 353,
+      "averageViewDuration": 307,
+      "subscribersGained": 4,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-06",
+      "views": 61,
+      "estimatedMinutesWatched": 323,
+      "averageViewDuration": 318,
+      "subscribersGained": 6,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-07",
+      "views": 61,
+      "estimatedMinutesWatched": 336,
+      "averageViewDuration": 348,
+      "subscribersGained": 4,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-08",
+      "views": 52,
+      "estimatedMinutesWatched": 302,
+      "averageViewDuration": 349,
+      "subscribersGained": 2,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-09",
+      "views": 68,
+      "estimatedMinutesWatched": 311,
+      "averageViewDuration": 275,
+      "subscribersGained": 1,
+      "likes": 1,
+      "shares": 1
+    },
+    {
+      "day": "2026-03-10",
+      "views": 43,
+      "estimatedMinutesWatched": 191,
+      "averageViewDuration": 272,
+      "subscribersGained": 3,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-11",
+      "views": 39,
+      "estimatedMinutesWatched": 312,
+      "averageViewDuration": 480,
+      "subscribersGained": 0,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-12",
+      "views": 51,
+      "estimatedMinutesWatched": 172,
+      "averageViewDuration": 211,
+      "subscribersGained": 5,
+      "likes": 3,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-13",
+      "views": 58,
+      "estimatedMinutesWatched": 245,
+      "averageViewDuration": 273,
+      "subscribersGained": 4,
+      "likes": 3,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-14",
+      "views": 69,
+      "estimatedMinutesWatched": 294,
+      "averageViewDuration": 268,
+      "subscribersGained": 31,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-15",
+      "views": 34,
+      "estimatedMinutesWatched": 138,
+      "averageViewDuration": 268,
+      "subscribersGained": 1,
+      "likes": 4,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-16",
+      "views": 26,
+      "estimatedMinutesWatched": 148,
+      "averageViewDuration": 342,
+      "subscribersGained": 3,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-17",
+      "views": 50,
+      "estimatedMinutesWatched": 129,
+      "averageViewDuration": 180,
+      "subscribersGained": 2,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-18",
+      "views": 51,
+      "estimatedMinutesWatched": 264,
+      "averageViewDuration": 330,
+      "subscribersGained": 3,
+      "likes": 3,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-19",
+      "views": 47,
+      "estimatedMinutesWatched": 209,
+      "averageViewDuration": 267,
+      "subscribersGained": 2,
+      "likes": 5,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-20",
+      "views": 22,
+      "estimatedMinutesWatched": 82,
+      "averageViewDuration": 226,
+      "subscribersGained": 5,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-21",
+      "views": 28,
+      "estimatedMinutesWatched": 76,
+      "averageViewDuration": 170,
+      "subscribersGained": 14,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-22",
+      "views": 57,
+      "estimatedMinutesWatched": 262,
+      "averageViewDuration": 281,
+      "subscribersGained": 3,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-23",
+      "views": 38,
+      "estimatedMinutesWatched": 213,
+      "averageViewDuration": 355,
+      "subscribersGained": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-24",
+      "views": 142,
+      "estimatedMinutesWatched": 397,
+      "averageViewDuration": 179,
+      "subscribersGained": 235,
+      "likes": 5,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-25",
+      "views": 416,
+      "estimatedMinutesWatched": 606,
+      "averageViewDuration": 89,
+      "subscribersGained": 58,
+      "likes": 12,
+      "shares": 10
+    },
+    {
+      "day": "2026-03-26",
+      "views": 135,
+      "estimatedMinutesWatched": 984,
+      "averageViewDuration": 443,
+      "subscribersGained": 5,
+      "likes": 8,
+      "shares": 1
+    },
+    {
+      "day": "2026-03-27",
+      "views": 75,
+      "estimatedMinutesWatched": 590,
+      "averageViewDuration": 484,
+      "subscribersGained": 9,
+      "likes": 5,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-28",
+      "views": 108,
+      "estimatedMinutesWatched": 630,
+      "averageViewDuration": 374,
+      "subscribersGained": 3,
+      "likes": 5,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-29",
+      "views": 45,
+      "estimatedMinutesWatched": 202,
+      "averageViewDuration": 276,
+      "subscribersGained": 5,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-03-30",
+      "views": 79,
+      "estimatedMinutesWatched": 248,
+      "averageViewDuration": 198,
+      "subscribersGained": 4,
+      "likes": 2,
+      "shares": 1
+    },
+    {
+      "day": "2026-03-31",
+      "views": 68,
+      "estimatedMinutesWatched": 285,
+      "averageViewDuration": 267,
+      "subscribersGained": 17,
+      "likes": 3,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-01",
+      "views": 58,
+      "estimatedMinutesWatched": 236,
+      "averageViewDuration": 244,
+      "subscribersGained": 7,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-02",
+      "views": 61,
+      "estimatedMinutesWatched": 298,
+      "averageViewDuration": 293,
+      "subscribersGained": 4,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-03",
+      "views": 119,
+      "estimatedMinutesWatched": 365,
+      "averageViewDuration": 187,
+      "subscribersGained": 6,
+      "likes": 8,
+      "shares": 2
+    },
+    {
+      "day": "2026-04-04",
+      "views": 57,
+      "estimatedMinutesWatched": 92,
+      "averageViewDuration": 106,
+      "subscribersGained": 4,
+      "likes": 3,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-05",
+      "views": 259,
+      "estimatedMinutesWatched": 1977,
+      "averageViewDuration": 467,
+      "subscribersGained": 5,
+      "likes": 26,
+      "shares": 4
+    },
+    {
+      "day": "2026-04-06",
+      "views": 55,
+      "estimatedMinutesWatched": 368,
+      "averageViewDuration": 417,
+      "subscribersGained": 4,
+      "likes": 5,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-07",
+      "views": 76,
+      "estimatedMinutesWatched": 192,
+      "averageViewDuration": 154,
+      "subscribersGained": 7,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-08",
+      "views": 75,
+      "estimatedMinutesWatched": 293,
+      "averageViewDuration": 259,
+      "subscribersGained": 24,
+      "likes": 4,
+      "shares": 3
+    },
+    {
+      "day": "2026-04-09",
+      "views": 78,
+      "estimatedMinutesWatched": 480,
+      "averageViewDuration": 374,
+      "subscribersGained": 2,
+      "likes": 5,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-10",
+      "views": 48,
+      "estimatedMinutesWatched": 220,
+      "averageViewDuration": 281,
+      "subscribersGained": 4,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-11",
+      "views": 33,
+      "estimatedMinutesWatched": 84,
+      "averageViewDuration": 168,
+      "subscribersGained": 3,
+      "likes": 0,
+      "shares": 2
+    },
+    {
+      "day": "2026-04-12",
+      "views": 45,
+      "estimatedMinutesWatched": 262,
+      "averageViewDuration": 350,
+      "subscribersGained": 3,
+      "likes": 0,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-13",
+      "views": 35,
+      "estimatedMinutesWatched": 144,
+      "averageViewDuration": 280,
+      "subscribersGained": 5,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-14",
+      "views": 50,
+      "estimatedMinutesWatched": 201,
+      "averageViewDuration": 251,
+      "subscribersGained": 5,
+      "likes": 0,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-15",
+      "views": 54,
+      "estimatedMinutesWatched": 137,
+      "averageViewDuration": 171,
+      "subscribersGained": 4,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-16",
+      "views": 33,
+      "estimatedMinutesWatched": 91,
+      "averageViewDuration": 166,
+      "subscribersGained": 5,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-17",
+      "views": 30,
+      "estimatedMinutesWatched": 25,
+      "averageViewDuration": 55,
+      "subscribersGained": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-18",
+      "views": 34,
+      "estimatedMinutesWatched": 200,
+      "averageViewDuration": 353,
+      "subscribersGained": 3,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-19",
+      "views": 30,
+      "estimatedMinutesWatched": 76,
+      "averageViewDuration": 152,
+      "subscribersGained": 1,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-20",
+      "views": 22,
+      "estimatedMinutesWatched": 88,
+      "averageViewDuration": 241,
+      "subscribersGained": 1,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-21",
+      "views": 29,
+      "estimatedMinutesWatched": 118,
+      "averageViewDuration": 263,
+      "subscribersGained": 14,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-22",
+      "views": 115,
+      "estimatedMinutesWatched": 123,
+      "averageViewDuration": 65,
+      "subscribersGained": 13,
+      "likes": 3,
+      "shares": 4
+    },
+    {
+      "day": "2026-04-23",
+      "views": 36,
+      "estimatedMinutesWatched": 78,
+      "averageViewDuration": 131,
+      "subscribersGained": 4,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-24",
+      "views": 30,
+      "estimatedMinutesWatched": 25,
+      "averageViewDuration": 58,
+      "subscribersGained": 2,
+      "likes": 0,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-25",
+      "views": 25,
+      "estimatedMinutesWatched": 110,
+      "averageViewDuration": 276,
+      "subscribersGained": 1,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-26",
+      "views": 23,
+      "estimatedMinutesWatched": 34,
+      "averageViewDuration": 98,
+      "subscribersGained": 4,
+      "likes": 1,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-27",
+      "views": 67,
+      "estimatedMinutesWatched": 125,
+      "averageViewDuration": 121,
+      "subscribersGained": 4,
+      "likes": 0,
+      "shares": 24
+    },
+    {
+      "day": "2026-04-28",
+      "views": 59,
+      "estimatedMinutesWatched": 168,
+      "averageViewDuration": 184,
+      "subscribersGained": 29,
+      "likes": 4,
+      "shares": 1
+    },
+    {
+      "day": "2026-04-29",
+      "views": 46,
+      "estimatedMinutesWatched": 129,
+      "averageViewDuration": 189,
+      "subscribersGained": 10,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-04-30",
+      "views": 30,
+      "estimatedMinutesWatched": 83,
+      "averageViewDuration": 173,
+      "subscribersGained": 5,
+      "likes": 0,
+      "shares": 0
+    },
+    {
+      "day": "2026-05-01",
+      "views": 67,
+      "estimatedMinutesWatched": 297,
+      "averageViewDuration": 270,
+      "subscribersGained": 3,
+      "likes": 3,
+      "shares": 2
+    },
+    {
+      "day": "2026-05-02",
+      "views": 38,
+      "estimatedMinutesWatched": 125,
+      "averageViewDuration": 203,
+      "subscribersGained": 1,
+      "likes": 2,
+      "shares": 0
+    },
+    {
+      "day": "2026-05-03",
+      "views": 1796,
+      "estimatedMinutesWatched": 7639,
+      "averageViewDuration": 256,
+      "subscribersGained": 166,
+      "likes": 148,
+      "shares": 80
+    },
+    {
+      "day": "2026-05-04",
+      "views": 8099,
+      "estimatedMinutesWatched": 34441,
+      "averageViewDuration": 255,
+      "subscribersGained": 646,
+      "likes": 413,
+      "shares": 317
+    },
+    {
+      "day": "2026-05-05",
+      "views": 13471,
+      "estimatedMinutesWatched": 52561,
+      "averageViewDuration": 234,
+      "subscribersGained": 931,
+      "likes": 743,
+      "shares": 499
+    },
+    {
+      "day": "2026-05-06",
+      "views": 12877,
+      "estimatedMinutesWatched": 46773,
+      "averageViewDuration": 218,
+      "subscribersGained": 777,
+      "likes": 504,
+      "shares": 432
+    },
+    {
+      "day": "2026-05-07",
+      "views": 11188,
+      "estimatedMinutesWatched": 40837,
+      "averageViewDuration": 219,
+      "subscribersGained": 665,
+      "likes": 385,
+      "shares": 373
+    },
+    {
+      "day": "2026-05-08",
+      "views": 15097,
+      "estimatedMinutesWatched": 55569,
+      "averageViewDuration": 220,
+      "subscribersGained": 1117,
+      "likes": 941,
+      "shares": 542
+    },
+    {
+      "day": "2026-05-09",
+      "views": 13261,
+      "estimatedMinutesWatched": 49803,
+      "averageViewDuration": 225,
+      "subscribersGained": 917,
+      "likes": 617,
+      "shares": 431
+    },
+    {
+      "day": "2026-05-10",
+      "views": 11779,
+      "estimatedMinutesWatched": 44301,
+      "averageViewDuration": 224,
+      "subscribersGained": 742,
+      "likes": 460,
+      "shares": 380
+    },
+    {
+      "day": "2026-05-11",
+      "views": 15182,
+      "estimatedMinutesWatched": 61488,
+      "averageViewDuration": 242,
+      "subscribersGained": 704,
+      "likes": 648,
+      "shares": 386
+    },
+    {
+      "day": "2026-05-12",
+      "views": 10679,
+      "estimatedMinutesWatched": 43090,
+      "averageViewDuration": 242,
+      "subscribersGained": 524,
+      "likes": 328,
+      "shares": 300
+    },
+    {
+      "day": "2026-05-13",
+      "views": 14203,
+      "estimatedMinutesWatched": 46895,
+      "averageViewDuration": 212,
+      "subscribersGained": 488,
+      "likes": 653,
+      "shares": 288
+    },
+    {
+      "day": "2026-05-14",
+      "views": 11620,
+      "estimatedMinutesWatched": 39946,
+      "averageViewDuration": 218,
+      "subscribersGained": 402,
+      "likes": 430,
+      "shares": 263
+    },
+    {
+      "day": "2026-05-15",
+      "views": 12724,
+      "estimatedMinutesWatched": 55952,
+      "averageViewDuration": 269,
+      "subscribersGained": 458,
+      "likes": 518,
+      "shares": 320
+    },
+    {
+      "day": "2026-05-16",
+      "views": 10123,
+      "estimatedMinutesWatched": 46866,
+      "averageViewDuration": 281,
+      "subscribersGained": 410,
+      "likes": 380,
+      "shares": 270
+    },
+    {
+      "day": "2026-05-17",
+      "views": 12499,
+      "estimatedMinutesWatched": 55309,
+      "averageViewDuration": 268,
+      "subscribersGained": 366,
+      "likes": 555,
+      "shares": 217
+    },
+    {
+      "day": "2026-05-18",
+      "views": 10835,
+      "estimatedMinutesWatched": 56870,
+      "averageViewDuration": 317,
+      "subscribersGained": 402,
+      "likes": 502,
+      "shares": 240
+    },
+    {
+      "day": "2026-05-19",
+      "views": 9759,
+      "estimatedMinutesWatched": 47763,
+      "averageViewDuration": 296,
+      "subscribersGained": 452,
+      "likes": 372,
+      "shares": 211
+    },
+    {
+      "day": "2026-05-20",
+      "views": 10560,
+      "estimatedMinutesWatched": 47484,
+      "averageViewDuration": 271,
+      "subscribersGained": 385,
+      "likes": 371,
+      "shares": 221
+    },
+    {
+      "day": "2026-05-21",
+      "views": 9153,
+      "estimatedMinutesWatched": 40658,
+      "averageViewDuration": 268,
+      "subscribersGained": 347,
+      "likes": 264,
+      "shares": 199
+    },
+    {
+      "day": "2026-05-22",
+      "views": 8381,
+      "estimatedMinutesWatched": 37834,
+      "averageViewDuration": 271,
+      "subscribersGained": 334,
+      "likes": 315,
+      "shares": 214
+    },
+    {
+      "day": "2026-05-23",
+      "views": 8053,
+      "estimatedMinutesWatched": 38478,
+      "averageViewDuration": 288,
+      "subscribersGained": 332,
+      "likes": 244,
+      "shares": 202
+    },
+    {
+      "day": "2026-05-24",
+      "views": 10449,
+      "estimatedMinutesWatched": 54695,
+      "averageViewDuration": 315,
+      "subscribersGained": 374,
+      "likes": 362,
+      "shares": 215
+    },
+    {
+      "day": "2026-05-25",
+      "views": 14536,
+      "estimatedMinutesWatched": 80571,
+      "averageViewDuration": 333,
+      "subscribersGained": 444,
+      "likes": 571,
+      "shares": 331
+    },
+    {
+      "day": "2026-05-26",
+      "views": 14206,
+      "estimatedMinutesWatched": 73241,
+      "averageViewDuration": 310,
+      "subscribersGained": 484,
+      "likes": 385,
+      "shares": 329
+    }
+  ],
+  "total_rows": 88
+}

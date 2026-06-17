@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume JD Tailor Agent</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- ─── Hero ─────────────────────────────────────────────── -->
+  <header class="hero">
+    <div class="container">
+      <p class="hero-badge">AI AGENT · 7-STEP PIPELINE · CRITIC LOOP</p>
+      <h1>Resume <span class="gradient-text">JD Tailor</span> Agent</h1>
+      <p class="hero-sub">
+        Paste your resume and a job description. The AI agent analyzes, rewrites,
+        critiques, and improves your application — honestly, without faking experience.
+      </p>
+    </div>
+  </header>
+
+  <!-- ─── Input Section ────────────────────────────────────── -->
+  <main class="container">
+    <section class="input-section">
+      <div class="input-grid">
+        <div class="input-card">
+          <label for="resume">📄 Your Resume</label>
+          <textarea id="resume" rows="12"
+            placeholder="Paste your full resume text here..."></textarea>
+        </div>
+        <div class="input-card">
+          <label for="jd">📋 Job Description</label>
+          <textarea id="jd" rows="12"
+            placeholder="Paste the full job description here..."></textarea>
+        </div>
+      </div>
+
+      <div class="role-row">
+        <label for="role">🎯 Target Role <span class="optional">(optional)</span></label>
+        <input type="text" id="role"
+          placeholder="e.g., Junior Data Analyst, Agentic AI Developer" />
+      </div>
+
+      <button id="runBtn" class="run-btn" onclick="runAgent()">
+        <span class="btn-icon">🚀</span> Run Agent Pipeline
+      </button>
+      <p id="errorMsg" class="error-msg" style="display:none;"></p>
+    </section>
+
+    <!-- ─── Pipeline Progress ────────────────────────────────── -->
+    <section id="pipelineSection" class="pipeline-section" style="display:none;">
+      <h2 class="section-title">Pipeline Progress</h2>
+      <div class="pipeline-tracker">
+        <div class="pipeline-bar-bg"><div id="pipelineBar" class="pipeline-bar"></div></div>
+        <div class="steps-grid" id="stepsGrid">
+          <div class="step-item" data-step="0"><span class="step-icon">📋</span><span class="step-label">JD Analysis</span></div>
+          <div class="step-item" data-step="1"><span class="step-icon">🔍</span><span class="step-label">Resume Match</span></div>
+          <div class="step-item" data-step="2"><span class="step-icon">✏️</span><span class="step-label">Rewrite Bullets</span></div>
+          <div class="step-item" data-step="3"><span class="step-icon">💌</span><span class="step-label">Cover Letter</span></div>
+          <div class="step-item" data-step="4"><span class="step-icon">🧐</span><span class="step-label">Critic Review</span></div>
+          <div class="step-item" data-step="5"><span class="step-icon">🔄</span><span class="step-label">Revision</span></div>
+          <div class="step-item" data-step="6"><span class="step-icon">❓</span><span class="step-label">Interview Qs</span></div>
+        </div>
+      </div>
+      <p id="stepStatus" class="step-status">Starting pipeline...</p>
+    </section>
+
+    <!-- ─── Results ──────────────────────────────────────────── -->
+    <section id="resultsSection" style="display:none;">
+
+      <!-- Metric Cards -->
+      <div id="metricsRow" class="metrics-row"></div>
+
+      <!-- JD Analysis -->
+      <div id="jdCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">📋</span> JD Keyword Summary</h3>
+        <div id="jdContent"></div>
+      </div>
+
+      <!-- Match Analysis -->
+      <div id="matchCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">🔍</span> Resume Match Analysis</h3>
+        <div id="matchContent"></div>
+      </div>
+
+      <!-- Rewritten Bullets -->
+      <div id="bulletsCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">✏️</span> Rewritten Resume Bullets</h3>
+        <div id="bulletsContent"></div>
+      </div>
+
+      <!-- Cover Letter -->
+      <div id="coverCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">💌</span> Cover Letter</h3>
+        <div id="coverContent"></div>
+      </div>
+
+      <!-- Critic Review -->
+      <div id="criticCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">🧐</span> Critic Review</h3>
+        <div id="criticContent"></div>
+      </div>
+
+      <!-- Interview Questions -->
+      <div id="interviewCard" class="result-card" style="display:none;">
+        <h3><span class="rc-icon">❓</span> Likely Interview Questions</h3>
+        <div id="interviewContent"></div>
+      </div>
+
+      <!-- Download -->
+      <div class="download-row" id="downloadRow" style="display:none;">
+        <button class="download-btn" onclick="downloadReport('md')">📥 Download Report (.md)</button>
+        <button class="download-btn secondary" onclick="downloadReport('txt')">📄 Download Report (.txt)</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p>Resume JD Tailor Agent · Built with FastAPI + Claude on AWS Bedrock · 7-Step Agentic Pipeline</p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

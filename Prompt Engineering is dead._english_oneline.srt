@@ -1,0 +1,2432 @@
+1
+00:00:00,000 --> 00:00:02,000
+Prompt engineering was always a
+
+2
+00:00:02,000 --> 00:00:03,220
+little bit ridiculous,
+
+3
+00:00:03,660 --> 00:00:05,800
+but context is king.
+
+4
+00:00:06,040 --> 00:00:08,380
+You've got a window of at most a
+
+5
+00:00:08,380 --> 00:00:10,560
+million tokens to tell your LLM
+
+6
+00:00:10,560 --> 00:00:11,760
+everything it needs to know
+
+7
+00:00:11,760 --> 00:00:13,880
+about your business and what you
+
+8
+00:00:13,880 --> 00:00:15,260
+want your agent to accomplish.
+
+9
+00:00:15,620 --> 00:00:17,120
+If you think about what has to fit
+
+10
+00:00:17,120 --> 00:00:18,980
+in there, that's just not enough
+
+11
+00:00:18,980 --> 00:00:19,580
+space
+
+12
+00:00:19,580 --> 00:00:22,000
+to tackle complex tasks in the real
+
+13
+00:00:22,000 --> 00:00:22,600
+world.
+
+14
+00:00:22,920 --> 00:00:23,940
+If this is going to work,
+
+15
+00:00:24,180 --> 00:00:25,620
+we need to understand the building
+
+16
+00:00:25,620 --> 00:00:26,680
+blocks of context
+
+17
+00:00:26,680 --> 00:00:29,320
+in modern agentic applications and
+
+18
+00:00:29,320 --> 00:00:31,520
+have a framework to help us design
+
+19
+00:00:31,520 --> 00:00:33,580
+context with precision.
+
+20
+00:00:34,080 --> 00:00:35,120
+Let me show you what I mean.
+
+21
+00:00:35,620 --> 00:00:38,680
+Let's remember what an LLM even is.
+
+22
+00:00:39,140 --> 00:00:43,000
+It's a stateless box that
+
+23
+00:00:43,000 --> 00:00:46,560
+takes tokens as input.
+
+24
+00:00:46,680 --> 00:00:47,700
+You just think of them as little
+
+25
+00:00:47,700 --> 00:00:50,440
+pieces of words and gives us,
+
+26
+00:00:50,440 --> 00:00:51,400
+we'll say,
+
+27
+00:00:52,080 --> 00:00:54,300
+likely tokens as outputs.
+
+28
+00:00:54,300 --> 00:00:55,720
+It's important to kind of bring back
+
+29
+00:00:55,720 --> 00:00:56,960
+to this core thing.
+
+30
+00:00:57,100 --> 00:00:58,940
+It's very smart, does a lot of
+
+31
+00:00:58,940 --> 00:00:59,540
+really cool things.
+
+32
+00:00:59,540 --> 00:01:01,240
+These likely tokens are extremely
+
+33
+00:01:01,240 --> 00:01:03,520
+useful that come out, but it doesn't
+
+34
+00:01:03,520 --> 00:01:04,240
+remember anything.
+
+35
+00:01:04,500 --> 00:01:06,100
+We give it a bunch of text on the
+
+36
+00:01:06,100 --> 00:01:09,240
+input and text comes as the output
+
+37
+00:01:09,240 --> 00:01:10,580
+for the text mode.
+
+38
+00:01:11,160 --> 00:01:13,000
+When I said you have about a
+
+39
+00:01:13,000 --> 00:01:15,000
+million, that's for some models,
+
+40
+00:01:15,060 --> 00:01:16,940
+for some it might be 100,000,
+
+41
+00:01:16,940 --> 00:01:18,040
+something like that.
+
+42
+00:01:18,480 --> 00:01:20,800
+That could correspond to maybe 60
+
+43
+00:01:20,800 --> 00:01:23,500
+,000 words or 60 to 700,000 words,
+
+44
+00:01:23,500 --> 00:01:24,100
+somewhere in that.
+
+45
+00:01:24,920 --> 00:01:26,800
+The real problem with the LLM is
+
+46
+00:01:26,800 --> 00:01:28,560
+that it only knows what it's read on
+
+47
+00:01:28,560 --> 00:01:29,160
+the internet
+
+48
+00:01:29,160 --> 00:01:30,940
+and it can't do anything.
+
+49
+00:01:31,020 --> 00:01:32,560
+It just gives us tokens on the
+
+50
+00:01:32,560 --> 00:01:35,060
+output and we want to write agentic
+
+51
+00:01:35,060 --> 00:01:35,680
+applications
+
+52
+00:01:35,680 --> 00:01:39,520
+that take action and that know about
+
+53
+00:01:39,520 --> 00:01:40,800
+what's going on in the business.
+
+54
+00:01:41,140 --> 00:01:43,420
+So for our agents, we'll have some
+
+55
+00:01:43,420 --> 00:01:45,040
+kind of input.
+
+56
+00:01:45,060 --> 00:01:47,460
+That's probably a prompt from a
+
+57
+00:01:47,460 --> 00:01:48,740
+human at some point.
+
+58
+00:01:49,840 --> 00:01:53,660
+This agent now here is going
+
+59
+00:01:53,660 --> 00:01:57,800
+to make LLM calls and probably make
+
+60
+00:01:57,800 --> 00:01:58,920
+them iteratively.
+
+61
+00:01:58,980 --> 00:02:00,460
+It'll probably call an LLM more than
+
+62
+00:02:00,460 --> 00:02:01,060
+once
+
+63
+00:02:01,300 --> 00:02:04,060
+and it has the capability of calling
+
+64
+00:02:04,060 --> 00:02:05,620
+tools as well.
+
+65
+00:02:05,620 --> 00:02:07,380
+Those will let it actually take
+
+66
+00:02:07,380 --> 00:02:08,840
+action out in the world
+
+67
+00:02:08,840 --> 00:02:10,980
+and both the LLM call and the tool
+
+68
+00:02:10,980 --> 00:02:12,720
+call can be iterative.
+
+69
+00:02:13,020 --> 00:02:14,840
+This agent can have a workflow that
+
+70
+00:02:14,840 --> 00:02:16,580
+it kind of works out over time.
+
+71
+00:02:16,580 --> 00:02:19,540
+That can be running for a long time,
+
+72
+00:02:19,560 --> 00:02:21,160
+potentially, depending on the agent.
+
+73
+00:02:21,640 --> 00:02:23,320
+And that introduces some real
+
+74
+00:02:23,320 --> 00:02:25,040
+problems with context that we need
+
+75
+00:02:25,040 --> 00:02:25,640
+to solve.
+
+76
+00:02:26,060 --> 00:02:28,660
+All right, let's look now at kind of
+
+77
+00:02:28,660 --> 00:02:32,000
+a schema for thinking
+
+78
+00:02:32,000 --> 00:02:35,160
+about context.
+
+79
+00:02:35,640 --> 00:02:38,100
+What goes in the context window?
+
+80
+00:02:38,180 --> 00:02:40,680
+These tokens, this big prompt,
+
+81
+00:02:40,760 --> 00:02:43,200
+this string that we're submitting to
+
+82
+00:02:43,200 --> 00:02:44,200
+our LLM.
+
+83
+00:02:44,200 --> 00:02:46,780
+There are six things in here that I
+
+84
+00:02:46,780 --> 00:02:47,420
+want to lay out.
+
+85
+00:02:47,680 --> 00:02:51,200
+Let's first say, let's say here,
+
+86
+00:02:51,360 --> 00:02:54,200
+this is what I'm going to call user
+
+87
+00:02:54,200 --> 00:02:54,800
+message.
+
+88
+00:02:55,540 --> 00:02:58,080
+All right, now it's okay to think of
+
+89
+00:02:58,080 --> 00:02:59,140
+the chatbot interface,
+
+90
+00:02:59,240 --> 00:03:00,280
+the typical, you know,
+
+91
+00:03:00,420 --> 00:03:02,200
+Grok, Claude, ChatTPT kind of thing.
+
+92
+00:03:02,520 --> 00:03:04,560
+You type a thing and it says stuff
+
+93
+00:03:04,560 --> 00:03:05,160
+back.
+
+94
+00:03:05,160 --> 00:03:06,200
+And the you type a thing,
+
+95
+00:03:06,200 --> 00:03:07,240
+that stuff that you type,
+
+96
+00:03:07,600 --> 00:03:08,740
+that's the user message.
+
+97
+00:03:08,740 --> 00:03:11,400
+And that's probably going to be the
+
+98
+00:03:11,400 --> 00:03:14,060
+initial input to our agentic service
+
+99
+00:03:14,060 --> 00:03:14,660
+here,
+
+100
+00:03:14,660 --> 00:03:16,240
+some kind of user message.
+
+101
+00:03:16,820 --> 00:03:18,280
+That is not all.
+
+102
+00:03:18,640 --> 00:03:22,820
+There is always a system prompt.
+
+103
+00:03:23,800 --> 00:03:25,560
+In the chatbot applications,
+
+104
+00:03:25,880 --> 00:03:27,760
+you have some capability of
+
+105
+00:03:27,760 --> 00:03:28,920
+customizing that system prompt.
+
+106
+00:03:29,180 --> 00:03:30,360
+There's always system prompt, you're
+
+107
+00:03:30,360 --> 00:03:31,080
+not going to see.
+
+108
+00:03:31,480 --> 00:03:32,740
+But you can always tune that up a
+
+109
+00:03:32,740 --> 00:03:33,340
+little bit.
+
+110
+00:03:33,340 --> 00:03:33,940
+And that's going to tell things
+
+111
+00:03:33,940 --> 00:03:34,540
+like,
+
+112
+00:03:34,540 --> 00:03:36,420
+what's the personality of the LLM?
+
+113
+00:03:36,540 --> 00:03:37,760
+Like, what do you want it to be?
+
+114
+00:03:37,760 --> 00:03:38,960
+Do you want it to be a harsh and
+
+115
+00:03:38,960 --> 00:03:39,720
+demanding coach?
+
+116
+00:03:40,080 --> 00:03:41,260
+Do you want it to be sort of a
+
+117
+00:03:41,260 --> 00:03:43,560
+gentle and nurturing counselor?
+
+118
+00:03:44,060 --> 00:03:45,020
+You know, to kind of tell it what
+
+119
+00:03:45,020 --> 00:03:45,620
+you want.
+
+120
+00:03:45,620 --> 00:03:46,720
+Give it some guardrails.
+
+121
+00:03:47,080 --> 00:03:48,880
+Like, don't give me bomb -making
+
+122
+00:03:48,880 --> 00:03:49,600
+instructions.
+
+123
+00:03:49,860 --> 00:03:52,800
+Or be specific and detailed and cite
+
+124
+00:03:52,800 --> 00:03:54,220
+your sources in your output.
+
+125
+00:03:54,520 --> 00:03:55,800
+These are all sorts of things that
+
+126
+00:03:55,800 --> 00:03:57,060
+might go in a system prompt.
+
+127
+00:03:57,400 --> 00:03:58,920
+So it's just sort of up there.
+
+128
+00:03:59,140 --> 00:04:00,660
+You don't have to say all that stuff
+
+129
+00:04:00,660 --> 00:04:01,520
+over and over again.
+
+130
+00:04:01,600 --> 00:04:02,640
+It's always present.
+
+131
+00:04:03,000 --> 00:04:06,280
+We also have tools that we might
+
+132
+00:04:06,280 --> 00:04:07,320
+have access to.
+
+133
+00:04:07,740 --> 00:04:09,720
+The whole point here is that the
+
+134
+00:04:09,720 --> 00:04:10,960
+agent has access to tools.
+
+135
+00:04:12,160 --> 00:04:13,520
+And in its terminal step,
+
+136
+00:04:13,520 --> 00:04:15,260
+when it's done with its work,
+
+137
+00:04:15,600 --> 00:04:16,400
+that's a tool call.
+
+138
+00:04:16,420 --> 00:04:18,080
+That's causing an effect out in the
+
+139
+00:04:18,080 --> 00:04:18,680
+world.
+
+140
+00:04:18,680 --> 00:04:20,680
+So as a part of this context,
+
+141
+00:04:20,800 --> 00:04:22,160
+this text we're passing into the
+
+142
+00:04:22,160 --> 00:04:22,760
+LLM,
+
+143
+00:04:22,760 --> 00:04:24,160
+we have a description of the tools
+
+144
+00:04:24,160 --> 00:04:25,920
+that are available to us.
+
+145
+00:04:26,700 --> 00:04:29,660
+We also have resources.
+
+146
+00:04:30,040 --> 00:04:34,200
+Now this is a complex topic all
+
+147
+00:04:34,200 --> 00:04:34,960
+on its own.
+
+148
+00:04:34,960 --> 00:04:37,260
+Because the LLM only knows what it
+
+149
+00:04:37,260 --> 00:04:38,060
+reads on the internet,
+
+150
+00:04:38,440 --> 00:04:40,180
+we have to tell it things that are
+
+151
+00:04:40,180 --> 00:04:41,460
+specific to our business.
+
+152
+00:04:41,980 --> 00:04:44,960
+Like, hopefully all your Google Docs
+
+153
+00:04:44,960 --> 00:04:46,300
+are not shared publicly.
+
+154
+00:04:46,520 --> 00:04:49,420
+All of your Wiki articles and
+
+155
+00:04:49,420 --> 00:04:51,500
+internal support tickets and all
+
+156
+00:04:51,500 --> 00:04:52,140
+that kind of stuff.
+
+157
+00:04:52,140 --> 00:04:53,360
+You know, there really is private
+
+158
+00:04:53,360 --> 00:04:54,740
+data inside your enterprise
+
+159
+00:04:54,740 --> 00:04:56,640
+that is never going to be a part of
+
+160
+00:04:56,640 --> 00:04:58,660
+any LLM's training data set.
+
+161
+00:04:59,240 --> 00:05:00,520
+That's the resources.
+
+162
+00:05:00,760 --> 00:05:03,100
+So we have to somehow do a good job
+
+163
+00:05:03,100 --> 00:05:04,520
+of picking out which resources
+
+164
+00:05:05,580 --> 00:05:07,840
+belong inside this context window
+
+165
+00:05:07,840 --> 00:05:10,080
+into the submission to the LLM.
+
+166
+00:05:10,080 --> 00:05:11,060
+Those are things that are going to
+
+167
+00:05:11,060 --> 00:05:12,540
+be relevant to the user message.
+
+168
+00:05:13,220 --> 00:05:14,940
+Enough, but not too much.
+
+169
+00:05:15,260 --> 00:05:16,680
+We'll talk more about that in a bit.
+
+170
+00:05:17,240 --> 00:05:20,840
+You've also got the assistant
+
+171
+00:05:20,840 --> 00:05:21,760
+messages.
+
+172
+00:05:22,980 --> 00:05:24,280
+And assistant is, remember,
+
+173
+00:05:24,300 --> 00:05:25,240
+think of the chat model,
+
+174
+00:05:25,380 --> 00:05:25,980
+right?
+
+175
+00:05:25,980 --> 00:05:26,960
+You type stuff, it says stuff back.
+
+176
+00:05:27,360 --> 00:05:28,940
+It is your assistant.
+
+177
+00:05:29,140 --> 00:05:31,300
+So you give it a user message and
+
+178
+00:05:31,300 --> 00:05:32,420
+then it says something back.
+
+179
+00:05:32,420 --> 00:05:34,700
+That is the assistant message.
+
+180
+00:05:35,040 --> 00:05:36,860
+So as we iterate through,
+
+181
+00:05:37,180 --> 00:05:39,180
+and this is the case when you're
+
+182
+00:05:39,180 --> 00:05:40,660
+using a chat bot application,
+
+183
+00:05:41,020 --> 00:05:44,300
+you have actually a history of user
+
+184
+00:05:44,300 --> 00:05:44,980
+messages
+
+185
+00:05:44,980 --> 00:05:48,620
+and a history of assistant
+
+186
+00:05:48,620 --> 00:05:51,260
+messages that are accumulating
+
+187
+00:05:51,260 --> 00:05:52,860
+inside the context window.
+
+188
+00:05:53,260 --> 00:05:55,780
+So the longer the agent iterates,
+
+189
+00:05:55,860 --> 00:05:58,180
+the more space this stuff takes up.
+
+190
+00:05:58,740 --> 00:06:01,840
+Finally, you've got tool calls
+
+191
+00:06:01,840 --> 00:06:04,120
+and responses.
+
+192
+00:06:04,400 --> 00:06:06,000
+Call and response tools are calls
+
+193
+00:06:06,000 --> 00:06:06,620
+and results.
+
+194
+00:06:07,600 --> 00:06:10,340
+This is, as an agent is doing its
+
+195
+00:06:10,340 --> 00:06:12,300
+work, it may call tools as
+
+196
+00:06:12,300 --> 00:06:13,140
+intermediate steps,
+
+197
+00:06:13,400 --> 00:06:15,280
+not to terminate execution and have
+
+198
+00:06:15,280 --> 00:06:15,920
+its full result,
+
+199
+00:06:16,300 --> 00:06:19,000
+but to go do other things to help
+
+200
+00:06:19,000 --> 00:06:20,120
+build up context
+
+201
+00:06:20,120 --> 00:06:22,860
+to get to where it can be done with
+
+202
+00:06:22,860 --> 00:06:23,460
+its work.
+
+203
+00:06:23,600 --> 00:06:25,380
+So you may have a history of tool
+
+204
+00:06:25,380 --> 00:06:27,980
+calls and responses also as a part
+
+205
+00:06:27,980 --> 00:06:28,580
+of this.
+
+206
+00:06:28,580 --> 00:06:29,720
+These three components,
+
+207
+00:06:30,120 --> 00:06:31,020
+the history of tool calls,
+
+208
+00:06:31,200 --> 00:06:31,800
+user messages,
+
+209
+00:06:31,800 --> 00:06:32,620
+and assistant messages,
+
+210
+00:06:33,000 --> 00:06:35,820
+these are going to grow as execution
+
+211
+00:06:35,820 --> 00:06:36,960
+unfolds.
+
+212
+00:06:37,220 --> 00:06:38,900
+Resources, I'm drawing it as the
+
+213
+00:06:38,900 --> 00:06:40,400
+same size box as all the rest of
+
+214
+00:06:40,400 --> 00:06:41,000
+them.
+
+215
+00:06:41,200 --> 00:06:42,480
+It might not be the same size.
+
+216
+00:06:42,520 --> 00:06:45,140
+That might be a substantial number
+
+217
+00:06:45,140 --> 00:06:47,120
+of tokens there that are taken up by
+
+218
+00:06:47,120 --> 00:06:47,720
+resources.
+
+219
+00:06:48,100 --> 00:06:49,300
+System prompt, that's probably
+
+220
+00:06:49,300 --> 00:06:50,040
+reasonable, right?
+
+221
+00:06:50,040 --> 00:06:51,260
+Tools, that's probably going to be
+
+222
+00:06:51,260 --> 00:06:51,860
+limited.
+
+223
+00:06:51,860 --> 00:06:53,100
+But these other things can be a lot
+
+224
+00:06:53,100 --> 00:06:53,700
+of space.
+
+225
+00:06:53,700 --> 00:06:54,980
+You see, when you start to look at
+
+226
+00:06:54,980 --> 00:06:56,440
+what really goes into context,
+
+227
+00:06:56,440 --> 00:07:00,100
+you begin to understand even the big
+
+228
+00:07:00,100 --> 00:07:01,480
+models with a million tokens,
+
+229
+00:07:01,540 --> 00:07:02,920
+which again is not all of them.
+
+230
+00:07:03,100 --> 00:07:04,960
+That doesn't feel very roomy anymore
+
+231
+00:07:04,960 --> 00:07:05,720
+when you're thinking about
+
+232
+00:07:05,720 --> 00:07:07,380
+building complex, agentic
+
+233
+00:07:07,380 --> 00:07:07,980
+applications.
+
+234
+00:07:08,380 --> 00:07:10,260
+And it gets a little worse than
+
+235
+00:07:10,260 --> 00:07:10,860
+that.
+
+236
+00:07:10,860 --> 00:07:12,620
+It's not always the case that more
+
+237
+00:07:12,620 --> 00:07:13,220
+is better.
+
+238
+00:07:13,460 --> 00:07:14,840
+If you're using a model that has,
+
+239
+00:07:15,020 --> 00:07:16,760
+say, a 100,000 token context window,
+
+240
+00:07:17,100 --> 00:07:18,720
+it's a pretty consistent result at
+
+241
+00:07:18,720 --> 00:07:19,740
+this point that
+
+242
+00:07:19,740 --> 00:07:21,880
+maxing that out doesn't give you
+
+243
+00:07:21,880 --> 00:07:22,680
+your best results.
+
+244
+00:07:23,140 --> 00:07:25,660
+Somewhere in the 60 to 70 % range.
+
+245
+00:07:25,660 --> 00:07:27,720
+Again, let the research unfold on
+
+246
+00:07:27,720 --> 00:07:29,660
+this and let that number stabilize.
+
+247
+00:07:30,040 --> 00:07:31,680
+But kind of somewhere in the 60 to
+
+248
+00:07:31,680 --> 00:07:34,320
+70 % of the capacity of the context
+
+249
+00:07:34,320 --> 00:07:34,920
+window
+
+250
+00:07:34,920 --> 00:07:37,060
+is probably where you get your best
+
+251
+00:07:37,060 --> 00:07:37,660
+results.
+
+252
+00:07:38,040 --> 00:07:39,680
+So more isn't always better.
+
+253
+00:07:40,240 --> 00:07:41,600
+We actually do have to have tools
+
+254
+00:07:41,600 --> 00:07:43,320
+for engineering what goes in here.
+
+255
+00:07:43,920 --> 00:07:45,620
+And let's look at what that set of
+
+256
+00:07:45,620 --> 00:07:46,460
+tools is.
+
+257
+00:07:46,540 --> 00:07:48,360
+There's four things I want to cover.
+
+258
+00:07:48,560 --> 00:07:52,740
+First, there is the system prompt
+
+259
+00:07:52,740 --> 00:07:53,560
+itself.
+
+260
+00:07:53,560 --> 00:07:55,940
+Now, writing a good prompt is
+
+261
+00:07:55,940 --> 00:07:56,540
+important.
+
+262
+00:07:56,540 --> 00:07:57,520
+We need to get this right.
+
+263
+00:07:57,520 --> 00:07:59,260
+This is a thing that is kind of a
+
+264
+00:07:59,260 --> 00:08:00,560
+one -off for our agent.
+
+265
+00:08:00,940 --> 00:08:02,160
+And you want to nail it.
+
+266
+00:08:02,540 --> 00:08:03,840
+And there is a little bit of a
+
+267
+00:08:03,840 --> 00:08:05,020
+Goldilocks thing going on here.
+
+268
+00:08:05,400 --> 00:08:08,260
+We could, in this ditch over here,
+
+269
+00:08:08,640 --> 00:08:11,060
+be too vague.
+
+270
+00:08:11,160 --> 00:08:13,360
+We could say, I don't know,
+
+271
+00:08:13,660 --> 00:08:14,740
+do a good job
+
+272
+00:08:15,520 --> 00:08:17,580
+and go get all the stuff you need to
+
+273
+00:08:17,580 --> 00:08:18,260
+give me a good answer.
+
+274
+00:08:18,540 --> 00:08:19,600
+That's kind of stupid,
+
+275
+00:08:19,720 --> 00:08:20,320
+right?
+
+276
+00:08:20,320 --> 00:08:20,920
+That's not really going to work.
+
+277
+00:08:20,920 --> 00:08:24,500
+Over here, we could be too
+
+278
+00:08:24,500 --> 00:08:25,380
+prescriptive.
+
+279
+00:08:26,720 --> 00:08:27,940
+And for example, if you find
+
+280
+00:08:27,940 --> 00:08:29,300
+yourself in your system prompt
+
+281
+00:08:30,080 --> 00:08:33,600
+defining kind of if -then logic and
+
+282
+00:08:33,600 --> 00:08:35,220
+saying make sure you do this
+
+283
+00:08:35,220 --> 00:08:37,740
+and if this happens, you want to let
+
+284
+00:08:37,740 --> 00:08:38,600
+the LLM figure that out.
+
+285
+00:08:38,600 --> 00:08:39,780
+That's what it's going to be good
+
+286
+00:08:39,780 --> 00:08:40,380
+at.
+
+287
+00:08:40,380 --> 00:08:40,980
+So don't do that.
+
+288
+00:08:40,980 --> 00:08:41,580
+Don't do that.
+
+289
+00:08:41,580 --> 00:08:42,900
+You want to be in the middle where
+
+290
+00:08:42,900 --> 00:08:44,240
+you define outcomes,
+
+291
+00:08:44,320 --> 00:08:46,460
+you define maybe broad approaches to
+
+292
+00:08:46,460 --> 00:08:47,060
+things.
+
+293
+00:08:47,140 --> 00:08:49,140
+And I realize this is itself
+
+294
+00:08:49,140 --> 00:08:50,220
+somewhat vague.
+
+295
+00:08:50,220 --> 00:08:52,220
+But it's a balance that you're going
+
+296
+00:08:52,220 --> 00:08:53,160
+to have to learn how to strike.
+
+297
+00:08:53,420 --> 00:08:55,060
+And that is sort of the art of
+
+298
+00:08:55,060 --> 00:08:55,660
+prompt engineering
+
+299
+00:08:55,660 --> 00:08:56,860
+is making sure that you're not too
+
+300
+00:08:56,860 --> 00:08:57,820
+prescriptive, not too vague.
+
+301
+00:08:58,020 --> 00:08:59,300
+So get the system prompt right.
+
+302
+00:08:59,500 --> 00:09:00,160
+Engineer that thing.
+
+303
+00:09:00,380 --> 00:09:01,480
+That's something you actually have
+
+304
+00:09:01,480 --> 00:09:02,160
+to pay attention to.
+
+305
+00:09:02,760 --> 00:09:03,360
+What's next?
+
+306
+00:09:03,400 --> 00:09:04,000
+Tools.
+
+307
+00:09:05,440 --> 00:09:06,440
+Pretty simple here.
+
+308
+00:09:06,660 --> 00:09:08,220
+You just want to make sure your tool
+
+309
+00:09:08,220 --> 00:09:11,280
+descriptions are specific and
+
+310
+00:09:11,280 --> 00:09:11,880
+detailed.
+
+311
+00:09:11,940 --> 00:09:13,660
+You never want them to be too long.
+
+312
+00:09:13,980 --> 00:09:15,200
+More is not always better.
+
+313
+00:09:15,400 --> 00:09:17,420
+But you want them to really nail
+
+314
+00:09:17,420 --> 00:09:18,960
+down what does this tool do.
+
+315
+00:09:18,960 --> 00:09:20,820
+You want the LLM to be able to,
+
+316
+00:09:20,820 --> 00:09:22,600
+as it were, understand what that
+
+317
+00:09:22,600 --> 00:09:23,220
+thing is for.
+
+318
+00:09:23,620 --> 00:09:25,820
+So you want to be specific.
+
+319
+00:09:26,540 --> 00:09:29,020
+And you want to include a schema.
+
+320
+00:09:29,320 --> 00:09:30,960
+We have to know what goes into that
+
+321
+00:09:30,960 --> 00:09:32,580
+tool, what comes out of that tool.
+
+322
+00:09:32,600 --> 00:09:34,800
+That's important because the LLM
+
+323
+00:09:34,800 --> 00:09:37,620
+will need to know that it has all
+
+324
+00:09:37,620 --> 00:09:38,360
+the right inputs
+
+325
+00:09:38,360 --> 00:09:40,380
+to be able to conclude that it can
+
+326
+00:09:40,380 --> 00:09:41,020
+call the tool.
+
+327
+00:09:41,220 --> 00:09:42,840
+And it's going to need to know what
+
+328
+00:09:42,840 --> 00:09:43,940
+it gets out of the tool
+
+329
+00:09:43,940 --> 00:09:47,020
+because that may be an input to a
+
+330
+00:09:47,020 --> 00:09:49,260
+next step of, say, a resource it
+
+331
+00:09:49,260 --> 00:09:49,920
+needs to go get
+
+332
+00:09:49,920 --> 00:09:51,000
+or something like that.
+
+333
+00:09:51,520 --> 00:09:53,560
+So full schemas, specific,
+
+334
+00:09:53,920 --> 00:09:55,680
+precise tool descriptions.
+
+335
+00:09:55,960 --> 00:09:56,840
+OK, what's next?
+
+336
+00:09:56,880 --> 00:09:59,500
+We've got data retrieval.
+
+337
+00:09:59,960 --> 00:10:03,680
+And this really goes right here to
+
+338
+00:10:03,680 --> 00:10:04,280
+resources.
+
+339
+00:10:04,360 --> 00:10:05,660
+This is what we're talking about.
+
+340
+00:10:06,140 --> 00:10:08,560
+Now, the initial approach when folks
+
+341
+00:10:08,560 --> 00:10:10,740
+just started trying to use LLMs
+
+342
+00:10:10,740 --> 00:10:12,740
+in an enterprise context was the
+
+343
+00:10:12,740 --> 00:10:14,360
+Retrieval Augmented Generation
+
+344
+00:10:14,360 --> 00:10:15,240
+Approach, or RAG,
+
+345
+00:10:15,660 --> 00:10:17,980
+where we've got a vector database.
+
+346
+00:10:18,260 --> 00:10:20,340
+We index any document we think we
+
+347
+00:10:20,340 --> 00:10:23,060
+might need to have involved in a
+
+348
+00:10:23,060 --> 00:10:23,680
+lookup.
+
+349
+00:10:24,520 --> 00:10:26,340
+And now when I've got a user
+
+350
+00:10:26,340 --> 00:10:28,340
+message, I'll take that user message
+
+351
+00:10:28,340 --> 00:10:30,620
+and use it in the vector database to
+
+352
+00:10:30,620 --> 00:10:32,620
+go retrieve any documents I think
+
+353
+00:10:32,620 --> 00:10:33,380
+are related,
+
+354
+00:10:34,060 --> 00:10:36,000
+put them into the context,
+
+355
+00:10:36,760 --> 00:10:38,160
+and away I go.
+
+356
+00:10:38,160 --> 00:10:40,680
+And that's good for an information
+
+357
+00:10:40,680 --> 00:10:42,060
+search, chatbot kind of thing.
+
+358
+00:10:42,060 --> 00:10:42,680
+It worked.
+
+359
+00:10:43,100 --> 00:10:44,760
+And that may well still be a part of
+
+360
+00:10:44,760 --> 00:10:45,360
+your stack.
+
+361
+00:10:45,360 --> 00:10:46,960
+And I'm not here to tell you that
+
+362
+00:10:46,960 --> 00:10:47,700
+you're old fashioned
+
+363
+00:10:47,700 --> 00:10:48,980
+or behind the times or anything.
+
+364
+00:10:49,540 --> 00:10:52,120
+But RAG by itself is not very
+
+365
+00:10:52,120 --> 00:10:54,500
+precise context engineering on a go
+
+366
+00:10:54,500 --> 00:10:55,100
+-forward basis.
+
+367
+00:10:55,200 --> 00:10:57,600
+There's more we can do to
+
+368
+00:10:57,600 --> 00:10:59,940
+economically use the context window
+
+369
+00:10:59,940 --> 00:11:00,540
+that we've got.
+
+370
+00:11:00,760 --> 00:11:04,820
+So now we've got MCP, the Model
+
+371
+00:11:04,820 --> 00:11:05,720
+Context Protocol,
+
+372
+00:11:05,720 --> 00:11:09,340
+and its disclosure of resources that
+
+373
+00:11:09,340 --> 00:11:10,380
+can be queried.
+
+374
+00:11:11,080 --> 00:11:13,260
+Those resources, like tools,
+
+375
+00:11:13,440 --> 00:11:15,440
+are described with text
+
+376
+00:11:15,440 --> 00:11:17,600
+and maybe with parameters that can
+
+377
+00:11:17,600 --> 00:11:18,700
+be involved in a query
+
+378
+00:11:18,700 --> 00:11:20,560
+if they're queryable resources.
+
+379
+00:11:21,340 --> 00:11:24,580
+And so those descriptions can go
+
+380
+00:11:24,580 --> 00:11:27,260
+into the context window of one call.
+
+381
+00:11:27,880 --> 00:11:29,060
+And a subsequent call,
+
+382
+00:11:29,180 --> 00:11:31,360
+if you ask the LLM, can say,
+
+383
+00:11:31,440 --> 00:11:33,100
+hey, you know what, I need you to go
+
+384
+00:11:33,100 --> 00:11:34,280
+query this resource.
+
+385
+00:11:34,280 --> 00:11:36,440
+That can even be, there's this
+
+386
+00:11:36,440 --> 00:11:37,160
+little arrow here
+
+387
+00:11:37,160 --> 00:11:39,140
+where this agent is making multiple
+
+388
+00:11:39,140 --> 00:11:39,840
+iterative calls.
+
+389
+00:11:40,300 --> 00:11:43,500
+One of those calls could be simply
+
+390
+00:11:43,500 --> 00:11:44,280
+to ask,
+
+391
+00:11:44,380 --> 00:11:46,140
+based on this user message,
+
+392
+00:11:46,620 --> 00:11:48,740
+which resources should I go
+
+393
+00:11:48,740 --> 00:11:49,340
+retrieve?
+
+394
+00:11:50,180 --> 00:11:52,060
+And the LLM will tell you,
+
+395
+00:11:52,060 --> 00:11:53,900
+based on its conclusion,
+
+396
+00:11:54,340 --> 00:11:56,020
+you go get those resources.
+
+397
+00:11:56,320 --> 00:11:57,600
+Now you've got a big string.
+
+398
+00:11:57,820 --> 00:11:59,760
+You can dump that into the resources
+
+399
+00:11:59,760 --> 00:12:00,360
+section
+
+400
+00:12:00,360 --> 00:12:02,760
+of your next context window for your
+
+401
+00:12:02,760 --> 00:12:03,360
+next call
+
+402
+00:12:03,360 --> 00:12:05,040
+as the agent moves along.
+
+403
+00:12:05,440 --> 00:12:06,980
+There are other things we can do to
+
+404
+00:12:06,980 --> 00:12:08,520
+make economical use of this,
+
+405
+00:12:08,740 --> 00:12:11,900
+like say, if you've got a user
+
+406
+00:12:11,900 --> 00:12:13,740
+record that could be kind of long,
+
+407
+00:12:14,100 --> 00:12:15,720
+maybe just give it a user ID.
+
+408
+00:12:16,220 --> 00:12:18,200
+And if there's a resource or a tool
+
+409
+00:12:18,200 --> 00:12:18,800
+or something
+
+410
+00:12:18,800 --> 00:12:20,940
+that clearly can turn that user ID
+
+411
+00:12:20,940 --> 00:12:22,180
+into a full record
+
+412
+00:12:22,180 --> 00:12:24,340
+on a subsequent call, you can get
+
+413
+00:12:24,340 --> 00:12:25,740
+the model to ask you.
+
+414
+00:12:26,040 --> 00:12:28,260
+You can prompt it to ask you if it
+
+415
+00:12:28,260 --> 00:12:30,340
+needs more detail on that user,
+
+416
+00:12:30,460 --> 00:12:31,960
+call this tool or ask for this
+
+417
+00:12:31,960 --> 00:12:32,560
+resource.
+
+418
+00:12:32,560 --> 00:12:34,540
+So there are all kinds of things we
+
+419
+00:12:34,540 --> 00:12:35,220
+can do here
+
+420
+00:12:35,220 --> 00:12:39,180
+to just be economical with our
+
+421
+00:12:39,180 --> 00:12:40,300
+data that we have in here.
+
+422
+00:12:40,300 --> 00:12:41,660
+Rather than anything that might
+
+423
+00:12:41,660 --> 00:12:42,740
+sound like it's related,
+
+424
+00:12:43,040 --> 00:12:44,500
+we can just sort of describe what's
+
+425
+00:12:44,500 --> 00:12:45,100
+available
+
+426
+00:12:45,100 --> 00:12:48,180
+and use prompting to have the model
+
+427
+00:12:48,180 --> 00:12:49,660
+tell us
+
+428
+00:12:49,660 --> 00:12:51,540
+what we need to go get and include.
+
+429
+00:12:52,120 --> 00:12:55,740
+Finally, we've got the long horizon
+
+430
+00:12:55,740 --> 00:12:56,400
+thinking.
+
+431
+00:12:56,560 --> 00:12:58,520
+And this is for an agent that we
+
+432
+00:12:58,520 --> 00:12:59,120
+know
+
+433
+00:12:59,120 --> 00:13:02,300
+is going to be really iterating for
+
+434
+00:13:02,300 --> 00:13:02,960
+a long time.
+
+435
+00:13:03,020 --> 00:13:04,580
+We suspect that it might need to
+
+436
+00:13:04,580 --> 00:13:05,540
+make a bunch of calls.
+
+437
+00:13:06,960 --> 00:13:09,740
+And these things that grow as the
+
+438
+00:13:09,740 --> 00:13:10,940
+agent's runtime increases,
+
+439
+00:13:11,120 --> 00:13:12,260
+those are going to be our enemy.
+
+440
+00:13:12,620 --> 00:13:13,900
+And so there are some things that we
+
+441
+00:13:13,900 --> 00:13:14,500
+can do
+
+442
+00:13:14,500 --> 00:13:16,560
+to help keep those small,
+
+443
+00:13:16,640 --> 00:13:17,780
+or at least within the context
+
+444
+00:13:17,780 --> 00:13:19,240
+window of any given call.
+
+445
+00:13:19,740 --> 00:13:21,140
+First is compaction.
+
+446
+00:13:21,840 --> 00:13:23,700
+One thing LLMs are incredible at is
+
+447
+00:13:23,700 --> 00:13:24,620
+summarizing text.
+
+448
+00:13:24,880 --> 00:13:26,520
+If I've got some resource I've
+
+449
+00:13:26,520 --> 00:13:28,060
+retrieved on a previous call
+
+450
+00:13:28,060 --> 00:13:31,260
+and it's, you know, 50,000 tokens or
+
+451
+00:13:31,260 --> 00:13:31,860
+something,
+
+452
+00:13:31,860 --> 00:13:32,840
+a really big thing, you know,
+
+453
+00:13:33,000 --> 00:13:35,300
+I don't want to have all of that in
+
+454
+00:13:35,300 --> 00:13:36,060
+my next call.
+
+455
+00:13:36,100 --> 00:13:39,060
+So I could use a single LLM call
+
+456
+00:13:39,060 --> 00:13:40,480
+with my own prompt
+
+457
+00:13:40,480 --> 00:13:43,960
+to say, please summarize this in 500
+
+458
+00:13:43,960 --> 00:13:44,560
+words.
+
+459
+00:13:44,660 --> 00:13:46,200
+And now I've got that compacted
+
+460
+00:13:46,200 --> 00:13:46,800
+summary
+
+461
+00:13:46,800 --> 00:13:47,720
+that goes in as a resource.
+
+462
+00:13:47,960 --> 00:13:49,060
+That can often give you pretty good
+
+463
+00:13:49,060 --> 00:13:49,660
+results.
+
+464
+00:13:51,180 --> 00:13:52,880
+Next is memory.
+
+465
+00:13:53,900 --> 00:13:55,600
+Memory is literally just,
+
+466
+00:13:55,600 --> 00:13:56,800
+it's going to be a little key value
+
+467
+00:13:56,800 --> 00:13:57,400
+store
+
+468
+00:13:57,400 --> 00:13:58,840
+hanging off to the side here.
+
+469
+00:14:00,720 --> 00:14:03,640
+And that will let me at one point in
+
+470
+00:14:03,640 --> 00:14:04,840
+my agent's execution
+
+471
+00:14:04,840 --> 00:14:07,460
+take some resource, some
+
+472
+00:14:07,460 --> 00:14:08,460
+intermediate result,
+
+473
+00:14:08,580 --> 00:14:09,740
+maybe an assistant message
+
+474
+00:14:09,740 --> 00:14:11,380
+that itself could be somewhat
+
+475
+00:14:11,380 --> 00:14:11,980
+lengthy.
+
+476
+00:14:11,980 --> 00:14:13,240
+Maybe it's some kind of structured
+
+477
+00:14:13,240 --> 00:14:13,840
+data.
+
+478
+00:14:13,840 --> 00:14:15,600
+Maybe it's like a bunch of JSON or
+
+479
+00:14:15,600 --> 00:14:16,200
+CSV
+
+480
+00:14:16,200 --> 00:14:17,780
+or who knows what's going on
+
+481
+00:14:17,780 --> 00:14:19,540
+with this crazy agent you're
+
+482
+00:14:19,540 --> 00:14:20,140
+writing.
+
+483
+00:14:20,300 --> 00:14:23,900
+And we can put that in here under a
+
+484
+00:14:23,900 --> 00:14:24,520
+certain key
+
+485
+00:14:24,520 --> 00:14:26,460
+and on a subsequent step when we
+
+486
+00:14:26,460 --> 00:14:27,060
+need it,
+
+487
+00:14:27,060 --> 00:14:28,480
+retrieve it out of that memory.
+
+488
+00:14:29,160 --> 00:14:31,280
+So it's conceptually like what
+
+489
+00:14:31,280 --> 00:14:31,880
+happens
+
+490
+00:14:31,880 --> 00:14:33,680
+with retrieving resources from an
+
+491
+00:14:33,680 --> 00:14:34,380
+MCP server,
+
+492
+00:14:34,700 --> 00:14:36,980
+but it really is memory that's local
+
+493
+00:14:36,980 --> 00:14:37,920
+to our agent
+
+494
+00:14:37,920 --> 00:14:40,460
+and that we get to use to store that
+
+495
+00:14:40,460 --> 00:14:41,060
+stuff.
+
+496
+00:14:41,060 --> 00:14:42,460
+You don't have much space here.
+
+497
+00:14:42,680 --> 00:14:44,300
+You might need to put certain things
+
+498
+00:14:44,300 --> 00:14:45,100
+over here
+
+499
+00:14:45,100 --> 00:14:46,940
+where this space is relatively
+
+500
+00:14:46,940 --> 00:14:47,540
+cheap.
+
+501
+00:14:48,380 --> 00:14:51,000
+Finally, we have, I'm just going to
+
+502
+00:14:51,000 --> 00:14:51,600
+say,
+
+503
+00:14:52,280 --> 00:14:53,640
+additional agents.
+
+504
+00:14:55,100 --> 00:14:55,700
+Composition.
+
+505
+00:14:55,920 --> 00:14:57,880
+I can take my one big agent,
+
+506
+00:14:57,980 --> 00:14:59,680
+and I think this is a thing that is
+
+507
+00:14:59,680 --> 00:15:00,520
+just likely to happen
+
+508
+00:15:00,520 --> 00:15:01,600
+as you're building an agentic
+
+509
+00:15:01,600 --> 00:15:02,200
+application.
+
+510
+00:15:02,680 --> 00:15:04,000
+Tell me if this has ever happened
+
+511
+00:15:04,000 --> 00:15:05,320
+when you're building a microservice
+
+512
+00:15:05,320 --> 00:15:06,340
+and it starts to get a little
+
+513
+00:15:06,340 --> 00:15:06,940
+complex
+
+514
+00:15:06,940 --> 00:15:08,700
+and you realize it's a little bit of
+
+515
+00:15:08,700 --> 00:15:09,300
+its own
+
+516
+00:15:09,300 --> 00:15:09,900
+little mini monolith
+
+517
+00:15:09,900 --> 00:15:10,820
+and you have to split it into
+
+518
+00:15:10,820 --> 00:15:11,420
+pieces.
+
+519
+00:15:11,540 --> 00:15:12,840
+This is what it's like to build
+
+520
+00:15:12,840 --> 00:15:13,440
+software.
+
+521
+00:15:13,440 --> 00:15:14,340
+When you're writing an agent,
+
+522
+00:15:14,420 --> 00:15:15,840
+it's probably going to end up
+
+523
+00:15:15,840 --> 00:15:16,580
+decomposing
+
+524
+00:15:16,580 --> 00:15:17,720
+into multiple agents.
+
+525
+00:15:18,140 --> 00:15:20,360
+Let's say one of the resources
+
+526
+00:15:20,360 --> 00:15:21,060
+you've got
+
+527
+00:15:21,060 --> 00:15:23,440
+is your documentation site
+
+528
+00:15:23,440 --> 00:15:25,420
+or your wiki or something like that,
+
+529
+00:15:25,420 --> 00:15:26,960
+and you've got some kind of complex
+
+530
+00:15:26,960 --> 00:15:27,660
+search logic
+
+531
+00:15:27,660 --> 00:15:28,840
+that's doing a lot of iteration.
+
+532
+00:15:29,020 --> 00:15:30,620
+Man, that's just its own agent.
+
+533
+00:15:30,900 --> 00:15:31,780
+So split that off,
+
+534
+00:15:31,980 --> 00:15:33,560
+and now this agent can ask that
+
+535
+00:15:33,560 --> 00:15:34,160
+agent,
+
+536
+00:15:34,340 --> 00:15:36,080
+I've got this text.
+
+537
+00:15:36,160 --> 00:15:38,020
+I'd like to know what documents
+
+538
+00:15:38,020 --> 00:15:40,000
+from your system look relevant.
+
+539
+00:15:40,420 --> 00:15:42,100
+And now rather than just a text
+
+540
+00:15:42,100 --> 00:15:42,700
+search
+
+541
+00:15:42,700 --> 00:15:43,760
+on that document store,
+
+542
+00:15:44,000 --> 00:15:44,860
+you can have an agent
+
+543
+00:15:44,860 --> 00:15:46,260
+that does some kind of thoughtful
+
+544
+00:15:46,260 --> 00:15:47,680
+sorting through things and
+
+545
+00:15:47,680 --> 00:15:48,360
+prioritizing
+
+546
+00:15:48,360 --> 00:15:50,340
+and back and forth with an LLM
+
+547
+00:15:50,340 --> 00:15:52,160
+to do a good job of giving you
+
+548
+00:15:52,160 --> 00:15:53,960
+some concise summary of what comes
+
+549
+00:15:53,960 --> 00:15:54,640
+from that store.
+
+550
+00:15:55,000 --> 00:15:57,260
+So be ready to take little chunks
+
+551
+00:15:57,260 --> 00:15:59,320
+of agentic functionality in your
+
+552
+00:15:59,320 --> 00:15:59,920
+agent
+
+553
+00:15:59,920 --> 00:16:00,720
+that really could live on their own
+
+554
+00:16:00,720 --> 00:16:02,380
+and make them their own thing.
+
+555
+00:16:03,060 --> 00:16:04,000
+So there you go.
+
+556
+00:16:04,000 --> 00:16:05,360
+We've got a schema for context,
+
+557
+00:16:05,580 --> 00:16:07,500
+the user message, system prompt,
+
+558
+00:16:07,940 --> 00:16:09,360
+whatever resources we can cobble
+
+559
+00:16:09,360 --> 00:16:09,960
+together,
+
+560
+00:16:10,440 --> 00:16:11,320
+listing of the tools,
+
+561
+00:16:11,580 --> 00:16:13,420
+the assistant messages we get
+
+562
+00:16:13,420 --> 00:16:14,780
+from our back and forth with the
+
+563
+00:16:14,780 --> 00:16:15,380
+agent,
+
+564
+00:16:15,380 --> 00:16:17,160
+and of course a record of the tools
+
+565
+00:16:17,160 --> 00:16:17,920
+that we've called.
+
+566
+00:16:18,480 --> 00:16:19,180
+That's a lot.
+
+567
+00:16:19,240 --> 00:16:20,160
+That's all got to fit
+
+568
+00:16:20,160 --> 00:16:21,420
+into the LLM's context window,
+
+569
+00:16:21,420 --> 00:16:23,080
+and those aren't getting a lot
+
+570
+00:16:23,080 --> 00:16:23,680
+bigger.
+
+571
+00:16:24,320 --> 00:16:25,780
+So we have these tools,
+
+572
+00:16:26,120 --> 00:16:27,380
+engineer your system prompt,
+
+573
+00:16:27,700 --> 00:16:28,860
+describe your tools well,
+
+574
+00:16:29,400 --> 00:16:31,180
+retrieve data intelligently,
+
+575
+00:16:31,380 --> 00:16:33,800
+use this resources section wisely,
+
+576
+00:16:34,340 --> 00:16:36,640
+and for long horizon iterative
+
+577
+00:16:36,640 --> 00:16:37,240
+execution,
+
+578
+00:16:37,380 --> 00:16:39,120
+you've got these tools available to
+
+579
+00:16:39,120 --> 00:16:39,720
+you.
+
+580
+00:16:39,860 --> 00:16:42,140
+Context engineering is the present
+
+581
+00:16:42,140 --> 00:16:44,180
+and future of agentic AI
+
+582
+00:16:44,180 --> 00:16:44,780
+development.
+
+583
+00:16:44,940 --> 00:16:46,600
+I encourage you to put these tools
+
+584
+00:16:46,600 --> 00:16:47,300
+into practice.
+
+585
+00:16:47,400 --> 00:16:48,420
+And as always,
+
+586
+00:16:48,720 --> 00:16:49,920
+you're building something with this,
+
+587
+00:16:49,920 --> 00:16:51,200
+let me know in the comments.
+
+588
+00:16:51,700 --> 00:16:52,880
+And if this is work you're doing,
+
+589
+00:16:53,080 --> 00:16:54,480
+especially if you work with
+
+590
+00:16:54,480 --> 00:16:55,080
+streaming data,
+
+591
+00:16:55,400 --> 00:16:56,400
+the company I work for,
+
+592
+00:16:56,600 --> 00:16:57,960
+Confluent, has got some really cool
+
+593
+00:16:57,960 --> 00:16:58,560
+stuff
+
+594
+00:16:58,560 --> 00:16:59,240
+to help with this.
+
+595
+00:16:59,580 --> 00:17:00,620
+We've got a new thing called
+
+596
+00:17:00,620 --> 00:17:01,560
+Confluent Intelligence
+
+597
+00:17:01,560 --> 00:17:03,260
+that helps solve some of these
+
+598
+00:17:03,260 --> 00:17:03,860
+problems,
+
+599
+00:17:04,400 --> 00:17:05,540
+particularly for agents
+
+600
+00:17:05,540 --> 00:17:07,380
+that work with streaming data.
+
+601
+00:17:07,480 --> 00:17:08,140
+So if that's interesting,
+
+602
+00:17:08,460 --> 00:17:09,060
+check it out.
+
+603
+00:17:09,200 --> 00:17:10,600
+There's a link and a promo code
+
+604
+00:17:10,600 --> 00:17:11,300
+in the description
+
+605
+00:17:11,300 --> 00:17:12,700
+that'll let you get started
+
+606
+00:17:12,700 --> 00:17:14,060
+trying that for free.
+
+607
+00:17:14,300 --> 00:17:14,900
+Check it out.
+
+608
+00:17:14,960 --> 00:17:15,560
+Thanks.
+

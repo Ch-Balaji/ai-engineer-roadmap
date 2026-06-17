@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>The 5-Part Prompt Engineering Framework</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #f7f1e8;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        color: #2a2a2a;
+      }
+
+      #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #f7f1e8;
+      }
+
+      .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 100;
+        opacity: 0.055;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-size: 180px 180px;
+        mix-blend-mode: multiply;
+      }
+
+      .camera {
+        position: absolute;
+        inset: 0;
+        transform-origin: 58% 58%;
+      }
+
+      .scene-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 120px 100px;
+      }
+
+      #main-title {
+        font-size: 88px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+        text-align: center;
+        color: #1d1d1f;
+        max-width: 1400px;
+        margin-top: 280px;
+      }
+
+      .cards-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 380px;
+        height: 340px;
+        display: flex;
+        justify-content: center;
+        overflow: visible;
+      }
+
+      .cards-track {
+        position: relative;
+        width: 1340px;
+        height: 310px;
+      }
+
+      .card {
+        position: absolute;
+        top: 0;
+        width: 210px;
+        height: 294px;
+        padding: 22px 16px 20px;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 252, 247, 0.94);
+        border: 1px solid rgba(42, 42, 42, 0.1);
+        border-radius: 16px;
+        box-shadow:
+          0 1px 2px rgba(42, 42, 42, 0.06),
+          0 8px 24px rgba(42, 42, 42, 0.08),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+        transform-origin: center center;
+        transform-style: preserve-3d;
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border: 1px solid rgba(42, 42, 42, 0.05);
+        border-radius: 12px;
+        pointer-events: none;
+      }
+
+      .card-corner {
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: #1d1d1f;
+        line-height: 1;
+      }
+
+      .card-body {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 4px 2px 0;
+      }
+
+      .card-label {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        line-height: 1.35;
+        color: #2a2a2a;
+        text-transform: uppercase;
+        max-width: 100%;
+      }
+
+      #card-1 {
+        left: 0;
+      }
+      #card-2 {
+        left: 266px;
+      }
+      #card-3 {
+        left: 532px;
+      }
+      #card-4 {
+        left: 798px;
+      }
+      #card-5 {
+        left: 1064px;
+        border: 1.5px solid rgba(42, 42, 42, 0.16);
+        box-shadow:
+          0 2px 6px rgba(42, 42, 42, 0.08),
+          0 14px 36px rgba(42, 42, 42, 0.12),
+          inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+        background: rgba(255, 250, 240, 0.97);
+      }
+
+      #card-5 .card-body {
+        position: relative;
+        min-height: 120px;
+      }
+
+      #card-5-secret,
+      #card-5-mystery-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+      }
+
+      .card-secret {
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        color: #6b6b6b;
+        filter: blur(5px);
+        text-transform: uppercase;
+      }
+
+      .card-mystery {
+        font-size: 80px;
+        font-weight: 800;
+        color: #1d1d1f;
+        line-height: 1;
+        text-shadow:
+          0 0 20px rgba(29, 29, 31, 0.14),
+          0 0 40px rgba(29, 29, 31, 0.07);
+      }
+
+      .card-mystery-glow {
+        position: absolute;
+        inset: -8px;
+        border-radius: 20px;
+        box-shadow: 0 0 32px rgba(29, 29, 31, 0.14);
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      #reveal-line {
+        position: absolute;
+        left: 50%;
+        bottom: 140px;
+        transform: translateX(-50%);
+        font-size: 36px;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: #3a3a3c;
+        text-align: center;
+        white-space: nowrap;
+        opacity: 0;
+      }
+
+      .vignette {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 90% 80% at 50% 50%,
+          transparent 55%,
+          rgba(42, 42, 42, 0.04) 100%
+        );
+        z-index: 50;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="prompt-framework"
+      data-start="0"
+      data-duration="25"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div class="grain" data-layout-ignore></div>
+      <div class="vignette" data-layout-ignore></div>
+
+      <div class="camera" id="camera">
+        <div class="scene-content">
+          <h1 id="main-title">The 5-Part Prompt Framework</h1>
+
+          <div class="cards-wrap" id="cards-wrap">
+            <div class="cards-track" id="cards-track">
+              <div class="card" id="card-1">
+                <span class="card-corner">01</span>
+                <div class="card-body">
+                  <span class="card-label">Skeleton</span>
+                </div>
+              </div>
+              <div class="card" id="card-2">
+                <span class="card-corner">02</span>
+                <div class="card-body">
+                  <span class="card-label">Constraints</span>
+                </div>
+              </div>
+              <div class="card" id="card-3">
+                <span class="card-corner">03</span>
+                <div class="card-body">
+                  <span class="card-label">Few-Shot Examples</span>
+                </div>
+              </div>
+              <div class="card" id="card-4">
+                <span class="card-corner">04</span>
+                <div class="card-body">
+                  <span class="card-label">Decomposition</span>
+                </div>
+              </div>
+              <div class="card" id="card-5">
+                <div class="card-mystery-glow" id="card-5-glow"></div>
+                <span class="card-corner">05</span>
+                <div class="card-body">
+                  <span class="card-secret" id="card-5-secret">?????</span>
+                  <span id="card-5-mystery-wrap">
+                    <span class="card-mystery" id="card-5-mystery">?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p id="reveal-line">I'll reveal this at the end…</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+
+      const tl = gsap.timeline({ paused: true });
+
+      const title = "#main-title";
+      const camera = "#camera";
+      const track = "#cards-track";
+      const cards = ["#card-1", "#card-2", "#card-3", "#card-4", "#card-5"];
+      const CARD_W = 210;
+      const GAP = 56;
+      const STEP = CARD_W + GAP;
+      const TRACK_W = 1340;
+      const slideIn = -400;
+
+      const centerTrack = (count) => (TRACK_W - (count * CARD_W + (count - 1) * GAP)) / 2;
+
+      // Initial states — hero frame built first, entrances via fromTo
+      gsap.set(title, { opacity: 0, scale: 0.96 });
+      gsap.set(track, { x: centerTrack(1) });
+      gsap.set(cards, { x: slideIn, opacity: 0 });
+      gsap.set("#card-5-secret", { opacity: 0 });
+      gsap.set("#card-5-mystery-wrap", { opacity: 0 });
+      gsap.set("#card-5", {
+        filter: "blur(0px)",
+        rotationY: 0,
+        scale: 1,
+        transformPerspective: 1200,
+      });
+      gsap.set("#card-5-glow", { opacity: 0 });
+      gsap.set("#reveal-line", { opacity: 0, y: 16 });
+
+      const revealCard = (selector, time, ease) => {
+        tl.fromTo(
+          selector,
+          { x: slideIn, opacity: 0 },
+          { x: 0, opacity: 1, duration: 0.75, ease },
+          time,
+        );
+      };
+
+      const recenterRow = (count, time) => {
+        tl.to(track, { x: centerTrack(count), duration: 0.55, ease: "power2.out" }, time);
+      };
+
+      // 00:00–00:02 — Title fade in + subtle zoom
+      tl.fromTo(
+        title,
+        { opacity: 0, scale: 0.96 },
+        { opacity: 1, scale: 1, duration: 1.1, ease: "power2.out" },
+        0.2,
+      );
+      tl.fromTo(camera, { scale: 1 }, { scale: 1.035, duration: 2, ease: "sine.inOut" }, 0);
+
+      // 00:02 — Title moves up for cards
+      tl.to(
+        title,
+        { marginTop: 40, fontSize: 58, duration: 0.85, ease: "power3.inOut" },
+        2,
+      );
+      tl.to(camera, { scale: 1.02, duration: 0.85, ease: "power2.inOut" }, 2);
+
+      // 00:02–00:04 — Card 1 slides in from left
+      revealCard("#card-1", 2.15, "back.out(1.4)");
+      recenterRow(1, 2.15);
+
+      // 00:04–00:06 — Card 2 + row recenters
+      revealCard("#card-2", 4.1, "back.out(1.3)");
+      recenterRow(2, 4.1);
+
+      // 00:06–00:08 — Card 3
+      revealCard("#card-3", 6.1, "back.out(1.2)");
+      recenterRow(3, 6.1);
+
+      // 00:08–00:10 — Card 4 + gentle camera pan right
+      revealCard("#card-4", 8.1, "back.out(1.2)");
+      recenterRow(4, 8.1);
+      tl.to(camera, { x: 36, duration: 1.8, ease: "sine.inOut" }, 8.2);
+
+      // 00:10–00:13 — Card 5 appears blurred, corner number only
+      tl.fromTo(
+        "#card-5",
+        { x: slideIn, opacity: 0, filter: "blur(14px)" },
+        { x: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
+        10.1,
+      );
+      recenterRow(5, 10.1);
+
+      // 00:13–00:16 — Rotate toward camera, censored secret text
+      tl.to("#card-5", { rotationY: -22, filter: "blur(10px)", duration: 1.4, ease: "power2.inOut" }, 13);
+      tl.to("#card-5-secret", { opacity: 1, duration: 0.6, ease: "power2.out" }, 13.4);
+      tl.to("#card-5", { scale: 1.08, duration: 1.2, ease: "sine.inOut", overwrite: "auto" }, 13.2);
+
+      // 00:16–00:20 — Reveal final state: 4 sharp, card 5 = glowing ?
+      tl.to(
+        "#card-5",
+        { rotationY: 0, filter: "blur(0px)", scale: 1.1, duration: 1.1, ease: "power3.out", overwrite: "auto" },
+        16,
+      );
+      tl.to("#card-5-secret", { opacity: 0, duration: 0.4, ease: "power2.in" }, 16);
+      tl.to("#card-5-mystery-wrap", { opacity: 1, duration: 0.7, ease: "power2.out" }, 16.3);
+      tl.to("#card-5-glow", { opacity: 1, duration: 0.8, ease: "power2.out" }, 16.4);
+
+      // Pulse on question mark (finite repeats for capture engine)
+      tl.to(
+        "#card-5-mystery-wrap",
+        { scale: 1.14, duration: 0.65, ease: "sine.inOut", yoyo: true, repeat: 5 },
+        16.8,
+      );
+      tl.to(
+        "#card-5-glow",
+        { opacity: 0.55, duration: 0.65, ease: "sine.inOut", yoyo: true, repeat: 5, overwrite: "auto" },
+        16.8,
+      );
+
+      // 00:20–00:23 — Zoom into question mark + reveal line
+      tl.to(camera, { scale: 1.28, x: 140, y: 40, duration: 2.6, ease: "power2.inOut" }, 20);
+      tl.fromTo(
+        "#reveal-line",
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 1.1, ease: "power2.out" },
+        20.8,
+      );
+
+      // 00:23–00:25 — Hold + final pulse
+      tl.to(
+        "#card-5-mystery-wrap",
+        { scale: 1.16, duration: 0.55, ease: "sine.inOut", yoyo: true, repeat: 1 },
+        23.2,
+      );
+      tl.to(
+        "#card-5-glow",
+        { opacity: 0.7, duration: 0.55, ease: "sine.inOut", yoyo: true, repeat: 1, overwrite: "auto" },
+        23.2,
+      );
+
+      window.__timelines["prompt-framework"] = tl;
+    </script>
+  </body>
+</html>

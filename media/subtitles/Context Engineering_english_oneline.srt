@@ -1,0 +1,1952 @@
+1
+00:00:00,000 --> 00:00:01,580
+After Andrey Karpathy tweeted about
+
+2
+00:00:01,580 --> 00:00:04,540
+Context Engineering, AI World has
+
+3
+00:00:04,540 --> 00:00:05,140
+become very popular as a new
+
+4
+00:00:05,140 --> 00:00:06,960
+buzzword.
+
+5
+00:00:07,280 --> 00:00:08,940
+How popular it has become is that
+
+6
+00:00:08,940 --> 00:00:11,080
+the Cognition team directly said
+
+7
+00:00:11,080 --> 00:00:13,000
+that to build AI agents,
+
+8
+00:00:13,540 --> 00:00:15,440
+Context Engineering is the number
+
+9
+00:00:15,440 --> 00:00:17,200
+one skill that everyone needs to
+
+10
+00:00:17,200 --> 00:00:17,800
+have.
+
+11
+00:00:17,980 --> 00:00:19,140
+What is Context Engineering?
+
+12
+00:00:19,780 --> 00:00:21,260
+Is Prompt Engineering very different
+
+13
+00:00:21,260 --> 00:00:23,000
+or is it a new concept altogether?
+
+14
+00:00:23,000 --> 00:00:27,200
+In this video, I will give you a
+
+15
+00:00:27,200 --> 00:00:28,200
+very simple example of Context
+
+16
+00:00:28,200 --> 00:00:28,800
+Engineering and explain it very
+
+17
+00:00:28,800 --> 00:00:30,000
+neatly and cleanly.
+
+18
+00:00:30,000 --> 00:00:31,920
+By the end of this video,
+
+19
+00:00:31,980 --> 00:00:33,560
+you will have the knowledge on what
+
+20
+00:00:33,560 --> 00:00:35,720
+is Context Engineering and why it is
+
+21
+00:00:35,720 --> 00:00:37,780
+important for building AI agents and
+
+22
+00:00:37,780 --> 00:00:39,180
+how is it different from Prompt
+
+23
+00:00:39,180 --> 00:00:39,780
+Engineering.
+
+24
+00:00:40,020 --> 00:00:41,500
+So without any delay, let's get
+
+25
+00:00:41,500 --> 00:00:42,100
+started.
+
+26
+00:00:42,160 --> 00:00:43,800
+So first topic, is Prompt
+
+27
+00:00:43,800 --> 00:00:45,120
+Engineering really dead?
+
+28
+00:00:45,860 --> 00:00:48,160
+No guys, Prompt Engineering has not
+
+29
+00:00:48,160 --> 00:00:48,760
+gone anywhere.
+
+30
+00:00:48,760 --> 00:00:51,480
+So we write prompts, right?
+
+31
+00:00:51,480 --> 00:00:53,680
+Those prompts are 10 % of the job.
+
+32
+00:00:54,600 --> 00:00:57,640
+So in 2022 and 2025,
+
+33
+00:00:58,520 --> 00:01:00,920
+when we have all of these ChatGPT
+
+34
+00:01:00,920 --> 00:01:04,760
+events, people are focused upon how
+
+35
+00:01:04,760 --> 00:01:06,380
+to write better prompts to get
+
+36
+00:01:06,380 --> 00:01:07,020
+better outputs.
+
+37
+00:01:07,780 --> 00:01:10,240
+In 2025, we have something called as
+
+38
+00:01:10,240 --> 00:01:13,400
+MCPs, tools, how to get better
+
+39
+00:01:13,400 --> 00:01:14,000
+context.
+
+40
+00:01:14,000 --> 00:01:16,800
+So what happened in 2025 and 2026 is
+
+41
+00:01:16,800 --> 00:01:18,200
+that Prompt Engineering is a very
+
+42
+00:01:18,200 --> 00:01:21,260
+prominent role, but it is only 10 %
+
+43
+00:01:21,260 --> 00:01:23,000
+of what we are going to give it to
+
+44
+00:01:23,000 --> 00:01:25,020
+the LLM to get our job done.
+
+45
+00:01:25,560 --> 00:01:26,980
+So Prompt Engineering is not dead
+
+46
+00:01:26,980 --> 00:01:29,580
+anywhere. It is just absorbed into a
+
+47
+00:01:29,580 --> 00:01:30,460
+bigger context.
+
+48
+00:01:31,040 --> 00:01:32,720
+So before understanding what Context
+
+49
+00:01:32,720 --> 00:01:35,160
+Engineering is, let's quickly recap
+
+50
+00:01:35,160 --> 00:01:36,480
+how to write prompts.
+
+51
+00:01:36,580 --> 00:01:38,100
+So we have five different steps.
+
+52
+00:01:38,460 --> 00:01:40,380
+One is role, the other is context,
+
+53
+00:01:40,660 --> 00:01:42,980
+task, format and length.
+
+54
+00:01:42,980 --> 00:01:44,420
+By using all these formats,
+
+55
+00:01:45,200 --> 00:01:46,440
+you will write a better prompt,
+
+56
+00:01:46,600 --> 00:01:47,700
+so that you get a better output.
+
+57
+00:01:48,480 --> 00:01:50,020
+If you don't understand all of these
+
+58
+00:01:50,020 --> 00:01:51,380
+things, please watch my previous
+
+59
+00:01:51,380 --> 00:01:53,060
+video, which is about the Prompt
+
+60
+00:01:53,060 --> 00:01:54,260
+Engineering Masterclass.
+
+61
+00:01:54,640 --> 00:01:55,620
+Now what we are going to do is,
+
+62
+00:01:55,680 --> 00:01:57,900
+now let's look at how an LLM works
+
+63
+00:01:57,900 --> 00:01:58,500
+usually.
+
+64
+00:01:59,080 --> 00:02:00,000
+So what happens to us?
+
+65
+00:02:00,220 --> 00:02:01,680
+If we have the text tokens,
+
+66
+00:02:02,180 --> 00:02:04,180
+those tokens will go to LLM and LLM
+
+67
+00:02:04,180 --> 00:02:05,140
+will give you the output.
+
+68
+00:02:05,840 --> 00:02:07,640
+So where do these tokens come from?
+
+69
+00:02:07,800 --> 00:02:09,640
+From the prompt that we have
+
+70
+00:02:09,640 --> 00:02:11,920
+written. Yes or no? And this is our
+
+71
+00:02:11,920 --> 00:02:12,520
+output.
+
+72
+00:02:12,520 --> 00:02:15,700
+So this is how a basic ChatGPT or
+
+73
+00:02:15,700 --> 00:02:16,420
+something like that works.
+
+74
+00:02:17,100 --> 00:02:18,900
+So everything that you are going to
+
+75
+00:02:18,900 --> 00:02:21,380
+get as an output is being passed as
+
+76
+00:02:21,380 --> 00:02:22,700
+a question in the prompt.
+
+77
+00:02:22,900 --> 00:02:24,360
+That is what we call it as a prompt
+
+78
+00:02:24,360 --> 00:02:24,960
+engineering.
+
+79
+00:02:26,220 --> 00:02:27,900
+Otherwise, now everything is
+
+80
+00:02:27,900 --> 00:02:29,760
+regarding agents. Yes or no?
+
+81
+00:02:30,040 --> 00:02:32,200
+So what happens is, we have tokens,
+
+82
+00:02:32,960 --> 00:02:35,260
+you call LLM and you get output.
+
+83
+00:02:35,400 --> 00:02:36,960
+But this is not the way that the
+
+84
+00:02:36,960 --> 00:02:38,340
+current industry is going towards.
+
+85
+00:02:38,340 --> 00:02:40,400
+Now what will you do? You will
+
+86
+00:02:40,400 --> 00:02:42,560
+directly interact with an agent.
+
+87
+00:02:43,040 --> 00:02:44,340
+Now what will this agent do?
+
+88
+00:02:44,800 --> 00:02:46,860
+It will go and talk to the LLM.
+
+89
+00:02:47,180 --> 00:02:49,040
+It will take the output back and
+
+90
+00:02:49,040 --> 00:02:50,940
+this agent will give you the output.
+
+91
+00:02:51,380 --> 00:02:53,660
+Otherwise, this agent is doing this
+
+92
+00:02:53,660 --> 00:02:55,300
+call autonomously by itself.
+
+93
+00:02:55,760 --> 00:02:58,860
+Here you are not deciding what is
+
+94
+00:02:58,860 --> 00:03:00,300
+the prompt that you are going to get
+
+95
+00:03:00,300 --> 00:03:01,280
+into the LLM.
+
+96
+00:03:01,420 --> 00:03:04,020
+Rather, an agent is deciding which
+
+97
+00:03:04,020 --> 00:03:06,440
+prompt to give it to LLM such that
+
+98
+00:03:06,440 --> 00:03:07,420
+it can achieve the task.
+
+99
+00:03:07,420 --> 00:03:09,620
+Let's say you have a travel agent.
+
+100
+00:03:10,040 --> 00:03:10,640
+What is the job of that travel
+
+101
+00:03:10,640 --> 00:03:11,240
+agent?
+
+102
+00:03:11,700 --> 00:03:12,300
+Let's take an example of what kind
+
+103
+00:03:12,300 --> 00:03:12,900
+of tickets to book if you want to go
+
+104
+00:03:12,900 --> 00:03:13,500
+from Rajahmundry to Kakinada.
+
+105
+00:03:15,820 --> 00:03:17,160
+So what does the first agent do?
+
+106
+00:03:17,440 --> 00:03:18,960
+It will look at the distance between
+
+107
+00:03:18,960 --> 00:03:20,240
+Rajahmundry to Kakinada.
+
+108
+00:03:20,760 --> 00:03:23,300
+After that, it will also look at the
+
+109
+00:03:23,300 --> 00:03:25,160
+options we have, bus, train,
+
+110
+00:03:25,320 --> 00:03:26,560
+car, anything.
+
+111
+00:03:27,000 --> 00:03:28,840
+After that, it will try to book the
+
+112
+00:03:28,840 --> 00:03:29,440
+tickets.
+
+113
+00:03:30,020 --> 00:03:32,680
+To book the tickets, you need some
+
+114
+00:03:32,680 --> 00:03:34,060
+connection details, right?
+
+115
+00:03:34,060 --> 00:03:38,020
+So how is this agent going to get
+
+116
+00:03:38,020 --> 00:03:38,840
+those things?
+
+117
+00:03:40,020 --> 00:03:41,640
+That is where we have something
+
+118
+00:03:41,640 --> 00:03:44,260
+called as tools and MCPs.
+
+119
+00:03:45,080 --> 00:03:46,300
+What are these tools and MCPs?
+
+120
+00:03:47,280 --> 00:03:50,720
+It is how an agent should work in a
+
+121
+00:03:50,720 --> 00:03:52,180
+very specific manner.
+
+122
+00:03:52,660 --> 00:03:54,500
+That is what we are defining in
+
+123
+00:03:54,500 --> 00:03:55,580
+these two things.
+
+124
+00:03:55,960 --> 00:03:57,380
+We will learn about these things in
+
+125
+00:03:57,380 --> 00:03:58,800
+detail later on, so don't worry.
+
+126
+00:03:58,800 --> 00:04:02,420
+So now, this agent will work
+
+127
+00:04:02,420 --> 00:04:05,120
+properly by having all of these as
+
+128
+00:04:05,120 --> 00:04:07,700
+an input, but not only as a prompt.
+
+129
+00:04:08,280 --> 00:04:09,480
+If you write the entire travel agent
+
+130
+00:04:09,480 --> 00:04:13,080
+in a single prompt, do you think
+
+131
+00:04:13,080 --> 00:04:14,620
+that is going to work properly?
+
+132
+00:04:15,740 --> 00:04:16,620
+Definitely not.
+
+133
+00:04:17,020 --> 00:04:19,580
+We are talking about only one agent,
+
+134
+00:04:19,600 --> 00:04:21,140
+but what if there are multiple
+
+135
+00:04:21,140 --> 00:04:21,740
+agents?
+
+136
+00:04:21,900 --> 00:04:23,020
+What will you do then?
+
+137
+00:04:23,400 --> 00:04:26,040
+Then that is the problem where a
+
+138
+00:04:26,040 --> 00:04:27,240
+prompt engineering is facing.
+
+139
+00:04:27,240 --> 00:04:29,660
+So that is where the context
+
+140
+00:04:29,660 --> 00:04:30,820
+engineering comes into picture.
+
+141
+00:04:31,260 --> 00:04:32,760
+Then why is it called context?
+
+142
+00:04:33,180 --> 00:04:34,240
+Do you know what context is?
+
+143
+00:04:34,880 --> 00:04:36,740
+If you haven't seen my tokens video,
+
+144
+00:04:36,800 --> 00:04:38,040
+please go ahead and watch it.
+
+145
+00:04:38,280 --> 00:04:40,540
+Every model has a limit on how much
+
+146
+00:04:40,540 --> 00:04:42,020
+information it can process.
+
+147
+00:04:42,280 --> 00:04:43,820
+And that is what we call it as a
+
+148
+00:04:43,820 --> 00:04:44,420
+context.
+
+149
+00:04:44,660 --> 00:04:46,880
+Now, if we fill in the context of an
+
+150
+00:04:46,880 --> 00:04:50,920
+LLM, we get
+
+151
+00:04:50,920 --> 00:04:52,480
+better output from the agents.
+
+152
+00:04:52,480 --> 00:04:55,100
+That is exactly what we are going to
+
+153
+00:04:55,100 --> 00:04:56,380
+learn in context engineering.
+
+154
+00:04:56,880 --> 00:04:59,220
+Now let's look at what are all the
+
+155
+00:04:59,220 --> 00:05:01,320
+topics that we can fill inside this
+
+156
+00:05:01,320 --> 00:05:02,040
+context window.
+
+157
+00:05:02,420 --> 00:05:04,220
+So there are six things majorly that
+
+158
+00:05:04,220 --> 00:05:05,380
+we will put inside the context
+
+159
+00:05:05,380 --> 00:05:05,980
+window.
+
+160
+00:05:06,460 --> 00:05:08,400
+The first thing is the user message.
+
+161
+00:05:08,800 --> 00:05:09,580
+What is your question?
+
+162
+00:05:10,060 --> 00:05:11,720
+Let's say I want to book a ticket
+
+163
+00:05:11,720 --> 00:05:13,320
+from Rajahmundry to Kakinada.
+
+164
+00:05:13,640 --> 00:05:15,320
+That is what a user message is.
+
+165
+00:05:15,760 --> 00:05:17,440
+After that, we have something called
+
+166
+00:05:17,440 --> 00:05:18,340
+a system prompt.
+
+167
+00:05:18,340 --> 00:05:19,520
+In prompt engineering,
+
+168
+00:05:20,820 --> 00:05:22,380
+whenever you put a prompt,
+
+169
+00:05:22,700 --> 00:05:25,980
+it will do the prompt engineering by
+
+170
+00:05:25,980 --> 00:05:27,420
+using something called a system
+
+171
+00:05:27,420 --> 00:05:28,020
+prompt.
+
+172
+00:05:28,160 --> 00:05:28,880
+So we also have to write this
+
+173
+00:05:28,880 --> 00:05:29,480
+prompt.
+
+174
+00:05:29,860 --> 00:05:31,660
+So even that is present inside the
+
+175
+00:05:31,660 --> 00:05:32,480
+context window.
+
+176
+00:05:33,020 --> 00:05:34,260
+And after that, there is something
+
+177
+00:05:34,260 --> 00:05:35,240
+called as tools.
+
+178
+00:05:35,580 --> 00:05:38,420
+What tools are used to do a task?
+
+179
+00:05:40,760 --> 00:05:43,120
+Let's say I want to create a PDF.
+
+180
+00:05:43,120 --> 00:05:47,060
+So to create a PDF, I need
+
+181
+00:05:47,060 --> 00:05:49,160
+to use some packages like vzprint
+
+182
+00:05:49,160 --> 00:05:52,280
+and Pymu PDF.
+
+183
+00:05:53,360 --> 00:05:55,000
+So what we will do is,
+
+184
+00:05:55,000 --> 00:05:56,900
+in these tools, we will say,
+
+185
+00:05:57,160 --> 00:05:59,780
+if the user wants to have a PDF
+
+186
+00:05:59,780 --> 00:06:00,500
+generated,
+
+187
+00:06:01,300 --> 00:06:02,140
+we will use these packages.
+
+188
+00:06:03,260 --> 00:06:05,000
+Those are what we call it as tools.
+
+189
+00:06:05,560 --> 00:06:08,260
+So by doing this, LLM doesn't think
+
+190
+00:06:08,260 --> 00:06:09,360
+too much about it
+
+191
+00:06:09,360 --> 00:06:11,160
+and it will follow the pattern that
+
+192
+00:06:11,160 --> 00:06:11,800
+we decided.
+
+193
+00:06:11,800 --> 00:06:14,040
+And there is the next thing which is
+
+194
+00:06:14,040 --> 00:06:15,040
+called resources.
+
+195
+00:06:15,960 --> 00:06:17,320
+To achieve this task,
+
+196
+00:06:18,620 --> 00:06:20,500
+what is the information that you are
+
+197
+00:06:20,500 --> 00:06:22,160
+going to provide to LLM?
+
+198
+00:06:22,400 --> 00:06:23,640
+That is what resources are.
+
+199
+00:06:24,300 --> 00:06:25,580
+Usually, I have written all this in
+
+200
+00:06:25,580 --> 00:06:26,200
+the same size,
+
+201
+00:06:26,360 --> 00:06:28,040
+but resources are very big.
+
+202
+00:06:28,760 --> 00:06:30,760
+So let's say you want an LLM to
+
+203
+00:06:30,760 --> 00:06:32,520
+automatically convert your text into
+
+204
+00:06:32,520 --> 00:06:33,120
+SQL.
+
+205
+00:06:33,340 --> 00:06:34,600
+To convert your text into SQL,
+
+206
+00:06:36,200 --> 00:06:38,920
+the LLM needs to have access to the
+
+207
+00:06:38,920 --> 00:06:40,360
+whole schema of the tables,
+
+208
+00:06:40,360 --> 00:06:42,400
+databases, every single thing,
+
+209
+00:06:42,660 --> 00:06:43,260
+right?
+
+210
+00:06:43,260 --> 00:06:45,300
+Then only it can properly map
+
+211
+00:06:45,300 --> 00:06:48,680
+to which table you want to join or
+
+212
+00:06:48,680 --> 00:06:49,300
+query.
+
+213
+00:06:49,860 --> 00:06:51,620
+Then it can do it properly.
+
+214
+00:06:51,960 --> 00:06:54,000
+So this is the major stuff.
+
+215
+00:06:54,400 --> 00:06:57,080
+It is like the complete information
+
+216
+00:06:57,080 --> 00:06:59,660
+that is needed for the LLM
+
+217
+00:06:59,660 --> 00:07:01,620
+to achieve the task that you are
+
+218
+00:07:01,620 --> 00:07:02,220
+providing.
+
+219
+00:07:02,580 --> 00:07:04,000
+And after that, we have something
+
+220
+00:07:04,000 --> 00:07:05,380
+called as assistant history.
+
+221
+00:07:05,860 --> 00:07:06,460
+What is this?
+
+222
+00:07:06,760 --> 00:07:08,860
+Let's say you are talking to an
+
+223
+00:07:08,860 --> 00:07:09,460
+agent,
+
+224
+00:07:09,460 --> 00:07:10,060
+and the agent is doing some work,
+
+225
+00:07:10,500 --> 00:07:12,460
+so all of that information needs to
+
+226
+00:07:12,460 --> 00:07:13,540
+be documented somewhere,
+
+227
+00:07:14,140 --> 00:07:14,740
+right?
+
+228
+00:07:14,740 --> 00:07:16,580
+All that information will lie inside
+
+229
+00:07:16,580 --> 00:07:17,320
+assistant history.
+
+230
+00:07:18,420 --> 00:07:19,660
+And after that, we have something
+
+231
+00:07:19,660 --> 00:07:21,060
+called as tool call history.
+
+232
+00:07:21,600 --> 00:07:22,260
+That is, when you asked them to do
+
+233
+00:07:22,260 --> 00:07:22,860
+PDF,
+
+234
+00:07:23,680 --> 00:07:25,360
+you mentioned to use vzprint or
+
+235
+00:07:25,360 --> 00:07:25,960
+PyMuPDF.
+
+236
+00:07:26,980 --> 00:07:28,160
+Then what will the agent do?
+
+237
+00:07:28,200 --> 00:07:29,960
+They will go and talk to those
+
+238
+00:07:29,960 --> 00:07:30,560
+packages
+
+239
+00:07:30,560 --> 00:07:31,640
+and it will do the execution.
+
+240
+00:07:32,080 --> 00:07:33,980
+Then what is the output?
+
+241
+00:07:34,340 --> 00:07:36,420
+All of that information is being
+
+242
+00:07:36,420 --> 00:07:37,680
+captured into tool call history.
+
+243
+00:07:37,680 --> 00:07:39,860
+Then in a context window like
+
+244
+00:07:39,860 --> 00:07:42,480
+ChatGPT, Grok, LLM,
+
+245
+00:07:44,320 --> 00:07:45,320
+there will be only one prompt.
+
+246
+00:07:46,140 --> 00:07:47,920
+It will have all of these things.
+
+247
+00:07:49,040 --> 00:07:50,020
+Then what is context engineering?
+
+248
+00:07:51,320 --> 00:07:53,840
+How to optimize this context
+
+249
+00:07:53,840 --> 00:07:56,200
+such that we can get better output
+
+250
+00:07:56,200 --> 00:07:57,960
+from the LLMs via agents.
+
+251
+00:07:58,620 --> 00:08:00,260
+That is what a simple thing context
+
+252
+00:08:00,260 --> 00:08:00,920
+engineering is.
+
+253
+00:08:01,360 --> 00:08:03,160
+The whole prompt that you built last
+
+254
+00:08:03,160 --> 00:08:04,440
+week lives in one box.
+
+255
+00:08:04,440 --> 00:08:05,620
+That is, we did prompt engineering,
+
+256
+00:08:06,420 --> 00:08:07,020
+right?
+
+257
+00:08:07,020 --> 00:08:07,900
+That prompt engineering will be in
+
+258
+00:08:07,900 --> 00:08:08,500
+this.
+
+259
+00:08:09,340 --> 00:08:10,820
+And remaining everything is
+
+260
+00:08:10,820 --> 00:08:11,960
+basically context engineering.
+
+261
+00:08:12,460 --> 00:08:14,260
+So now you all have a question in
+
+262
+00:08:14,260 --> 00:08:14,860
+your brain.
+
+263
+00:08:14,860 --> 00:08:15,860
+If you want to store so much
+
+264
+00:08:15,860 --> 00:08:17,420
+information in context,
+
+265
+00:08:18,840 --> 00:08:20,800
+why can't we just use the models
+
+266
+00:08:20,800 --> 00:08:22,260
+which has bigger context?
+
+267
+00:08:23,000 --> 00:08:24,300
+That's absolutely right.
+
+268
+00:08:25,080 --> 00:08:26,140
+Usually there are some models,
+
+269
+00:08:26,620 --> 00:08:28,040
+Gemini 3.5 Pro,
+
+270
+00:08:28,280 --> 00:08:30,780
+they support 1 million context guys,
+
+271
+00:08:31,020 --> 00:08:32,520
+1 million token context.
+
+272
+00:08:32,520 --> 00:08:35,900
+GPT 5.5, Claude Opus 4.8 or 4
+
+273
+00:08:35,900 --> 00:08:36,800
+.7.
+
+274
+00:08:37,200 --> 00:08:39,380
+But there are some smaller models
+
+275
+00:08:39,380 --> 00:08:41,180
+which has less context.
+
+276
+00:08:41,460 --> 00:08:42,560
+Let's say Claude Sonnet,
+
+277
+00:08:42,840 --> 00:08:45,020
+GPT 5 mini or LLaMA.
+
+278
+00:08:45,560 --> 00:08:47,600
+Now in the models with less context,
+
+279
+00:08:48,260 --> 00:08:49,820
+if you put a lot of information,
+
+280
+00:08:49,880 --> 00:08:51,180
+do you think they are going to work
+
+281
+00:08:51,180 --> 00:08:51,780
+properly?
+
+282
+00:08:52,720 --> 00:08:53,320
+No.
+
+283
+00:08:54,100 --> 00:08:56,640
+So it's not always that
+
+284
+00:08:56,640 --> 00:08:57,960
+you take a 1 million context model
+
+285
+00:08:57,960 --> 00:08:59,300
+and you fill up everything.
+
+286
+00:08:59,780 --> 00:09:01,780
+Then you are going to waste a lot of
+
+287
+00:09:01,780 --> 00:09:02,380
+tokens
+
+288
+00:09:02,380 --> 00:09:03,880
+and you are going to spend a lot of
+
+289
+00:09:03,880 --> 00:09:05,080
+money based on the tokens.
+
+290
+00:09:05,600 --> 00:09:06,680
+What should we do now?
+
+291
+00:09:06,920 --> 00:09:09,060
+We need to optimize how our agent's
+
+292
+00:09:09,060 --> 00:09:10,200
+performance works
+
+293
+00:09:10,200 --> 00:09:12,160
+based on the cost as well.
+
+294
+00:09:12,440 --> 00:09:14,040
+We are paying a lot of money for
+
+295
+00:09:14,040 --> 00:09:14,700
+these tokens.
+
+296
+00:09:15,080 --> 00:09:16,960
+We want as much optimized as
+
+297
+00:09:16,960 --> 00:09:17,900
+possible, right?
+
+298
+00:09:18,120 --> 00:09:19,640
+So what do we usually do?
+
+299
+00:09:20,000 --> 00:09:22,500
+We use smarter models to plan
+
+300
+00:09:22,500 --> 00:09:23,120
+everything.
+
+301
+00:09:23,460 --> 00:09:25,780
+After that, we use smaller models.
+
+302
+00:09:26,060 --> 00:09:28,460
+Let's say Sonnet or GPT 4 mini or 5
+
+303
+00:09:28,460 --> 00:09:29,060
+mini
+
+304
+00:09:29,060 --> 00:09:31,360
+to execute the task independently.
+
+305
+00:09:31,360 --> 00:09:33,480
+After that, we get all of this
+
+306
+00:09:33,480 --> 00:09:34,380
+information back.
+
+307
+00:09:35,020 --> 00:09:36,120
+That's how an agent would work.
+
+308
+00:09:36,940 --> 00:09:40,440
+So if you want to get a better
+
+309
+00:09:40,440 --> 00:09:41,200
+performance
+
+310
+00:09:41,200 --> 00:09:43,420
+then you need to understand
+
+311
+00:09:43,420 --> 00:09:45,820
+how you can properly optimize your
+
+312
+00:09:45,820 --> 00:09:46,420
+context
+
+313
+00:09:46,420 --> 00:09:48,500
+such that the agent works properly.
+
+314
+00:09:49,240 --> 00:09:50,520
+This is one more example of
+
+315
+00:09:50,520 --> 00:09:52,180
+why long context will not work
+
+316
+00:09:52,180 --> 00:09:52,780
+properly.
+
+317
+00:09:52,960 --> 00:09:54,600
+Let's say we have 1 million context.
+
+318
+00:09:55,140 --> 00:09:55,800
+You have filled that 1 million
+
+319
+00:09:55,800 --> 00:09:56,400
+context.
+
+320
+00:09:57,220 --> 00:09:58,980
+Then the model's performance will be
+
+321
+00:09:58,980 --> 00:09:59,580
+really bad
+
+322
+00:09:59,580 --> 00:10:01,320
+because it will tend to lose
+
+323
+00:10:01,320 --> 00:10:02,160
+information
+
+324
+00:10:02,160 --> 00:10:04,300
+because the context is completely
+
+325
+00:10:04,300 --> 00:10:04,900
+filled.
+
+326
+00:10:05,960 --> 00:10:07,420
+Usually, a model's performance is
+
+327
+00:10:07,420 --> 00:10:08,020
+always good
+
+328
+00:10:08,020 --> 00:10:11,600
+if the context is at 60 %
+
+329
+00:10:11,600 --> 00:10:12,220
+probably.
+
+330
+00:10:13,080 --> 00:10:13,900
+Because in the beginning,
+
+331
+00:10:14,160 --> 00:10:15,600
+it will not have any information
+
+332
+00:10:15,600 --> 00:10:19,400
+and until 50%, it is gaining a lot
+
+333
+00:10:19,400 --> 00:10:20,140
+of information
+
+334
+00:10:20,140 --> 00:10:21,400
+to achieve the task.
+
+335
+00:10:21,840 --> 00:10:23,480
+At this point, you get peak
+
+336
+00:10:23,480 --> 00:10:24,080
+performance.
+
+337
+00:10:24,560 --> 00:10:25,920
+After that, what do you think?
+
+338
+00:10:25,920 --> 00:10:28,640
+What if the context is not working
+
+339
+00:10:28,640 --> 00:10:29,240
+properly?
+
+340
+00:10:29,360 --> 00:10:30,460
+Then the performance will get
+
+341
+00:10:30,460 --> 00:10:31,060
+degraded
+
+342
+00:10:31,060 --> 00:10:33,340
+because it is overburdened with the
+
+343
+00:10:33,340 --> 00:10:34,040
+information.
+
+344
+00:10:34,440 --> 00:10:37,320
+So we want the context to be as much
+
+345
+00:10:37,320 --> 00:10:38,540
+optimized as possible.
+
+346
+00:10:39,800 --> 00:10:41,700
+Let's quickly look at what is the
+
+347
+00:10:41,700 --> 00:10:42,300
+difference
+
+348
+00:10:42,300 --> 00:10:43,340
+between prompt engineering and
+
+349
+00:10:43,340 --> 00:10:44,200
+context engineering.
+
+350
+00:10:44,620 --> 00:10:47,460
+Prompt engineering is a term for the
+
+351
+00:10:47,460 --> 00:10:48,060
+effort
+
+352
+00:10:48,060 --> 00:10:50,060
+needed to write your task in the
+
+353
+00:10:50,060 --> 00:10:52,080
+ideal format of an LLM chatbot.
+
+354
+00:10:57,460 --> 00:11:01,080
+But context engineering is the next
+
+355
+00:11:01,080 --> 00:11:01,940
+level of this.
+
+356
+00:11:01,940 --> 00:11:05,240
+It is about doing this autonomously
+
+357
+00:11:05,240 --> 00:11:06,720
+in a dynamic situation.
+
+358
+00:11:07,160 --> 00:11:09,060
+It takes more nuance and is
+
+359
+00:11:09,060 --> 00:11:10,840
+effectively the number one job
+
+360
+00:11:10,840 --> 00:11:12,920
+for the engineers building AI
+
+361
+00:11:12,920 --> 00:11:13,520
+agents.
+
+362
+00:11:13,960 --> 00:11:16,920
+So if you know how to optimize your
+
+363
+00:11:16,920 --> 00:11:17,860
+context properly,
+
+364
+00:11:18,240 --> 00:11:19,920
+then that is the most important
+
+365
+00:11:19,920 --> 00:11:20,520
+skill
+
+366
+00:11:20,520 --> 00:11:22,260
+that you need to have to build AI.
+
+367
+00:11:22,720 --> 00:11:26,820
+Do we
+
+368
+00:11:26,820 --> 00:11:28,480
+have any techniques to manage such
+
+369
+00:11:28,480 --> 00:11:29,080
+contexts?
+
+370
+00:11:29,080 --> 00:11:30,220
+Yes, there are four techniques.
+
+371
+00:11:30,520 --> 00:11:33,360
+One is prompt engineering,
+
+372
+00:11:34,280 --> 00:11:35,500
+because if it doesn't work, it won't
+
+373
+00:11:35,500 --> 00:11:36,260
+work.
+
+374
+00:11:37,040 --> 00:11:39,200
+Second, we have tools.
+
+375
+00:11:40,160 --> 00:11:43,880
+Third, we have rag and MCPs.
+
+376
+00:11:44,420 --> 00:11:47,040
+Fourth, we have compaction.
+
+377
+00:11:48,700 --> 00:11:49,560
+So what is prompt engineering?
+
+378
+00:11:50,560 --> 00:11:52,520
+At the end of the day,
+
+379
+00:11:52,740 --> 00:11:53,340
+the agent is also talking to the
+
+380
+00:11:53,340 --> 00:11:53,940
+LLM.
+
+381
+00:11:54,680 --> 00:11:56,460
+Then you need to have a better
+
+382
+00:11:56,460 --> 00:11:57,300
+designed prompt.
+
+383
+00:11:59,120 --> 00:12:01,680
+We saw how to define a better prompt
+
+384
+00:12:01,680 --> 00:12:02,280
+in the last video.
+
+385
+00:12:02,680 --> 00:12:04,000
+And the second thing is tools.
+
+386
+00:12:06,400 --> 00:12:08,080
+Let's assume this is a brain.
+
+387
+00:12:08,840 --> 00:12:10,540
+This brain is basically what we call
+
+388
+00:12:10,540 --> 00:12:11,540
+it as an LLM.
+
+389
+00:12:12,280 --> 00:12:14,440
+The brain doesn't do any work.
+
+390
+00:12:14,800 --> 00:12:17,180
+It needs to have legs and hands.
+
+391
+00:12:17,180 --> 00:12:20,980
+So giving legs and hands to this
+
+392
+00:12:20,980 --> 00:12:21,580
+LLM
+
+393
+00:12:21,580 --> 00:12:23,300
+is what we call it as tools.
+
+394
+00:12:24,220 --> 00:12:26,200
+That is, how to define a task
+
+395
+00:12:26,200 --> 00:12:27,540
+and how to do it properly.
+
+396
+00:12:29,400 --> 00:12:31,180
+Then this is where you put all the
+
+397
+00:12:31,180 --> 00:12:32,380
+definitions of the tools.
+
+398
+00:12:33,040 --> 00:12:34,200
+One of the examples is,
+
+399
+00:12:34,200 --> 00:12:34,800
+let's say you are on ChatGPT,
+
+400
+00:12:35,340 --> 00:12:37,080
+you have something called as web
+
+401
+00:12:37,080 --> 00:12:37,680
+search.
+
+402
+00:12:38,860 --> 00:12:40,260
+So what happens if you enable this?
+
+403
+00:12:40,260 --> 00:12:42,400
+It will instantly search the web by
+
+404
+00:12:42,400 --> 00:12:43,000
+default,
+
+405
+00:12:43,040 --> 00:12:45,120
+without you asking, and without it
+
+406
+00:12:45,120 --> 00:12:46,060
+automatically invoking.
+
+407
+00:12:46,060 --> 00:12:47,740
+If you enable this one,
+
+408
+00:12:48,060 --> 00:12:49,140
+maybe something called as create
+
+409
+00:12:49,140 --> 00:12:49,740
+images.
+
+410
+00:12:49,740 --> 00:12:51,720
+If you put it, the prompt will
+
+411
+00:12:51,720 --> 00:12:52,900
+automatically create images.
+
+412
+00:12:53,080 --> 00:12:55,480
+It doesn't need to think about it.
+
+413
+00:12:55,860 --> 00:12:58,460
+So you can create a lot of tools.
+
+414
+00:12:58,960 --> 00:13:00,860
+You can think of them like skills as
+
+415
+00:13:00,860 --> 00:13:01,460
+well,
+
+416
+00:13:01,460 --> 00:13:02,060
+but that's a different topic.
+
+417
+00:13:02,060 --> 00:13:03,280
+Let's not worry about that.
+
+418
+00:13:03,960 --> 00:13:05,440
+And then there is RAG and MCP.
+
+419
+00:13:05,740 --> 00:13:06,340
+What is RAG?
+
+420
+00:13:06,900 --> 00:13:08,520
+There is a big box,
+
+421
+00:13:08,520 --> 00:13:10,360
+that is what we call it as a
+
+422
+00:13:10,360 --> 00:13:10,960
+context.
+
+423
+00:13:10,960 --> 00:13:12,240
+In that context,
+
+424
+00:13:13,200 --> 00:13:14,660
+what is the information that you are
+
+425
+00:13:14,660 --> 00:13:16,100
+going to provide to the agent?
+
+426
+00:13:16,700 --> 00:13:18,360
+So the information is coming to me.
+
+427
+00:13:18,360 --> 00:13:20,080
+One of the best things is RAG,
+
+428
+00:13:20,180 --> 00:13:21,540
+if you have all the data that is
+
+429
+00:13:21,540 --> 00:13:22,620
+available with you,
+
+430
+00:13:22,660 --> 00:13:24,620
+which is also called as retrieval,
+
+431
+00:13:24,800 --> 00:13:26,060
+augmented generation.
+
+432
+00:13:26,740 --> 00:13:29,660
+You can connect to other platforms.
+
+433
+00:13:30,160 --> 00:13:32,520
+Let's say I want my agent to connect
+
+434
+00:13:32,520 --> 00:13:33,220
+to my Gmail.
+
+435
+00:13:34,060 --> 00:13:36,240
+Then that is how you will do MCPs,
+
+436
+00:13:36,300 --> 00:13:37,920
+which is called model context
+
+437
+00:13:37,920 --> 00:13:38,640
+protocol.
+
+438
+00:13:38,640 --> 00:13:41,500
+Model context
+
+439
+00:13:41,500 --> 00:13:43,840
+protocol.
+
+440
+00:13:44,400 --> 00:13:46,460
+And then the next thing we have,
+
+441
+00:13:46,460 --> 00:13:47,900
+which is called as compaction.
+
+442
+00:13:48,480 --> 00:13:49,080
+It's basically,
+
+443
+00:13:49,640 --> 00:13:51,980
+let's say there are multiple agents
+
+444
+00:13:51,980 --> 00:13:52,880
+running parallel.
+
+445
+00:13:53,040 --> 00:13:54,420
+One, two, three, four.
+
+446
+00:13:54,980 --> 00:13:57,600
+And every agent has its own context
+
+447
+00:13:57,600 --> 00:13:58,580
+and every single thing.
+
+448
+00:13:59,120 --> 00:13:59,720
+This has an output,
+
+449
+00:14:00,180 --> 00:14:01,160
+this has an output,
+
+450
+00:14:01,580 --> 00:14:02,420
+this has an output,
+
+451
+00:14:02,720 --> 00:14:03,320
+this has an output,
+
+452
+00:14:03,320 --> 00:14:03,920
+this has an output.
+
+453
+00:14:04,060 --> 00:14:05,520
+What you will do is,
+
+454
+00:14:05,520 --> 00:14:08,000
+you will try to compress the output
+
+455
+00:14:08,000 --> 00:14:09,700
+from each of these agents
+
+456
+00:14:09,700 --> 00:14:12,380
+and then you create smaller
+
+457
+00:14:12,380 --> 00:14:13,260
+summarization.
+
+458
+00:14:16,840 --> 00:14:19,160
+You then orchestrate your next step.
+
+459
+00:14:19,580 --> 00:14:21,220
+So this is what we call it as a
+
+460
+00:14:21,220 --> 00:14:21,820
+compaction,
+
+461
+00:14:22,040 --> 00:14:24,160
+which is also called in the part of
+
+462
+00:14:24,160 --> 00:14:24,760
+memory.
+
+463
+00:14:26,540 --> 00:14:28,240
+So if you do these things,
+
+464
+00:14:28,480 --> 00:14:30,220
+then you can have multiple agents
+
+465
+00:14:30,220 --> 00:14:31,740
+running multiple times
+
+466
+00:14:31,740 --> 00:14:33,780
+at longer times without breaking it
+
+467
+00:14:33,780 --> 00:14:34,380
+properly.
+
+468
+00:14:34,380 --> 00:14:36,180
+So you need to understand what is
+
+469
+00:14:36,180 --> 00:14:36,900
+the best practice
+
+470
+00:14:36,900 --> 00:14:38,180
+of doing prompt engineering,
+
+471
+00:14:38,940 --> 00:14:40,400
+how you can define tools,
+
+472
+00:14:40,800 --> 00:14:42,640
+how you can build rag and MCPs,
+
+473
+00:14:42,940 --> 00:14:44,500
+and then how you can do compaction
+
+474
+00:14:44,500 --> 00:14:46,700
+to have an agent that can run
+
+475
+00:14:46,700 --> 00:14:47,980
+autonomously for you
+
+476
+00:14:47,980 --> 00:14:49,560
+for longer periods of time.
+
+477
+00:14:50,060 --> 00:14:50,700
+That's it, guys.
+
+478
+00:14:50,880 --> 00:14:52,460
+That is all everything you need to
+
+479
+00:14:52,460 --> 00:14:53,060
+know
+
+480
+00:14:53,060 --> 00:14:54,160
+regarding context engineering.
+
+481
+00:14:54,560 --> 00:14:55,660
+If you have learned something new
+
+482
+00:14:55,660 --> 00:14:56,420
+from this video,
+
+483
+00:14:56,620 --> 00:14:57,520
+please let me know in the comment
+
+484
+00:14:57,520 --> 00:14:58,120
+section.
+
+485
+00:14:58,120 --> 00:14:59,600
+And if you know someone who needs
+
+486
+00:14:59,600 --> 00:15:00,220
+this video,
+
+487
+00:15:00,460 --> 00:15:01,460
+please share it with them.
+
+488
+00:15:01,700 --> 00:15:02,720
+Thank you. Bye bye.
+

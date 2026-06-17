@@ -1,0 +1,79 @@
+{
+  "videos": [
+    {
+      "video_id": "vz0OLOatU5c",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=vz0OLOatU5c&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "u-glihrL-Ko",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=u-glihrL-Ko&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "PNggIRnMW6U",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=PNggIRnMW6U&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "ue47uc024RE",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=ue47uc024RE&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "fJKbbRN_Aos",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=fJKbbRN_Aos&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "BYdhkgGRnME",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=BYdhkgGRnME&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "OTPKSlchkGc",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=OTPKSlchkGc&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "svPdKlaxJHY",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=svPdKlaxJHY&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "2yi7JT0RIjY",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=2yi7JT0RIjY&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "96dmoqA4QPg",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=96dmoqA4QPg&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "QjOSnQ3XVp0",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=QjOSnQ3XVp0&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "xcRwOwL3plY",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=xcRwOwL3plY&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "GzovBsI1Ah0",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=GzovBsI1Ah0&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "5VWvm3W9mOU",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=5VWvm3W9mOU&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    },
+    {
+      "video_id": "KsRuS0gkEac",
+      "error": "<HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=KsRuS0gkEac&maxResults=50&order=time&textFormat=plainText&alt=json returned \"Request had insufficient authentication scopes.\". Details: \"[{'message': 'Insufficient Permission', 'domain': 'global', 'reason': 'insufficientPermissions'}]\">",
+      "comments": []
+    }
+  ]
+}

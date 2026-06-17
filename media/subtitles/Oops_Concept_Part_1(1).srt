@@ -1,0 +1,4984 @@
+1
+00:00:00,000 --> 00:00:02,200
+Hi everyone, in our roadmap video
+
+2
+00:00:02,200 --> 00:00:03,633
+series, we will start with the
+
+3
+00:00:03,633 --> 00:00:04,700
+module one or a phase
+
+4
+00:00:04,733 --> 00:00:06,133
+one, which is basically Python
+
+5
+00:00:06,133 --> 00:00:08,166
+foundations. So, in this session,
+
+6
+00:00:08,333 --> 00:00:09,566
+we will start with the
+
+7
+00:00:09,600 --> 00:00:11,200
+concept called object oriented
+
+8
+00:00:11,200 --> 00:00:12,866
+programming, which is also called as
+
+9
+00:00:12,900 --> 00:00:14,300
+OOPS. So, this is
+
+10
+00:00:14,300 --> 00:00:15,800
+not the basic Python guys.
+
+11
+00:00:15,900 --> 00:00:17,500
+It's a little bit of advanced
+
+12
+00:00:17,500 --> 00:00:19,000
+Python. If you are a complete
+
+13
+00:00:19,033 --> 00:00:20,933
+beginner and if you don't know
+
+14
+00:00:20,933 --> 00:00:22,033
+regarding anything Python,
+
+15
+00:00:22,466 --> 00:00:24,000
+I recommend watching these
+
+16
+00:00:24,033 --> 00:00:25,633
+videos. I have already made a
+
+17
+00:00:25,633 --> 00:00:26,566
+playlist called agentic AI full
+
+18
+00:00:26,600 --> 00:00:29,966
+course. I have added
+
+19
+00:00:29,966 --> 00:00:31,733
+all of these videos starting into
+
+20
+00:00:31,733 --> 00:00:33,900
+what are Python ,variables ,
+
+21
+00:00:34,066 --> 00:00:34,900
+functions ,
+
+22
+00:00:35,133 --> 00:00:36,133
+data structures ,
+
+23
+00:00:36,633 --> 00:00:38,233
+all of these things. And these
+
+24
+00:00:38,233 --> 00:00:39,900
+foundations are very important
+
+25
+00:00:39,933 --> 00:00:40,533
+before
+
+26
+00:00:40,533 --> 00:00:41,633
+we start with the new concept,
+
+27
+00:00:41,633 --> 00:00:43,500
+which is called OOPS. These videos,
+
+28
+00:00:43,700 --> 00:00:44,300
+I recorded two years
+
+29
+00:00:44,300 --> 00:00:46,700
+back. Even now, all these are really
+
+30
+00:00:46,700 --> 00:00:48,366
+good content. So, it is an English
+
+31
+00:00:48,400 --> 00:00:49,200
+format.
+
+32
+00:00:49,400 --> 00:00:52,366
+But moving forward, so if you are a 
+
+33
+00:00:52,400 --> 00:00:53,800
+complete beginner, I recommend
+
+34
+00:00:53,800 --> 00:00:54,700
+watching those videos
+
+35
+00:00:54,700 --> 00:00:55,933
+ If you look at the
+
+36
+00:00:55,933 --> 00:00:57,466
+first one, which is one point one,
+
+37
+00:00:57,633 --> 00:00:58,233
+which says
+
+38
+00:00:58,233 --> 00:00:58,633
+Core Python
+
+39
+00:00:58,633 --> 00:01:00,500
+In this, we need to learn all of
+
+40
+00:01:00,500 --> 00:01:02,033
+these points. And all of these
+
+41
+00:01:02,066 --> 00:01:03,233
+points are already covered
+
+42
+00:01:03,233 --> 00:01:05,033
+in these videos. So, I'm not going
+
+43
+00:01:05,066 --> 00:01:06,733
+to cover them again. Do you
+
+44
+00:01:06,733 --> 00:01:07,466
+remember? In our last
+
+45
+00:01:07,500 --> 00:01:09,566
+video, we have shown this resume JD
+
+46
+00:01:09,566 --> 00:01:11,266
+Tailor agent and we have built this
+
+47
+00:01:11,300 --> 00:01:11,900
+from scratch.
+
+48
+00:01:12,833 --> 00:01:14,266
+So I will just show you the code
+
+49
+00:01:14,300 --> 00:01:15,900
+base of this one. So, this is the
+
+50
+00:01:15,900 --> 00:01:16,500
+code base
+
+51
+00:01:16,500 --> 00:01:17,866
+of the same application.
+
+52
+00:01:18,666 --> 00:01:20,833
+And then I will just open this.
+
+53
+00:01:21,100 --> 00:01:22,133
+And if you look at the
+
+54
+00:01:22,166 --> 00:01:24,800
+code here, maybe if you are new to
+
+55
+00:01:24,833 --> 00:01:26,100
+the Python, you cannot understand
+
+56
+00:01:26,100 --> 00:01:26,700
+anything.
+
+57
+00:01:26,700 --> 00:01:28,166
+But don't worry, our end goal is
+
+58
+00:01:28,200 --> 00:01:29,533
+that by the end of the OOPS concept,
+
+59
+00:01:29,533 --> 00:01:30,133
+you will be able
+
+60
+00:01:30,133 --> 00:01:31,233
+to understand all of this code base.
+
+61
+00:01:31,933 --> 00:01:33,066
+If you look at this, there is
+
+62
+00:01:33,066 --> 00:01:33,666
+something called as
+
+63
+00:01:33,700 --> 00:01:35,766
+data class and class. What is this
+
+64
+00:01:35,766 --> 00:01:37,000
+class? What is LLM config?
+
+65
+00:01:37,300 --> 00:01:38,500
+What is a class method?
+
+66
+00:01:38,633 --> 00:01:40,233
+What are these and what are these?
+
+67
+00:01:40,833 --> 00:01:42,366
+If you don't know OOPS concepts,
+
+68
+00:01:42,366 --> 00:01:43,766
+you won't understand
+
+69
+00:01:43,766 --> 00:01:44,900
+all of this. If you look at the
+
+70
+00:01:44,933 --> 00:01:46,866
+other one, all of these uses OOPS
+
+71
+00:01:46,900 --> 00:01:48,133
+concepts completely
+
+72
+00:01:48,133 --> 00:01:49,933
+because at the production level,
+
+73
+00:01:50,133 --> 00:01:51,533
+if you want to write any code,
+
+74
+00:01:51,533 --> 00:01:52,633
+you need to use
+
+75
+00:01:52,633 --> 00:01:56,233
+classes. I
+
+76
+00:01:56,233 --> 00:01:58,766
+can achieve this without using OOPS
+
+77
+00:01:58,766 --> 00:01:59,366
+concepts.
+
+78
+00:01:59,366 --> 00:02:01,000
+That's why I have created one more
+
+79
+00:02:01,000 --> 00:02:02,900
+code base here. And if you look at
+
+80
+00:02:02,900 --> 00:02:04,100
+here, it's
+
+81
+00:02:04,100 --> 00:02:05,533
+also the same code base, but we are
+
+82
+00:02:05,533 --> 00:02:06,933
+not using any of the classes.
+
+83
+00:02:07,400 --> 00:02:10,733
+But if you write this code and send
+
+84
+00:02:10,766 --> 00:02:13,366
+a push request or a merge request to
+
+85
+00:02:13,400 --> 00:02:14,000
+a company,
+
+86
+00:02:14,200 --> 00:02:15,600
+no one will accept the code because
+
+87
+00:02:15,600 --> 00:02:19,500
+almost 99.9 % of the times you will
+
+88
+00:02:19,500 --> 00:02:20,500
+write the code
+
+89
+00:02:20,500 --> 00:02:22,566
+in the class format, not in the
+
+90
+00:02:22,600 --> 00:02:23,633
+normal functions format.
+
+91
+00:02:23,900 --> 00:02:26,100
+So that is why we are going to learn
+
+92
+00:02:26,100 --> 00:02:27,800
+this new concept which is called
+
+93
+00:02:27,800 --> 00:02:29,433
+object oriented programming.
+
+94
+00:02:29,433 --> 00:02:30,700
+What is this?
+
+95
+00:02:30,700 --> 00:02:31,733
+How to use?
+
+96
+00:02:31,733 --> 00:02:33,033
+Techniques Covered
+
+97
+00:02:33,033 --> 00:02:34,466
+Everything we will learn step
+
+98
+00:02:34,466 --> 00:02:35,966
+by step with some small basic
+
+99
+00:02:36,000 --> 00:02:38,566
+examples. Our end goal is that by
+
+100
+00:02:38,566 --> 00:02:40,066
+the end of this series,
+
+101
+00:02:40,066 --> 00:02:41,266
+I can cover all these concepts in
+
+102
+00:02:41,300 --> 00:02:43,700
+one video. So we are going to break
+
+103
+00:02:43,700 --> 00:02:44,433
+them into maybe
+
+104
+00:02:44,466 --> 00:02:46,233
+two or three videos. By the time
+
+105
+00:02:46,233 --> 00:02:47,533
+three or four videos are done,
+
+106
+00:02:48,000 --> 00:02:48,700
+you will be able
+
+107
+00:02:48,733 --> 00:02:50,433
+to understand what this code base
+
+108
+00:02:50,433 --> 00:02:51,833
+is. This code is written by an AI
+
+109
+00:02:51,833 --> 00:02:54,166
+agent. Now the next question
+
+110
+00:02:54,200 --> 00:02:56,866
+is, if the code is being written by
+
+111
+00:02:56,866 --> 00:02:58,966
+an AI agent, then why should we
+
+112
+00:02:59,000 --> 00:02:59,600
+learn all this?
+
+113
+00:02:59,600 --> 00:03:01,233
+It looks too complex, right?
+
+114
+00:03:01,833 --> 00:03:03,833
+So don't be afraid of code.
+
+115
+00:03:03,866 --> 00:03:04,700
+But before that,
+
+116
+00:03:04,733 --> 00:03:06,666
+let me show you one small story.
+
+117
+00:03:07,166 --> 00:03:09,166
+If you go to the news and if you see
+
+118
+00:03:09,200 --> 00:03:09,800
+this news,
+
+119
+00:03:10,100 --> 00:03:12,433
+an AI -powered coding tool wiped out
+
+120
+00:03:12,433 --> 00:03:14,166
+a software company's database,
+
+121
+00:03:14,833 --> 00:03:16,066
+then apologized for the
+
+122
+00:03:16,100 --> 00:03:18,300
+catastrophic failure on my part.
+
+123
+00:03:18,300 --> 00:03:20,000
+That is, the claude code in a
+
+124
+00:03:20,033 --> 00:03:22,100
+company, in the production level,
+
+125
+00:03:22,400 --> 00:03:24,700
+it has deleted the entire database,
+
+126
+00:03:25,200 --> 00:03:27,500
+guys. That is, it has almost destroyed
+
+127
+00:03:27,500 --> 00:03:28,100
+the company.
+
+128
+00:03:28,433 --> 00:03:30,500
+And after deleting, it just
+
+129
+00:03:30,500 --> 00:03:32,566
+apologized because it's a failure on
+
+130
+00:03:32,600 --> 00:03:35,400
+my part. So an AI agent,
+
+131
+00:03:35,633 --> 00:03:37,133
+it could be a cloud, a codex,
+
+132
+00:03:37,266 --> 00:03:39,266
+a gemini, a grok, if you don't know
+
+133
+00:03:39,266 --> 00:03:39,966
+what it is doing,
+
+134
+00:03:40,000 --> 00:03:43,433
+what it is writing, then you are in
+
+135
+00:03:43,433 --> 00:03:45,100
+no way an agentic AI engineer.
+
+136
+00:03:45,100 --> 00:03:45,966
+So the thing
+
+137
+00:03:46,000 --> 00:03:48,233
+is, you should be able to drive the
+
+138
+00:03:48,233 --> 00:03:50,066
+AI. AI should not be able to drive
+
+139
+00:03:50,100 --> 00:03:50,700
+you.
+
+140
+00:03:50,733 --> 00:03:52,466
+Then you will be able to sustain in
+
+141
+00:03:52,500 --> 00:03:54,733
+the market like this. Enough of all
+
+142
+00:03:54,733 --> 00:03:55,333
+of these things,
+
+143
+00:03:55,333 --> 00:03:57,166
+why do we need OOPS? We will start
+
+144
+00:03:57,200 --> 00:03:58,733
+with learning what is an OOPS and
+
+145
+00:03:58,766 --> 00:04:01,666
+allow every single detail.
+
+146
+00:04:01,733 --> 00:04:03,266
+So I am using VS code,
+
+147
+00:04:03,500 --> 00:04:04,500
+guys. Visual Studio code.
+
+148
+00:04:04,800 --> 00:04:06,066
+If you don't know how to set up
+
+149
+00:04:06,100 --> 00:04:07,533
+Visual Studio code, I will link a
+
+150
+00:04:07,533 --> 00:04:08,600
+video in the description below. You
+
+151
+00:04:08,633 --> 00:04:09,233
+can go and check
+
+152
+00:04:09,233 --> 00:04:10,733
+that out. So don't worry at all.
+
+153
+00:04:10,733 --> 00:04:11,766
+So next, folder creation,
+
+154
+00:04:11,833 --> 00:04:12,633
+which is called OOPS
+
+155
+00:04:12,666 --> 00:04:14,300
+concepts, inside that,
+
+156
+00:04:14,300 --> 00:04:15,833
+I'm using a Python file,
+
+157
+00:04:16,033 --> 00:04:17,333
+which is called OOPS part one.
+
+158
+00:04:17,500 --> 00:04:18,133
+So we will use
+
+159
+00:04:18,166 --> 00:04:21,600
+this one. And then we will learn all
+
+160
+00:04:21,633 --> 00:04:23,166
+the concepts regarding OOPS in this
+
+161
+00:04:23,200 --> 00:04:23,800
+notebook.
+
+162
+00:04:23,800 --> 00:04:26,566
+So let me close this explorer site
+
+163
+00:04:26,566 --> 00:04:28,100
+so that we have a lot of real estate
+
+164
+00:04:28,133 --> 00:04:29,000
+and let me
+
+165
+00:04:29,000 --> 00:04:30,766
+zoom in. So first, let's say,
+
+166
+00:04:31,533 --> 00:04:34,033
+we want to build an HR system in a
+
+167
+00:04:34,033 --> 00:04:34,633
+company called Infosys.
+
+168
+00:04:34,633 --> 00:04:36,266
+So what should HR do? They need to
+
+169
+00:04:36,266 --> 00:04:37,266
+save employee details.
+
+170
+00:04:37,433 --> 00:04:38,666
+Employee details could be
+
+171
+00:04:38,700 --> 00:04:40,266
+first name, it could be last name,
+
+172
+00:04:40,433 --> 00:04:42,466
+it could be salary, and maybe Gmail
+
+173
+00:04:42,500 --> 00:04:44,000
+  So let's say,
+
+174
+00:04:44,233 --> 00:04:45,766
+I will create a first employee,
+
+175
+00:04:45,933 --> 00:04:47,133
+I will say employee one,
+
+176
+00:04:47,433 --> 00:04:48,933
+and I will put his first name
+
+177
+00:04:48,966 --> 00:04:52,266
+equal to Rahul. And then
+
+178
+00:04:52,300 --> 00:04:54,366
+I will create employee one,
+
+179
+00:04:54,500 --> 00:04:56,266
+last name equal to Sharma,
+
+180
+00:04:56,800 --> 00:04:58,966
+and then I will say employee one,
+
+181
+00:04:59,166 --> 00:05:01,200
+email equal to, we will use the same
+
+182
+00:05:01,233 --> 00:05:01,833
+formula,
+
+183
+00:05:01,833 --> 00:05:02,866
+which is basically first name plus
+
+184
+00:05:02,866 --> 00:05:04,466
+last name and @ company name,
+
+185
+00:05:04,466 --> 00:05:05,766
+basically. So I will
+
+186
+00:05:05,800 --> 00:05:06,900
+create a new employee, which is
+
+187
+00:05:06,900 --> 00:05:10,033
+Rahul dot Sharma at the red
+
+188
+00:05:10,033 --> 00:05:12,533
+Infosys dot com, and employee
+
+189
+00:05:12,566 --> 00:05:14,466
+one salary, we will take it as a
+
+190
+00:05:14,500 --> 00:05:16,533
+pay, which is basically 50,000,
+
+191
+00:05:16,866 --> 00:05:18,133
+let's say. So this is how
+
+192
+00:05:18,133 --> 00:05:20,666
+an HR can save an employee details.
+
+193
+00:05:20,833 --> 00:05:22,233
+It could be first name, last name,
+
+194
+00:05:22,433 --> 00:05:23,333
+and email, and pay.
+
+195
+00:05:23,600 --> 00:05:24,900
+So what if there is one more
+
+196
+00:05:24,933 --> 00:05:26,600
+employee? So what will you do then?
+
+197
+00:05:26,600 --> 00:05:27,500
+We will just keep it
+
+198
+00:05:27,533 --> 00:05:28,633
+as employee two, first name,
+
+199
+00:05:28,833 --> 00:05:29,833
+employee two, last name, employee
+
+200
+00:05:29,833 --> 00:05:30,933
+two, email, and employee
+
+201
+00:05:30,933 --> 00:05:32,433
+two, pay. So I will change the
+
+202
+00:05:32,433 --> 00:05:33,766
+details here like Priya,
+
+203
+00:05:33,933 --> 00:05:35,100
+and then maybe I will put it
+
+204
+00:05:35,100 --> 00:05:38,566
+as Patel, and then Priya dot Patel,
+
+205
+00:05:38,833 --> 00:05:42,266
+Priya dot Patel at the red Infosys
+
+206
+00:05:42,300 --> 00:05:43,066
+dot com, and
+
+207
+00:05:43,100 --> 00:05:44,466
+salary is 40,000, let's say.
+
+208
+00:05:44,800 --> 00:05:46,833
+So like this, I can save my employee
+
+209
+00:05:46,833 --> 00:05:48,200
+details, but what
+
+210
+00:05:48,200 --> 00:05:50,600
+if there are 200,000 employees?
+
+211
+00:05:53,266 --> 00:05:54,500
+So what will you do then?
+
+212
+00:05:54,866 --> 00:05:55,866
+So are you going to
+
+213
+00:05:55,866 --> 00:05:58,200
+sit and write these four lines of
+
+214
+00:05:58,200 --> 00:06:00,766
+code 200,000 times? You can't,
+
+215
+00:06:00,800 --> 00:06:01,400
+right? Even
+
+216
+00:06:01,400 --> 00:06:03,900
+if you do that, there is a lot of
+
+217
+00:06:03,900 --> 00:06:05,200
+chance that you are going to make a
+
+218
+00:06:05,233 --> 00:06:05,966
+mistake. So
+
+219
+00:06:05,966 --> 00:06:08,733
+what if at some point you messed up
+
+220
+00:06:08,766 --> 00:06:09,533
+this variable? Maybe the details
+
+221
+00:06:09,533 --> 00:06:10,433
+messed up. You
+
+222
+00:06:10,466 --> 00:06:11,600
+are going to change every single
+
+223
+00:06:11,600 --> 00:06:13,533
+thing, right? What if you need to
+
+224
+00:06:13,533 --> 00:06:14,133
+add some more
+
+225
+00:06:14,133 --> 00:06:15,166
+attributes, let's say,
+
+226
+00:06:15,266 --> 00:06:17,966
+employee one dot address or city?
+
+227
+00:06:18,333 --> 00:06:19,466
+City, I would say
+
+228
+00:06:19,500 --> 00:06:22,700
+Hyderabad. So now we want to add a
+
+229
+00:06:22,700 --> 00:06:25,133
+new attribute. So you have to go to
+
+230
+00:06:25,166 --> 00:06:25,766
+200,000
+
+231
+00:06:25,766 --> 00:06:27,600
+employees and add this line every
+
+232
+00:06:27,633 --> 00:06:29,066
+time, right? So it is not
+
+233
+00:06:29,066 --> 00:06:30,400
+sustainable. It is
+
+234
+00:06:30,433 --> 00:06:32,166
+not at all a production level.
+
+235
+00:06:32,700 --> 00:06:34,100
+So what will you do then?
+
+236
+00:06:34,100 --> 00:06:35,266
+So you can ask, why
+
+237
+00:06:35,266 --> 00:06:36,700
+can't I just use functions?
+
+238
+00:06:36,933 --> 00:06:38,166
+Functions you say, I can solve this
+
+239
+00:06:38,166 --> 00:06:38,900
+problem, right?
+
+240
+00:06:39,433 --> 00:06:40,866
+Yep, absolutely, you can use
+
+241
+00:06:40,900 --> 00:06:43,233
+functions. So what if I create a
+
+242
+00:06:43,266 --> 00:06:44,100
+function which is
+
+243
+00:06:44,100 --> 00:06:45,900
+called define, create an employee,
+
+244
+00:06:46,533 --> 00:06:49,333
+and it is going to take these
+
+245
+00:06:49,366 --> 00:06:49,966
+values, which
+
+246
+00:06:49,966 --> 00:06:51,800
+is basically first, last,
+
+247
+00:06:52,100 --> 00:06:54,433
+and pay. And then I will put it as
+
+248
+00:06:54,433 --> 00:06:55,533
+this one, and I
+
+249
+00:06:55,566 --> 00:06:56,533
+want to build my email.
+
+250
+00:06:56,600 --> 00:06:59,700
+Email is my summation of my first
+
+251
+00:06:59,700 --> 00:07:00,300
+employee
+
+252
+00:07:00,300 --> 00:07:01,633
+name and then the last name,
+
+253
+00:07:02,000 --> 00:07:04,200
+which has dot, and then after that,
+
+254
+00:07:04,200 --> 00:07:07,033
+so I will create f,
+
+255
+00:07:07,066 --> 00:07:11,200
+f string, and then I will say first
+
+256
+00:07:11,200 --> 00:07:14,633
+dot lower, and then dot,
+
+257
+00:07:16,400 --> 00:07:19,600
+and then dot here, and then last dot
+
+258
+00:07:19,600 --> 00:07:23,433
+lower at the rate in fosys.com.
+
+259
+00:07:24,800 --> 00:07:25,500
+And then
+
+260
+00:07:25,500 --> 00:07:28,833
+I can just return, I will return a
+
+261
+00:07:28,833 --> 00:07:30,166
+dictionary. I would say I will
+
+262
+00:07:30,166 --> 00:07:30,766
+create a
+
+263
+00:07:30,766 --> 00:07:31,600
+dictionary, which is basically
+
+264
+00:07:31,600 --> 00:07:33,733
+first, and then first,
+
+265
+00:07:34,133 --> 00:07:37,200
+and then last,
+
+266
+00:07:40,233 --> 00:07:43,100
+last, and
+
+267
+00:07:43,133 --> 00:07:46,400
+then email, which is my email
+
+268
+00:07:46,400 --> 00:07:49,200
+that we built here, and then which
+
+269
+00:07:49,200 --> 00:07:49,933
+is my pay.
+
+270
+00:07:50,433 --> 00:07:53,233
+I would say pay. So what are we
+
+271
+00:07:53,233 --> 00:07:54,800
+doing? We created a function like
+
+272
+00:07:54,833 --> 00:07:55,433
+this.
+
+273
+00:07:55,433 --> 00:07:56,566
+In this, it will take the first,
+
+274
+00:07:56,700 --> 00:07:58,900
+last, and pay. Then after that,
+
+275
+00:07:58,900 --> 00:07:59,500
+we are
+
+276
+00:07:59,500 --> 00:08:01,866
+creating the email based on my first
+
+277
+00:08:01,900 --> 00:08:03,600
+name and last name. After that,
+
+278
+00:08:03,600 --> 00:08:04,200
+we are
+
+279
+00:08:04,200 --> 00:08:04,900
+returning a dictionary,
+
+280
+00:08:05,133 --> 00:08:06,466
+which contains all the details of
+
+281
+00:08:06,500 --> 00:08:07,100
+the employee.
+
+282
+00:08:07,500 --> 00:08:10,433
+So employee details, I can just say
+
+283
+00:08:10,433 --> 00:08:11,733
+employee one equal to,
+
+284
+00:08:11,800 --> 00:08:12,533
+I can call this
+
+285
+00:08:12,533 --> 00:08:15,233
+one create employee, and then I can
+
+286
+00:08:15,233 --> 00:08:16,733
+pass these values, which is my
+
+287
+00:08:16,733 --> 00:08:17,333
+Rahul,
+
+288
+00:08:17,333 --> 00:08:18,066
+which is my first name,
+
+289
+00:08:18,300 --> 00:08:20,233
+and then I will provide my last
+
+290
+00:08:20,233 --> 00:08:21,233
+name, which is my
+
+291
+00:08:21,233 --> 00:08:23,466
+Sharma, and then I will provide my
+
+292
+00:08:23,466 --> 00:08:25,300
+pay, which is 50,000 rupees,
+
+293
+00:08:25,600 --> 00:08:26,533
+and then if
+
+294
+00:08:26,533 --> 00:08:28,533
+I print my email employee one,
+
+295
+00:08:28,533 --> 00:08:30,033
+I'm going to get all of these
+
+296
+00:08:30,033 --> 00:08:30,633
+details.
+
+297
+00:08:30,633 --> 00:08:32,866
+So let's execute this part and see
+
+298
+00:08:32,866 --> 00:08:35,200
+first name Rahul, last name Sharma,
+
+299
+00:08:35,466 --> 00:08:36,066
+email,
+
+300
+00:08:36,066 --> 00:08:37,866
+Rahul enforces, and then pay is 50
+
+301
+00:08:37,900 --> 00:08:40,800
+,000. So I can create my functions
+
+302
+00:08:40,800 --> 00:08:41,400
+and
+
+303
+00:08:41,400 --> 00:08:42,900
+I can manage as many as possible,
+
+304
+00:08:43,066 --> 00:08:44,133
+maybe 200,000 employees,
+
+305
+00:08:44,333 --> 00:08:45,033
+300,000
+
+306
+00:08:45,033 --> 00:08:47,166
+employees. Yeah, definitely.
+
+307
+00:08:47,600 --> 00:08:50,200
+But what if I want to increase my
+
+308
+00:08:50,200 --> 00:08:50,800
+salary to
+
+309
+00:08:50,800 --> 00:08:53,900
+my employees? So I can create one
+
+310
+00:08:53,900 --> 00:08:55,400
+more functions, maybe let's say
+
+311
+00:08:55,433 --> 00:08:58,466
+apply raise, and then it is going to
+
+312
+00:08:58,500 --> 00:09:00,100
+take what is my employee details,
+
+313
+00:09:00,833 --> 00:09:01,433
+and
+
+314
+00:09:01,433 --> 00:09:02,900
+then what is the percentage I am
+
+315
+00:09:02,933 --> 00:09:04,100
+going to increase the salary.
+
+316
+00:09:04,633 --> 00:09:07,533
+So I can put it here, and I can say
+
+317
+00:09:07,533 --> 00:09:10,166
+employee, and then I will just say
+
+318
+00:09:10,200 --> 00:09:10,800
+pay.
+
+319
+00:09:10,800 --> 00:09:12,466
+We are going to enhance or we are
+
+320
+00:09:12,500 --> 00:09:14,200
+going to edit the value of my pay,
+
+321
+00:09:14,200 --> 00:09:17,066
+which is basically
+
+322
+00:09:17,100 --> 00:09:20,366
+employee pay
+
+323
+00:09:22,333 --> 00:09:25,866
+into 1
+
+324
+00:09:25,866 --> 00:09:29,600
+plus percentage by
+
+325
+00:09:29,600 --> 00:09:30,233
+100.
+
+326
+00:09:30,700 --> 00:09:31,800
+So what are we doing here? We have
+
+327
+00:09:31,833 --> 00:09:33,000
+employee pay initially,
+
+328
+00:09:33,066 --> 00:09:34,100
+which is 50,000.
+
+329
+00:09:34,133 --> 00:09:35,833
+We are trying to access that
+
+330
+00:09:35,833 --> 00:09:37,233
+employee pay, and I take employee
+
+331
+00:09:37,266 --> 00:09:37,866
+pay
+
+332
+00:09:37,866 --> 00:09:40,366
+50,000 into how much percentage we
+
+333
+00:09:40,366 --> 00:09:40,966
+are increasing and how much
+
+334
+00:09:40,966 --> 00:09:41,566
+percentage
+
+335
+00:09:41,566 --> 00:09:43,000
+we are adding. And then if I just
+
+336
+00:09:43,000 --> 00:09:45,533
+say, after this, I will just call
+
+337
+00:09:45,566 --> 00:09:46,166
+this
+
+338
+00:09:46,166 --> 00:09:47,266
+function, which is apply raise,
+
+339
+00:09:48,033 --> 00:09:49,666
+and apply raise, I will provide my
+
+340
+00:09:49,700 --> 00:09:50,300
+employee
+
+341
+00:09:50,300 --> 00:09:51,233
+1 here instead of employee,
+
+342
+00:09:51,333 --> 00:09:52,666
+and I will put a percentage of 4
+
+343
+00:09:52,700 --> 00:09:53,300
+percent,
+
+344
+00:09:53,366 --> 00:09:55,533
+and if I just print employee 1,
+
+345
+00:09:56,066 --> 00:09:58,600
+it is going to give me the whole
+
+346
+00:09:58,600 --> 00:09:59,200
+thing
+
+347
+00:09:59,200 --> 00:10:00,533
+after the pay raise. If you look at
+
+348
+00:10:00,566 --> 00:10:01,700
+this one, initially we have
+
+349
+00:10:01,733 --> 00:10:03,666
+first name Rahul, last name Sharma,
+
+350
+00:10:03,900 --> 00:10:05,166
+and email RahulSharma at
+
+351
+00:10:05,166 --> 00:10:06,800
+the rightinfoces.com, and pay 50,000
+
+352
+00:10:06,833 --> 00:10:09,100
+is good. But once we applied
+
+353
+00:10:09,100 --> 00:10:10,900
+the raise of 4 percent,
+
+354
+00:10:11,300 --> 00:10:14,166
+the pay is 52,000. Now the thing is,
+
+355
+00:10:14,200 --> 00:10:16,866
+what if you want to change or you
+
+356
+00:10:16,866 --> 00:10:17,800
+want to add even better,
+
+357
+00:10:17,800 --> 00:10:19,666
+if you want to multiply more,
+
+358
+00:10:19,766 --> 00:10:20,700
+if you want to do more mathematics
+
+359
+00:10:20,733 --> 00:10:23,633
+operations, you can create multiple
+
+360
+00:10:23,633 --> 00:10:25,133
+functions. But the issue
+
+361
+00:10:25,133 --> 00:10:28,633
+is, these functions and the data are
+
+362
+00:10:28,666 --> 00:10:29,366
+disconnected.
+
+363
+00:10:30,533 --> 00:10:31,833
+Because you are calling all these
+
+364
+00:10:31,866 --> 00:10:34,000
+individually, there is no
+
+365
+00:10:34,000 --> 00:10:36,366
+one blueprint that says all these
+
+366
+00:10:36,400 --> 00:10:38,000
+should be connected.
+
+367
+00:10:38,000 --> 00:10:40,133
+So what is a class? A class is
+
+368
+00:10:40,133 --> 00:10:41,900
+basically a blueprint for
+
+369
+00:10:41,933 --> 00:10:43,100
+creating objects.
+
+370
+00:10:44,366 --> 00:10:45,966
+I need to save employee information
+
+371
+00:10:45,966 --> 00:10:48,433
+or all the things
+
+372
+00:10:48,433 --> 00:10:49,700
+I need to save in one place.
+
+373
+00:10:50,100 --> 00:10:51,600
+So for that, I can create a
+
+374
+00:11:03,500 --> 00:11:06,300
+employee details, you need to have a
+
+375
+00:11:06,300 --> 00:11:06,900
+blueprint,
+
+376
+00:11:07,133 --> 00:11:09,233
+and that blueprint is called a
+
+377
+00:11:09,266 --> 00:11:09,866
+class.
+
+378
+00:11:09,866 --> 00:11:12,133
+So to create a class, there is
+
+379
+00:11:12,133 --> 00:11:13,333
+something which is called
+
+380
+00:11:13,366 --> 00:11:15,466
+as class, and I will put it as
+
+381
+00:11:15,466 --> 00:11:18,033
+employee.
+
+382
+00:11:18,200 --> 00:11:20,266
+P -L -O -Y -E. So if you look at
+
+383
+00:11:20,266 --> 00:11:20,866
+this one,
+
+384
+00:11:20,866 --> 00:11:22,066
+and then I will put as a pass.
+
+385
+00:11:22,500 --> 00:11:23,533
+So what is this?
+
+386
+00:11:23,966 --> 00:11:27,933
+So class is basically a keyword in
+
+387
+00:11:27,933 --> 00:11:28,533
+Python,
+
+388
+00:11:28,666 --> 00:11:30,100
+and we will use it for creating
+
+389
+00:11:30,100 --> 00:11:30,700
+classes,
+
+390
+00:11:31,133 --> 00:11:33,266
+and employee is basically a class
+
+391
+00:11:33,266 --> 00:11:33,866
+name.
+
+392
+00:11:33,866 --> 00:11:35,600
+So class name, there are some rules.
+
+393
+00:11:35,833 --> 00:11:36,633
+You can use
+
+394
+00:11:36,666 --> 00:11:38,366
+something which is basically camel
+
+395
+00:11:38,366 --> 00:11:39,900
+case. So every
+
+396
+00:11:39,900 --> 00:11:40,933
+first important letter,
+
+397
+00:11:41,066 --> 00:11:42,566
+you will keep it in caps lock,
+
+398
+00:11:42,666 --> 00:11:43,600
+and second important letter,
+
+399
+00:11:43,733 --> 00:11:44,733
+you will keep it in caps lock.
+
+400
+00:11:45,166 --> 00:11:46,566
+Let's say a class is created,
+
+401
+00:11:46,566 --> 00:11:47,566
+which is Balaji Chippada.
+
+402
+00:11:47,966 --> 00:11:49,666
+So I can create Balaji,
+
+403
+00:11:50,200 --> 00:11:51,366
+and then C capital
+
+404
+00:11:51,366 --> 00:11:53,900
+Chippada. It is not like Balaji
+
+405
+00:11:53,900 --> 00:11:54,500
+underscore
+
+406
+00:11:54,500 --> 00:11:55,500
+Chippada functions names.
+
+407
+00:11:56,233 --> 00:11:57,333
+These are some rules
+
+408
+00:11:57,333 --> 00:11:58,566
+you can create some other things,
+
+409
+00:11:58,600 --> 00:12:00,433
+but it is always better to follow
+
+410
+00:12:00,466 --> 00:12:01,600
+the standard conventions.
+
+411
+00:12:02,533 --> 00:12:03,633
+How to create a class?
+
+412
+00:12:03,633 --> 00:12:05,033
+Using a keyword which is called
+
+413
+00:12:05,033 --> 00:12:06,800
+class, and then the class
+
+414
+00:12:06,800 --> 00:12:08,966
+name, and you follow this format,
+
+415
+00:12:09,000 --> 00:12:09,600
+and then
+
+416
+00:12:09,600 --> 00:12:11,433
+we are giving it as a pass for now,
+
+417
+00:12:11,466 --> 00:12:12,266
+because
+
+418
+00:12:12,266 --> 00:12:13,666
+code should be written inside,
+
+419
+00:12:13,666 --> 00:12:14,966
+but even if you don't write any
+
+420
+00:12:15,000 --> 00:12:15,600
+code,
+
+421
+00:12:15,600 --> 00:12:17,166
+Python will not give you an
+
+422
+00:12:17,166 --> 00:12:18,633
+execution error when you keep it
+
+423
+00:12:18,666 --> 00:12:20,833
+as pass. So that's why for creating
+
+424
+00:12:20,833 --> 00:12:21,533
+a default
+
+425
+00:12:21,533 --> 00:12:23,266
+class, we are keeping it as a pass
+
+426
+00:12:23,300 --> 00:12:23,900
+for now.
+
+427
+00:12:24,133 --> 00:12:26,266
+So we already have a class employee.
+
+428
+00:12:26,266 --> 00:12:29,600
+I will create an employee one,
+
+429
+00:12:29,866 --> 00:12:31,466
+and I will call this class,
+
+430
+00:12:31,500 --> 00:12:32,300
+which is basically
+
+431
+00:12:32,333 --> 00:12:34,733
+employee, and I need to provide this
+
+432
+00:12:34,733 --> 00:12:35,333
+instance.
+
+433
+00:12:35,500 --> 00:12:37,333
+And then if I want to create one
+
+434
+00:12:37,366 --> 00:12:38,366
+more employee, I can
+
+435
+00:12:38,400 --> 00:12:39,866
+just say employee two,
+
+436
+00:12:39,866 --> 00:12:42,266
+and I will just do employee,
+
+437
+00:12:42,266 --> 00:12:44,700
+and I will just do this.
+
+438
+00:12:44,700 --> 00:12:46,400
+Let's print both of these employee
+
+439
+00:12:46,400 --> 00:12:47,000
+ones.
+
+440
+00:12:47,000 --> 00:12:48,900
+Print employee one, and then also
+
+441
+00:12:48,900 --> 00:12:50,800
+print employee two,
+
+442
+00:12:50,866 --> 00:12:52,200
+and let's execute this.
+
+443
+00:12:52,233 --> 00:12:55,633
+And the output, it says
+
+444
+00:12:55,666 --> 00:12:58,266
+both employees are employee
+
+445
+00:12:58,266 --> 00:13:00,800
+object. So when you create an
+
+446
+00:13:00,833 --> 00:13:01,433
+employee one,
+
+447
+00:13:01,433 --> 00:13:03,300
+it's a variable. Using the class,
+
+448
+00:13:03,533 --> 00:13:04,400
+it is creating
+
+449
+00:13:04,400 --> 00:13:06,333
+an object of this class.
+
+450
+00:13:07,066 --> 00:13:07,666
+See, employee
+
+451
+00:13:07,666 --> 00:13:09,266
+object, and the location is at this
+
+452
+00:13:09,266 --> 00:13:10,266
+point, and employee two
+
+453
+00:13:10,300 --> 00:13:13,200
+is also creating an employee object,
+
+454
+00:13:13,233 --> 00:13:13,833
+and
+
+455
+00:13:13,833 --> 00:13:14,466
+it is at this location.
+
+456
+00:13:14,900 --> 00:13:16,766
+So they have different
+
+457
+00:13:16,766 --> 00:13:18,966
+memory addresses. They are unique
+
+458
+00:13:19,000 --> 00:13:19,700
+and separate
+
+459
+00:13:19,700 --> 00:13:21,700
+objects. And this is how you create
+
+460
+00:13:21,733 --> 00:13:22,866
+an instance of that
+
+461
+00:13:22,866 --> 00:13:24,300
+class using the class name.
+
+462
+00:13:24,733 --> 00:13:27,400
+So naturally, we are not having any
+
+463
+00:13:27,400 --> 00:13:28,000
+details
+
+464
+00:13:28,000 --> 00:13:29,566
+in the employee. So at the end of
+
+465
+00:13:29,566 --> 00:13:32,066
+we need to add the employee details.
+
+466
+00:13:32,066 --> 00:13:35,633
+So I can add the employee details
+
+467
+00:13:35,666 --> 00:13:38,533
+using dot. EMP one dot,
+
+468
+00:13:38,533 --> 00:13:39,966
+maybe let's say first,
+
+469
+00:13:39,966 --> 00:13:43,466
+and then I will keep it
+
+470
+00:13:43,466 --> 00:13:44,566
+as Rahul,
+
+471
+00:13:44,600 --> 00:13:47,833
+and EMP one dot last,
+
+472
+00:13:47,833 --> 00:13:50,433
+I will keep it as Sharma,
+
+473
+00:13:50,433 --> 00:13:53,900
+and then EMP one dot email,
+
+474
+00:13:53,933 --> 00:13:58,333
+I will keep it as Rahul dot
+
+475
+00:13:58,333 --> 00:13:59,633
+Sharma at the right
+
+476
+00:13:59,633 --> 00:14:02,466
+infosys dot com, and EMP one dot
+
+477
+00:14:02,500 --> 00:14:03,900
+pay,
+
+478
+00:14:03,900 --> 00:14:05,766
+which is basically
+
+479
+00:14:05,766 --> 00:14:09,000
+50,000 rupees.
+
+480
+00:14:09,033 --> 00:14:11,533
+And then let's print
+
+481
+00:14:11,566 --> 00:14:13,133
+EMP one dot email,
+
+482
+00:14:13,500 --> 00:14:16,333
+EMP one dot email.
+
+483
+00:14:16,800 --> 00:14:18,766
+So let's execute this,
+
+484
+00:14:19,300 --> 00:14:19,900
+and see,
+
+485
+00:14:19,900 --> 00:14:21,433
+Rahul dot Sharma at the right
+
+486
+00:14:21,433 --> 00:14:22,166
+infosys dot com.
+
+487
+00:14:22,766 --> 00:14:24,500
+If you look at this, VS code is
+
+488
+00:14:24,500 --> 00:14:25,200
+throwing an error.
+
+489
+00:14:25,333 --> 00:14:27,300
+It cannot assign to attribute first
+
+490
+00:14:27,300 --> 00:14:28,000
+for the class
+
+491
+00:14:28,033 --> 00:14:31,200
+because it is not a standard,
+
+492
+00:14:31,233 --> 00:14:32,566
+but if you look at the output,
+
+493
+00:14:32,700 --> 00:14:34,033
+it is not throwing any error
+
+494
+00:14:34,066 --> 00:14:35,500
+because it is not a standard,
+
+495
+00:14:35,866 --> 00:14:37,466
+but you can create
+
+496
+00:14:37,500 --> 00:14:38,766
+the details like this.
+
+497
+00:14:39,266 --> 00:14:39,866
+If I want to add employee two
+
+498
+00:14:39,866 --> 00:14:42,400
+details, I can just add like this
+
+499
+00:14:42,433 --> 00:14:44,433
+and I can access any of the employee
+
+500
+00:14:44,466 --> 00:14:45,066
+details,
+
+501
+00:14:45,066 --> 00:14:46,200
+employee two dot email.
+
+502
+00:14:46,666 --> 00:14:49,366
+If I want to access any of the
+
+503
+00:14:49,366 --> 00:14:49,966
+employee details,
+
+504
+00:14:49,966 --> 00:14:51,633
+I can execute this, and I can get
+
+505
+00:14:51,666 --> 00:14:52,566
+Rahul dot Sharma
+
+506
+00:14:52,566 --> 00:14:53,933
+and Priya dot Patel at the right
+
+507
+00:14:53,966 --> 00:14:55,033
+infosys dot com.
+
+508
+00:14:55,033 --> 00:14:56,666
+It is working fine, but it looks
+
+509
+00:14:56,700 --> 00:14:58,900
+terrible.
+
+510
+00:14:58,966 --> 00:15:01,200
+What is the use of the class?
+
+511
+00:15:01,200 --> 00:15:02,800
+You can create a class,
+
+512
+00:15:03,033 --> 00:15:06,833
+but if you are writing something
+
+513
+00:15:06,833 --> 00:15:07,433
+like this,
+
+514
+00:15:07,433 --> 00:15:09,066
+this is very terrible because what
+
+515
+00:15:09,066 --> 00:15:10,333
+if there are 200,000 employees
+
+516
+00:15:10,366 --> 00:15:12,533
+again, and it is going to throw the
+
+517
+00:15:12,533 --> 00:15:13,133
+same problems
+
+518
+00:15:13,133 --> 00:15:14,333
+it is going to repeatative
+
+519
+00:15:14,333 --> 00:15:15,566
+and it is not easy to maintain,
+
+520
+00:15:15,666 --> 00:15:17,000
+and there is no guarantee that you
+
+521
+00:15:17,033 --> 00:15:18,666
+will not make any mistakes,
+
+522
+00:15:18,666 --> 00:15:20,900
+and then it is always very
+
+523
+00:15:20,900 --> 00:15:21,500
+cumbersome.
+
+524
+00:15:21,500 --> 00:15:22,866
+It is not at all an ideal scenario.
+
+525
+00:15:23,800 --> 00:15:25,333
+So if you look at this one,
+
+526
+00:15:25,333 --> 00:15:26,933
+for every employee, what are we
+
+527
+00:15:26,966 --> 00:15:27,566
+saving?
+
+528
+00:15:27,566 --> 00:15:28,500
+We are saving the first name,
+
+529
+00:15:28,733 --> 00:15:29,733
+we are saving the last name,
+
+530
+00:15:29,866 --> 00:15:31,933
+and we are saving the email and the
+
+531
+00:15:31,933 --> 00:15:32,533
+pay.
+
+532
+00:15:32,533 --> 00:15:34,133
+So by default, we need all of these
+
+533
+00:15:34,166 --> 00:15:34,866
+things, right?
+
+534
+00:15:35,033 --> 00:15:36,633
+So is there any better way to save
+
+535
+00:15:36,633 --> 00:15:37,333
+all of these things?
+
+536
+00:15:37,466 --> 00:15:40,466
+Yes, that is where the main init
+
+537
+00:15:40,500 --> 00:15:41,900
+method will come into picture.
+
+538
+00:15:42,300 --> 00:15:44,266
+Within a class, you can write
+
+539
+00:15:44,266 --> 00:15:45,333
+methods.
+
+540
+00:15:45,333 --> 00:15:47,233
+So these methods are like basic
+
+541
+00:15:47,233 --> 00:15:47,833
+definitions,
+
+542
+00:15:47,866 --> 00:15:48,700
+like function definitions.
+
+543
+00:15:48,733 --> 00:15:51,033
+So I can just say define,
+
+544
+00:15:51,266 --> 00:15:52,366
+which is basically a keyword
+
+545
+00:15:52,366 --> 00:15:53,766
+on how you define functions in
+
+546
+00:15:53,766 --> 00:15:54,366
+Python.
+
+547
+00:15:54,566 --> 00:15:56,400
+I will say underscore underscore
+
+548
+00:15:56,433 --> 00:15:58,466
+init underscore underscore.
+
+549
+00:15:59,100 --> 00:16:00,700
+And within this, you provide
+
+550
+00:16:00,700 --> 00:16:01,300
+something
+
+551
+00:16:01,300 --> 00:16:02,833
+which is called as self by default.
+
+552
+00:16:02,833 --> 00:16:04,233
+What is this Self?
+
+553
+00:16:04,233 --> 00:16:05,166
+I will clarify what self means in
+
+554
+00:16:05,166 --> 00:16:05,766
+some time
+
+555
+00:16:05,766 --> 00:16:06,566
+because a lot of people have a lot
+
+556
+00:16:06,566 --> 00:16:07,166
+of doubts.
+
+557
+00:16:07,933 --> 00:16:09,633
+After this, we are going to take all
+
+558
+00:16:09,633 --> 00:16:10,233
+of these variables,
+
+559
+00:16:10,366 --> 00:16:12,500
+which is basically the first and the
+
+560
+00:16:12,500 --> 00:16:13,100
+last,
+
+561
+00:16:13,100 --> 00:16:14,366
+and then maybe let's say pay.
+
+562
+00:16:14,600 --> 00:16:16,100
+And the email, we will build it from
+
+563
+00:16:16,133 --> 00:16:16,733
+using first name
+
+564
+00:16:16,733 --> 00:16:17,833
+and last name.
+
+565
+00:16:17,833 --> 00:16:19,133
+And this init function of a
+
+566
+00:16:19,133 --> 00:16:20,266
+speciality is,
+
+567
+00:16:20,266 --> 00:16:22,200
+whenever you execute this class,
+
+568
+00:16:22,400 --> 00:16:23,966
+or whenever you create an instance
+
+569
+00:16:23,966 --> 00:16:25,100
+of this class,
+
+570
+00:16:25,100 --> 00:16:26,933
+this function is going to get
+
+571
+00:16:26,933 --> 00:16:28,666
+executed by default.
+
+572
+00:16:28,666 --> 00:16:29,833
+This init function.
+
+573
+00:16:29,833 --> 00:16:31,333
+So let me repeat.
+
+574
+00:16:31,333 --> 00:16:33,466
+Whenever you create an instance of a
+
+575
+00:16:33,466 --> 00:16:34,566
+class,
+
+576
+00:16:34,566 --> 00:16:36,066
+this function, which is basically
+
+577
+00:16:36,066 --> 00:16:37,000
+the init function,
+
+578
+00:16:37,166 --> 00:16:39,600
+is going to get executed by default.
+
+579
+00:16:39,600 --> 00:16:42,300
+Now this function is getting these
+
+580
+00:16:42,300 --> 00:16:42,900
+values,
+
+581
+00:16:42,900 --> 00:16:43,766
+which is basically first,
+
+582
+00:16:43,866 --> 00:16:45,266
+last, and pay.
+
+583
+00:16:45,266 --> 00:16:46,900
+And I am going to save all of those
+
+584
+00:16:46,933 --> 00:16:47,533
+things
+
+585
+00:16:47,533 --> 00:16:49,066
+inside these parameters.
+
+586
+00:16:50,166 --> 00:16:51,233
+To define these parameters,
+
+587
+00:16:51,233 --> 00:16:53,133
+you need to use self.
+
+588
+00:16:53,133 --> 00:16:56,133
+Self dot first equal to,
+
+589
+00:16:56,133 --> 00:16:58,300
+I will put it as first.
+
+590
+00:16:58,766 --> 00:17:00,233
+Sorry, I will put it as first.
+
+591
+00:17:00,733 --> 00:17:02,600
+What you can do here is,
+
+592
+00:17:02,633 --> 00:17:05,033
+here self is the important stuff.
+
+593
+00:17:05,300 --> 00:17:07,000
+Here self dot first is the variable
+
+594
+00:17:07,000 --> 00:17:07,833
+that we are assigning
+
+595
+00:17:07,833 --> 00:17:09,866
+and then we are giving the value as
+
+596
+00:17:09,866 --> 00:17:10,466
+first.
+
+597
+00:17:10,566 --> 00:17:12,933
+You can keep it as Balaji.
+
+598
+00:17:12,966 --> 00:17:14,466
+You can keep it as any kind of
+
+599
+00:17:14,466 --> 00:17:15,066
+variable name.
+
+600
+00:17:15,333 --> 00:17:16,700
+But as an industry standard,
+
+601
+00:17:17,033 --> 00:17:19,033
+it is always recommended to use the
+
+602
+00:17:19,033 --> 00:17:19,633
+same value
+
+603
+00:17:19,633 --> 00:17:21,000
+that you are providing here as the
+
+604
+00:17:21,033 --> 00:17:21,633
+variable name.
+
+605
+00:17:22,233 --> 00:17:25,066
+So it is easy to understand
+
+606
+00:17:25,066 --> 00:17:26,700
+what the industry is also doing.
+
+607
+00:17:27,300 --> 00:17:28,933
+After that, I will just do self dot
+
+608
+00:17:28,966 --> 00:17:29,566
+last.
+
+609
+00:17:29,566 --> 00:17:31,000
+I will get it as last.
+
+610
+00:17:31,533 --> 00:17:33,733
+And then I will just do self dot
+
+611
+00:17:33,733 --> 00:17:34,333
+pay.
+
+612
+00:17:34,333 --> 00:17:35,566
+I will get it as a pay.
+
+613
+00:17:35,600 --> 00:17:38,100
+So if I have to summarize how to
+
+614
+00:17:38,100 --> 00:17:38,833
+create a class,
+
+615
+00:17:39,366 --> 00:17:40,933
+this first one is called the
+
+616
+00:17:40,933 --> 00:17:41,533
+keyword,
+
+617
+00:17:41,533 --> 00:17:42,533
+which is called class keyword
+
+618
+00:17:42,566 --> 00:17:44,500
+that you have to use for defining a
+
+619
+00:17:44,533 --> 00:17:45,133
+class.
+
+620
+00:17:45,400 --> 00:17:47,233
+Then this is my class name.
+
+621
+00:17:48,033 --> 00:17:50,100
+And then inside this you have this
+
+622
+00:17:50,100 --> 00:17:50,800
+Dunder method,
+
+623
+00:17:50,900 --> 00:17:52,200
+which is the init method.
+
+624
+00:17:52,433 --> 00:17:53,433
+If function a more than that,
+
+625
+00:17:53,466 --> 00:17:55,300
+it will get executed by default.
+
+626
+00:17:55,833 --> 00:17:57,133
+Executed by default.
+
+627
+00:17:58,800 --> 00:18:00,600
+And it will take three parameters
+
+628
+00:18:00,600 --> 00:18:01,200
+right now.
+
+629
+00:18:01,200 --> 00:18:02,233
+One is the first name,
+
+630
+00:18:02,466 --> 00:18:03,866
+last name, and the salary.
+
+631
+00:18:03,866 --> 00:18:06,633
+And you are going to save those
+
+632
+00:18:06,633 --> 00:18:07,233
+three values
+
+633
+00:18:07,233 --> 00:18:07,833
+inside self dot first,
+
+634
+00:18:07,833 --> 00:18:09,400
+self dot last, and self dot pay.
+
+635
+00:18:09,766 --> 00:18:10,666
+So what did we do?
+
+636
+00:18:10,800 --> 00:18:12,433
+We created a class which is called
+
+637
+00:18:12,466 --> 00:18:13,066
+employee.
+
+638
+00:18:13,233 --> 00:18:14,566
+Inside this, we created the Dunder
+
+639
+00:18:14,566 --> 00:18:15,166
+method
+
+640
+00:18:15,166 --> 00:18:16,500
+and you created the instance of that
+
+641
+00:18:16,533 --> 00:18:17,133
+class
+
+642
+00:18:17,133 --> 00:18:18,500
+using a variable called employee1.
+
+643
+00:18:18,933 --> 00:18:20,166
+And we passed all of these details.
+
+644
+00:18:20,766 --> 00:18:22,333
+But the interesting stuff is,
+
+645
+00:18:22,900 --> 00:18:24,533
+when you create an instance like
+
+646
+00:18:24,533 --> 00:18:25,133
+this,
+
+647
+00:18:25,233 --> 00:18:26,433
+what Python does is,
+
+648
+00:18:26,500 --> 00:18:29,733
+this employee1 will be replaced
+
+649
+00:18:29,733 --> 00:18:31,100
+inside self animata.
+
+650
+00:18:31,566 --> 00:18:34,100
+So here, this will be employee1.
+
+651
+00:18:34,733 --> 00:18:36,466
+So when you create a new instance of
+
+652
+00:18:36,500 --> 00:18:37,300
+the same thing,
+
+653
+00:18:37,466 --> 00:18:38,166
+which may be, let's say,
+
+654
+00:18:38,333 --> 00:18:39,166
+employee2.jp,
+
+655
+00:18:39,566 --> 00:18:41,866
+that self will become the employee2.
+
+656
+00:18:42,066 --> 00:18:43,466
+And let's say employee,
+
+657
+00:18:45,100 --> 00:18:47,300
+and I will say priya,
+
+658
+00:18:47,533 --> 00:18:49,633
+and then I can do patel,
+
+659
+00:18:53,866 --> 00:18:56,500
+and I will get 40,000 salary and
+
+660
+00:18:56,533 --> 00:18:58,333
+then priya.
+
+661
+00:18:58,466 --> 00:19:00,400
+So when I execute this,
+
+662
+00:19:00,400 --> 00:19:03,200
+this self will be replaced with this
+
+663
+00:19:03,200 --> 00:19:03,900
+employee2.
+
+664
+00:19:04,100 --> 00:19:05,866
+So that is why self is mandatory.
+
+665
+00:19:06,100 --> 00:19:08,200
+So this will be acting as a
+
+666
+00:19:08,200 --> 00:19:09,100
+placeholder.
+
+667
+00:19:09,133 --> 00:19:10,766
+And whenever you are creating an
+
+668
+00:19:10,800 --> 00:19:12,300
+instance of that class,
+
+669
+00:19:12,333 --> 00:19:14,266
+this self will be replaced by this
+
+670
+00:19:14,300 --> 00:19:14,900
+internally
+
+671
+00:19:14,900 --> 00:19:16,966
+and you can access this as well.
+
+672
+00:19:17,066 --> 00:19:19,866
+Now if I want to print the details,
+
+673
+00:19:20,066 --> 00:19:23,000
+I can just do print employee1.last
+
+674
+00:19:23,033 --> 00:19:24,600
+and I can execute this.
+
+675
+00:19:24,600 --> 00:19:27,900
+And if I want to print employee1
+
+676
+00:19:27,933 --> 00:19:28,566
+.last,
+
+677
+00:19:29,033 --> 00:19:30,200
+and then if I want to print
+
+678
+00:19:30,200 --> 00:19:31,433
+employee2 first,
+
+679
+00:19:31,500 --> 00:19:33,633
+employee2.first,
+
+680
+00:19:34,033 --> 00:19:35,433
+and I can execute this,
+
+681
+00:19:35,566 --> 00:19:36,833
+and I get priya.
+
+682
+00:19:36,966 --> 00:19:38,400
+Now in our initial code,
+
+683
+00:19:38,566 --> 00:19:40,400
+we have different different lines of
+
+684
+00:19:40,433 --> 00:19:41,033
+code
+
+685
+00:19:41,033 --> 00:19:42,233
+for the same kind of purpose,
+
+686
+00:19:42,600 --> 00:19:44,566
+but when you create a class like
+
+687
+00:19:44,566 --> 00:19:45,166
+this,
+
+688
+00:19:45,166 --> 00:19:46,700
+you can reduce that point.
+
+689
+00:19:47,133 --> 00:19:48,333
+And the second question is,
+
+690
+00:19:48,633 --> 00:19:50,333
+what if I want to also create my
+
+691
+00:19:50,366 --> 00:19:50,966
+email?
+
+692
+00:19:51,166 --> 00:19:54,200
+I can create a variable here,
+
+693
+00:19:54,233 --> 00:19:55,533
+I will say email,
+
+694
+00:19:55,900 --> 00:19:57,733
+and I will build that email
+
+695
+00:19:57,733 --> 00:19:59,166
+using the first and last.
+
+696
+00:19:59,700 --> 00:20:02,800
+So here my first value is present
+
+697
+00:20:02,833 --> 00:20:04,300
+inside self.first.
+
+698
+00:20:04,566 --> 00:20:06,266
+Either I can use self.first
+
+699
+00:20:06,300 --> 00:20:08,066
+or maybe I can directly access
+
+700
+00:20:08,066 --> 00:20:08,666
+first.
+
+701
+00:20:08,733 --> 00:20:09,966
+So what do I do here?
+
+702
+00:20:10,066 --> 00:20:10,666
+By using f string,
+
+703
+00:20:11,433 --> 00:20:15,433
+I can put first.lower
+
+704
+00:20:17,366 --> 00:20:19,866
+.last
+
+705
+00:20:19,866 --> 00:20:22,833
+.lower
+
+706
+00:20:22,833 --> 00:20:25,466
+@ infosys.com.
+
+707
+00:20:25,466 --> 00:20:26,866
+Now what did we do?
+
+708
+00:20:26,933 --> 00:20:28,533
+We used our first name and last name
+
+709
+00:20:29,266 --> 00:20:31,066
+and created the email as well.
+
+710
+00:20:31,233 --> 00:20:32,933
+So if I want to access the email
+
+711
+00:20:32,966 --> 00:20:33,766
+of the first employee,
+
+712
+00:20:34,833 --> 00:20:35,866
+employee1.email,
+
+713
+00:20:35,900 --> 00:20:37,300
+I can directly access
+
+714
+00:20:37,300 --> 00:20:38,933
+because whenever you create
+
+715
+00:20:38,966 --> 00:20:40,033
+an instance of an object,
+
+716
+00:20:40,366 --> 00:20:42,266
+it is going to define all of these
+
+717
+00:20:42,266 --> 00:20:42,866
+things
+
+718
+00:20:42,866 --> 00:20:43,466
+by default.
+
+719
+00:20:43,466 --> 00:20:44,766
+And if I execute this,
+
+720
+00:20:45,333 --> 00:20:45,933
+see here,
+
+721
+00:20:46,000 --> 00:20:48,033
+sharma rahul.sharma at the rate in
+
+722
+00:20:48,033 --> 00:20:48,633
+infosys.com
+
+723
+00:20:48,666 --> 00:20:49,366
+So by default,
+
+724
+00:20:49,833 --> 00:20:51,233
+whenever I create an employee name,
+
+725
+00:20:52,133 --> 00:20:53,833
+I don't need to create my email.
+
+726
+00:20:54,000 --> 00:20:55,333
+This function will be creating
+
+727
+00:20:55,333 --> 00:20:56,833
+that email by default for me.
+
+728
+00:20:57,100 --> 00:20:58,700
+So this is much, much cleaner,
+
+729
+00:20:58,866 --> 00:20:59,466
+right?
+
+730
+00:20:59,466 --> 00:21:00,466
+And this is one line per employee.
+
+731
+00:21:00,733 --> 00:21:01,533
+If you look at this,
+
+732
+00:21:01,600 --> 00:21:02,933
+only one line per employee
+
+733
+00:21:02,933 --> 00:21:05,100
+and all the attributes like first
+
+734
+00:21:05,133 --> 00:21:05,733
+name,
+
+735
+00:21:05,733 --> 00:21:06,633
+last name, pay, email
+
+736
+00:21:06,633 --> 00:21:08,066
+are guaranteed to be set.
+
+737
+00:21:08,366 --> 00:21:09,766
+And now there is something
+
+738
+00:21:09,766 --> 00:21:11,166
+which is called as instance
+
+739
+00:21:11,166 --> 00:21:11,966
+variables, guys.
+
+740
+00:21:12,266 --> 00:21:13,733
+So what are instance variables?
+
+741
+00:21:14,300 --> 00:21:15,133
+What do we mean by instance?
+
+742
+00:21:15,300 --> 00:21:17,300
+Whenever you are calling a class,
+
+743
+00:21:17,466 --> 00:21:18,633
+that means you are creating
+
+744
+00:21:18,633 --> 00:21:19,833
+an instance of that class.
+
+745
+00:21:20,300 --> 00:21:23,133
+So employee1 is an instance of that
+
+746
+00:21:23,166 --> 00:21:23,766
+class
+
+747
+00:21:23,766 --> 00:21:25,100
+and employee2 is an instance
+
+748
+00:21:25,133 --> 00:21:25,966
+of that class.
+
+749
+00:21:26,066 --> 00:21:28,033
+So let's say I have this class
+
+750
+00:21:28,066 --> 00:21:29,833
+and I created two instance of that
+
+751
+00:21:29,833 --> 00:21:30,433
+class
+
+752
+00:21:30,433 --> 00:21:31,566
+which is basically employee1 and
+
+753
+00:21:31,600 --> 00:21:32,300
+employee2
+
+754
+00:21:32,300 --> 00:21:34,533
+and I can access employee1.first
+
+755
+00:21:34,566 --> 00:21:35,800
+and employee2.first
+
+756
+00:21:35,833 --> 00:21:37,500
+and I am going to get all of my
+
+757
+00:21:37,500 --> 00:21:38,100
+details.
+
+758
+00:21:38,333 --> 00:21:39,300
+So if I execute this,
+
+759
+00:21:39,533 --> 00:21:40,133
+see here,
+
+760
+00:21:40,133 --> 00:21:41,033
+rahul and priya.
+
+761
+00:21:41,233 --> 00:21:42,533
+Now the interesting stuff is
+
+762
+00:21:42,533 --> 00:21:44,933
+what if I want to change
+
+763
+00:21:44,966 --> 00:21:47,233
+the salary of the employee1?
+
+764
+00:21:47,466 --> 00:21:49,000
+So if I employee1.pay
+
+765
+00:21:49,033 --> 00:21:50,500
+which is basically our pay,
+
+766
+00:21:50,666 --> 00:21:52,133
+so we are going to change it to 8,50
+
+767
+00:21:52,133 --> 00:21:52,733
+,000
+
+768
+00:21:52,733 --> 00:21:53,400
+from the initial example
+
+769
+00:21:53,433 --> 00:21:54,666
+which is 8,00,000.
+
+770
+00:21:54,666 --> 00:21:56,233
+So if I do that
+
+771
+00:21:56,266 --> 00:21:57,500
+and if I print the pay,
+
+772
+00:21:57,600 --> 00:21:59,133
+it is going to update that
+
+773
+00:21:59,166 --> 00:22:00,866
+for that particular instance
+
+774
+00:22:00,866 --> 00:22:01,866
+only for employee1.
+
+775
+00:22:02,633 --> 00:22:04,366
+Employee2 value hasn't changed yet.
+
+776
+00:22:04,900 --> 00:22:06,300
+So if I go back here
+
+777
+00:22:06,333 --> 00:22:08,600
+and if I do the pencil stuff,
+
+778
+00:22:09,133 --> 00:22:09,833
+so what is happening here
+
+779
+00:22:09,866 --> 00:22:11,066
+you are creating an instance
+
+780
+00:22:11,066 --> 00:22:12,166
+of the employee1
+
+781
+00:22:12,200 --> 00:22:13,366
+and then you are creating
+
+782
+00:22:13,366 --> 00:22:14,600
+an instance of employee2
+
+783
+00:22:14,633 --> 00:22:16,566
+and then we are changing
+
+784
+00:22:16,566 --> 00:22:18,566
+the value of employee1 here.
+
+785
+00:22:18,566 --> 00:22:19,800
+So when you are changing
+
+786
+00:22:19,833 --> 00:22:22,033
+that particular employee1 value
+
+787
+00:22:22,066 --> 00:22:23,966
+which is the initial instance of the
+
+788
+00:22:23,966 --> 00:22:24,566
+class,
+
+789
+00:22:24,566 --> 00:22:25,800
+you are only going to affect
+
+790
+00:22:25,833 --> 00:22:26,766
+the employee1 instance.
+
+791
+00:22:26,933 --> 00:22:27,633
+Employee2 instance
+
+792
+00:22:27,633 --> 00:22:28,666
+is going to stay same
+
+793
+00:22:28,666 --> 00:22:29,600
+unless and until you make
+
+794
+00:22:29,633 --> 00:22:30,233
+the changes.
+
+795
+00:22:30,233 --> 00:22:32,300
+And this is also very important one.
+
+796
+00:22:32,633 --> 00:22:34,000
+So think of instance variables
+
+797
+00:22:34,000 --> 00:22:35,233
+like the information
+
+798
+00:22:35,266 --> 00:22:36,400
+on your Aadhaar card.
+
+799
+00:22:36,766 --> 00:22:37,966
+So eveyone has Aadhaar card
+
+800
+00:22:38,000 --> 00:22:38,900
+with the same class
+
+801
+00:22:38,933 --> 00:22:39,766
+but the name,
+
+802
+00:22:40,133 --> 00:22:40,733
+the detail,
+
+803
+00:22:40,800 --> 00:22:41,400
+the address,
+
+804
+00:22:41,633 --> 00:22:43,433
+all of them is going to be changed.
+
+805
+00:22:43,733 --> 00:22:44,833
+So that is why
+
+806
+00:22:45,366 --> 00:22:47,166
+it is very important to understand
+
+807
+00:22:47,166 --> 00:22:49,233
+when you change a particular values
+
+808
+00:22:49,866 --> 00:22:51,600
+in the particular local instances,
+
+809
+00:22:52,166 --> 00:22:53,066
+that particular instance
+
+810
+00:22:53,100 --> 00:22:54,000
+is going to get affected
+
+811
+00:22:54,000 --> 00:22:55,333
+but not the other ones.
+
+812
+00:22:56,100 --> 00:22:57,366
+Now what you have done is
+
+813
+00:22:57,366 --> 00:22:58,000
+now you have created
+
+814
+00:22:58,033 --> 00:22:59,900
+an instance employee1
+
+815
+00:22:59,933 --> 00:23:00,866
+and employee2.
+
+816
+00:23:01,033 --> 00:23:02,100
+What if you want to look
+
+817
+00:23:02,100 --> 00:23:02,933
+at all the details
+
+818
+00:23:02,966 --> 00:23:04,000
+of the instances.
+
+819
+00:23:04,666 --> 00:23:05,266
+So what you have done is
+
+820
+00:23:05,266 --> 00:23:06,866
+employee1 dot underscore
+
+821
+00:23:06,900 --> 00:23:07,933
+underscore dict
+
+822
+00:23:07,933 --> 00:23:08,533
+there is a method
+
+823
+00:23:08,533 --> 00:23:10,266
+it is an internal method
+
+824
+00:23:10,300 --> 00:23:11,066
+you don't need to worry
+
+825
+00:23:11,066 --> 00:23:11,666
+about that.
+
+826
+00:23:11,900 --> 00:23:13,000
+If you execute this
+
+827
+00:23:13,033 --> 00:23:14,500
+it is going to give you
+
+828
+00:23:14,500 --> 00:23:15,133
+all of the details
+
+829
+00:23:15,166 --> 00:23:15,766
+first name,
+
+830
+00:23:15,766 --> 00:23:16,500
+Rahul, last name,
+
+831
+00:23:16,633 --> 00:23:17,866
+Sharma pay 8 lakhs
+
+832
+00:23:17,866 --> 00:23:18,466
+and email is
+
+833
+00:23:18,466 --> 00:23:19,133
+Rahul dot Sharma
+
+834
+00:23:19,166 --> 00:23:20,433
+@infosys.com
+
+835
+00:23:20,433 --> 00:23:21,033
+That means
+
+836
+00:23:21,033 --> 00:23:23,166
+all the variables
+
+837
+00:23:23,166 --> 00:23:24,600
+So all of this
+
+838
+00:23:24,633 --> 00:23:25,233
+you will get
+
+839
+00:23:25,233 --> 00:23:25,900
+in a single dictionary
+
+840
+00:23:25,933 --> 00:23:26,633
+and that is what
+
+841
+00:23:26,633 --> 00:23:27,466
+this dictionary is.
+
+842
+00:23:27,766 --> 00:23:28,800
+Now the second topic
+
+843
+00:23:28,833 --> 00:23:29,700
+which is basically
+
+844
+00:23:29,700 --> 00:23:30,966
+the methods inside
+
+845
+00:23:30,966 --> 00:23:31,566
+a class.
+
+846
+00:23:31,666 --> 00:23:32,933
+Now you have created
+
+847
+00:23:32,933 --> 00:23:33,533
+two employees
+
+848
+00:23:34,100 --> 00:23:35,466
+what you want is
+
+849
+00:23:35,466 --> 00:23:36,266
+you want to print
+
+850
+00:23:36,300 --> 00:23:37,200
+the full name
+
+851
+00:23:37,200 --> 00:23:39,266
+print the full name
+
+852
+00:23:39,266 --> 00:23:40,333
+of the employee.
+
+853
+00:23:41,400 --> 00:23:42,133
+What you can do is
+
+854
+00:23:42,166 --> 00:23:43,466
+I can just do
+
+855
+00:23:43,466 --> 00:23:46,766
+print employee1 dot first
+
+856
+00:23:46,766 --> 00:23:48,066
+and then comma
+
+857
+00:23:48,100 --> 00:23:49,033
+and then I can put
+
+858
+00:23:49,066 --> 00:23:50,966
+employee1 dot last
+
+859
+00:23:50,966 --> 00:23:51,566
+and then I can put
+
+860
+00:23:51,600 --> 00:23:52,200
+and I can get
+
+861
+00:23:52,200 --> 00:23:52,833
+my full name
+
+862
+00:23:52,833 --> 00:23:53,600
+of my employee
+
+863
+00:23:53,600 --> 00:23:54,833
+which is Rahul Sharma
+
+864
+00:23:54,866 --> 00:23:55,900
+but how many times
+
+865
+00:23:55,900 --> 00:23:56,500
+do you create
+
+866
+00:23:56,500 --> 00:23:57,633
+what if there are
+
+867
+00:23:57,666 --> 00:23:58,500
+so many employees
+
+868
+00:23:58,533 --> 00:24:00,700
+so what you can do is
+
+869
+00:24:00,700 --> 00:24:01,700
+you can create
+
+870
+00:24:01,700 --> 00:24:03,033
+a custom method
+
+871
+00:24:03,066 --> 00:24:04,200
+method is basically
+
+872
+00:24:04,200 --> 00:24:05,000
+a definition
+
+873
+00:24:05,033 --> 00:24:06,000
+inside a class
+
+874
+00:24:06,000 --> 00:24:07,033
+maybe let's say
+
+875
+00:24:07,066 --> 00:24:08,000
+I want to create
+
+876
+00:24:08,000 --> 00:24:08,666
+a full name
+
+877
+00:24:08,666 --> 00:24:09,500
+I will create
+
+878
+00:24:09,533 --> 00:24:10,266
+a definition
+
+879
+00:24:10,266 --> 00:24:11,366
+of the class
+
+880
+00:24:11,400 --> 00:24:12,800
+and in this
+
+881
+00:24:12,800 --> 00:24:13,800
+by default
+
+882
+00:24:13,833 --> 00:24:14,700
+it is going to
+
+883
+00:24:14,700 --> 00:24:15,800
+take the parameter
+
+884
+00:24:15,833 --> 00:24:17,266
+which is basically self
+
+885
+00:24:17,266 --> 00:24:18,966
+then inside this
+
+886
+00:24:18,966 --> 00:24:19,900
+what I will do is
+
+887
+00:24:19,933 --> 00:24:20,766
+I will return
+
+888
+00:24:20,766 --> 00:24:21,566
+my full name
+
+889
+00:24:21,566 --> 00:24:22,433
+which is
+
+890
+00:24:23,866 --> 00:24:24,566
+here
+
+891
+00:24:24,566 --> 00:24:25,733
+I cannot directly
+
+892
+00:24:26,000 --> 00:24:26,700
+access first
+
+893
+00:24:27,233 --> 00:24:27,933
+because
+
+894
+00:24:27,933 --> 00:24:29,033
+I need to access
+
+895
+00:24:29,066 --> 00:24:29,766
+this as
+
+896
+00:24:29,766 --> 00:24:30,566
+the self dot first
+
+897
+00:24:30,566 --> 00:24:31,400
+because self
+
+898
+00:24:31,400 --> 00:24:32,366
+is very important
+
+899
+00:24:32,400 --> 00:24:33,233
+inside a class
+
+900
+00:24:33,266 --> 00:24:34,733
+and your employee1
+
+901
+00:24:34,733 --> 00:24:35,866
+is present in the self
+
+902
+00:24:35,866 --> 00:24:36,466
+right
+
+903
+00:24:36,466 --> 00:24:37,466
+so I can just do
+
+904
+00:24:37,500 --> 00:24:38,666
+self dot
+
+905
+00:24:38,666 --> 00:24:39,400
+first
+
+906
+00:24:39,400 --> 00:24:41,166
+and then space
+
+907
+00:24:41,200 --> 00:24:42,000
+I will just do
+
+908
+00:24:42,000 --> 00:24:43,233
+self dot last
+
+909
+00:24:43,233 --> 00:24:44,166
+if you don't want
+
+910
+00:24:44,166 --> 00:24:44,766
+how hard
+
+911
+00:24:44,766 --> 00:24:45,533
+it is
+
+912
+00:24:45,566 --> 00:24:47,433
+always remember this
+
+913
+00:24:47,433 --> 00:24:48,766
+whenever you are creating
+
+914
+00:24:48,800 --> 00:24:49,666
+any functions
+
+915
+00:24:49,666 --> 00:24:50,500
+or methods
+
+916
+00:24:50,500 --> 00:24:51,433
+inside a class
+
+917
+00:24:51,466 --> 00:24:52,500
+by default
+
+918
+00:24:52,500 --> 00:24:53,600
+the first parameter
+
+919
+00:24:53,600 --> 00:24:54,333
+is going to be
+
+920
+00:24:54,366 --> 00:24:54,966
+the self
+
+921
+00:24:54,966 --> 00:24:55,766
+and the
+
+922
+00:24:55,766 --> 00:24:56,466
+init and a method
+
+923
+00:24:56,500 --> 00:24:57,933
+you need to
+
+924
+00:24:57,933 --> 00:24:58,966
+create all the variables
+
+925
+00:24:58,966 --> 00:25:00,333
+using self dot and juby
+
+926
+00:25:00,366 --> 00:25:01,433
+and then whenever
+
+927
+00:25:01,433 --> 00:25:02,200
+you are accessing
+
+928
+00:25:02,200 --> 00:25:03,133
+those variables
+
+929
+00:25:03,166 --> 00:25:03,866
+inside the
+
+930
+00:25:03,866 --> 00:25:04,700
+particular class
+
+931
+00:25:04,700 --> 00:25:06,000
+always access
+
+932
+00:25:06,000 --> 00:25:07,100
+using the self method
+
+933
+00:25:07,100 --> 00:25:08,033
+self dot first
+
+934
+00:25:08,066 --> 00:25:08,733
+self dot last
+
+935
+00:25:08,733 --> 00:25:09,333
+directly access
+
+936
+00:25:09,333 --> 00:25:09,966
+that is how
+
+937
+00:25:10,000 --> 00:25:10,766
+I remember at least
+
+938
+00:25:10,766 --> 00:25:11,800
+and now
+
+939
+00:25:11,833 --> 00:25:12,766
+if I want to
+
+940
+00:25:12,766 --> 00:25:13,800
+get the
+
+941
+00:25:13,833 --> 00:25:14,433
+full name
+
+942
+00:25:14,433 --> 00:25:15,533
+I can just say
+
+943
+00:25:15,566 --> 00:25:16,766
+employee1 dot
+
+944
+00:25:16,766 --> 00:25:18,100
+I can call this
+
+945
+00:25:18,100 --> 00:25:18,700
+function
+
+946
+00:25:18,700 --> 00:25:19,933
+which is my full name
+
+947
+00:25:19,966 --> 00:25:20,933
+dot full name
+
+948
+00:25:20,966 --> 00:25:22,500
+and let's execute this
+
+949
+00:25:22,500 --> 00:25:23,433
+I mean
+
+950
+00:25:23,466 --> 00:25:24,133
+I need to
+
+951
+00:25:24,133 --> 00:25:24,900
+call it with the
+
+952
+00:25:24,900 --> 00:25:25,500
+parenthesis
+
+953
+00:25:25,500 --> 00:25:26,100
+and then
+
+954
+00:25:26,100 --> 00:25:27,000
+see
+
+955
+00:25:27,000 --> 00:25:28,000
+Rahul Sharma
+
+956
+00:25:28,000 --> 00:25:28,966
+we wanted to
+
+957
+00:25:29,000 --> 00:25:29,833
+print the full name
+
+958
+00:25:29,833 --> 00:25:30,533
+of an employee
+
+959
+00:25:30,566 --> 00:25:31,766
+so for that
+
+960
+00:25:31,800 --> 00:25:32,633
+we created a
+
+961
+00:25:32,633 --> 00:25:33,233
+method
+
+962
+00:25:33,233 --> 00:25:33,833
+this is called a
+
+963
+00:25:33,833 --> 00:25:35,000
+method inside a class
+
+964
+00:25:35,000 --> 00:25:35,700
+and
+
+965
+00:25:35,733 --> 00:25:36,366
+this method
+
+966
+00:25:36,400 --> 00:25:37,566
+is applicable
+
+967
+00:25:37,566 --> 00:25:38,933
+across all the
+
+968
+00:25:38,933 --> 00:25:39,866
+instance of the class
+
+969
+00:25:39,900 --> 00:25:40,966
+if I want to
+
+970
+00:25:40,966 --> 00:25:41,966
+print the employee2
+
+971
+00:25:42,000 --> 00:25:42,600
+full name
+
+972
+00:25:42,600 --> 00:25:43,700
+I can just do
+
+973
+00:25:43,700 --> 00:25:44,600
+employee2 dot
+
+974
+00:25:44,600 --> 00:25:45,233
+full name
+
+975
+00:25:45,233 --> 00:25:46,200
+and I can execute
+
+976
+00:25:46,233 --> 00:25:46,833
+this
+
+977
+00:25:46,833 --> 00:25:47,433
+I can get
+
+978
+00:25:47,433 --> 00:25:48,633
+Priya Patel 
+
+979
+00:25:48,633 --> 00:25:49,433
+let's say
+
+980
+00:25:49,433 --> 00:25:50,100
+I want to
+
+981
+00:25:50,133 --> 00:25:50,733
+increase the
+
+982
+00:25:50,733 --> 00:25:51,466
+pay of an employee
+
+983
+00:25:51,466 --> 00:25:52,500
+so I can create
+
+984
+00:25:52,533 --> 00:25:53,133
+one more
+
+985
+00:25:53,133 --> 00:25:53,733
+function
+
+986
+00:25:53,733 --> 00:25:54,333
+let's say
+
+987
+00:25:54,333 --> 00:25:54,933
+increase def
+
+988
+00:25:54,933 --> 00:25:55,533
+increase pay
+
+989
+00:25:56,100 --> 00:25:57,100
+increase pay
+
+990
+00:25:57,100 --> 00:25:58,133
+and I can say
+
+991
+00:25:58,166 --> 00:25:58,866
+self comma
+
+992
+00:25:58,866 --> 00:25:59,766
+I can take a value
+
+993
+00:25:59,800 --> 00:26:00,400
+which is called
+
+994
+00:26:00,400 --> 00:26:01,100
+percentage
+
+995
+00:26:01,100 --> 00:26:01,833
+and then
+
+996
+00:26:01,833 --> 00:26:02,433
+I need to
+
+997
+00:26:02,433 --> 00:26:03,033
+make the
+
+998
+00:26:03,033 --> 00:26:03,633
+modification
+
+999
+00:26:03,633 --> 00:26:04,733
+so I need to
+
+1000
+00:26:04,766 --> 00:26:05,400
+modify the
+
+1001
+00:26:05,400 --> 00:26:06,033
+pay dot value
+
+1002
+00:26:06,033 --> 00:26:06,633
+whether
+
+1003
+00:26:06,633 --> 00:26:07,433
+I can just say
+
+1004
+00:26:07,466 --> 00:26:08,533
+self dot pay
+
+1005
+00:26:08,533 --> 00:26:10,000
+equal to
+
+1006
+00:26:10,033 --> 00:26:11,066
+which is myself dot
+
+1007
+00:26:11,100 --> 00:26:12,566
+pay
+
+1008
+00:26:12,566 --> 00:26:13,166
+into
+
+1009
+00:26:13,166 --> 00:26:13,766
+maybe
+
+1010
+00:26:13,766 --> 00:26:14,600
+I will keep it as
+
+1011
+00:26:14,600 --> 00:26:15,200
+an integer
+
+1012
+00:26:15,200 --> 00:26:16,033
+I want to make it
+
+1013
+00:26:16,033 --> 00:26:16,633
+as a round
+
+1014
+00:26:16,633 --> 00:26:17,533
+and then
+
+1015
+00:26:17,533 --> 00:26:18,133
+I will
+
+1016
+00:26:18,133 --> 00:26:18,733
+into
+
+1017
+00:26:18,766 --> 00:26:20,166
+1 plus
+
+1018
+00:26:20,166 --> 00:26:21,100
+percentage
+
+1019
+00:26:23,100 --> 00:26:24,266
+by 100
+
+1020
+00:26:25,066 --> 00:26:25,900
+and then
+
+1021
+00:26:25,900 --> 00:26:26,700
+I just need to
+
+1022
+00:26:26,700 --> 00:26:27,433
+close this one
+
+1023
+00:26:27,466 --> 00:26:28,400
+I created
+
+1024
+00:26:28,433 --> 00:26:29,033
+one more
+
+1025
+00:26:29,033 --> 00:26:30,166
+method inside the
+
+1026
+00:26:30,200 --> 00:26:30,800
+class
+
+1027
+00:26:30,800 --> 00:26:32,166
+and if I need to
+
+1028
+00:26:32,166 --> 00:26:32,800
+make the
+
+1029
+00:26:32,800 --> 00:26:33,900
+change of a pay
+
+1030
+00:26:33,933 --> 00:26:34,766
+to an employee
+
+1031
+00:26:34,766 --> 00:26:35,866
+I can just call this
+
+1032
+00:26:35,900 --> 00:26:36,500
+class
+
+1033
+00:26:36,500 --> 00:26:37,433
+so let's say
+
+1034
+00:26:37,433 --> 00:26:38,233
+I create this first
+
+1035
+00:26:38,233 --> 00:26:38,833
+employee
+
+1036
+00:26:38,833 --> 00:26:39,766
+and I will just
+
+1037
+00:26:39,800 --> 00:26:41,133
+print my pay
+
+1038
+00:26:41,833 --> 00:26:42,433
+initially
+
+1039
+00:26:42,433 --> 00:26:43,466
+which is before my
+
+1040
+00:26:43,500 --> 00:26:44,100
+change
+
+1041
+00:26:44,100 --> 00:26:45,300
+and then once it is done
+
+1042
+00:26:45,300 --> 00:26:46,300
+I will call this
+
+1043
+00:26:46,333 --> 00:26:46,933
+function
+
+1044
+00:26:46,933 --> 00:26:48,266
+employee one dot
+
+1045
+00:26:48,666 --> 00:26:49,266
+increase pay
+
+1046
+00:26:49,266 --> 00:26:50,100
+and then I will
+
+1047
+00:26:50,100 --> 00:26:50,700
+provide
+
+1048
+00:26:50,700 --> 00:26:51,566
+what is my percentage
+
+1049
+00:26:51,600 --> 00:26:52,200
+maybe let's say
+
+1050
+00:26:52,200 --> 00:26:52,966
+4 percent I want to
+
+1051
+00:26:52,966 --> 00:26:53,566
+increase
+
+1052
+00:26:53,566 --> 00:26:54,966
+and I will just do
+
+1053
+00:26:54,966 --> 00:26:56,033
+the print of employee
+
+1054
+00:26:56,066 --> 00:26:56,833
+one dot pay
+
+1055
+00:26:56,833 --> 00:26:57,533
+after this
+
+1056
+00:26:57,566 --> 00:26:58,166
+increase
+
+1057
+00:26:58,166 --> 00:26:59,300
+and if I execute this
+
+1058
+00:26:59,300 --> 00:27:00,200
+initially it is
+
+1059
+00:27:00,233 --> 00:27:00,866
+8 lakhs
+
+1060
+00:27:00,900 --> 00:27:01,500
+and then
+
+1061
+00:27:01,500 --> 00:27:02,100
+8 lakhs
+
+1062
+00:27:02,100 --> 00:27:02,933
+which is basically
+
+1063
+00:27:02,933 --> 00:27:03,533
+4 percent
+
+1064
+00:27:03,566 --> 00:27:04,166
+increase
+
+1065
+00:27:04,166 --> 00:27:05,666
+so like this
+
+1066
+00:27:05,666 --> 00:27:06,600
+you can create
+
+1067
+00:27:06,600 --> 00:27:08,033
+multiple methods
+
+1068
+00:27:08,066 --> 00:27:09,300
+inside a class
+
+1069
+00:27:09,333 --> 00:27:10,666
+and all of these
+
+1070
+00:27:10,666 --> 00:27:11,266
+methods
+
+1071
+00:27:11,266 --> 00:27:12,300
+will be able to
+
+1072
+00:27:12,300 --> 00:27:12,900
+accessed
+
+1073
+00:27:12,900 --> 00:27:13,833
+by the instance
+
+1074
+00:27:13,866 --> 00:27:14,500
+that you created
+
+1075
+00:27:14,500 --> 00:27:15,333
+here
+
+1076
+00:27:15,366 --> 00:27:16,700
+what are we solving
+
+1077
+00:27:16,700 --> 00:27:17,800
+we have a
+
+1078
+00:27:17,800 --> 00:27:18,500
+particular class
+
+1079
+00:27:18,500 --> 00:27:19,100
+employee
+
+1080
+00:27:19,966 --> 00:27:21,666
+we are tying up
+
+1081
+00:27:21,666 --> 00:27:22,500
+every single
+
+1082
+00:27:22,533 --> 00:27:23,133
+thing
+
+1083
+00:27:23,133 --> 00:27:23,833
+inside this
+
+1084
+00:27:23,833 --> 00:27:26,800
+so this is what
+
+1085
+00:27:26,800 --> 00:27:27,400
+the class
+
+1086
+00:27:27,400 --> 00:27:28,100
+will solve
+
+1087
+00:27:28,133 --> 00:27:28,733
+the functions
+
+1088
+00:27:28,733 --> 00:27:29,500
+cannot do
+
+1089
+00:27:29,500 --> 00:27:30,133
+so functions
+
+1090
+00:27:30,166 --> 00:27:31,066
+you cannot have
+
+1091
+00:27:31,100 --> 00:27:31,800
+this linkage
+
+1092
+00:27:31,833 --> 00:27:34,066
+that classes and methods have
+
+1093
+00:27:34,100 --> 00:27:35,666
+before we close
+
+1094
+00:27:35,700 --> 00:27:36,300
+this call
+
+1095
+00:27:36,300 --> 00:27:37,500
+there are two ways
+
+1096
+00:27:37,500 --> 00:27:38,400
+to call
+
+1097
+00:27:38,433 --> 00:27:39,266
+a method
+
+1098
+00:27:39,266 --> 00:27:39,933
+actually
+
+1099
+00:27:39,966 --> 00:27:40,866
+I can just do
+
+1100
+00:27:40,866 --> 00:27:42,133
+employee one dot
+
+1101
+00:27:42,133 --> 00:27:42,966
+I can say
+
+1102
+00:27:43,000 --> 00:27:43,633
+increase pay
+
+1103
+00:27:43,633 --> 00:27:45,533
+I can call like this
+
+1104
+00:27:45,533 --> 00:27:46,266
+increase pay
+
+1105
+00:27:46,300 --> 00:27:47,033
+and I will provide
+
+1106
+00:27:47,033 --> 00:27:47,866
+what is the value
+
+1107
+00:27:47,866 --> 00:27:48,666
+or else
+
+1108
+00:27:48,666 --> 00:27:50,033
+I can call it
+
+1109
+00:27:50,066 --> 00:27:50,766
+with something
+
+1110
+00:27:50,766 --> 00:27:51,866
+by the
+
+1111
+00:27:51,866 --> 00:27:52,900
+class name itself
+
+1112
+00:27:52,900 --> 00:27:54,066
+I can say
+
+1113
+00:27:54,800 --> 00:27:55,433
+employee
+
+1114
+00:27:55,433 --> 00:27:56,133
+dot
+
+1115
+00:27:56,166 --> 00:27:57,000
+full name
+
+1116
+00:27:57,766 --> 00:27:58,666
+and then
+
+1117
+00:27:58,666 --> 00:27:59,266
+maybe
+
+1118
+00:27:59,266 --> 00:27:59,866
+let's say
+
+1119
+00:27:59,866 --> 00:28:00,466
+increase pay
+
+1120
+00:28:00,700 --> 00:28:01,466
+and then
+
+1121
+00:28:01,466 --> 00:28:02,200
+I will provide
+
+1122
+00:28:02,200 --> 00:28:02,900
+what is my
+
+1123
+00:28:02,933 --> 00:28:03,766
+employee one
+
+1124
+00:28:03,800 --> 00:28:04,400
+maybe
+
+1125
+00:28:04,400 --> 00:28:05,233
+let's say
+
+1126
+00:28:05,233 --> 00:28:07,666
+employee one
+
+1127
+00:28:07,666 --> 00:28:09,000
+employee one
+
+1128
+00:28:09,033 --> 00:28:09,633
+and then
+
+1129
+00:28:09,633 --> 00:28:10,233
+I will put it
+
+1130
+00:28:10,233 --> 00:28:10,866
+as four
+
+1131
+00:28:11,766 --> 00:28:12,366
+either
+
+1132
+00:28:12,366 --> 00:28:13,633
+I can increase
+
+1133
+00:28:13,666 --> 00:28:14,266
+the payment
+
+1134
+00:28:14,266 --> 00:28:14,866
+of an employee
+
+1135
+00:28:14,866 --> 00:28:15,666
+using the
+
+1136
+00:28:15,666 --> 00:28:16,266
+employee one
+
+1137
+00:28:16,266 --> 00:28:16,866
+instance
+
+1138
+00:28:16,866 --> 00:28:17,600
+that we created
+
+1139
+00:28:17,600 --> 00:28:18,600
+employee one
+
+1140
+00:28:18,600 --> 00:28:19,200
+dot
+
+1141
+00:28:19,200 --> 00:28:19,800
+increase pay
+
+1142
+00:28:19,800 --> 00:28:20,400
+and then
+
+1143
+00:28:20,400 --> 00:28:21,000
+how much percentage
+
+1144
+00:28:21,000 --> 00:28:21,600
+you want to
+
+1145
+00:28:21,600 --> 00:28:22,200
+increase
+
+1146
+00:28:22,200 --> 00:28:22,800
+or else
+
+1147
+00:28:22,800 --> 00:28:23,400
+I can call
+
+1148
+00:28:23,400 --> 00:28:24,733
+the class itself
+
+1149
+00:28:24,766 --> 00:28:25,500
+dot
+
+1150
+00:28:25,533 --> 00:28:26,500
+you call the method
+
+1151
+00:28:26,500 --> 00:28:27,300
+that we created
+
+1152
+00:28:27,300 --> 00:28:28,133
+and then
+
+1153
+00:28:28,166 --> 00:28:28,766
+we have to sell self
+
+1154
+00:28:28,766 --> 00:28:30,400
+that self is basically
+
+1155
+00:28:30,400 --> 00:28:31,566
+our employee one
+
+1156
+00:28:31,600 --> 00:28:32,200
+and then
+
+1157
+00:28:32,200 --> 00:28:33,033
+what is the percentage
+
+1158
+00:28:33,066 --> 00:28:34,033
+percentage is four
+
+1159
+00:28:34,066 --> 00:28:35,100
+and if I
+
+1160
+00:28:35,100 --> 00:28:35,833
+execute this
+
+1161
+00:28:35,866 --> 00:28:36,466
+again
+
+1162
+00:28:36,466 --> 00:28:37,400
+print employee one dot
+
+1163
+00:28:37,400 --> 00:28:38,000
+pay
+
+1164
+00:28:38,000 --> 00:28:38,733
+I am going to get
+
+1165
+00:28:38,766 --> 00:28:39,500
+all of these things
+
+1166
+00:28:39,500 --> 00:28:40,100
+initially
+
+1167
+00:28:40,100 --> 00:28:40,700
+8 lakhs
+
+1168
+00:28:40,700 --> 00:28:41,333
+then 8 lakhs
+
+1169
+00:28:41,366 --> 00:28:41,966
+is 32000
+
+1170
+00:28:41,966 --> 00:28:42,566
+and then
+
+1171
+00:28:42,566 --> 00:28:43,166
+8 lakhs
+
+1172
+00:28:43,166 --> 00:28:44,000
+is 99000
+
+1173
+00:28:44,000 --> 00:28:45,333
+so these are the
+
+1174
+00:28:45,333 --> 00:28:46,366
+basics of the class
+
+1175
+00:28:46,366 --> 00:28:48,166
+how to create
+
+1176
+00:28:48,166 --> 00:28:48,766
+a class
+
+1177
+00:28:48,766 --> 00:28:49,366
+inside the class
+
+1178
+00:28:49,366 --> 00:28:50,466
+what is self?
+
+1179
+00:28:50,466 --> 00:28:51,866
+how to declare variables
+
+1180
+00:28:51,866 --> 00:28:52,733
+how you can
+
+1181
+00:28:52,766 --> 00:28:53,866
+declare all of these things
+
+1182
+00:28:53,866 --> 00:28:54,466
+and then
+
+1183
+00:28:54,466 --> 00:28:55,166
+how you can create
+
+1184
+00:28:55,166 --> 00:28:55,866
+the methods
+
+1185
+00:28:55,866 --> 00:28:57,800
+so these are the basics
+
+1186
+00:28:57,800 --> 00:28:58,866
+if you go back
+
+1187
+00:28:58,900 --> 00:29:00,200
+to one of the code examples
+
+1188
+00:29:00,200 --> 00:29:01,033
+maybe let's say
+
+1189
+00:29:01,033 --> 00:29:01,633
+exceptions
+
+1190
+00:29:01,633 --> 00:29:03,366
+and if you look at this one
+
+1191
+00:29:03,400 --> 00:29:04,000
+here
+
+1192
+00:29:04,000 --> 00:29:04,600
+what is the example
+
+1193
+00:29:04,600 --> 00:29:05,800
+I created a class
+
+1194
+00:29:05,800 --> 00:29:06,866
+which is basically
+
+1195
+00:29:06,900 --> 00:29:07,566
+agent error
+
+1196
+00:29:07,566 --> 00:29:09,466
+we will learn about
+
+1197
+00:29:09,500 --> 00:29:10,100
+what is this
+
+1198
+00:29:10,100 --> 00:29:10,800
+which is called as
+
+1199
+00:29:10,800 --> 00:29:11,400
+inheritance
+
+1200
+00:29:11,400 --> 00:29:12,000
+in the later video
+
+1201
+00:29:12,000 --> 00:29:13,400
+so don't worry about that
+
+1202
+00:29:13,400 --> 00:29:15,433
+inside this
+
+1203
+00:29:15,933 --> 00:29:16,866
+we will learn
+
+1204
+00:29:16,866 --> 00:29:17,700
+all of these things
+
+1205
+00:29:17,700 --> 00:29:19,100
+what is super init?
+
+1206
+00:29:19,866 --> 00:29:20,466
+we will learn
+
+1207
+00:29:20,466 --> 00:29:21,066
+all of these things
+
+1208
+00:29:21,066 --> 00:29:21,666
+in detail
+
+1209
+00:29:21,666 --> 00:29:22,266
+so don't worry
+
+1210
+00:29:22,266 --> 00:29:22,866
+after that
+
+1211
+00:29:22,866 --> 00:29:23,466
+we have one more
+
+1212
+00:29:23,466 --> 00:29:24,066
+function
+
+1213
+00:29:24,066 --> 00:29:24,666
+and one more
+
+1214
+00:29:24,666 --> 00:29:25,266
+method
+
+1215
+00:29:25,266 --> 00:29:25,866
+and then
+
+1216
+00:29:25,866 --> 00:29:26,466
+there is one more
+
+1217
+00:29:26,466 --> 00:29:27,066
+class
+
+1218
+00:29:27,066 --> 00:29:27,666
+and there is one more
+
+1219
+00:29:27,666 --> 00:29:28,266
+class
+
+1220
+00:29:28,266 --> 00:29:28,866
+and then
+
+1221
+00:29:28,866 --> 00:29:29,466
+you can have
+
+1222
+00:29:29,466 --> 00:29:31,300
+different different types of 
+
+1223
+00:29:31,300 --> 00:29:33,066
+classes for each use case
+
+1224
+00:29:33,066 --> 00:29:33,933
+different methods
+
+1225
+00:29:33,933 --> 00:29:35,300
+inside each of these classes
+
+1226
+00:29:35,500 --> 00:29:36,600
+and in the next video
+
+1227
+00:29:36,633 --> 00:29:37,733
+we are going to learn
+
+1228
+00:29:37,733 --> 00:29:38,700
+which is called as
+
+1229
+00:29:38,700 --> 00:29:39,466
+class variables
+
+1230
+00:29:39,500 --> 00:29:40,400
+class variables
+
+1231
+00:29:40,400 --> 00:29:41,000
+ENT
+
+1232
+00:29:41,833 --> 00:29:42,800
+every single thing
+
+1233
+00:29:42,833 --> 00:29:43,733
+we are going to learn
+
+1234
+00:29:43,733 --> 00:29:44,600
+so don't worry
+
+1235
+00:29:44,633 --> 00:29:45,233
+on that part
+
+1236
+00:29:45,233 --> 00:29:46,666
+and stay tuned for the next one
+
+1237
+00:29:46,700 --> 00:29:47,600
+and next one will be
+
+1238
+00:29:47,600 --> 00:29:48,200
+on the Wednesday
+
+1239
+00:10:51,633 --> 00:10:54,766
+blueprint. If you want to build a
+
+1240
+00:10:54,800 --> 00:10:55,400
+house,
+
+1241
+00:10:55,500 --> 00:10:56,833
+before you construct the house,
+
+1242
+00:10:57,133 --> 00:10:58,466
+you will draw a blueprint,
+
+1243
+00:10:58,900 --> 00:11:00,600
+right? So this house should be like
+
+1244
+00:11:00,600 --> 00:11:01,200
+this,
+
+1245
+00:11:01,200 --> 00:11:01,800
+and how to construct it.
+
+1246
+00:11:02,300 --> 00:11:03,500
+Similarly, if you want to save
+

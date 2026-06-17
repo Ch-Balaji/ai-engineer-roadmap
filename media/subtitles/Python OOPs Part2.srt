@@ -1,0 +1,2568 @@
+1
+00:00:00,000 --> 00:00:01,700
+Hello guys, welcome back to the
+
+2
+00:00:01,700 --> 00:00:02,300
+channel.
+
+3
+00:00:02,300 --> 00:00:04,266
+So in this video, we will talk about
+
+4
+00:00:04,266 --> 00:00:06,700
+the oops concepts in Python part 2,
+
+5
+00:00:06,833 --> 00:00:08,566
+which are class variables.
+
+6
+00:00:08,566 --> 00:00:09,566
+If you haven't seen the previous
+
+7
+00:00:09,566 --> 00:00:12,166
+video, I will put that link in the
+
+8
+00:00:12,166 --> 00:00:13,666
+description below and also this
+
+9
+00:00:13,700 --> 00:00:14,300
+place.
+
+10
+00:00:14,300 --> 00:00:15,633
+So please go ahead and watch that
+
+11
+00:00:15,633 --> 00:00:17,566
+video and come back.
+
+12
+00:00:17,600 --> 00:00:18,700
+So in this video, we will learn
+
+13
+00:00:18,733 --> 00:00:20,233
+about class variables.
+
+14
+00:00:20,233 --> 00:00:21,533
+But before class variables,
+
+15
+00:00:21,533 --> 00:00:24,266
+I wanted to explain a common
+
+16
+00:00:24,300 --> 00:00:26,366
+situation where a lot of developers
+
+17
+00:00:26,400 --> 00:00:27,966
+will do the mistakes while doing the
+
+18
+00:00:27,966 --> 00:00:28,866
+classes.
+
+19
+00:00:28,866 --> 00:00:30,566
+And this mistake, you will not face
+
+20
+00:00:30,600 --> 00:00:32,400
+it when you are working alone.
+
+21
+00:00:32,400 --> 00:00:33,900
+This mistake you will face it when
+
+22
+00:00:33,933 --> 00:00:35,600
+you are working in a team and team
+
+23
+00:00:35,600 --> 00:00:37,866
+collaboration is the only mistake.
+
+24
+00:00:37,866 --> 00:00:39,466
+I will tell you how this mistake
+
+25
+00:00:39,466 --> 00:00:41,166
+will happen and I will also tell you
+
+26
+00:00:41,166 --> 00:00:42,800
+how to avoid this mistake.
+
+27
+00:00:42,800 --> 00:00:44,600
+So this is something that I am
+
+28
+00:00:44,600 --> 00:00:46,833
+sharing from my personal experience.
+
+29
+00:00:46,833 --> 00:00:48,333
+In the last video, we created this
+
+30
+00:00:48,333 --> 00:00:49,766
+class, which is basically an
+
+31
+00:00:49,800 --> 00:00:50,500
+employee class.
+
+32
+00:00:50,500 --> 00:00:52,666
+We have the init method and it takes
+
+33
+00:00:52,666 --> 00:00:54,133
+three variables, first,
+
+34
+00:00:54,133 --> 00:00:55,266
+last and pay.
+
+35
+00:00:55,266 --> 00:00:56,566
+And we know what is self and
+
+36
+00:00:56,566 --> 00:00:57,166
+everything.
+
+37
+00:00:57,166 --> 00:00:58,700
+And we derived an email from the
+
+38
+00:00:58,733 --> 00:01:00,666
+first dot lower and last dot lower.
+
+39
+00:01:00,666 --> 00:01:02,300
+And we have two different methods,
+
+40
+00:01:02,333 --> 00:01:03,966
+which is basically a full name and
+
+41
+00:01:03,966 --> 00:01:05,766
+the increase pay and increase pay
+
+42
+00:01:05,800 --> 00:01:06,633
+and in increse pay function
+
+43
+00:01:06,633 --> 00:01:08,633
+I made a small change where I put
+
+44
+00:01:08,633 --> 00:01:10,166
+the hard code value of one point
+
+45
+00:01:10,200 --> 00:01:11,800
+zero four last class low.
+
+46
+00:01:11,900 --> 00:01:14,766
+We put the value as percentage but I
+
+47
+00:01:14,766 --> 00:01:16,400
+removed that and I will tell you why
+
+48
+00:01:16,433 --> 00:01:17,100
+in some time.
+
+49
+00:01:17,100 --> 00:01:18,966
+So let's say there is an employee
+
+50
+00:01:18,966 --> 00:01:21,566
+class and you created an instance of
+
+51
+00:01:21,600 --> 00:01:23,366
+that class in the employee one by
+
+52
+00:01:23,366 --> 00:01:24,500
+passing the values.
+
+53
+00:01:24,500 --> 00:01:25,833
+Rahul one, Sharma one,
+
+54
+00:01:25,933 --> 00:01:27,666
+eight lakhs.
+
+55
+00:01:27,666 --> 00:01:29,666
+Now when you say print employee one
+
+56
+00:01:29,700 --> 00:01:31,800
+dot dict, it is going to give you
+
+57
+00:01:31,833 --> 00:01:32,533
+what are the details.
+
+58
+00:01:32,666 --> 00:01:33,700
+What is the first name, what is the
+
+59
+00:01:33,733 --> 00:01:35,166
+last name, what is the pay and what
+
+60
+00:01:35,166 --> 00:01:36,566
+is the email.
+
+61
+00:01:36,566 --> 00:01:38,233
+This class is created.
+
+62
+00:01:38,233 --> 00:01:41,300
+The next day, a person in your team
+
+63
+00:01:41,300 --> 00:01:44,000
+wants to update the salary of this
+
+64
+00:01:44,000 --> 00:01:44,866
+employee one instance.
+
+65
+00:01:44,866 --> 00:01:48,700
+So he wants to update it pay
+
+66
+00:01:48,733 --> 00:01:51,466
+equal to nine lakh rupees.
+
+67
+00:01:51,466 --> 00:01:55,500
+But he made a typo and put it as
+
+68
+00:01:55,500 --> 00:01:57,766
+PYA example.
+
+69
+00:01:57,766 --> 00:02:00,666
+So usually VS code is showing the
+
+70
+00:02:00,666 --> 00:02:02,366
+issue, but it will not throw issue
+
+71
+00:02:02,366 --> 00:02:03,500
+when you execute the code.
+
+72
+00:02:03,933 --> 00:02:05,466
+So let's say I will execute this
+
+73
+00:02:05,466 --> 00:02:07,033
+code.
+
+74
+00:02:07,033 --> 00:02:10,200
+The pay increase still has the eight
+
+75
+00:02:10,200 --> 00:02:12,066
+lakh rupees, but it is not throwing
+
+76
+00:02:12,066 --> 00:02:12,700
+any error.
+
+77
+00:02:12,733 --> 00:02:15,566
+But what if I print this employee
+
+78
+00:02:15,600 --> 00:02:17,900
+one dot dict after this one and
+
+79
+00:02:17,900 --> 00:02:20,300
+let's execute this and look at this
+
+80
+00:02:20,333 --> 00:02:20,933
+one.
+
+81
+00:02:20,933 --> 00:02:22,366
+Initially, we have the Rahul,
+
+82
+00:02:22,500 --> 00:02:24,033
+the last name is Sharma and pay
+
+83
+00:02:24,033 --> 00:02:25,533
+eight lakh rupees and email.
+
+84
+00:02:25,900 --> 00:02:30,066
+But it didn't update the
+
+85
+00:02:30,066 --> 00:02:31,366
+pay value because it didn't
+
+86
+00:02:31,400 --> 00:02:33,666
+recognize what is the spelling PYA.
+
+87
+00:02:33,666 --> 00:02:37,100
+And it added a new attribute to this
+
+88
+00:02:37,133 --> 00:02:39,466
+employee one instance with the new
+
+89
+00:02:39,466 --> 00:02:42,333
+typo that is created PYA.
+
+90
+00:02:42,333 --> 00:02:45,033
+So it should not have happend?
+
+91
+00:02:45,033 --> 00:02:47,033
+Now, Python inherently will not
+
+92
+00:02:47,033 --> 00:02:48,800
+throw any errors on this one because
+
+93
+00:02:48,833 --> 00:02:50,700
+Python thinks that we are all adults
+
+94
+00:02:50,700 --> 00:02:52,366
+and will not make any mistakes.
+
+95
+00:02:52,366 --> 00:02:55,300
+So when you create a new attribute
+
+96
+00:02:55,300 --> 00:02:57,700
+that is not present in the instance,
+
+97
+00:02:57,766 --> 00:02:59,933
+when you created this class,
+
+98
+00:02:59,933 --> 00:03:02,466
+then what Python will do is it will
+
+99
+00:03:02,500 --> 00:03:04,433
+create that attribute to this
+
+100
+00:03:04,433 --> 00:03:06,433
+particular instance as an additional
+
+101
+00:03:06,433 --> 00:03:07,033
+attribute.
+
+102
+00:03:07,033 --> 00:03:09,966
+That's why you can see that this is
+
+103
+00:03:09,966 --> 00:03:11,733
+coming at the last one here.
+
+104
+00:03:11,766 --> 00:03:13,566
+It's basically a typo,
+
+105
+00:03:13,566 --> 00:03:17,700
+but here the pay is still
+
+106
+00:03:17,700 --> 00:03:19,300
+eight lakh rupees, but not the
+
+107
+00:03:19,333 --> 00:03:20,000
+latest one.
+
+108
+00:03:20,266 --> 00:03:22,666
+OK, that is what it is happening.
+
+109
+00:03:22,666 --> 00:03:24,400
+So you think the pay has been
+
+110
+00:03:24,433 --> 00:03:27,033
+updated, but Python happily created
+
+111
+00:03:27,033 --> 00:03:29,533
+a new attribute and your code runs
+
+112
+00:03:29,533 --> 00:03:31,166
+properly and you'll not find any
+
+113
+00:03:31,166 --> 00:03:31,766
+issues.
+
+114
+00:03:31,766 --> 00:03:34,466
+And these are the kind of bugs that
+
+115
+00:03:34,466 --> 00:03:36,266
+are nightmare to debug for
+
+116
+00:03:36,266 --> 00:03:36,866
+developers.
+
+117
+00:03:36,866 --> 00:03:39,466
+And where else mistakes can happen
+
+118
+00:03:39,533 --> 00:03:42,033
+So maybe you created a list of
+
+119
+00:03:42,033 --> 00:03:43,633
+employees and a list low.
+
+120
+00:03:43,800 --> 00:03:45,200
+You have all the instance of all
+
+121
+00:03:45,200 --> 00:03:45,800
+these employees.
+
+122
+00:03:48,333 --> 00:03:51,433
+And then if I go to the first one,
+
+123
+00:03:51,966 --> 00:03:53,966
+which is basically the which is
+
+124
+00:03:53,966 --> 00:03:55,666
+basically the instance for the Rahul
+
+125
+00:03:55,666 --> 00:03:56,266
+Sharma.
+
+126
+00:03:56,333 --> 00:03:57,966
+And if I put something called as
+
+127
+00:03:57,966 --> 00:03:58,833
+department,
+
+128
+00:03:58,866 --> 00:04:02,000
+I am adding a new attribute again
+
+129
+00:04:02,000 --> 00:04:03,400
+and then I will put engineering.
+
+130
+00:04:05,300 --> 00:04:07,400
+What if I iterate through all of
+
+131
+00:04:07,433 --> 00:04:09,233
+these employees for employee in
+
+132
+00:04:09,233 --> 00:04:10,233
+employees
+
+133
+00:04:13,500 --> 00:04:16,600
+print employee department?
+
+134
+00:04:19,766 --> 00:04:21,600
+So when you execute this piece of
+
+135
+00:04:21,600 --> 00:04:22,200
+code,
+
+136
+00:04:23,133 --> 00:04:25,300
+so here what is happening initially
+
+137
+00:04:25,300 --> 00:04:27,433
+when you say this is this is my
+
+138
+00:04:27,466 --> 00:04:29,700
+employee one instance and this is my
+
+139
+00:04:29,700 --> 00:04:32,100
+employee two instance and you are
+
+140
+00:04:32,133 --> 00:04:33,633
+iterating through all of these
+
+141
+00:04:33,633 --> 00:04:34,233
+instances.
+
+142
+00:04:34,233 --> 00:04:36,766
+But merely employee one instance key
+
+143
+00:04:36,800 --> 00:04:37,966
+you create a new attribute
+
+144
+00:04:37,966 --> 00:04:38,600
+department,
+
+145
+00:04:38,633 --> 00:04:40,700
+but employee to key our department
+
+146
+00:04:40,733 --> 00:04:42,300
+and it led to because you didn't
+
+147
+00:04:42,300 --> 00:04:43,900
+have the department as an attribute
+
+148
+00:04:43,900 --> 00:04:44,833
+in your in it function.
+
+149
+00:04:44,833 --> 00:04:46,433
+So when you are iterating through
+
+150
+00:04:46,466 --> 00:04:48,533
+all of your employees and when you
+
+151
+00:04:48,533 --> 00:04:49,633
+are printing the department,
+
+152
+00:04:49,933 --> 00:04:51,833
+Its fine for first one
+
+153
+00:04:51,900 --> 00:04:54,366
+but second then key it will throw an
+
+154
+00:04:54,400 --> 00:04:56,600
+error because that attribute is not
+
+155
+00:04:56,600 --> 00:04:58,633
+present when you defined in the in
+
+156
+00:04:58,633 --> 00:04:59,233
+it.
+
+157
+00:04:59,233 --> 00:05:02,433
+So when you are working
+
+158
+00:05:02,466 --> 00:05:04,300
+in a team actually,
+
+159
+00:05:04,566 --> 00:05:06,833
+so how to fix this you learn to fix
+
+160
+00:05:06,833 --> 00:05:09,400
+there is something which is
+
+161
+00:05:09,433 --> 00:05:10,966
+basically called as slots.
+
+162
+00:05:11,300 --> 00:05:13,266
+So what are the slots?
+
+163
+00:05:13,700 --> 00:05:16,466
+So when you create this class at the
+
+164
+00:05:16,466 --> 00:05:17,066
+start,
+
+165
+00:05:17,700 --> 00:05:19,600
+underscore underscore slots
+
+166
+00:05:19,600 --> 00:05:22,466
+underscore underscore here equal to
+
+167
+00:05:22,500 --> 00:05:25,233
+you provide the list of attributes
+
+168
+00:05:25,233 --> 00:05:26,966
+that this class can accept.
+
+169
+00:05:27,000 --> 00:05:29,866
+Let's say first and then I will put
+
+170
+00:05:29,866 --> 00:05:32,966
+last and then I will put pay.
+
+171
+00:05:33,366 --> 00:05:34,866
+So what we are saying we are
+
+172
+00:05:34,866 --> 00:05:37,266
+enforcing the class such that
+
+173
+00:05:41,400 --> 00:05:44,733
+you can only have these attributes
+
+174
+00:05:44,766 --> 00:05:47,000
+but not any other attributes.
+
+175
+00:05:47,366 --> 00:05:49,766
+So let's try all of this right now
+
+176
+00:05:49,800 --> 00:05:51,266
+and let's do this.
+
+177
+00:05:51,266 --> 00:05:52,866
+The same code we are going to
+
+178
+00:05:52,900 --> 00:05:53,533
+execute again,
+
+179
+00:05:53,566 --> 00:05:55,300
+but after adding slots and matter
+
+180
+00:05:55,333 --> 00:05:57,700
+and if you execute this now,
+
+181
+00:05:57,800 --> 00:06:00,033
+look at the output say attribute
+
+182
+00:06:00,033 --> 00:06:02,433
+error employee object does not have
+
+183
+00:06:02,466 --> 00:06:03,066
+this attribute.
+
+184
+00:06:03,366 --> 00:06:05,566
+Initially when we don't have the
+
+185
+00:06:05,566 --> 00:06:06,166
+slots,
+
+186
+00:06:06,166 --> 00:06:07,666
+we didn't get any error and it
+
+187
+00:06:07,700 --> 00:06:09,333
+updates the dictionary of that
+
+188
+00:06:09,333 --> 00:06:10,233
+employee one instance.
+
+189
+00:06:10,500 --> 00:06:11,300
+But right now,
+
+190
+00:06:11,400 --> 00:06:13,033
+if you don't want to make those kind
+
+191
+00:06:13,033 --> 00:06:13,633
+of mistakes,
+
+192
+00:06:13,833 --> 00:06:16,333
+it's always recommended to use this
+
+193
+00:06:16,366 --> 00:06:17,166
+kind of slots,
+
+194
+00:06:17,200 --> 00:06:20,100
+which is enforcing the python to not
+
+195
+00:06:20,100 --> 00:06:22,166
+create more attributes which are not
+
+196
+00:06:22,166 --> 00:06:22,766
+necessary.
+
+197
+00:06:23,500 --> 00:06:26,633
+So this is enforcing python.
+
+198
+00:06:27,533 --> 00:06:28,866
+So when you are in a team or when
+
+199
+00:06:28,900 --> 00:06:29,900
+you work in a company,
+
+200
+00:06:30,033 --> 00:06:31,633
+this is very important.
+
+201
+00:06:31,700 --> 00:06:33,633
+This is what makes or breaks your
+
+202
+00:06:33,666 --> 00:06:34,666
+production code actually.
+
+203
+00:06:35,200 --> 00:06:37,200
+And then we will now talk about an
+
+204
+00:06:37,233 --> 00:06:38,766
+important concept which are called
+
+205
+00:06:38,800 --> 00:06:39,566
+class variables.
+
+206
+00:06:40,100 --> 00:06:41,500
+If you look at this in our code,
+
+207
+00:06:41,733 --> 00:06:43,133
+when we say increase pay,
+
+208
+00:06:43,600 --> 00:06:46,266
+here I did a hard code value of 1.04
+
+209
+00:06:47,100 --> 00:06:49,566
+By default, whenever I call this
+
+210
+00:06:49,600 --> 00:06:50,200
+function,
+
+211
+00:06:50,200 --> 00:06:52,433
+I am going to increase the salary by
+
+212
+00:06:52,433 --> 00:06:53,266
+4 percent.
+
+213
+00:06:54,033 --> 00:06:56,366
+But this is applicable for every
+
+214
+00:06:56,400 --> 00:06:58,166
+employee.
+
+215
+00:06:58,166 --> 00:06:59,600
+Because you are doing it for every
+
+216
+00:06:59,633 --> 00:07:00,933
+single time when you call this
+
+217
+00:07:00,933 --> 00:07:01,533
+function.
+
+218
+00:07:01,600 --> 00:07:04,700
+But what if the company decided to
+
+219
+00:07:04,700 --> 00:07:06,100
+not put only 4 percent,
+
+220
+00:07:06,100 --> 00:07:08,300
+but only 7 percent flat and wherever
+
+221
+00:07:08,300 --> 00:07:09,400
+you put 1.04,
+
+222
+00:07:09,533 --> 00:07:10,933
+I need this scale 1.07.
+
+223
+00:07:11,266 --> 00:07:12,766
+It is very cumbersome.
+
+224
+00:07:12,766 --> 00:07:15,400
+And then sometimes you want to give
+
+225
+00:07:15,400 --> 00:07:18,100
+specific arrays to specific
+
+226
+00:07:18,100 --> 00:07:18,700
+employees.
+
+227
+00:07:18,700 --> 00:07:19,933
+Maybe employee 1 gets 10 percent,
+
+228
+00:07:19,966 --> 00:07:21,300
+employee 2 gets 15 percent,
+
+229
+00:07:21,400 --> 00:07:22,533
+and remaining everyone gets 5
+
+230
+00:07:22,533 --> 00:07:23,133
+percent.
+
+231
+00:07:23,766 --> 00:07:26,900
+So doing this hard code is a very
+
+232
+00:07:26,900 --> 00:07:27,500
+bad option.
+
+233
+00:07:27,800 --> 00:07:30,033
+So that is where you will use
+
+234
+00:07:30,033 --> 00:07:31,833
+something called as class variable
+
+235
+00:07:31,833 --> 00:07:34,100
+and you define that class variable
+
+236
+00:07:34,133 --> 00:07:36,633
+just after the class definition.
+
+237
+00:07:37,000 --> 00:07:38,966
+You will not put that inside any
+
+238
+00:07:39,000 --> 00:07:39,600
+methods.
+
+239
+00:07:39,600 --> 00:07:41,633
+You will just put it something like
+
+240
+00:07:41,633 --> 00:07:42,233
+this.
+
+241
+00:07:42,233 --> 00:07:43,633
+Let's say I want to raise
+
+242
+00:07:43,633 --> 00:07:46,600
+percentage, raise percentage equal
+
+243
+00:07:46,633 --> 00:07:48,466
+to 1.04.
+
+244
+00:07:49,100 --> 00:07:51,833
+So this is a variable that we are
+
+245
+00:07:51,833 --> 00:07:53,500
+defining inside a class
+
+246
+00:07:53,500 --> 00:07:55,933
+and that is why we call it as a
+
+247
+00:07:55,966 --> 00:07:56,700
+class variable.
+
+248
+00:07:57,433 --> 00:07:58,033
+So what does this mean?
+
+249
+00:07:58,900 --> 00:08:01,000
+This class variable will be
+
+250
+00:08:01,000 --> 00:08:03,566
+applicable to all of these
+
+251
+00:08:03,600 --> 00:08:04,200
+instances.
+
+252
+00:08:04,700 --> 00:08:07,900
+If you create any employee instance,
+
+253
+00:08:07,900 --> 00:08:10,700
+you can access this pattern for
+
+254
+00:08:10,700 --> 00:08:11,300
+every employee instance.
+
+255
+00:08:11,300 --> 00:08:12,600
+So now you created this class
+
+256
+00:08:12,633 --> 00:08:13,233
+variable.
+
+257
+00:08:13,500 --> 00:08:14,500
+And now we have the hard code value
+
+258
+00:08:14,533 --> 00:08:15,233
+of 1.04.
+
+259
+00:08:16,633 --> 00:08:18,166
+We will change it with the class
+
+260
+00:08:18,200 --> 00:08:19,933
+variable which is basically raise
+
+261
+00:08:19,933 --> 00:08:20,766
+percentage.
+
+262
+00:08:21,900 --> 00:08:23,800
+And here VS Code is throwing a
+
+263
+00:08:23,800 --> 00:08:25,600
+warning because I don't know what
+
+264
+00:08:25,633 --> 00:08:26,233
+raise percentage is.
+
+265
+00:08:26,233 --> 00:08:28,366
+I need to put self.raisePercentage
+
+266
+00:08:28,366 --> 00:08:29,933
+because everything goes in the self.
+
+267
+00:08:30,133 --> 00:08:31,900
+I will talk about some differences
+
+268
+00:08:31,933 --> 00:08:33,833
+why it is self and why not a class.
+
+269
+00:08:34,100 --> 00:08:35,233
+We will talk about that so don't
+
+270
+00:08:35,233 --> 00:08:35,833
+worry.
+
+271
+00:08:36,066 --> 00:08:36,900
+So how do we put it?
+
+272
+00:08:36,933 --> 00:08:41,000
+Now let's create two instances
+
+273
+00:08:41,000 --> 00:08:41,900
+of these employees.
+
+274
+00:08:42,066 --> 00:08:45,300
+And then let's do this here and I
+
+275
+00:08:45,300 --> 00:08:46,200
+will create instance one
+
+276
+00:08:46,233 --> 00:08:48,400
+which is basically Rahul Sharma and
+
+277
+00:08:48,400 --> 00:08:50,566
+8 lakhs and then Priya Patel and 9
+
+278
+00:08:50,600 --> 00:08:51,400
+lakhs.
+
+279
+00:08:51,600 --> 00:08:54,800
+And then one of the thing is you can
+
+280
+00:08:54,800 --> 00:08:57,333
+access this class variable
+
+281
+00:08:57,333 --> 00:09:00,133
+using something by the class name
+
+282
+00:09:00,133 --> 00:09:02,733
+employee.raisePercentage.
+
+283
+00:09:02,733 --> 00:09:03,866
+So what we are doing?
+
+284
+00:09:04,500 --> 00:09:06,300
+We have this class which is our
+
+285
+00:09:06,300 --> 00:09:07,366
+employee class.
+
+286
+00:09:07,733 --> 00:09:09,466
+After that you are accessing this
+
+287
+00:09:09,500 --> 00:09:11,433
+class variable using the class name
+
+288
+00:09:11,433 --> 00:09:12,366
+dot the variable
+
+289
+00:09:12,400 --> 00:09:14,300
+and you will get 1.04.
+
+290
+00:09:15,000 --> 00:09:17,033
+After that here you are using self.
+
+291
+00:09:17,600 --> 00:09:19,733
+And what self means is whenever you
+
+292
+00:09:19,733 --> 00:09:21,833
+are creating an instance of a class
+
+293
+00:09:22,566 --> 00:09:25,166
+and employee one will be acting as
+
+294
+00:09:25,166 --> 00:09:25,766
+self.
+
+295
+00:09:25,866 --> 00:09:27,166
+And whenever you are creating a
+
+296
+00:09:27,200 --> 00:09:29,666
+second instance employee two will be
+
+297
+00:09:29,666 --> 00:09:30,266
+the self.
+
+298
+00:09:30,266 --> 00:09:32,300
+So that means if you want to access
+
+299
+00:09:32,300 --> 00:09:33,766
+the specific employee
+
+300
+00:09:33,800 --> 00:09:35,000
+.raisePercentage
+
+301
+00:09:35,000 --> 00:09:36,433
+you can do employee one
+
+302
+00:09:36,433 --> 00:09:38,066
+.raisePercentage and employee two
+
+303
+00:09:38,100 --> 00:09:39,300
+.raisePercentage.
+
+304
+00:09:39,500 --> 00:09:41,800
+So these three are saved by default
+
+305
+00:09:41,800 --> 00:09:45,000
+so I will get the output as 1.04.
+
+306
+00:09:45,533 --> 00:09:47,033
+Now let's execute the code and see
+
+307
+00:09:47,066 --> 00:09:47,666
+the output.
+
+308
+00:09:47,800 --> 00:09:50,933
+1.04, 1.04 and 1.04.
+
+309
+00:09:51,666 --> 00:09:52,433
+What can we do now?
+
+310
+00:09:52,600 --> 00:09:54,733
+I can apply this method by saying
+
+311
+00:09:54,733 --> 00:09:55,333
+increase pay.
+
+312
+00:09:55,333 --> 00:09:59,466
+So what I will do is I will say
+
+313
+00:09:59,500 --> 00:10:02,500
+employee one dot raisePercentage
+
+314
+00:10:02,500 --> 00:10:05,933
+and I will put this one and increase
+
+315
+00:10:05,933 --> 00:10:06,766
+pay not raisePercentage.
+
+316
+00:10:07,300 --> 00:10:11,300
+And then I can just print employee
+
+317
+00:10:11,333 --> 00:10:13,866
+one dot pay and if I execute this
+
+318
+00:10:13,900 --> 00:10:16,833
+it is going to create initially 8
+
+319
+00:10:16,833 --> 00:10:20,266
+lakhs and it is working perfectly
+
+320
+00:10:20,300 --> 00:10:20,900
+fine.
+
+321
+00:10:21,500 --> 00:10:22,733
+Now what we are going to do is we
+
+322
+00:10:22,733 --> 00:10:24,033
+will go one step deeper.
+
+323
+00:10:24,033 --> 00:10:26,500
+So we have class variable here.
+
+324
+00:10:26,533 --> 00:10:28,433
+After class variable we created the
+
+325
+00:10:28,433 --> 00:10:29,466
+instance of this employee
+
+326
+00:10:29,500 --> 00:10:31,300
+by using employee one and employee
+
+327
+00:10:31,333 --> 00:10:31,933
+two.
+
+328
+00:10:32,100 --> 00:10:34,033
+But before doing anything we are
+
+329
+00:10:34,033 --> 00:10:35,233
+just printing the attributes.
+
+330
+00:10:36,366 --> 00:10:40,266
+When you execute this first Rahul,
+
+331
+00:10:40,300 --> 00:10:42,133
+Sharma and pay and email came.
+
+332
+00:10:42,300 --> 00:10:44,800
+Priya, last and then pay came and
+
+333
+00:10:44,833 --> 00:10:45,433
+then email came.
+
+334
+00:10:45,733 --> 00:10:47,966
+But if you look at this here
+
+335
+00:10:48,000 --> 00:10:50,100
+raisePercentage is not there for
+
+336
+00:10:50,100 --> 00:10:51,466
+employee one but for employee two.
+
+337
+00:10:51,500 --> 00:10:55,233
+But when I access print employee
+
+338
+00:10:55,233 --> 00:10:57,433
+one, employee one dot
+
+339
+00:10:57,433 --> 00:10:58,633
+raisePercentage
+
+340
+00:10:58,633 --> 00:11:02,266
+let's execute this and getting 1.04
+
+341
+00:11:02,300 --> 00:11:03,400
+in the queue.
+
+342
+00:11:03,766 --> 00:11:04,666
+Why is it happening?
+
+343
+00:11:05,266 --> 00:11:07,833
+So when you create a class variable,
+
+344
+00:11:08,400 --> 00:11:10,666
+this class variable is going to get
+
+345
+00:11:10,700 --> 00:11:13,366
+applicable for every single thing.
+
+346
+00:11:13,366 --> 00:11:16,866
+So what if I will print something
+
+347
+00:11:16,900 --> 00:11:20,666
+which is employee dot
+
+348
+00:11:20,666 --> 00:11:23,700
+employee dot underscore underscore
+
+349
+00:11:23,700 --> 00:11:24,300
+dict.
+
+350
+00:11:24,900 --> 00:11:26,233
+So now let's look at all the
+
+351
+00:11:26,233 --> 00:11:28,766
+attributes that this class has.
+
+352
+00:11:31,866 --> 00:11:35,466
+Look, name, flash to pay and
+
+353
+00:11:35,500 --> 00:11:36,100
+raisePercentage.
+
+354
+00:11:37,266 --> 00:11:38,700
+Look, this dict has the
+
+355
+00:11:38,733 --> 00:11:40,200
+raisePercentage 1.04.
+
+356
+00:11:40,400 --> 00:11:41,233
+That means it is in the class.
+
+357
+00:11:42,066 --> 00:11:44,866
+So now when employee one dot dict
+
+358
+00:11:44,900 --> 00:11:46,633
+does not have this raisePercentage
+
+359
+00:11:47,233 --> 00:11:50,300
+how is this python finding this
+
+360
+00:11:50,333 --> 00:11:52,066
+employee one dot raisePercentage as
+
+361
+00:11:52,066 --> 00:11:53,033
+1.04?
+
+362
+00:11:53,966 --> 00:11:54,666
+Tell me.
+
+363
+00:11:54,766 --> 00:11:57,100
+So the issue is when you say the
+
+364
+00:11:57,133 --> 00:11:59,266
+first when you write employee one
+
+365
+00:11:59,266 --> 00:12:00,200
+dot raisePercentage
+
+366
+00:12:00,233 --> 00:12:04,366
+what python does is
+
+367
+00:12:04,400 --> 00:12:06,900
+in the first step it will try to
+
+368
+00:12:06,900 --> 00:12:10,833
+find out whether the employee
+
+369
+00:12:10,833 --> 00:12:13,833
+one dot underscore underscore dict
+
+370
+00:12:13,866 --> 00:12:16,100
+has this variable which is
+
+371
+00:12:16,100 --> 00:12:17,266
+raisePercentage.
+
+372
+00:12:18,033 --> 00:12:19,366
+Now if this raisePercentage is not
+
+373
+00:12:19,400 --> 00:12:21,933
+in employee one dot dict then it
+
+374
+00:12:21,933 --> 00:12:23,100
+will go to the second step
+
+375
+00:12:23,100 --> 00:12:26,800
+and it will look at whether this
+
+376
+00:12:26,800 --> 00:12:28,800
+raisePercentage
+
+377
+00:12:30,966 --> 00:12:34,166
+is under the class which is
+
+378
+00:12:34,166 --> 00:12:37,200
+basically employee dot underscore
+
+379
+00:12:37,200 --> 00:12:38,266
+underscore dict.
+
+380
+00:12:39,166 --> 00:12:43,066
+So if it is in this then you will
+
+381
+00:12:43,100 --> 00:12:44,533
+access that value directly.
+
+382
+00:12:45,100 --> 00:12:47,633
+If it is not in this then it will
+
+383
+00:12:47,633 --> 00:12:49,166
+throw an attribute error.
+
+384
+00:12:53,233 --> 00:12:55,366
+Now the second topic which is how to
+
+385
+00:12:55,400 --> 00:12:56,766
+override these class variables.
+
+386
+00:12:56,766 --> 00:12:59,466
+So by default the raisePercentage is
+
+387
+00:12:59,466 --> 00:13:02,900
+1.04 but what if I want to change
+
+388
+00:13:02,933 --> 00:13:04,833
+this value to maybe 1.07?
+
+389
+00:13:05,200 --> 00:13:07,700
+So I can directly change from the
+
+390
+00:13:07,700 --> 00:13:08,733
+class value itself.
+
+391
+00:13:08,966 --> 00:13:10,166
+I can say employee
+
+392
+00:13:11,966 --> 00:13:16,000
+dot raisePercentage equal to
+
+393
+00:13:16,033 --> 00:13:17,266
+1.07.
+
+394
+00:13:17,800 --> 00:13:20,566
+And if I print employee dot
+
+395
+00:13:20,566 --> 00:13:22,666
+raisePercentage this is going to
+
+396
+00:13:22,666 --> 00:13:25,700
+change it to 1.07.
+
+397
+00:13:25,733 --> 00:13:28,200
+But at the same time what if we will
+
+398
+00:13:28,233 --> 00:13:30,766
+do employee one dot raisePercentage
+
+399
+00:13:30,766 --> 00:13:32,300
+and then we will also print employee
+
+400
+00:13:32,333 --> 00:13:34,900
+two dot raisePercentage
+
+401
+00:13:34,933 --> 00:13:38,133
+and all of these will become 1.07 by
+
+402
+00:13:38,133 --> 00:13:38,766
+default.
+
+403
+00:13:39,366 --> 00:13:41,600
+Because we are changing at the root
+
+404
+00:13:41,633 --> 00:13:43,333
+level which is basically employee
+
+405
+00:13:43,366 --> 00:13:45,500
+dot raisePercentage is 1.07.
+
+406
+00:13:46,300 --> 00:13:49,566
+So can I change from the individual
+
+407
+00:13:49,566 --> 00:13:50,166
+level?
+
+408
+00:13:50,166 --> 00:13:54,000
+Yes, so now everything is set
+
+409
+00:13:54,033 --> 00:13:55,033
+to 1.07.
+
+410
+00:13:55,433 --> 00:13:57,666
+After this I will put employee one
+
+411
+00:13:57,700 --> 00:14:01,533
+dot raisePercentage and
+
+412
+00:14:01,566 --> 00:14:03,633
+I will put it as 1.15.
+
+413
+00:14:03,833 --> 00:14:06,100
+This means I am changing the
+
+414
+00:14:06,133 --> 00:14:07,500
+raisePercentage for a specific
+
+415
+00:14:07,500 --> 00:14:09,433
+employee instance but not every
+
+416
+00:14:09,433 --> 00:14:10,033
+single thing.
+
+417
+00:14:10,466 --> 00:14:12,100
+And then let me print all of this
+
+418
+00:14:12,133 --> 00:14:12,733
+here.
+
+419
+00:14:12,733 --> 00:14:14,700
+Now let's try to execute this.
+
+420
+00:14:14,733 --> 00:14:17,633
+Now look at it by default our class
+
+421
+00:14:17,633 --> 00:14:21,300
+has 1.07 and this is for 1.15 only
+
+422
+00:14:21,300 --> 00:14:22,966
+for a specific instance of employee
+
+423
+00:14:22,966 --> 00:14:24,400
+one that we did here.
+
+424
+00:14:24,766 --> 00:14:25,566
+Employee one dot raisePercentage
+
+425
+00:14:25,566 --> 00:14:26,600
+equal to 1.15.
+
+426
+00:14:27,133 --> 00:14:28,566
+And then the last class instance
+
+427
+00:14:28,600 --> 00:14:30,166
+which is employee two it is going to
+
+428
+00:14:30,166 --> 00:14:30,766
+stay same.
+
+429
+00:14:31,000 --> 00:14:33,433
+And after that you might get one
+
+430
+00:14:33,466 --> 00:14:34,133
+more doubt.
+
+431
+00:14:34,733 --> 00:14:35,866
+Sir we are accessing employee dot
+
+432
+00:14:35,866 --> 00:14:37,166
+raisePercentage.
+
+433
+00:14:37,466 --> 00:14:40,066
+So can I just say instead of self
+
+434
+00:14:40,066 --> 00:14:41,900
+can I do employee dot
+
+435
+00:14:41,933 --> 00:14:42,966
+raisePercentage?
+
+436
+00:14:42,966 --> 00:14:46,366
+Yes, you can absolutely do this but
+
+437
+00:14:46,366 --> 00:14:49,866
+you are always accessing this global
+
+438
+00:14:49,900 --> 00:14:52,233
+variable not the self instance
+
+439
+00:14:52,266 --> 00:14:52,866
+variable.
+
+440
+00:14:53,200 --> 00:14:56,033
+Self will always replace with the
+
+441
+00:14:56,066 --> 00:14:57,900
+instance that you created during the
+
+442
+00:14:57,900 --> 00:14:59,500
+class creation employee one and
+
+443
+00:14:59,500 --> 00:15:00,100
+employee two.
+
+444
+00:15:00,100 --> 00:15:02,633
+If you put self here you will access
+
+445
+00:15:02,666 --> 00:15:04,366
+and you will modify these individual
+
+446
+00:15:04,366 --> 00:15:04,966
+values.
+
+447
+00:15:05,166 --> 00:15:07,700
+Instead of self if you put employee
+
+448
+00:15:07,733 --> 00:15:09,833
+by default you are only accessing
+
+449
+00:15:09,833 --> 00:15:12,033
+this value which is default class
+
+450
+00:15:12,066 --> 00:15:13,500
+variable of this particular class.
+
+451
+00:15:13,966 --> 00:15:14,766
+So which one should I use?
+
+452
+00:15:14,833 --> 00:15:17,233
+I usually never use this because I
+
+453
+00:15:17,233 --> 00:15:18,833
+have the freedom to change the
+
+454
+00:15:18,833 --> 00:15:20,766
+individual classes and also the
+
+455
+00:15:20,800 --> 00:15:22,300
+freedom to change the global level
+
+456
+00:15:22,333 --> 00:15:23,366
+class variable as well.
+
+457
+00:15:23,366 --> 00:15:25,700
+So I prefer to keep it like this but
+
+458
+00:15:25,733 --> 00:15:27,833
+if you want you can keep it as an
+
+459
+00:15:27,833 --> 00:15:29,733
+employee dot raisePercentage as
+
+460
+00:15:29,733 --> 00:15:30,333
+well.
+
+461
+00:15:30,400 --> 00:15:31,666
+And maybe let's take one more
+
+462
+00:15:31,666 --> 00:15:34,433
+example which is let's say you are
+
+463
+00:15:34,466 --> 00:15:36,166
+creating employees every time and
+
+464
+00:15:36,166 --> 00:15:38,300
+you want to count how many employees
+
+465
+00:15:38,333 --> 00:15:39,800
+are present in your company.
+
+466
+00:15:40,200 --> 00:15:41,833
+So this number of employees concept
+
+467
+00:15:41,833 --> 00:15:44,233
+is applying on a company basis not
+
+468
+00:15:44,266 --> 00:15:45,333
+on an employee basis.
+
+469
+00:15:45,333 --> 00:15:47,366
+So I will create one more variable
+
+470
+00:15:47,366 --> 00:15:49,566
+which will say count equal to zero
+
+471
+00:15:49,600 --> 00:15:53,100
+and then whenever we are creating an
+
+472
+00:15:53,100 --> 00:15:55,066
+instance of this class by default
+
+473
+00:15:55,066 --> 00:15:57,666
+this is going to get executed.
+
+474
+00:15:57,666 --> 00:16:00,666
+So whenever I create an employee I
+
+475
+00:16:00,700 --> 00:16:03,133
+will increase my count count plus
+
+476
+00:16:03,133 --> 00:16:04,433
+equal to one.
+
+477
+00:16:04,433 --> 00:16:07,866
+So every time when I create this
+
+478
+00:16:07,866 --> 00:16:10,066
+employee instance it is going to
+
+479
+00:16:10,100 --> 00:16:11,733
+increase my count but I cannot
+
+480
+00:16:11,733 --> 00:16:13,833
+directly access count I will say
+
+481
+00:16:13,833 --> 00:16:16,966
+employee dot employee dot count.
+
+482
+00:16:17,333 --> 00:16:19,900
+And if I do this and if I print
+
+483
+00:16:19,933 --> 00:16:22,366
+after all of these things let's say
+
+484
+00:16:22,366 --> 00:16:25,866
+print employee dot
+
+485
+00:16:25,866 --> 00:16:29,466
+count employee dot count.
+
+486
+00:16:29,500 --> 00:16:33,500
+And if I execute this it will give
+
+487
+00:16:33,500 --> 00:16:34,933
+me an output of two.
+
+488
+00:16:36,200 --> 00:16:38,366
+So when I created the instance for
+
+489
+00:16:38,366 --> 00:16:40,433
+the first time so let's say so when
+
+490
+00:16:40,466 --> 00:16:42,400
+I call this for the first time it
+
+491
+00:16:42,400 --> 00:16:45,200
+goes here and the value is zero and
+
+492
+00:16:45,233 --> 00:16:46,733
+this will get initialized.
+
+493
+00:16:47,033 --> 00:16:50,666
+And it will create the email and
+
+494
+00:16:50,666 --> 00:16:53,100
+here you are updating the count as
+
+495
+00:16:53,133 --> 00:16:54,000
+plus one.
+
+496
+00:16:54,000 --> 00:16:55,733
+So initially when you created for
+
+497
+00:16:55,766 --> 00:16:57,500
+the employee one this value became
+
+498
+00:16:57,533 --> 00:17:00,333
+plus one and when you executed this
+
+499
+00:17:00,333 --> 00:17:02,633
+line the second line this value is
+
+500
+00:17:02,666 --> 00:17:03,566
+already plus one.
+
+501
+00:17:04,133 --> 00:17:05,833
+And when you execute this definition
+
+502
+00:17:05,833 --> 00:17:08,166
+again this plus one is going to add
+
+503
+00:17:08,166 --> 00:17:09,633
+one more plus one this will become
+
+504
+00:17:09,633 --> 00:17:11,600
+two and this count will become two
+
+505
+00:17:11,633 --> 00:17:12,866
+and that is what you are printing
+
+506
+00:17:12,866 --> 00:17:14,333
+here and this will give me the
+
+507
+00:17:14,366 --> 00:17:15,066
+output as two.
+
+508
+00:17:15,066 --> 00:17:17,500
+That is how the global variable
+
+509
+00:17:17,533 --> 00:17:20,133
+works and think about logically.
+
+510
+00:17:20,833 --> 00:17:22,666
+Now this employee count will be the
+
+511
+00:17:22,700 --> 00:17:23,300
+same for everyone.
+
+512
+00:17:24,066 --> 00:17:26,400
+It is not that I employee one count
+
+513
+00:17:26,400 --> 00:17:27,400
+separate employee two count
+
+514
+00:17:27,400 --> 00:17:28,000
+separate.
+
+515
+00:17:28,266 --> 00:17:31,000
+That is why it is always beneficial
+
+516
+00:17:31,000 --> 00:17:33,100
+to use that as a global class
+
+517
+00:17:33,100 --> 00:17:35,266
+variable rather than individual self
+
+518
+00:17:35,266 --> 00:17:35,866
+dot count.
+
+519
+00:17:36,366 --> 00:17:38,666
+Here I can technically do self dot
+
+520
+00:17:38,666 --> 00:17:39,266
+count.
+
+521
+00:17:40,166 --> 00:17:42,000
+But that doesn't make any sense.
+
+522
+00:17:42,300 --> 00:17:44,433
+Let me show you an example as well.
+
+523
+00:17:44,933 --> 00:17:46,833
+We will create one more attribute
+
+524
+00:17:46,833 --> 00:17:48,166
+which is like self dot count.
+
+525
+00:17:48,600 --> 00:17:49,833
+This is a very interesting use case
+
+526
+00:17:49,833 --> 00:17:51,633
+and let's see how it happens.
+
+527
+00:17:52,966 --> 00:17:55,466
+Whenever you are writing self self
+
+528
+00:17:55,466 --> 00:17:58,366
+is always this employee one and
+
+529
+00:17:58,366 --> 00:17:59,000
+employee two.
+
+530
+00:17:59,566 --> 00:18:01,600
+Because it is not from a class self
+
+531
+00:18:01,600 --> 00:18:04,000
+will always be replaced by the
+
+532
+00:18:04,033 --> 00:18:05,366
+instance that you are calling for.
+
+533
+00:18:05,366 --> 00:18:07,200
+So it could be employee one or
+
+534
+00:18:07,233 --> 00:18:07,833
+employee two.
+
+535
+00:18:07,966 --> 00:18:10,033
+But we have the global value which
+
+536
+00:18:10,033 --> 00:18:11,500
+is called as count as well.
+
+537
+00:18:14,033 --> 00:18:16,466
+Let's print employee dot count
+
+538
+00:18:16,500 --> 00:18:19,433
+employee dot count and then after
+
+539
+00:18:19,433 --> 00:18:22,733
+this I will also print employee one
+
+540
+00:18:22,766 --> 00:18:23,466
+dot count.
+
+541
+00:18:24,066 --> 00:18:25,400
+So what is happening here let's
+
+542
+00:18:25,433 --> 00:18:27,833
+execute this and the output into one
+
+543
+00:18:27,833 --> 00:18:28,433
+comma two.
+
+544
+00:18:28,666 --> 00:18:31,300
+So let's look at what is the output.
+
+545
+00:18:31,633 --> 00:18:33,933
+Here the output is one and here the
+
+546
+00:18:33,933 --> 00:18:34,766
+output is two.
+
+547
+00:18:34,800 --> 00:18:36,566
+Why it is one and two.
+
+548
+00:18:36,833 --> 00:18:38,066
+So this is a very interesting use
+
+549
+00:18:38,100 --> 00:18:38,700
+case guys.
+
+550
+00:18:38,700 --> 00:18:39,600
+So let's understand what is
+
+551
+00:18:39,633 --> 00:18:40,233
+happening.
+
+552
+00:18:40,266 --> 00:18:42,266
+So initially when you executed
+
+553
+00:18:42,266 --> 00:18:44,866
+employee Rahul Sharma and 8 lakhs
+
+554
+00:18:44,866 --> 00:18:47,300
+and here count value is zero.
+
+555
+00:18:47,866 --> 00:18:50,966
+And this will get executed and here
+
+556
+00:18:50,966 --> 00:18:52,866
+the initial value of count is zero
+
+557
+00:18:52,900 --> 00:18:54,500
+and you are adding plus one.
+
+558
+00:18:54,766 --> 00:18:56,300
+So this will become plus one.
+
+559
+00:18:57,566 --> 00:19:00,133
+After that you are looking self dot
+
+560
+00:19:00,133 --> 00:19:00,733
+count.
+
+561
+00:19:00,733 --> 00:19:02,433
+So self dot count what is happening
+
+562
+00:19:02,433 --> 00:19:03,033
+here.
+
+563
+00:19:03,033 --> 00:19:05,566
+So first python will look into
+
+564
+00:19:05,600 --> 00:19:08,233
+employee one dot underscore
+
+565
+00:19:08,233 --> 00:19:09,733
+underscore dip underscore
+
+566
+00:19:09,766 --> 00:19:10,466
+underscore.
+
+567
+00:19:10,966 --> 00:19:13,033
+Now if there is a count value in
+
+568
+00:19:13,033 --> 00:19:14,566
+this it will update that.
+
+569
+00:19:14,933 --> 00:19:17,433
+If there is no count value in this
+
+570
+00:19:17,433 --> 00:19:19,566
+then it will fall back to this count
+
+571
+00:19:19,566 --> 00:19:21,000
+which is the class count.
+
+572
+00:19:21,566 --> 00:19:24,300
+So we don't have this value so it is
+
+573
+00:19:24,300 --> 00:19:25,133
+already plus one.
+
+574
+00:19:26,066 --> 00:19:28,566
+You are making plus one and that
+
+575
+00:19:28,600 --> 00:19:30,933
+will become two and that is why
+
+576
+00:19:30,933 --> 00:19:32,833
+employee one dot count is becoming
+
+577
+00:19:32,833 --> 00:19:34,133
+two later on.
+
+578
+00:19:34,266 --> 00:19:35,666
+So it is a little bit confusing.
+
+579
+00:19:36,066 --> 00:19:39,400
+So it is better not to use this self
+
+580
+00:19:39,433 --> 00:19:40,766
+dot count if it is a global
+
+581
+00:19:40,766 --> 00:19:42,566
+operation that every employee or
+
+582
+00:19:42,600 --> 00:19:43,400
+every instance can have.
+
+583
+00:19:43,800 --> 00:19:45,533
+So these are all the common mistakes
+
+584
+00:19:45,533 --> 00:19:47,766
+that people usually do when creating
+
+585
+00:19:47,766 --> 00:19:48,800
+the class variables.
+
+586
+00:19:48,833 --> 00:19:51,933
+So our summary is whenever you have
+
+587
+00:19:51,933 --> 00:19:54,500
+a variable that is applicable to all
+
+588
+00:19:54,533 --> 00:19:56,866
+those are called class variables.
+
+589
+00:19:57,633 --> 00:19:59,900
+And you are going to define all of
+
+590
+00:19:59,933 --> 00:20:01,766
+these the moment you define your
+
+591
+00:20:01,766 --> 00:20:02,366
+class.
+
+592
+00:20:02,866 --> 00:20:04,533
+After that if there are any
+
+593
+00:20:04,533 --> 00:20:06,266
+variables or attributes that are
+
+594
+00:20:06,300 --> 00:20:08,266
+specific to a particular instance
+
+595
+00:20:08,266 --> 00:20:11,000
+these are called instance variables.
+
+596
+00:20:13,200 --> 00:20:15,300
+And each instance has its own copy
+
+597
+00:20:15,333 --> 00:20:17,500
+but these class variables cannot
+
+598
+00:20:17,500 --> 00:20:18,733
+have multiple copies.
+
+599
+00:20:18,766 --> 00:20:21,066
+So how to decide which one to use.
+
+600
+00:20:21,500 --> 00:20:22,400
+First you always ask a question
+
+601
+00:20:22,400 --> 00:20:25,600
+whether the variable we create is it
+
+602
+00:20:25,600 --> 00:20:27,100
+going to be different for every
+
+603
+00:20:27,133 --> 00:20:28,500
+instance or is it going to be same
+
+604
+00:20:28,500 --> 00:20:29,100
+for every instance.
+
+605
+00:20:29,533 --> 00:20:30,833
+If it is going to be same for every
+
+606
+00:20:30,833 --> 00:20:32,333
+instance use class variables if it
+
+607
+00:20:32,333 --> 00:20:33,933
+is not then use instance variables.
+
+608
+00:20:34,566 --> 00:20:36,400
+So now we will quickly jump back to
+
+609
+00:20:36,433 --> 00:20:37,600
+our resume builder code.
+
+610
+00:20:38,133 --> 00:20:39,933
+If you look at this class this class
+
+611
+00:20:39,933 --> 00:20:41,566
+is basically called as seniority
+
+612
+00:20:41,600 --> 00:20:42,200
+level.
+
+613
+00:20:42,200 --> 00:20:46,000
+Then we declared all of these which
+
+614
+00:20:46,000 --> 00:20:48,066
+are class variables shouldn't it
+
+615
+00:20:48,066 --> 00:20:49,066
+class initialization.
+
+616
+00:20:49,166 --> 00:20:51,666
+We have all of these values and then
+
+617
+00:20:51,666 --> 00:20:53,666
+we have something which are normal
+
+618
+00:20:53,666 --> 00:20:54,666
+instance variables as well.
+
+619
+00:20:54,666 --> 00:20:56,300
+But later on if you look at this one
+
+620
+00:20:56,300 --> 00:20:58,366
+which is pipeline step and even
+
+621
+00:20:58,400 --> 00:21:00,633
+these are all the class variables.
+
+622
+00:21:00,833 --> 00:21:02,566
+So now you are understanding what is
+
+623
+00:21:02,600 --> 00:21:04,233
+happening in this code step by step.
+
+624
+00:21:04,533 --> 00:21:05,466
+We still have something to
+
+625
+00:21:05,500 --> 00:21:07,700
+understand what is this thing and
+
+626
+00:21:07,700 --> 00:21:09,866
+the class inheritance and all of
+
+627
+00:21:09,900 --> 00:21:10,500
+those things.
+
+628
+00:21:10,500 --> 00:21:11,933
+And we will learn all of those
+
+629
+00:21:11,933 --> 00:21:13,066
+concepts in the next video.
+
+630
+00:21:13,400 --> 00:21:14,700
+So stay tuned for the next one which
+
+631
+00:21:14,700 --> 00:21:16,100
+is basically class inheritance.
+
+632
+00:21:16,533 --> 00:21:18,000
+And if you are enjoying the content
+
+633
+00:21:18,033 --> 00:21:19,566
+please subscribe and if you know
+
+634
+00:21:19,600 --> 00:21:21,100
+someone who wants to learn all of
+
+635
+00:21:21,100 --> 00:21:22,266
+these concepts in detail.
+
+636
+00:21:22,633 --> 00:21:24,033
+Please share it with them and if you
+
+637
+00:21:24,033 --> 00:21:25,066
+are learning something new.
+
+638
+00:21:25,366 --> 00:21:26,733
+Please also comment and if you have
+
+639
+00:21:26,733 --> 00:21:28,166
+any doubts at all and comment
+
+640
+00:21:28,200 --> 00:21:28,800
+change.
+
+641
+00:21:28,800 --> 00:21:29,900
+I will reply to each and every one
+
+642
+00:21:29,933 --> 00:21:30,533
+of the comment.
+

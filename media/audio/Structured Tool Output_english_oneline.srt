@@ -1,0 +1,2456 @@
+1
+00:00:00,000 --> 00:00:01,740
+Look at this, I am giving the same
+
+2
+00:00:01,740 --> 00:00:04,280
+prompt 3 times to the same model and
+
+3
+00:00:04,280 --> 00:00:06,100
+3 times it will give me different
+
+4
+00:00:06,100 --> 00:00:06,700
+answers
+
+5
+00:00:06,700 --> 00:00:07,700
+What is the prompt?
+
+6
+00:00:08,340 --> 00:00:09,800
+Summarize the customer request and
+
+7
+00:00:09,800 --> 00:00:10,860
+identify what they need
+
+8
+00:00:10,860 --> 00:00:11,820
+What is the request?
+
+9
+00:00:12,520 --> 00:00:13,920
+Hi, I was looking at your website
+
+10
+00:00:13,920 --> 00:00:15,660
+and I think I want to get some of
+
+11
+00:00:15,660 --> 00:00:17,240
+those Samsung phones for my team
+
+12
+00:00:17,240 --> 00:00:19,620
+Probably around 3 of them and I saw
+
+13
+00:00:19,620 --> 00:00:21,520
+they were listed at around 25000
+
+14
+00:00:21,520 --> 00:00:22,120
+each
+
+15
+00:00:22,120 --> 00:00:23,520
+But I am not sure if that includes
+
+16
+00:00:23,520 --> 00:00:24,320
+GST or not
+
+17
+00:00:24,320 --> 00:00:25,580
+Can you check if there is a bulk
+
+18
+00:00:25,580 --> 00:00:26,740
+discount or not
+
+19
+00:00:26,740 --> 00:00:29,240
+I am taking this prompt and passing
+
+20
+00:00:29,240 --> 00:00:31,020
+it to GPT-4o mini
+
+21
+00:00:31,020 --> 00:00:32,440
+And I am trying to print the
+
+22
+00:00:32,440 --> 00:00:33,260
+response as well
+
+23
+00:00:33,260 --> 00:00:35,040
+Here I am doing it for 3 different
+
+24
+00:00:35,040 --> 00:00:35,640
+times
+
+25
+00:00:35,640 --> 00:00:38,040
+So every time if you look at the
+
+26
+00:00:38,040 --> 00:00:39,800
+output it is going to change at
+
+27
+00:00:39,800 --> 00:00:41,120
+least some of it
+
+28
+00:00:41,120 --> 00:00:42,360
+Look at this, the customer is
+
+29
+00:00:42,360 --> 00:00:42,960
+interested in purchasing
+
+30
+00:00:42,960 --> 00:00:43,560
+approximately
+
+31
+00:00:43,560 --> 00:00:44,520
+This is the same in both
+
+32
+00:00:44,520 --> 00:00:46,720
+But look at this one
+
+33
+00:00:46,720 --> 00:00:48,740
+So for their team they would like to
+
+34
+00:00:48,740 --> 00:00:49,340
+confirm
+
+35
+00:00:49,340 --> 00:00:50,920
+Here for their team which are listed
+
+36
+00:00:50,920 --> 00:00:51,660
+at around
+
+37
+00:00:51,660 --> 00:00:53,500
+For their team and wants to confirm
+
+38
+00:00:53,500 --> 00:00:54,100
+the price
+
+39
+00:00:54,100 --> 00:00:57,180
+So even if our output intent is the
+
+40
+00:00:57,180 --> 00:00:57,780
+same
+
+41
+00:00:57,780 --> 00:01:00,340
+The exact wording will differ a lot
+
+42
+00:01:00,340 --> 00:01:02,140
+When you are giving the prompt to
+
+43
+00:01:02,140 --> 00:01:03,920
+the same LLM multiple times
+
+44
+00:01:03,920 --> 00:01:06,020
+Because LLMs are probabilistic in
+
+45
+00:01:06,020 --> 00:01:07,320
+nature and that is how they work
+
+46
+00:01:08,160 --> 00:01:11,100
+But a small mistake like this is
+
+47
+00:01:11,100 --> 00:01:13,180
+going to break your production code
+
+48
+00:01:13,180 --> 00:01:14,840
+When you are building multi -level
+
+49
+00:01:14,840 --> 00:01:15,440
+agents
+
+50
+00:01:15,440 --> 00:01:17,340
+And I am going to explain exactly
+
+51
+00:01:17,340 --> 00:01:18,200
+why it will break
+
+52
+00:01:18,200 --> 00:01:20,480
+And how to fix that in this entire
+
+53
+00:01:20,480 --> 00:01:21,080
+video
+
+54
+00:01:21,080 --> 00:01:22,440
+So let's get started
+
+55
+00:01:22,440 --> 00:01:24,460
+So let's say you are thinking of
+
+56
+00:01:24,460 --> 00:01:26,540
+building a travel booking agent in
+
+57
+00:01:26,540 --> 00:01:27,140
+your company
+
+58
+00:01:27,140 --> 00:01:27,740
+And the user's question is
+
+59
+00:01:27,960 --> 00:01:29,300
+I want to book a flight from
+
+60
+00:01:29,300 --> 00:01:31,020
+Rajahmundry to Hyderabad on 7th May
+
+61
+00:01:31,020 --> 00:01:33,480
+To build this solution you have
+
+62
+00:01:33,480 --> 00:01:34,540
+built 3 different agents
+
+63
+00:01:34,540 --> 00:01:37,800
+The first agent will try to fetch
+
+64
+00:01:37,800 --> 00:01:39,140
+the flight details if it is
+
+65
+00:01:39,140 --> 00:01:40,620
+available for your specific dates or
+
+66
+00:01:40,620 --> 00:01:41,220
+not
+
+67
+00:01:41,220 --> 00:01:42,620
+It will take the prompt from the
+
+68
+00:01:42,620 --> 00:01:44,340
+user and it will try to return you
+
+69
+00:01:44,340 --> 00:01:45,260
+something like this
+
+70
+00:01:45,260 --> 00:01:46,880
+I found a great Indigo flight on
+
+71
+00:01:46,880 --> 00:01:47,580
+Wednesday morning
+
+72
+00:01:47,580 --> 00:01:49,360
+It is around 5000 and leaves pretty
+
+73
+00:01:49,360 --> 00:01:50,460
+early from Hyderabad
+
+74
+00:01:50,460 --> 00:01:54,060
+At that time this output will be
+
+75
+00:01:54,060 --> 00:01:56,160
+acting as an input to the next agent
+
+76
+00:01:56,160 --> 00:01:57,740
+And the next agent is the flight
+
+77
+00:01:57,740 --> 00:01:58,600
+booking agent
+
+78
+00:01:58,600 --> 00:01:59,760
+What should the flight booking agent
+
+79
+00:01:59,760 --> 00:02:00,360
+do?
+
+80
+00:02:00,560 --> 00:02:01,980
+It needs to go to the Indigo
+
+81
+00:02:01,980 --> 00:02:02,580
+Airlines
+
+82
+00:02:02,580 --> 00:02:04,420
+After going there it needs to find
+
+83
+00:02:04,420 --> 00:02:05,660
+the details from Rajahmundry to
+
+84
+00:02:05,660 --> 00:02:06,260
+Hyderabad
+
+85
+00:02:06,260 --> 00:02:07,380
+It needs to fetch the flight details
+
+86
+00:02:07,380 --> 00:02:08,700
+and give it to the next agent
+
+87
+00:02:09,080 --> 00:02:11,180
+But if you think from this
+
+88
+00:02:11,180 --> 00:02:13,500
+information the second agent will be
+
+89
+00:02:13,500 --> 00:02:15,520
+able to communicate with the website
+
+90
+00:02:15,520 --> 00:02:16,160
+properly
+
+91
+00:02:16,160 --> 00:02:17,740
+Because I need to see the flight
+
+92
+00:02:17,740 --> 00:02:19,120
+number in this
+
+93
+00:02:19,120 --> 00:02:19,880
+And what is the date?
+
+94
+00:02:20,040 --> 00:02:21,480
+If it is around 5000 there will be a
+
+95
+00:02:21,480 --> 00:02:22,080
+lot of flights
+
+96
+00:02:22,080 --> 00:02:23,340
+Which specific flight I need to
+
+97
+00:02:23,340 --> 00:02:23,940
+take?
+
+98
+00:02:24,100 --> 00:02:25,060
+And from where should I departure?
+
+99
+00:02:25,820 --> 00:02:27,240
+So on the output of this first agent
+
+100
+00:02:28,580 --> 00:02:30,940
+There are a lot of things that are
+
+101
+00:02:30,940 --> 00:02:33,140
+dependent such that the next agent
+
+102
+00:02:33,140 --> 00:02:34,240
+can work properly
+
+103
+00:02:34,240 --> 00:02:36,200
+If the first agent's output doesn't
+
+104
+00:02:36,200 --> 00:02:36,800
+work properly
+
+105
+00:02:36,800 --> 00:02:38,860
+This will break itself right here
+
+106
+00:02:38,860 --> 00:02:40,660
+And it doesn't even go to the third
+
+107
+00:02:40,660 --> 00:02:41,960
+agent which is the payment agent
+
+108
+00:02:41,960 --> 00:02:45,360
+Now how can you make the agents
+
+109
+00:02:45,360 --> 00:02:47,020
+communicate properly between
+
+110
+00:02:47,020 --> 00:02:47,800
+multiple agents
+
+111
+00:02:47,800 --> 00:02:49,340
+Which is called A2A protocol
+
+112
+00:02:49,340 --> 00:02:51,940
+If you want to communicate reliably
+
+113
+00:02:51,940 --> 00:02:52,540
+like this
+
+114
+00:02:52,540 --> 00:02:54,960
+You need a reliable information or
+
+115
+00:02:54,960 --> 00:02:56,600
+output from every agent right?
+
+116
+00:02:56,960 --> 00:02:58,620
+So that is what we are going to
+
+117
+00:02:58,620 --> 00:02:59,340
+learn today
+
+118
+00:02:59,340 --> 00:03:01,980
+Which is enforcing the output of the
+
+119
+00:03:01,980 --> 00:03:03,280
+agents using JSON Schema
+
+120
+00:03:03,280 --> 00:03:06,260
+Now let's assume what if the first
+
+121
+00:03:06,260 --> 00:03:08,000
+agent returns output like this
+
+122
+00:03:08,000 --> 00:03:09,940
+Airlines mo indigo, flight number mo
+
+123
+00:03:09,940 --> 00:03:11,220
+60233
+
+124
+00:03:11,220 --> 00:03:12,780
+And date mo e, date to departure,
+
+125
+00:03:12,940 --> 00:03:14,480
+Hyderabad, Bangalore, price,
+
+126
+00:03:14,620 --> 00:03:15,480
+number of seats left
+
+127
+00:03:15,800 --> 00:03:17,760
+If such information is there
+
+128
+00:03:17,760 --> 00:03:19,400
+The second agent can take all of
+
+129
+00:03:19,400 --> 00:03:20,740
+this information properly
+
+130
+00:03:20,740 --> 00:03:22,280
+And it can fill in all of your
+
+131
+00:03:22,280 --> 00:03:22,880
+details
+
+132
+00:03:22,880 --> 00:03:24,400
+And this can be sent to the third
+
+133
+00:03:24,400 --> 00:03:25,000
+agent
+
+134
+00:03:25,000 --> 00:03:26,260
+And your tickets will be booked
+
+135
+00:03:26,780 --> 00:03:27,460
+Isn't it?
+
+136
+00:03:27,660 --> 00:03:29,960
+And even second agent will also need
+
+137
+00:03:29,960 --> 00:03:32,140
+to output in the proper JSON format
+
+138
+00:03:32,640 --> 00:03:34,760
+Then if this output doesn't change
+
+139
+00:03:34,760 --> 00:03:36,480
+even if you do multiple LLM calls
+
+140
+00:03:36,480 --> 00:03:38,880
+Then your complete multi -agent
+
+141
+00:03:38,880 --> 00:03:41,840
+orchestration will not break even in
+
+142
+00:03:41,840 --> 00:03:42,780
+the worst case scenarios
+
+143
+00:03:43,040 --> 00:03:44,520
+So what is our overall learning?
+
+144
+00:03:45,200 --> 00:03:46,820
+Let's say we have the first agent
+
+145
+00:03:46,820 --> 00:03:50,860
+This agent will always define the
+
+146
+00:03:50,860 --> 00:03:52,380
+output in the format of JSON
+
+147
+00:03:52,380 --> 00:03:55,220
+No matter how many times you execute
+
+148
+00:03:55,220 --> 00:03:55,820
+this agent
+
+149
+00:03:55,820 --> 00:03:57,680
+This output should be the same
+
+150
+00:03:57,680 --> 00:03:59,080
+As shown in the starting
+
+151
+00:03:59,080 --> 00:04:00,960
+Output should not change or at least
+
+152
+00:04:00,960 --> 00:04:02,640
+the output format should not change
+
+153
+00:04:02,640 --> 00:04:05,540
+And this output you will pass it as
+
+154
+00:04:05,540 --> 00:04:06,960
+an input to the next agent
+
+155
+00:04:06,960 --> 00:04:09,220
+And this agent consumes that input
+
+156
+00:04:09,840 --> 00:04:11,780
+Even this will give you the next
+
+157
+00:04:11,780 --> 00:04:13,680
+output which is in the JSON format
+
+158
+00:04:13,680 --> 00:04:16,500
+So this is also consistent every
+
+159
+00:04:16,500 --> 00:04:17,880
+time even when the agent runs
+
+160
+00:04:17,880 --> 00:04:18,800
+multiple times
+
+161
+00:04:18,800 --> 00:04:20,340
+And you will pass this agent output
+
+162
+00:04:20,340 --> 00:04:22,480
+to the third agent
+
+163
+00:04:22,480 --> 00:04:24,240
+And third agent will also give you
+
+164
+00:04:24,240 --> 00:04:26,060
+the output in the proper JSON format
+
+165
+00:04:26,060 --> 00:04:27,680
+No matter how many agents you have
+
+166
+00:04:27,680 --> 00:04:28,960
+Whether it is sequential or parallel
+
+167
+00:04:28,960 --> 00:04:32,160
+The only thing is you need to build
+
+168
+00:04:32,160 --> 00:04:33,420
+a reliable system
+
+169
+00:04:33,420 --> 00:04:35,960
+Such that the output format from the
+
+170
+00:04:35,960 --> 00:04:37,620
+agent is always consistent
+
+171
+00:04:37,620 --> 00:04:40,120
+Because let's say if this first
+
+172
+00:04:40,120 --> 00:04:41,760
+agent is 90 % consistent
+
+173
+00:04:41,760 --> 00:04:43,680
+And this second agent is 90 %
+
+174
+00:04:43,680 --> 00:04:44,280
+consistent
+
+175
+00:04:44,280 --> 00:04:45,720
+And the third agent is 90 %
+
+176
+00:04:45,720 --> 00:04:46,320
+consistent
+
+177
+00:04:46,320 --> 00:04:47,940
+So when three agents are built
+
+178
+00:04:47,940 --> 00:04:49,700
+Even if it is at 90 %
+
+179
+00:04:49,700 --> 00:04:51,420
+The overall consistency is around 73
+
+180
+00:04:51,420 --> 00:04:52,280
+% only
+
+181
+00:04:52,280 --> 00:04:54,260
+But what if the agent 1's
+
+182
+00:04:54,260 --> 00:04:55,880
+consistency is 99 %
+
+183
+00:04:55,880 --> 00:04:57,720
+And agent 2 is 99 %
+
+184
+00:04:57,720 --> 00:04:59,600
+And agent 3 is 99 %
+
+185
+00:04:59,600 --> 00:05:00,860
+Then the overall system's
+
+186
+00:05:00,860 --> 00:05:02,840
+consistency would be around 97 %
+
+187
+00:05:02,840 --> 00:05:03,440
+guys
+
+188
+00:05:03,620 --> 00:05:05,740
+So it's always important that
+
+189
+00:05:05,740 --> 00:05:07,340
+whatever the agents that you are
+
+190
+00:05:07,340 --> 00:05:07,940
+building
+
+191
+00:05:07,940 --> 00:05:10,040
+They are providing or reproducing
+
+192
+00:05:10,040 --> 00:05:11,260
+the same kind of results
+
+193
+00:05:11,260 --> 00:05:12,900
+Or at least in the same kind of
+
+194
+00:05:12,900 --> 00:05:13,680
+format results
+
+195
+00:05:13,680 --> 00:05:15,940
+Such that down the line the other
+
+196
+00:05:15,940 --> 00:05:16,880
+agents will not break
+
+197
+00:05:16,880 --> 00:05:18,080
+Because of the output from the
+
+198
+00:05:18,080 --> 00:05:18,680
+previous agent
+
+199
+00:05:18,680 --> 00:05:20,600
+And in this video we are going to
+
+200
+00:05:20,600 --> 00:05:22,340
+learn exactly how to do this in the
+
+201
+00:05:22,340 --> 00:05:22,940
+code
+
+202
+00:05:22,940 --> 00:05:24,020
+First we are installing all the
+
+203
+00:05:24,020 --> 00:05:25,000
+packages that we are needed
+
+204
+00:05:25,000 --> 00:05:26,860
+And we are loading the OpenAI API
+
+205
+00:05:26,860 --> 00:05:28,000
+And along with that we have fixed
+
+206
+00:05:28,000 --> 00:05:28,600
+our client
+
+207
+00:05:29,240 --> 00:05:30,280
+OpenAI client
+
+208
+00:05:30,280 --> 00:05:31,800
+You can use any kind of open source
+
+209
+00:05:31,800 --> 00:05:32,920
+models as well guys
+
+210
+00:05:32,920 --> 00:05:34,840
+I am just using OpenAI because I am
+
+211
+00:05:34,840 --> 00:05:35,440
+just used to it
+
+212
+00:05:35,440 --> 00:05:36,040
+That's it
+
+213
+00:05:36,040 --> 00:05:38,120
+So the first thing is how to enforce
+
+214
+00:05:38,120 --> 00:05:39,080
+the structured output
+
+215
+00:05:39,080 --> 00:05:42,540
+But before that let's see how you
+
+216
+00:05:42,540 --> 00:05:44,360
+can expect the output in the JSON
+
+217
+00:05:44,360 --> 00:05:44,960
+format
+
+218
+00:05:44,960 --> 00:05:46,780
+When you are hitting an LLM API
+
+219
+00:05:46,780 --> 00:05:48,340
+So what are we doing here
+
+220
+00:05:48,340 --> 00:05:50,460
+We are talking via GPT-4o mini
+
+221
+00:05:50,460 --> 00:05:51,780
+And what is the system role here
+
+222
+00:05:51,780 --> 00:05:53,780
+You extract the product info
+
+223
+00:05:53,780 --> 00:05:56,560
+And always respond in the JSON with
+
+224
+00:05:56,560 --> 00:05:57,160
+keys
+
+225
+00:05:57,160 --> 00:05:58,740
+What are the keys in the JSON
+
+226
+00:05:58,740 --> 00:06:00,560
+Product, price, quantity
+
+227
+00:06:00,560 --> 00:06:02,540
+And then you are giving a question
+
+228
+00:06:02,540 --> 00:06:04,560
+I want to buy 3 Samsung Galaxy
+
+229
+00:06:04,560 --> 00:06:07,140
+phones at 25,000 rupees each
+
+230
+00:06:07,140 --> 00:06:09,000
+And one important thing that you
+
+231
+00:06:09,000 --> 00:06:10,520
+need to give here is
+
+232
+00:06:10,520 --> 00:06:12,700
+Response format equal to
+
+233
+00:06:12,700 --> 00:06:14,960
+Here the output from the LLM should
+
+234
+00:06:14,960 --> 00:06:15,840
+be in which format
+
+235
+00:06:16,580 --> 00:06:18,520
+They are specifying externally
+
+236
+00:06:18,520 --> 00:06:19,540
+What do we want
+
+237
+00:06:19,540 --> 00:06:21,300
+It is in the JSON object
+
+238
+00:06:21,300 --> 00:06:24,620
+So you are forcing the valid output
+
+239
+00:06:24,620 --> 00:06:25,900
+in the format of JSON
+
+240
+00:06:25,900 --> 00:06:27,680
+And after that you are just printing
+
+241
+00:06:27,680 --> 00:06:28,280
+what is the output
+
+242
+00:06:28,280 --> 00:06:30,820
+Let's try to execute this piece of
+
+243
+00:06:30,820 --> 00:06:31,420
+code
+
+244
+00:06:31,420 --> 00:06:32,520
+And see here
+
+245
+00:06:32,520 --> 00:06:34,260
+So based upon this question
+
+246
+00:06:34,260 --> 00:06:36,120
+I want to buy 3 Samsung Galaxy
+
+247
+00:06:36,120 --> 00:06:37,720
+phones at 25,000 rupees each
+
+248
+00:06:37,720 --> 00:06:38,320
+What is the output
+
+249
+00:06:38,320 --> 00:06:40,380
+So in a JSON format
+
+250
+00:06:40,380 --> 00:06:41,860
+We got the product information
+
+251
+00:06:41,860 --> 00:06:42,940
+Samsung Galaxy phone
+
+252
+00:06:42,940 --> 00:06:44,620
+Price 25,000
+
+253
+00:06:44,620 --> 00:06:46,380
+And quantity 3
+
+254
+00:06:46,380 --> 00:06:47,740
+Now you can ask
+
+255
+00:06:47,740 --> 00:06:49,200
+Bhalaji, it's done right
+
+256
+00:06:49,200 --> 00:06:50,640
+Every time we get the output in the
+
+257
+00:06:50,640 --> 00:06:51,380
+format of JSON
+
+258
+00:06:51,380 --> 00:06:52,920
+What is the issue now
+
+259
+00:06:52,920 --> 00:06:53,900
+Think about it
+
+260
+00:06:53,900 --> 00:06:55,680
+Do you see any issue in this point
+
+261
+00:06:55,680 --> 00:06:56,340
+right here
+
+262
+00:06:56,340 --> 00:06:57,820
+So what if
+
+263
+00:06:57,820 --> 00:07:01,100
+Here when LLM executes again
+
+264
+00:07:01,100 --> 00:07:03,180
+It provides an output here
+
+265
+00:07:03,180 --> 00:07:05,160
+Rather than 25,000 as a number
+
+266
+00:07:05,160 --> 00:07:07,780
+It says 25,000
+
+267
+00:07:09,440 --> 00:07:10,500
+What if text is given
+
+268
+00:07:10,500 --> 00:07:11,880
+What will you do then
+
+269
+00:07:11,880 --> 00:07:12,600
+It is in JSON
+
+270
+00:07:13,360 --> 00:07:15,300
+But the other agent
+
+271
+00:07:15,300 --> 00:07:16,220
+Agent 2
+
+272
+00:07:16,220 --> 00:07:18,060
+Which might be expecting this value
+
+273
+00:07:18,060 --> 00:07:19,220
+to be 25,000
+
+274
+00:07:19,760 --> 00:07:22,140
+By writing JSON schema like this
+
+275
+00:07:22,140 --> 00:07:23,720
+Even though if you are providing the
+
+276
+00:07:23,720 --> 00:07:25,380
+output as a JSON format
+
+277
+00:07:25,380 --> 00:07:27,980
+You can change the text in the
+
+278
+00:07:27,980 --> 00:07:28,580
+values
+
+279
+00:07:28,580 --> 00:07:29,460
+Based on the LLM output
+
+280
+00:07:29,460 --> 00:07:33,280
+So you can use JSON object as an
+
+281
+00:07:33,280 --> 00:07:34,180
+output response
+
+282
+00:07:34,180 --> 00:07:36,840
+But this is not a full fledged
+
+283
+00:07:36,840 --> 00:07:38,380
+production level constraint guys
+
+284
+00:07:38,840 --> 00:07:39,840
+Even if you tell it to be in JSON
+
+285
+00:07:39,840 --> 00:07:40,760
+format
+
+286
+00:07:41,960 --> 00:07:43,980
+Sometimes if you execute this
+
+287
+00:07:43,980 --> 00:07:45,000
+multiple times
+
+288
+00:07:45,000 --> 00:07:48,140
+The LLM might provide or might make
+
+289
+00:07:48,140 --> 00:07:50,300
+some mistakes in the values of the
+
+290
+00:07:50,300 --> 00:07:50,900
+JSON
+
+291
+00:07:50,900 --> 00:07:53,360
+Maybe it will try to add extra keys
+
+292
+00:07:53,360 --> 00:07:54,380
+Who knows
+
+293
+00:07:54,380 --> 00:07:56,220
+So this technique works
+
+294
+00:07:56,220 --> 00:07:57,900
+But this is not the foolproof
+
+295
+00:07:57,900 --> 00:07:58,500
+technique
+
+296
+00:07:58,880 --> 00:08:00,020
+Now you can ask
+
+297
+00:08:00,020 --> 00:08:01,840
+Bhalaji then how can we create a
+
+298
+00:08:01,840 --> 00:08:02,940
+foolproof technique
+
+299
+00:08:02,940 --> 00:08:03,960
+Yes
+
+300
+00:08:03,960 --> 00:08:06,980
+That is where we have the proper
+
+301
+00:08:06,980 --> 00:08:08,280
+JSON schema
+
+302
+00:08:08,280 --> 00:08:10,340
+Defined in the response format
+
+303
+00:08:10,340 --> 00:08:11,920
+What did we do earlier
+
+304
+00:08:11,920 --> 00:08:12,880
+In response format
+
+305
+00:08:12,880 --> 00:08:14,420
+We just specified that we want JSON
+
+306
+00:08:14,420 --> 00:08:15,020
+object
+
+307
+00:08:15,720 --> 00:08:17,800
+But we are not specifying what
+
+308
+00:08:17,800 --> 00:08:18,480
+should be in that JSON
+
+309
+00:08:19,470 --> 00:08:20,860
+We are giving that in the prompt
+
+310
+00:08:20,860 --> 00:08:21,460
+itself
+
+311
+00:08:21,460 --> 00:08:23,680
+But it is much better when you
+
+312
+00:08:23,680 --> 00:08:25,920
+provide the entire schema of the
+
+313
+00:08:25,920 --> 00:08:27,300
+output that you want
+
+314
+00:08:27,300 --> 00:08:29,140
+While hitting the API itself
+
+315
+00:08:29,140 --> 00:08:31,100
+So let me explain what this entire
+
+316
+00:08:31,100 --> 00:08:33,080
+piece of code in this notebook right
+
+317
+00:08:33,080 --> 00:08:33,680
+here
+
+318
+00:08:33,680 --> 00:08:34,760
+What is happening here
+
+319
+00:08:34,760 --> 00:08:36,760
+So we first wanted this kind of
+
+320
+00:08:36,760 --> 00:08:37,360
+output
+
+321
+00:08:37,360 --> 00:08:41,320
+But I want to define the
+
+322
+00:08:41,320 --> 00:08:42,260
+entire output schema
+
+323
+00:08:42,260 --> 00:08:44,080
+What am I doing for that
+
+324
+00:08:44,080 --> 00:08:46,340
+I have the type as the JSON schema
+
+325
+00:08:46,340 --> 00:08:48,420
+And then we have the JSON schema
+
+326
+00:08:48,420 --> 00:08:51,160
+And then what is the name of it
+
+327
+00:08:51,160 --> 00:08:52,800
+We are trying to extract the product
+
+328
+00:08:52,800 --> 00:08:54,080
+information from the prompt
+
+329
+00:08:54,080 --> 00:08:56,000
+Strict equal to true or false
+
+330
+00:08:56,000 --> 00:08:57,780
+And then the schema starts
+
+331
+00:08:57,780 --> 00:09:00,420
+What kind of schema are we creating
+
+332
+00:09:00,420 --> 00:09:01,820
+It is in the string format or JSON
+
+333
+00:09:01,820 --> 00:09:02,620
+format
+
+334
+00:09:02,620 --> 00:09:05,280
+And what are the properties that we
+
+335
+00:09:05,280 --> 00:09:06,300
+have in that JSON
+
+336
+00:09:06,300 --> 00:09:06,900
+What is the property
+
+337
+00:09:06,900 --> 00:09:08,040
+We have the product name
+
+338
+00:09:08,040 --> 00:09:10,020
+So what is the product name
+
+339
+00:09:10,020 --> 00:09:11,500
+And what is the type of that product
+
+340
+00:09:11,500 --> 00:09:12,100
+name
+
+341
+00:09:12,100 --> 00:09:12,980
+It is in the string
+
+342
+00:09:12,980 --> 00:09:14,720
+And then what is the description
+
+343
+00:09:14,720 --> 00:09:16,220
+No need to get the description
+
+344
+00:09:16,940 --> 00:09:19,220
+LLM will get more context in
+
+345
+00:09:19,220 --> 00:09:20,520
+extracting the information from the
+
+346
+00:09:20,520 --> 00:09:21,120
+prompt
+
+347
+00:09:21,120 --> 00:09:23,420
+And after that you are saying what
+
+348
+00:09:23,420 --> 00:09:24,200
+is the price
+
+349
+00:09:24,200 --> 00:09:25,480
+So the price per quantity
+
+350
+00:09:26,100 --> 00:09:27,140
+And then what is the type
+
+351
+00:09:27,140 --> 00:09:29,100
+And then what is the description
+
+352
+00:09:29,100 --> 00:09:30,220
+And then quantity
+
+353
+00:09:30,220 --> 00:09:31,400
+Quantity is the type
+
+354
+00:09:31,400 --> 00:09:32,100
+Description
+
+355
+00:09:32,100 --> 00:09:34,520
+And here just to show you as an
+
+356
+00:09:34,520 --> 00:09:35,120
+example
+
+357
+00:09:35,120 --> 00:09:37,060
+I am engineering one more key
+
+358
+00:09:37,060 --> 00:09:38,800
+Which is called total amount
+
+359
+00:09:38,800 --> 00:09:40,440
+We have the price per unit and
+
+360
+00:09:40,440 --> 00:09:41,040
+quantity
+
+361
+00:09:41,040 --> 00:09:42,960
+I can calculate the total amount
+
+362
+00:09:42,960 --> 00:09:45,120
+And this total amount should also be
+
+363
+00:09:45,120 --> 00:09:46,060
+float or a number
+
+364
+00:09:46,060 --> 00:09:47,020
+So type is number
+
+365
+00:09:47,020 --> 00:09:48,180
+And what is the description
+
+366
+00:09:48,180 --> 00:09:50,040
+Total cost price into quantity
+
+367
+00:09:50,040 --> 00:09:51,720
+So what does LLM do
+
+368
+00:09:51,720 --> 00:09:52,340
+By looking at this text
+
+369
+00:09:52,340 --> 00:09:54,420
+It will understand that by
+
+370
+00:09:54,420 --> 00:09:55,300
+multiplying these two
+
+371
+00:09:55,300 --> 00:09:57,020
+I need to create this extra more
+
+372
+00:09:57,020 --> 00:09:57,800
+information
+
+373
+00:09:57,800 --> 00:09:59,420
+And then what are the required
+
+374
+00:09:59,420 --> 00:10:00,020
+fields
+
+375
+00:10:00,020 --> 00:10:01,620
+Product name, price per unit,
+
+376
+00:10:01,800 --> 00:10:02,940
+quantity and total amount
+
+377
+00:10:02,940 --> 00:10:04,640
+And additional parameters are false
+
+378
+00:10:04,640 --> 00:10:06,240
+I don't want any extra information
+
+379
+00:10:06,240 --> 00:10:09,100
+So here whatever the output that you
+
+380
+00:10:09,100 --> 00:10:09,700
+want
+
+381
+00:10:09,700 --> 00:10:12,240
+You are defining it entirely in the
+
+382
+00:10:12,240 --> 00:10:13,180
+response format
+
+383
+00:10:13,180 --> 00:10:15,960
+And when you give this kind of
+
+384
+00:10:15,960 --> 00:10:17,600
+information to the API
+
+385
+00:10:17,600 --> 00:10:20,320
+Then the API needs to follow this
+
+386
+00:10:20,320 --> 00:10:20,940
+output schema
+
+387
+00:10:20,940 --> 00:10:23,540
+It cannot make any kind of mistakes
+
+388
+00:10:23,540 --> 00:10:25,560
+So let's go ahead and see what it
+
+389
+00:10:25,560 --> 00:10:26,380
+will give you
+
+390
+00:10:26,380 --> 00:10:27,260
+So what are we doing
+
+391
+00:10:27,260 --> 00:10:28,920
+You are trying to with the GPT-4o
+
+392
+00:10:28,920 --> 00:10:29,860
+mini again
+
+393
+00:10:29,860 --> 00:10:31,380
+And after that you put this
+
+394
+00:10:31,380 --> 00:10:33,500
+What is the prompt for this question
+
+395
+00:10:33,500 --> 00:10:34,660
+And then I am also putting what is
+
+396
+00:10:34,660 --> 00:10:35,580
+the response format
+
+397
+00:10:35,580 --> 00:10:36,760
+That is the total JSON schema
+
+398
+00:10:37,540 --> 00:10:39,900
+And then here I am going to execute
+
+399
+00:10:39,900 --> 00:10:40,880
+this piece of code
+
+400
+00:10:40,880 --> 00:10:43,540
+And see product name Samsung Galaxy
+
+401
+00:10:43,540 --> 00:10:44,140
+phone
+
+402
+00:10:44,140 --> 00:10:46,020
+Price per unit 25000, quantity 3,
+
+403
+00:10:46,140 --> 00:10:47,720
+total amount 75000
+
+404
+00:10:47,720 --> 00:10:49,340
+So now if you execute the same code
+
+405
+00:10:49,340 --> 00:10:51,200
+multiple times
+
+406
+00:10:51,200 --> 00:10:53,620
+You are going to get the same kind
+
+407
+00:10:53,620 --> 00:10:54,220
+of output
+
+408
+00:10:54,220 --> 00:10:55,380
+Let me execute it again
+
+409
+00:10:55,380 --> 00:10:57,380
+And see how many times you execute
+
+410
+00:10:57,380 --> 00:10:59,720
+This output is not going to change
+
+411
+00:10:59,720 --> 00:11:02,600
+Because you defined the exact schema
+
+412
+00:11:02,600 --> 00:11:03,420
+that you want
+
+413
+00:11:03,420 --> 00:11:06,180
+And the next agent can take this
+
+414
+00:11:06,180 --> 00:11:06,780
+output
+
+415
+00:11:06,780 --> 00:11:08,740
+And then it can process whatever the
+
+416
+00:11:08,740 --> 00:11:09,340
+things
+
+417
+00:11:09,340 --> 00:11:10,360
+That it wants to process
+
+418
+00:11:10,360 --> 00:11:13,400
+See this is how you will enforce the
+
+419
+00:11:13,400 --> 00:11:14,000
+output
+
+420
+00:11:14,000 --> 00:11:16,280
+From the API using JSON schemas
+
+421
+00:11:16,280 --> 00:11:17,700
+Now you all have a question
+
+422
+00:11:17,700 --> 00:11:20,300
+But you used JSON object or JSON
+
+423
+00:11:20,300 --> 00:11:20,900
+schema
+
+424
+00:11:20,900 --> 00:11:22,420
+When to use both
+
+425
+00:11:22,420 --> 00:11:26,040
+So whenever you want to have a
+
+426
+00:11:26,040 --> 00:11:26,840
+production level
+
+427
+00:11:26,840 --> 00:11:28,420
+Engineering to be done for the
+
+428
+00:11:28,420 --> 00:11:29,020
+agents
+
+429
+00:11:29,020 --> 00:11:30,760
+Always use JSON schema
+
+430
+00:11:30,760 --> 00:11:32,300
+No, you are doing a prototype
+
+431
+00:11:32,300 --> 00:11:34,060
+You are doing POC
+
+432
+00:11:34,060 --> 00:11:35,900
+Then JSON object would be fine
+
+433
+00:11:35,900 --> 00:11:38,600
+But try to prefer to JSON schema
+
+434
+00:11:38,600 --> 00:11:40,520
+Now the next part
+
+435
+00:11:40,520 --> 00:11:42,120
+Which is the important part
+
+436
+00:11:42,120 --> 00:11:43,820
+Which is called output validation
+
+437
+00:11:43,820 --> 00:11:46,950
+So let's say I have an agent here
+
+438
+00:11:47,260 --> 00:11:48,200
+From this agent
+
+439
+00:11:48,720 --> 00:11:50,900
+You got an output in the format of
+
+440
+00:11:50,900 --> 00:11:51,500
+JSON
+
+441
+00:11:51,500 --> 00:11:54,360
+And the output is going to go into
+
+442
+00:11:54,360 --> 00:11:55,160
+the next agent
+
+443
+00:11:55,160 --> 00:11:56,500
+And this is going to do its
+
+444
+00:11:56,500 --> 00:11:57,100
+processing
+
+445
+00:11:57,100 --> 00:11:59,880
+But even when you enforce
+
+446
+00:11:59,880 --> 00:12:01,420
+Every single thing in the JSON
+
+447
+00:12:01,420 --> 00:12:02,020
+schema
+
+448
+00:12:02,020 --> 00:12:03,800
+It could make mistakes
+
+449
+00:12:03,800 --> 00:12:05,180
+Or it might make mistakes
+
+450
+00:12:05,180 --> 00:12:07,260
+Because of some external factors
+
+451
+00:12:07,260 --> 00:12:10,620
+So if you pass this one
+
+452
+00:12:10,620 --> 00:12:12,120
+Then this agent will break
+
+453
+00:12:12,120 --> 00:12:13,800
+And in that situation usually
+
+454
+00:12:13,800 --> 00:12:15,240
+1 % or 0.5 %
+
+455
+00:12:15,240 --> 00:12:18,800
+But even to catch that 1 % or 0.5 %
+
+456
+00:12:18,800 --> 00:12:19,860
+What are we going to do
+
+457
+00:12:19,860 --> 00:12:21,980
+We are going to add a validation
+
+458
+00:12:21,980 --> 00:12:22,580
+step
+
+459
+00:12:22,580 --> 00:12:24,460
+So what is this validation step
+
+460
+00:12:24,460 --> 00:12:26,440
+The output that we got
+
+461
+00:12:26,440 --> 00:12:29,700
+Is it in the expected JSON format
+
+462
+00:12:29,700 --> 00:12:30,300
+Or not
+
+463
+00:12:30,300 --> 00:12:32,480
+So you will check this validation
+
+464
+00:12:32,480 --> 00:12:34,100
+And if the validation is true
+
+465
+00:12:34,100 --> 00:12:36,200
+Then only send this output as an
+
+466
+00:12:36,200 --> 00:12:36,800
+input
+
+467
+00:12:36,800 --> 00:12:37,400
+To the next agent
+
+468
+00:12:37,400 --> 00:12:38,900
+And then you process that
+
+469
+00:12:38,900 --> 00:12:40,080
+And then you do the validation
+
+470
+00:12:40,080 --> 00:12:41,660
+And then you give it to the next
+
+471
+00:12:41,660 --> 00:12:42,260
+agent
+
+472
+00:12:42,260 --> 00:12:44,220
+So it's always you have the prompt
+
+473
+00:12:44,220 --> 00:12:46,100
+You get the output from the agent
+
+474
+00:12:46,100 --> 00:12:47,660
+And that should be in the JSON
+
+475
+00:12:47,660 --> 00:12:48,260
+schema
+
+476
+00:12:48,260 --> 00:12:49,860
+And then you also validate
+
+477
+00:12:49,860 --> 00:12:51,080
+Whether it's a correct JSON schema
+
+478
+00:12:51,080 --> 00:12:51,680
+or not
+
+479
+00:12:51,680 --> 00:12:53,080
+And once the validation is done
+
+480
+00:12:53,080 --> 00:12:53,900
+Send it to the next agent
+
+481
+00:12:53,900 --> 00:12:55,300
+And repeat the process
+
+482
+00:12:55,300 --> 00:12:56,720
+What happens when you do this
+
+483
+00:12:56,720 --> 00:12:58,980
+You are trying to minimize as many
+
+484
+00:12:58,980 --> 00:13:00,000
+errors as possible
+
+485
+00:13:00,000 --> 00:13:01,640
+So let's go ahead and see
+
+486
+00:13:01,640 --> 00:13:03,340
+How you can do the validation part
+
+487
+00:13:03,720 --> 00:13:05,120
+We need this kind of JSON right
+
+488
+00:13:05,120 --> 00:13:06,820
+Now how do I validate this JSON
+
+489
+00:13:06,820 --> 00:13:09,340
+So I can pass that JSON as an input
+
+490
+00:13:09,340 --> 00:13:10,860
+To this function validate product
+
+491
+00:13:10,860 --> 00:13:11,460
+response
+
+492
+00:13:11,700 --> 00:13:13,500
+And first I will try to load it in
+
+493
+00:13:13,500 --> 00:13:14,220
+the JSON package
+
+494
+00:13:14,220 --> 00:13:15,620
+If I think it's loading
+
+495
+00:13:16,000 --> 00:13:17,440
+Then it's a valid JSON
+
+496
+00:13:17,440 --> 00:13:19,240
+Otherwise return some error
+
+497
+00:13:19,240 --> 00:13:20,320
+It's not a valid JSON
+
+498
+00:13:20,320 --> 00:13:21,360
+After loading
+
+499
+00:13:21,860 --> 00:13:23,900
+Do I have all the keys I need
+
+500
+00:13:24,140 --> 00:13:25,740
+I am checking if there are any
+
+501
+00:13:25,740 --> 00:13:26,340
+missing keys
+
+502
+00:13:26,340 --> 00:13:27,380
+If there are missing keys then don't
+
+503
+00:13:27,380 --> 00:13:27,980
+send it
+
+504
+00:13:27,980 --> 00:13:29,680
+If everything is fine then go for
+
+505
+00:13:29,680 --> 00:13:30,320
+the next check
+
+506
+00:13:30,320 --> 00:13:32,260
+Whether my data types are not
+
+507
+00:13:32,260 --> 00:13:32,860
+correct
+
+508
+00:13:32,960 --> 00:13:34,660
+So data product name is not string
+
+509
+00:13:34,660 --> 00:13:36,440
+Price per unit is float or integer
+
+510
+00:13:36,440 --> 00:13:37,940
+Quantity integer is not
+
+511
+00:13:37,940 --> 00:13:39,660
+So I am looking at all of these
+
+512
+00:13:39,660 --> 00:13:40,260
+things
+
+513
+00:13:40,260 --> 00:13:41,660
+And I am doing data validation in
+
+514
+00:13:41,660 --> 00:13:42,260
+JSON
+
+515
+00:13:42,260 --> 00:13:44,080
+And here price per unit for my
+
+516
+00:13:44,080 --> 00:13:45,040
+business use case
+
+517
+00:13:45,040 --> 00:13:46,900
+It cannot be less than 0
+
+518
+00:13:46,900 --> 00:13:48,880
+And quantity cannot be less than 0
+
+519
+00:13:48,880 --> 00:13:50,380
+So I am also checking all of these
+
+520
+00:13:50,380 --> 00:13:50,980
+things
+
+521
+00:13:50,980 --> 00:13:54,260
+Such that our output from the LLM
+
+522
+00:13:54,260 --> 00:13:55,600
+Even though it is in the proper
+
+523
+00:13:55,600 --> 00:13:56,200
+format
+
+524
+00:13:56,200 --> 00:13:57,280
+We are just validating
+
+525
+00:13:57,280 --> 00:13:59,100
+If everything feels right or wrong
+
+526
+00:13:59,620 --> 00:14:01,700
+Then you pass that output JSON
+
+527
+00:14:01,700 --> 00:14:02,540
+To this function
+
+528
+00:14:02,540 --> 00:14:04,480
+And then it will validate
+
+529
+00:14:04,480 --> 00:14:06,520
+And if it validates then send it to
+
+530
+00:14:06,520 --> 00:14:07,120
+the next agent
+
+531
+00:14:07,120 --> 00:14:09,260
+So just to replicate that kind of
+
+532
+00:14:09,260 --> 00:14:09,860
+flow
+
+533
+00:14:09,860 --> 00:14:10,660
+I created multiple examples
+
+534
+00:14:10,660 --> 00:14:12,520
+So what did I do first
+
+535
+00:14:12,520 --> 00:14:14,420
+I created a valid response
+
+536
+00:14:14,420 --> 00:14:16,460
+And then I am passing it to the same
+
+537
+00:14:16,460 --> 00:14:17,060
+function
+
+538
+00:14:17,060 --> 00:14:18,780
+And it is saying it is good data
+
+539
+00:14:18,780 --> 00:14:21,000
+And next time I am not putting it as
+
+540
+00:14:21,000 --> 00:14:21,600
+JSON
+
+541
+00:14:21,600 --> 00:14:22,620
+And it says bad JSON
+
+542
+00:14:22,620 --> 00:14:24,580
+Next I am missing some product keys
+
+543
+00:14:24,580 --> 00:14:25,900
+And I got the missing values
+
+544
+00:14:25,900 --> 00:14:28,360
+And next I got the bad values
+
+545
+00:14:28,360 --> 00:14:29,500
+And I got the bad value
+
+546
+00:14:29,500 --> 00:14:31,580
+So you can do the validation at
+
+547
+00:14:31,580 --> 00:14:32,220
+every step
+
+548
+00:14:32,750 --> 00:14:33,960
+And then you send it to the next
+
+549
+00:14:33,960 --> 00:14:34,560
+agent
+
+550
+00:14:34,690 --> 00:14:35,380
+Very simple
+
+551
+00:14:35,380 --> 00:14:37,080
+And the next step is
+
+552
+00:14:37,080 --> 00:14:39,220
+Combining the structured output
+
+553
+00:14:39,220 --> 00:14:41,040
+Plus validation and retry
+
+554
+00:14:41,040 --> 00:14:42,380
+So we did 3 steps
+
+555
+00:14:42,380 --> 00:14:43,760
+We are putting these 3 steps
+
+556
+00:14:43,760 --> 00:14:45,680
+In the same information or function
+
+557
+00:14:46,460 --> 00:14:48,300
+So for every time
+
+558
+00:14:48,300 --> 00:14:49,240
+If the agent fails
+
+559
+00:14:49,240 --> 00:14:50,940
+I want to do a max retrace of 3
+
+560
+00:14:50,940 --> 00:14:51,900
+times
+
+561
+00:14:51,900 --> 00:14:53,840
+And then here we are doing the LLM
+
+562
+00:14:53,840 --> 00:14:54,440
+call
+
+563
+00:14:54,440 --> 00:14:55,460
+We will get the output response
+
+564
+00:14:55,460 --> 00:14:57,880
+After that you are passing it
+
+565
+00:14:57,880 --> 00:14:59,400
+To the validator product response
+
+566
+00:14:59,400 --> 00:15:01,680
+And if it is successful
+
+567
+00:15:01,680 --> 00:15:02,520
+Then return the result
+
+568
+00:15:02,520 --> 00:15:03,540
+If it is not successful
+
+569
+00:15:03,540 --> 00:15:04,920
+Then try the next attempt
+
+570
+00:15:04,920 --> 00:15:08,840
+If it doesn't work then
+
+571
+00:15:08,840 --> 00:15:09,560
+cut off
+
+572
+00:15:09,560 --> 00:15:11,240
+So the flow should be something like
+
+573
+00:15:11,240 --> 00:15:11,840
+this
+
+574
+00:15:11,840 --> 00:15:12,780
+You should call the agent
+
+575
+00:15:12,780 --> 00:15:14,100
+You should pass the output
+
+576
+00:15:14,100 --> 00:15:15,460
+And you should validate the output
+
+577
+00:15:15,460 --> 00:15:17,260
+And use it or retry if it doesn't
+
+578
+00:15:17,260 --> 00:15:18,220
+validate it
+
+579
+00:15:18,220 --> 00:15:20,360
+That is what a simple agentic loop
+
+580
+00:15:20,360 --> 00:15:20,960
+is
+
+581
+00:15:21,360 --> 00:15:22,600
+Many people say this is complex
+
+582
+00:15:22,600 --> 00:15:24,900
+But nothing complex at all
+
+583
+00:15:24,900 --> 00:15:26,280
+If you use Lang chain
+
+584
+00:15:26,280 --> 00:15:28,120
+All of this code will become even
+
+585
+00:15:28,120 --> 00:15:28,720
+smaller
+
+586
+00:15:28,720 --> 00:15:30,500
+I am teaching you from scratch
+
+587
+00:15:30,500 --> 00:15:32,040
+Everything from scratch
+
+588
+00:15:32,040 --> 00:15:32,980
+Do you understand that
+
+589
+00:15:32,980 --> 00:15:34,140
+So in this video
+
+590
+00:15:34,140 --> 00:15:36,500
+You see the need for
+
+591
+00:15:36,500 --> 00:15:38,260
+Why do we need a structured
+
+592
+00:15:38,260 --> 00:15:40,280
+Output for every agent output
+
+593
+00:15:40,280 --> 00:15:42,180
+Because if it doesn't work
+
+594
+00:15:42,180 --> 00:15:44,780
+Then multiple ends will break in the
+
+595
+00:15:44,780 --> 00:15:45,380
+down the line
+
+596
+00:15:45,380 --> 00:15:45,980
+Now if you want to get such a
+
+597
+00:15:45,980 --> 00:15:46,580
+structured output
+
+598
+00:15:46,580 --> 00:15:48,520
+You learn how to define JSON objects
+
+599
+00:15:48,520 --> 00:15:49,620
+And JSON schema
+
+600
+00:15:49,620 --> 00:15:51,320
+When to use JSON object and when to
+
+601
+00:15:51,320 --> 00:15:51,920
+use JSON schema
+
+602
+00:15:51,920 --> 00:15:52,520
+You will see the difference
+
+603
+00:15:52,960 --> 00:15:54,600
+And then you put every single thing
+
+604
+00:15:54,600 --> 00:15:55,200
+in a loop
+
+605
+00:15:55,200 --> 00:15:56,020
+And you execute that
+
+606
+00:15:56,020 --> 00:15:57,960
+And that is a simple JSON output
+
+607
+00:15:57,960 --> 00:15:59,040
+structure guys
+
+608
+00:15:59,580 --> 00:16:01,020
+And if you learned something new
+
+609
+00:16:01,020 --> 00:16:01,620
+from this video
+
+610
+00:16:01,620 --> 00:16:02,540
+Please let me know in the comment
+
+611
+00:16:02,540 --> 00:16:03,140
+section
+
+612
+00:16:03,140 --> 00:16:03,780
+And if you know someone who likes
+
+613
+00:16:03,780 --> 00:16:04,380
+this video
+
+614
+00:16:04,380 --> 00:16:05,060
+Please share it with them
+

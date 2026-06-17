@@ -1,0 +1,3488 @@
+1
+00:00:00,000 --> 00:00:01,800
+Let's say you have seen a job
+
+2
+00:00:01,800 --> 00:00:03,220
+opening in LinkedIn and you like
+
+3
+00:00:03,220 --> 00:00:05,180
+that job and you want to send a cold
+
+4
+00:00:05,180 --> 00:00:07,260
+email to the HR regarding the job
+
+5
+00:00:07,260 --> 00:00:07,860
+opening
+
+6
+00:00:07,860 --> 00:00:09,320
+So what will many people do?
+
+7
+00:00:09,520 --> 00:00:11,180
+They will open ChatGPT and they
+
+8
+00:00:11,180 --> 00:00:12,420
+will put a prompt something like
+
+9
+00:00:12,420 --> 00:00:13,020
+this
+
+10
+00:00:13,060 --> 00:00:15,240
+Write an email to HR at OpenAI about
+
+11
+00:00:15,240 --> 00:00:17,000
+senior AI engineer job opening and I
+
+12
+00:00:17,000 --> 00:00:19,420
+want to apply and click on enter
+
+13
+00:00:19,420 --> 00:00:21,060
+And what will ChatGPT do?
+
+14
+00:00:21,340 --> 00:00:23,180
+It will give you the basic generic
+
+15
+00:00:23,180 --> 00:00:23,780
+answer
+
+16
+00:00:24,140 --> 00:00:25,740
+Senior AI engineer application,
+
+17
+00:00:25,960 --> 00:00:27,580
+there is no high recruiter name and
+
+18
+00:00:27,580 --> 00:00:30,280
+very small email and would you be
+
+19
+00:00:30,280 --> 00:00:31,720
+open to 15 minutes screening call?
+
+20
+00:00:32,720 --> 00:00:34,620
+If you send an email like this,
+
+21
+00:00:34,760 --> 00:00:36,120
+do you think recruiter will be
+
+22
+00:00:36,120 --> 00:00:37,120
+impressed and they will call you
+
+23
+00:00:37,120 --> 00:00:37,720
+back?
+
+24
+00:00:38,960 --> 00:00:40,920
+No, right? For the same task,
+
+25
+00:00:41,200 --> 00:00:42,420
+we will give a different prompt.
+
+26
+00:00:42,940 --> 00:00:44,180
+Let's see what will happen
+
+27
+00:00:44,180 --> 00:00:46,140
+So this is a prompt, I will explain
+
+28
+00:00:46,140 --> 00:00:48,180
+the prompt later on, not right now
+
+29
+00:00:48,180 --> 00:00:49,320
+and let's enter
+
+30
+00:00:49,320 --> 00:00:51,460
+Now look at the output,
+
+31
+00:00:51,460 --> 00:00:53,820
+ChatGPT will take some time
+
+32
+00:00:54,560 --> 00:00:56,560
+Senior AI engineer production rag
+
+33
+00:00:56,560 --> 00:00:58,400
+and agent systems, Hi Archana,
+
+34
+00:00:58,600 --> 00:01:00,100
+there is a name here
+
+35
+00:01:00,100 --> 00:01:01,760
+I saw senior AI engineer opening,
+
+36
+00:01:01,940 --> 00:01:05,020
+focus on long term horizons and what
+
+37
+00:01:05,020 --> 00:01:07,360
+are my skills? Why am I applying for
+
+38
+00:01:07,360 --> 00:01:08,000
+this job?
+
+39
+00:01:08,540 --> 00:01:10,460
+And after that, I am asking for 15
+
+40
+00:01:10,460 --> 00:01:13,100
+minutes screening call and also I
+
+41
+00:01:13,100 --> 00:01:14,400
+need to provide my link to the
+
+42
+00:01:14,400 --> 00:01:15,900
+LinkedIn and resume as well
+
+43
+00:01:15,900 --> 00:01:18,000
+So what are
+
+44
+00:01:18,000 --> 00:01:21,520
+we
+
+45
+00:01:21,520 --> 00:01:22,240
+doing here?
+
+46
+00:01:29,640 --> 00:01:32,900
+So in both, same ChatGPT and same
+
+47
+00:01:32,900 --> 00:01:34,940
+model but the output difference is a
+
+48
+00:01:34,940 --> 00:01:36,360
+lot when you consider about cold
+
+49
+00:01:36,360 --> 00:01:36,960
+emails
+
+50
+00:01:36,960 --> 00:01:38,720
+So if you look at this prompt,
+
+51
+00:01:39,180 --> 00:01:40,380
+there are a lot of roles,
+
+52
+00:01:40,760 --> 00:01:43,000
+context, audience, preferences,
+
+53
+00:01:43,720 --> 00:01:47,240
+tasks, length and constraints
+
+54
+00:01:48,220 --> 00:01:50,920
+And this is what an actual prompt
+
+55
+00:01:50,920 --> 00:01:52,720
+should be and this is how you will
+
+56
+00:01:52,720 --> 00:01:53,800
+build your prompt
+
+57
+00:01:53,800 --> 00:01:55,760
+So how to build these prompts for
+
+58
+00:01:55,760 --> 00:01:59,760
+your specific task is called
+
+59
+00:01:59,760 --> 00:02:00,680
+prompt engineering
+
+60
+00:02:07,060 --> 00:02:10,360
+In the next 20 minutes,
+
+61
+00:02:10,560 --> 00:02:12,400
+I will teach you everything step by
+
+62
+00:02:12,400 --> 00:02:13,960
+step on how to build that prompt
+
+63
+00:02:13,960 --> 00:02:15,440
+If you want to build a good
+
+64
+00:02:15,440 --> 00:02:16,420
+production level prompt,
+
+65
+00:02:17,340 --> 00:02:19,080
+you need to follow 5 steps
+
+66
+00:02:19,080 --> 00:02:20,300
+1st step is the skeleton,
+
+67
+00:02:20,420 --> 00:02:21,900
+2nd step is the constraints,
+
+68
+00:02:22,060 --> 00:02:23,940
+3rd step is the few short examples,
+
+69
+00:02:24,140 --> 00:02:25,520
+4th step is the decomposition
+
+70
+00:02:25,520 --> 00:02:29,660
+And 5th step, I will teach you at
+
+71
+00:02:29,660 --> 00:02:30,780
+the end of this video
+
+72
+00:02:30,780 --> 00:02:32,600
+So before we learn those 5 points,
+
+73
+00:02:33,780 --> 00:02:35,560
+let's clear one simple doubt
+
+74
+00:02:35,560 --> 00:02:37,800
+You might have a question in your
+
+75
+00:02:37,800 --> 00:02:39,400
+mind, when will I go to ChatGPT,
+
+76
+00:02:39,600 --> 00:02:40,300
+will I get a prompt?
+
+77
+00:02:40,600 --> 00:02:43,020
+And I get a perfect answer,
+
+78
+00:02:43,520 --> 00:02:44,120
+right?
+
+79
+00:02:44,120 --> 00:02:45,100
+Then what is the need of prompt
+
+80
+00:02:45,100 --> 00:02:45,700
+engineering?
+
+81
+00:02:46,140 --> 00:02:47,380
+You are absolutely right
+
+82
+00:02:47,380 --> 00:02:48,960
+Otherwise, the correct answer that
+
+83
+00:02:48,960 --> 00:02:50,480
+comes when you give a simple prompt
+
+84
+00:02:50,480 --> 00:02:52,000
+is
+
+85
+00:02:52,000 --> 00:02:55,260
+Behind that, open AI developers are
+
+86
+00:02:55,260 --> 00:02:57,120
+doing a lot of prompt engineering
+
+87
+00:02:57,120 --> 00:02:59,280
+What happens is, in the backend,
+
+88
+00:02:59,880 --> 00:03:03,300
+they will build all of these things
+
+89
+00:03:03,300 --> 00:03:05,720
+What is hidden system prompt?
+
+90
+00:03:06,360 --> 00:03:08,020
+They will convert your single line
+
+91
+00:03:08,020 --> 00:03:10,920
+into a prompt template
+
+92
+00:03:11,460 --> 00:03:14,320
+They will put custom instructions,
+
+93
+00:03:14,840 --> 00:03:16,780
+what to do, what not to do
+
+94
+00:03:17,340 --> 00:03:19,680
+How does ChatGPT remember your
+
+95
+00:03:19,680 --> 00:03:20,280
+details?
+
+96
+00:03:20,780 --> 00:03:21,880
+Because of prompt
+
+97
+00:03:21,880 --> 00:03:23,840
+Along with that, the last 10 -20
+
+98
+00:03:23,840 --> 00:03:24,440
+messages
+
+99
+00:03:24,440 --> 00:03:27,180
+You need to know the context of the
+
+100
+00:03:27,180 --> 00:03:27,940
+conversion to ChatGPT
+
+101
+00:03:27,940 --> 00:03:30,100
+And along with that, any attached
+
+102
+00:03:30,100 --> 00:03:31,200
+files or images
+
+103
+00:03:31,200 --> 00:03:35,120
+And then, what is your actual
+
+104
+00:03:35,120 --> 00:03:35,720
+question?
+
+105
+00:03:35,900 --> 00:03:38,280
+After doing all this, they will
+
+106
+00:03:38,280 --> 00:03:39,840
+build this entire prompt
+
+107
+00:03:40,380 --> 00:03:42,580
+And that prompt is what we call it
+
+108
+00:03:42,580 --> 00:03:44,240
+How did prompt engineering come?
+
+109
+00:03:44,900 --> 00:03:46,980
+And after taking all that prompt and
+
+110
+00:03:46,980 --> 00:03:47,900
+going to ChatGPT
+
+111
+00:03:47,900 --> 00:03:49,940
+You get a perfect answer
+
+112
+00:03:49,940 --> 00:03:53,080
+That's why, sometimes even if you
+
+113
+00:03:53,080 --> 00:03:53,960
+write a smaller prompt
+
+114
+00:03:53,960 --> 00:03:56,460
+You feel that ChatGPT is
+
+115
+00:03:56,460 --> 00:03:57,780
+providing very good answers
+
+116
+00:03:57,780 --> 00:03:58,460
+Why?
+
+117
+00:03:58,780 --> 00:04:00,640
+In the backend, all of the
+
+118
+00:04:00,640 --> 00:04:02,540
+developers are doing the complete
+
+119
+00:04:02,540 --> 00:04:03,400
+prompt engineering
+
+120
+00:04:03,400 --> 00:04:04,760
+You can't see that
+
+121
+00:04:05,200 --> 00:04:07,060
+Even ChatGPT, Claude,
+
+122
+00:04:07,400 --> 00:04:09,260
+gemini, everyone does this
+
+123
+00:04:09,260 --> 00:04:11,520
+So now, let's take a real example
+
+124
+00:04:11,520 --> 00:04:12,520
+What is this?
+
+125
+00:04:12,640 --> 00:04:13,960
+Now what you need to do is
+
+126
+00:04:13,960 --> 00:04:15,480
+You are building an application
+
+127
+00:04:15,480 --> 00:04:16,680
+And in that application,
+
+128
+00:04:17,260 --> 00:04:18,440
+you need to add an AI feature
+
+129
+00:04:18,440 --> 00:04:20,500
+To add that AI feature
+
+130
+00:04:21,180 --> 00:04:23,640
+Let's say, you will go via API call
+
+131
+00:04:23,640 --> 00:04:25,300
+For ChatGPT, Claude,
+
+132
+00:04:25,600 --> 00:04:26,440
+gemini
+
+133
+00:04:26,440 --> 00:04:28,020
+How will you do that API?
+
+134
+00:04:28,100 --> 00:04:29,400
+You will call like this
+
+135
+00:04:29,400 --> 00:04:33,000
+But in this, there are all the steps
+
+136
+00:04:33,000 --> 00:04:33,600
+we have done
+
+137
+00:04:33,600 --> 00:04:35,240
+You need to handle all of that
+
+138
+00:04:35,240 --> 00:04:36,420
+If you don't know prompt engineering
+
+139
+00:04:36,940 --> 00:04:38,680
+How are you going to handle all of
+
+140
+00:04:38,680 --> 00:04:39,420
+those things?
+
+141
+00:04:39,920 --> 00:04:42,200
+So by doing a basic API call like
+
+142
+00:04:42,200 --> 00:04:42,800
+this
+
+143
+00:04:42,800 --> 00:04:43,400
+If you get any issues
+
+144
+00:04:43,400 --> 00:04:45,460
+You will find no system hidden
+
+145
+00:04:45,460 --> 00:04:46,060
+prompts
+
+146
+00:04:46,060 --> 00:04:48,180
+And then no memory, no conversation
+
+147
+00:04:48,180 --> 00:04:49,940
+No safety defaults
+
+148
+00:04:49,940 --> 00:04:50,540
+And because you don't have prompts
+
+149
+00:04:51,410 --> 00:04:53,080
+You will get a huge costing
+
+150
+00:04:53,080 --> 00:04:55,300
+In my previous video, we explained
+
+151
+00:04:55,300 --> 00:04:57,740
+Why some people get huge amount of
+
+152
+00:04:57,740 --> 00:04:58,340
+bill
+
+153
+00:04:58,340 --> 00:04:59,400
+And why some people get less amount
+
+154
+00:04:59,400 --> 00:05:00,000
+of bill
+
+155
+00:05:00,000 --> 00:05:01,400
+Because of prompt as well
+
+156
+00:05:01,400 --> 00:05:02,500
+This is also one of the factors
+
+157
+00:05:02,500 --> 00:05:04,540
+And that is why
+
+158
+00:05:04,540 --> 00:05:06,180
+Learning prompt engineering
+
+159
+00:05:06,180 --> 00:05:08,540
+To build agentic level production
+
+160
+00:05:08,540 --> 00:05:09,140
+systems
+
+161
+00:05:09,140 --> 00:05:12,820
+Is very mandatory even in 2026
+
+162
+00:05:12,820 --> 00:05:14,660
+Here is a question that I want you
+
+163
+00:05:14,660 --> 00:05:15,400
+to think about
+
+164
+00:05:15,400 --> 00:05:16,600
+You have given a task
+
+165
+00:05:16,600 --> 00:05:20,120
+But what does the AI know about you?
+
+166
+00:05:20,200 --> 00:05:20,860
+You don't know who you are
+
+167
+00:05:20,860 --> 00:05:22,320
+You don't know what you will do
+
+168
+00:05:22,320 --> 00:05:22,940
+You don't know who will see the task
+
+169
+00:05:22,940 --> 00:05:24,440
+output
+
+170
+00:05:24,440 --> 00:05:26,900
+It knows nothing about you
+
+171
+00:05:26,900 --> 00:05:28,640
+You don't know what output you want
+
+172
+00:05:28,640 --> 00:05:29,280
+You don't know what kind of output
+
+173
+00:05:29,280 --> 00:05:30,060
+you want
+
+174
+00:05:30,060 --> 00:05:30,680
+Isn't it?
+
+175
+00:05:31,100 --> 00:05:32,520
+Based on the prompt
+
+176
+00:05:32,520 --> 00:05:34,360
+It will only guess the answer
+
+177
+00:05:34,360 --> 00:05:36,620
+And when you guess the answer
+
+178
+00:05:36,620 --> 00:05:38,400
+The answer will be too generic
+
+179
+00:05:38,400 --> 00:05:39,980
+To fix that problem
+
+180
+00:05:39,980 --> 00:05:42,200
+Let's discuss about the first topic
+
+181
+00:05:42,200 --> 00:05:43,180
+The skeleton
+
+182
+00:05:43,180 --> 00:05:46,040
+There are 5 parts in this skeleton
+
+183
+00:05:46,340 --> 00:05:48,420
+The first part is role
+
+184
+00:05:48,420 --> 00:05:49,660
+Now we have LLM
+
+185
+00:05:49,660 --> 00:05:51,740
+How that LLM should act
+
+186
+00:05:51,740 --> 00:05:52,920
+May be a doctor
+
+187
+00:05:52,920 --> 00:05:54,560
+May be a senior developer engineer
+
+188
+00:05:54,560 --> 00:05:55,940
+May be a backend developer
+
+189
+00:05:55,940 --> 00:05:57,640
+May be a full stack engineer
+
+190
+00:05:57,640 --> 00:05:59,440
+Anything you need to provide the
+
+191
+00:05:59,440 --> 00:06:00,040
+role
+
+192
+00:06:00,560 --> 00:06:02,620
+Along with that you need to provide
+
+193
+00:06:02,620 --> 00:06:03,260
+context
+
+194
+00:06:03,260 --> 00:06:05,220
+What did I do till now?
+
+195
+00:06:05,340 --> 00:06:06,540
+I am writing a cold email
+
+196
+00:06:06,540 --> 00:06:08,660
+To write such an email
+
+197
+00:06:08,660 --> 00:06:11,000
+I need to provide what is the job
+
+198
+00:06:11,000 --> 00:06:12,340
+that I am applying for
+
+199
+00:06:12,340 --> 00:06:13,740
+And what are my resume details
+
+200
+00:06:13,740 --> 00:06:14,600
+What is my project
+
+201
+00:06:14,600 --> 00:06:16,760
+So all of that context
+
+202
+00:06:16,760 --> 00:06:19,060
+The email will be personalized
+
+203
+00:06:19,060 --> 00:06:20,700
+That is the second part
+
+204
+00:06:20,700 --> 00:06:22,620
+And the third part is the task
+
+205
+00:06:22,620 --> 00:06:24,520
+Now we have the role
+
+206
+00:06:24,520 --> 00:06:26,140
+Now we have the context
+
+207
+00:06:26,140 --> 00:06:26,960
+Now this LLM
+
+208
+00:06:26,960 --> 00:06:27,860
+Whether it is ChatGPT,
+
+209
+00:06:27,940 --> 00:06:29,640
+Gemini or Claude
+
+210
+00:06:29,640 --> 00:06:31,460
+What is the actual task
+
+211
+00:06:31,460 --> 00:06:32,520
+What should it do
+
+212
+00:06:32,520 --> 00:06:34,500
+You are providing a task
+
+213
+00:06:34,500 --> 00:06:36,940
+And after that the format
+
+214
+00:06:36,940 --> 00:06:37,660
+Means
+
+215
+00:06:37,660 --> 00:06:39,660
+After completing that task
+
+216
+00:06:39,660 --> 00:06:41,360
+You will get the output
+
+217
+00:06:41,360 --> 00:06:43,720
+Which format should that output be
+
+218
+00:06:43,720 --> 00:06:44,320
+in
+
+219
+00:06:44,320 --> 00:06:46,080
+May be sometimes you want the output
+
+220
+00:06:46,080 --> 00:06:47,120
+in JSON format
+
+221
+00:06:47,120 --> 00:06:48,940
+May be sometimes what you need
+
+222
+00:06:48,940 --> 00:06:50,860
+You want the output in the email
+
+223
+00:06:50,860 --> 00:06:52,980
+Sometimes you want the output in the
+
+224
+00:06:52,980 --> 00:06:53,580
+image
+
+225
+00:06:53,580 --> 00:06:55,240
+Or audio or video
+
+226
+00:06:55,240 --> 00:06:57,160
+So your format is also important
+
+227
+00:06:57,160 --> 00:07:00,020
+Along with that the length
+
+228
+00:07:00,020 --> 00:07:02,620
+Sometimes Claude if you used it
+
+229
+00:07:02,620 --> 00:07:04,240
+It will provide detailed
+
+230
+00:07:04,240 --> 00:07:04,920
+documentation
+
+231
+00:07:04,920 --> 00:07:06,720
+I don't need that much documentation
+
+232
+00:07:06,720 --> 00:07:09,220
+So I also need to specify
+
+233
+00:07:09,680 --> 00:07:11,640
+What should be the output length
+
+234
+00:07:11,640 --> 00:07:14,960
+These are the five core pillars
+
+235
+00:07:14,960 --> 00:07:18,120
+That will make any prompt beautiful
+
+236
+00:07:18,120 --> 00:07:19,020
+instantly
+
+237
+00:07:19,020 --> 00:07:20,120
+So what is our example
+
+238
+00:07:20,540 --> 00:07:21,560
+We have a bad prompt
+
+239
+00:07:21,560 --> 00:07:22,820
+What is that prompt
+
+240
+00:07:22,820 --> 00:07:25,360
+Write an email to HR at OpenAI
+
+241
+00:07:25,360 --> 00:07:26,840
+About the senior AI engineer job
+
+242
+00:07:26,840 --> 00:07:27,440
+opening
+
+243
+00:07:27,440 --> 00:07:28,040
+That I want to apply
+
+244
+00:07:28,640 --> 00:07:29,880
+So if I write such a prompt
+
+245
+00:07:30,540 --> 00:07:32,680
+I will give a rating of 2 out of 10
+
+246
+00:07:32,680 --> 00:07:34,400
+Now such a prompt
+
+247
+00:07:34,400 --> 00:07:37,020
+What should we do to make it good
+
+248
+00:07:37,020 --> 00:07:38,900
+We need to apply all of these five
+
+249
+00:07:38,900 --> 00:07:39,500
+rules
+
+250
+00:07:39,500 --> 00:07:40,740
+What is the role
+
+251
+00:07:40,740 --> 00:07:44,580
+Context, task, format and length
+
+252
+00:07:44,580 --> 00:07:46,800
+Now let me show you an example of
+
+253
+00:07:46,800 --> 00:07:47,780
+the same thing
+
+254
+00:07:47,780 --> 00:07:50,260
+See now we have a bad prompt
+
+255
+00:07:50,260 --> 00:07:51,920
+How to make it better
+
+256
+00:07:51,920 --> 00:07:53,140
+So starting role
+
+257
+00:07:53,140 --> 00:07:55,180
+Means you are an AI engineer with
+
+258
+00:07:55,180 --> 00:07:57,080
+five years of production experience
+
+259
+00:07:57,080 --> 00:08:00,020
+Writing a cold email to a recruiter
+
+260
+00:08:00,020 --> 00:08:02,000
+Confident, specific and not
+
+261
+00:08:02,000 --> 00:08:02,600
+desperate
+
+262
+00:08:02,600 --> 00:08:05,420
+This is the role we assign to our
+
+263
+00:08:05,420 --> 00:08:06,200
+LLM
+
+264
+00:08:06,200 --> 00:08:07,860
+After that context
+
+265
+00:08:07,860 --> 00:08:08,940
+In this context
+
+266
+00:08:08,940 --> 00:08:10,140
+Who is the audience
+
+267
+00:08:10,140 --> 00:08:10,920
+What is our goal
+
+268
+00:08:11,440 --> 00:08:13,260
+Along with that the reference
+
+269
+00:08:13,260 --> 00:08:14,140
+What is the reference
+
+270
+00:08:14,140 --> 00:08:16,300
+What is the job description that I
+
+271
+00:08:16,300 --> 00:08:17,040
+am applying for
+
+272
+00:08:17,600 --> 00:08:18,940
+And along with that what are my
+
+273
+00:08:18,940 --> 00:08:19,540
+skills
+
+274
+00:08:19,540 --> 00:08:21,900
+Maybe I can even put my resume as
+
+275
+00:08:21,900 --> 00:08:22,720
+well here
+
+276
+00:08:22,720 --> 00:08:24,540
+Otherwise I just put a flagship
+
+277
+00:08:24,540 --> 00:08:25,140
+project
+
+278
+00:08:25,960 --> 00:08:27,360
+And after that
+
+279
+00:08:27,360 --> 00:08:28,220
+The third part
+
+280
+00:08:28,220 --> 00:08:29,560
+Which is the task
+
+281
+00:08:29,560 --> 00:08:30,440
+What is this task
+
+282
+00:08:30,440 --> 00:08:32,900
+Write a cold email to HR recruiter
+
+283
+00:08:32,900 --> 00:08:33,760
+for this role
+
+284
+00:08:33,760 --> 00:08:35,640
+After that our format
+
+285
+00:08:35,640 --> 00:08:37,140
+How should the format be
+
+286
+00:08:37,140 --> 00:08:38,140
+Subject line should be within 15
+
+287
+00:08:38,140 --> 00:08:39,200
+words
+
+288
+00:08:39,200 --> 00:08:41,560
+Should be specific, no cliché
+
+289
+00:08:41,560 --> 00:08:43,200
+After that you should greet
+
+290
+00:08:43,200 --> 00:08:44,820
+In that greeting I gave the name
+
+291
+00:08:44,820 --> 00:08:46,120
+Hi Archana
+
+292
+00:08:46,120 --> 00:08:48,360
+That's why in our first output
+
+293
+00:08:48,360 --> 00:08:49,880
+Archana's output came
+
+294
+00:08:49,880 --> 00:08:51,520
+Not dear hiring manager
+
+295
+00:08:51,520 --> 00:08:54,000
+Because I want the email to be very
+
+296
+00:08:54,000 --> 00:08:54,600
+personalized
+
+297
+00:08:54,600 --> 00:08:56,280
+Along with that body
+
+298
+00:08:56,280 --> 00:08:56,980
+Short
+
+299
+00:08:56,980 --> 00:08:58,000
+Crisp
+
+300
+00:08:58,000 --> 00:09:00,100
+You need to showcase my project
+
+301
+00:09:00,100 --> 00:09:02,500
+In the star approach situation
+
+302
+00:09:02,500 --> 00:09:04,320
+After that there should be one clear
+
+303
+00:09:04,320 --> 00:09:04,920
+ask
+
+304
+00:09:04,920 --> 00:09:05,840
+What is this
+
+305
+00:09:05,840 --> 00:09:06,800
+Should have a 15 minute screening
+
+306
+00:09:06,800 --> 00:09:08,140
+call at least
+
+307
+00:09:08,140 --> 00:09:09,160
+And then sign off
+
+308
+00:09:09,160 --> 00:09:11,240
+And the total output should be
+
+309
+00:09:11,240 --> 00:09:12,000
+within 300 words
+
+310
+00:09:12,820 --> 00:09:15,240
+So what we are going to do now is
+
+311
+00:09:15,240 --> 00:09:17,040
+We will copy this same prompt
+
+312
+00:09:17,040 --> 00:09:18,020
+Take that prompt
+
+313
+00:09:18,520 --> 00:09:20,500
+We will put it in the chart GPT
+
+314
+00:09:20,500 --> 00:09:21,100
+And let's see what the answer is in
+
+315
+00:09:21,100 --> 00:09:23,660
+that chart GPT
+
+316
+00:09:23,660 --> 00:09:24,960
+Let's see
+
+317
+00:09:24,960 --> 00:09:25,960
+See I copied the same prompt
+
+318
+00:09:26,600 --> 00:09:27,520
+And see
+
+319
+00:09:27,520 --> 00:09:28,460
+Hi Archana
+
+320
+00:09:28,460 --> 00:09:30,020
+And some emojis came here
+
+321
+00:09:30,020 --> 00:09:31,840
+Which is not good actually
+
+322
+00:09:31,840 --> 00:09:34,000
+And I hope you are doing absolutely
+
+323
+00:09:34,000 --> 00:09:34,600
+amazing
+
+324
+00:09:34,600 --> 00:09:35,780
+And have a wonderful day
+
+325
+00:09:35,780 --> 00:09:36,820
+If you get such a mail
+
+326
+00:09:37,420 --> 00:09:39,500
+Do you think HR is interested
+
+327
+00:09:39,500 --> 00:09:40,460
+In looking at the mail
+
+328
+00:09:40,460 --> 00:09:41,060
+Starting
+
+329
+00:09:41,500 --> 00:09:42,620
+Mood off right
+
+330
+00:09:42,620 --> 00:09:44,540
+Because it is like A generated
+
+331
+00:09:44,540 --> 00:09:46,500
+Situation, task, action result
+
+332
+00:09:46,500 --> 00:09:48,060
+And various emojis came
+
+333
+00:09:48,060 --> 00:09:49,320
+Which is fine
+
+334
+00:09:49,320 --> 00:09:52,000
+Considering if we compare it with
+
+335
+00:09:52,000 --> 00:09:52,600
+bad prompt
+
+336
+00:09:52,600 --> 00:09:53,360
+But even then
+
+337
+00:09:53,360 --> 00:09:55,000
+There are a couple of things which
+
+338
+00:09:55,000 --> 00:09:55,940
+we don't like
+
+339
+00:09:55,940 --> 00:09:56,620
+Isn't it
+
+340
+00:09:56,620 --> 00:09:58,100
+What is in it
+
+341
+00:09:58,100 --> 00:09:58,700
+Emojis
+
+342
+00:09:58,700 --> 00:10:00,080
+A little more length
+
+343
+00:10:00,080 --> 00:10:02,280
+Even though we put length as 300
+
+344
+00:10:02,280 --> 00:10:04,540
+But that is fine
+
+345
+00:10:04,540 --> 00:10:06,260
+And I don't want this
+
+346
+00:10:06,260 --> 00:10:07,820
+I hope you are doing well
+
+347
+00:10:07,820 --> 00:10:10,660
+And there are hyphens here and there
+
+348
+00:10:10,660 --> 00:10:12,760
+So same model same task
+
+349
+00:10:12,760 --> 00:10:14,440
+Just a five different
+
+350
+00:10:14,440 --> 00:10:15,040
+Techniques
+
+351
+00:10:15,040 --> 00:10:17,740
+The output becomes five X
+
+352
+00:10:17,740 --> 00:10:18,400
+Better
+
+353
+00:10:18,400 --> 00:10:19,640
+Everything is fine
+
+354
+00:10:19,640 --> 00:10:21,700
+But there are a couple of things
+
+355
+00:10:21,700 --> 00:10:22,940
+Which you don't like at all
+
+356
+00:10:22,940 --> 00:10:24,560
+So how we can make this
+
+357
+00:10:24,560 --> 00:10:25,760
+Output even better
+
+358
+00:10:25,760 --> 00:10:27,880
+So that is where we will talk
+
+359
+00:10:27,880 --> 00:10:29,260
+About the next concept
+
+360
+00:10:29,260 --> 00:10:31,340
+Which are called constraints and
+
+361
+00:10:31,340 --> 00:10:31,940
+negatives
+
+362
+00:10:31,940 --> 00:10:33,640
+Now our output has come
+
+363
+00:10:33,640 --> 00:10:36,160
+There are a lot of mistakes in that
+
+364
+00:10:36,160 --> 00:10:36,760
+output
+
+365
+00:10:36,760 --> 00:10:37,360
+These emojis
+
+366
+00:10:37,360 --> 00:10:38,760
+I hope you are doing well
+
+367
+00:10:38,760 --> 00:10:40,900
+Now to eliminate this
+
+368
+00:10:40,900 --> 00:10:42,280
+What you do is
+
+369
+00:10:42,280 --> 00:10:44,080
+You use a keyword called
+
+370
+00:10:44,960 --> 00:10:45,680
+Constraints
+
+371
+00:10:45,680 --> 00:10:46,760
+In those constraints
+
+372
+00:10:46,760 --> 00:10:48,440
+You will define
+
+373
+00:10:48,440 --> 00:10:50,580
+You don't need any response
+
+374
+00:10:50,580 --> 00:10:52,880
+From the ChatGPT
+
+375
+00:10:52,880 --> 00:10:54,200
+That is very important
+
+376
+00:10:54,200 --> 00:10:54,800
+See
+
+377
+00:10:54,800 --> 00:10:57,120
+No I hope this email finds you well
+
+378
+00:10:57,120 --> 00:10:58,960
+No I am writing to express my
+
+379
+00:10:58,960 --> 00:10:59,560
+interest
+
+380
+00:10:59,560 --> 00:11:00,640
+No emojis at all
+
+381
+00:11:00,640 --> 00:11:01,540
+No hyphens
+
+382
+00:11:01,540 --> 00:11:02,740
+No begging tone
+
+383
+00:11:02,740 --> 00:11:05,420
+No listing of generic qualifications
+
+384
+00:11:05,420 --> 00:11:06,600
+Pick one
+
+385
+00:11:06,600 --> 00:11:08,660
+And don't add or assume anything
+
+386
+00:11:08,660 --> 00:11:10,300
+We can add more constraints
+
+387
+00:11:10,300 --> 00:11:13,280
+So what a lot of people think
+
+388
+00:11:13,280 --> 00:11:14,480
+Is that after this output
+
+389
+00:11:14,480 --> 00:11:16,180
+No response is coming
+
+390
+00:11:16,360 --> 00:11:18,440
+You need to also enforce
+
+391
+00:11:18,440 --> 00:11:20,460
+That you don't want any output
+
+392
+00:11:20,460 --> 00:11:22,520
+You need to specifically tell to the
+
+393
+00:11:22,520 --> 00:11:23,120
+AI
+
+394
+00:11:23,120 --> 00:11:24,840
+And one more thing is
+
+395
+00:11:24,840 --> 00:11:26,300
+Please make this thing better
+
+396
+00:11:26,300 --> 00:11:28,040
+There is no need to say please
+
+397
+00:11:28,040 --> 00:11:30,780
+Because AI is just a tool at the end
+
+398
+00:11:30,780 --> 00:11:32,000
+What you need to do
+
+399
+00:11:32,000 --> 00:11:33,400
+You need to be direct
+
+400
+00:11:33,400 --> 00:11:35,000
+The phrase do not
+
+401
+00:11:35,000 --> 00:11:38,080
+Is more powerful than please avoid
+
+402
+00:11:38,080 --> 00:11:39,740
+Because you are giving
+
+403
+00:11:39,740 --> 00:11:42,120
+Crystal clear commands to the LLM
+
+404
+00:11:42,120 --> 00:11:43,240
+And one more thing is
+
+405
+00:11:43,240 --> 00:11:45,160
+In production we use pick one
+
+406
+00:11:45,160 --> 00:11:46,680
+And generic qualifications
+
+407
+00:11:46,680 --> 00:11:47,520
+Why?
+
+408
+00:11:48,140 --> 00:11:49,140
+When there is pick one
+
+409
+00:11:49,140 --> 00:11:50,780
+What it does is
+
+410
+00:11:50,780 --> 00:11:53,520
+Analyze the important topics in our
+
+411
+00:11:53,520 --> 00:11:54,120
+JD
+
+412
+00:11:54,600 --> 00:11:57,100
+Analyze the bullet points in our
+
+413
+00:11:57,100 --> 00:11:57,700
+resume
+
+414
+00:11:57,700 --> 00:11:59,040
+And based on all the extra
+
+415
+00:11:59,040 --> 00:12:00,380
+Matches
+
+416
+00:12:00,630 --> 00:12:02,260
+It writes cold emails
+
+417
+00:12:02,900 --> 00:12:03,700
+That's it
+
+418
+00:12:03,700 --> 00:12:04,840
+I am an expert in 5 -6 different
+
+419
+00:12:04,840 --> 00:12:05,740
+technologies
+
+420
+00:12:05,740 --> 00:12:06,960
+I won't add everything
+
+421
+00:12:06,960 --> 00:12:09,240
+Because what is our end goal?
+
+422
+00:12:09,860 --> 00:12:12,120
+You want as much better cold
+
+423
+00:12:12,120 --> 00:12:13,380
+Email as possible
+
+424
+00:12:13,380 --> 00:12:17,280
+For that you need to personalize
+
+425
+00:12:17,280 --> 00:12:18,320
+Using the prompt
+
+426
+00:12:18,320 --> 00:12:20,000
+Now what we are going to do
+
+427
+00:12:20,000 --> 00:12:22,080
+Let's go back to our prompt
+
+428
+00:12:22,690 --> 00:12:23,860
+And in this prompt
+
+429
+00:12:23,860 --> 00:12:25,460
+Let's also add
+
+430
+00:12:25,460 --> 00:12:26,920
+All of these constraints
+
+431
+00:12:26,920 --> 00:12:28,920
+After adding these constraints
+
+432
+00:12:29,940 --> 00:12:31,620
+Now let's look at
+
+433
+00:12:31,620 --> 00:12:33,460
+What is the output that we are going
+
+434
+00:12:33,460 --> 00:12:34,060
+to get
+
+435
+00:12:34,060 --> 00:12:35,040
+From the chat GPT
+
+436
+00:12:35,040 --> 00:12:36,600
+I am providing the same prompt
+
+437
+00:12:36,600 --> 00:12:40,040
+Now let's look at the output
+
+438
+00:12:40,040 --> 00:12:41,840
+Senior AI engineer
+
+439
+00:12:41,840 --> 00:12:43,140
+Rag production systems
+
+440
+00:12:43,140 --> 00:12:45,940
+And this output
+
+441
+00:12:45,940 --> 00:12:46,880
+Is much better
+
+442
+00:12:46,880 --> 00:12:48,420
+Hi Archana
+
+443
+00:12:48,420 --> 00:12:50,240
+I noticed senior AI engineering
+
+444
+00:12:50,240 --> 00:12:50,900
+opening
+
+445
+00:12:50,900 --> 00:12:52,700
+And the emphasis on agentic systems
+
+446
+00:12:52,700 --> 00:12:55,080
+Retrieval and reliability at scale
+
+447
+00:12:55,080 --> 00:12:56,600
+I built this in one of the bus
+
+448
+00:12:56,600 --> 00:12:59,380
+It is providing the exact
+
+449
+00:12:59,380 --> 00:13:00,400
+Project that I did
+
+450
+00:13:00,400 --> 00:13:02,200
+With the numbers as well
+
+451
+00:13:02,200 --> 00:13:03,660
+After reading this paragraph
+
+452
+00:13:03,660 --> 00:13:06,400
+The recruiter knows what are my
+
+453
+00:13:06,400 --> 00:13:07,000
+capabilities
+
+454
+00:13:07,000 --> 00:13:08,740
+And at the end
+
+455
+00:13:08,740 --> 00:13:10,360
+We are requesting if you like to
+
+456
+00:13:10,360 --> 00:13:10,960
+have more
+
+457
+00:13:10,960 --> 00:13:12,500
+Conversations let's jump on a call
+
+458
+00:13:12,500 --> 00:13:13,160
+for 15 minutes
+
+459
+00:13:13,700 --> 00:13:14,940
+See now this
+
+460
+00:13:14,940 --> 00:13:16,760
+Looks like a proper cold email
+
+461
+00:13:16,760 --> 00:13:18,900
+So by adding
+
+462
+00:13:18,900 --> 00:13:19,500
+These constraints
+
+463
+00:13:19,500 --> 00:13:21,660
+We are getting the output
+
+464
+00:13:22,560 --> 00:13:23,160
+The way we want
+
+465
+00:13:23,160 --> 00:13:25,380
+But here
+
+466
+00:13:25,380 --> 00:13:27,820
+We can make this even better
+
+467
+00:13:27,820 --> 00:13:29,240
+That is like
+
+468
+00:13:29,240 --> 00:13:31,020
+What if you already
+
+469
+00:13:31,020 --> 00:13:33,220
+Wrote a cold email
+
+470
+00:13:33,220 --> 00:13:35,980
+And you know some of the cold emails
+
+471
+00:13:35,980 --> 00:13:36,880
+Got worked
+
+472
+00:13:36,880 --> 00:13:39,700
+You have the email which is
+
+473
+00:13:39,700 --> 00:13:41,520
+Working in the real time
+
+474
+00:13:41,520 --> 00:13:43,120
+So what you can do
+
+475
+00:13:43,120 --> 00:13:45,740
+You can give those as an example
+
+476
+00:13:45,740 --> 00:13:47,260
+Close to the LLM
+
+477
+00:13:47,260 --> 00:13:48,460
+So that is where
+
+478
+00:13:48,460 --> 00:13:50,460
+We call it the next technique
+
+479
+00:13:50,460 --> 00:13:53,360
+Which is called few short learning
+
+480
+00:13:53,360 --> 00:13:54,260
+Imagine
+
+481
+00:13:54,260 --> 00:13:55,340
+I have hired you
+
+482
+00:13:55,340 --> 00:13:57,760
+For content creator
+
+483
+00:13:57,760 --> 00:14:00,220
+So your first job is
+
+484
+00:14:00,220 --> 00:14:01,500
+To write a script for my next video
+
+485
+00:14:01,500 --> 00:14:04,100
+So what do you do first
+
+486
+00:14:04,100 --> 00:14:05,800
+You come to me and ask for my old
+
+487
+00:14:05,800 --> 00:14:06,880
+video script
+
+488
+00:14:06,880 --> 00:14:07,480
+Right?
+
+489
+00:14:07,980 --> 00:14:10,100
+Because your ideology
+
+490
+00:14:10,100 --> 00:14:11,860
+Your way of thinking is very
+
+491
+00:14:11,860 --> 00:14:12,460
+different
+
+492
+00:14:12,460 --> 00:14:14,400
+From what I am doing actually
+
+493
+00:14:14,400 --> 00:14:15,000
+Yes?
+
+494
+00:14:15,540 --> 00:14:17,360
+So now you see my old script
+
+495
+00:14:18,200 --> 00:14:20,560
+And you will reshape your output
+
+496
+00:14:20,560 --> 00:14:22,200
+According to my needs
+
+497
+00:14:22,200 --> 00:14:22,980
+Yes?
+
+498
+00:14:23,680 --> 00:14:24,900
+So that same thing
+
+499
+00:14:24,900 --> 00:14:27,160
+It is called few short learning
+
+500
+00:14:27,160 --> 00:14:29,860
+So when you give a prompt to an LLM
+
+501
+00:14:29,860 --> 00:14:32,100
+Without leaving the output
+
+502
+00:14:33,080 --> 00:14:33,760
+Maybe
+
+503
+00:14:33,760 --> 00:14:35,660
+Provide some examples
+
+504
+00:14:36,180 --> 00:14:37,940
+Okay? So example intent
+
+505
+00:14:37,940 --> 00:14:39,920
+Let's say examples of the style
+
+506
+00:14:39,920 --> 00:14:40,760
+That I want
+
+507
+00:14:40,760 --> 00:14:42,480
+Subject should be like this
+
+508
+00:14:42,480 --> 00:14:44,500
+And mail should be like this
+
+509
+00:14:44,500 --> 00:14:45,660
+So like this
+
+510
+00:14:45,660 --> 00:14:47,360
+If you provide one example
+
+511
+00:14:47,360 --> 00:14:49,080
+That is called one short
+
+512
+00:14:49,080 --> 00:14:50,940
+If you provide two examples
+
+513
+00:14:50,940 --> 00:14:52,440
+That is called two short
+
+514
+00:14:52,440 --> 00:14:54,100
+If you provide three examples
+
+515
+00:14:54,100 --> 00:14:55,440
+That is called three short
+
+516
+00:14:55,440 --> 00:14:57,380
+And if you provide few examples
+
+517
+00:14:57,380 --> 00:14:58,820
+That is called few short
+
+518
+00:14:58,820 --> 00:14:59,840
+Very simple
+
+519
+00:14:59,840 --> 00:15:01,820
+The idea is
+
+520
+00:15:01,820 --> 00:15:03,020
+You already know
+
+521
+00:15:03,020 --> 00:15:04,420
+This will work
+
+522
+00:15:04,420 --> 00:15:07,500
+You are just feeding that content to
+
+523
+00:15:07,500 --> 00:15:08,100
+the LLM
+
+524
+00:15:08,340 --> 00:15:09,280
+Such that
+
+525
+00:15:09,280 --> 00:15:11,260
+Your next output should also
+
+526
+00:15:11,260 --> 00:15:13,100
+Follow this way
+
+527
+00:15:13,100 --> 00:15:14,180
+Very simple
+
+528
+00:15:14,180 --> 00:15:17,060
+Now let's go and pick the same chart
+
+529
+00:15:17,060 --> 00:15:18,260
+Into chart GPT
+
+530
+00:15:18,260 --> 00:15:19,980
+And let's look at the output
+
+531
+00:15:19,980 --> 00:15:21,900
+This may be even better
+
+532
+00:15:21,900 --> 00:15:23,580
+For my personal use case
+
+533
+00:15:23,580 --> 00:15:25,360
+Because I already like
+
+534
+00:15:25,360 --> 00:15:27,600
+An example that I gave in few short
+
+535
+00:15:27,600 --> 00:15:30,280
+So the idea is
+
+536
+00:15:30,280 --> 00:15:32,300
+To put a couple of examples
+
+537
+00:15:32,300 --> 00:15:33,960
+Which you think are really
+
+538
+00:15:33,960 --> 00:15:35,340
+Working good for you
+
+539
+00:15:35,340 --> 00:15:37,700
+Such that the LLM will follow that
+
+540
+00:15:37,700 --> 00:15:40,140
+Now based on
+
+541
+00:15:40,140 --> 00:15:41,900
+All of the things that we have done
+
+542
+00:15:42,320 --> 00:15:43,800
+The prompt we wrote
+
+543
+00:15:43,800 --> 00:15:45,920
+Almost 9 out of 10
+
+544
+00:15:45,920 --> 00:15:46,520
+Rating
+
+545
+00:15:46,520 --> 00:15:48,220
+So what did we do first?
+
+546
+00:15:48,440 --> 00:15:50,180
+We wrote a single line of prompt
+
+547
+00:15:50,180 --> 00:15:52,680
+Then we have this much number of
+
+548
+00:15:52,680 --> 00:15:53,620
+lines of prompt
+
+549
+00:15:53,620 --> 00:15:55,100
+For the same task
+
+550
+00:15:55,100 --> 00:15:57,460
+This is what we call it
+
+551
+00:15:57,460 --> 00:15:58,480
+As a prompt engineering
+
+552
+00:15:58,480 --> 00:16:00,560
+We are building one layer
+
+553
+00:16:00,560 --> 00:16:01,800
+On top of other
+
+554
+00:16:01,800 --> 00:16:03,880
+To make a very good prompt
+
+555
+00:16:03,880 --> 00:16:06,920
+Such that LLM can reproduce
+
+556
+00:16:06,920 --> 00:16:09,080
+The same kind of output
+
+557
+00:16:09,080 --> 00:16:10,840
+Every single time
+
+558
+00:16:10,840 --> 00:16:13,160
+And guys here is one more example
+
+559
+00:16:13,160 --> 00:16:14,840
+Of how I use few short
+
+560
+00:16:14,840 --> 00:16:15,980
+In my day to day life
+
+561
+00:16:15,980 --> 00:16:18,220
+For my video scripts
+
+562
+00:16:18,220 --> 00:16:19,480
+I need to write hook
+
+563
+00:16:19,480 --> 00:16:22,360
+So what I will do is
+
+564
+00:16:22,360 --> 00:16:23,600
+I will show some hooks
+
+565
+00:16:23,600 --> 00:16:24,840
+That I have already used
+
+566
+00:16:24,840 --> 00:16:27,000
+In a sync AI agent video
+
+567
+00:16:27,000 --> 00:16:27,700
+I used this hook
+
+568
+00:16:27,700 --> 00:16:30,180
+In a video called LLMs are built
+
+569
+00:16:30,180 --> 00:16:31,980
+I used this hook
+
+570
+00:16:31,980 --> 00:16:33,280
+In a video called how to control
+
+571
+00:16:33,280 --> 00:16:33,880
+ChatGPT
+
+572
+00:16:33,880 --> 00:16:35,980
+I used this hook
+
+573
+00:16:35,980 --> 00:16:38,280
+So based on these 3 kind of
+
+574
+00:16:38,280 --> 00:16:39,020
+learnings
+
+575
+00:16:39,020 --> 00:16:41,380
+With my personal examples
+
+576
+00:16:41,380 --> 00:16:43,920
+I am generating 3 more hooks
+
+577
+00:16:43,920 --> 00:16:45,460
+For 3 different topics
+
+578
+00:16:46,080 --> 00:16:47,880
+Then what does ChatGPT do?
+
+579
+00:16:48,180 --> 00:16:49,860
+It will go and understand
+
+580
+00:16:49,860 --> 00:16:52,120
+The style, the voice, the narration
+
+581
+00:16:52,120 --> 00:16:53,420
+Every single thing
+
+582
+00:16:53,420 --> 00:16:56,020
+And it will generate 3 more hooks
+
+583
+00:16:56,020 --> 00:16:57,300
+In that space
+
+584
+00:16:57,860 --> 00:17:00,120
+See hook A, hook B
+
+585
+00:17:00,120 --> 00:17:00,920
+And hook C
+
+586
+00:17:00,920 --> 00:17:02,720
+Every video gets 3 different hooks
+
+587
+00:17:02,720 --> 00:17:04,620
+Based on 3 different styles
+
+588
+00:17:04,620 --> 00:17:06,820
+Now I just need to choose it
+
+589
+00:17:06,820 --> 00:17:07,620
+Very simple
+
+590
+00:17:07,620 --> 00:17:09,620
+Now the output we get is
+
+591
+00:17:09,620 --> 00:17:11,880
+90 -95 % perfect
+
+592
+00:17:11,880 --> 00:17:12,760
+With our prompt
+
+593
+00:17:12,760 --> 00:17:15,200
+But in some situations
+
+594
+00:17:15,200 --> 00:17:16,180
+What happens is
+
+595
+00:17:16,180 --> 00:17:19,300
+You need to have a lot of tasks
+
+596
+00:17:19,300 --> 00:17:20,340
+To be done
+
+597
+00:17:20,340 --> 00:17:21,840
+In that case
+
+598
+00:17:21,840 --> 00:17:23,980
+What happens in a single prompt
+
+599
+00:17:24,920 --> 00:17:27,200
+It will not perform that much
+
+600
+00:17:27,200 --> 00:17:28,020
+Productively
+
+601
+00:17:28,020 --> 00:17:29,880
+For example let's say I want to
+
+602
+00:17:29,880 --> 00:17:30,700
+record a video
+
+603
+00:17:31,180 --> 00:17:32,680
+I will give task to an agent
+
+604
+00:17:33,200 --> 00:17:33,800
+What?
+
+605
+00:17:34,120 --> 00:17:35,280
+I need to do a video on a topic
+
+606
+00:17:35,280 --> 00:17:37,840
+So what should the agent do?
+
+607
+00:17:38,040 --> 00:17:39,520
+It needs to do a research
+
+608
+00:17:39,520 --> 00:17:42,820
+Then it needs to write a script
+
+609
+00:17:42,820 --> 00:17:45,640
+It needs to evaluate the code
+
+610
+00:17:45,640 --> 00:17:46,240
+written in the script
+
+611
+00:17:46,240 --> 00:17:47,600
+Then it needs to write
+
+612
+00:17:47,600 --> 00:17:49,020
+Detailed line by line script
+
+613
+00:17:49,800 --> 00:17:51,420
+It should provide me
+
+614
+00:17:51,420 --> 00:17:52,200
+Thumbnails
+
+615
+00:17:52,200 --> 00:17:54,060
+It should provide me documentation
+
+616
+00:17:54,060 --> 00:17:56,140
+It should provide me description for
+
+617
+00:17:56,140 --> 00:17:56,980
+the YouTube video
+
+618
+00:17:57,340 --> 00:17:58,860
+And every single thing
+
+619
+00:17:58,860 --> 00:18:00,560
+So many tasks
+
+620
+00:18:00,560 --> 00:18:01,740
+In a single prompt
+
+621
+00:18:01,740 --> 00:18:04,120
+Do you think it is better?
+
+622
+00:18:05,200 --> 00:18:06,120
+It could be
+
+623
+00:18:06,120 --> 00:18:08,520
+But my personal opinion is
+
+624
+00:18:08,520 --> 00:18:10,780
+When you are working in production
+
+625
+00:18:10,780 --> 00:18:11,560
+level systems
+
+626
+00:18:11,560 --> 00:18:13,480
+It is better to
+
+627
+00:18:13,480 --> 00:18:15,140
+Separate every task
+
+628
+00:18:15,140 --> 00:18:16,860
+Into their individual prompts
+
+629
+00:18:17,560 --> 00:18:19,100
+And that is where
+
+630
+00:18:19,100 --> 00:18:21,540
+The next chapter comes into picture
+
+631
+00:18:21,540 --> 00:18:23,520
+Which is called task
+
+632
+00:18:24,520 --> 00:18:25,360
+Decomposition
+
+633
+00:18:25,360 --> 00:18:26,760
+So this decomposition
+
+634
+00:18:26,760 --> 00:18:28,540
+Is called chain of prompts
+
+635
+00:18:29,560 --> 00:18:31,300
+Now we have a task
+
+636
+00:18:31,300 --> 00:18:33,680
+What? Find the match
+
+637
+00:18:33,680 --> 00:18:34,840
+In our JD
+
+638
+00:18:35,500 --> 00:18:36,860
+What matches our skills
+
+639
+00:18:37,200 --> 00:18:39,020
+Give that to a separate prompt
+
+640
+00:18:39,020 --> 00:18:40,280
+Another one is
+
+641
+00:18:40,280 --> 00:18:41,580
+Draft star email
+
+642
+00:18:41,580 --> 00:18:42,900
+How to form my project
+
+643
+00:18:42,900 --> 00:18:44,240
+Into a star approach
+
+644
+00:18:45,440 --> 00:18:47,520
+That is a separate prompt
+
+645
+00:18:47,520 --> 00:18:48,880
+After that
+
+646
+00:18:48,880 --> 00:18:52,620
+I want to generate a final
+
+647
+00:18:52,620 --> 00:18:53,460
+Polished output
+
+648
+00:18:53,460 --> 00:18:55,940
+That is my third prompt
+
+649
+00:18:55,940 --> 00:18:57,600
+So you might think
+
+650
+00:18:57,600 --> 00:18:58,500
+Is it necessary to do this for a
+
+651
+00:18:58,500 --> 00:18:59,980
+simple task?
+
+652
+00:19:00,840 --> 00:19:02,140
+You are absolutely right
+
+653
+00:19:02,140 --> 00:19:04,180
+For simple tasks
+
+654
+00:19:05,020 --> 00:19:06,560
+There is no need to do this
+
+655
+00:19:06,560 --> 00:19:08,720
+But what if you are doing
+
+656
+00:19:08,720 --> 00:19:10,180
+Something very large
+
+657
+00:19:10,180 --> 00:19:11,660
+So let's say
+
+658
+00:19:11,660 --> 00:19:13,180
+One example is
+
+659
+00:19:13,180 --> 00:19:13,900
+In our company
+
+660
+00:19:13,900 --> 00:19:16,200
+You are migrating your dashboards
+
+661
+00:19:16,200 --> 00:19:19,380
+From the table to the Amazon quick
+
+662
+00:19:19,380 --> 00:19:19,980
+site
+
+663
+00:19:19,980 --> 00:19:21,840
+So what do you do?
+
+664
+00:19:21,840 --> 00:19:24,260
+You need to extract the intent
+
+665
+00:19:24,260 --> 00:19:25,120
+Of the table
+
+666
+00:19:25,120 --> 00:19:27,320
+You need to extract data sets
+
+667
+00:19:27,320 --> 00:19:29,260
+You need to extract calculations
+
+668
+00:19:30,260 --> 00:19:31,060
+Transformations
+
+669
+00:19:31,060 --> 00:19:32,280
+Like this
+
+670
+00:19:32,280 --> 00:19:33,360
+For every step
+
+671
+00:19:33,360 --> 00:19:35,600
+You write different prompts
+
+672
+00:19:35,600 --> 00:19:38,100
+And take the output from every step
+
+673
+00:19:38,100 --> 00:19:39,440
+And finally
+
+674
+00:19:39,440 --> 00:19:40,660
+You will try to migrate
+
+675
+00:19:40,660 --> 00:19:41,960
+So when you write at production
+
+676
+00:19:41,960 --> 00:19:43,020
+level
+
+677
+00:19:43,020 --> 00:19:45,060
+It is better to break it up
+
+678
+00:19:45,060 --> 00:19:46,520
+Into smaller chunks
+
+679
+00:19:46,520 --> 00:19:48,420
+Such that every prompt
+
+680
+00:19:48,420 --> 00:19:50,820
+Will tackle exactly one problem
+
+681
+00:19:50,820 --> 00:19:52,800
+Without any deviations
+
+682
+00:19:52,800 --> 00:19:54,540
+So this is called
+
+683
+00:19:54,540 --> 00:19:56,540
+Chain of thought
+
+684
+00:19:56,540 --> 00:19:58,220
+Otherwise
+
+685
+00:19:58,220 --> 00:19:59,320
+There are some models
+
+686
+00:20:00,220 --> 00:20:01,620
+GPT 5.5
+
+687
+00:20:01,900 --> 00:20:04,340
+OPUS 4.7, 4.8
+
+688
+00:20:04,340 --> 00:20:06,200
+They are already
+
+689
+00:20:06,200 --> 00:20:07,400
+Reasoning models
+
+690
+00:20:07,400 --> 00:20:08,840
+By default
+
+691
+00:20:08,840 --> 00:20:10,560
+When you give a prompt
+
+692
+00:20:11,860 --> 00:20:14,380
+Because they are on the thinking
+
+693
+00:20:14,380 --> 00:20:15,360
+Models
+
+694
+00:20:15,360 --> 00:20:17,280
+They are enabled with chain of
+
+695
+00:20:17,280 --> 00:20:17,880
+thought
+
+696
+00:20:17,880 --> 00:20:19,800
+By planning step by step
+
+697
+00:20:19,800 --> 00:20:22,280
+They will start executing the tasks
+
+698
+00:20:22,280 --> 00:20:23,260
+So the last thing
+
+699
+00:20:23,260 --> 00:20:25,860
+You need to specifically mention
+
+700
+00:20:25,860 --> 00:20:27,260
+Think step by step
+
+701
+00:20:27,830 --> 00:20:29,680
+Now you don't need to do all of
+
+702
+00:20:29,680 --> 00:20:30,340
+these things
+
+703
+00:20:30,340 --> 00:20:31,660
+But even now
+
+704
+00:20:31,660 --> 00:20:33,400
+If you are using older models
+
+705
+00:20:33,400 --> 00:20:35,420
+Let's say 5.4 mini
+
+706
+00:20:35,420 --> 00:20:36,760
+Via API
+
+707
+00:20:36,760 --> 00:20:38,680
+Then mentioning
+
+708
+00:20:38,680 --> 00:20:40,860
+Think about step by step
+
+709
+00:20:40,860 --> 00:20:42,240
+By writing a line
+
+710
+00:20:42,240 --> 00:20:44,980
+Your output will become even better
+
+711
+00:20:45,670 --> 00:20:47,840
+So this is what we call it as
+
+712
+00:20:47,840 --> 00:20:49,060
+Task decomposition
+
+713
+00:20:49,550 --> 00:20:51,540
+And now for the secret step
+
+714
+00:20:51,540 --> 00:20:54,000
+Which is called
+
+715
+00:20:54,000 --> 00:20:56,000
+Interview style prompting
+
+716
+00:20:56,660 --> 00:20:58,420
+So let's say
+
+717
+00:20:58,420 --> 00:21:00,260
+You don't know any of these
+
+718
+00:21:00,260 --> 00:21:00,860
+techniques
+
+719
+00:21:00,860 --> 00:21:01,640
+You just need to understand
+
+720
+00:21:01,640 --> 00:21:03,580
+I know a simple English line
+
+721
+00:21:03,580 --> 00:21:05,480
+And I want to give that prompt
+
+722
+00:21:05,940 --> 00:21:07,980
+What you can do is
+
+723
+00:21:07,980 --> 00:21:10,160
+You can just put your prompt
+
+724
+00:21:10,160 --> 00:21:11,580
+Along with that
+
+725
+00:21:11,580 --> 00:21:12,640
+I will provide this
+
+726
+00:21:12,640 --> 00:21:15,460
+Before you write anything
+
+727
+00:21:15,820 --> 00:21:16,760
+Interview me
+
+728
+00:21:16,760 --> 00:21:18,840
+Ask me one question at a time
+
+729
+00:21:18,840 --> 00:21:20,720
+About anything you need
+
+730
+00:21:20,720 --> 00:21:22,380
+Whether it is JD, background,
+
+731
+00:21:22,780 --> 00:21:23,380
+project
+
+732
+00:21:23,380 --> 00:21:25,420
+Audience, tone
+
+733
+00:21:25,420 --> 00:21:27,200
+Format, constraints
+
+734
+00:21:27,200 --> 00:21:28,180
+Examples
+
+735
+00:21:28,180 --> 00:21:29,480
+After each answer
+
+736
+00:21:29,480 --> 00:21:30,800
+Ask the next question
+
+737
+00:21:30,800 --> 00:21:32,500
+What are you doing here
+
+738
+00:21:32,500 --> 00:21:34,100
+I have a single line of prompt
+
+739
+00:21:34,100 --> 00:21:37,180
+But to write a better answer
+
+740
+00:21:37,180 --> 00:21:38,780
+I don't need ChatGPT
+
+741
+00:21:39,800 --> 00:21:42,280
+So I am asking ChatGPT
+
+742
+00:21:42,280 --> 00:21:43,900
+Ask me what you need
+
+743
+00:21:43,900 --> 00:21:45,120
+I am saying I will give
+
+744
+00:21:45,120 --> 00:21:47,420
+Let's see what happens
+
+745
+00:21:48,220 --> 00:21:49,440
+So great
+
+746
+00:21:49,440 --> 00:21:51,120
+I will interview one question at a
+
+747
+00:21:51,120 --> 00:21:51,720
+time
+
+748
+00:21:51,720 --> 00:21:52,820
+Now what I am asking is
+
+749
+00:21:53,420 --> 00:21:55,560
+What is the strongest project
+
+750
+00:21:55,560 --> 00:21:57,180
+That you have done showcased in the
+
+751
+00:21:57,180 --> 00:21:57,780
+email
+
+752
+00:21:57,780 --> 00:21:59,180
+So project name, company,
+
+753
+00:21:59,320 --> 00:21:59,920
+problem
+
+754
+00:21:59,920 --> 00:22:01,180
+What you built, text pack,
+
+755
+00:22:01,420 --> 00:22:02,020
+scale
+
+756
+00:22:02,020 --> 00:22:03,060
+Measurable results
+
+757
+00:22:03,060 --> 00:22:05,280
+So what I am doing is
+
+758
+00:22:05,280 --> 00:22:07,160
+I will provide the details about my
+
+759
+00:22:07,160 --> 00:22:07,760
+strongest
+
+760
+00:22:07,760 --> 00:22:08,360
+Project
+
+761
+00:22:08,360 --> 00:22:11,460
+So this is the first question
+
+762
+00:22:11,460 --> 00:22:12,980
+Ok that is done
+
+763
+00:22:12,980 --> 00:22:15,040
+Then it is asking second question
+
+764
+00:22:15,040 --> 00:22:16,660
+For this open AI role
+
+765
+00:22:16,660 --> 00:22:18,160
+What is the strongest AI,
+
+766
+00:22:18,160 --> 00:22:18,760
+LLM
+
+767
+00:22:18,760 --> 00:22:20,100
+Agentic project that you have built
+
+768
+00:22:20,780 --> 00:22:22,280
+I just need to provide even more
+
+769
+00:22:22,280 --> 00:22:22,960
+information
+
+770
+00:22:22,960 --> 00:22:24,220
+So what I will do is
+
+771
+00:22:24,220 --> 00:22:25,640
+Let me give you one more information
+
+772
+00:22:26,640 --> 00:22:28,220
+And after that
+
+773
+00:22:28,220 --> 00:22:29,880
+Let's see
+
+774
+00:22:29,880 --> 00:22:31,520
+Question 3 about rag
+
+775
+00:22:31,520 --> 00:22:33,720
+What will I do after that
+
+776
+00:22:33,720 --> 00:22:34,980
+I will provide third project
+
+777
+00:22:34,980 --> 00:22:37,060
+I will provide some details
+
+778
+00:22:37,060 --> 00:22:41,180
+Ok now let's see
+
+779
+00:22:41,180 --> 00:22:42,360
+Excellent this is good
+
+780
+00:22:42,360 --> 00:22:44,080
+Question 4 what is your goal
+
+781
+00:22:44,080 --> 00:22:44,860
+What is our goal
+
+782
+00:22:44,860 --> 00:22:46,940
+I want to get the recruiter
+
+783
+00:22:46,940 --> 00:22:47,580
+screening call
+
+784
+00:22:47,580 --> 00:22:48,700
+Let's say that is my goal
+
+785
+00:22:52,070 --> 00:22:53,570
+And question 5
+
+786
+00:22:53,570 --> 00:22:55,110
+Do you already know the recruiter's
+
+787
+00:22:55,110 --> 00:22:55,710
+name
+
+788
+00:22:55,710 --> 00:22:57,250
+Let's give Archana
+
+789
+00:22:57,250 --> 00:22:59,590
+And I want to have a professional
+
+790
+00:22:59,590 --> 00:23:01,090
+And confident technical tone
+
+791
+00:23:01,090 --> 00:23:03,150
+I don't want anything which is not
+
+792
+00:23:03,150 --> 00:23:03,750
+good
+
+793
+00:23:06,940 --> 00:23:09,360
+Now based on all of these
+
+794
+00:23:09,360 --> 00:23:10,760
+Inputs that I have provided
+
+795
+00:23:10,760 --> 00:23:12,660
+It is giving me the output
+
+796
+00:23:12,660 --> 00:23:14,200
+So what we have done
+
+797
+00:23:14,200 --> 00:23:14,840
+In the beginning
+
+798
+00:23:14,840 --> 00:23:16,960
+We only know this in prompt
+
+799
+00:23:16,960 --> 00:23:19,540
+But for ChatGPT
+
+800
+00:23:19,540 --> 00:23:21,040
+Or any LLM
+
+801
+00:23:21,040 --> 00:23:23,080
+What details do we need
+
+802
+00:23:23,080 --> 00:23:25,420
+We are asking ChatGPT
+
+803
+00:23:25,420 --> 00:23:27,260
+Or LLM to ask us
+
+804
+00:23:27,260 --> 00:23:28,280
+Like an interview
+
+805
+00:23:28,280 --> 00:23:29,840
+And for every question you are
+
+806
+00:23:29,840 --> 00:23:30,600
+providing answer
+
+807
+00:23:30,600 --> 00:23:33,400
+At the end you got the output
+
+808
+00:23:33,400 --> 00:23:35,080
+Which we liked in the initial part
+
+809
+00:23:35,080 --> 00:23:37,840
+So either you can do like that
+
+810
+00:23:37,840 --> 00:23:39,040
+Or you can do like this
+
+811
+00:23:39,040 --> 00:23:40,280
+From the beginning
+
+812
+00:23:40,280 --> 00:23:41,420
+There are all the techniques
+
+813
+00:23:41,420 --> 00:23:43,200
+The prompt building
+
+814
+00:23:43,200 --> 00:23:45,100
+Where you can use it
+
+815
+00:23:45,100 --> 00:23:47,340
+When you are talking via APS
+
+816
+00:23:47,340 --> 00:23:48,860
+In your company
+
+817
+00:23:48,860 --> 00:23:51,080
+When you are building the projects
+
+818
+00:23:51,080 --> 00:23:52,440
+You have to give direct prompt
+
+819
+00:23:52,440 --> 00:23:54,040
+It will not be a question and answer
+
+820
+00:23:54,040 --> 00:23:56,700
+But if you are learning this stuff
+
+821
+00:23:56,700 --> 00:23:58,460
+Interviewing something like this
+
+822
+00:23:58,460 --> 00:24:00,020
+Is the best technique
+
+823
+00:24:00,020 --> 00:24:02,720
+Let's say you gave me a job in the
+
+824
+00:24:02,720 --> 00:24:03,320
+office
+
+825
+00:24:03,320 --> 00:24:03,920
+I don't know what to do
+
+826
+00:24:03,920 --> 00:24:04,860
+What will I do
+
+827
+00:24:04,860 --> 00:24:06,700
+I will go as a LLM
+
+828
+00:24:06,700 --> 00:24:07,560
+I will ask
+
+829
+00:24:07,560 --> 00:24:09,420
+I want to achieve this task
+
+830
+00:24:09,420 --> 00:24:11,480
+Ask me or interview me
+
+831
+00:24:11,480 --> 00:24:13,200
+What are the topics I need to learn
+
+832
+00:24:13,200 --> 00:24:15,040
+And in every topic I will interview
+
+833
+00:24:15,040 --> 00:24:17,420
+So I am learning a lot
+
+834
+00:24:17,420 --> 00:24:19,220
+While talking to these LLMs
+
+835
+00:24:19,220 --> 00:24:22,520
+So almost 90 % of the prompt
+
+836
+00:24:22,520 --> 00:24:23,120
+engineering
+
+837
+00:24:23,120 --> 00:24:23,780
+You have done
+
+838
+00:24:23,780 --> 00:24:25,900
+So before we close this call
+
+839
+00:24:25,900 --> 00:24:27,960
+I want to show you the final prompt
+
+840
+00:24:27,960 --> 00:24:28,560
+template
+
+841
+00:24:28,560 --> 00:24:30,200
+So what is the role
+
+842
+00:24:30,200 --> 00:24:31,600
+What is our context
+
+843
+00:24:31,600 --> 00:24:33,420
+You can put anything in this context
+
+844
+00:24:33,420 --> 00:24:35,460
+Photos, videos, images
+
+845
+00:24:35,460 --> 00:24:36,680
+Anything at all
+
+846
+00:24:36,680 --> 00:24:38,100
+What is our audience
+
+847
+00:24:38,100 --> 00:24:39,780
+What is our goal, what are our
+
+848
+00:24:39,780 --> 00:24:40,380
+references
+
+849
+00:24:40,380 --> 00:24:42,720
+And then what is the task
+
+850
+00:24:42,720 --> 00:24:44,580
+And what is the output format
+
+851
+00:24:44,580 --> 00:24:46,400
+And what is the major things
+
+852
+00:24:46,400 --> 00:24:48,580
+That you want LLM to focus on
+
+853
+00:24:48,580 --> 00:24:49,560
+What is the length
+
+854
+00:24:49,560 --> 00:24:51,220
+And the constraints
+
+855
+00:24:51,220 --> 00:24:53,360
+And the few short examples
+
+856
+00:24:53,360 --> 00:24:55,600
+And then the quality checks
+
+857
+00:24:57,560 --> 00:24:58,760
+Before finalizing
+
+858
+00:24:58,760 --> 00:25:01,160
+Verify if the email we get
+
+859
+00:25:01,160 --> 00:25:02,480
+Is in the required requirement
+
+860
+00:25:02,480 --> 00:25:04,620
+And then quality check
+
+861
+00:25:04,620 --> 00:25:07,200
+So this is what we call
+
+862
+00:25:07,200 --> 00:25:09,180
+As a master template prompt
+
+863
+00:25:09,180 --> 00:25:10,940
+Where you can achieve
+
+864
+00:25:10,940 --> 00:25:12,140
+Any kind of task
+
+865
+00:25:12,140 --> 00:25:14,980
+And all this we have built one step
+
+866
+00:25:14,980 --> 00:25:15,960
+On top of another
+
+867
+00:25:16,540 --> 00:25:18,620
+This is what prompt engineering
+
+868
+00:25:18,620 --> 00:25:19,920
+Outside of teaching
+
+869
+00:25:19,920 --> 00:25:21,880
+There are some agencies
+
+870
+00:25:21,880 --> 00:25:24,740
+Who are charging 25 to 30 thousand
+
+871
+00:25:24,740 --> 00:25:26,660
+For teaching prompt engineering
+
+872
+00:25:26,660 --> 00:25:28,160
+You tell me
+

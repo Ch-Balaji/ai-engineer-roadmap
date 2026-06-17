@@ -1,0 +1,2652 @@
+1
+00:00:00,000 --> 00:00:02,400
+Imagine, you are working seriously
+
+2
+00:00:02,400 --> 00:00:05,000
+with ChatGPT, and your code is
+
+3
+00:00:05,033 --> 00:00:07,533
+almost complete, and your prompts
+
+4
+00:00:07,533 --> 00:00:09,400
+are crafted beautifully,
+
+5
+00:00:09,866 --> 00:00:12,000
+and ChatGPT is about to complete
+
+6
+00:00:12,033 --> 00:00:13,966
+your task, but boom!
+
+7
+00:00:14,633 --> 00:00:16,233
+At the same time, ChatGPT stopped
+
+8
+00:00:16,266 --> 00:00:17,433
+responding to you.
+
+9
+00:00:17,866 --> 00:00:19,600
+Have you ever noticed this?
+
+10
+00:00:19,600 --> 00:00:21,100
+And why is it not responding?
+
+11
+00:00:21,133 --> 00:00:23,733
+Because of something called as Rate
+
+12
+00:00:23,733 --> 00:00:24,466
+Limiting.
+
+13
+00:00:24,700 --> 00:00:26,200
+You have reached the current usage
+
+14
+00:00:26,233 --> 00:00:28,533
+cap for the ChatGPT 4.0.
+
+15
+00:00:28,533 --> 00:00:29,933
+Try again in 4 hours.
+
+16
+00:00:30,500 --> 00:00:32,400
+This is not only in ChatGPT,
+
+17
+00:00:32,400 --> 00:00:33,000
+guys.
+
+18
+00:00:33,000 --> 00:00:34,100
+When you are using Claude Code,
+
+19
+00:00:34,633 --> 00:00:35,466
+you have faced that too?
+
+20
+00:00:36,100 --> 00:00:37,200
+Message limit reached,
+
+21
+00:00:37,533 --> 00:00:40,433
+resets at 8.30 pm, and maybe in
+
+22
+00:00:40,433 --> 00:00:43,733
+Cursor, and also in GitHub Copilot.
+
+23
+00:00:43,733 --> 00:00:45,366
+This is not only in ChatGPT,
+
+24
+00:00:45,366 --> 00:00:46,800
+Claude, Cursor, or GitHub.
+
+25
+00:00:46,800 --> 00:00:49,100
+Not only that, if you are using any
+
+26
+00:00:49,133 --> 00:00:52,233
+kind of LLM tools or AI tools,
+
+27
+00:00:52,233 --> 00:00:55,166
+every single tool has these limits.
+
+28
+00:00:55,166 --> 00:00:57,100
+And how do you calculate these
+
+29
+00:00:57,133 --> 00:00:57,733
+limits?
+
+30
+00:00:57,733 --> 00:00:59,466
+There is no magic behind it,
+
+31
+00:00:59,500 --> 00:01:01,766
+and the single term that defines
+
+32
+00:01:01,766 --> 00:01:05,766
+these limits are called tokens.
+
+33
+00:01:05,766 --> 00:01:07,133
+What are tokens?
+
+34
+00:01:07,133 --> 00:01:09,233
+How do you calculate tokens?
+
+35
+00:01:09,233 --> 00:01:11,133
+Every single thing we will learn in
+
+36
+00:01:11,133 --> 00:01:11,900
+this video.
+
+37
+00:01:11,933 --> 00:01:15,566
+And literally, there are a couple of
+
+38
+00:01:15,600 --> 00:01:17,833
+developers who don't even understand
+
+39
+00:01:17,833 --> 00:01:19,966
+what tokens are.
+
+40
+00:01:19,966 --> 00:01:22,266
+So, I am making this video to help
+
+41
+00:01:22,300 --> 00:01:24,200
+you understand what tokens are
+
+42
+00:01:24,200 --> 00:01:25,000
+visually.
+
+43
+00:01:25,000 --> 00:01:26,933
+So, by the end of this video,
+
+44
+00:01:26,933 --> 00:01:29,066
+what you will understand is why some
+
+45
+00:01:29,100 --> 00:01:30,833
+AI tools have limits,
+
+46
+00:01:30,833 --> 00:01:33,333
+and why long prompts cost you more,
+
+47
+00:01:33,333 --> 00:01:35,766
+and also why ChatGPT forgets your
+
+48
+00:01:35,800 --> 00:01:36,933
+old context,
+
+49
+00:01:36,933 --> 00:01:39,266
+and why answers cost you more than
+
+50
+00:01:39,300 --> 00:01:39,900
+the prompts.
+
+51
+00:01:39,900 --> 00:01:41,533
+And in all the questions,
+
+52
+00:01:41,533 --> 00:01:43,966
+I will also explain two technical
+
+53
+00:01:44,000 --> 00:01:47,433
+terms, which are TPS, tokens per
+
+54
+00:01:47,466 --> 00:01:48,533
+second,
+
+55
+00:01:48,533 --> 00:01:50,800
+and also the context window.
+
+56
+00:01:50,800 --> 00:01:53,066
+If you remember, in our previous
+
+57
+00:01:53,100 --> 00:01:55,700
+video, when we are hitting ChatGPT
+
+58
+00:01:55,700 --> 00:01:56,300
+API,
+
+59
+00:01:56,400 --> 00:01:57,633
+in the output response,
+
+60
+00:01:57,700 --> 00:01:59,366
+we have something called as prompt
+
+61
+00:01:59,366 --> 00:02:00,766
+tokens, completion tokens,
+
+62
+00:02:00,900 --> 00:02:01,633
+and total tokens.
+
+63
+00:02:02,333 --> 00:02:02,933
+We didn't cover this part in the
+
+64
+00:02:02,933 --> 00:02:03,666
+last video.
+
+65
+00:02:03,700 --> 00:02:06,433
+But by the end of this video,
+
+66
+00:02:06,566 --> 00:02:08,400
+you will be also able to understand
+
+67
+00:02:08,433 --> 00:02:11,000
+these terms as well.
+
+68
+00:02:11,000 --> 00:02:12,633
+So, before we understand what tokens
+
+69
+00:02:12,633 --> 00:02:15,500
+are, think about one question.
+
+70
+00:02:15,966 --> 00:02:17,966
+When you go to ChatGPT and type
+
+71
+00:02:18,000 --> 00:02:21,000
+hello, do you think ChatGPT will
+
+72
+00:02:21,000 --> 00:02:22,833
+be able to understand hello?
+
+73
+00:02:22,833 --> 00:02:25,633
+H -E -L -L -O?
+
+74
+00:02:25,633 --> 00:02:28,400
+No, because it is a machine,
+
+75
+00:02:28,400 --> 00:02:29,000
+right?
+
+76
+00:02:29,000 --> 00:02:30,433
+Machine doesn't understand Telugu,
+
+77
+00:02:30,733 --> 00:02:33,566
+Hindi, English, it is not a human.
+
+78
+00:02:33,866 --> 00:02:35,566
+It doesn't have intelligence like
+
+79
+00:02:35,600 --> 00:02:37,100
+human.
+
+80
+00:02:37,100 --> 00:02:38,200
+But if the machine doesn't
+
+81
+00:02:38,233 --> 00:02:40,466
+understand the hello text,
+
+82
+00:02:40,466 --> 00:02:42,466
+how is it able to interpret our
+
+83
+00:02:42,466 --> 00:02:44,300
+meaning?
+
+84
+00:02:44,300 --> 00:02:45,633
+Yeah?
+
+85
+00:02:45,633 --> 00:02:48,100
+Think about it.
+
+86
+00:02:48,100 --> 00:02:51,800
+So fundamentally, machines work
+
+87
+00:02:51,800 --> 00:02:53,466
+based on mathematics.
+
+88
+00:02:53,466 --> 00:02:56,666
+So, you need to have mathematical
+
+89
+00:02:56,700 --> 00:02:58,600
+operations to be done.
+
+90
+00:02:58,600 --> 00:03:00,300
+If you say hello, you can't do any
+
+91
+00:03:00,300 --> 00:03:02,200
+mathematical operations on hello.
+
+92
+00:03:02,200 --> 00:03:05,033
+But if I can convert hello into
+
+93
+00:03:05,033 --> 00:03:07,300
+something like numbers,
+
+94
+00:03:07,300 --> 00:03:09,366
+I can do mathematical operations on
+
+95
+00:03:09,400 --> 00:03:10,333
+numbers, right?
+
+96
+00:03:10,333 --> 00:03:12,533
+So, whenever you are putting some
+
+97
+00:03:12,533 --> 00:03:14,733
+text to any of these LLMs,
+
+98
+00:03:14,733 --> 00:03:17,300
+ChatGPT, Gemini, Claude,
+
+99
+00:03:17,300 --> 00:03:19,833
+or internally, all of these texts
+
+100
+00:03:19,833 --> 00:03:22,600
+will be converted into numbers.
+
+101
+00:03:22,633 --> 00:03:25,433
+Now, you might have a question in
+
+102
+00:03:25,433 --> 00:03:26,033
+your brain.
+
+103
+00:03:26,033 --> 00:03:27,233
+How do we convert these texts into
+
+104
+00:03:27,233 --> 00:03:29,433
+numbers?
+
+105
+00:03:29,433 --> 00:03:31,400
+That's an interesting question.
+
+106
+00:03:31,466 --> 00:03:32,900
+So, if you are coming from a
+
+107
+00:03:32,900 --> 00:03:34,600
+programming background,
+
+108
+00:03:34,600 --> 00:03:37,000
+you already know what is called
+
+109
+00:03:37,000 --> 00:03:38,500
+ASCII numbers.
+
+110
+00:03:38,500 --> 00:03:40,633
+What is ASCII numbers?
+
+111
+00:03:40,633 --> 00:03:42,333
+Very simple thing.
+
+112
+00:03:42,333 --> 00:03:46,333
+In our alphabets, we assign a
+
+113
+00:03:46,366 --> 00:03:47,700
+dedicated number to every alphabet.
+
+114
+00:03:47,733 --> 00:03:50,100
+So, capital A is 65.
+
+115
+00:03:50,100 --> 00:03:51,766
+Capital B is 66.
+
+116
+00:03:51,766 --> 00:03:53,533
+Small a is 97.
+
+117
+00:03:53,533 --> 00:03:56,833
+Like this, we will assign a
+
+118
+00:03:56,833 --> 00:03:57,933
+dedicated number to every alphabet.
+
+119
+00:03:58,033 --> 00:03:59,800
+Now, what is our initial question?
+
+120
+00:03:59,800 --> 00:04:00,733
+Hello, right?
+
+121
+00:04:00,833 --> 00:04:03,133
+So, we will split this into letters.
+
+122
+00:04:03,133 --> 00:04:05,700
+H, E, L, L, O.
+
+123
+00:04:05,700 --> 00:04:06,733
+And what is the number H?
+
+124
+00:04:06,933 --> 00:04:08,166
+Let's assume 104.
+
+125
+00:04:08,700 --> 00:04:09,800
+And E is 101.
+
+126
+00:04:10,166 --> 00:04:11,333
+And L is 108.
+
+127
+00:04:11,700 --> 00:04:12,833
+And L is 108.
+
+128
+00:04:13,166 --> 00:04:14,400
+And O is 111.
+
+129
+00:04:14,400 --> 00:04:18,033
+Now, I can convert the word Hello
+
+130
+00:04:18,066 --> 00:04:20,933
+into a vector of these numbers.
+
+131
+00:04:20,933 --> 00:04:22,433
+Isn't it?
+
+132
+00:04:22,433 --> 00:04:24,266
+So, Hello is converted like this.
+
+133
+00:04:24,633 --> 00:04:26,433
+Now, ChatGPT will be able to
+
+134
+00:04:26,433 --> 00:04:28,100
+understand Hello.
+
+135
+00:04:28,100 --> 00:04:29,866
+Yes, absolutely.
+
+136
+00:04:29,866 --> 00:04:31,633
+And I can convert Hi.
+
+137
+00:04:31,633 --> 00:04:33,466
+I can convert Bye.
+
+138
+00:04:33,466 --> 00:04:35,900
+I can convert any of these things by
+
+139
+00:04:35,933 --> 00:04:40,000
+converting it into characters.
+
+140
+00:04:40,000 --> 00:04:41,800
+Let's take a moment and think about
+
+141
+00:04:41,833 --> 00:04:42,433
+it, guys.
+
+142
+00:04:42,433 --> 00:04:45,200
+By doing this, is it a good thing or
+
+143
+00:04:45,200 --> 00:04:47,933
+is it a bad thing?
+
+144
+00:04:47,933 --> 00:04:48,533
+Think about it.
+
+145
+00:04:48,533 --> 00:04:52,600
+I will wait like 10 seconds.
+
+146
+00:04:52,700 --> 00:04:53,800
+So, by writing the text in this
+
+147
+00:04:53,800 --> 00:04:55,900
+numerical representation,
+
+148
+00:04:55,900 --> 00:04:58,566
+there is one fundamental problem.
+
+149
+00:04:58,566 --> 00:05:00,733
+What is that fundamental problem?
+
+150
+00:05:00,733 --> 00:05:06,333
+When you convert into Hi and Hello,
+
+151
+00:05:06,333 --> 00:05:09,066
+there is no link between the two
+
+152
+00:05:09,100 --> 00:05:09,700
+output numbers.
+
+153
+00:05:09,700 --> 00:05:11,700
+That is, a machine will not be able
+
+154
+00:05:11,700 --> 00:05:14,900
+to understand the meaning of Hi and
+
+155
+00:05:14,933 --> 00:05:18,600
+Hello by looking at these numbers.
+
+156
+00:05:18,600 --> 00:05:20,300
+So, that is where the intelligence
+
+157
+00:05:20,300 --> 00:05:21,433
+happens.
+
+158
+00:05:21,433 --> 00:05:23,266
+How do we humans work?
+
+159
+00:05:23,266 --> 00:05:25,533
+We think about Hi or Hello in a
+
+160
+00:05:25,533 --> 00:05:27,400
+similar context.
+
+161
+00:05:27,400 --> 00:05:28,733
+But how does a machine understand
+
+162
+00:05:28,733 --> 00:05:30,500
+that context?
+
+163
+00:05:30,500 --> 00:05:32,200
+If we can convert these numbers into
+
+164
+00:05:32,233 --> 00:05:33,633
+a specific standard format.
+
+165
+00:05:33,633 --> 00:05:36,833
+So, this is the fundamental problem
+
+166
+00:05:36,833 --> 00:05:39,466
+that you will face when you are
+
+167
+00:05:39,500 --> 00:05:42,066
+converting your text into numbers
+
+168
+00:05:42,100 --> 00:05:45,200
+using ASCII number patterns.
+
+169
+00:05:45,200 --> 00:05:47,466
+But ChatGPT is doing something more
+
+170
+00:05:47,466 --> 00:05:48,333
+powerful.
+
+171
+00:05:48,333 --> 00:05:50,200
+It understands patterns,
+
+172
+00:05:50,200 --> 00:05:51,933
+meanings, relationships.
+
+173
+00:05:51,933 --> 00:05:53,200
+So, what do we understand?
+
+174
+00:05:53,200 --> 00:05:55,533
+We need something that not only
+
+175
+00:05:55,533 --> 00:05:58,433
+stores the numbers, but we also need
+
+176
+00:05:58,466 --> 00:06:00,733
+to retain the relationships,
+
+177
+00:06:00,733 --> 00:06:02,000
+context and meaning.
+
+178
+00:06:02,000 --> 00:06:04,400
+So, we understood that ASCII does
+
+179
+00:06:04,400 --> 00:06:05,000
+not work.
+
+180
+00:06:05,533 --> 00:06:06,866
+So, what is the other pattern?
+
+181
+00:06:07,366 --> 00:06:09,633
+And that is where Transformers and
+
+182
+00:06:09,633 --> 00:06:11,166
+Embeddings come into picture.
+
+183
+00:06:11,633 --> 00:06:12,233
+Do not worry.
+
+184
+00:06:12,400 --> 00:06:14,500
+We will not go into Transformers and
+
+185
+00:06:14,500 --> 00:06:16,400
+Embeddings in detail in this video.
+
+186
+00:06:16,766 --> 00:06:18,433
+We will touch at a high level.
+
+187
+00:06:19,233 --> 00:06:21,500
+So, now let us understand what a
+
+188
+00:06:21,533 --> 00:06:22,700
+token is.
+
+189
+00:06:23,100 --> 00:06:24,300
+This is the important stuff.
+
+190
+00:06:24,800 --> 00:06:27,866
+A token is a small piece of text.
+
+191
+00:06:27,866 --> 00:06:31,000
+The model reads before it turns that
+
+192
+00:06:31,033 --> 00:06:32,266
+piece into a number.
+
+193
+00:06:32,800 --> 00:06:33,766
+Why did we do this?
+
+194
+00:06:33,900 --> 00:06:35,600
+For the model to understand,
+
+195
+00:06:35,833 --> 00:06:37,533
+we need to convert our text into
+
+196
+00:06:37,533 --> 00:06:38,133
+number.
+
+197
+00:06:38,733 --> 00:06:41,133
+But in the process, there is one
+
+198
+00:06:41,133 --> 00:06:43,400
+more step and that step is called
+
+199
+00:06:43,400 --> 00:06:44,933
+tokenization or a token.
+
+200
+00:06:45,566 --> 00:06:47,100
+We have a simple word called Hello.
+
+201
+00:06:47,966 --> 00:06:49,466
+Hello is a simple word.
+
+202
+00:06:49,833 --> 00:06:53,866
+So, Hello is just a one token and we
+
+203
+00:06:53,900 --> 00:06:55,300
+will convert that token into this
+
+204
+00:06:55,300 --> 00:06:57,233
+number using something called as
+
+205
+00:06:57,233 --> 00:06:57,833
+Embeddings.
+
+206
+00:06:57,833 --> 00:06:58,666
+What does Embeddings mean?
+
+207
+00:06:59,166 --> 00:07:00,300
+We will learn in the next section.
+
+208
+00:07:00,433 --> 00:07:01,333
+So, just wait a minute.
+
+209
+00:07:01,733 --> 00:07:04,033
+And we have another word which is
+
+210
+00:07:04,066 --> 00:07:05,833
+Hello space question mark.
+
+211
+00:07:06,066 --> 00:07:08,366
+Look here, specifically Hello space
+
+212
+00:07:08,400 --> 00:07:09,166
+and question mark.
+
+213
+00:07:09,800 --> 00:07:11,433
+And when we convert that into
+
+214
+00:07:11,433 --> 00:07:14,066
+tokens, it is classified into three
+
+215
+00:07:14,100 --> 00:07:14,700
+tokens.
+
+216
+00:07:15,000 --> 00:07:17,466
+Hello is token one, space is token
+
+217
+00:07:17,500 --> 00:07:19,266
+two and question mark is token
+
+218
+00:07:19,266 --> 00:07:19,866
+three.
+
+219
+00:07:19,866 --> 00:07:23,100
+And let's say we have a bigger word.
+
+220
+00:07:24,033 --> 00:07:26,400
+I mean, I am not sure what this is.
+
+221
+00:07:27,000 --> 00:07:28,900
+But when there are big words like
+
+222
+00:07:28,900 --> 00:07:30,733
+this, the model will not be able to
+
+223
+00:07:30,733 --> 00:07:31,566
+understand this.
+
+224
+00:07:31,833 --> 00:07:34,700
+Because tomorrow, what if there are
+
+225
+00:07:34,733 --> 00:07:35,366
+new words?
+
+226
+00:07:35,633 --> 00:07:36,833
+What will prompt
+
+227
+00:07:36,833 --> 00:07:39,233
+engineering do when there are new
+
+228
+00:07:39,233 --> 00:07:39,833
+words?
+
+229
+00:07:39,833 --> 00:07:40,466
+The model will not be able to
+
+230
+00:07:40,466 --> 00:07:41,466
+understand, right?
+
+231
+00:07:41,466 --> 00:07:43,500
+So, that is why they use something
+
+232
+00:07:43,500 --> 00:07:45,133
+called as tokenization.
+
+233
+00:07:45,900 --> 00:07:48,733
+They convert the word into the root
+
+234
+00:07:48,733 --> 00:07:50,633
+word, very small small chunks.
+
+235
+00:07:51,500 --> 00:07:54,066
+This entire word, it will be split
+
+236
+00:07:54,100 --> 00:07:57,100
+into antidisestablishment
+
+237
+00:07:57,100 --> 00:07:58,333
+arianism.
+
+238
+00:07:58,700 --> 00:08:01,400
+So, like this, a single word can be
+
+239
+00:08:01,400 --> 00:08:03,333
+converted into one, two,
+
+240
+00:08:03,333 --> 00:08:05,333
+three, four, five, six tokens.
+
+241
+00:08:06,133 --> 00:08:07,766
+Look here, this is a single word,
+
+242
+00:08:08,066 --> 00:08:09,833
+but it only takes one token.
+
+243
+00:08:10,400 --> 00:08:11,533
+But this is a single word,
+
+244
+00:08:11,766 --> 00:08:13,466
+but it took six tokens.
+
+245
+00:08:13,466 --> 00:08:15,700
+And let's take one more example.
+
+246
+00:08:15,733 --> 00:08:17,300
+I love mangoes dot.
+
+247
+00:08:17,500 --> 00:08:19,800
+Even the punctuations will also take
+
+248
+00:08:19,833 --> 00:08:21,033
+place in the tokenization.
+
+249
+00:08:21,533 --> 00:08:23,766
+So, I is a token, love is a token,
+
+250
+00:08:24,233 --> 00:08:25,533
+mango is a token.
+
+251
+00:08:25,733 --> 00:08:26,366
+Look at this.
+
+252
+00:08:26,833 --> 00:08:29,000
+Mangoes is converting into a root
+
+253
+00:08:29,000 --> 00:08:29,600
+word.
+
+254
+00:08:30,033 --> 00:08:31,633
+Mango, play, played, place.
+
+255
+00:08:32,366 --> 00:08:34,133
+So, like this, yes, is a separate
+
+256
+00:08:34,133 --> 00:08:36,033
+token and dot is a separate token.
+
+257
+00:08:37,300 --> 00:08:39,400
+So, a sentence means you are
+
+258
+00:08:39,400 --> 00:08:40,900
+converting into tokens.
+
+259
+00:08:41,366 --> 00:08:41,966
+So, what are tokens?
+
+260
+00:08:41,966 --> 00:08:43,900
+We have a big sentence.
+
+261
+00:08:44,533 --> 00:08:46,633
+You are breaking that into smaller
+
+262
+00:08:46,633 --> 00:08:47,433
+smaller chunks.
+
+263
+00:08:48,000 --> 00:08:49,933
+And that chunks are called tokens.
+
+264
+00:08:50,500 --> 00:08:51,333
+And now we have tokens.
+
+265
+00:08:51,933 --> 00:08:53,433
+What is the logical next step?
+
+266
+00:08:54,033 --> 00:08:56,733
+To convert each of these tokens into
+
+267
+00:08:56,766 --> 00:08:57,366
+numbers.
+
+268
+00:08:58,133 --> 00:08:59,400
+And how do we convert those numbers?
+
+269
+00:08:59,766 --> 00:09:02,266
+Using a technique called embedding.
+
+270
+00:09:02,433 --> 00:09:03,933
+Embedding simply means,
+
+271
+00:09:04,033 --> 00:09:04,766
+very simply,
+
+272
+00:09:04,800 --> 00:09:08,533
+It is a way to convert your
+
+273
+00:09:08,566 --> 00:09:11,700
+tokens into a vector or numerical
+
+274
+00:09:11,700 --> 00:09:12,433
+representation.
+
+275
+00:09:13,466 --> 00:09:14,066
+Now, what is the difference between
+
+276
+00:09:14,066 --> 00:09:15,700
+the ASCII we did earlier?
+
+277
+00:09:16,733 --> 00:09:19,466
+When you convert using embedding
+
+278
+00:09:19,500 --> 00:09:20,100
+techniques,
+
+279
+00:09:20,600 --> 00:09:22,833
+you will find all of the similar
+
+280
+00:09:22,833 --> 00:09:24,833
+products or similar text in a
+
+281
+00:09:24,833 --> 00:09:25,500
+similar region.
+
+282
+00:09:26,333 --> 00:09:27,233
+Let's say,
+
+283
+00:09:27,400 --> 00:09:31,500
+I converted
+
+284
+00:09:31,533 --> 00:09:33,233
+into these kind of vectors for three
+
+285
+00:09:33,233 --> 00:09:33,833
+fruits, mango, apple, banana.
+
+286
+00:09:33,833 --> 00:09:35,333
+And these vectors are in a very
+
+287
+00:09:35,366 --> 00:09:36,566
+similar space.
+
+288
+00:09:37,466 --> 00:09:39,700
+They are not closely related with
+
+289
+00:09:39,733 --> 00:09:41,533
+car, train or bus.
+
+290
+00:09:42,033 --> 00:09:43,433
+All of these are in a closed space.
+
+291
+00:09:43,900 --> 00:09:44,733
+All of these are in another closed
+
+292
+00:09:44,733 --> 00:09:45,366
+space.
+
+293
+00:09:45,633 --> 00:09:48,233
+So, here you are converting the text
+
+294
+00:09:48,233 --> 00:09:49,333
+into vectors.
+
+295
+00:09:49,900 --> 00:09:52,066
+And that vectors are giving some
+
+296
+00:09:52,100 --> 00:09:54,466
+meaning to it based on the meaning
+
+297
+00:09:54,466 --> 00:09:55,100
+of the words.
+
+298
+00:09:55,933 --> 00:09:57,433
+Because they are closely related.
+
+299
+00:09:57,433 --> 00:10:00,766
+And that is how model understands,
+
+300
+00:10:01,233 --> 00:10:03,166
+Hello and Hi are very similar
+
+301
+00:10:03,200 --> 00:10:05,233
+because their vector representations
+
+302
+00:10:05,233 --> 00:10:06,866
+are very close to each other.
+
+303
+00:10:07,100 --> 00:10:08,600
+If you want detailed video on
+
+304
+00:10:08,600 --> 00:10:09,833
+embeddings, please let me know in
+
+305
+00:10:09,866 --> 00:10:10,800
+the comment section below.
+
+306
+00:10:11,100 --> 00:10:12,900
+And one more thing, there are
+
+307
+00:10:12,933 --> 00:10:14,733
+different types of embedding
+
+308
+00:10:14,733 --> 00:10:15,333
+techniques.
+
+309
+00:10:15,533 --> 00:10:18,566
+You may ask, why mango has such a
+
+310
+00:10:18,566 --> 00:10:19,733
+big vector representation?
+
+311
+00:10:20,200 --> 00:10:21,766
+There are a couple of embedding
+
+312
+00:10:21,800 --> 00:10:24,533
+techniques where for every word you
+
+313
+00:10:24,533 --> 00:10:26,600
+get 1024 dimensions.
+
+314
+00:10:27,333 --> 00:10:29,433
+That means, for every word you will
+
+315
+00:10:29,433 --> 00:10:31,866
+get 1024 length vector.
+
+316
+00:10:32,400 --> 00:10:33,533
+So, it depends on the model,
+
+317
+00:10:33,833 --> 00:10:36,033
+on the context, which kind of
+
+318
+00:10:36,033 --> 00:10:37,133
+embedding model you need to use.
+
+319
+00:10:37,133 --> 00:10:38,233
+You need to change all of those
+
+320
+00:10:38,233 --> 00:10:38,833
+things.
+
+321
+00:10:38,833 --> 00:10:39,766
+But that is for a later video.
+
+322
+00:10:40,300 --> 00:10:41,366
+Now, what we are going to do is,
+
+323
+00:10:41,400 --> 00:10:43,300
+we will look at how OpenAI will
+
+324
+00:10:43,333 --> 00:10:45,033
+convert the words into numbers.
+
+325
+00:10:45,566 --> 00:10:47,333
+This is from the OpenAI website,
+
+326
+00:10:47,800 --> 00:10:48,400
+Tokenizer.
+
+327
+00:10:49,000 --> 00:10:51,133
+Now, let's say, I will put Hello
+
+328
+00:10:51,133 --> 00:10:51,733
+here.
+
+329
+00:10:51,733 --> 00:10:53,333
+Now, if our input text is Hello,
+
+330
+00:10:54,233 --> 00:10:56,666
+it is just only one token and five
+
+331
+00:10:56,700 --> 00:10:57,300
+characters.
+
+332
+00:10:58,200 --> 00:11:00,666
+And Hello is in a single color code.
+
+333
+00:11:00,866 --> 00:11:02,200
+That means, it is a single token.
+
+334
+00:11:02,666 --> 00:11:04,400
+And when you change it to this token
+
+335
+00:11:04,433 --> 00:11:07,566
+ID, it is where it is converting the
+
+336
+00:11:07,600 --> 00:11:09,333
+Hello token into a number.
+
+337
+00:11:10,033 --> 00:11:11,033
+So, what does Hello do?
+
+338
+00:11:11,400 --> 00:11:12,400
+It does 24912.
+
+339
+00:11:13,333 --> 00:11:15,433
+What if I will put capital Hello?
+
+340
+00:11:16,900 --> 00:11:19,466
+When you even change caps lock,
+
+341
+00:11:19,900 --> 00:11:21,633
+that token number is going to
+
+342
+00:11:21,633 --> 00:11:22,233
+change.
+
+343
+00:11:22,233 --> 00:11:23,233
+The token ID is going to change.
+
+344
+00:11:23,833 --> 00:11:25,666
+And this token ID will change based
+
+345
+00:11:25,700 --> 00:11:27,033
+on different types of models that
+
+346
+00:11:27,066 --> 00:11:27,666
+you use.
+
+347
+00:11:28,066 --> 00:11:30,100
+If you put GPT 4 or GPT 3.5,
+
+348
+00:11:30,933 --> 00:11:34,400
+it is giving token ID as 9906.
+
+349
+00:11:35,266 --> 00:11:38,266
+But if you put GPT 5, it is 13225.
+
+350
+00:11:38,633 --> 00:11:41,233
+So, every model follows their own
+
+351
+00:11:41,233 --> 00:11:42,666
+type of embedding techniques.
+
+352
+00:11:42,700 --> 00:11:46,833
+We will learn in the later parts of
+
+353
+00:11:46,833 --> 00:11:48,433
+the videos, not in this video.
+
+354
+00:11:48,633 --> 00:11:49,366
+And if you take GPT 3,
+
+355
+00:11:49,733 --> 00:11:50,666
+it is 15496.
+
+356
+00:11:51,900 --> 00:11:53,566
+Now, let's take one more example.
+
+357
+00:11:53,833 --> 00:11:54,666
+I love mangoes.
+
+358
+00:11:57,733 --> 00:11:58,333
+Look here.
+
+359
+00:11:58,433 --> 00:12:00,200
+I love mangoes, if I put it here.
+
+360
+00:12:00,566 --> 00:12:02,600
+I is a token. Love is a token.
+
+361
+00:12:03,100 --> 00:12:05,433
+Because I gave M small letter and
+
+362
+00:12:05,433 --> 00:12:06,400
+gave the rest to different people.
+
+363
+00:12:07,200 --> 00:12:09,466
+It is breaking into multiple tokens.
+
+364
+00:12:09,500 --> 00:12:12,433
+I love mangoes because of the way
+
+365
+00:12:12,433 --> 00:12:14,933
+that I write, it is occupying six
+
+366
+00:12:14,933 --> 00:12:15,533
+tokens.
+
+367
+00:12:15,900 --> 00:12:17,333
+But now what I will do is,
+
+368
+00:12:17,333 --> 00:12:19,133
+I will just put this in a single
+
+369
+00:12:19,133 --> 00:12:20,466
+word, mangoes.
+
+370
+00:12:21,833 --> 00:12:22,433
+Look here.
+
+371
+00:12:22,433 --> 00:12:23,766
+It is taking five tokens.
+
+372
+00:12:24,266 --> 00:12:25,566
+So, if you make a spelling mistake,
+
+373
+00:12:26,200 --> 00:12:28,133
+you are using more tokens.
+
+374
+00:12:29,533 --> 00:12:30,133
+Isn't it?
+
+375
+00:12:30,200 --> 00:12:32,033
+And I can get the token IDs for
+
+376
+00:12:32,066 --> 00:12:32,700
+every word.
+
+377
+00:12:33,266 --> 00:12:34,700
+Maybe let's take this paragraph
+
+378
+00:12:34,700 --> 00:12:37,200
+right here and let's put it here.
+
+379
+00:12:37,200 --> 00:12:38,500
+And look here.
+
+380
+00:12:38,633 --> 00:12:40,733
+When I put text, if is a token,
+
+381
+00:12:41,066 --> 00:12:41,966
+you is a token.
+
+382
+00:12:42,700 --> 00:12:43,733
+And there is a word programmatic.
+
+383
+00:12:44,933 --> 00:12:46,833
+It is broken down into two things.
+
+384
+00:12:47,833 --> 00:12:48,433
+Programmatic.
+
+385
+00:12:49,366 --> 00:12:51,266
+So, our big words are the same.
+
+386
+00:12:52,066 --> 00:12:54,366
+All of them are broken down into
+
+387
+00:12:54,400 --> 00:12:56,633
+smaller words called tokens.
+
+388
+00:12:57,133 --> 00:12:59,033
+And for every smaller word token,
+
+389
+00:12:59,566 --> 00:13:01,500
+you are converting into a number
+
+390
+00:13:01,500 --> 00:13:03,666
+using a technique called embedding.
+
+391
+00:13:03,700 --> 00:13:06,000
+And that ID is called a token ID.
+
+392
+00:13:06,033 --> 00:13:07,833
+So, based on the text that you
+
+393
+00:13:07,833 --> 00:13:08,566
+write, you are deciding how many
+
+394
+00:13:08,566 --> 00:13:09,866
+tokens you are using.
+
+395
+00:13:11,000 --> 00:13:12,733
+Even the spaces, punctuations,
+
+396
+00:13:13,066 --> 00:13:15,366
+emojis, every single thing contains
+
+397
+00:13:15,366 --> 00:13:15,966
+the tokens.
+
+398
+00:13:16,300 --> 00:13:17,066
+If you use it in Telugu,
+
+399
+00:13:17,400 --> 00:13:20,566
+Hindi or English, you are going to
+
+400
+00:13:20,600 --> 00:13:22,266
+consume more amount of tokens.
+
+401
+00:13:22,600 --> 00:13:24,233
+I will show it to you live in this
+
+402
+00:13:24,233 --> 00:13:24,833
+right now.
+
+403
+00:13:25,066 --> 00:13:26,266
+So, what we are going to do is,
+
+404
+00:13:26,366 --> 00:13:27,566
+let's open translate.
+
+405
+00:13:27,766 --> 00:13:30,166
+I will put English to Telugu.
+
+406
+00:13:31,133 --> 00:13:32,133
+And here we will put hello.
+
+407
+00:13:33,133 --> 00:13:35,333
+And hello is an English word.
+
+408
+00:13:35,700 --> 00:13:37,833
+If I take it here and if I put it
+
+409
+00:13:37,833 --> 00:13:39,800
+here, it is only one token.
+
+410
+00:13:40,900 --> 00:13:44,166
+But if I copy the same hello in
+
+411
+00:13:44,166 --> 00:13:46,666
+Telugu, if I put it here,
+
+412
+00:13:46,966 --> 00:13:49,266
+it is occupying nine tokens.
+
+413
+00:13:49,633 --> 00:13:50,966
+That means, if you do the same
+
+414
+00:13:51,000 --> 00:13:52,166
+communication in English,
+
+415
+00:13:53,000 --> 00:13:55,000
+you are going to consume one token.
+
+416
+00:13:55,266 --> 00:13:57,200
+But the same thing, if you do it in
+
+417
+00:13:57,200 --> 00:13:59,100
+Telugu, you are going to consume
+
+418
+00:13:59,133 --> 00:14:00,166
+nine tokens.
+
+419
+00:14:00,200 --> 00:14:03,500
+Why? Because models are designed
+
+420
+00:14:03,500 --> 00:14:04,633
+that way.
+
+421
+00:14:05,033 --> 00:14:06,133
+And look at the token IDs.
+
+422
+00:14:06,666 --> 00:14:08,333
+Look, all the tokens have come to
+
+423
+00:14:08,333 --> 00:14:08,933
+hello.
+
+424
+00:14:08,933 --> 00:14:09,966
+But if I put it in English,
+
+425
+00:14:10,600 --> 00:14:12,333
+it is just one token ID.
+
+426
+00:14:13,233 --> 00:14:14,133
+Isn't it interesting?
+
+427
+00:14:15,033 --> 00:14:16,833
+That is why without you knowing,
+
+428
+00:14:17,366 --> 00:14:19,466
+you are consuming more amount of
+
+429
+00:14:19,500 --> 00:14:20,100
+tokens.
+
+430
+00:14:20,133 --> 00:14:21,966
+And that is why you are hitting your
+
+431
+00:14:22,000 --> 00:14:22,600
+limits.
+
+432
+00:14:22,866 --> 00:14:24,700
+And there are different types of
+
+433
+00:14:24,733 --> 00:14:25,466
+tokens, guys.
+
+434
+00:14:25,600 --> 00:14:27,633
+Input tokens and output tokens.
+
+435
+00:14:27,633 --> 00:14:30,066
+But before that, let us understand
+
+436
+00:14:30,066 --> 00:14:31,266
+one simple thing.
+
+437
+00:14:31,600 --> 00:14:33,133
+You put an input to ChatGPT and
+
+438
+00:14:33,133 --> 00:14:33,866
+you get output.
+
+439
+00:14:34,400 --> 00:14:35,533
+So, what is the thing that is
+
+440
+00:14:35,533 --> 00:14:36,500
+happening in the background?
+
+441
+00:14:37,133 --> 00:14:39,966
+My input is converted into tokens.
+
+442
+00:14:40,600 --> 00:14:42,033
+And these tokens are getting
+
+443
+00:14:42,066 --> 00:14:43,800
+converted into embeddings.
+
+444
+00:14:44,300 --> 00:14:46,666
+And these embeddings will go into
+
+445
+00:14:46,666 --> 00:14:47,666
+ChatGPT.
+
+446
+00:14:47,900 --> 00:14:51,433
+And in ChatGPT, they will process
+
+447
+00:14:51,433 --> 00:14:52,733
+all of these embeddings.
+
+448
+00:14:52,766 --> 00:14:55,166
+And they will try to generate output
+
+449
+00:14:55,200 --> 00:14:55,900
+embeddings.
+
+450
+00:14:55,900 --> 00:14:58,133
+And these embeddings, they will
+
+451
+00:14:58,133 --> 00:14:59,933
+generate it back into tokens.
+
+452
+00:15:00,500 --> 00:15:02,100
+And they will convert these tokens
+
+453
+00:15:02,100 --> 00:15:03,433
+back into the output.
+
+454
+00:15:03,933 --> 00:15:04,633
+When you give a prompt,
+
+455
+00:15:05,600 --> 00:15:08,300
+all of this entire process is going
+
+456
+00:15:08,300 --> 00:15:09,900
+to happen in the back end.
+
+457
+00:15:10,533 --> 00:15:12,366
+So, in such a case, you might notice
+
+458
+00:15:12,400 --> 00:15:13,400
+a couple of things.
+
+459
+00:15:14,133 --> 00:15:16,133
+Sometimes, ChatGPT will give you
+
+460
+00:15:16,133 --> 00:15:17,133
+the answers instantly.
+
+461
+00:15:17,733 --> 00:15:19,266
+Sometimes, it will take some time
+
+462
+00:15:19,266 --> 00:15:20,300
+and give you the response.
+
+463
+00:15:20,633 --> 00:15:21,233
+So, why?
+
+464
+00:15:21,233 --> 00:15:23,566
+That is where we learn about a
+
+465
+00:15:23,600 --> 00:15:27,233
+concept called TPS, which is
+
+466
+00:15:27,233 --> 00:15:30,333
+called Tokens Per Second.
+
+467
+00:15:30,866 --> 00:15:31,466
+What does this mean?
+
+468
+00:15:32,233 --> 00:15:35,733
+What is the capability of the LLM
+
+469
+00:15:35,733 --> 00:15:39,000
+model to generate how many number of
+
+470
+00:15:39,033 --> 00:15:41,466
+tokens that it can generate in a
+
+471
+00:15:41,466 --> 00:15:42,066
+second?
+
+472
+00:15:43,233 --> 00:15:45,566
+How many tokens can be generated in
+
+473
+00:15:45,600 --> 00:15:46,200
+a second?
+
+474
+00:15:46,200 --> 00:15:48,233
+Based on that, you will see some
+
+475
+00:15:48,233 --> 00:15:48,866
+response.
+
+476
+00:15:48,866 --> 00:15:50,266
+Sometimes it is fast, sometimes it
+
+477
+00:15:50,266 --> 00:15:50,866
+is slow.
+
+478
+00:15:51,666 --> 00:15:53,700
+If it generates more, it feels fast.
+
+479
+00:15:54,000 --> 00:15:55,800
+If it generates less, it is slow.
+
+480
+00:15:56,466 --> 00:15:57,266
+And how does this fast and slow
+
+481
+00:15:57,266 --> 00:15:57,866
+depend?
+
+482
+00:15:58,566 --> 00:16:00,333
+Based on your complexity of the
+
+483
+00:16:00,333 --> 00:16:01,766
+question, based on the server's
+
+484
+00:16:01,800 --> 00:16:03,733
+busyness, based on the prompt that
+
+485
+00:16:03,733 --> 00:16:05,100
+you provide, based on the thinking
+
+486
+00:16:05,133 --> 00:16:06,566
+model, reasoning capacity.
+
+487
+00:16:07,100 --> 00:16:08,066
+So, based on all these,
+
+488
+00:16:09,000 --> 00:16:10,900
+your output will depend on TPS.
+
+489
+00:16:12,600 --> 00:16:13,200
+You might have heard this word
+
+490
+00:16:13,200 --> 00:16:13,933
+before.
+
+491
+00:16:13,933 --> 00:16:17,366
+So, when you try to download free or
+
+492
+00:16:17,400 --> 00:16:19,733
+open source models, you always check
+
+493
+00:16:19,766 --> 00:16:21,366
+about what is TPS.
+
+494
+00:16:21,933 --> 00:16:23,366
+If the TPS is very low,
+
+495
+00:16:24,233 --> 00:16:25,900
+you will see that the model is
+
+496
+00:16:25,933 --> 00:16:26,766
+lagging a lot.
+
+497
+00:16:27,233 --> 00:16:28,333
+If the TPS is very high,
+
+498
+00:16:29,266 --> 00:16:30,833
+you will feel that the model is
+
+499
+00:16:30,833 --> 00:16:32,300
+working blazingly fast.
+
+500
+00:16:32,733 --> 00:16:34,533
+And now the interesting part,
+
+501
+00:16:34,933 --> 00:16:35,766
+which is the cost.
+
+502
+00:16:37,500 --> 00:16:39,600
+Every token that you send is getting
+
+503
+00:16:39,600 --> 00:16:40,333
+billed.
+
+504
+00:16:40,366 --> 00:16:41,333
+That is for sure.
+
+505
+00:16:41,333 --> 00:16:44,066
+So, all these LLM models,
+
+506
+00:16:44,333 --> 00:16:46,466
+OpenAI, ChatGPT, Grok,
+
+507
+00:16:46,800 --> 00:16:49,933
+Claude, all of these things will work
+
+508
+00:16:49,966 --> 00:16:51,666
+based on the tokens.
+
+509
+00:16:52,200 --> 00:16:52,866
+Depending on the number of tokens
+
+510
+00:16:52,866 --> 00:16:55,633
+you send, they will get billed.
+
+511
+00:16:56,633 --> 00:16:58,066
+So, let us say, for example,
+
+512
+00:16:58,400 --> 00:16:59,966
+there is a ChatGPT 5.5 model.
+
+513
+00:17:00,933 --> 00:17:03,433
+So, for every million tokens that
+
+514
+00:17:03,466 --> 00:17:06,333
+you send as an input, it is going to
+
+515
+00:17:06,333 --> 00:17:07,233
+charge you $5.
+
+516
+00:17:07,766 --> 00:17:08,933
+That is a good amount.
+
+517
+00:17:08,933 --> 00:17:11,433
+For every million tokens,
+
+518
+00:17:11,633 --> 00:17:13,133
+it is only $5.
+
+519
+00:17:13,733 --> 00:17:15,466
+But that is on the input side.
+
+520
+00:17:16,200 --> 00:17:18,100
+When you think about the output,
+
+521
+00:17:18,533 --> 00:17:21,100
+it is going to charge you $30 per
+
+522
+00:17:21,100 --> 00:17:24,400
+million tokens, which is almost 6X
+
+523
+00:17:24,433 --> 00:17:25,033
+the price.
+
+524
+00:17:25,566 --> 00:17:26,166
+Why?
+
+525
+00:17:26,266 --> 00:17:27,900
+Input is basically your question.
+
+526
+00:17:28,200 --> 00:17:30,000
+It is not using any kind of
+
+527
+00:17:30,000 --> 00:17:31,033
+processing or intelligence.
+
+528
+00:17:31,400 --> 00:17:32,833
+But when you send a question to
+
+529
+00:17:32,833 --> 00:17:35,833
+ChatGPT, to generate an answer,
+
+530
+00:17:36,366 --> 00:17:38,066
+it is going to use a lot of
+
+531
+00:17:38,066 --> 00:17:38,666
+resources.
+
+532
+00:17:38,666 --> 00:17:41,800
+And that is why output token cost is
+
+533
+00:17:41,833 --> 00:17:44,000
+almost higher than the input token
+
+534
+00:17:44,000 --> 00:17:44,600
+cost.
+
+535
+00:17:45,033 --> 00:17:48,366
+And for GPT 5.4, $2.5 per million
+
+536
+00:17:48,400 --> 00:17:51,433
+tokens and $15 per million tokens
+
+537
+00:17:51,433 --> 00:17:52,166
+for output.
+
+538
+00:17:52,633 --> 00:17:56,100
+And Claude Opus 4.7, $5 per million
+
+539
+00:17:56,133 --> 00:17:59,366
+tokens in the input and $25 per
+
+540
+00:17:59,400 --> 00:18:01,466
+million tokens in the output.
+
+541
+00:18:02,000 --> 00:18:04,733
+And obviously, prices change with a
+
+542
+00:18:04,733 --> 00:18:05,333
+lot of time.
+
+543
+00:18:05,333 --> 00:18:07,966
+Maybe the price might have already
+
+544
+00:18:07,966 --> 00:18:08,566
+changed.
+
+545
+00:18:08,566 --> 00:18:10,966
+So always check the official API
+
+546
+00:18:11,000 --> 00:18:13,033
+documentation for the price list.
+
+547
+00:18:13,400 --> 00:18:14,633
+This is just to give you an
+
+548
+00:18:14,633 --> 00:18:16,866
+observation of how input and output
+
+549
+00:18:16,866 --> 00:18:18,333
+tokens will cost you.
+
+550
+00:18:18,366 --> 00:18:21,500
+And why output is always almost 4 to
+
+551
+00:18:21,500 --> 00:18:23,300
+5 times costlier than the input
+
+552
+00:18:23,333 --> 00:18:23,933
+tokens.
+
+553
+00:18:24,533 --> 00:18:26,733
+And obviously, when you are using
+
+554
+00:18:26,733 --> 00:18:29,466
+open source models like LLaMA or LLaMA
+
+555
+00:18:29,500 --> 00:18:31,900
+3.3, everything is free.
+
+556
+00:18:31,900 --> 00:18:33,633
+Because you will download the whole
+
+557
+00:18:33,633 --> 00:18:35,933
+model and you are not going to pay
+
+558
+00:18:35,966 --> 00:18:37,366
+any price for these things.
+
+559
+00:18:37,800 --> 00:18:39,133
+And the next important phase,
+
+560
+00:18:39,633 --> 00:18:41,000
+which is called the hidden tax.
+
+561
+00:18:41,666 --> 00:18:43,966
+You might think that now you got the
+
+562
+00:18:43,966 --> 00:18:46,300
+understanding of what tokens are and
+
+563
+00:18:46,300 --> 00:18:48,266
+I can calculate how many tokens that
+
+564
+00:18:48,300 --> 00:18:48,900
+I am using.
+
+565
+00:18:49,833 --> 00:18:51,800
+But no, that is not the one that is
+
+566
+00:18:51,800 --> 00:18:53,500
+going to work in the real time.
+
+567
+00:18:54,266 --> 00:18:56,266
+Because now if you think about
+
+568
+00:18:56,266 --> 00:18:58,500
+agents or LLMs, they have
+
+569
+00:18:58,533 --> 00:19:00,033
+capabilities like tools.
+
+570
+00:19:01,833 --> 00:19:04,833
+MCPs, skills, markdown files,
+
+571
+00:19:05,300 --> 00:19:08,033
+dot MD, memory, a lot of stuff and
+
+572
+00:19:08,033 --> 00:19:09,266
+conversation history.
+
+573
+00:19:10,133 --> 00:19:12,800
+So now when you are working in a
+
+574
+00:19:12,800 --> 00:19:15,200
+Codex or in Claude, you are going
+
+575
+00:19:15,200 --> 00:19:16,900
+to use a lot of prompts.
+
+576
+00:19:17,433 --> 00:19:18,366
+And with every prompt,
+
+577
+00:19:19,333 --> 00:19:21,733
+you are not only just sending your
+
+578
+00:19:21,766 --> 00:19:24,400
+questions, you are also sending what
+
+579
+00:19:24,433 --> 00:19:26,200
+is your prompt, what is your
+
+580
+00:19:26,200 --> 00:19:28,033
+context, what are your files.
+
+581
+00:19:28,066 --> 00:19:30,166
+And then tool definitions,
+
+582
+00:19:30,400 --> 00:19:32,300
+MCPs, past conversations,
+
+583
+00:19:33,066 --> 00:19:36,866
+they will calculate tokens.
+
+584
+00:19:37,233 --> 00:19:39,766
+You are not only sending your single
+
+585
+00:19:39,800 --> 00:19:42,133
+question, you are sending all the
+
+586
+00:19:42,133 --> 00:19:43,866
+information regarding all of the
+
+587
+00:19:43,900 --> 00:19:44,533
+capabilities.
+
+588
+00:19:45,300 --> 00:19:48,633
+And every time
+
+589
+00:19:48,633 --> 00:19:51,333
+you are sending a question,
+
+590
+00:19:51,800 --> 00:19:54,133
+so when you say hi, it is not only
+
+591
+00:19:54,133 --> 00:19:55,366
+just taking it as a hi,
+
+592
+00:19:55,400 --> 00:19:58,500
+it is taking with a lot of different
+
+593
+00:19:58,500 --> 00:19:59,733
+different information guys.
+
+594
+00:20:00,333 --> 00:20:02,600
+So that is why it
+
+595
+00:20:02,633 --> 00:20:06,766
+is going to consume a lot and I
+
+596
+00:20:06,800 --> 00:20:07,800
+will also show you the breakdown on
+
+597
+00:20:07,800 --> 00:20:09,133
+the screen itself right now.
+
+598
+00:20:10,233 --> 00:20:11,833
+And the next and the last one,
+
+599
+00:20:12,033 --> 00:20:14,066
+which is called a context window.
+
+600
+00:20:14,700 --> 00:20:17,833
+Context window means like us humans,
+
+601
+00:20:18,233 --> 00:20:21,166
+LLMs have a limited capacity in the
+
+602
+00:20:21,200 --> 00:20:21,800
+brain.
+
+603
+00:20:21,800 --> 00:20:24,533
+They can only understand some part
+
+604
+00:20:24,533 --> 00:20:26,966
+of text, maybe let us say one book.
+
+605
+00:20:27,700 --> 00:20:29,166
+They can only understand one book at
+
+606
+00:20:29,200 --> 00:20:29,800
+a time.
+
+607
+00:20:29,833 --> 00:20:31,766
+That is what we call it as a context
+
+608
+00:20:31,800 --> 00:20:32,400
+window.
+
+609
+00:20:32,766 --> 00:20:35,433
+Every model has their own context
+
+610
+00:20:35,433 --> 00:20:36,033
+window.
+
+611
+00:20:36,166 --> 00:20:38,733
+Some models have 1 million context
+
+612
+00:20:38,733 --> 00:20:40,033
+window, 2 million context window.
+
+613
+00:20:40,500 --> 00:20:41,100
+What does that mean?
+
+614
+00:20:41,733 --> 00:20:44,366
+The number of tokens that you can
+
+615
+00:20:44,366 --> 00:20:46,666
+send or memorize in a single
+
+616
+00:20:46,700 --> 00:20:47,300
+session.
+
+617
+00:20:47,533 --> 00:20:49,033
+That is what we call it as a
+
+618
+00:20:49,033 --> 00:20:49,633
+context.
+
+619
+00:20:49,633 --> 00:20:51,766
+For example, for GPT 3.5,
+
+620
+00:20:52,033 --> 00:20:54,600
+it can only hold maybe 32 pages of a
+
+621
+00:20:54,633 --> 00:20:55,233
+book.
+
+622
+00:20:56,600 --> 00:20:59,966
+And Gemini 1.5 Pro can capture 4000
+
+623
+00:20:59,966 --> 00:21:00,733
+pages of a book.
+
+624
+00:21:01,100 --> 00:21:03,366
+So every model has its own context
+
+625
+00:21:03,400 --> 00:21:05,133
+and you need to go to their API
+
+626
+00:21:05,133 --> 00:21:06,233
+documentation phase
+
+627
+00:21:06,233 --> 00:21:08,033
+to understand what are the limits
+
+628
+00:21:08,066 --> 00:21:09,700
+and context for every model.
+
+629
+00:21:10,200 --> 00:21:14,300
+Let us say you are
+
+630
+00:21:14,300 --> 00:21:15,700
+sending a lot of text and you are
+
+631
+00:21:15,733 --> 00:21:17,333
+sending and filling up the tokens.
+
+632
+00:21:17,333 --> 00:21:19,366
+And once you fill up these tokens,
+
+633
+00:21:19,366 --> 00:21:20,466
+let us say like this.
+
+634
+00:21:20,900 --> 00:21:22,866
+At the end, once the context is
+
+635
+00:21:22,866 --> 00:21:24,500
+full, the usage limit will also
+
+636
+00:21:24,533 --> 00:21:25,133
+increase.
+
+637
+00:21:25,333 --> 00:21:27,666
+And that is why your AI tools will
+
+638
+00:21:27,700 --> 00:21:29,433
+not remember the past context.
+
+639
+00:21:30,000 --> 00:21:32,333
+Because you start filling up the
+
+640
+00:21:32,333 --> 00:21:33,033
+memory brain.
+
+641
+00:21:33,566 --> 00:21:36,300
+After one point, these points they
+
+642
+00:21:36,300 --> 00:21:36,900
+will forget.
+
+643
+00:21:37,033 --> 00:21:40,133
+So it is recommended to start new
+
+644
+00:21:40,133 --> 00:21:40,933
+chats often.
+
+645
+00:21:41,000 --> 00:21:42,700
+And do not paste huge files
+
+646
+00:21:42,700 --> 00:21:44,166
+unnecessarily because you are
+
+647
+00:21:44,200 --> 00:21:45,500
+consuming a lot of context.
+
+648
+00:21:45,500 --> 00:21:47,900
+And then use cheap models for
+
+649
+00:21:47,900 --> 00:21:50,533
+smaller tasks and tell the AI to be
+
+650
+00:21:50,533 --> 00:21:51,133
+concise.
+
+651
+00:21:51,800 --> 00:21:53,700
+And that is everything you need to
+
+652
+00:21:53,700 --> 00:21:54,800
+know regarding tokens.
+
+653
+00:21:55,333 --> 00:21:55,933
+And if you learned something from
+
+654
+00:21:55,933 --> 00:21:58,666
+this video, please let me know in
+
+655
+00:21:58,666 --> 00:21:59,666
+the comment section below.
+
+656
+00:22:00,100 --> 00:22:01,500
+And if you know someone who might
+
+657
+00:22:01,500 --> 00:22:03,433
+need this video, please share it
+
+658
+00:22:03,433 --> 00:22:04,033
+across.
+
+659
+00:22:04,300 --> 00:22:06,033
+If you are a student, please share
+
+660
+00:22:06,033 --> 00:22:07,333
+it in the college group so that
+
+661
+00:22:07,333 --> 00:22:08,766
+other people can also learn from
+
+662
+00:22:08,766 --> 00:22:09,366
+these videos.
+
+663
+00:22:09,833 --> 00:22:11,200
+Thank you. Bye bye.
+

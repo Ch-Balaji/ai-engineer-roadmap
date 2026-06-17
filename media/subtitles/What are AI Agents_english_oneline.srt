@@ -1,0 +1,1868 @@
+1
+00:00:00,000 --> 00:00:01,400
+Before explaining which agent is
+
+2
+00:00:01,400 --> 00:00:04,100
+what, I will show you how an agent
+
+3
+00:00:04,100 --> 00:00:06,460
+works in real time.
+
+4
+00:00:06,920 --> 00:00:08,260
+Let's say you are a fresher.
+
+5
+00:00:08,420 --> 00:00:10,400
+You have a resume and you want to
+
+6
+00:00:10,400 --> 00:00:11,500
+apply for a specific job.
+
+7
+00:00:11,840 --> 00:00:13,480
+There is a job description for that
+
+8
+00:00:13,480 --> 00:00:14,080
+job.
+
+9
+00:00:14,080 --> 00:00:16,240
+My problem is that you don't know
+
+10
+00:00:16,240 --> 00:00:18,540
+how to cater or how to change your
+
+11
+00:00:18,540 --> 00:00:20,500
+resume based on job description.
+
+12
+00:00:20,960 --> 00:00:22,440
+We don't know what is an ATS score,
+
+13
+00:00:23,200 --> 00:00:24,560
+how to write a cover letter,
+
+14
+00:00:25,120 --> 00:00:26,040
+how to message to HR.
+
+15
+00:00:26,420 --> 00:00:28,100
+You don't know any of these things.
+
+16
+00:00:28,100 --> 00:00:30,860
+So for that, I have built this agent
+
+17
+00:00:30,860 --> 00:00:31,460
+system.
+
+18
+00:00:31,980 --> 00:00:34,300
+So let's say I have this resume.
+
+19
+00:00:34,460 --> 00:00:35,120
+Let's say this is my resume.
+
+20
+00:00:35,500 --> 00:00:36,540
+Let's say this is a sample resume.
+
+21
+00:00:37,300 --> 00:00:40,520
+I will copy the contents of this
+
+22
+00:00:40,520 --> 00:00:41,120
+resume.
+
+23
+00:00:41,680 --> 00:00:42,980
+And then I will put in the first
+
+24
+00:00:42,980 --> 00:00:44,680
+section which has your resume.
+
+25
+00:00:45,480 --> 00:00:47,160
+And I go to the LinkedIn.
+
+26
+00:00:47,620 --> 00:00:49,380
+And in LinkedIn, I searched for AI
+
+27
+00:00:49,380 --> 00:00:52,240
+engineer jobs at the entry level in
+
+28
+00:00:52,240 --> 00:00:52,840
+the Hyderabad location.
+
+29
+00:00:52,840 --> 00:00:55,960
+And I will
+
+30
+00:00:55,960 --> 00:00:57,500
+copy the content of this job
+
+31
+00:00:57,500 --> 00:00:58,100
+description.
+
+32
+00:01:02,980 --> 00:01:03,640
+Okay.
+
+33
+00:01:04,120 --> 00:01:05,600
+And then we will put it in the job
+
+34
+00:01:05,600 --> 00:01:06,360
+description card.
+
+35
+00:01:07,060 --> 00:01:09,500
+And the job role is applied AI
+
+36
+00:01:09,500 --> 00:01:10,100
+engineer.
+
+37
+00:01:10,120 --> 00:01:11,200
+So I will put it here.
+
+38
+00:01:11,600 --> 00:01:13,840
+Applied AI engineer.
+
+39
+00:01:14,740 --> 00:01:15,840
+Okay. Now do you know what you have
+
+40
+00:01:15,840 --> 00:01:16,440
+to do?
+
+41
+00:01:16,440 --> 00:01:18,120
+Just click on run agent pipeline.
+
+42
+00:01:18,740 --> 00:01:19,480
+Do you know what this does?
+
+43
+00:01:19,920 --> 00:01:21,440
+It analyzes your resume.
+
+44
+00:01:22,000 --> 00:01:23,960
+It will analyze your strengths and
+
+45
+00:01:23,960 --> 00:01:24,560
+weaknesses.
+
+46
+00:01:25,600 --> 00:01:26,600
+Everything will give you detailed
+
+47
+00:01:26,600 --> 00:01:27,200
+steps.
+
+48
+00:01:27,720 --> 00:01:29,500
+Your top keywords, seniority level,
+
+49
+00:01:29,540 --> 00:01:30,380
+tools and technologies.
+
+50
+00:01:30,500 --> 00:01:31,980
+Must have skills. Nice to have
+
+51
+00:01:31,980 --> 00:01:32,580
+skills.
+
+52
+00:01:32,840 --> 00:01:34,580
+After that, based on the job
+
+53
+00:01:34,580 --> 00:01:36,420
+description, based on the resume,
+
+54
+00:01:36,920 --> 00:01:38,200
+it will try to match.
+
+55
+00:01:38,580 --> 00:01:40,540
+How well are we suited for that job?
+
+56
+00:01:40,960 --> 00:01:42,200
+And it will give you a score.
+
+57
+00:01:42,500 --> 00:01:43,100
+See here.
+
+58
+00:01:43,140 --> 00:01:44,900
+Score is 28 by 100.
+
+59
+00:01:44,980 --> 00:01:46,780
+Which is very very bad.
+
+60
+00:01:47,160 --> 00:01:49,980
+And it will give you the summary of
+
+61
+00:01:49,980 --> 00:01:50,580
+that score.
+
+62
+00:01:50,580 --> 00:01:52,000
+Why it is giving 28.
+
+63
+00:01:52,420 --> 00:01:53,920
+After that, what are your math
+
+64
+00:01:53,920 --> 00:01:54,520
+skills?
+
+65
+00:01:54,600 --> 00:01:55,560
+What are your weak points?
+
+66
+00:01:55,880 --> 00:01:57,240
+And what are you missing from the
+
+67
+00:01:57,240 --> 00:01:57,840
+job description?
+
+68
+00:01:58,320 --> 00:02:00,040
+It gives you everything step by
+
+69
+00:02:00,040 --> 00:02:00,640
+step.
+
+70
+00:02:00,820 --> 00:02:02,460
+And sections to improve as well.
+
+71
+00:02:02,880 --> 00:02:05,180
+And then after this, it will rewrite
+
+72
+00:02:05,180 --> 00:02:06,060
+your bullet points.
+
+73
+00:02:06,440 --> 00:02:07,660
+That is, based on the job
+
+74
+00:02:07,660 --> 00:02:08,780
+description, how to change the
+
+75
+00:02:08,780 --> 00:02:09,900
+content in your resume.
+
+76
+00:02:11,280 --> 00:02:12,320
+It will give you suggestions.
+
+77
+00:02:12,800 --> 00:02:13,620
+This is your original content.
+
+78
+00:02:13,960 --> 00:02:15,540
+And rewrite in something like this.
+
+79
+00:02:15,760 --> 00:02:16,420
+And why?
+
+80
+00:02:17,120 --> 00:02:19,080
+It will give you every single thing.
+
+81
+00:02:19,080 --> 00:02:20,360
+And this is not the only thing.
+
+82
+00:02:20,720 --> 00:02:21,940
+After this, you have to send an
+
+83
+00:02:21,940 --> 00:02:22,720
+email to the HR.
+
+84
+00:02:23,060 --> 00:02:23,660
+You have to send a message.
+
+85
+00:02:24,140 --> 00:02:25,580
+So what do you have to write in that
+
+86
+00:02:25,580 --> 00:02:26,180
+message?
+
+87
+00:02:26,180 --> 00:02:27,840
+Even that will be provided by this
+
+88
+00:02:27,840 --> 00:02:28,440
+agent.
+
+89
+00:02:28,440 --> 00:02:29,460
+If you look at this one.
+
+90
+00:02:29,840 --> 00:02:30,440
+Cover letter.
+
+91
+00:02:30,680 --> 00:02:31,520
+Dear hiring manager.
+
+92
+00:02:31,740 --> 00:02:34,280
+It has all the details about what
+
+93
+00:02:34,280 --> 00:02:35,580
+you can message to HR.
+
+94
+00:02:36,380 --> 00:02:38,000
+And other than all this,
+
+95
+00:02:38,140 --> 00:02:39,600
+there is one more agent.
+
+96
+00:02:39,780 --> 00:02:41,100
+Which is called a critic review.
+
+97
+00:02:41,680 --> 00:02:42,820
+It validates all the content that we
+
+98
+00:02:42,820 --> 00:02:43,420
+have given.
+
+99
+00:02:44,560 --> 00:02:46,020
+It validates and gives a score.
+
+100
+00:02:46,020 --> 00:02:48,000
+That score is less than 8.
+
+101
+00:02:49,460 --> 00:02:50,920
+And the entire process will restart
+
+102
+00:02:50,920 --> 00:02:51,840
+from the first to the last.
+
+103
+00:02:53,180 --> 00:02:55,060
+But if you look at it here.
+
+104
+00:02:55,500 --> 00:02:57,000
+The score we got is 7 by 10.
+
+105
+00:02:57,340 --> 00:02:59,040
+And it is revising the everything
+
+106
+00:02:59,040 --> 00:02:59,640
+guys.
+
+107
+00:02:59,640 --> 00:03:00,580
+It is doing a second attempt.
+
+108
+00:03:01,080 --> 00:03:03,340
+And it will do it until it gets 8 by
+
+109
+00:03:03,340 --> 00:03:03,940
+10.
+
+110
+00:03:03,940 --> 00:03:05,140
+So let's wait until that.
+
+111
+00:03:11,300 --> 00:03:13,060
+And right now it is doing revision
+
+112
+00:03:13,060 --> 00:03:13,660
+guys.
+
+113
+00:03:14,140 --> 00:03:15,480
+After that, it will change every
+
+114
+00:03:15,480 --> 00:03:16,080
+single thing.
+
+115
+00:03:16,140 --> 00:03:17,260
+And it will also provide.
+
+116
+00:03:17,260 --> 00:03:19,500
+And if you want to prepare for that
+
+117
+00:03:19,500 --> 00:03:20,100
+job.
+
+118
+00:03:20,100 --> 00:03:21,220
+What kind of interview questions
+
+119
+00:03:21,220 --> 00:03:22,140
+that you can expect.
+
+120
+00:03:22,640 --> 00:03:23,620
+So now it has done the revision.
+
+121
+00:03:23,820 --> 00:03:24,540
+After the revision.
+
+122
+00:03:24,900 --> 00:03:26,760
+Now we got the score as 8 by 10.
+
+123
+00:03:26,940 --> 00:03:28,360
+Now all the suggestions are here.
+
+124
+00:03:28,500 --> 00:03:30,800
+And now it is generating the
+
+125
+00:03:30,800 --> 00:03:31,520
+interview questions.
+
+126
+00:03:31,800 --> 00:03:33,440
+That you can expect for that job
+
+127
+00:03:33,440 --> 00:03:34,040
+role.
+
+128
+00:03:34,600 --> 00:03:35,400
+Isn't it interesting?
+
+129
+00:03:36,060 --> 00:03:37,720
+All this you cannot achieve with
+
+130
+00:03:37,720 --> 00:03:39,380
+just a single prompt in charge GPT
+
+131
+00:03:39,380 --> 00:03:39,980
+guys.
+
+132
+00:03:40,180 --> 00:03:42,200
+This is a proper agent.
+
+133
+00:03:42,420 --> 00:03:44,400
+Running locally in my machine.
+
+134
+00:03:44,400 --> 00:03:46,200
+And there are multiple agents
+
+135
+00:03:46,200 --> 00:03:47,820
+running in the back end of this
+
+136
+00:03:47,820 --> 00:03:48,420
+website.
+
+137
+00:03:48,740 --> 00:03:49,740
+To achieve this task.
+
+138
+00:03:50,160 --> 00:03:51,800
+These are called AI agents.
+
+139
+00:03:52,040 --> 00:03:53,680
+And this is going to be the future.
+
+140
+00:03:54,260 --> 00:03:54,960
+Now in this video.
+
+141
+00:03:55,340 --> 00:03:57,500
+I will not tell you how to build all
+
+142
+00:03:57,500 --> 00:03:58,100
+this.
+
+143
+00:03:58,120 --> 00:03:59,560
+The purpose of this video is.
+
+144
+00:04:00,100 --> 00:04:02,060
+I want to teach you or tell you the
+
+145
+00:04:02,060 --> 00:04:02,660
+difference between.
+
+146
+00:04:03,460 --> 00:04:04,260
+What is LLM?
+
+147
+00:04:04,800 --> 00:04:05,560
+What are automations?
+
+148
+00:04:06,120 --> 00:04:06,720
+What are workflows?
+
+149
+00:04:07,380 --> 00:04:08,060
+What are agents?
+
+150
+00:04:09,000 --> 00:04:10,600
+So let's start everything from
+
+151
+00:04:10,600 --> 00:04:11,200
+scratch.
+
+152
+00:04:11,420 --> 00:04:12,620
+Before we go into that.
+
+153
+00:04:12,960 --> 00:04:14,040
+For those who don't know.
+
+154
+00:04:14,040 --> 00:04:15,520
+My name is Balaji Chippada.
+
+155
+00:04:15,600 --> 00:04:17,320
+And I have 80 years of experience in
+
+156
+00:04:17,320 --> 00:04:18,640
+the field of AI and ML.
+
+157
+00:04:19,000 --> 00:04:20,560
+And I want to teach all of these
+
+158
+00:04:20,560 --> 00:04:22,520
+concepts to you in Telugu.
+
+159
+00:04:22,800 --> 00:04:24,500
+So let's start with the first topic.
+
+160
+00:04:25,140 --> 00:04:25,740
+LLM.
+
+161
+00:04:25,780 --> 00:04:26,500
+What is LLM?
+
+162
+00:04:27,380 --> 00:04:28,880
+Large Language Model.
+
+163
+00:04:29,460 --> 00:04:30,240
+You already know.
+
+164
+00:04:30,620 --> 00:04:32,220
+If you have used charge GPT.
+
+165
+00:04:32,520 --> 00:04:33,120
+Gemini.
+
+166
+00:04:33,380 --> 00:04:33,980
+Cloud.
+
+167
+00:04:34,420 --> 00:04:36,740
+All of these are the applications.
+
+168
+00:04:37,820 --> 00:04:38,840
+They built using LLMs.
+
+169
+00:04:39,400 --> 00:04:40,300
+So these applications are there in
+
+170
+00:04:40,300 --> 00:04:41,120
+the back end.
+
+171
+00:04:41,120 --> 00:04:42,440
+These LLMs are there.
+
+172
+00:04:42,540 --> 00:04:44,140
+So how do LLMs work?
+
+173
+00:04:44,400 --> 00:04:45,480
+It is very simple.
+
+174
+00:04:45,780 --> 00:04:46,380
+If you give a question.
+
+175
+00:04:46,960 --> 00:04:47,900
+That question goes to LLM.
+
+176
+00:04:48,640 --> 00:04:49,940
+And that will give you the answer.
+
+177
+00:04:50,400 --> 00:04:51,000
+Let's say.
+
+178
+00:04:51,040 --> 00:04:51,820
+Maybe you asked.
+
+179
+00:04:52,160 --> 00:04:53,120
+Rewrite my resume.
+
+180
+00:04:53,480 --> 00:04:54,920
+And it will rewrite every single
+
+181
+00:04:54,920 --> 00:04:55,840
+point in your resume.
+
+182
+00:04:56,320 --> 00:04:56,920
+Maybe.
+
+183
+00:04:57,900 --> 00:04:59,300
+You have to write an email to your
+
+184
+00:04:59,300 --> 00:04:59,900
+manager.
+
+185
+00:04:59,900 --> 00:05:00,500
+Go to charge GPT.
+
+186
+00:05:00,560 --> 00:05:01,160
+You will say.
+
+187
+00:05:01,360 --> 00:05:02,740
+Write an email to my manager.
+
+188
+00:05:02,840 --> 00:05:03,860
+Regarding a sick leave.
+
+189
+00:05:04,100 --> 00:05:05,420
+And it will give you the output.
+
+190
+00:05:05,800 --> 00:05:07,080
+These are called LLMs.
+
+191
+00:05:07,520 --> 00:05:09,140
+And these LLMs have a lot of
+
+192
+00:05:09,140 --> 00:05:09,740
+limitations.
+
+193
+00:05:09,740 --> 00:05:11,760
+Those limitations are.
+
+194
+00:05:11,920 --> 00:05:13,100
+It doesn't know your personal
+
+195
+00:05:13,100 --> 00:05:13,700
+details.
+
+196
+00:05:13,700 --> 00:05:14,300
+It doesn't know your email.
+
+197
+00:05:14,560 --> 00:05:15,160
+It doesn't know your address.
+
+198
+00:05:16,140 --> 00:05:17,780
+And it cannot connect to your
+
+199
+00:05:17,780 --> 00:05:18,380
+calendar.
+
+200
+00:05:18,860 --> 00:05:20,180
+Whatever meetings you have.
+
+201
+00:05:20,180 --> 00:05:20,960
+Whatever meetings you have.
+
+202
+00:05:20,960 --> 00:05:21,560
+What to do.
+
+203
+00:05:21,760 --> 00:05:23,840
+So it doesn't have any of the
+
+204
+00:05:23,840 --> 00:05:24,720
+external knowledge.
+
+205
+00:05:24,940 --> 00:05:26,760
+Unless you specifically provide in
+
+206
+00:05:26,760 --> 00:05:27,360
+the chart.
+
+207
+00:05:27,760 --> 00:05:29,460
+And the second limitation is.
+
+208
+00:05:29,920 --> 00:05:31,480
+It will give you the answer only if
+
+209
+00:05:31,480 --> 00:05:32,080
+you give a question.
+
+210
+00:05:32,400 --> 00:05:34,360
+They cannot do anything.
+
+211
+00:05:34,360 --> 00:05:36,480
+This is the major limitation for
+
+212
+00:05:36,480 --> 00:05:37,720
+large language models.
+
+213
+00:05:37,720 --> 00:05:40,200
+So to simply explain LLMs.
+
+214
+00:05:41,000 --> 00:05:42,340
+You brought a really intelligent
+
+215
+00:05:42,340 --> 00:05:43,540
+person to a room.
+
+216
+00:05:44,660 --> 00:05:45,260
+He will give you the answer only if
+
+217
+00:05:45,260 --> 00:05:46,800
+you go and talk to him.
+
+218
+00:05:47,280 --> 00:05:48,920
+Otherwise he will not do anything.
+
+219
+00:05:49,440 --> 00:05:51,020
+So those are called LLMs.
+
+220
+00:05:51,380 --> 00:05:52,200
+Hopefully it is clear.
+
+221
+00:05:52,760 --> 00:05:53,920
+And now the second part.
+
+222
+00:05:54,180 --> 00:05:55,500
+Which are AI workflows.
+
+223
+00:05:56,100 --> 00:05:56,800
+What are AI workflows?
+
+224
+00:05:57,940 --> 00:06:00,880
+Now a person or a human will define
+
+225
+00:06:00,880 --> 00:06:02,900
+the steps that AI needs to take.
+
+226
+00:06:03,760 --> 00:06:04,880
+To simply explain.
+
+227
+00:06:05,920 --> 00:06:08,640
+Imagine you have to daily post an AI
+
+228
+00:06:08,640 --> 00:06:10,300
+news on Instagram.
+
+229
+00:06:10,340 --> 00:06:11,720
+What do you normally do?
+
+230
+00:06:11,900 --> 00:06:13,140
+You will open the websites.
+
+231
+00:06:13,680 --> 00:06:14,640
+You will search for important AI
+
+232
+00:06:14,640 --> 00:06:15,240
+news.
+
+233
+00:06:16,120 --> 00:06:17,720
+And you will read each and every
+
+234
+00:06:17,720 --> 00:06:18,320
+article.
+
+235
+00:06:18,500 --> 00:06:19,380
+After that you will take the
+
+236
+00:06:19,380 --> 00:06:19,980
+summary.
+
+237
+00:06:20,320 --> 00:06:21,740
+You will create the captions.
+
+238
+00:06:22,280 --> 00:06:22,980
+And according to those captions.
+
+239
+00:06:23,680 --> 00:06:25,260
+You will create an image or a
+
+240
+00:06:25,260 --> 00:06:25,860
+corosal.
+
+241
+00:06:25,940 --> 00:06:27,560
+After that you finally open the
+
+242
+00:06:27,560 --> 00:06:28,780
+Instagram and upload it.
+
+243
+00:06:28,900 --> 00:06:30,020
+That is the whole process.
+
+244
+00:06:30,560 --> 00:06:32,100
+Now this whole process is called
+
+245
+00:06:32,100 --> 00:06:32,700
+workflow.
+
+246
+00:06:33,440 --> 00:06:37,320
+Now an LLM can do all this workflow.
+
+247
+00:06:37,420 --> 00:06:38,320
+So what do you define?
+
+248
+00:06:38,960 --> 00:06:41,300
+Every morning at 8 am this workflow
+
+249
+00:06:41,300 --> 00:06:42,220
+has to start.
+
+250
+00:06:42,400 --> 00:06:43,060
+After that.
+
+251
+00:06:44,120 --> 00:06:45,000
+An LLM.
+
+252
+00:06:45,000 --> 00:06:47,340
+It could be ChargePT or GROG or
+
+253
+00:06:47,340 --> 00:06:47,940
+Gemini.
+
+254
+00:06:48,380 --> 00:06:51,020
+It will go and search for the top AI
+
+255
+00:06:51,020 --> 00:06:51,640
+articles.
+
+256
+00:06:52,180 --> 00:06:53,640
+And then it will collect it.
+
+257
+00:06:53,640 --> 00:06:54,860
+After collecting it.
+
+258
+00:06:56,420 --> 00:06:59,180
+It will summarize everything.
+
+259
+00:06:59,420 --> 00:07:00,500
+After that.
+
+260
+00:07:00,600 --> 00:07:01,720
+What does another LLM do?
+
+261
+00:07:01,720 --> 00:07:03,020
+From that summary.
+
+262
+00:07:03,600 --> 00:07:05,200
+It will try to create an Instagram
+
+263
+00:07:05,200 --> 00:07:05,820
+corosal.
+
+264
+00:07:06,200 --> 00:07:07,100
+And also the captions.
+
+265
+00:07:07,720 --> 00:07:09,420
+And then what does another LLM do?
+
+266
+00:07:09,920 --> 00:07:12,100
+It will post on top of Instagram.
+
+267
+00:07:12,520 --> 00:07:14,040
+So this entire process.
+
+268
+00:07:14,460 --> 00:07:16,080
+That is defined by the humans.
+
+269
+00:07:16,440 --> 00:07:17,520
+Is called a workflow.
+
+270
+00:07:17,940 --> 00:07:19,860
+That an LLM can follow.
+
+271
+00:07:20,580 --> 00:07:21,860
+So to do all these automations.
+
+272
+00:07:22,460 --> 00:07:23,920
+We have different websites.
+
+273
+00:07:24,320 --> 00:07:25,480
+May be Ni10.
+
+274
+00:07:25,800 --> 00:07:26,580
+Make.com.
+
+275
+00:07:27,080 --> 00:07:27,680
+Zapier.
+
+276
+00:07:27,880 --> 00:07:30,040
+But we will talk about those in the
+
+277
+00:07:30,040 --> 00:07:30,700
+later sections.
+
+278
+00:07:30,700 --> 00:07:33,140
+But the problem here is.
+
+279
+00:07:33,160 --> 00:07:34,640
+When unexpected situations come.
+
+280
+00:07:35,360 --> 00:07:37,040
+The LLM will struggle guys.
+
+281
+00:07:37,380 --> 00:07:38,220
+May be let's say.
+
+282
+00:07:38,580 --> 00:07:40,060
+Today's AI news is very boring.
+
+283
+00:07:40,720 --> 00:07:42,080
+So that boring content method.
+
+284
+00:07:42,080 --> 00:07:43,020
+It will make a corosal.
+
+285
+00:07:43,160 --> 00:07:43,900
+It will not think.
+
+286
+00:07:44,060 --> 00:07:44,700
+And it will say.
+
+287
+00:07:44,940 --> 00:07:45,640
+This is a boring.
+
+288
+00:07:45,820 --> 00:07:46,980
+I need to think about something
+
+289
+00:07:46,980 --> 00:07:47,580
+else.
+
+290
+00:07:47,820 --> 00:07:48,680
+So what does it do?
+
+291
+00:07:49,220 --> 00:07:51,240
+Because it will only follow.
+
+292
+00:07:51,540 --> 00:07:52,640
+The predefined steps.
+
+293
+00:07:52,700 --> 00:07:54,220
+That you have defined already.
+
+294
+00:07:54,680 --> 00:07:56,480
+It will not think from its own
+
+295
+00:07:56,480 --> 00:07:57,080
+memory.
+
+296
+00:07:57,520 --> 00:07:58,560
+So to put it simply.
+
+297
+00:07:59,380 --> 00:08:01,900
+Workflow is a predefined step.
+
+298
+00:08:02,440 --> 00:08:03,280
+By the humans.
+
+299
+00:08:04,000 --> 00:08:05,240
+And it will not use.
+
+300
+00:08:05,620 --> 00:08:07,460
+Its own knowledge or intelligence.
+
+301
+00:08:07,760 --> 00:08:08,800
+To make it better.
+
+302
+00:08:09,280 --> 00:08:10,700
+So that is where.
+
+303
+00:08:10,780 --> 00:08:12,440
+The agent comes into the picture.
+
+304
+00:08:12,740 --> 00:08:14,360
+How to make these things better.
+
+305
+00:08:14,920 --> 00:08:15,960
+Now the third one.
+
+306
+00:08:16,160 --> 00:08:17,580
+Which is the very interesting one.
+
+307
+00:08:17,620 --> 00:08:18,980
+Which are called agents.
+
+308
+00:08:19,400 --> 00:08:20,060
+What is agents?
+
+309
+00:08:21,020 --> 00:08:22,080
+To put it simply.
+
+310
+00:08:22,560 --> 00:08:24,180
+You will not define the steps.
+
+311
+00:08:24,180 --> 00:08:25,700
+You will define the goal.
+
+312
+00:08:25,980 --> 00:08:26,780
+What is our first example?
+
+313
+00:08:27,400 --> 00:08:28,140
+We have a resume.
+
+314
+00:08:28,780 --> 00:08:29,720
+And then job description.
+
+315
+00:08:30,320 --> 00:08:32,400
+And I want the agent.
+
+316
+00:08:32,960 --> 00:08:33,920
+To make my resume.
+
+317
+00:08:34,360 --> 00:08:35,800
+As good as possible.
+
+318
+00:08:36,300 --> 00:08:37,320
+To apply for this job.
+
+319
+00:08:37,760 --> 00:08:40,360
+What does the agent do for that?
+
+320
+00:08:40,360 --> 00:08:41,700
+First it analyzes.
+
+321
+00:08:41,700 --> 00:08:42,440
+What is the content in our resume?
+
+322
+00:08:43,580 --> 00:08:44,180
+What is the content in the job
+
+323
+00:08:44,180 --> 00:08:44,780
+description?
+
+324
+00:08:45,460 --> 00:08:46,820
+These two are done by math.
+
+325
+00:08:47,300 --> 00:08:49,080
+What are the skills that I am
+
+326
+00:08:49,080 --> 00:08:49,680
+lacking?
+
+327
+00:08:49,680 --> 00:08:50,840
+What are the things that I need to
+
+328
+00:08:50,840 --> 00:08:51,500
+work on?
+
+329
+00:08:51,740 --> 00:08:52,460
+All these are given.
+
+330
+00:08:53,080 --> 00:08:55,620
+In the feedback loop.
+
+331
+00:08:55,660 --> 00:08:56,500
+Another agent comes.
+
+332
+00:08:57,040 --> 00:08:57,860
+Using that knowledge.
+
+333
+00:08:59,160 --> 00:09:00,440
+And reasoning.
+
+334
+00:09:00,500 --> 00:09:01,520
+If it is not correct.
+
+335
+00:09:02,340 --> 00:09:03,840
+It will generate again.
+
+336
+00:09:04,220 --> 00:09:05,860
+Until you get a perfect score.
+
+337
+00:09:06,240 --> 00:09:08,680
+It is going to return and rerun.
+
+338
+00:09:08,880 --> 00:09:10,200
+This is called react pattern.
+
+339
+00:09:10,760 --> 00:09:12,780
+This is where agent is incorporating
+
+340
+00:09:12,780 --> 00:09:13,680
+its intelligence.
+
+341
+00:09:14,520 --> 00:09:15,220
+So by doing all this.
+
+342
+00:09:15,640 --> 00:09:16,960
+Finally your resume.
+
+343
+00:09:16,960 --> 00:09:20,060
+How to change your resume.
+
+344
+00:09:20,060 --> 00:09:21,260
+What you need to learn.
+
+345
+00:09:21,460 --> 00:09:22,460
+How you need to prepare.
+
+346
+00:09:23,160 --> 00:09:25,440
+A full fledged process.
+
+347
+00:09:26,000 --> 00:09:27,680
+To think about yourself.
+
+348
+00:09:28,420 --> 00:09:29,020
+Is called agent.
+
+349
+00:09:46,960 --> 00:09:49,620
+This is what is called an agentic
+
+350
+00:09:49,620 --> 00:09:50,320
+behaviour.
+
+351
+00:09:50,620 --> 00:09:52,300
+The only difference is.
+
+352
+00:09:52,600 --> 00:09:53,620
+It will not stop.
+
+353
+00:09:53,960 --> 00:09:55,080
+After giving an answer.
+
+354
+00:09:55,520 --> 00:09:56,160
+It will think.
+
+355
+00:09:56,440 --> 00:09:57,300
+It will rethink.
+
+356
+00:09:57,660 --> 00:09:58,580
+And it will reason.
+
+357
+00:09:59,020 --> 00:10:00,840
+And then it will work towards a
+
+358
+00:10:00,840 --> 00:10:01,440
+goal.
+
+359
+00:10:01,620 --> 00:10:03,740
+This is what an agent will do.
+
+360
+00:10:04,220 --> 00:10:05,380
+So simple formula.
+
+361
+00:10:05,680 --> 00:10:08,420
+A agent is equal to LLM plus goal
+
+362
+00:10:08,420 --> 00:10:10,620
+plus reasoning plus tools plus
+
+363
+00:10:10,620 --> 00:10:11,360
+feedback loop.
+
+364
+00:10:11,800 --> 00:10:13,280
+So in our resume example.
+
+365
+00:10:13,680 --> 00:10:15,340
+Until we get a score of 8 out of 10.
+
+366
+00:10:15,340 --> 00:10:16,920
+It will do the reasoning.
+
+367
+00:10:17,200 --> 00:10:18,780
+That is called feedback loop as
+
+368
+00:10:18,780 --> 00:10:19,380
+well.
+
+369
+00:10:19,580 --> 00:10:20,780
+So now the main question.
+
+370
+00:10:21,580 --> 00:10:22,960
+Why do you need to learn all this.
+
+371
+00:10:23,560 --> 00:10:24,880
+Because in future.
+
+372
+00:10:25,360 --> 00:10:26,080
+Many companies.
+
+373
+00:10:26,500 --> 00:10:27,100
+Will not hire those who use charge
+
+374
+00:10:27,100 --> 00:10:27,880
+GPT.
+
+375
+00:10:29,220 --> 00:10:31,600
+Almost everyone uses charge GPT.
+
+376
+00:10:31,840 --> 00:10:32,540
+Where is the real value.
+
+377
+00:10:33,520 --> 00:10:35,040
+Can you identify the problem.
+
+378
+00:10:35,380 --> 00:10:36,760
+Can you break it into chunks.
+
+379
+00:10:37,200 --> 00:10:38,740
+Can you design any workflow.
+
+380
+00:10:39,000 --> 00:10:40,160
+Can you create tools.
+
+381
+00:10:40,340 --> 00:10:41,880
+Can you create MCP servers.
+
+382
+00:10:41,880 --> 00:10:43,520
+Can you add guard rails.
+
+383
+00:10:43,580 --> 00:10:45,300
+Can you make the output reliable.
+
+384
+00:10:45,760 --> 00:10:47,060
+If you know all these answers.
+
+385
+00:10:47,760 --> 00:10:49,600
+Companies will run behind you guys.
+
+386
+00:10:49,740 --> 00:10:50,420
+Come and work with us.
+
+387
+00:10:51,440 --> 00:10:52,640
+This is the new skill.
+
+388
+00:10:52,800 --> 00:10:54,600
+This is where the gap is.
+
+389
+00:10:54,960 --> 00:10:57,000
+This is where I want to focus on.
+
+390
+00:10:57,520 --> 00:10:59,000
+So how will our work be in the
+
+391
+00:10:59,000 --> 00:10:59,600
+future.
+
+392
+00:10:59,600 --> 00:11:00,440
+Not to automate normal tasks.
+
+393
+00:11:01,740 --> 00:11:02,340
+By using AI.
+
+394
+00:11:03,140 --> 00:11:05,200
+How you can build agents that can
+
+395
+00:11:05,200 --> 00:11:05,800
+think.
+
+396
+00:11:05,800 --> 00:11:07,400
+And automate and build your tasks
+
+397
+00:11:07,400 --> 00:11:08,000
+for you.
+
+398
+00:11:08,280 --> 00:11:09,580
+That is the real future.
+
+399
+00:11:09,580 --> 00:11:11,700
+So to summarize everything.
+
+400
+00:11:11,700 --> 00:11:12,480
+What is LLM.
+
+401
+00:11:13,060 --> 00:11:14,360
+Large language models.
+
+402
+00:11:14,580 --> 00:11:17,600
+You provide an input and it provides
+
+403
+00:11:17,600 --> 00:11:18,200
+an output.
+
+404
+00:11:18,520 --> 00:11:19,220
+That's it.
+
+405
+00:11:19,620 --> 00:11:21,300
+It cannot do anything.
+
+406
+00:11:21,720 --> 00:11:23,400
+And second part which are AI
+
+407
+00:11:23,400 --> 00:11:24,000
+workflows.
+
+408
+00:11:24,360 --> 00:11:25,000
+What is AI workflows.
+
+409
+00:11:25,960 --> 00:11:26,620
+A person.
+
+410
+00:11:26,720 --> 00:11:28,320
+Will define the steps.
+
+411
+00:11:30,120 --> 00:11:31,900
+And the LLM.
+
+412
+00:11:31,920 --> 00:11:33,280
+Will do all of these steps.
+
+413
+00:11:34,080 --> 00:11:34,700
+But in this process.
+
+414
+00:11:35,140 --> 00:11:36,500
+It will not use its brain.
+
+415
+00:11:36,500 --> 00:11:39,020
+It will just do what the human says.
+
+416
+00:11:39,200 --> 00:11:40,800
+That is what a workflow is.
+
+417
+00:11:41,160 --> 00:11:43,140
+And third part is AI agents.
+
+418
+00:11:43,840 --> 00:11:44,440
+What do agents do.
+
+419
+00:11:44,720 --> 00:11:46,120
+They work towards a goal.
+
+420
+00:11:46,720 --> 00:11:47,440
+You give a task.
+
+421
+00:11:48,060 --> 00:11:49,160
+To achieve that task.
+
+422
+00:11:50,200 --> 00:11:51,560
+It will do anything.
+
+423
+00:11:51,660 --> 00:11:53,260
+It will reason. It will think.
+
+424
+00:11:53,380 --> 00:11:54,140
+It will rethink.
+
+425
+00:11:54,320 --> 00:11:55,260
+It will re -reason.
+
+426
+00:11:55,520 --> 00:11:56,720
+And it will search the website.
+
+427
+00:11:57,400 --> 00:11:58,000
+Any single thing.
+
+428
+00:11:58,340 --> 00:11:59,980
+Until that goal is achieved.
+
+429
+00:12:00,380 --> 00:12:02,180
+How a person uses a brain.
+
+430
+00:12:03,620 --> 00:12:05,820
+LLM will use its brain.
+
+431
+00:12:06,240 --> 00:12:06,840
+And the tools.
+
+432
+00:12:07,440 --> 00:12:08,200
+Like MCP's.
+
+433
+00:12:08,300 --> 00:12:09,520
+To achieve the task.
+
+434
+00:12:10,020 --> 00:12:11,580
+That is what we call it as an agent.
+
+435
+00:12:12,120 --> 00:12:13,520
+The next question is.
+
+436
+00:12:13,720 --> 00:12:14,720
+How do these agents build.
+
+437
+00:12:16,100 --> 00:12:17,900
+So that is where.
+
+438
+00:12:18,140 --> 00:12:20,160
+I have made a dedicated road map
+
+439
+00:12:20,160 --> 00:12:20,760
+video.
+
+440
+00:12:21,280 --> 00:12:22,100
+In 2026.
+
+441
+00:12:22,760 --> 00:12:24,060
+If you want to become an AI agent.
+
+442
+00:12:25,540 --> 00:12:27,160
+What are the things you need to
+
+443
+00:12:27,160 --> 00:12:27,760
+learn.
+
+444
+00:12:27,760 --> 00:12:28,520
+What should you learn.
+
+445
+00:12:29,900 --> 00:12:31,220
+What should you do.
+
+446
+00:12:31,440 --> 00:12:32,600
+To become an AI engineer.
+
+447
+00:12:32,980 --> 00:12:34,600
+So that video is linked in the
+
+448
+00:12:34,600 --> 00:12:35,240
+description below.
+
+449
+00:12:35,600 --> 00:12:37,060
+And I want everyone to check this
+
+450
+00:12:37,060 --> 00:12:37,660
+out.
+
+451
+00:12:37,860 --> 00:12:38,840
+And one more thing guys.
+
+452
+00:12:39,540 --> 00:12:40,760
+If this video gets good likes and
+
+453
+00:12:40,760 --> 00:12:41,360
+comments.
+
+454
+00:12:41,760 --> 00:12:42,600
+I will show you.
+
+455
+00:12:42,780 --> 00:12:43,960
+How to build that.
+
+456
+00:12:43,960 --> 00:12:45,220
+The tool that we initially
+
+457
+00:12:45,220 --> 00:12:45,820
+displayed.
+
+458
+00:12:46,020 --> 00:12:47,960
+Which will match your resume and job
+
+459
+00:12:47,960 --> 00:12:48,560
+description.
+
+460
+00:12:48,820 --> 00:12:50,260
+And maybe I will do a live video on
+
+461
+00:12:50,260 --> 00:12:50,900
+top of that.
+
+462
+00:12:51,400 --> 00:12:52,620
+So it is up to you.
+
+463
+00:12:53,000 --> 00:12:53,840
+And guys.
+
+464
+00:12:54,180 --> 00:12:54,900
+If you like this content.
+
+465
+00:12:55,840 --> 00:12:57,020
+Subscribe to the channel.
+
+466
+00:12:57,180 --> 00:12:58,540
+And click that bell icon to get
+
+467
+00:12:58,540 --> 00:12:59,200
+notified daily.
+

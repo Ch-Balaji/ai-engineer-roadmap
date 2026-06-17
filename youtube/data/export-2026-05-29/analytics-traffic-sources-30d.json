@@ -1,0 +1,82 @@
+{
+  "start_date": "2026-04-29",
+  "end_date": "2026-05-29",
+  "columns": [
+    "insightTrafficSourceType",
+    "views",
+    "estimatedMinutesWatched"
+  ],
+  "results": [
+    {
+      "insightTrafficSourceType": "SUBSCRIBER",
+      "views": 157735,
+      "estimatedMinutesWatched": 575395
+    },
+    {
+      "insightTrafficSourceType": "RELATED_VIDEO",
+      "views": 26646,
+      "estimatedMinutesWatched": 187795
+    },
+    {
+      "insightTrafficSourceType": "PLAYLIST",
+      "views": 22961,
+      "estimatedMinutesWatched": 132444
+    },
+    {
+      "insightTrafficSourceType": "YT_CHANNEL",
+      "views": 22109,
+      "estimatedMinutesWatched": 104428
+    },
+    {
+      "insightTrafficSourceType": "NO_LINK_OTHER",
+      "views": 10489,
+      "estimatedMinutesWatched": 40887
+    },
+    {
+      "insightTrafficSourceType": "YT_SEARCH",
+      "views": 9021,
+      "estimatedMinutesWatched": 40104
+    },
+    {
+      "insightTrafficSourceType": "EXT_URL",
+      "views": 8306,
+      "estimatedMinutesWatched": 25214
+    },
+    {
+      "insightTrafficSourceType": "YT_OTHER_PAGE",
+      "views": 7659,
+      "estimatedMinutesWatched": 39860
+    },
+    {
+      "insightTrafficSourceType": "SHORTS",
+      "views": 3004,
+      "estimatedMinutesWatched": 629
+    },
+    {
+      "insightTrafficSourceType": "NOTIFICATION",
+      "views": 2103,
+      "estimatedMinutesWatched": 8056
+    },
+    {
+      "insightTrafficSourceType": "END_SCREEN",
+      "views": 710,
+      "estimatedMinutesWatched": 4448
+    },
+    {
+      "insightTrafficSourceType": "ANNOTATION",
+      "views": 138,
+      "estimatedMinutesWatched": 904
+    },
+    {
+      "insightTrafficSourceType": "HASHTAGS",
+      "views": 24,
+      "estimatedMinutesWatched": 102
+    },
+    {
+      "insightTrafficSourceType": "SOUND_PAGE",
+      "views": 6,
+      "estimatedMinutesWatched": 1
+    }
+  ],
+  "total_rows": 14
+}
