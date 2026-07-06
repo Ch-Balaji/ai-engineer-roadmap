@@ -1,0 +1,33 @@
+flowchart LR
+    Start([Need to pick<br/>a model]) --> S0{"STEP 0<br/>Data can't leave<br/>your servers?"}
+
+    S0 -->|"Yes — privacy / compliance"| Open["Open-weight, self-hosted<br/>Llama / Mistral / Qwen"]
+    S0 -->|No| S1{"STEP 1<br/>Which ONE lever does<br/>this task care about most?"}
+
+    S1 -->|"COST — high volume, easy task"| Cost["Small open model<br/>Llama / Mistral / DeepSeek-Flash"]
+    S1 -->|"QUALITY — hard reasoning / coding"| Quality["Frontier model<br/>GPT / Claude Opus / DeepSeek Pro"]
+    S1 -->|"SPEED — real-time UX / agent loops"| Speed["Groq-hosted open<br/>or Flash / Haiku tiers"]
+    S1 -->|"CONTEXT — long docs / whole codebase"| Context["Big-window model<br/>Gemini / Claude / DeepSeek"]
+
+    Open --> S2
+    Cost --> S2
+    Quality --> S2
+    Speed --> S2
+    Context --> S2
+
+    S2["STEP 2<br/>Take the CHEAPEST model<br/>good enough on the other three"] --> S3{"STEP 3<br/>Prove it on YOUR task<br/>20-example micro-eval"}
+
+    S3 -->|Clears your bar| Ship([Ship it])
+    S3 -->|Fails the bar| MoveUp["Move up ONE tier<br/>only because the eval said so"]
+    MoveUp --> S2
+
+    Ship --> Rule["RULE: don't pick the 'best' model.<br/>Pick the right lever, then the cheapest<br/>model that clears your bar.<br/>Names change monthly.<br/>The 4 levers don't."]
+
+    classDef step fill:#1f2937,stroke:#fbbf24,stroke-width:3px,color:#ffffff
+    classDef model fill:#065f46,stroke:#34d399,stroke-width:2px,color:#ffffff
+    classDef rule fill:#7c2d12,stroke:#fb923c,stroke-width:3px,color:#ffffff
+    classDef terminal fill:#0c4a6e,stroke:#38bdf8,stroke-width:2px,color:#ffffff
+    class S0,S1,S2,S3 step
+    class Open,Cost,Quality,Speed,Context,MoveUp model
+    class Rule rule
+    class Start,Ship terminal

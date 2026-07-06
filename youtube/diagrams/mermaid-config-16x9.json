@@ -1,0 +1,13 @@
+{
+  "theme": "dark",
+  "themeVariables": {
+    "fontSize": "30px",
+    "fontFamily": "Helvetica, Arial, sans-serif"
+  },
+  "flowchart": {
+    "nodeSpacing": 130,
+    "rankSpacing": 45,
+    "padding": 16,
+    "useMaxWidth": false
+  }
+}

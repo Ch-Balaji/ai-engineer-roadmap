@@ -1,0 +1,72 @@
+[
+  {
+    "ticket_id": "TKT-1001",
+    "customer": "Priya Sharma",
+    "date": "2026-06-24",
+    "channel": "email",
+    "raw_message": "This is the THIRD time I'm writing. I ordered the Aurora Wireless Headphones (order #ORD-88231) on June 14th for 7,499 rupees and they arrived with a cracked left ear cup. I want a full refund, not a replacement. If I don't hear back in 48 hours I'm doing a chargeback on my card."
+  },
+  {
+    "ticket_id": "TKT-1002",
+    "customer": "Daniel Okafor",
+    "date": "2026-06-25",
+    "channel": "in-app",
+    "raw_message": "Hey team - the app keeps crashing every time I open the Orders tab. I'm on version 4.2.1, Android 15, Pixel 8. It worked fine until the update two days ago. Not angry, just letting you know so you can fix it. Logs say something about a null cart_id."
+  },
+  {
+    "ticket_id": "TKT-1003",
+    "customer": "Meera Iyer",
+    "date": "2026-06-25",
+    "channel": "email",
+    "raw_message": "I was charged TWICE for the same order #ORD-90455. One charge of 2,199 on June 22 and another identical 2,199 on June 23. My bank shows both as completed. Please reverse the duplicate. This is really stressful, it's a lot of money for me."
+  },
+  {
+    "ticket_id": "TKT-1004",
+    "customer": "Tom Becker",
+    "date": "2026-06-26",
+    "channel": "chat",
+    "raw_message": "Quick question - how do I change the delivery address on an order I already placed? Order is #ORD-91002. Still says 'processing'. Thanks, love the product by the way!"
+  },
+  {
+    "ticket_id": "TKT-1005",
+    "customer": "Anonymous",
+    "date": "2026-06-26",
+    "channel": "email",
+    "raw_message": "So I've been a customer for like three years now and honestly mostly happy, the SmartScale is great, but lately the sync has been spotty, sometimes it takes the weight twice, sometimes it doesn't show up in the app at all for hours, and then yesterday it showed my weight from last week as today's reading which freaked me out for a second, and also the band that came with it is starting to peel a bit on the edge but that's minor, anyway just wanted to flag all of this because I do really like the ecosystem and don't want to switch."
+  },
+  {
+    "ticket_id": "TKT-1006",
+    "customer": "Rahul Verma",
+    "date": "2026-06-27",
+    "channel": "email",
+    "raw_message": "Mera order #ORD-91540 abhi tak nahi aaya. Maine 5 din pehle order kiya tha, 3,299 rupaye ka. Tracking update bhi nahi ho raha hai. Please jaldi dekhiye, mujhe ye is hafte chahiye tha."
+  },
+  {
+    "ticket_id": "TKT-1007",
+    "customer": "Sara Lindqvist",
+    "date": "2026-06-27",
+    "channel": "in-app",
+    "raw_message": "Order #ORD-91777 was supposed to arrive June 25th and it's now the 27th with no movement on the tracking page. I have a trip on the 29th and need the travel adapter before then. Can someone expedite or tell me honestly if it won't make it?"
+  },
+  {
+    "ticket_id": "TKT-1008",
+    "customer": "Kenji Tanaka",
+    "date": "2026-06-28",
+    "channel": "chat",
+    "raw_message": "Loving the new firmware! One feature request: could you add a dark mode to the companion app? My eyes would thank you during night runs. No rush, just a wish. 5 stars regardless."
+  },
+  {
+    "ticket_id": "TKT-1009",
+    "customer": "Fatima Al-Sayed",
+    "date": "2026-06-28",
+    "channel": "email",
+    "raw_message": "I have a few things tangled together on order #ORD-92010 (placed June 20, total 11,840). First, I need to know if it has actually shipped yet because the page is ambiguous. Second, if it has NOT shipped, cancel the blue case but keep the rest. Third, I think I was charged a 499 'priority' fee I never selected - please check and refund that if so. And finally, going forward please switch my account to the monthly billing plan instead of annual."
+  },
+  {
+    "ticket_id": "TKT-1010",
+    "customer": "Greg Mason",
+    "date": "2026-06-29",
+    "channel": "email",
+    "raw_message": "Cancel my subscription. The last two deliveries (order #ORD-92188 on June 18 and #ORD-92500 on June 28) were both late and the quality has dropped. I've been paying 999 a month for over a year and I'm done unless you can give me a real reason to stay."
+  }
+]

@@ -1,0 +1,2772 @@
+1
+00:00:00,000 --> 00:00:01,320
+In our previous video,
+
+2
+00:00:01,540 --> 00:00:03,800
+we have seen about LLM Benchmarking,
+
+3
+00:00:04,000 --> 00:00:06,780
+after that many people have asked me
+
+4
+00:00:06,780 --> 00:00:07,900
+one question
+
+5
+00:00:07,900 --> 00:00:10,400
+Ok Balaji, now I can read the
+
+6
+00:00:10,400 --> 00:00:11,900
+benchmarks and leaderboards,
+
+7
+00:00:11,980 --> 00:00:14,540
+but how can I choose a better model
+
+8
+00:00:14,540 --> 00:00:15,680
+for my use case?
+
+9
+00:00:16,080 --> 00:00:17,040
+That's a valid question,
+
+10
+00:00:17,560 --> 00:00:19,020
+right? So what can I do?
+
+11
+00:00:19,200 --> 00:00:21,300
+I can ask your question and I can
+
+12
+00:00:21,300 --> 00:00:22,940
+directly suggest which model to use
+
+13
+00:00:22,940 --> 00:00:24,880
+But because of that, you are not
+
+14
+00:00:24,880 --> 00:00:27,060
+learning anything. So I thought
+
+15
+00:00:27,060 --> 00:00:30,100
+let's create a framework on how to
+
+16
+00:00:30,100 --> 00:00:31,440
+choose best model
+
+17
+00:00:31,440 --> 00:00:33,820
+So by the end of this video,
+
+18
+00:00:34,040 --> 00:00:36,220
+you will be able to understand this
+
+19
+00:00:36,220 --> 00:00:36,820
+framework
+
+20
+00:00:36,820 --> 00:00:38,500
+And after learning this,
+
+21
+00:00:38,860 --> 00:00:40,240
+you don't have any doubt about which
+
+22
+00:00:40,240 --> 00:00:41,760
+model to use
+
+23
+00:00:42,880 --> 00:00:45,280
+So without any delay, let's get
+
+24
+00:00:45,280 --> 00:00:47,520
+started. First let's address this
+
+25
+00:00:47,520 --> 00:00:49,440
+question, which model is best?
+
+26
+00:00:49,440 --> 00:00:53,540
+If someone asks which LLM model is
+
+27
+00:00:53,540 --> 00:00:56,220
+best in this space, by default they
+
+28
+00:00:56,220 --> 00:00:57,900
+will say either ChatGPT,
+
+29
+00:00:58,160 --> 00:01:00,340
+Claude, Gemini, LLaMA
+
+30
+00:01:00,340 --> 00:01:02,220
+All of these are best models,
+
+31
+00:01:02,500 --> 00:01:05,480
+but do you think it is a right
+
+32
+00:01:05,480 --> 00:01:07,440
+answer? Think about it
+
+33
+00:01:08,060 --> 00:01:10,080
+So let's say, you came here and
+
+34
+00:01:10,080 --> 00:01:11,460
+asked which is the best vehicle?
+
+35
+00:01:12,860 --> 00:01:15,260
+What will you say? Do you have a
+
+36
+00:01:15,260 --> 00:01:16,000
+concrete answer?
+
+37
+00:01:16,000 --> 00:01:19,660
+No, right? Because let's say cycle
+
+38
+00:01:19,660 --> 00:01:21,700
+is the best in two -wheeler segment
+
+39
+00:01:21,700 --> 00:01:23,480
+Maybe they want to talk about
+
+40
+00:01:23,480 --> 00:01:26,060
+motorbikes or maybe they want to
+
+41
+00:01:26,060 --> 00:01:27,240
+talk about ambulances
+
+42
+00:01:27,240 --> 00:01:29,040
+Maybe they want to talk about
+
+43
+00:01:29,040 --> 00:01:32,960
+trucks, right? So every scenario has
+
+44
+00:01:32,960 --> 00:01:34,720
+their own best thing
+
+45
+00:01:34,720 --> 00:01:38,900
+Similarly, every model or LLM is
+
+46
+00:01:38,900 --> 00:01:40,040
+good at something
+
+47
+00:01:40,040 --> 00:01:42,740
+So there is not a single model that
+
+48
+00:01:42,740 --> 00:01:44,020
+is best at everything.
+
+49
+00:01:44,480 --> 00:01:45,120
+Do you agree?
+
+50
+00:01:45,120 --> 00:01:47,640
+So if someone asks this question,
+
+51
+00:01:48,020 --> 00:01:49,100
+which model is best?
+
+52
+00:01:50,060 --> 00:01:52,180
+First thing you need to question is,
+
+53
+00:01:52,180 --> 00:01:53,620
+what is the thing that you are
+
+54
+00:01:53,620 --> 00:01:54,380
+looking for?
+
+55
+00:01:54,560 --> 00:01:56,200
+Are you looking for a coding agent?
+
+56
+00:01:56,480 --> 00:01:58,400
+Are you looking for maybe research?
+
+57
+00:01:58,580 --> 00:02:00,240
+Are you looking for something else?
+
+58
+00:02:01,080 --> 00:02:02,940
+So that constraint is very important
+
+59
+00:02:02,940 --> 00:02:04,880
+Because depending on that
+
+60
+00:02:04,880 --> 00:02:07,880
+constraint, which model to use
+
+61
+00:02:07,880 --> 00:02:09,160
+changes a lot
+
+62
+00:02:09,160 --> 00:02:11,140
+If you look at our previous video
+
+63
+00:02:11,140 --> 00:02:14,300
+regarding benchmarks, you look at
+
+64
+00:02:14,300 --> 00:02:17,300
+MMLU, MMLU Pro and Software Bench
+
+65
+00:02:17,300 --> 00:02:17,900
+Testing
+
+66
+00:02:17,900 --> 00:02:19,540
+Why did they do these benchmarks?
+
+67
+00:02:21,320 --> 00:02:23,340
+Because every model is good at
+
+68
+00:02:23,340 --> 00:02:23,940
+something
+
+69
+00:02:23,940 --> 00:02:25,560
+Not all models are good at
+
+70
+00:02:25,560 --> 00:02:26,160
+everything
+
+71
+00:02:26,160 --> 00:02:28,800
+But if there are general specific
+
+72
+00:02:28,800 --> 00:02:30,580
+questions, all the models are good
+
+73
+00:02:30,580 --> 00:02:32,680
+GPT, Claude, Gemini,
+
+74
+00:02:32,940 --> 00:02:34,660
+LLaMA, any open source models like
+
+75
+00:02:34,660 --> 00:02:35,260
+DeepSeek
+
+76
+00:02:35,260 --> 00:02:37,040
+You can use all of those things
+
+77
+00:02:37,040 --> 00:02:39,020
+But if you want a specific agent
+
+78
+00:02:39,020 --> 00:02:40,420
+that is dedicated for coding,
+
+79
+00:02:41,340 --> 00:02:42,660
+maybe use Claude models
+
+80
+00:02:42,660 --> 00:02:43,520
+They are better
+
+81
+00:02:43,520 --> 00:02:45,740
+But if you want very specific good
+
+82
+00:02:45,740 --> 00:02:48,500
+at research, maybe use GPT 5
+
+83
+00:02:48,500 --> 00:02:49,680
+.5 Pro version
+
+84
+00:02:49,680 --> 00:02:50,920
+They are good at research
+
+85
+00:02:50,920 --> 00:02:53,780
+So similarly, whenever you are asked
+
+86
+00:02:53,780 --> 00:02:55,960
+a question, which model is best?
+
+87
+00:02:57,140 --> 00:03:00,000
+The next answer is a question that
+
+88
+00:03:00,000 --> 00:03:00,980
+you should ask
+
+89
+00:03:00,980 --> 00:03:02,960
+What are you referring to in terms
+
+90
+00:03:02,960 --> 00:03:03,900
+of which category?
+
+91
+00:03:03,900 --> 00:03:05,320
+Which category is best?
+
+92
+00:03:06,500 --> 00:03:07,720
+That is the first thing
+
+93
+00:03:07,720 --> 00:03:09,400
+Now let's talk about the second
+
+94
+00:03:09,400 --> 00:03:10,000
+thing
+
+95
+00:03:10,000 --> 00:03:12,280
+There are two different tiers of LLM
+
+96
+00:03:12,280 --> 00:03:12,880
+models
+
+97
+00:03:12,880 --> 00:03:16,400
+One is closed source models and the
+
+98
+00:03:16,400 --> 00:03:18,080
+other is open source models
+
+99
+00:03:18,080 --> 00:03:20,040
+So when you talk about closed source
+
+100
+00:03:20,040 --> 00:03:23,580
+models, these models are trained
+
+101
+00:03:23,580 --> 00:03:26,580
+But the weights are not open to
+
+102
+00:03:26,580 --> 00:03:27,180
+public
+
+103
+00:03:27,180 --> 00:03:28,780
+You cannot download these models
+
+104
+00:03:28,780 --> 00:03:30,300
+So what are such examples?
+
+105
+00:03:32,400 --> 00:03:34,740
+In GPD, there are 5.5 models,
+
+106
+00:03:35,000 --> 00:03:37,300
+5.4 models, 5.3 models,
+
+107
+00:03:37,380 --> 00:03:38,200
+4.0 models
+
+108
+00:03:38,200 --> 00:03:39,680
+There are different different models
+
+109
+00:03:39,680 --> 00:03:41,100
+And in each of them, you have
+
+110
+00:03:41,100 --> 00:03:43,260
+maximum reasoning, extra effort,
+
+111
+00:03:43,520 --> 00:03:44,600
+normal reasoning, medium reasoning
+
+112
+00:03:44,600 --> 00:03:45,440
+There are different different
+
+113
+00:03:45,440 --> 00:03:46,480
+segment models
+
+114
+00:03:46,480 --> 00:03:49,300
+But all of these are the closed
+
+115
+00:03:49,300 --> 00:03:50,260
+source models
+
+116
+00:03:50,260 --> 00:03:52,180
+Similarly, when you come to Claude,
+
+117
+00:03:52,580 --> 00:03:55,620
+they have Opus 4.8, Opus 4.7,
+
+118
+00:03:55,940 --> 00:03:58,420
+Sonnet 4.6, Opus 4.6
+
+119
+00:03:58,420 --> 00:03:59,940
+There are different different models
+
+120
+00:03:59,940 --> 00:04:02,200
+And all of these are closed source
+
+121
+00:04:02,200 --> 00:04:04,100
+You cannot download these models
+
+122
+00:04:04,100 --> 00:04:07,200
+Similarly, there are 3.5 Flash,
+
+123
+00:04:07,200 --> 00:04:10,720
+3.5 Pro, 3.2 Pro models
+
+124
+00:04:11,420 --> 00:04:14,360
+But one of the important things is
+
+125
+00:04:14,360 --> 00:04:16,700
+When you are using closed source
+
+126
+00:04:16,700 --> 00:04:17,300
+models
+
+127
+00:04:17,300 --> 00:04:20,240
+You need to communicate via APIs
+
+128
+00:04:20,240 --> 00:04:23,480
+And when you are communicating via
+
+129
+00:04:23,480 --> 00:04:24,360
+APIs
+
+130
+00:04:24,360 --> 00:04:25,640
+What you need to do?
+
+131
+00:04:25,640 --> 00:04:27,720
+You need to pay for using these
+
+132
+00:04:27,720 --> 00:04:28,360
+models
+
+133
+00:04:31,620 --> 00:04:35,260
+You need to pay all the money you
+
+134
+00:04:35,260 --> 00:04:35,860
+use
+
+135
+00:04:35,860 --> 00:04:37,640
+And you need to pay for input tokens
+
+136
+00:04:37,640 --> 00:04:39,400
+You need to pay for output tokens
+
+137
+00:04:39,400 --> 00:04:41,480
+You need to pay for cash tokens
+
+138
+00:04:41,480 --> 00:04:42,720
+Every single thing
+
+139
+00:04:42,720 --> 00:04:45,040
+But the advantage of this is
+
+140
+00:04:45,040 --> 00:04:47,380
+If you are going via the closed
+
+141
+00:04:47,380 --> 00:04:49,120
+source models via API
+
+142
+00:04:49,120 --> 00:04:51,640
+They tend to perform really good
+
+143
+00:04:51,640 --> 00:04:54,280
+And that means the latency is also
+
+144
+00:04:54,280 --> 00:04:54,880
+good
+
+145
+00:04:54,880 --> 00:04:56,580
+And the speed is also good
+
+146
+00:04:56,580 --> 00:04:58,800
+And then we will also talk about the
+
+147
+00:04:58,800 --> 00:05:00,860
+accuracy or intelligence
+
+148
+00:05:00,860 --> 00:05:02,820
+All these are usually good
+
+149
+00:05:02,820 --> 00:05:04,760
+Because you are paying for these
+
+150
+00:05:04,760 --> 00:05:05,360
+models
+
+151
+00:05:05,360 --> 00:05:07,200
+So this is first thing
+
+152
+00:05:07,200 --> 00:05:08,220
+And second thing
+
+153
+00:05:08,220 --> 00:05:10,120
+When you want to choose an LLMs
+
+154
+00:05:10,120 --> 00:05:11,720
+You have other option which is
+
+155
+00:05:11,720 --> 00:05:13,440
+called as open source LLMs
+
+156
+00:05:13,440 --> 00:05:15,620
+So open source LLMs means
+
+157
+00:05:15,620 --> 00:05:18,260
+You can download these models on
+
+158
+00:05:18,260 --> 00:05:19,020
+your machine
+
+159
+00:05:19,020 --> 00:05:20,380
+If you have a hardware
+
+160
+00:05:20,380 --> 00:05:21,980
+So let's say you have a GPU
+
+161
+00:05:21,980 --> 00:05:23,640
+Or you have some servers that are
+
+162
+00:05:23,640 --> 00:05:24,240
+running up
+
+163
+00:05:24,240 --> 00:05:25,700
+And you don't have to pay money
+
+164
+00:05:26,040 --> 00:05:27,720
+Because you have the hardware with
+
+165
+00:05:27,720 --> 00:05:28,320
+you
+
+166
+00:05:28,320 --> 00:05:29,260
+What you can do?
+
+167
+00:05:29,340 --> 00:05:30,740
+You can download these models
+
+168
+00:05:30,740 --> 00:05:32,880
+And you can execute these models on
+
+169
+00:05:32,880 --> 00:05:33,480
+your machine
+
+170
+00:05:33,480 --> 00:05:34,960
+And you can talk to them
+
+171
+00:05:34,960 --> 00:05:37,620
+There are different types of models
+
+172
+00:05:37,620 --> 00:05:40,140
+One of the famous models is LLaMA
+
+173
+00:05:40,140 --> 00:05:43,040
+These are from Facebook or Meta
+
+174
+00:05:43,040 --> 00:05:45,020
+And you have something from Mistral
+
+175
+00:05:45,020 --> 00:05:46,800
+Which is a lightweight very good
+
+176
+00:05:46,800 --> 00:05:47,400
+model
+
+177
+00:05:47,400 --> 00:05:48,140
+It seems to be built from France
+
+178
+00:05:49,040 --> 00:05:50,600
+And we have from China
+
+179
+00:05:50,600 --> 00:05:52,420
+We have DeepSeek and Qwen from
+
+180
+00:05:52,420 --> 00:05:53,080
+Alibaba
+
+181
+00:05:53,080 --> 00:05:56,820
+So these are the models which are
+
+182
+00:05:56,820 --> 00:05:57,600
+open source
+
+183
+00:05:57,600 --> 00:05:59,480
+You can download them directly
+
+184
+00:05:59,480 --> 00:06:00,480
+And use them in your machine
+
+185
+00:06:00,730 --> 00:06:03,680
+But you are using your machine's
+
+186
+00:06:03,680 --> 00:06:04,280
+hardware
+
+187
+00:06:04,280 --> 00:06:07,480
+That means your machine's hardware
+
+188
+00:06:07,480 --> 00:06:08,720
+Will get damaged quickly
+
+189
+00:06:09,080 --> 00:06:10,700
+So that is one thing
+
+190
+00:06:10,700 --> 00:06:14,360
+And these are right now not
+
+191
+00:06:14,360 --> 00:06:15,740
+as intelligent
+
+192
+00:06:15,740 --> 00:06:16,800
+As these models
+
+193
+00:06:16,800 --> 00:06:19,880
+Let's say 4.8 or Fable 5 or Mythos
+
+194
+00:06:19,880 --> 00:06:20,480
+Preview
+
+195
+00:06:20,480 --> 00:06:24,010
+Recently we have got 5.6 Sol and
+
+196
+00:06:24,010 --> 00:06:24,610
+Terra
+
+197
+00:06:24,610 --> 00:06:26,970
+And then the other model as well
+
+198
+00:06:26,970 --> 00:06:29,990
+So usually these models are not that
+
+199
+00:06:29,990 --> 00:06:31,650
+much good at intelligence
+
+200
+00:06:31,830 --> 00:06:34,950
+But many of the general tasks
+
+201
+00:06:34,950 --> 00:06:36,930
+All of these models can handle
+
+202
+00:06:36,930 --> 00:06:38,190
+without any issues
+
+203
+00:06:38,190 --> 00:06:40,890
+So either you can go via closed
+
+204
+00:06:40,890 --> 00:06:41,610
+source models
+
+205
+00:06:41,610 --> 00:06:44,230
+Where you use them via API
+
+206
+00:06:44,230 --> 00:06:46,870
+And you pay them using based on the
+
+207
+00:06:46,870 --> 00:06:47,470
+usage
+
+208
+00:06:47,470 --> 00:06:50,030
+Otherwise you can go via open source
+
+209
+00:06:50,030 --> 00:06:50,630
+models
+
+210
+00:06:50,630 --> 00:06:52,350
+And there are even more open source
+
+211
+00:06:52,350 --> 00:06:52,950
+models guys
+
+212
+00:06:52,950 --> 00:06:54,130
+Like Kimi and JP
+
+213
+00:06:54,130 --> 00:06:55,910
+There are so many open source models
+
+214
+00:06:55,910 --> 00:06:57,930
+You can use them if you are in the
+
+215
+00:06:57,930 --> 00:06:58,610
+learning phase
+
+216
+00:06:58,610 --> 00:07:01,230
+And one thing that I wanted to
+
+217
+00:07:01,230 --> 00:07:01,830
+explain
+
+218
+00:07:01,830 --> 00:07:03,630
+From my personal experience is
+
+219
+00:07:03,630 --> 00:07:07,270
+Usually companies prefer to go via
+
+220
+00:07:07,270 --> 00:07:09,010
+the closed source models
+
+221
+00:07:09,010 --> 00:07:12,230
+Because they are registered entities
+
+222
+00:07:12,230 --> 00:07:14,470
+And they have regulations that they
+
+223
+00:07:14,470 --> 00:07:15,230
+need to follow
+
+224
+00:07:16,730 --> 00:07:18,910
+Some of the open source models are
+
+225
+00:07:18,910 --> 00:07:20,410
+from DeepSeek or Qwen
+
+226
+00:07:20,410 --> 00:07:22,330
+It will be good if you download them
+
+227
+00:07:22,330 --> 00:07:24,450
+But if you don't download these
+
+228
+00:07:24,450 --> 00:07:25,050
+models
+
+229
+00:07:25,050 --> 00:07:27,210
+But if you use APIs for these open
+
+230
+00:07:27,210 --> 00:07:27,970
+source models
+
+231
+00:07:27,970 --> 00:07:29,970
+Then that is going to be a security
+
+232
+00:07:29,970 --> 00:07:31,190
+issue for many companies
+
+233
+00:07:32,230 --> 00:07:34,550
+Usually companies prefer to go via
+
+234
+00:07:34,550 --> 00:07:35,550
+closed source models
+
+235
+00:07:35,550 --> 00:07:37,230
+Even though they are little bit
+
+236
+00:07:37,230 --> 00:07:37,830
+costly
+
+237
+00:07:37,830 --> 00:07:39,270
+Because of security issues
+
+238
+00:07:39,270 --> 00:07:40,870
+Hopefully it is clear
+
+239
+00:07:40,870 --> 00:07:42,750
+And the next thing that I want to
+
+240
+00:07:42,750 --> 00:07:43,350
+talk about
+
+241
+00:07:43,350 --> 00:07:45,230
+When choosing an LLM model is
+
+242
+00:07:45,230 --> 00:07:46,630
+There are four pillars
+
+243
+00:07:47,010 --> 00:07:49,490
+The first pillar is cost
+
+244
+00:07:49,490 --> 00:07:51,410
+This is very important
+
+245
+00:07:51,410 --> 00:07:52,930
+You might have seen recently
+
+246
+00:07:52,930 --> 00:07:54,770
+Many companies like Microsoft or
+
+247
+00:07:54,770 --> 00:07:55,370
+Uber
+
+248
+00:07:55,370 --> 00:07:57,270
+There are so many companies
+
+249
+00:07:57,270 --> 00:07:59,990
+Who are creating or putting budget
+
+250
+00:07:59,990 --> 00:08:01,430
+on their AI spend
+
+251
+00:08:01,430 --> 00:08:03,630
+Because their employees are using
+
+252
+00:08:03,630 --> 00:08:04,770
+too much tokens
+
+253
+00:08:04,770 --> 00:08:06,050
+And because of that
+
+254
+00:08:06,050 --> 00:08:08,030
+AI spending has increased a lot
+
+255
+00:08:08,030 --> 00:08:09,190
+Monthly by monthly
+
+256
+00:08:09,190 --> 00:08:11,370
+And they thought let's cut it down
+
+257
+00:08:11,370 --> 00:08:13,990
+Why? Because the cost is too much
+
+258
+00:08:13,990 --> 00:08:15,830
+When you are using closed source
+
+259
+00:08:15,830 --> 00:08:16,430
+models
+
+260
+00:08:16,430 --> 00:08:17,910
+What did I say earlier?
+
+261
+00:08:18,110 --> 00:08:20,370
+Companies prefer to go via closed
+
+262
+00:08:20,370 --> 00:08:21,150
+source models
+
+263
+00:08:21,150 --> 00:08:22,830
+Even though they are paying high
+
+264
+00:08:22,830 --> 00:08:23,430
+cost
+
+265
+00:08:23,430 --> 00:08:25,170
+Because they are secure
+
+266
+00:08:25,170 --> 00:08:27,210
+And they are fast and they are
+
+267
+00:08:27,210 --> 00:08:27,810
+intelligent
+
+268
+00:08:27,810 --> 00:08:29,630
+So let's take an example
+
+269
+00:08:29,630 --> 00:08:31,750
+Let's say there is GPT 5.5
+
+270
+00:08:31,750 --> 00:08:33,130
+From GPT
+
+271
+00:08:33,130 --> 00:08:35,190
+And GPT 5.5
+
+272
+00:08:35,190 --> 00:08:37,350
+To use output tokens
+
+273
+00:08:37,350 --> 00:08:39,010
+If you want 1 million tokens
+
+274
+00:08:39,010 --> 00:08:41,270
+You have to charge 30 dollars
+
+275
+00:08:42,210 --> 00:08:43,410
+But this
+
+276
+00:08:43,410 --> 00:08:45,050
+If you go via DeepSeek
+
+277
+00:08:45,050 --> 00:08:47,270
+I think it can go for 2.5 dollars
+
+278
+00:08:47,550 --> 00:08:49,010
+For 1 million tokens
+
+279
+00:08:50,130 --> 00:08:51,350
+See the difference
+
+280
+00:08:51,350 --> 00:08:52,330
+Too much difference
+
+281
+00:08:52,770 --> 00:08:54,790
+If it is from open source models
+
+282
+00:08:54,790 --> 00:08:56,710
+So you need to think about
+
+283
+00:08:56,710 --> 00:08:58,370
+What is the task that you are doing
+
+284
+00:08:58,370 --> 00:09:00,910
+And do you think the task requires
+
+285
+00:09:00,910 --> 00:09:02,370
+That much intelligence
+
+286
+00:09:02,370 --> 00:09:06,150
+And if you go via Fable 5
+
+287
+00:09:06,150 --> 00:09:06,970
+Do you know the cost of Fable 5?
+
+288
+00:09:06,970 --> 00:09:08,350
+Do you know the cost of Fable 5?
+
+289
+00:09:08,350 --> 00:09:09,630
+This is 50 dollars for 1 million
+
+290
+00:09:09,630 --> 00:09:10,970
+output tokens
+
+291
+00:09:12,030 --> 00:09:12,710
+Meaning
+
+292
+00:09:12,710 --> 00:09:14,550
+For 1 million output tokens
+
+293
+00:09:14,550 --> 00:09:15,250
+You are using 5000
+
+294
+00:09:16,690 --> 00:09:18,450
+And an engineer
+
+295
+00:09:18,450 --> 00:09:19,270
+In a month
+
+296
+00:09:19,270 --> 00:09:21,870
+How many million tokens will he use?
+
+297
+00:09:22,690 --> 00:09:25,130
+And that is why the bill is going to
+
+298
+00:09:25,130 --> 00:09:25,850
+Skyrocket
+
+299
+00:09:25,850 --> 00:09:27,750
+And these companies are putting a
+
+300
+00:09:27,750 --> 00:09:28,730
+budget on this bill
+
+301
+00:09:28,730 --> 00:09:31,290
+So you need to always think about
+
+302
+00:09:31,530 --> 00:09:32,290
+The cost
+
+303
+00:09:32,290 --> 00:09:33,810
+That is very important
+
+304
+00:09:33,810 --> 00:09:35,770
+And the second thing is
+
+305
+00:09:35,770 --> 00:09:36,370
+Quality
+
+306
+00:09:36,370 --> 00:09:38,370
+This is also very important
+
+307
+00:09:38,370 --> 00:09:41,670
+Let's say you have a research task
+
+308
+00:09:41,670 --> 00:09:43,230
+What is this research task?
+
+309
+00:09:44,290 --> 00:09:46,230
+You need to do a lot of analysis
+
+310
+00:09:46,230 --> 00:09:47,110
+On DNA
+
+311
+00:09:48,070 --> 00:09:50,670
+DNA is a very complex task
+
+312
+00:09:50,670 --> 00:09:51,790
+So here
+
+313
+00:09:51,790 --> 00:09:53,650
+You need to have a higher
+
+314
+00:09:53,650 --> 00:09:54,250
+intelligence
+
+315
+00:09:56,260 --> 00:09:57,020
+Yes
+
+316
+00:09:57,020 --> 00:09:58,360
+And with less intelligence
+
+317
+00:09:58,360 --> 00:09:59,560
+These tasks won't work
+
+318
+00:09:59,560 --> 00:10:01,080
+Even if you are using open source
+
+319
+00:10:01,080 --> 00:10:01,780
+models
+
+320
+00:10:01,780 --> 00:10:03,400
+So in such cases
+
+321
+00:10:03,400 --> 00:10:05,420
+I would tend to go via
+
+322
+00:10:05,420 --> 00:10:08,180
+Maybe GPT 5.5
+
+323
+00:10:08,180 --> 00:10:08,900
+Or Claude
+
+324
+00:10:08,900 --> 00:10:10,640
+Opus 4.8
+
+325
+00:10:10,640 --> 00:10:11,780
+Or Fable 5
+
+326
+00:10:11,780 --> 00:10:13,060
+It could be anything
+
+327
+00:10:13,060 --> 00:10:15,540
+Because they are very intelligent
+
+328
+00:10:15,540 --> 00:10:17,960
+And they are very very good at
+
+329
+00:10:17,960 --> 00:10:18,780
+research tasks
+
+330
+00:10:18,780 --> 00:10:19,500
+But
+
+331
+00:10:19,500 --> 00:10:22,480
+One of the backdrops when using
+
+332
+00:10:22,480 --> 00:10:24,540
+The intelligent models are
+
+333
+00:10:24,540 --> 00:10:26,560
+They are very big in size
+
+334
+00:10:26,560 --> 00:10:28,680
+And to use such big models
+
+335
+00:10:28,680 --> 00:10:29,280
+To start
+
+336
+00:10:29,280 --> 00:10:32,080
+When you talk about the speed or the
+
+337
+00:10:32,080 --> 00:10:32,700
+latency
+
+338
+00:10:32,700 --> 00:10:34,780
+It is going to be very high
+
+339
+00:10:34,780 --> 00:10:35,640
+Because
+
+340
+00:10:35,640 --> 00:10:37,380
+There is a big model
+
+341
+00:10:37,380 --> 00:10:39,300
+To load the whole model
+
+342
+00:10:39,300 --> 00:10:40,880
+And answer your question
+
+343
+00:10:40,880 --> 00:10:42,600
+It does a lot of thinking
+
+344
+00:10:42,600 --> 00:10:45,100
+And the speed will be very slow
+
+345
+00:10:45,100 --> 00:10:48,180
+So now you need to decide
+
+346
+00:10:48,180 --> 00:10:50,620
+Whether you want a speed model
+
+347
+00:10:50,620 --> 00:10:52,040
+Or an intelligent model
+
+348
+00:10:52,680 --> 00:10:54,920
+Because currently in the market
+
+349
+00:10:54,920 --> 00:10:56,960
+Either you can get a very high speed
+
+350
+00:10:56,960 --> 00:10:58,300
+Model with low intelligence
+
+351
+00:10:58,300 --> 00:11:00,340
+Or very high intelligence model
+
+352
+00:11:00,340 --> 00:11:01,140
+With low speed
+
+353
+00:11:01,140 --> 00:11:03,440
+You cannot have the balance between
+
+354
+00:11:03,440 --> 00:11:04,100
+these two
+
+355
+00:11:04,100 --> 00:11:05,060
+Right now
+
+356
+00:11:05,060 --> 00:11:07,860
+But you can try to tweak them
+
+357
+00:11:07,860 --> 00:11:09,820
+Based on your prompt
+
+358
+00:11:09,820 --> 00:11:11,340
+But there is a lot of engineering
+
+359
+00:11:11,340 --> 00:11:12,380
+that goes behind it
+
+360
+00:11:12,380 --> 00:11:14,300
+But let's not worry about that right
+
+361
+00:11:14,300 --> 00:11:14,900
+now
+
+362
+00:11:14,900 --> 00:11:15,820
+So some models
+
+363
+00:11:15,820 --> 00:11:17,460
+Let's say GPT 4.0 mini
+
+364
+00:11:17,460 --> 00:11:20,000
+It is not that much intelligent
+
+365
+00:11:20,000 --> 00:11:22,000
+But it is very fast
+
+366
+00:11:23,260 --> 00:11:24,600
+GPT 4.0 mini
+
+367
+00:11:26,750 --> 00:11:29,650
+So the question you need to ask now
+
+368
+00:11:29,650 --> 00:11:30,750
+Is
+
+369
+00:11:30,750 --> 00:11:31,650
+Whether
+
+370
+00:11:31,650 --> 00:11:34,230
+If my AI application needs
+
+371
+00:11:34,230 --> 00:11:37,070
+Fast answers or intelligent answers
+
+372
+00:11:37,070 --> 00:11:38,490
+So based on that
+
+373
+00:11:38,490 --> 00:11:40,670
+You can decide which model to use
+
+374
+00:11:40,670 --> 00:11:42,750
+And then the next thing
+
+375
+00:11:42,750 --> 00:11:43,850
+Is the context
+
+376
+00:11:43,850 --> 00:11:45,350
+So we already made a video
+
+377
+00:11:45,350 --> 00:11:47,890
+On YouTube called Context
+
+378
+00:11:47,890 --> 00:11:48,490
+Engineering
+
+379
+00:11:48,490 --> 00:11:50,470
+And if you haven't watched that
+
+380
+00:11:50,470 --> 00:11:51,070
+video
+
+381
+00:11:51,070 --> 00:11:52,490
+Please go ahead and watch it
+
+382
+00:11:52,490 --> 00:11:54,130
+So if you think about the models
+
+383
+00:11:54,130 --> 00:11:54,790
+like Gemini
+
+384
+00:11:54,790 --> 00:11:57,230
+So Gemini usually has
+
+385
+00:11:57,230 --> 00:11:59,150
+1 million to 2 million context
+
+386
+00:11:59,150 --> 00:12:00,970
+That means
+
+387
+00:12:00,970 --> 00:12:03,110
+You can put a lot of
+
+388
+00:12:03,110 --> 00:12:05,010
+Information into these LLMs
+
+389
+00:12:05,010 --> 00:12:07,050
+And you can chat on top of it
+
+390
+00:12:07,050 --> 00:12:08,830
+This is very important
+
+391
+00:12:08,830 --> 00:12:10,790
+Because you are building a multi
+
+392
+00:12:10,790 --> 00:12:11,390
+-stage
+
+393
+00:12:11,390 --> 00:12:11,990
+Agent
+
+394
+00:12:12,650 --> 00:12:14,530
+And there are so many things going
+
+395
+00:12:14,530 --> 00:12:15,130
+on
+
+396
+00:12:15,130 --> 00:12:17,090
+And for the agent to not lose
+
+397
+00:12:17,090 --> 00:12:18,610
+All of this context
+
+398
+00:12:18,610 --> 00:12:20,490
+If you use a model
+
+399
+00:12:20,490 --> 00:12:22,590
+Which is having higher context
+
+400
+00:12:22,590 --> 00:12:23,190
+window
+
+401
+00:12:23,190 --> 00:12:25,130
+It is going to be very helpful
+
+402
+00:12:25,130 --> 00:12:26,630
+So at that time
+
+403
+00:12:26,630 --> 00:12:28,370
+I would go via Gemini
+
+404
+00:12:28,370 --> 00:12:30,010
+There are some models in GPT
+
+405
+00:12:30,010 --> 00:12:32,670
+Which has like 300k context or 1
+
+406
+00:12:32,670 --> 00:12:33,590
+million context
+
+407
+00:12:33,590 --> 00:12:34,870
+So it depends on
+
+408
+00:12:34,870 --> 00:12:36,150
+Use case to use case
+
+409
+00:12:36,150 --> 00:12:38,730
+I think LLaMA is also approximately
+
+410
+00:12:38,730 --> 00:12:41,230
+250 to 300k context
+
+411
+00:12:41,230 --> 00:12:43,450
+If I remember correctly
+
+412
+00:12:43,450 --> 00:12:45,230
+So you need to decide
+
+413
+00:12:45,230 --> 00:12:47,130
+Whether how much of the
+
+414
+00:12:47,130 --> 00:12:48,930
+Context that your application needs
+
+415
+00:12:48,930 --> 00:12:50,530
+How many tools are you using
+
+416
+00:12:50,530 --> 00:12:51,790
+How many MCPs are you using
+
+417
+00:12:51,790 --> 00:12:53,730
+Whether do you have a rag or not
+
+418
+00:12:53,730 --> 00:12:55,990
+So if you need higher context
+
+419
+00:12:55,990 --> 00:12:56,990
+Models
+
+420
+00:12:56,990 --> 00:12:58,810
+Then I would go via Gemini
+
+421
+00:12:58,810 --> 00:13:01,630
+And another advantage in Gemini is
+
+422
+00:13:01,630 --> 00:13:03,630
+You have multi -modal capabilities
+
+423
+00:13:03,630 --> 00:13:04,510
+as well
+
+424
+00:13:04,510 --> 00:13:06,410
+So Gemini can create images
+
+425
+00:13:06,410 --> 00:13:07,650
+Can understand images
+
+426
+00:13:07,650 --> 00:13:08,770
+Can create videos
+
+427
+00:13:08,770 --> 00:13:09,930
+Every single thing
+
+428
+00:13:09,930 --> 00:13:12,230
+But GPT or Claude
+
+429
+00:13:12,230 --> 00:13:14,830
+They are not that much good at multi
+
+430
+00:13:14,830 --> 00:13:15,810
+-modal capabilities
+
+431
+00:13:16,050 --> 00:13:17,970
+They are very good at text
+
+432
+00:13:17,970 --> 00:13:20,310
+So you need to decide
+
+433
+00:13:20,310 --> 00:13:21,670
+What is our use case
+
+434
+00:13:21,670 --> 00:13:23,110
+In our use case
+
+435
+00:13:23,110 --> 00:13:24,810
+Whether do I need to have a multi
+
+436
+00:13:24,810 --> 00:13:25,490
+-modal machine
+
+437
+00:13:25,490 --> 00:13:27,490
+Or not a multi -modal machine
+
+438
+00:13:27,490 --> 00:13:28,690
+After that
+
+439
+00:13:28,690 --> 00:13:30,670
+I need to have an output latency
+
+440
+00:13:30,670 --> 00:13:33,050
+What kind of intelligence that I
+
+441
+00:13:33,050 --> 00:13:33,650
+would need
+
+442
+00:13:33,650 --> 00:13:34,810
+Taking all these factors
+
+443
+00:13:34,810 --> 00:13:37,650
+What is the budget that I can spend
+
+444
+00:13:37,650 --> 00:13:39,170
+Then you need to decide
+
+445
+00:13:39,170 --> 00:13:40,850
+Which models should I use
+
+446
+00:13:40,850 --> 00:13:42,550
+Open source models or closed source
+
+447
+00:13:42,550 --> 00:13:43,350
+models
+
+448
+00:13:43,770 --> 00:13:46,150
+Then that is how you will answer
+
+449
+00:13:46,150 --> 00:13:47,610
+Which model is best
+
+450
+00:13:48,650 --> 00:13:49,250
+Because
+
+451
+00:13:49,250 --> 00:13:51,230
+Choosing the model depends on
+
+452
+00:13:51,230 --> 00:13:52,890
+What is the use case that you are
+
+453
+00:13:52,890 --> 00:13:53,590
+trying to solve
+
+454
+00:13:54,190 --> 00:13:55,430
+Nobody will say this
+
+455
+00:13:55,430 --> 00:13:57,250
+And if you look at YouTube videos
+
+456
+00:13:57,250 --> 00:13:58,190
+They will say
+
+457
+00:13:58,830 --> 00:14:00,210
+GPT 5.6 came
+
+458
+00:14:00,210 --> 00:14:02,630
+Let's use every task for GPT 5.6
+
+459
+00:14:02,630 --> 00:14:03,230
+Why?
+
+460
+00:14:03,910 --> 00:14:06,110
+There is no need of using GPT 5.6
+
+461
+00:14:06,110 --> 00:14:07,410
+For every simple task
+
+462
+00:14:07,410 --> 00:14:09,510
+Now based on all of this
+
+463
+00:14:09,510 --> 00:14:10,250
+understanding
+
+464
+00:14:10,250 --> 00:14:12,110
+I am going to give you a quiz
+
+465
+00:14:12,110 --> 00:14:13,810
+So after every question
+
+466
+00:14:13,810 --> 00:14:16,010
+I will wait 30 seconds
+
+467
+00:14:16,010 --> 00:14:17,290
+In those 30 seconds
+
+468
+00:14:17,290 --> 00:14:19,530
+You think about it and answer in the
+
+469
+00:14:19,530 --> 00:14:20,430
+comment section
+
+470
+00:14:20,430 --> 00:14:21,550
+So first thing is
+
+471
+00:14:22,110 --> 00:14:24,110
+I have a question or a task like
+
+472
+00:14:24,110 --> 00:14:24,890
+this
+
+473
+00:14:24,890 --> 00:14:26,010
+Classify or
+
+474
+00:14:26,010 --> 00:14:28,390
+Extract intent from a million
+
+475
+00:14:28,390 --> 00:14:30,090
+Customer tickets per day
+
+476
+00:14:30,090 --> 00:14:32,070
+So everyday I get million
+
+477
+00:14:32,070 --> 00:14:33,930
+Tickets from the customer
+
+478
+00:14:33,930 --> 00:14:35,390
+In such tickets
+
+479
+00:14:35,390 --> 00:14:37,470
+I need to extract some information
+
+480
+00:14:37,470 --> 00:14:39,210
+Or I need to put an intent
+
+481
+00:14:39,210 --> 00:14:39,830
+classification
+
+482
+00:14:39,830 --> 00:14:41,710
+Is it positive ticket or negative
+
+483
+00:14:41,710 --> 00:14:42,310
+ticket
+
+484
+00:14:42,310 --> 00:14:44,430
+So which model
+
+485
+00:14:44,430 --> 00:14:45,650
+Will you use
+
+486
+00:14:54,930 --> 00:14:55,530
+for such tasks
+
+487
+00:14:55,530 --> 00:14:56,590
+So let me answer this
+
+488
+00:14:56,590 --> 00:14:57,550
+What is happening here
+
+489
+00:14:57,550 --> 00:14:59,990
+You have a million customer tickets
+
+490
+00:14:59,990 --> 00:15:02,550
+You have a high volume
+
+491
+00:15:03,110 --> 00:15:04,370
+So when you say high volume
+
+492
+00:15:04,370 --> 00:15:06,850
+You are going to burn a lot of
+
+493
+00:15:06,850 --> 00:15:07,450
+tokens
+
+494
+00:15:07,450 --> 00:15:08,450
+The first thing
+
+495
+00:15:08,450 --> 00:15:09,730
+So lot of tokens
+
+496
+00:15:09,730 --> 00:15:12,610
+And then second thing is
+
+497
+00:15:12,610 --> 00:15:13,330
+What is the task?
+
+498
+00:15:14,350 --> 00:15:15,750
+Extracting the intent or
+
+499
+00:15:15,750 --> 00:15:16,430
+classification
+
+500
+00:15:16,430 --> 00:15:18,990
+It is a very basic task
+
+501
+00:15:18,990 --> 00:15:20,830
+And even
+
+502
+00:15:20,830 --> 00:15:22,490
+The normal machine learning
+
+503
+00:15:22,490 --> 00:15:23,850
+Model can also do this
+
+504
+00:15:23,850 --> 00:15:25,250
+So in such cases
+
+505
+00:15:25,250 --> 00:15:28,170
+If you use a frontier model like GPT
+
+506
+00:15:28,170 --> 00:15:28,870
+5.5
+
+507
+00:15:28,870 --> 00:15:29,810
+Or 5.6
+
+508
+00:15:29,810 --> 00:15:32,370
+You are going to burn a lot of money
+
+509
+00:15:32,370 --> 00:15:34,050
+So in such situations
+
+510
+00:15:34,050 --> 00:15:35,370
+What I can do
+
+511
+00:15:35,370 --> 00:15:37,730
+I can pick any lightweight open
+
+512
+00:15:37,730 --> 00:15:38,550
+source model
+
+513
+00:15:38,550 --> 00:15:39,430
+Because
+
+514
+00:15:39,430 --> 00:15:41,750
+This is a very small task
+
+515
+00:15:41,750 --> 00:15:43,570
+And this doesn't require that much
+
+516
+00:15:43,570 --> 00:15:44,190
+intelligence
+
+517
+00:15:44,190 --> 00:15:47,190
+And then I can hit this
+
+518
+00:15:47,190 --> 00:15:47,850
+LLM
+
+519
+00:15:47,850 --> 00:15:49,910
+Multiple times for all of these
+
+520
+00:15:49,910 --> 00:15:50,510
+million
+
+521
+00:15:50,510 --> 00:15:51,110
+Customers
+
+522
+00:15:51,110 --> 00:15:52,190
+No matter how much I use
+
+523
+00:15:52,190 --> 00:15:54,350
+I am just only paying for the
+
+524
+00:15:54,350 --> 00:15:54,950
+hardware
+
+525
+00:15:54,950 --> 00:15:57,410
+But not for the API cost
+
+526
+00:15:57,410 --> 00:15:58,610
+So for such things
+
+527
+00:15:58,610 --> 00:16:01,510
+I will use a lightweight open source
+
+528
+00:16:01,510 --> 00:16:02,110
+Model
+
+529
+00:16:02,110 --> 00:16:04,830
+I can use that
+
+530
+00:16:04,830 --> 00:16:07,250
+First question and second question
+
+531
+00:16:07,250 --> 00:16:08,590
+Answer questions
+
+532
+00:16:08,590 --> 00:16:11,150
+Over 300 page contract
+
+533
+00:16:11,150 --> 00:16:12,890
+Or a large code base
+
+534
+00:16:12,890 --> 00:16:14,930
+So what do you do
+
+535
+00:16:24,650 --> 00:16:25,250
+in such situations
+
+536
+00:16:25,250 --> 00:16:26,030
+So the answer is
+
+537
+00:16:26,030 --> 00:16:28,730
+Let's say if I go via cheap model
+
+538
+00:16:29,770 --> 00:16:31,170
+And when I go to a cheap model
+
+539
+00:16:31,890 --> 00:16:32,610
+Usually
+
+540
+00:16:32,610 --> 00:16:34,090
+Intelligence is less
+
+541
+00:16:36,250 --> 00:16:36,970
+And
+
+542
+00:16:36,970 --> 00:16:38,750
+Context window is also less
+
+543
+00:16:39,390 --> 00:16:40,970
+And if I need
+
+544
+00:16:40,970 --> 00:16:42,630
+To put this much information
+
+545
+00:16:42,630 --> 00:16:43,850
+In my LLM
+
+546
+00:16:43,850 --> 00:16:46,710
+I need the models which are having
+
+547
+00:16:46,710 --> 00:16:48,070
+Higher context window
+
+548
+00:16:48,070 --> 00:16:49,730
+Where is the higher context window
+
+549
+00:16:51,150 --> 00:16:51,970
+Gemini
+
+550
+00:16:51,970 --> 00:16:52,870
+Gemini models
+
+551
+00:16:52,870 --> 00:16:55,630
+The context window is higher
+
+552
+00:16:55,630 --> 00:16:58,120
+And then after that
+
+553
+00:16:59,130 --> 00:17:00,110
+I need to
+
+554
+00:17:00,110 --> 00:17:01,530
+Talk to a large code base
+
+555
+00:17:01,880 --> 00:17:03,950
+If we are talking about code base
+
+556
+00:17:03,950 --> 00:17:06,380
+That means the output capability
+
+557
+00:17:06,590 --> 00:17:07,830
+Or intelligence should also be very
+
+558
+00:17:07,830 --> 00:17:08,530
+good
+
+559
+00:17:08,530 --> 00:17:10,650
+So intelligence should also be more
+
+560
+00:17:12,130 --> 00:17:14,510
+So what I do in such situations
+
+561
+00:17:14,510 --> 00:17:15,770
+I will go
+
+562
+00:17:15,770 --> 00:17:17,450
+Via the models
+
+563
+00:17:17,450 --> 00:17:20,050
+Via API or closed source models
+
+564
+00:17:20,050 --> 00:17:21,470
+Maybe hopefully Gemini
+
+565
+00:17:21,470 --> 00:17:23,550
+Because I have a larger context
+
+566
+00:17:23,550 --> 00:17:24,990
+Window and they are good at coding
+
+567
+00:17:24,990 --> 00:17:25,590
+capabilities
+
+568
+00:17:25,590 --> 00:17:27,690
+As well and there is third question
+
+569
+00:17:27,970 --> 00:17:29,190
+A coding agent
+
+570
+00:17:29,190 --> 00:17:31,610
+That plans edits and
+
+571
+00:17:31,610 --> 00:17:33,550
+Files and loops over 20 times
+
+572
+00:17:33,550 --> 00:17:35,030
+What do you do in such situations
+
+573
+00:17:42,810 --> 00:17:44,870
+So what is happening here
+
+574
+00:17:44,870 --> 00:17:46,370
+Here an agent
+
+575
+00:17:46,370 --> 00:17:47,930
+Goes multiple times
+
+576
+00:17:47,930 --> 00:17:50,350
+And it needs to plan a lot
+
+577
+00:17:50,350 --> 00:17:52,550
+So I need intelligence
+
+578
+00:17:52,550 --> 00:17:56,240
+And also the speed
+
+579
+00:17:56,240 --> 00:17:58,540
+These two need to be more
+
+580
+00:17:58,540 --> 00:18:00,500
+Maybe I will go
+
+581
+00:18:00,500 --> 00:18:02,600
+Via OpenAI or GPT
+
+582
+00:18:02,600 --> 00:18:03,840
+Because they are intelligent
+
+583
+00:18:03,840 --> 00:18:05,380
+And they are speed enough good
+
+584
+00:18:05,380 --> 00:18:05,980
+enough
+
+585
+00:18:05,980 --> 00:18:07,480
+And I will go via API
+
+586
+00:18:08,020 --> 00:18:10,220
+Otherwise in this specific use
+
+587
+00:18:10,220 --> 00:18:11,660
+Case I think
+
+588
+00:18:11,660 --> 00:18:13,940
+I can even use a model
+
+589
+00:18:13,940 --> 00:18:15,540
+Like DeepSeek
+
+590
+00:18:17,360 --> 00:18:20,040
+Because DeepSeek model is also
+
+591
+00:18:20,040 --> 00:18:21,160
+A good intelligent model
+
+592
+00:18:21,160 --> 00:18:23,880
+And even that is better at coding as
+
+593
+00:18:23,880 --> 00:18:24,480
+well
+
+594
+00:18:24,480 --> 00:18:26,460
+So if I want to cut on the budget
+
+595
+00:18:26,460 --> 00:18:27,060
+side
+
+596
+00:18:27,060 --> 00:18:28,300
+I will go via DeepSeek
+
+597
+00:18:28,760 --> 00:18:30,500
+No, if I want to go
+
+598
+00:18:30,500 --> 00:18:31,760
+Via premium side
+
+599
+00:18:31,760 --> 00:18:33,940
+I would go via OpenAI or GPT
+
+600
+00:18:33,940 --> 00:18:35,600
+5.5 or 5.4
+
+601
+00:18:35,920 --> 00:18:37,720
+It depends on the type of task
+
+602
+00:18:37,720 --> 00:18:38,920
+That I am looking at
+
+603
+00:18:38,920 --> 00:18:40,920
+Let's think about the framework that
+
+604
+00:18:40,920 --> 00:18:42,160
+I decided here
+
+605
+00:18:42,160 --> 00:18:44,580
+So let's say you want to pick a
+
+606
+00:18:44,580 --> 00:18:45,180
+model
+
+607
+00:18:45,180 --> 00:18:46,400
+The first question that you need
+
+608
+00:18:46,400 --> 00:18:47,940
+To ask is
+
+609
+00:18:47,940 --> 00:18:49,720
+The data sent to that model
+
+610
+00:18:49,960 --> 00:18:52,260
+Can it leave the servers or not
+
+611
+00:18:52,260 --> 00:18:54,580
+If it doesn't need
+
+612
+00:18:54,580 --> 00:18:55,640
+To leave the servers
+
+613
+00:18:56,090 --> 00:18:57,880
+Then what should you do
+
+614
+00:18:57,880 --> 00:18:59,860
+You have to pick the model
+
+615
+00:18:59,860 --> 00:19:01,080
+From the API
+
+616
+00:19:01,080 --> 00:19:03,600
+Because you can send the data to the
+
+617
+00:19:03,600 --> 00:19:04,200
+API
+
+618
+00:19:04,200 --> 00:19:06,540
+If you think your data
+
+619
+00:19:06,540 --> 00:19:07,860
+Privacy is very important
+
+620
+00:19:07,860 --> 00:19:10,180
+And you cannot send the data
+
+621
+00:19:10,180 --> 00:19:11,060
+To anywhere
+
+622
+00:19:11,060 --> 00:19:13,220
+Then go via open source models
+
+623
+00:19:13,220 --> 00:19:14,720
+These are called open source models
+
+624
+00:19:14,720 --> 00:19:16,860
+Like LLaMA, Mistral, Qwen,
+
+625
+00:19:17,160 --> 00:19:17,780
+DeepSeek
+
+626
+00:19:18,700 --> 00:19:20,260
+And if you are going
+
+627
+00:19:20,260 --> 00:19:21,260
+Via API
+
+628
+00:19:22,260 --> 00:19:24,160
+Then there are 4 things
+
+629
+00:19:24,160 --> 00:19:25,560
+That you need to think about
+
+630
+00:19:26,260 --> 00:19:27,940
+Cost, Quality
+
+631
+00:19:27,940 --> 00:19:30,340
+Speed and Context
+
+632
+00:19:30,880 --> 00:19:31,780
+So let's say
+
+633
+00:19:31,780 --> 00:19:33,980
+You want a high volume
+
+634
+00:19:33,980 --> 00:19:35,020
+Or easy task
+
+635
+00:19:35,980 --> 00:19:38,340
+Then I will go via smaller models
+
+636
+00:19:38,340 --> 00:19:40,580
+Like LLaMA, Mistral
+
+637
+00:19:41,500 --> 00:19:42,340
+DeepSeek
+
+638
+00:19:42,340 --> 00:19:44,440
+Because even though they are
+
+639
+00:19:44,440 --> 00:19:45,540
+Open source models
+
+640
+00:19:45,540 --> 00:19:48,520
+They also provide via API as well
+
+641
+00:19:48,520 --> 00:19:50,160
+Quality is very important
+
+642
+00:19:50,160 --> 00:19:52,180
+Intelligence is very important
+
+643
+00:19:52,180 --> 00:19:53,840
+Then I will go via GPT
+
+644
+00:19:53,840 --> 00:19:56,000
+Or Claude or Opus or DeepSeek
+
+645
+00:19:56,000 --> 00:19:57,120
+Pro version
+
+646
+00:19:57,120 --> 00:19:58,840
+Speed is very important
+
+647
+00:19:58,840 --> 00:20:01,060
+Then I can go via Groq
+
+648
+00:20:01,060 --> 00:20:04,280
+What Groq does is
+
+649
+00:20:04,280 --> 00:20:07,160
+They designed their own
+
+650
+00:20:07,160 --> 00:20:07,760
+Chips
+
+651
+00:20:07,760 --> 00:20:09,540
+And you can talk to them at a rapid
+
+652
+00:20:09,540 --> 00:20:10,140
+speed
+
+653
+00:20:10,140 --> 00:20:11,640
+The speed is the only selling point
+
+654
+00:20:11,640 --> 00:20:12,500
+for Groq
+
+655
+00:20:12,500 --> 00:20:13,700
+And you can use this
+
+656
+00:20:13,700 --> 00:20:16,800
+And there is a model called Kimi 2.7
+
+657
+00:20:16,800 --> 00:20:18,800
+Even this is also very fast
+
+658
+00:20:18,800 --> 00:20:21,180
+And then if you want to have
+
+659
+00:20:21,180 --> 00:20:22,720
+Longer context models
+
+660
+00:20:22,720 --> 00:20:25,220
+Go via Gemini or Claude or DeepSeek
+
+661
+00:20:25,220 --> 00:20:26,720
+You can use all of these things
+
+662
+00:20:26,720 --> 00:20:28,100
+And then after this
+
+663
+00:20:28,100 --> 00:20:29,860
+This is what step 2 is
+
+664
+00:20:29,860 --> 00:20:31,540
+Take the cheapest model
+
+665
+00:20:31,540 --> 00:20:34,480
+And good enough for the other 3
+
+666
+00:20:34,480 --> 00:20:36,260
+So you need to find a balance
+
+667
+00:20:36,260 --> 00:20:37,900
+Between what is the cost
+
+668
+00:20:37,900 --> 00:20:39,140
+And what is the speed
+
+669
+00:20:39,140 --> 00:20:40,840
+And what is the important
+
+670
+00:20:40,840 --> 00:20:42,120
+intelligence that it has
+
+671
+00:20:42,120 --> 00:20:43,840
+And what is the context window
+
+672
+00:20:43,840 --> 00:20:45,740
+By balancing all these things
+
+673
+00:20:45,740 --> 00:20:46,760
+You pick a model
+
+674
+00:20:46,760 --> 00:20:49,000
+And then once you pick this model
+
+675
+00:20:49,000 --> 00:20:51,280
+You decide to use wherever you want
+
+676
+00:20:51,280 --> 00:20:52,820
+This is the framework
+
+677
+00:20:52,820 --> 00:20:55,600
+That will never expire down the line
+
+678
+00:20:55,600 --> 00:20:57,120
+For the next 2 years as well
+
+679
+00:20:57,120 --> 00:20:57,960
+That's it
+
+680
+00:20:57,960 --> 00:20:59,000
+When you ask a question
+
+681
+00:20:59,000 --> 00:21:00,300
+Tell me which model to use
+
+682
+00:21:00,300 --> 00:21:02,900
+Instead of me suggesting which model
+
+683
+00:21:02,900 --> 00:21:03,500
+to use
+
+684
+00:21:03,500 --> 00:21:06,220
+I want to give you the data or the
+
+685
+00:21:06,220 --> 00:21:06,820
+knowledge
+
+686
+00:21:06,820 --> 00:21:09,040
+On how to choose the best model
+
+687
+00:21:09,040 --> 00:21:10,900
+And if you think there is someone
+
+688
+00:21:10,900 --> 00:21:12,500
+Who needs to listen to this video
+
+689
+00:21:12,500 --> 00:21:13,720
+Please share it with them
+
+690
+00:21:13,720 --> 00:21:15,600
+And if you want more updates please
+
+691
+00:21:15,600 --> 00:21:17,060
+subscribe and like as well
+
+692
+00:21:17,060 --> 00:21:18,240
+Thank you so much
+
+693
+00:21:18,240 --> 00:21:19,340
+I will meet in the next one
+

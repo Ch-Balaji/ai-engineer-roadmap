@@ -1,0 +1,5200 @@
+1
+00:00:00,000 --> 00:00:02,080
+So first let's understand what a
+
+2
+00:00:02,080 --> 00:00:03,120
+Hermes agent is.
+
+3
+00:00:03,260 --> 00:00:05,940
+Hermes agent is one of the top open
+
+4
+00:00:05,940 --> 00:00:07,500
+source projects from Nous Research.
+
+5
+00:00:08,440 --> 00:00:10,520
+So this is a persistent agent,
+
+6
+00:00:10,720 --> 00:00:11,380
+not a chatbot.
+
+7
+00:00:11,840 --> 00:00:13,340
+We have ChatGPT, Claude,
+
+8
+00:00:13,560 --> 00:00:14,160
+etc.
+
+9
+00:00:14,340 --> 00:00:15,980
+You will go to the web page and you
+
+10
+00:00:15,980 --> 00:00:16,580
+will chat.
+
+11
+00:00:16,580 --> 00:00:18,580
+If you give a task, it will do the
+
+12
+00:00:18,580 --> 00:00:19,180
+task.
+
+13
+00:00:19,180 --> 00:00:21,040
+But this is completely opposite to
+
+14
+00:00:21,040 --> 00:00:21,640
+those things.
+
+15
+00:00:21,760 --> 00:00:24,120
+This is a continuous agent that will
+
+16
+00:00:24,120 --> 00:00:26,480
+run on your server 24x7.
+
+17
+00:00:26,480 --> 00:00:28,720
+Along with that, it can write its
+
+18
+00:00:28,720 --> 00:00:29,960
+own skill as well.
+
+19
+00:00:30,040 --> 00:00:31,700
+And one of the best thing is,
+
+20
+00:00:32,380 --> 00:00:34,740
+this agent can work with any kind of
+
+21
+00:00:34,740 --> 00:00:35,340
+LLM.
+
+22
+00:00:35,340 --> 00:00:37,280
+Anthropic, OpenAI, Google,
+
+23
+00:00:37,660 --> 00:00:41,360
+OpenRouter, Ollama, LLMs that you
+
+24
+00:00:41,360 --> 00:00:41,960
+have self -hosted.
+
+25
+00:00:41,960 --> 00:00:44,040
+It can run on any kind of LLM.
+
+26
+00:00:44,320 --> 00:00:46,720
+You don't need to pay and use free API
+
+27
+00:00:46,720 --> 00:00:47,920
+keys if you want.
+
+28
+00:00:48,000 --> 00:00:50,000
+And that is why it has become so
+
+29
+00:00:50,000 --> 00:00:50,980
+popular these days.
+
+30
+00:00:50,980 --> 00:00:53,340
+And one more best thing is,
+
+31
+00:00:53,420 --> 00:00:55,280
+you can communicate via this agent
+
+32
+00:00:55,280 --> 00:00:57,220
+using 20 plus different messaging
+
+33
+00:00:57,220 --> 00:00:57,820
+platforms.
+
+34
+00:00:58,000 --> 00:00:59,620
+Telegram, WhatsApp, Slack,
+
+35
+00:00:59,820 --> 00:01:01,500
+you can use any kind of messaging
+
+36
+00:01:01,500 --> 00:01:02,100
+platform.
+
+37
+00:01:02,380 --> 00:01:04,340
+And one more best thing is,
+
+38
+00:01:04,640 --> 00:01:06,420
+it is not only just for developers.
+
+39
+00:01:06,960 --> 00:01:09,400
+Because with zero coding skills,
+
+40
+00:01:09,620 --> 00:01:10,880
+you can build your own agent.
+
+41
+00:01:11,420 --> 00:01:13,040
+You can build your own personal
+
+42
+00:01:13,040 --> 00:01:13,640
+assistant.
+
+43
+00:01:13,920 --> 00:01:15,220
+Let me repeat once again.
+
+44
+00:01:15,420 --> 00:01:17,060
+With zero coding language
+
+45
+00:01:17,060 --> 00:01:18,940
+experience, you can build your own
+
+46
+00:01:18,940 --> 00:01:19,540
+agent.
+
+47
+00:01:19,900 --> 00:01:21,520
+Isn't it amazing? Isn't it
+
+48
+00:01:21,520 --> 00:01:22,120
+interesting?
+
+49
+00:01:22,340 --> 00:01:23,520
+And one more thing is, you can
+
+50
+00:01:23,520 --> 00:01:25,580
+directly communicate with this agent
+
+51
+00:01:25,580 --> 00:01:27,040
+using plain English.
+
+52
+00:01:27,640 --> 00:01:28,640
+You don't have to know how much
+
+53
+00:01:28,640 --> 00:01:29,740
+coding you have to do.
+
+54
+00:01:30,540 --> 00:01:31,220
+You don't have to understand what is
+
+55
+00:01:31,220 --> 00:01:31,820
+happening inside.
+
+56
+00:01:32,700 --> 00:01:34,100
+You don't need to do any of those
+
+57
+00:01:34,100 --> 00:01:34,700
+things.
+
+58
+00:01:34,700 --> 00:01:35,900
+You can directly speak to it just
+
+59
+00:01:35,900 --> 00:01:36,940
+like normal English.
+
+60
+00:01:37,400 --> 00:01:39,720
+And it will handle all the tech for
+
+61
+00:01:39,720 --> 00:01:40,320
+you.
+
+62
+00:01:40,320 --> 00:01:41,180
+In the back -end, you don't have to
+
+63
+00:01:41,180 --> 00:01:42,280
+do any code execution or task
+
+64
+00:01:42,280 --> 00:01:42,880
+execution.
+
+65
+00:01:42,880 --> 00:01:44,660
+You don't have to do any of those
+
+66
+00:01:44,660 --> 00:01:45,260
+things.
+
+67
+00:01:45,620 --> 00:01:47,560
+You just need to say, I have to do
+
+68
+00:01:47,560 --> 00:01:48,520
+this and it will do that.
+
+69
+00:01:49,220 --> 00:01:51,440
+And it will work for you 24x7.
+
+70
+00:01:51,740 --> 00:01:52,340
+Whether you are sleeping,
+
+71
+00:01:52,660 --> 00:01:54,960
+playing or playing, this agent will
+
+72
+00:01:54,960 --> 00:01:57,680
+continue to run on its server 24x7.
+
+73
+00:01:57,840 --> 00:01:59,100
+Those are all the best things that
+
+74
+00:01:59,100 --> 00:01:59,940
+this agent can do.
+
+75
+00:02:00,480 --> 00:02:02,520
+And after that, there are five core
+
+76
+00:02:02,520 --> 00:02:03,580
+components to this agent.
+
+77
+00:02:04,200 --> 00:02:05,600
+First thing is memory.
+
+78
+00:02:05,920 --> 00:02:07,580
+So let's say, you hired a personal
+
+79
+00:02:07,580 --> 00:02:08,180
+assistant.
+
+80
+00:02:08,180 --> 00:02:10,720
+After 2 -3 months, that personal
+
+81
+00:02:10,720 --> 00:02:13,280
+assistant will get to know what you
+
+82
+00:02:13,280 --> 00:02:14,400
+like, what you don't like, what you
+
+83
+00:02:14,400 --> 00:02:15,500
+do, how your meetings are,
+
+84
+00:02:15,580 --> 00:02:16,900
+what to do and what not to do.
+
+85
+00:02:17,260 --> 00:02:18,560
+He will remember every single thing,
+
+86
+00:02:18,960 --> 00:02:19,560
+right?
+
+87
+00:02:19,560 --> 00:02:22,260
+Similarly, our Hermes agent also has
+
+88
+00:02:22,260 --> 00:02:23,440
+something called as memory.
+
+89
+00:02:23,800 --> 00:02:25,160
+What it does in this is, it will
+
+90
+00:02:25,160 --> 00:02:26,500
+remember all of your details.
+
+91
+00:02:26,680 --> 00:02:27,760
+Your name, what you do,
+
+92
+00:02:27,920 --> 00:02:29,200
+where you are, what things you like,
+
+93
+00:02:29,280 --> 00:02:30,320
+what things you don't like,
+
+94
+00:02:30,820 --> 00:02:32,460
+what you do daily, every single
+
+95
+00:02:32,460 --> 00:02:33,060
+thing.
+
+96
+00:02:33,060 --> 00:02:34,800
+It is just like your personal
+
+97
+00:02:34,800 --> 00:02:35,400
+assistant.
+
+98
+00:02:35,400 --> 00:02:37,340
+And after that, we have something
+
+99
+00:02:37,340 --> 00:02:38,140
+called as skills.
+
+100
+00:02:38,560 --> 00:02:40,060
+And by default, when you install
+
+101
+00:02:40,060 --> 00:02:42,720
+Hermes agent, they come with 100
+
+102
+00:02:42,720 --> 00:02:43,640
+plus skills installed,
+
+103
+00:02:43,960 --> 00:02:44,560
+guys.
+
+104
+00:02:44,700 --> 00:02:46,300
+It has a skill to create PDFs.
+
+105
+00:02:46,400 --> 00:02:47,160
+It has a skill to send emails.
+
+106
+00:02:47,440 --> 00:02:48,840
+It has a skill to check calendars.
+
+107
+00:02:49,540 --> 00:02:52,120
+I mean, you can do a lot of stuff
+
+108
+00:02:52,120 --> 00:02:54,580
+and you can write your own skills as
+
+109
+00:02:54,580 --> 00:02:55,180
+well.
+
+110
+00:02:55,180 --> 00:02:55,780
+That is the best part.
+
+111
+00:02:56,160 --> 00:02:57,440
+And the next important thing,
+
+112
+00:02:57,440 --> 00:02:58,560
+which is called as soul.
+
+113
+00:02:59,160 --> 00:03:00,980
+So before that, I want to tell you a
+
+114
+00:03:00,980 --> 00:03:01,580
+small story.
+
+115
+00:03:01,580 --> 00:03:02,700
+So before Hermes agent,
+
+116
+00:03:03,340 --> 00:03:04,760
+we have one more agent which is
+
+117
+00:03:04,760 --> 00:03:05,780
+called OpenClaw.
+
+118
+00:03:06,200 --> 00:03:06,800
+So what is the difference between
+
+119
+00:03:06,800 --> 00:03:08,160
+OpenClaw and this?
+
+120
+00:03:08,160 --> 00:03:08,760
+There are two things.
+
+121
+00:03:09,240 --> 00:03:10,880
+One is soul and the other is
+
+122
+00:03:10,880 --> 00:03:11,480
+self-improving.
+
+123
+00:03:11,680 --> 00:03:13,080
+I will talk about self-improving in some
+
+124
+00:03:13,080 --> 00:03:13,680
+time.
+
+125
+00:03:13,680 --> 00:03:14,280
+What is soul?
+
+126
+00:03:14,680 --> 00:03:15,840
+Let me tell you an example.
+
+127
+00:03:15,980 --> 00:03:17,220
+You hire a personal assistant.
+
+128
+00:03:17,740 --> 00:03:19,340
+Sometimes a personal assistant can
+
+129
+00:03:19,340 --> 00:03:20,160
+be rude by default.
+
+130
+00:03:20,440 --> 00:03:21,620
+Maybe he can be loving.
+
+131
+00:03:21,620 --> 00:03:22,480
+Maybe he is professional.
+
+132
+00:03:22,780 --> 00:03:24,020
+So they have their persona,
+
+133
+00:03:24,700 --> 00:03:25,300
+right?
+
+134
+00:03:25,300 --> 00:03:28,160
+Similarly, you can put your persona
+
+135
+00:03:28,160 --> 00:03:28,760
+for this Hermes agent.
+
+136
+00:03:28,760 --> 00:03:30,860
+Maybe you want your agent to talk
+
+137
+00:03:30,860 --> 00:03:31,820
+lovely to you.
+
+138
+00:03:31,900 --> 00:03:33,680
+Maybe you want your agent to talk
+
+139
+00:03:33,680 --> 00:03:34,280
+professionally.
+
+140
+00:03:34,620 --> 00:03:36,000
+Maybe you want your agent to be
+
+141
+00:03:36,000 --> 00:03:36,900
+rude, critique.
+
+142
+00:03:37,680 --> 00:03:39,800
+There are so many personas that you
+
+143
+00:03:39,800 --> 00:03:40,740
+can build for your agent.
+
+144
+00:03:41,480 --> 00:03:43,100
+And if you use this agent,
+
+145
+00:03:43,620 --> 00:03:45,880
+this persona will also get enhanced
+
+146
+00:03:45,880 --> 00:03:46,820
+as well by default.
+
+147
+00:03:47,360 --> 00:03:48,060
+And how does that happen?
+
+148
+00:03:48,240 --> 00:03:49,740
+That is what we will talk about in
+
+149
+00:03:49,740 --> 00:03:50,340
+self-improving.
+
+150
+00:03:50,640 --> 00:03:52,280
+And then next we have the important
+
+151
+00:03:52,280 --> 00:03:53,820
+stuff, which are called cron jobs.
+
+152
+00:03:53,820 --> 00:03:54,920
+What are cron jobs?
+
+153
+00:03:55,920 --> 00:03:58,600
+Let's say you have to read the
+
+154
+00:03:58,600 --> 00:03:59,960
+newspaper every morning.
+
+155
+00:03:59,960 --> 00:04:00,560
+So you read the newspaper every
+
+156
+00:04:00,560 --> 00:04:01,300
+morning at 7 o 'clock.
+
+157
+00:04:02,720 --> 00:04:05,240
+Similarly, you want this agent to
+
+158
+00:04:05,240 --> 00:04:06,200
+execute the same job at every day or
+
+159
+00:04:06,200 --> 00:04:07,400
+at any specific time.
+
+160
+00:04:09,580 --> 00:04:11,600
+So for example, when I wake up in
+
+161
+00:04:11,600 --> 00:04:13,460
+the morning, I want the agent to
+
+162
+00:04:13,460 --> 00:04:15,860
+scrape through all the news on the
+
+163
+00:04:15,860 --> 00:04:16,740
+internet regarding AI.
+
+164
+00:04:17,060 --> 00:04:18,440
+And it should give me the top 5
+
+165
+00:04:18,440 --> 00:04:19,760
+topics that I need to read about.
+
+166
+00:04:20,280 --> 00:04:21,200
+So what happens because of this?
+
+167
+00:04:21,200 --> 00:04:23,400
+I can keep up with the trends that
+
+168
+00:04:23,400 --> 00:04:24,400
+are going with the AI.
+
+169
+00:04:24,880 --> 00:04:26,400
+And I don't have to do any research
+
+170
+00:04:26,400 --> 00:04:27,000
+for this.
+
+171
+00:04:27,000 --> 00:04:28,520
+When I sleep, it will do all the
+
+172
+00:04:28,520 --> 00:04:29,120
+research.
+
+173
+00:04:29,120 --> 00:04:29,940
+By the time I wake up,
+
+174
+00:04:29,940 --> 00:04:30,760
+it will give me the summary.
+
+175
+00:04:31,360 --> 00:04:32,240
+Isn't it interesting?
+
+176
+00:04:32,940 --> 00:04:34,320
+And the next thing is self-improving.
+
+177
+00:04:34,880 --> 00:04:35,540
+What is self-improving?
+
+178
+00:04:36,260 --> 00:04:37,420
+Let's say you are using this agent
+
+179
+00:04:37,420 --> 00:04:39,960
+and you are doing the same things
+
+180
+00:04:39,960 --> 00:04:40,980
+again and again.
+
+181
+00:04:41,560 --> 00:04:43,400
+So what does this do?
+
+182
+00:04:43,420 --> 00:04:45,960
+It will observe that pattern and it
+
+183
+00:04:45,960 --> 00:04:47,260
+will create a skill for that
+
+184
+00:04:47,260 --> 00:04:48,020
+automatically for you.
+
+185
+00:04:48,580 --> 00:04:51,700
+And you use it and all of these
+
+186
+00:04:51,700 --> 00:04:52,640
+files will get enhanced.
+
+187
+00:04:52,720 --> 00:04:53,860
+Whether it's memory, skills,
+
+188
+00:04:54,460 --> 00:04:56,400
+skills, cron jobs, it will suggest
+
+189
+00:04:56,400 --> 00:04:57,160
+every single thing.
+
+190
+00:04:57,580 --> 00:04:59,340
+So that is why it is so powerful.
+
+191
+00:04:59,520 --> 00:05:01,620
+And it is one of the most open
+
+192
+00:05:01,620 --> 00:05:03,040
+source projects right now in the
+
+193
+00:05:03,040 --> 00:05:03,660
+agentic space.
+
+194
+00:05:04,080 --> 00:05:05,680
+And the next thing is what is inside
+
+195
+00:05:05,680 --> 00:05:07,200
+this agent, Mr. Balaji?
+
+196
+00:05:07,640 --> 00:05:08,780
+That is a valid question.
+
+197
+00:05:09,120 --> 00:05:11,160
+So let me show you exactly how it
+
+198
+00:05:11,160 --> 00:05:11,760
+looks like.
+
+199
+00:05:12,120 --> 00:05:13,480
+Not exactly how it looks like.
+
+200
+00:05:13,640 --> 00:05:15,340
+I will show you how our UI looks
+
+201
+00:05:15,340 --> 00:05:15,940
+like.
+
+202
+00:05:16,040 --> 00:05:17,300
+But think about it like this.
+
+203
+00:05:17,300 --> 00:05:18,860
+Let's say our Hermes agent is also a
+
+204
+00:05:18,860 --> 00:05:19,640
+source.
+
+205
+00:05:19,700 --> 00:05:22,480
+Inside this, we have soul.md.
+
+206
+00:05:22,700 --> 00:05:24,100
+So if you know about agents,
+
+207
+00:05:24,980 --> 00:05:26,900
+you save all the information in the
+
+208
+00:05:26,900 --> 00:05:28,100
+md files or markdown files.
+
+209
+00:05:28,660 --> 00:05:29,960
+So what does soul.md do?
+
+210
+00:05:30,240 --> 00:05:32,100
+It will save your personality and
+
+211
+00:05:32,100 --> 00:05:32,700
+tone.
+
+212
+00:05:33,080 --> 00:05:34,480
+And config.aml.
+
+213
+00:05:34,600 --> 00:05:36,700
+It will remember your MCPs,
+
+214
+00:05:36,960 --> 00:05:38,840
+tools, skills and all of that stuff.
+
+215
+00:05:39,340 --> 00:05:40,340
+And.environment file.
+
+216
+00:05:40,640 --> 00:05:41,600
+What does this environment file do?
+
+217
+00:05:41,860 --> 00:05:43,580
+It will save all of your passwords,
+
+218
+00:05:43,940 --> 00:05:45,000
+tokens, authentication,
+
+219
+00:05:45,180 --> 00:05:46,040
+JSONs, a lot of stuff.
+
+220
+00:05:46,040 --> 00:05:47,780
+And then we have memory.
+
+221
+00:05:48,280 --> 00:05:50,540
+It will have user memory and normal
+
+222
+00:05:50,540 --> 00:05:51,200
+project memory.
+
+223
+00:05:51,900 --> 00:05:52,700
+And then we have skills.
+
+224
+00:05:53,220 --> 00:05:54,400
+I told you, right?
+
+225
+00:05:54,400 --> 00:05:55,400
+I need to be brief every morning.
+
+226
+00:05:55,800 --> 00:05:57,640
+So I have morning brief and email
+
+227
+00:05:57,640 --> 00:05:58,240
+triage.
+
+228
+00:05:58,340 --> 00:06:00,040
+If I want to send some emails to a
+
+229
+00:06:00,040 --> 00:06:01,140
+lot of people, I can use this.
+
+230
+00:06:01,480 --> 00:06:02,840
+And then what are our cron jobs?
+
+231
+00:06:03,240 --> 00:06:04,320
+Every day, what work should I
+
+232
+00:06:04,320 --> 00:06:05,460
+execute at what time?
+
+233
+00:06:05,800 --> 00:06:07,100
+And then we have sessions as well.
+
+234
+00:06:07,360 --> 00:06:08,780
+So all of these things will lie
+
+235
+00:06:08,780 --> 00:06:09,840
+inside your Hermes agent.
+
+236
+00:06:10,680 --> 00:06:12,420
+And inside this, there are two
+
+237
+00:06:12,420 --> 00:06:13,660
+different files inside memory.
+
+238
+00:06:13,660 --> 00:06:16,300
+One is user.md and another is memory
+
+239
+00:06:16,300 --> 00:06:16,900
+.md.
+
+240
+00:06:17,320 --> 00:06:18,400
+What does this user.md do?
+
+241
+00:06:18,800 --> 00:06:20,200
+It will save all the details about
+
+242
+00:06:20,200 --> 00:06:20,800
+me.
+
+243
+00:06:20,800 --> 00:06:22,260
+For example, I am Balaji Chepada.
+
+244
+00:06:22,400 --> 00:06:23,180
+Lead data sender.
+
+245
+00:06:23,300 --> 00:06:24,240
+My timezone is CEST.
+
+246
+00:06:24,520 --> 00:06:25,120
+What do I do?
+
+247
+00:06:25,320 --> 00:06:27,240
+I want everything to be concise.
+
+248
+00:06:27,480 --> 00:06:29,100
+I don't want any of the random
+
+249
+00:06:29,100 --> 00:06:29,700
+things.
+
+250
+00:06:29,760 --> 00:06:30,480
+And everything...
+
+251
+00:06:30,480 --> 00:06:31,620
+What I am saying is that I want
+
+252
+00:06:31,620 --> 00:06:32,280
+everything to be in bullet points.
+
+253
+00:06:33,280 --> 00:06:35,200
+And then normal memory.md.
+
+254
+00:06:35,400 --> 00:06:36,020
+What does this do?
+
+255
+00:06:36,180 --> 00:06:37,820
+My projects, my environment,
+
+256
+00:06:38,100 --> 00:06:38,700
+everything.
+
+257
+00:06:38,700 --> 00:06:40,360
+It will keep updating all of these
+
+258
+00:06:40,360 --> 00:06:40,960
+things.
+
+259
+00:06:40,960 --> 00:06:42,400
+So it is like you are training your
+
+260
+00:06:42,400 --> 00:06:43,000
+own assistant.
+
+261
+00:06:43,700 --> 00:06:45,020
+You are trying to use this.
+
+262
+00:06:45,020 --> 00:06:46,820
+That is why it is so powerful.
+
+263
+00:06:47,580 --> 00:06:48,940
+And then this is the best thing.
+
+264
+00:06:49,160 --> 00:06:50,640
+It gets better as you use it.
+
+265
+00:06:50,900 --> 00:06:51,720
+You will do a job.
+
+266
+00:06:52,080 --> 00:06:53,700
+And the agent will learn that job.
+
+267
+00:06:53,980 --> 00:06:55,160
+And it will save it to the memory.
+
+268
+00:06:55,460 --> 00:06:56,940
+And it will build skills to automate
+
+269
+00:06:56,940 --> 00:06:57,540
+that task.
+
+270
+00:06:57,900 --> 00:06:59,420
+And it will search for the past
+
+271
+00:06:59,420 --> 00:07:00,020
+work.
+
+272
+00:07:00,020 --> 00:07:00,960
+And it will repeat all of that
+
+273
+00:07:00,960 --> 00:07:01,560
+stuff.
+
+274
+00:07:02,800 --> 00:07:03,860
+It will automate the big job you are
+
+275
+00:07:03,860 --> 00:07:04,600
+repeating by default for you.
+
+276
+00:07:04,780 --> 00:07:05,880
+You don't need to do extra work.
+
+277
+00:07:06,500 --> 00:07:07,920
+And why a VPS is required?
+
+278
+00:07:08,240 --> 00:07:08,840
+What is a VPS?
+
+279
+00:07:08,840 --> 00:07:10,240
+So what is a VPS?
+
+280
+00:07:10,660 --> 00:07:12,260
+It is a virtual private server.
+
+281
+00:07:13,240 --> 00:07:14,500
+So let's say you have installed this
+
+282
+00:07:14,500 --> 00:07:16,120
+Hermes agent in your laptop.
+
+283
+00:07:17,320 --> 00:07:18,380
+So your laptop should always be
+
+284
+00:07:18,380 --> 00:07:19,340
+connected to power.
+
+285
+00:07:19,340 --> 00:07:20,320
+It should be connected to internet.
+
+286
+00:07:20,600 --> 00:07:22,720
+It should also keep running your
+
+287
+00:07:22,720 --> 00:07:23,320
+agent.
+
+288
+00:07:23,580 --> 00:07:24,180
+So this is 24x7.
+
+289
+00:07:25,140 --> 00:07:26,660
+Your agent will work only if the
+
+290
+00:07:26,660 --> 00:07:27,260
+laptop is on.
+
+291
+00:07:27,260 --> 00:07:27,860
+So it is very difficult,
+
+292
+00:07:27,860 --> 00:07:28,460
+right?
+
+293
+00:07:28,460 --> 00:07:30,680
+That is why you can use a virtual
+
+294
+00:07:30,680 --> 00:07:31,600
+private server called VPS.
+
+295
+00:07:31,880 --> 00:07:32,480
+What does it do?
+
+296
+00:07:32,580 --> 00:07:34,900
+It will run your agent 24x7.
+
+297
+00:07:35,160 --> 00:07:37,040
+No matter how your laptop is.
+
+298
+00:07:37,040 --> 00:07:38,460
+It will work in the cloud.
+
+299
+00:07:38,660 --> 00:07:40,300
+So you don't need to worry about it.
+
+300
+00:07:40,420 --> 00:07:42,180
+And then unreliable uptime.
+
+301
+00:07:42,460 --> 00:07:43,640
+When you are at home, you may run
+
+302
+00:07:43,640 --> 00:07:45,020
+out of power, Wi -Fi, or OS updates.
+
+303
+00:07:45,720 --> 00:07:46,800
+All of these things will happen.
+
+304
+00:07:46,900 --> 00:07:48,180
+But if you are in a VPS,
+
+305
+00:07:48,360 --> 00:07:49,740
+it has a very stable connection.
+
+306
+00:07:49,980 --> 00:07:50,580
+And since it is in the data center,
+
+307
+00:07:51,080 --> 00:07:52,360
+it will not have any of these
+
+308
+00:07:52,360 --> 00:07:52,960
+issues.
+
+309
+00:07:53,260 --> 00:07:54,600
+And after that, by executing this
+
+310
+00:07:54,600 --> 00:07:55,800
+agent in your laptop,
+
+311
+00:07:57,040 --> 00:07:58,440
+you are using hardware of your
+
+312
+00:07:58,440 --> 00:07:59,040
+laptop.
+
+313
+00:07:59,180 --> 00:08:01,540
+Battery, CPU, GPU, all of these
+
+314
+00:08:01,540 --> 00:08:03,080
+things will wear and tear along the
+
+315
+00:08:03,080 --> 00:08:03,680
+time.
+
+316
+00:08:03,740 --> 00:08:06,340
+So to avoid that, you can use VPS.
+
+317
+00:08:06,340 --> 00:08:08,940
+VPS costs are usually very low.
+
+318
+00:08:09,300 --> 00:08:10,280
+And then home network limits,
+
+319
+00:08:10,860 --> 00:08:11,760
+static IP and access.
+
+320
+00:08:12,480 --> 00:08:13,180
+And since this is your personal
+
+321
+00:08:13,180 --> 00:08:13,780
+machine,
+
+322
+00:08:13,960 --> 00:08:16,020
+giving an agent access to your
+
+323
+00:08:16,020 --> 00:08:17,880
+entire personal machine would be a
+
+324
+00:08:17,880 --> 00:08:18,480
+little bit scary.
+
+325
+00:08:19,060 --> 00:08:20,480
+So usually recommended in production
+
+326
+00:08:20,480 --> 00:08:24,300
+or office is always use sandboxes.
+
+327
+00:08:24,420 --> 00:08:25,020
+What is this sandbox?
+
+328
+00:08:25,440 --> 00:08:26,780
+That is what VPS is.
+
+329
+00:08:26,920 --> 00:08:29,180
+And you can use this VPS to install
+
+330
+00:08:29,180 --> 00:08:30,200
+your agent.
+
+331
+00:08:30,240 --> 00:08:32,060
+And if anything goes wrong tomorrow,
+
+332
+00:08:32,400 --> 00:08:33,840
+the data in that VPS will be
+
+333
+00:08:33,840 --> 00:08:34,440
+corrupted.
+
+334
+00:08:34,440 --> 00:08:36,460
+So your laptop is safe and secure.
+
+335
+00:08:36,860 --> 00:08:38,860
+That is why I recommend going via
+
+336
+00:08:38,860 --> 00:08:39,560
+VPS route.
+
+337
+00:08:39,980 --> 00:08:41,100
+Now for the actual setup.
+
+338
+00:08:41,480 --> 00:08:44,560
+Take a VPS server and install Hermes
+
+339
+00:08:44,560 --> 00:08:45,160
+agent.
+
+340
+00:08:45,400 --> 00:08:47,080
+For that, we are going to use a
+
+341
+00:08:47,080 --> 00:08:48,160
+website called Hostinger.
+
+342
+00:08:48,960 --> 00:08:49,860
+And before we proceed,
+
+343
+00:08:50,040 --> 00:08:52,140
+I want to mention this video is made
+
+344
+00:08:52,140 --> 00:08:53,500
+in partnership with Hostinger.
+
+345
+00:08:53,880 --> 00:08:55,980
+But honestly, even before this
+
+346
+00:08:55,980 --> 00:08:56,580
+collaboration,
+
+347
+00:08:56,660 --> 00:08:58,640
+I was already using Hostinger for my
+
+348
+00:08:58,640 --> 00:09:00,100
+own work and personal use case.
+
+349
+00:09:00,100 --> 00:09:02,400
+If you look at the email team at the
+
+350
+00:09:02,400 --> 00:09:03,280
+red balachipay.com
+
+351
+00:09:03,280 --> 00:09:05,740
+www.balachipay.com to get the
+
+352
+00:09:05,740 --> 00:09:06,340
+domain.
+
+353
+00:09:06,340 --> 00:09:07,980
+I have been using their products for
+
+354
+00:09:07,980 --> 00:09:08,760
+quite some time.
+
+355
+00:09:09,040 --> 00:09:10,440
+And I am happy to collaborate with
+
+356
+00:09:10,440 --> 00:09:11,040
+them.
+
+357
+00:09:11,040 --> 00:09:12,360
+And I will put the exact link to
+
+358
+00:09:12,360 --> 00:09:13,200
+this website in the description
+
+359
+00:09:13,200 --> 00:09:13,800
+below.
+
+360
+00:09:13,800 --> 00:09:14,400
+You can check it out.
+
+361
+00:09:14,840 --> 00:09:18,100
+And you get a 69 % off on AI managed
+
+362
+00:09:18,100 --> 00:09:19,020
+VPS hosting.
+
+363
+00:09:19,700 --> 00:09:20,920
+Virtual private server for more
+
+364
+00:09:20,920 --> 00:09:21,660
+power and control.
+
+365
+00:09:22,200 --> 00:09:24,680
+There are multiple plans KVM 1,
+
+366
+00:09:24,740 --> 00:09:26,940
+KVM 2, KVM 4 and KVM 8.
+
+367
+00:09:27,160 --> 00:09:28,340
+KVM 1 is very basic.
+
+368
+00:09:28,340 --> 00:09:30,340
+You cannot even use Hermes agent
+
+369
+00:09:30,340 --> 00:09:31,760
+properly in KVM 1.
+
+370
+00:09:31,960 --> 00:09:34,060
+So I would say at least go with KVM
+
+371
+00:09:34,060 --> 00:09:34,660
+2.
+
+372
+00:09:34,880 --> 00:09:37,820
+If you have a more powerful use
+
+373
+00:09:37,820 --> 00:09:38,420
+cases,
+
+374
+00:09:38,460 --> 00:09:40,500
+My recommendation is start with KVM
+
+375
+00:09:40,500 --> 00:09:41,100
+2.
+
+376
+00:09:41,100 --> 00:09:42,180
+And if you think it is doing good,
+
+377
+00:09:42,280 --> 00:09:43,640
+then upscale to KVM 4.
+
+378
+00:09:43,920 --> 00:09:45,860
+So KVM 2 will already get these kind
+
+379
+00:09:45,860 --> 00:09:46,460
+of benefits.
+
+380
+00:09:46,560 --> 00:09:48,700
+2 CPU cores, 8 GB RAM,
+
+381
+00:09:49,060 --> 00:09:51,680
+80 GB NVMe disk space and 8 TB
+
+382
+00:09:51,680 --> 00:09:52,280
+bandwidth.
+
+383
+00:09:52,540 --> 00:09:54,160
+So for the use case that I am going
+
+384
+00:09:54,160 --> 00:09:54,800
+to explain,
+
+385
+00:09:55,000 --> 00:09:56,000
+KVM 2 is good enough.
+
+386
+00:09:56,000 --> 00:09:57,260
+Let's go with KVM 2 plan.
+
+387
+00:09:57,260 --> 00:09:58,860
+And this is the payment summary
+
+388
+00:09:58,860 --> 00:09:59,460
+page.
+
+389
+00:09:59,600 --> 00:10:01,420
+Here you can choose the time period.
+
+390
+00:10:01,740 --> 00:10:03,320
+If you want to try it out for one
+
+391
+00:10:03,320 --> 00:10:03,920
+month,
+
+392
+00:10:03,920 --> 00:10:04,680
+You can choose one month.
+
+393
+00:10:04,720 --> 00:10:06,680
+But it is going to be costly 12.99
+
+394
+00:10:06,680 --> 00:10:07,280
+per month.
+
+395
+00:10:07,740 --> 00:10:09,340
+My recommendation is you can go with
+
+396
+00:10:09,340 --> 00:10:10,080
+24 months.
+
+397
+00:10:10,540 --> 00:10:11,940
+Because of this, your monthly bill
+
+398
+00:10:11,940 --> 00:10:13,180
+will become 799.
+
+399
+00:10:13,540 --> 00:10:14,760
+If you think this is a little more
+
+400
+00:10:14,760 --> 00:10:15,360
+time frame,
+
+401
+00:10:15,840 --> 00:10:16,960
+Then go with 12 months,
+
+402
+00:10:17,000 --> 00:10:18,340
+which will give you approximately
+
+403
+00:10:18,340 --> 00:10:19,280
+1000 rupees per month.
+
+404
+00:10:19,840 --> 00:10:21,540
+So my recommendation is go with 24
+
+405
+00:10:21,540 --> 00:10:22,140
+months.
+
+406
+00:10:22,300 --> 00:10:23,180
+And because we did a collaboration
+
+407
+00:10:23,180 --> 00:10:24,680
+with this video, Hostinger,
+
+408
+00:10:24,680 --> 00:10:26,640
+I do have a coupon code.
+
+409
+00:10:27,320 --> 00:10:28,820
+You can use my name as a coupon
+
+410
+00:10:28,820 --> 00:10:30,020
+code, which is called Balaji.
+
+411
+00:10:30,160 --> 00:10:31,460
+And I will put it in the description
+
+412
+00:10:31,460 --> 00:10:32,160
+below as well.
+
+413
+00:10:32,420 --> 00:10:33,720
+And you can apply and you will get
+
+414
+00:10:33,720 --> 00:10:34,720
+10 % off guys.
+
+415
+00:10:35,100 --> 00:10:36,380
+And you can continue and you can
+
+416
+00:10:36,380 --> 00:10:37,680
+make your payment from this page
+
+417
+00:10:37,680 --> 00:10:38,280
+itself.
+
+418
+00:10:38,280 --> 00:10:38,880
+After you have logged in.
+
+419
+00:10:39,360 --> 00:10:40,340
+And once you have made the payment,
+
+420
+00:10:40,980 --> 00:10:42,100
+You will land on this page.
+
+421
+00:10:42,460 --> 00:10:43,580
+You have to choose a server
+
+422
+00:10:43,580 --> 00:10:44,180
+location.
+
+423
+00:10:44,760 --> 00:10:46,520
+Usually choose the server or the
+
+424
+00:10:46,520 --> 00:10:48,080
+country which is very close to you.
+
+425
+00:10:48,620 --> 00:10:50,440
+Since I am in Europe, Germany is the
+
+426
+00:10:50,440 --> 00:10:51,340
+one which is close to me.
+
+427
+00:10:51,340 --> 00:10:53,060
+And if you are in India,
+
+428
+00:10:53,100 --> 00:10:55,000
+you can choose Mumbai or maybe
+
+429
+00:10:55,000 --> 00:10:55,600
+Malaysia.
+
+430
+00:10:55,600 --> 00:10:56,940
+But I would prefer choosing Mumbai.
+
+431
+00:10:57,520 --> 00:10:58,560
+So what I will do here, I will
+
+432
+00:10:58,560 --> 00:10:59,420
+choose Germany.
+
+433
+00:10:59,840 --> 00:11:01,340
+Because it is going to decide your
+
+434
+00:11:01,340 --> 00:11:01,940
+latency.
+
+435
+00:11:02,020 --> 00:11:02,940
+By saying that latency means how
+
+436
+00:11:02,940 --> 00:11:04,300
+fast the communication will be.
+
+437
+00:11:05,000 --> 00:11:06,040
+And I will click on next.
+
+438
+00:11:06,600 --> 00:11:08,180
+And here you can choose the OS.
+
+439
+00:11:08,520 --> 00:11:10,140
+Earlier we thought that VPS is
+
+440
+00:11:10,140 --> 00:11:11,780
+basically a server or a machine.
+
+441
+00:11:11,800 --> 00:11:13,080
+That is running on the cloud.
+
+442
+00:11:13,640 --> 00:11:15,440
+Then you need any kind of OS in that
+
+443
+00:11:15,440 --> 00:11:16,040
+machine.
+
+444
+00:11:16,260 --> 00:11:17,580
+And for popular OS like this,
+
+445
+00:11:17,960 --> 00:11:20,540
+click on Ubuntu and select.
+
+446
+00:11:20,540 --> 00:11:22,220
+And once you select that,
+
+447
+00:11:22,220 --> 00:11:23,500
+you will land on this page.
+
+448
+00:11:24,200 --> 00:11:25,720
+Here you need to create a password.
+
+449
+00:11:26,120 --> 00:11:27,520
+This is the root password.
+
+450
+00:11:27,660 --> 00:11:29,660
+That is going to be very important
+
+451
+00:11:29,660 --> 00:11:30,260
+for you.
+
+452
+00:11:30,440 --> 00:11:31,720
+Because once you create a VPS,
+
+453
+00:11:31,800 --> 00:11:33,160
+This is the password that it is
+
+454
+00:11:33,160 --> 00:11:34,540
+going to ask you to log in to the
+
+455
+00:11:34,540 --> 00:11:35,140
+VPS.
+
+456
+00:11:35,300 --> 00:11:36,440
+So I will put my password.
+
+457
+00:11:36,940 --> 00:11:38,900
+So let's say.
+
+458
+00:11:39,060 --> 00:11:39,660
+Okay.
+
+459
+00:11:39,720 --> 00:11:40,320
+Since I have given my password,
+
+460
+00:11:40,580 --> 00:11:41,340
+click on next.
+
+461
+00:11:41,800 --> 00:11:43,540
+I would say no thanks right now.
+
+462
+00:11:43,900 --> 00:11:45,520
+And here you can add additional
+
+463
+00:11:45,520 --> 00:11:47,420
+things like malware scanners or auto
+
+464
+00:11:47,420 --> 00:11:48,020
+backups.
+
+465
+00:11:48,020 --> 00:11:50,120
+Or I would prefer using Docker
+
+466
+00:11:50,120 --> 00:11:50,720
+manager.
+
+467
+00:11:50,720 --> 00:11:51,320
+What is Docker?
+
+468
+00:11:51,600 --> 00:11:52,880
+Inside this KVM server,
+
+469
+00:11:53,220 --> 00:11:54,340
+there is another container.
+
+470
+00:11:55,100 --> 00:11:56,160
+And choose the Docker manager.
+
+471
+00:11:56,620 --> 00:11:57,400
+And click on next.
+
+472
+00:11:57,480 --> 00:12:00,140
+Once you do this, it will start your
+
+473
+00:12:00,140 --> 00:12:01,920
+VPS server on the Hostinger panel.
+
+474
+00:12:02,260 --> 00:12:03,040
+And once you have completed that
+
+475
+00:12:03,040 --> 00:12:03,640
+process,
+
+476
+00:12:03,920 --> 00:12:05,280
+You will come to this page which is
+
+477
+00:12:05,280 --> 00:12:06,520
+called Hostinger hPanel.
+
+478
+00:12:07,080 --> 00:12:08,660
+If you want to find your VPS,
+
+479
+00:12:08,700 --> 00:12:10,160
+On the left side, you have something
+
+480
+00:12:10,160 --> 00:12:11,560
+which is called as VPS here.
+
+481
+00:12:11,880 --> 00:12:13,040
+And you can come to this page.
+
+482
+00:12:13,200 --> 00:12:14,020
+You can see here.
+
+483
+00:12:14,260 --> 00:12:15,580
+The plan you have taken is KVM2.
+
+484
+00:12:15,900 --> 00:12:16,960
+It is currently running.
+
+485
+00:12:16,960 --> 00:12:18,400
+You can click on manage.
+
+486
+00:12:19,120 --> 00:12:20,760
+And after that, on the left side,
+
+487
+00:12:20,780 --> 00:12:22,000
+you can see something which is
+
+488
+00:12:22,000 --> 00:12:23,100
+called as Docker manager.
+
+489
+00:12:23,820 --> 00:12:24,680
+You can see all the details here.
+
+490
+00:12:24,940 --> 00:12:26,200
+But let's not worry about all of
+
+491
+00:12:26,200 --> 00:12:26,800
+those things.
+
+492
+00:12:26,800 --> 00:12:27,600
+Click on Docker manager.
+
+493
+00:12:28,380 --> 00:12:30,620
+And here you can start with compose.
+
+494
+00:12:31,120 --> 00:12:32,700
+And you will say one click deploy.
+
+495
+00:12:33,200 --> 00:12:34,520
+So in Hostinger, one of the best
+
+496
+00:12:34,520 --> 00:12:35,640
+advantages is that
+
+497
+00:12:35,640 --> 00:12:38,060
+You can install your agents on the
+
+498
+00:12:38,060 --> 00:12:39,920
+Docker inside a KVM server.
+
+499
+00:12:40,480 --> 00:12:41,400
+With a single click.
+
+500
+00:12:42,040 --> 00:12:43,060
+What do we do here?
+
+501
+00:12:43,160 --> 00:12:44,360
+We will go with Hermes.
+
+502
+00:12:44,360 --> 00:12:46,460
+So in Hermes, we have multiple
+
+503
+00:12:46,460 --> 00:12:47,060
+things.
+
+504
+00:12:47,060 --> 00:12:47,660
+Hermes agent.
+
+505
+00:12:47,800 --> 00:12:48,680
+Hermes web UI.
+
+506
+00:12:48,840 --> 00:12:49,660
+And Hermes workspace.
+
+507
+00:12:50,340 --> 00:12:51,840
+So I would go ahead and go with
+
+508
+00:12:51,840 --> 00:12:52,580
+Hermes agent.
+
+509
+00:12:52,920 --> 00:12:54,580
+Because this is where you get more
+
+510
+00:12:54,580 --> 00:12:55,180
+power.
+
+511
+00:12:55,360 --> 00:12:56,780
+If you are a web person,
+
+512
+00:12:56,900 --> 00:12:58,360
+you can go with this one as well.
+
+513
+00:12:58,360 --> 00:12:59,580
+Or you can choose workspace.
+
+514
+00:12:59,940 --> 00:13:01,560
+But for this demo, I will go with
+
+515
+00:13:01,560 --> 00:13:02,160
+Hermes agent.
+
+516
+00:13:02,580 --> 00:13:03,900
+And just wanted to show you one more
+
+517
+00:13:03,900 --> 00:13:04,500
+thing.
+
+518
+00:13:04,500 --> 00:13:05,760
+There are so many different agents.
+
+519
+00:13:05,940 --> 00:13:07,200
+You can install Openclog.
+
+520
+00:13:07,520 --> 00:13:09,040
+There are lot of things that you can
+
+521
+00:13:09,040 --> 00:13:10,380
+do with one click deploy in
+
+522
+00:13:10,380 --> 00:13:10,980
+Hostinger.
+
+523
+00:13:10,980 --> 00:13:12,440
+So let's go with Hermes.
+
+524
+00:13:12,520 --> 00:13:13,560
+And I will click on select.
+
+525
+00:13:13,560 --> 00:13:14,740
+And look here.
+
+526
+00:13:14,880 --> 00:13:16,860
+This is what my admin username is.
+
+527
+00:13:16,860 --> 00:13:17,960
+I am putting my name Hermes here.
+
+528
+00:13:18,040 --> 00:13:19,280
+I will not worry about any of the
+
+529
+00:13:19,280 --> 00:13:19,880
+things.
+
+530
+00:13:19,880 --> 00:13:20,880
+This is my admin password.
+
+531
+00:13:21,360 --> 00:13:22,200
+Nexus API key.
+
+532
+00:13:22,300 --> 00:13:23,640
+You don't even need this actually.
+
+533
+00:13:24,220 --> 00:13:25,880
+So I will just remove this API key.
+
+534
+00:13:25,940 --> 00:13:27,440
+Because we are not going to use any
+
+535
+00:13:27,440 --> 00:13:28,580
+of the tokens from the Nexus.
+
+536
+00:13:28,920 --> 00:13:30,580
+So this is our admin password.
+
+537
+00:13:31,060 --> 00:13:32,240
+And I will click on deploy.
+
+538
+00:13:33,760 --> 00:13:34,640
+I will say save.
+
+539
+00:13:35,340 --> 00:13:35,940
+And wait.
+
+540
+00:13:36,000 --> 00:13:37,440
+What happens here is once it is
+
+541
+00:13:37,440 --> 00:13:38,040
+deployed.
+
+542
+00:13:38,040 --> 00:13:39,100
+You will get a terminal.
+
+543
+00:13:39,300 --> 00:13:40,140
+It is running and say.
+
+544
+00:13:40,360 --> 00:13:41,360
+Right now it is deployed.
+
+545
+00:13:41,360 --> 00:13:43,100
+That's why you are seeing open and
+
+546
+00:13:43,100 --> 00:13:43,700
+terminal.
+
+547
+00:13:43,780 --> 00:13:44,540
+You can click on open.
+
+548
+00:13:44,560 --> 00:13:45,660
+You don't need to even go to
+
+549
+00:13:45,660 --> 00:13:46,480
+terminal as well.
+
+550
+00:13:46,820 --> 00:13:47,520
+Give your username here.
+
+551
+00:13:47,980 --> 00:13:48,580
+What you can do if you forget your
+
+552
+00:13:48,580 --> 00:13:49,180
+password.
+
+553
+00:13:49,860 --> 00:13:51,000
+You can come back to the Hostinger
+
+554
+00:13:51,000 --> 00:13:51,600
+page.
+
+555
+00:13:51,600 --> 00:13:52,340
+You can click on manage.
+
+556
+00:13:53,140 --> 00:13:53,820
+And under this you have something
+
+557
+00:13:53,820 --> 00:13:54,980
+which is called as environment.
+
+558
+00:13:55,480 --> 00:13:57,260
+And I can click on my admin
+
+559
+00:13:57,260 --> 00:13:57,860
+password.
+
+560
+00:13:58,120 --> 00:13:59,460
+I will change the password later on.
+
+561
+00:13:59,460 --> 00:14:00,460
+So don't worry about this.
+
+562
+00:14:00,680 --> 00:14:02,220
+And I will paste my password here.
+
+563
+00:14:02,280 --> 00:14:03,320
+And click on sign in.
+
+564
+00:14:03,700 --> 00:14:04,300
+So no thanks.
+
+565
+00:14:04,540 --> 00:14:05,140
+And you can see here.
+
+566
+00:14:05,220 --> 00:14:06,520
+On the left side we have chart.
+
+567
+00:14:06,740 --> 00:14:07,340
+Sessions.
+
+568
+00:14:07,400 --> 00:14:08,000
+Models.
+
+569
+00:14:08,000 --> 00:14:08,600
+Logs.
+
+570
+00:14:08,600 --> 00:14:09,200
+Cron jobs.
+
+571
+00:14:09,200 --> 00:14:09,800
+Kills.
+
+572
+00:14:09,800 --> 00:14:10,400
+Plugins.
+
+573
+00:14:10,400 --> 00:14:11,000
+MCP.
+
+574
+00:14:11,020 --> 00:14:11,620
+Channels.
+
+575
+00:14:11,740 --> 00:14:12,340
+Webhooks.
+
+576
+00:14:12,340 --> 00:14:12,940
+Pairing.
+
+577
+00:14:12,940 --> 00:14:13,540
+Profiles.
+
+578
+00:14:13,540 --> 00:14:14,140
+Config.
+
+579
+00:14:14,140 --> 00:14:14,740
+Keys.
+
+580
+00:14:14,740 --> 00:14:15,340
+System.
+
+581
+00:14:15,340 --> 00:14:15,940
+Documentation.
+
+582
+00:14:16,480 --> 00:14:18,300
+So there are so many things that
+
+583
+00:14:18,300 --> 00:14:19,060
+this agent can do.
+
+584
+00:14:19,380 --> 00:14:20,360
+First what we will do is.
+
+585
+00:14:20,400 --> 00:14:21,300
+We will try to set it up.
+
+586
+00:14:21,600 --> 00:14:22,580
+And for setting it up.
+
+587
+00:14:22,620 --> 00:14:23,940
+You need to use a command.
+
+588
+00:14:24,120 --> 00:14:25,700
+Which is called as slash setup.
+
+589
+00:14:26,240 --> 00:14:27,060
+So click on enter.
+
+590
+00:14:27,480 --> 00:14:28,420
+So let me zoom in.
+
+591
+00:14:28,720 --> 00:14:29,320
+Look here.
+
+592
+00:14:29,320 --> 00:14:30,140
+What is asking here is.
+
+593
+00:14:30,180 --> 00:14:31,820
+If you want to go via quick setup or
+
+594
+00:14:31,820 --> 00:14:32,420
+full setup.
+
+595
+00:14:32,640 --> 00:14:33,400
+What we will do is.
+
+596
+00:14:33,400 --> 00:14:34,440
+We will go via full setup.
+
+597
+00:14:34,780 --> 00:14:35,980
+If you want to navigate here.
+
+598
+00:14:36,160 --> 00:14:37,700
+You can use up and down arrows.
+
+599
+00:14:37,700 --> 00:14:39,340
+If you space you can select.
+
+600
+00:14:39,520 --> 00:14:40,740
+And you can click on enter to choose
+
+601
+00:14:40,740 --> 00:14:41,360
+the option.
+
+602
+00:14:41,600 --> 00:14:43,160
+So I will now choose and enter.
+
+603
+00:14:44,580 --> 00:14:45,180
+And look here.
+
+604
+00:14:45,260 --> 00:14:46,440
+It is asking me to choose.
+
+605
+00:14:46,760 --> 00:14:48,500
+Which API I want to use with this.
+
+606
+00:14:48,640 --> 00:14:50,500
+So you can use OpenAI API.
+
+607
+00:14:50,800 --> 00:14:51,620
+Anthropic API.
+
+608
+00:14:51,900 --> 00:14:52,700
+OpenRouter API.
+
+609
+00:14:52,840 --> 00:14:54,700
+You can use as per your requirement.
+
+610
+00:14:55,180 --> 00:14:56,440
+So for now what I will do is.
+
+611
+00:14:56,480 --> 00:14:57,780
+I will go via Claude models.
+
+612
+00:14:57,820 --> 00:14:58,420
+From Anthropic.
+
+613
+00:14:58,640 --> 00:14:59,760
+So I will choose Anthropic.
+
+614
+00:15:00,080 --> 00:15:01,000
+Here we have three options.
+
+615
+00:15:01,280 --> 00:15:02,480
+Either if you have a Claude
+
+616
+00:15:02,480 --> 00:15:03,180
+subscription already.
+
+617
+00:15:03,260 --> 00:15:04,020
+You can use that.
+
+618
+00:15:04,120 --> 00:15:04,720
+If you don't have that.
+
+619
+00:15:04,720 --> 00:15:06,200
+You can use the API key as well.
+
+620
+00:15:06,340 --> 00:15:07,880
+And I will go via API key.
+
+621
+00:15:07,880 --> 00:15:09,560
+So what I did is.
+
+622
+00:15:09,560 --> 00:15:10,220
+Come to Claude website.
+
+623
+00:15:10,620 --> 00:15:11,500
+I created an API key.
+
+624
+00:15:11,500 --> 00:15:12,760
+Let me copy the API key.
+
+625
+00:15:13,240 --> 00:15:13,840
+And here.
+
+626
+00:15:13,840 --> 00:15:14,960
+I will choose the option 2.
+
+627
+00:15:15,220 --> 00:15:16,500
+Because I am going via API key.
+
+628
+00:15:16,900 --> 00:15:18,360
+And I will paste my API key.
+
+629
+00:15:18,460 --> 00:15:19,060
+Simple.
+
+630
+00:15:19,360 --> 00:15:20,140
+And after that.
+
+631
+00:15:20,140 --> 00:15:20,740
+It is asking.
+
+632
+00:15:20,780 --> 00:15:21,380
+In that Claude.
+
+633
+00:15:21,400 --> 00:15:22,000
+You are thinking to communicate with
+
+634
+00:15:22,000 --> 00:15:22,600
+812 model.
+
+635
+00:15:23,780 --> 00:15:25,540
+So 4.8 is too much powerful.
+
+636
+00:15:25,740 --> 00:15:26,540
+For my daily tasks.
+
+637
+00:15:26,960 --> 00:15:27,800
+So what I will do is.
+
+638
+00:15:27,800 --> 00:15:28,980
+I will go via 4.6.
+
+639
+00:15:29,000 --> 00:15:30,200
+Which is also from the Opus.
+
+640
+00:15:30,940 --> 00:15:32,440
+And what the terminal will do.
+
+641
+00:15:32,440 --> 00:15:33,140
+Keep the current local.
+
+642
+00:15:33,720 --> 00:15:34,680
+And after that.
+
+643
+00:15:34,680 --> 00:15:35,460
+The second best thing.
+
+644
+00:15:35,460 --> 00:15:36,760
+The Hermes agent can do is.
+
+645
+00:15:36,760 --> 00:15:38,440
+You can talk to Hermes agent.
+
+646
+00:15:38,780 --> 00:15:40,160
+With any of the messaging platforms
+
+647
+00:15:40,160 --> 00:15:40,760
+guys.
+
+648
+00:15:40,800 --> 00:15:41,600
+Once you have done all the setup.
+
+649
+00:15:42,060 --> 00:15:43,660
+You don't need to come back to setup
+
+650
+00:15:43,660 --> 00:15:44,260
+again.
+
+651
+00:15:44,380 --> 00:15:44,980
+Here.
+
+652
+00:15:44,980 --> 00:15:45,960
+We have options to telegram.
+
+653
+00:15:46,040 --> 00:15:46,640
+Slack.
+
+654
+00:15:46,640 --> 00:15:47,240
+Matrix.
+
+655
+00:15:47,240 --> 00:15:47,840
+WhatsApp.
+
+656
+00:15:47,840 --> 00:15:48,440
+Signal.
+
+657
+00:15:48,440 --> 00:15:49,040
+Email.
+
+658
+00:15:49,040 --> 00:15:49,640
+SMS.
+
+659
+00:15:49,640 --> 00:15:50,240
+There are so many options.
+
+660
+00:15:50,360 --> 00:15:51,060
+So what we will do.
+
+661
+00:15:51,220 --> 00:15:52,400
+We will go via telegram.
+
+662
+00:15:52,780 --> 00:15:53,440
+And to select it.
+
+663
+00:15:53,560 --> 00:15:54,760
+I am clicking space bar.
+
+664
+00:15:55,160 --> 00:15:56,060
+And click on enter.
+
+665
+00:15:56,460 --> 00:15:57,060
+What it is asking.
+
+666
+00:15:57,440 --> 00:15:59,220
+If you want to go via automatic or
+
+667
+00:15:59,220 --> 00:15:59,820
+manual.
+
+668
+00:15:59,940 --> 00:16:00,560
+So I will say.
+
+669
+00:16:00,600 --> 00:16:01,940
+I will go via automatic.
+
+670
+00:16:02,220 --> 00:16:03,200
+What I will do is.
+
+671
+00:16:03,240 --> 00:16:04,260
+I will open my camera.
+
+672
+00:16:04,420 --> 00:16:05,600
+I will scan this QR code.
+
+673
+00:16:05,680 --> 00:16:06,620
+And click on telegram.
+
+674
+00:16:06,620 --> 00:16:08,020
+And it will redirect me to the
+
+675
+00:16:08,020 --> 00:16:08,620
+telegram bot.
+
+676
+00:16:09,120 --> 00:16:09,720
+I will.
+
+677
+00:16:09,920 --> 00:16:11,040
+Open the telegram.
+
+678
+00:16:11,540 --> 00:16:12,240
+And here it is asking.
+
+679
+00:16:12,240 --> 00:16:13,100
+What is the bot name.
+
+680
+00:16:13,180 --> 00:16:13,780
+Let's say.
+
+681
+00:16:13,780 --> 00:16:14,780
+Hermes agent V1.
+
+682
+00:16:15,260 --> 00:16:15,900
+I will put it as version 1.
+
+683
+00:16:16,260 --> 00:16:17,260
+Let me create this.
+
+684
+00:16:17,960 --> 00:16:19,180
+And here our bot is created.
+
+685
+00:16:19,580 --> 00:16:21,580
+And I can start talking to this bot.
+
+686
+00:16:22,200 --> 00:16:22,800
+So I clicked start.
+
+687
+00:16:23,040 --> 00:16:24,680
+But it will not respond to us right
+
+688
+00:16:24,680 --> 00:16:25,280
+away.
+
+689
+00:16:25,280 --> 00:16:25,880
+Because we have such a setup.
+
+690
+00:16:26,680 --> 00:16:27,760
+So once it is done.
+
+691
+00:16:27,960 --> 00:16:28,560
+Look here.
+
+692
+00:16:28,560 --> 00:16:29,260
+Allow telegram.
+
+693
+00:16:29,840 --> 00:16:30,620
+To use this account.
+
+694
+00:16:31,080 --> 00:16:31,860
+I will say.
+
+695
+00:16:32,200 --> 00:16:32,800
+Yes.
+
+696
+00:16:32,800 --> 00:16:33,400
+Keep it here.
+
+697
+00:16:33,980 --> 00:16:34,580
+And.
+
+698
+00:16:34,580 --> 00:16:35,280
+If anyone else wants to add
+
+699
+00:16:35,280 --> 00:16:35,880
+additional user.
+
+700
+00:16:35,880 --> 00:16:36,800
+I don't know.
+
+701
+00:16:36,800 --> 00:16:37,960
+I don't want any additional user ID.
+
+702
+00:16:38,000 --> 00:16:38,600
+So I will.
+
+703
+00:16:38,720 --> 00:16:39,400
+Leave it as blank.
+
+704
+00:16:39,700 --> 00:16:40,300
+Enter it.
+
+705
+00:16:40,520 --> 00:16:41,580
+And user ID is asking.
+
+706
+00:16:41,620 --> 00:16:42,220
+I will say.
+
+707
+00:16:42,520 --> 00:16:43,120
+Yes.
+
+708
+00:16:43,200 --> 00:16:44,000
+And that's it.
+
+709
+00:16:44,320 --> 00:16:45,600
+So telegram is connected to us.
+
+710
+00:16:46,040 --> 00:16:47,380
+So let me show you the telegram
+
+711
+00:16:47,380 --> 00:16:47,980
+here.
+
+712
+00:16:47,980 --> 00:16:48,580
+I am connected to the telegram web.
+
+713
+00:16:49,120 --> 00:16:49,820
+And you can see.
+
+714
+00:16:50,040 --> 00:16:51,040
+I have given the option to start
+
+715
+00:16:51,040 --> 00:16:51,640
+here.
+
+716
+00:16:51,640 --> 00:16:53,000
+It is still not responding to us.
+
+717
+00:16:53,080 --> 00:16:53,780
+Because we have not completed the
+
+718
+00:16:53,780 --> 00:16:54,540
+setup yet.
+
+719
+00:16:55,260 --> 00:16:56,700
+But let's go back here.
+
+720
+00:16:57,120 --> 00:16:58,020
+To the Hermes agent.
+
+721
+00:16:58,500 --> 00:16:59,100
+And here.
+
+722
+00:16:59,100 --> 00:17:00,420
+You don't need to worry about all of
+
+723
+00:17:00,420 --> 00:17:01,020
+these things.
+
+724
+00:17:01,020 --> 00:17:01,620
+Click on enter.
+
+725
+00:17:01,660 --> 00:17:02,480
+And the browser is asking.
+
+726
+00:17:02,720 --> 00:17:03,400
+What do you want.
+
+727
+00:17:03,500 --> 00:17:04,540
+And put the same thing.
+
+728
+00:17:04,540 --> 00:17:05,200
+Local browser.
+
+729
+00:17:05,560 --> 00:17:06,480
+And after that.
+
+730
+00:17:06,480 --> 00:17:07,080
+I don't want any additional user ID.
+
+731
+00:17:07,080 --> 00:17:07,680
+I don't want any of the
+
+732
+00:17:07,680 --> 00:17:08,280
+subscriptions.
+
+733
+00:17:08,280 --> 00:17:08,880
+Click on skip.
+
+734
+00:17:09,160 --> 00:17:10,160
+And Microsoft says free.
+
+735
+00:17:10,180 --> 00:17:11,740
+I will keep it as it is right now.
+
+736
+00:17:12,040 --> 00:17:13,420
+And I will also skip all of these
+
+737
+00:17:13,420 --> 00:17:14,020
+things.
+
+738
+00:17:14,020 --> 00:17:14,740
+I don't want any of these.
+
+739
+00:17:15,540 --> 00:17:16,380
+And it is asking again.
+
+740
+00:17:16,380 --> 00:17:18,120
+So let's do the same thing again.
+
+741
+00:17:18,500 --> 00:17:19,300
+And let's put the local browser.
+
+742
+00:17:20,060 --> 00:17:20,820
+And I don't need any subscription.
+
+743
+00:17:21,420 --> 00:17:22,260
+I don't need any image model.
+
+744
+00:17:22,600 --> 00:17:23,520
+Microsoft TTS.
+
+745
+00:17:23,980 --> 00:17:25,800
+And let me skip all of these things.
+
+746
+00:17:26,280 --> 00:17:27,900
+And I think that's it guys.
+
+747
+00:17:28,380 --> 00:17:29,300
+Once the setup is done.
+
+748
+00:17:29,560 --> 00:17:31,160
+Now the Hermes agent is currently live.
+
+749
+00:17:31,840 --> 00:17:33,160
+So if I just say.
+
+750
+00:17:33,500 --> 00:17:34,360
+Hello or hi.
+
+751
+00:17:34,760 --> 00:17:36,480
+It should respond back to us.
+
+752
+00:17:37,440 --> 00:17:38,040
+Okay.
+
+753
+00:17:38,440 --> 00:17:39,200
+There is an issue.
+
+754
+00:17:39,480 --> 00:17:40,080
+What does it say.
+
+755
+00:17:40,180 --> 00:17:41,260
+Error code 401.
+
+756
+00:17:41,300 --> 00:17:41,960
+There is an error.
+
+757
+00:17:42,500 --> 00:17:43,100
+But.
+
+758
+00:17:43,100 --> 00:17:43,940
+With our API key.
+
+759
+00:17:44,200 --> 00:17:44,800
+We got it right.
+
+760
+00:17:44,920 --> 00:17:45,820
+Why would we get an error.
+
+761
+00:17:46,480 --> 00:17:47,520
+I don't know why.
+
+762
+00:17:47,820 --> 00:17:48,860
+After a couple of minutes.
+
+763
+00:17:49,120 --> 00:17:49,920
+Of doing a debugging.
+
+764
+00:17:50,300 --> 00:17:50,900
+I got a solution.
+
+765
+00:17:51,400 --> 00:17:52,260
+That solution is.
+
+766
+00:17:52,280 --> 00:17:53,380
+Maybe it could be a bug.
+
+767
+00:17:53,540 --> 00:17:54,220
+You come here.
+
+768
+00:17:54,620 --> 00:17:55,900
+And you click on keys.
+
+769
+00:17:56,420 --> 00:17:57,220
+And after it comes down.
+
+770
+00:17:57,600 --> 00:17:58,820
+Click on anthropic.
+
+771
+00:17:59,080 --> 00:17:59,680
+And then.
+
+772
+00:17:59,680 --> 00:18:00,280
+Look here.
+
+773
+00:18:00,460 --> 00:18:01,540
+When we put the API key.
+
+774
+00:18:01,820 --> 00:18:02,880
+It is taking 200.
+
+775
+00:18:03,100 --> 00:18:04,100
+And it is taking extra information.
+
+776
+00:18:04,220 --> 00:18:04,840
+In our API key.
+
+777
+00:18:04,840 --> 00:18:05,440
+There is no such information.
+
+778
+00:18:05,440 --> 00:18:06,780
+That is why.
+
+779
+00:18:06,780 --> 00:18:08,380
+The API key is not working properly.
+
+780
+00:18:08,500 --> 00:18:09,460
+I will click on replace.
+
+781
+00:18:09,740 --> 00:18:11,500
+And I will paste my exact API key.
+
+782
+00:18:11,540 --> 00:18:12,500
+And I will click on save.
+
+783
+00:18:13,600 --> 00:18:14,360
+We saved the API key.
+
+784
+00:18:15,260 --> 00:18:15,880
+So what do we do.
+
+785
+00:18:16,160 --> 00:18:17,940
+Let me just restart the gateway.
+
+786
+00:18:18,400 --> 00:18:19,000
+So that.
+
+787
+00:18:19,040 --> 00:18:19,860
+The API key is getting a new load.
+
+788
+00:18:20,680 --> 00:18:21,280
+Okay.
+
+789
+00:18:21,280 --> 00:18:22,000
+Session restarted.
+
+790
+00:18:22,140 --> 00:18:22,740
+Guys.
+
+791
+00:18:22,740 --> 00:18:23,340
+Now let's see.
+
+792
+00:18:23,340 --> 00:18:24,420
+If we can talk to this agent.
+
+793
+00:18:26,120 --> 00:18:26,720
+Hello.
+
+794
+00:18:26,720 --> 00:18:27,320
+Look.
+
+795
+00:18:27,320 --> 00:18:27,920
+Hello.
+
+796
+00:18:27,920 --> 00:18:28,640
+How can I help you today.
+
+797
+00:18:28,940 --> 00:18:30,420
+So I can ask a lot of questions.
+
+798
+00:18:30,700 --> 00:18:31,300
+Maybe.
+
+799
+00:18:31,300 --> 00:18:31,900
+Let's say.
+
+800
+00:18:32,320 --> 00:18:33,120
+Can you.
+
+801
+00:18:33,180 --> 00:18:33,780
+Look.
+
+802
+00:18:33,780 --> 00:18:34,560
+At the.
+
+803
+00:18:35,900 --> 00:18:36,980
+YouTube channel.
+
+804
+00:18:38,780 --> 00:18:39,380
+Named.
+
+805
+00:18:39,840 --> 00:18:40,800
+Balaji Chippada.
+
+806
+00:18:41,880 --> 00:18:43,040
+Can you summarize.
+
+807
+00:18:44,920 --> 00:18:45,520
+What.
+
+808
+00:18:45,620 --> 00:18:46,220
+He.
+
+809
+00:18:46,320 --> 00:18:46,920
+Does.
+
+810
+00:18:47,340 --> 00:18:47,940
+So let's see.
+
+811
+00:18:48,920 --> 00:18:50,260
+It should do an.
+
+812
+00:18:50,460 --> 00:18:51,060
+Google search.
+
+813
+00:18:51,060 --> 00:18:51,660
+But let's see.
+
+814
+00:18:57,000 --> 00:18:57,600
+And.
+
+815
+00:18:57,600 --> 00:18:58,620
+Now it got the information.
+
+816
+00:18:59,000 --> 00:18:59,980
+For the first time.
+
+817
+00:19:00,400 --> 00:19:01,440
+It did a lot of setup.
+
+818
+00:19:02,300 --> 00:19:03,040
+To write code.
+
+819
+00:19:03,040 --> 00:19:03,940
+To create an environment.
+
+820
+00:19:04,520 --> 00:19:05,940
+Every single thing it did.
+
+821
+00:19:05,980 --> 00:19:07,260
+Without any intervention.
+
+822
+00:19:07,760 --> 00:19:08,360
+Look.
+
+823
+00:19:08,360 --> 00:19:09,680
+And it gave me the on output.
+
+824
+00:19:09,780 --> 00:19:10,460
+Balaji Chippada.
+
+825
+00:19:10,740 --> 00:19:11,380
+YouTube channel summary.
+
+826
+00:19:11,440 --> 00:19:12,820
+24.5 subscribers.
+
+827
+00:19:12,920 --> 00:19:13,920
+Total 106 videos.
+
+828
+00:19:14,160 --> 00:19:14,760
+What do I do.
+
+829
+00:19:15,220 --> 00:19:16,100
+Content breakdown.
+
+830
+00:19:16,700 --> 00:19:17,560
+And what is the recent content.
+
+831
+00:19:18,080 --> 00:19:19,020
+Agentic road maps.
+
+832
+00:19:19,680 --> 00:19:21,280
+Every single thing it pulled out.
+
+833
+00:19:21,520 --> 00:19:22,120
+From the website.
+
+834
+00:19:22,260 --> 00:19:23,560
+And it got me the information.
+
+835
+00:19:23,800 --> 00:19:24,540
+In a single command.
+
+836
+00:19:24,960 --> 00:19:25,980
+I didn't do anything.
+
+837
+00:19:26,700 --> 00:19:27,340
+That is why.
+
+838
+00:19:27,440 --> 00:19:28,320
+This is so powerful.
+
+839
+00:19:28,800 --> 00:19:29,400
+But.
+
+840
+00:19:29,520 --> 00:19:30,520
+One of the issue is.
+
+841
+00:19:30,640 --> 00:19:32,100
+How can you come here.
+
+842
+00:19:32,100 --> 00:19:34,280
+And that is why.
+
+843
+00:19:34,400 --> 00:19:35,320
+It can support.
+
+844
+00:19:35,700 --> 00:19:36,300
+The telegram.
+
+845
+00:19:36,400 --> 00:19:37,500
+Multiple things.
+
+846
+00:19:37,840 --> 00:19:38,440
+So let's see.
+
+847
+00:19:38,440 --> 00:19:39,040
+Let's see.
+
+848
+00:19:39,040 --> 00:19:39,800
+Let's talk from here.
+
+849
+00:19:39,800 --> 00:19:40,640
+Let's say hello.
+
+850
+00:19:41,900 --> 00:19:42,500
+Let's see.
+
+851
+00:19:42,500 --> 00:19:43,940
+Let's see if it replies to this
+
+852
+00:19:43,940 --> 00:19:44,540
+agent.
+
+853
+00:19:45,640 --> 00:19:46,240
+Look.
+
+854
+00:19:46,240 --> 00:19:46,840
+Hi Balaji.
+
+855
+00:19:46,840 --> 00:19:47,640
+How can I help you today.
+
+856
+00:19:48,260 --> 00:19:49,480
+Actually we didn't say Balaji to it.
+
+857
+00:19:49,680 --> 00:19:50,360
+We didn't do anything.
+
+858
+00:19:50,360 --> 00:19:51,320
+But why did it say Balaji.
+
+859
+00:19:51,960 --> 00:19:52,880
+Do you know the answer.
+
+860
+00:19:53,540 --> 00:19:54,140
+Because.
+
+861
+00:19:54,200 --> 00:19:55,000
+It already pulled it from YouTube.
+
+862
+00:19:55,880 --> 00:19:57,920
+So it remembers or it knows that I
+
+863
+00:19:57,920 --> 00:19:58,520
+am Balaji.
+
+864
+00:19:58,980 --> 00:20:00,340
+And that is why it is saying.
+
+865
+00:20:00,580 --> 00:20:01,180
+Hi Balaji.
+
+866
+00:20:01,420 --> 00:20:03,180
+So it learns as you progress.
+
+867
+00:20:03,240 --> 00:20:04,560
+And as you use it actually.
+
+868
+00:20:04,860 --> 00:20:06,240
+That is why it is so powerful.
+
+869
+00:20:06,760 --> 00:20:07,360
+So from here.
+
+870
+00:20:07,500 --> 00:20:08,100
+Now you.
+
+871
+00:20:08,100 --> 00:20:10,020
+You can use the agent from the
+
+872
+00:20:10,020 --> 00:20:10,960
+telegram itself.
+
+873
+00:20:12,320 --> 00:20:14,380
+So let me zoom out a little bit.
+
+874
+00:20:14,660 --> 00:20:16,420
+But it's just like a chart.
+
+875
+00:20:16,980 --> 00:20:19,060
+So it can do a lot of things for us
+
+876
+00:20:19,060 --> 00:20:20,100
+using anthropic model.
+
+877
+00:20:20,560 --> 00:20:22,560
+But isn't it interesting if it can
+
+878
+00:20:22,560 --> 00:20:24,160
+pull the details from my calendar.
+
+879
+00:20:26,240 --> 00:20:27,780
+And that is what we are going to do
+
+880
+00:20:27,780 --> 00:20:28,380
+the next step.
+
+881
+00:20:28,840 --> 00:20:30,460
+Connecting our Google services
+
+882
+00:20:30,460 --> 00:20:32,300
+Google Gmail and calendar and
+
+883
+00:20:32,300 --> 00:20:33,580
+sheets to this agent.
+
+884
+00:20:34,300 --> 00:20:36,900
+So this agent can do tasks for us
+
+885
+00:20:36,900 --> 00:20:37,560
+autonomously.
+
+886
+00:20:37,560 --> 00:20:38,480
+Now if we want to connect our Google
+
+887
+00:20:38,480 --> 00:20:40,480
+services to Hermes agent.
+
+888
+00:20:40,820 --> 00:20:41,960
+You need permission from Google
+
+889
+00:20:41,960 --> 00:20:42,560
+right.
+
+890
+00:20:42,760 --> 00:20:43,400
+So how does that work.
+
+891
+00:20:43,680 --> 00:20:44,740
+By authentication.
+
+892
+00:20:45,900 --> 00:20:47,300
+So what you need to do for that is
+
+893
+00:20:47,300 --> 00:20:48,440
+you need to come to this website
+
+894
+00:20:48,440 --> 00:20:49,520
+console dot cloud
+
+895
+00:20:49,520 --> 00:20:51,520
+dot google dot com and say log in
+
+896
+00:20:51,520 --> 00:20:52,800
+with the account that you want to
+
+897
+00:20:52,800 --> 00:20:53,520
+connect to Hermes
+
+898
+00:20:53,520 --> 00:20:54,120
+agent.
+
+899
+00:20:54,620 --> 00:20:55,520
+After that you can search for
+
+900
+00:20:55,520 --> 00:20:56,920
+projects here.
+
+901
+00:20:57,920 --> 00:20:59,020
+And see there is a creative project
+
+902
+00:20:59,020 --> 00:20:59,620
+right.
+
+903
+00:20:59,620 --> 00:21:00,520
+Click on creative project.
+
+904
+00:21:00,920 --> 00:21:01,800
+And here I am going to give the name
+
+905
+00:21:01,800 --> 00:21:02,400
+of the project.
+
+906
+00:21:02,640 --> 00:21:04,020
+Hermes agent project one.
+
+907
+00:21:04,340 --> 00:21:05,260
+And click on create.
+
+908
+00:21:06,060 --> 00:21:07,340
+And here the project is created.
+
+909
+00:21:07,340 --> 00:21:08,420
+Then you can select this project.
+
+910
+00:21:08,880 --> 00:21:09,780
+We have come to the home page.
+
+911
+00:21:09,900 --> 00:21:11,540
+In the home page we are selecting
+
+912
+00:21:11,540 --> 00:21:12,980
+with Hermes agent project one.
+
+913
+00:21:13,760 --> 00:21:15,200
+Click on APIs and services.
+
+914
+00:21:15,700 --> 00:21:17,540
+And inside this you need to enable
+
+915
+00:21:17,540 --> 00:21:18,420
+the service.
+
+916
+00:21:18,860 --> 00:21:19,560
+Enable APIs.
+
+917
+00:21:20,280 --> 00:21:22,840
+And I want this agent to connect to
+
+918
+00:21:22,840 --> 00:21:23,440
+Gmail.
+
+919
+00:21:24,040 --> 00:21:25,200
+And Gmail API.
+
+920
+00:21:25,520 --> 00:21:26,740
+And click on this one.
+
+921
+00:21:27,300 --> 00:21:29,020
+And enable it.
+
+922
+00:21:29,840 --> 00:21:31,700
+And then same thing what you will
+
+923
+00:21:31,700 --> 00:21:32,300
+do.
+
+924
+00:21:32,300 --> 00:21:33,720
+You will also give permission to
+
+925
+00:21:33,720 --> 00:21:34,320
+calendar.
+
+926
+00:21:34,320 --> 00:21:37,400
+Google calendar API.
+
+927
+00:21:37,460 --> 00:21:39,920
+And then click on enable.
+
+928
+00:21:40,480 --> 00:21:42,000
+Next what we will do is we will also
+
+929
+00:21:42,000 --> 00:21:42,840
+enable drive.
+
+930
+00:21:43,260 --> 00:21:44,700
+So that we have some documents on
+
+931
+00:21:44,700 --> 00:21:45,300
+the drive.
+
+932
+00:21:45,840 --> 00:21:47,480
+And we will say drive API.
+
+933
+00:21:50,040 --> 00:21:51,160
+And click on this one.
+
+934
+00:21:51,420 --> 00:21:52,140
+And click on enable.
+
+935
+00:21:52,380 --> 00:21:53,900
+If you want this you can give
+
+936
+00:21:53,900 --> 00:21:55,140
+permission to it.
+
+937
+00:21:55,140 --> 00:21:55,740
+Google sheets.
+
+938
+00:21:55,980 --> 00:21:56,580
+Google forms.
+
+939
+00:21:56,840 --> 00:21:57,440
+People.
+
+940
+00:21:57,440 --> 00:21:58,040
+A lot of stuff.
+
+941
+00:21:58,280 --> 00:22:00,320
+But for now let us click on email.
+
+942
+00:22:00,900 --> 00:22:01,640
+And then calendar.
+
+943
+00:22:01,840 --> 00:22:02,500
+And then drive.
+
+944
+00:22:03,000 --> 00:22:04,340
+So that is the second step.
+
+945
+00:22:04,340 --> 00:22:06,800
+And after that you need to go to the
+
+946
+00:22:06,800 --> 00:22:07,780
+authentication overview.
+
+947
+00:22:08,280 --> 00:22:09,840
+Authentication consent screen is
+
+948
+00:22:09,840 --> 00:22:10,440
+there.
+
+949
+00:22:10,440 --> 00:22:11,280
+Click on this one.
+
+950
+00:22:11,740 --> 00:22:12,860
+And click on get started.
+
+951
+00:22:13,680 --> 00:22:14,940
+And here app name is there.
+
+952
+00:22:14,940 --> 00:22:16,380
+You can provide any kind of app
+
+953
+00:22:16,380 --> 00:22:16,980
+name.
+
+954
+00:22:16,980 --> 00:22:17,580
+Let us say external.
+
+955
+00:22:18,480 --> 00:22:21,000
+And here you provide your email that
+
+956
+00:22:21,000 --> 00:22:21,820
+you are using with.
+
+957
+00:22:21,820 --> 00:22:22,640
+And click on next.
+
+958
+00:22:23,180 --> 00:22:24,440
+And put external in audience.
+
+959
+00:22:24,880 --> 00:22:25,760
+And click on next.
+
+960
+00:22:26,260 --> 00:22:26,860
+And give the same email in contact
+
+961
+00:22:26,860 --> 00:22:27,460
+information.
+
+962
+00:22:28,540 --> 00:22:29,720
+I will provide my email.
+
+963
+00:22:30,780 --> 00:22:31,800
+And click on next.
+
+964
+00:22:31,800 --> 00:22:33,860
+And I will agree to this usage
+
+965
+00:22:33,860 --> 00:22:34,460
+details.
+
+966
+00:22:34,460 --> 00:22:35,100
+And click on continue.
+
+967
+00:22:35,320 --> 00:22:35,960
+And click on create.
+
+968
+00:22:36,480 --> 00:22:38,100
+And after that click on audience.
+
+969
+00:22:38,620 --> 00:22:40,120
+And here click on add users.
+
+970
+00:22:40,420 --> 00:22:41,020
+Here give your email.
+
+971
+00:22:41,260 --> 00:22:44,920
+Balaji Chippada dot 20 at the right
+
+972
+00:22:44,920 --> 00:22:46,020
+gmail dot com.
+
+973
+00:22:46,060 --> 00:22:46,840
+Click on save.
+
+974
+00:22:50,610 --> 00:22:51,210
+And yep.
+
+975
+00:22:51,290 --> 00:22:52,050
+We have added it to the test user.
+
+976
+00:22:52,490 --> 00:22:53,910
+Now we need to create the
+
+977
+00:22:53,910 --> 00:22:54,510
+authentication.
+
+978
+00:22:54,950 --> 00:22:55,930
+Click on overview.
+
+979
+00:22:56,310 --> 00:22:57,990
+And click on create authentication
+
+980
+00:22:57,990 --> 00:22:58,590
+client.
+
+981
+00:22:58,670 --> 00:22:59,510
+Click on this.
+
+982
+00:22:59,510 --> 00:23:00,970
+And let us say authentication type
+
+983
+00:23:00,970 --> 00:23:01,950
+web application.
+
+984
+00:23:03,090 --> 00:23:05,350
+And then we will create this one.
+
+985
+00:23:05,570 --> 00:23:07,130
+And here see our OAuth client is
+
+986
+00:23:07,130 --> 00:23:07,730
+created.
+
+987
+00:23:08,110 --> 00:23:09,950
+After creating you need to copy all
+
+988
+00:23:09,950 --> 00:23:10,550
+of these things.
+
+989
+00:23:10,550 --> 00:23:11,710
+If not you can download the json
+
+990
+00:23:11,710 --> 00:23:12,310
+directly.
+
+991
+00:23:12,510 --> 00:23:13,850
+And I will download my json.
+
+992
+00:23:14,310 --> 00:23:15,150
+And this is very important.
+
+993
+00:23:15,410 --> 00:23:16,890
+You need to save this very securely.
+
+994
+00:23:17,190 --> 00:23:19,010
+Now let us go back to telegram.
+
+995
+00:23:19,530 --> 00:23:20,530
+Here we will say.
+
+996
+00:23:20,750 --> 00:23:24,790
+I want to connect to my google
+
+997
+00:23:24,790 --> 00:23:25,890
+services.
+
+998
+00:23:25,890 --> 00:23:30,070
+Using the json provided here.
+
+999
+00:23:30,390 --> 00:23:31,850
+And I will provide the json file.
+
+1000
+00:23:32,310 --> 00:23:33,810
+We have downloaded the json file.
+
+1001
+00:23:33,850 --> 00:23:35,190
+And I will pass it to this Hermes
+
+1002
+00:23:35,190 --> 00:23:35,790
+agent.
+
+1003
+00:23:36,170 --> 00:23:37,690
+Now Hermes agent will set it up for
+
+1004
+00:23:37,690 --> 00:23:38,290
+us.
+
+1005
+00:23:38,290 --> 00:23:38,930
+We don't have to do anything.
+
+1006
+00:23:39,030 --> 00:23:40,610
+Automatically it will do it for us.
+
+1007
+00:23:40,890 --> 00:23:41,630
+Already it is in the skill.
+
+1008
+00:23:41,790 --> 00:23:43,170
+Let me look at the file and check if
+
+1009
+00:23:43,170 --> 00:23:44,130
+it is in the element skill or not.
+
+1010
+00:23:44,790 --> 00:23:46,510
+And it is itself writing the code.
+
+1011
+00:23:47,210 --> 00:23:47,890
+It is doing every single thing.
+
+1012
+00:23:49,850 --> 00:23:51,230
+Now what does it say?
+
+1013
+00:23:51,330 --> 00:23:52,270
+Not yet authenticated.
+
+1014
+00:23:52,330 --> 00:23:53,530
+Before we proceed just two quick
+
+1015
+00:23:53,530 --> 00:23:54,130
+questions.
+
+1016
+00:23:54,130 --> 00:23:55,530
+What google services do you need?
+
+1017
+00:23:55,890 --> 00:23:57,070
+Email, email plus calendar,
+
+1018
+00:23:57,130 --> 00:23:58,130
+drive, everything, full workspace,
+
+1019
+00:23:58,390 --> 00:24:00,450
+access, advanced production.
+
+1020
+00:24:01,350 --> 00:24:02,690
+It is confidence web application.
+
+1021
+00:24:02,770 --> 00:24:04,070
+For this to work desktop app.
+
+1022
+00:24:04,570 --> 00:24:07,410
+It is not a web application but a
+
+1023
+00:24:07,410 --> 00:24:08,010
+desktop app.
+
+1024
+00:24:08,750 --> 00:24:09,490
+So what we will do.
+
+1025
+00:24:09,850 --> 00:24:10,790
+We will go back to the
+
+1026
+00:24:10,790 --> 00:24:11,390
+authentication client.
+
+1027
+00:24:11,450 --> 00:24:12,210
+Click on ok.
+
+1028
+00:24:12,250 --> 00:24:13,210
+Click on clients.
+
+1029
+00:24:13,650 --> 00:24:15,530
+Let me delete the previous one.
+
+1030
+00:24:15,770 --> 00:24:16,510
+We don't need it basically.
+
+1031
+00:24:16,790 --> 00:24:17,870
+And click on create client.
+
+1032
+00:24:18,610 --> 00:24:20,990
+And here we will say desktop app.
+
+1033
+00:24:21,290 --> 00:24:22,110
+And click on create.
+
+1034
+00:24:22,770 --> 00:24:23,990
+And click on download json.
+
+1035
+00:24:24,590 --> 00:24:25,190
+Let us save this json.
+
+1036
+00:24:25,190 --> 00:24:27,210
+So I got the new json.
+
+1037
+00:24:27,830 --> 00:24:29,650
+So let me go back here and in
+
+1038
+00:24:29,650 --> 00:24:31,570
+telegram let me put that.
+
+1039
+00:24:31,970 --> 00:24:34,710
+And I will say here is the new
+
+1040
+00:24:34,710 --> 00:24:38,110
+authentication json for the
+
+1041
+00:24:38,110 --> 00:24:42,150
+workspace using desktop
+
+1042
+00:24:42,150 --> 00:24:42,830
+app.
+
+1043
+00:24:44,970 --> 00:24:46,450
+Desktop app.
+
+1044
+00:24:46,850 --> 00:24:49,230
+I did this because if you do any
+
+1045
+00:24:49,230 --> 00:24:51,390
+mistake this agent will teach you
+
+1046
+00:24:51,390 --> 00:24:52,230
+what to do correctly.
+
+1047
+00:24:52,230 --> 00:24:54,550
+And that is why you don't even need
+
+1048
+00:24:54,550 --> 00:24:55,150
+to know coding.
+
+1049
+00:24:55,930 --> 00:24:57,490
+This agent will do all of this for
+
+1050
+00:24:57,490 --> 00:24:59,390
+us and it will guide us what to do
+
+1051
+00:24:59,390 --> 00:24:59,990
+and what not
+
+1052
+00:24:59,990 --> 00:25:00,790
+to do as well.
+
+1053
+00:25:01,090 --> 00:25:02,010
+So client save is done.
+
+1054
+00:25:02,010 --> 00:25:03,190
+Just let me know which services you
+
+1055
+00:25:03,190 --> 00:25:04,070
+need and I will generate the
+
+1056
+00:25:04,070 --> 00:25:04,670
+authorization url
+
+1057
+00:25:04,670 --> 00:25:05,310
+for you to complete.
+
+1058
+00:25:05,970 --> 00:25:09,370
+I want to connect to google drive
+
+1059
+00:25:09,370 --> 00:25:11,690
+and calendar and email.
+
+1060
+00:25:16,750 --> 00:25:18,070
+Let me generate the authorization
+
+1061
+00:25:18,070 --> 00:25:18,670
+shell.
+
+1062
+00:25:20,130 --> 00:25:20,890
+Let's see.
+
+1063
+00:25:21,470 --> 00:25:22,070
+It will write the code.
+
+1064
+00:25:22,090 --> 00:25:23,970
+It will execute everything inside
+
+1065
+00:25:23,970 --> 00:25:24,790
+the terminal itself.
+
+1066
+00:25:24,790 --> 00:25:26,570
+Need to install the dependencies.
+
+1067
+00:25:26,790 --> 00:25:28,190
+Everything it will do it for us
+
+1068
+00:25:28,190 --> 00:25:28,790
+guys.
+
+1069
+00:25:28,790 --> 00:25:29,950
+And once we connect all of these
+
+1070
+00:25:29,950 --> 00:25:31,570
+things and it will be very easy to
+
+1071
+00:25:31,570 --> 00:25:32,170
+use.
+
+1072
+00:25:32,190 --> 00:25:33,210
+This is all first hand setup.
+
+1073
+00:25:33,990 --> 00:25:35,230
+Dependence is already installed.
+
+1074
+00:25:35,270 --> 00:25:36,370
+Let me generate the authentication
+
+1075
+00:25:36,370 --> 00:25:37,270
+url.
+
+1076
+00:25:37,670 --> 00:25:38,270
+Look.
+
+1077
+00:25:38,270 --> 00:25:38,870
+Now the url will come.
+
+1078
+00:25:38,870 --> 00:25:40,030
+Click on this url and we have to
+
+1079
+00:25:40,030 --> 00:25:40,630
+authenticate.
+
+1080
+00:25:41,070 --> 00:25:41,670
+Very simple.
+
+1081
+00:25:43,860 --> 00:25:45,740
+So here it says if you get an access
+
+1082
+00:25:45,740 --> 00:25:47,260
+denied error go to all of these
+
+1083
+00:25:47,260 --> 00:25:47,860
+things.
+
+1084
+00:25:47,860 --> 00:25:49,220
+And now let's look at authorize
+
+1085
+00:25:49,220 --> 00:25:49,980
+Hermes agent.
+
+1086
+00:25:50,660 --> 00:25:51,360
+Click on open.
+
+1087
+00:25:51,360 --> 00:25:55,360
+And I will provide this email and I
+
+1088
+00:25:55,360 --> 00:25:56,420
+will click on continue.
+
+1089
+00:25:56,940 --> 00:25:58,740
+And I will select all of the things
+
+1090
+00:25:58,740 --> 00:26:00,340
+that I want to give access to and
+
+1091
+00:26:00,340 --> 00:26:01,020
+click on continue.
+
+1092
+00:26:01,700 --> 00:26:02,400
+And here we got an error.
+
+1093
+00:26:03,060 --> 00:26:04,240
+This site cannot be reached.
+
+1094
+00:26:04,720 --> 00:26:05,900
+What will I do now?
+
+1095
+00:26:05,980 --> 00:26:08,480
+I will just copy this one and then I
+
+1096
+00:26:08,480 --> 00:26:09,500
+will put it here.
+
+1097
+00:26:10,140 --> 00:26:10,740
+Look.
+
+1098
+00:26:10,760 --> 00:26:12,540
+Copy the entire url from the
+
+1099
+00:26:12,540 --> 00:26:13,320
+browser's address bar.
+
+1100
+00:26:13,320 --> 00:26:15,000
+It will look like HTTP localhost.
+
+1101
+00:26:15,560 --> 00:26:16,440
+I know this will give an error.
+
+1102
+00:26:16,960 --> 00:26:18,080
+But it is asking me to copy paste
+
+1103
+00:26:18,080 --> 00:26:18,680
+the error.
+
+1104
+00:26:18,740 --> 00:26:20,060
+And I will just put it here.
+
+1105
+00:26:20,060 --> 00:26:24,170
+And that's exactly what I
+
+1106
+00:26:24,170 --> 00:26:24,770
+expected.
+
+1107
+00:26:24,770 --> 00:26:25,870
+Let me change the code for the token
+
+1108
+00:26:25,870 --> 00:26:26,470
+now.
+
+1109
+00:26:26,590 --> 00:26:27,190
+Look.
+
+1110
+00:26:27,190 --> 00:26:27,790
+Let's see.
+
+1111
+00:26:28,650 --> 00:26:29,250
+Let me verify.
+
+1112
+00:26:29,530 --> 00:26:30,130
+Everything is working.
+
+1113
+00:26:31,470 --> 00:26:32,230
+You are all set up.
+
+1114
+00:26:32,350 --> 00:26:33,350
+Google workspace is now connected
+
+1115
+00:26:33,350 --> 00:26:34,950
+with access to Gmail, Google
+
+1116
+00:26:34,950 --> 00:26:35,970
+calendar, Google drive,
+
+1117
+00:26:36,130 --> 00:26:37,690
+sheets, contacts, every single
+
+1118
+00:26:37,690 --> 00:26:38,290
+thing.
+
+1119
+00:26:38,590 --> 00:26:39,690
+Now the interesting thing.
+
+1120
+00:26:40,110 --> 00:26:41,270
+What will I do now?
+
+1121
+00:26:41,270 --> 00:26:42,550
+I will show you my calendar for
+
+1122
+00:26:42,550 --> 00:26:43,150
+Sunday.
+
+1123
+00:26:44,030 --> 00:26:45,650
+This is what my calendar would look
+
+1124
+00:26:45,650 --> 00:26:46,250
+like.
+
+1125
+00:26:46,250 --> 00:26:47,190
+6.30 to 8.30.
+
+1126
+00:26:47,250 --> 00:26:48,770
+There are a lot of things that are
+
+1127
+00:26:48,770 --> 00:26:50,250
+blocked for me to plan my day.
+
+1128
+00:26:50,250 --> 00:26:53,730
+Now, I will give a command to the
+
+1129
+00:26:53,730 --> 00:26:54,790
+Hermes agent.
+
+1130
+00:26:54,870 --> 00:26:58,250
+I will say, can you look
+
+1131
+00:26:58,250 --> 00:27:00,850
+at my calendar
+
+1132
+00:27:00,850 --> 00:27:04,910
+for tomorrow and plan
+
+1133
+00:27:04,910 --> 00:27:06,310
+my day accordingly?
+
+1134
+00:27:08,130 --> 00:27:09,670
+So, I just didn't do anything.
+
+1135
+00:27:09,970 --> 00:27:10,770
+I didn't give the date.
+
+1136
+00:27:10,770 --> 00:27:11,370
+I didn't give anything.
+
+1137
+00:27:11,830 --> 00:27:14,270
+So, the agent has to think about it.
+
+1138
+00:27:14,270 --> 00:27:15,850
+It was date 20, today's date 20.
+
+1139
+00:27:15,970 --> 00:27:17,270
+And it should pull the details from
+
+1140
+00:27:17,270 --> 00:27:17,870
+the calendar.
+
+1141
+00:27:18,110 --> 00:27:19,550
+And it should give me every single
+
+1142
+00:27:19,550 --> 00:27:20,150
+thing.
+
+1143
+00:27:20,150 --> 00:27:21,310
+And look quickly.
+
+1144
+00:27:21,790 --> 00:27:22,570
+Here is your agent.
+
+1145
+00:27:22,750 --> 00:27:24,270
+It's a packed content creation day.
+
+1146
+00:27:24,470 --> 00:27:26,190
+6.30 to 8.30 chest day.
+
+1147
+00:27:26,470 --> 00:27:28,150
+And then 8.30 to 10.
+
+1148
+00:27:28,390 --> 00:27:29,130
+It's a free block.
+
+1149
+00:27:29,370 --> 00:27:30,810
+10 to 12.30 I have to do my video.
+
+1150
+00:27:31,070 --> 00:27:32,870
+12.30 to 13.30 is free again.
+
+1151
+00:27:33,370 --> 00:27:36,050
+And 13.30 to 4.30 I need to do a
+
+1152
+00:27:36,050 --> 00:27:36,650
+Sunday live.
+
+1153
+00:27:36,650 --> 00:27:38,250
+And 14.30 to 6.30 it needs to do a
+
+1154
+00:27:38,250 --> 00:27:39,210
+Agentic Roadmap video.
+
+1155
+00:27:39,530 --> 00:27:40,390
+6.30 to 8.
+
+1156
+00:27:40,450 --> 00:27:41,050
+There is a free block.
+
+1157
+00:27:41,310 --> 00:27:41,910
+8 to 12.
+
+1158
+00:27:41,950 --> 00:27:42,630
+I have to edit again.
+
+1159
+00:27:43,310 --> 00:27:44,190
+Key tips for tomorrow.
+
+1160
+00:27:44,310 --> 00:27:45,050
+It's a long day.
+
+1161
+00:27:45,150 --> 00:27:46,710
+Stay hydrated and use the morning
+
+1162
+00:27:46,710 --> 00:27:47,310
+free block.
+
+1163
+00:27:47,890 --> 00:27:48,830
+And the back -to -back live.
+
+1164
+00:27:48,830 --> 00:27:50,170
+If there is a command,
+
+1165
+00:27:50,370 --> 00:27:51,250
+it can work for me.
+
+1166
+00:27:51,770 --> 00:27:53,810
+And maybe let's say we will also
+
+1167
+00:27:53,810 --> 00:27:54,630
+schedule this task.
+
+1168
+00:27:55,310 --> 00:27:58,550
+So can you schedule this task
+
+1169
+00:27:58,550 --> 00:28:02,150
+like checking my
+
+1170
+00:28:02,150 --> 00:28:04,450
+email every day
+
+1171
+00:28:05,860 --> 00:28:07,080
+in the morning.
+
+1172
+00:28:07,420 --> 00:28:10,680
+And can you send me a summary
+
+1173
+00:28:10,680 --> 00:28:14,600
+like this at 8 am
+
+1174
+00:28:14,600 --> 00:28:15,280
+daily.
+
+1175
+00:28:15,780 --> 00:28:17,260
+So let's say I need this summary
+
+1176
+00:28:17,260 --> 00:28:18,060
+every day.
+
+1177
+00:28:18,060 --> 00:28:20,160
+What should I do now?
+
+1178
+00:28:20,160 --> 00:28:21,560
+It needs to schedule a cron job.
+
+1179
+00:28:22,300 --> 00:28:23,540
+So by default it will do this.
+
+1180
+00:28:23,680 --> 00:28:25,520
+I will set up two daily cron jobs.
+
+1181
+00:28:25,620 --> 00:28:26,680
+Morning email summary.
+
+1182
+00:28:26,960 --> 00:28:28,280
+Checks for your email and sends you
+
+1183
+00:28:28,280 --> 00:28:28,880
+the digest.
+
+1184
+00:28:28,940 --> 00:28:30,100
+And daily calendar plan.
+
+1185
+00:28:30,360 --> 00:28:31,620
+Looks at today's events and plan
+
+1186
+00:28:31,620 --> 00:28:32,220
+your day.
+
+1187
+00:28:33,580 --> 00:28:35,040
+And this is like a proper AI
+
+1188
+00:28:35,040 --> 00:28:36,140
+assistant that is working for me.
+
+1189
+00:28:36,540 --> 00:28:38,360
+So it created two cron jobs and two
+
+1190
+00:28:38,360 --> 00:28:39,260
+created automatically.
+
+1191
+00:28:39,380 --> 00:28:40,480
+I don't need to do anything.
+
+1192
+00:28:41,020 --> 00:28:43,300
+So every day at 8 am it will give me
+
+1193
+00:28:43,300 --> 00:28:44,440
+the message on the telegram.
+
+1194
+00:28:44,560 --> 00:28:46,300
+I don't need to open the laptop as
+
+1195
+00:28:46,300 --> 00:28:46,900
+well.
+
+1196
+00:28:46,900 --> 00:28:49,100
+That is the advantage of running an
+
+1197
+00:28:49,100 --> 00:28:50,840
+agent inside a VPS.
+
+1198
+00:28:51,340 --> 00:28:53,140
+And now let's do one more complex
+
+1199
+00:28:53,140 --> 00:28:53,740
+task.
+
+1200
+00:28:53,860 --> 00:28:54,780
+This is my drive.
+
+1201
+00:28:55,200 --> 00:28:56,940
+In this drive there is this file
+
+1202
+00:28:56,940 --> 00:28:58,840
+which is called masterclass21.
+
+1203
+00:28:59,500 --> 00:29:00,720
+What should this agent do?
+
+1204
+00:29:01,080 --> 00:29:03,380
+It needs to send an email attaching
+
+1205
+00:29:03,380 --> 00:29:03,980
+that file.
+
+1206
+00:29:04,420 --> 00:29:05,880
+Check the google drive folder named
+
+1207
+00:29:05,880 --> 00:29:06,620
+SQL masterclass.
+
+1208
+00:29:06,640 --> 00:29:08,160
+Inside that folder you will find a
+
+1209
+00:29:08,160 --> 00:29:09,120
+name like this.
+
+1210
+00:29:09,400 --> 00:29:12,360
+And send it via email to Gautham
+
+1211
+00:29:12,360 --> 00:29:13,460
+SPH1234.
+
+1212
+00:29:13,460 --> 00:29:16,020
+You don't even need to put all of
+
+1213
+00:29:16,020 --> 00:29:16,780
+these things.
+
+1214
+00:29:17,320 --> 00:29:17,920
+Let's remove it.
+
+1215
+00:29:18,120 --> 00:29:20,180
+I will remove all of these things.
+
+1216
+00:29:20,180 --> 00:29:21,820
+By default it should do all of that.
+
+1217
+00:29:22,440 --> 00:29:24,560
+So let's see if it does this.
+
+1218
+00:29:25,740 --> 00:29:27,120
+And let's click on enter.
+
+1219
+00:29:29,680 --> 00:29:31,260
+Let me search for the folder and the
+
+1220
+00:29:31,260 --> 00:29:31,860
+file on your drive.
+
+1221
+00:29:32,100 --> 00:29:33,020
+Now the drive is connected
+
+1222
+00:29:33,020 --> 00:29:33,620
+automatically.
+
+1223
+00:29:33,640 --> 00:29:34,300
+Found the folder.
+
+1224
+00:29:34,340 --> 00:29:35,320
+Let me search for the files.
+
+1225
+00:29:36,060 --> 00:29:37,340
+And this file will find out
+
+1226
+00:29:37,340 --> 00:29:38,960
+masterclass2 and how to machines
+
+1227
+00:29:38,960 --> 00:29:39,960
+learn and make decisions.
+
+1228
+00:29:40,580 --> 00:29:43,200
+And it will download and send it via
+
+1229
+00:29:43,200 --> 00:29:44,560
+email itself directly.
+
+1230
+00:29:44,560 --> 00:29:46,140
+I don't need to open the drive or
+
+1231
+00:29:46,140 --> 00:29:46,740
+the mail.
+
+1232
+00:29:47,200 --> 00:29:48,260
+I don't need to do anything.
+
+1233
+00:29:48,540 --> 00:29:49,940
+So it is asking to send an
+
+1234
+00:29:49,940 --> 00:29:50,540
+attachment.
+
+1235
+00:29:51,200 --> 00:29:51,860
+This is the subject.
+
+1236
+00:29:52,420 --> 00:29:53,980
+Shall I go ahead and tell it.
+
+1237
+00:29:54,020 --> 00:29:55,780
+Maybe I want to give some context to
+
+1238
+00:29:55,780 --> 00:29:56,380
+the body.
+
+1239
+00:29:57,040 --> 00:29:57,640
+I will say.
+
+1240
+00:29:58,700 --> 00:30:00,260
+I will talk to the agent right now.
+
+1241
+00:30:00,640 --> 00:30:01,980
+Maybe can you add the body like
+
+1242
+00:30:02,340 --> 00:30:04,360
+Hey Gautham this is the masterclass
+
+1243
+00:30:04,360 --> 00:30:06,300
+session that I have planned for the
+
+1244
+00:30:06,300 --> 00:30:06,900
+upcoming session.
+
+1245
+00:30:07,000 --> 00:30:08,500
+Can you please review it and give me
+
+1246
+00:30:08,500 --> 00:30:09,100
+the feedback.
+
+1247
+00:30:10,680 --> 00:30:11,820
+And let's click on enter.
+
+1248
+00:30:14,020 --> 00:30:14,620
+See.
+
+1249
+00:30:14,720 --> 00:30:16,280
+Self -improvement review user
+
+1250
+00:30:16,280 --> 00:30:16,880
+profile updated.
+
+1251
+00:30:17,460 --> 00:30:19,480
+It is learning from the discussions
+
+1252
+00:30:19,480 --> 00:30:20,800
+that we are doing on a day to day
+
+1253
+00:30:20,800 --> 00:30:21,400
+tasks.
+
+1254
+00:30:24,650 --> 00:30:25,970
+Maybe can you add the body like
+
+1255
+00:30:25,970 --> 00:30:27,510
+Hey Gautham this is the masterclass
+
+1256
+00:30:27,510 --> 00:30:28,870
+session that I have planned for the
+
+1257
+00:30:28,870 --> 00:30:29,470
+upcoming sessions.
+
+1258
+00:30:29,470 --> 00:30:31,230
+Can you please review it and give me
+
+1259
+00:30:31,230 --> 00:30:31,830
+the feedback.
+
+1260
+00:30:33,940 --> 00:30:35,100
+Let me check if it is the other way.
+
+1261
+00:30:35,260 --> 00:30:35,860
+But let's see.
+
+1262
+00:30:36,540 --> 00:30:37,660
+No attachment support is there.
+
+1263
+00:30:37,660 --> 00:30:38,260
+It is called CLI.
+
+1264
+00:30:38,340 --> 00:30:39,760
+Let me send it via quick python
+
+1265
+00:30:39,760 --> 00:30:40,360
+script.
+
+1266
+00:30:40,380 --> 00:30:42,440
+It took an issue and that issue will
+
+1267
+00:30:42,440 --> 00:30:43,220
+also be solved automatically.
+
+1268
+00:30:44,800 --> 00:30:47,160
+Email sent successfully.
+
+1269
+00:30:47,240 --> 00:30:48,280
+Gautham and attachment.
+
+1270
+00:30:48,480 --> 00:30:49,200
+Subjects are all fine.
+
+1271
+00:30:49,860 --> 00:30:51,720
+So let's go into our email and check
+
+1272
+00:30:51,720 --> 00:30:53,080
+if the email has been sent.
+
+1273
+00:30:53,540 --> 00:30:54,460
+And click on refresh.
+
+1274
+00:30:55,860 --> 00:30:56,680
+And see.
+
+1275
+00:30:56,800 --> 00:30:58,380
+Gautham SBH 1234.
+
+1276
+00:30:58,760 --> 00:31:00,000
+SQL masterclass how machines learn
+
+1277
+00:31:00,000 --> 00:31:01,260
+and make decisions with this
+
+1278
+00:31:01,260 --> 00:31:01,860
+subject.
+
+1279
+00:31:01,960 --> 00:31:03,700
+And with the same PDF.
+
+1280
+00:31:04,260 --> 00:31:05,440
+Now it has opened the drive.
+
+1281
+00:31:05,760 --> 00:31:06,600
+Downloaded it.
+
+1282
+00:31:06,600 --> 00:31:07,200
+Error came.
+
+1283
+00:31:07,720 --> 00:31:08,560
+Debugged the error.
+
+1284
+00:31:08,680 --> 00:31:10,400
+Again everything was sent by email.
+
+1285
+00:31:11,280 --> 00:31:12,500
+Everything autonomously.
+
+1286
+00:31:12,500 --> 00:31:14,960
+And this is the power of running an
+
+1287
+00:31:14,960 --> 00:31:16,960
+agent 24/7 on a VPS.
+
+1288
+00:31:18,080 --> 00:31:19,560
+And that is what I wanted to teach
+
+1289
+00:31:19,560 --> 00:31:20,160
+you.
+
+1290
+00:31:20,160 --> 00:31:20,760
+In this video.
+
+1291
+00:31:20,980 --> 00:31:22,400
+I know this video is a very lengthy
+
+1292
+00:31:22,400 --> 00:31:23,000
+video.
+
+1293
+00:31:23,420 --> 00:31:24,800
+But these steps are very mandatory.
+
+1294
+00:31:25,120 --> 00:31:26,500
+I hope you enjoyed this video.
+
+1295
+00:31:26,760 --> 00:31:28,080
+And if you have enjoyed please let
+
+1296
+00:31:28,080 --> 00:31:28,680
+me know.
+
+1297
+00:31:28,720 --> 00:31:30,920
+If you have any queries please let
+
+1298
+00:31:30,920 --> 00:31:31,540
+me know in the comment section
+
+1299
+00:31:31,540 --> 00:31:32,140
+below.
+
+1300
+00:31:32,180 --> 00:31:33,020
+And that's all for this one.
+

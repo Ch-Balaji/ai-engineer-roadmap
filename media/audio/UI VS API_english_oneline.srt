@@ -1,0 +1,2776 @@
+1
+00:00:00,000 --> 00:00:02,120
+Hi everyone, in today's video,
+
+2
+00:00:02,540 --> 00:00:04,040
+we will go through our roadmap,
+
+3
+00:00:04,380 --> 00:00:06,000
+phase 3, prompt engineering.
+
+4
+00:00:06,540 --> 00:00:08,340
+In this, we will talk about the
+
+5
+00:00:08,340 --> 00:00:10,360
+first one, UI versus API,
+
+6
+00:00:10,520 --> 00:00:12,220
+calling LLMs via API.
+
+7
+00:00:12,560 --> 00:00:14,360
+We are going to learn about all of
+
+8
+00:00:14,360 --> 00:00:15,060
+these concepts.
+
+9
+00:00:15,580 --> 00:00:17,440
+And I just wanted to give you a
+
+10
+00:00:17,440 --> 00:00:18,280
+quick heads up.
+
+11
+00:00:18,700 --> 00:00:20,660
+We have already completed phase 2.
+
+12
+00:00:20,900 --> 00:00:21,620
+The whole thing has been completed
+
+13
+00:00:21,620 --> 00:00:22,420
+in phase 2.
+
+14
+00:00:22,640 --> 00:00:24,660
+And in the phase 1 also,
+
+15
+00:00:24,900 --> 00:00:27,080
+we completed almost every single
+
+16
+00:00:27,080 --> 00:00:27,680
+thing.
+
+17
+00:00:27,680 --> 00:00:28,540
+There are two topics.
+
+18
+00:00:29,620 --> 00:00:31,080
+We will learn these two topics
+
+19
+00:00:31,080 --> 00:00:32,240
+during the project section.
+
+20
+00:00:32,540 --> 00:00:34,760
+Because, if you learn individually,
+
+21
+00:00:34,860 --> 00:00:36,200
+you will feel very disconnected.
+
+22
+00:00:36,440 --> 00:00:38,000
+And I don't want you to be feeling
+
+23
+00:00:38,000 --> 00:00:38,600
+that way.
+
+24
+00:00:38,620 --> 00:00:40,040
+So the first thing what we are going
+
+25
+00:00:40,040 --> 00:00:42,400
+to learn is, how UI is different
+
+26
+00:00:42,400 --> 00:00:43,360
+from the API.
+
+27
+00:00:43,720 --> 00:00:45,240
+I have come to ChatGPT.
+
+28
+00:00:45,280 --> 00:00:47,140
+And I will give a prompt like this.
+
+29
+00:00:47,520 --> 00:00:50,400
+Create a mermaid flowchart of how an
+
+30
+00:00:50,400 --> 00:00:52,840
+agent decides which tool to call,
+
+31
+00:00:53,120 --> 00:00:54,960
+including the loopback when the tool
+
+32
+00:00:54,960 --> 00:00:55,560
+fails.
+
+33
+00:00:55,560 --> 00:00:57,800
+Show it as a clear top to bottom
+
+34
+00:00:57,800 --> 00:00:58,400
+diagram.
+
+35
+00:00:58,980 --> 00:01:00,260
+And let's click on enter.
+
+36
+00:01:00,940 --> 00:01:02,340
+We are using 5.5 model here.
+
+37
+00:01:03,240 --> 00:01:04,280
+And if you look at this,
+
+38
+00:01:04,580 --> 00:01:05,580
+the code is writing here,
+
+39
+00:01:05,780 --> 00:01:06,540
+ChatGPT.
+
+40
+00:01:06,880 --> 00:01:07,480
+And after writing the code,
+
+41
+00:01:08,580 --> 00:01:11,440
+it will give you the output in this
+
+42
+00:01:11,440 --> 00:01:12,040
+UI.
+
+43
+00:01:12,100 --> 00:01:14,180
+So you can see the plot or you can
+
+44
+00:01:14,180 --> 00:01:15,420
+see the chart directly.
+
+45
+00:01:16,340 --> 00:01:18,380
+Now what we are going to do is,
+
+46
+00:01:18,380 --> 00:01:20,780
+we will go to the notebook in Google
+
+47
+00:01:20,780 --> 00:01:21,380
+Colab.
+
+48
+00:01:21,380 --> 00:01:24,140
+And here also, I am using the same
+
+49
+00:01:24,140 --> 00:01:25,020
+ChatGPT model.
+
+50
+00:01:25,500 --> 00:01:27,080
+I will show you exactly what happens
+
+51
+00:01:27,080 --> 00:01:28,020
+in the later part.
+
+52
+00:01:28,680 --> 00:01:29,520
+And I am giving the same prompt
+
+53
+00:01:29,520 --> 00:01:30,340
+here.
+
+54
+00:01:30,440 --> 00:01:32,020
+And let's execute this.
+
+55
+00:01:33,240 --> 00:01:34,340
+And see what will come here.
+
+56
+00:01:35,580 --> 00:01:37,520
+Okay, let's wait until it gets.
+
+57
+00:01:37,740 --> 00:01:39,520
+See, here we have written the same
+
+58
+00:01:39,520 --> 00:01:41,460
+code as before.
+
+59
+00:01:42,220 --> 00:01:44,620
+But it is not rendering the image.
+
+60
+00:01:44,820 --> 00:01:46,920
+And as we see here, we can't see the
+
+61
+00:01:46,920 --> 00:01:47,520
+image directly.
+
+62
+00:01:49,140 --> 00:01:49,740
+Why?
+
+63
+00:01:49,740 --> 00:01:52,960
+Because when you communicate to any
+
+64
+00:01:52,960 --> 00:01:55,900
+of these LLM models via UI,
+
+65
+00:01:56,920 --> 00:01:58,800
+there are a lot of things happening
+
+66
+00:01:58,800 --> 00:01:59,400
+behind them.
+
+67
+00:01:59,400 --> 00:02:01,240
+System prompts, tools,
+
+68
+00:02:02,140 --> 00:02:03,260
+all of these rendering.
+
+69
+00:02:03,940 --> 00:02:05,800
+A lot of things that are happening
+
+70
+00:02:05,800 --> 00:02:07,040
+in the back end.
+
+71
+00:02:08,040 --> 00:02:10,540
+You cannot do it while using API.
+
+72
+00:02:11,120 --> 00:02:13,260
+Now let's take one more example.
+
+73
+00:02:13,660 --> 00:02:14,760
+What's today's date?
+
+74
+00:02:14,860 --> 00:02:16,780
+And what are the three biggest AI
+
+75
+00:02:16,780 --> 00:02:17,640
+releases this weekend?
+
+76
+00:02:17,640 --> 00:02:19,440
+I will put it here.
+
+77
+00:02:19,680 --> 00:02:21,520
+And let's see what happens in the
+
+78
+00:02:21,520 --> 00:02:22,120
+UI.
+
+79
+00:02:22,660 --> 00:02:25,860
+So today's date is 30 June 2026.
+
+80
+00:02:26,640 --> 00:02:29,020
+Now it is searching all of the
+
+81
+00:02:29,020 --> 00:02:29,620
+internet.
+
+82
+00:02:29,780 --> 00:02:31,740
+And based on the results in the
+
+83
+00:02:31,740 --> 00:02:33,120
+internet, it will give you the
+
+84
+00:02:33,120 --> 00:02:33,720
+answer.
+
+85
+00:02:34,400 --> 00:02:35,280
+Let's wait.
+
+86
+00:02:36,560 --> 00:02:37,640
+Okay, latest model releases.
+
+87
+00:02:37,900 --> 00:02:39,580
+It is thinking about what we need.
+
+88
+00:02:41,760 --> 00:02:43,700
+And it read all of these things.
+
+89
+00:02:43,700 --> 00:02:46,520
+And based on these information,
+
+90
+00:02:47,040 --> 00:02:48,500
+we got the answer like this.
+
+91
+00:02:48,580 --> 00:02:49,660
+So what did it give?
+
+92
+00:02:49,920 --> 00:02:53,120
+Anthropic Sonnet 5 and GPT 5.63.
+
+93
+00:02:53,940 --> 00:02:55,740
+Mutant Longcat 2.1.
+
+94
+00:02:56,380 --> 00:02:58,680
+But the same prompt, when we give to
+
+95
+00:02:58,680 --> 00:03:00,840
+the API via Google Colab,
+
+96
+00:03:01,200 --> 00:03:02,560
+do you think you will get the same
+
+97
+00:03:02,560 --> 00:03:03,160
+answer?
+
+98
+00:03:04,140 --> 00:03:04,740
+No.
+
+99
+00:03:04,740 --> 00:03:08,220
+Because when you are using the LLMs
+
+100
+00:03:08,220 --> 00:03:09,320
+via API,
+
+101
+00:03:09,720 --> 00:03:11,900
+you don't have access to any of the
+
+102
+00:03:11,900 --> 00:03:12,500
+tools.
+
+103
+00:03:12,500 --> 00:03:14,300
+Look, it gave the date.
+
+104
+00:03:14,300 --> 00:03:15,260
+Why it gave the date?
+
+105
+00:03:15,440 --> 00:03:17,140
+Because we are currently using 5.5
+
+106
+00:03:17,140 --> 00:03:18,740
+model from OpenAI.
+
+107
+00:03:19,580 --> 00:03:22,340
+And 5.5 has inbuilt date tool call
+
+108
+00:03:22,340 --> 00:03:22,940
+function.
+
+109
+00:03:23,240 --> 00:03:24,420
+So that is why it is giving the
+
+110
+00:03:24,420 --> 00:03:25,020
+date.
+
+111
+00:03:25,260 --> 00:03:26,520
+And if you look at the news,
+
+112
+00:03:26,880 --> 00:03:28,900
+I don't have the live web access in
+
+113
+00:03:28,900 --> 00:03:29,500
+this chart.
+
+114
+00:03:29,500 --> 00:03:31,980
+So I can't liably identify it.
+
+115
+00:03:32,100 --> 00:03:33,780
+You might have understood by now.
+
+116
+00:03:35,120 --> 00:03:36,820
+The GPT model you are talking in the
+
+117
+00:03:36,820 --> 00:03:37,420
+UI is different.
+
+118
+00:03:37,420 --> 00:03:39,700
+The GPT model you are talking in the
+
+119
+00:03:39,700 --> 00:03:40,300
+code is different.
+
+120
+00:03:40,300 --> 00:03:42,320
+So the same thing for Claude
+
+121
+00:03:42,320 --> 00:03:42,920
+Anthropic,
+
+122
+00:03:43,240 --> 00:03:46,020
+Gemini, Groq, any kind of models.
+
+123
+00:03:46,440 --> 00:03:47,260
+And one more thing,
+
+124
+00:03:47,440 --> 00:03:49,080
+when you are working in a company,
+
+125
+00:03:49,780 --> 00:03:51,660
+you cannot directly interact with
+
+126
+00:03:51,660 --> 00:03:52,260
+UI.
+
+127
+00:03:52,400 --> 00:03:54,100
+When you are building applications,
+
+128
+00:03:54,260 --> 00:03:56,000
+you need to interact via API.
+
+129
+00:03:57,160 --> 00:03:58,280
+What will you do then?
+
+130
+00:03:58,740 --> 00:04:00,980
+So what we will do in this video is,
+
+131
+00:04:00,980 --> 00:04:03,420
+we will see how you can use APIs,
+
+132
+00:04:03,680 --> 00:04:05,300
+how to call the APIs,
+
+133
+00:04:05,380 --> 00:04:06,200
+what is the code,
+
+134
+00:04:06,200 --> 00:04:08,820
+and how to call multiple APIs,
+
+135
+00:04:09,780 --> 00:04:12,540
+let's say Claude or ChatGPT or
+
+136
+00:04:12,540 --> 00:04:13,160
+Groq.
+
+137
+00:04:13,840 --> 00:04:15,560
+So let's see how to call them and
+
+138
+00:04:15,560 --> 00:04:16,400
+what to do.
+
+139
+00:04:17,240 --> 00:04:18,260
+First thing is,
+
+140
+00:04:18,860 --> 00:04:20,160
+in my code example,
+
+141
+00:04:20,320 --> 00:04:21,980
+I am showing three different models.
+
+142
+00:04:22,560 --> 00:04:24,560
+One is ChatGPT OpenAI models,
+
+143
+00:04:24,780 --> 00:04:26,160
+Anthropic Claude models,
+
+144
+00:04:26,840 --> 00:04:28,500
+and LLaMA models from Groq.
+
+145
+00:04:28,700 --> 00:04:30,160
+Now what you need to use from API
+
+146
+00:04:30,160 --> 00:04:31,580
+is,
+
+147
+00:04:31,580 --> 00:04:33,680
+you need API keys.
+
+148
+00:04:33,680 --> 00:04:35,920
+You can put these API keys in Google
+
+149
+00:04:35,920 --> 00:04:36,600
+Collab,
+
+150
+00:04:36,720 --> 00:04:39,360
+in the Secrets tab.
+
+151
+00:04:40,020 --> 00:04:41,620
+How to create API keys?
+
+152
+00:04:42,140 --> 00:04:43,840
+Let's say OpenAI,
+
+153
+00:04:44,800 --> 00:04:45,440
+OpenAI,
+
+154
+00:04:45,440 --> 00:04:46,920
+API key and search.
+
+155
+00:04:47,480 --> 00:04:49,180
+You will directly get this page,
+
+156
+00:04:49,440 --> 00:04:51,300
+and from here you can create your
+
+157
+00:04:51,300 --> 00:04:51,900
+API keys,
+
+158
+00:04:51,900 --> 00:04:52,960
+create secret API keys.
+
+159
+00:04:53,700 --> 00:04:54,840
+I have already created some API
+
+160
+00:04:54,840 --> 00:04:55,440
+keys,
+
+161
+00:04:56,340 --> 00:04:58,260
+and these keys are very important,
+
+162
+00:04:58,520 --> 00:05:00,080
+and you cannot share it with anyone.
+
+163
+00:05:00,760 --> 00:05:02,600
+So please don't share these keys
+
+164
+00:05:02,600 --> 00:05:03,200
+with anyone.
+
+165
+00:05:03,200 --> 00:05:04,280
+Similarly,
+
+166
+00:05:04,400 --> 00:05:07,860
+you can go with Anthropic API keys,
+
+167
+00:05:08,460 --> 00:05:09,060
+search,
+
+168
+00:05:09,360 --> 00:05:11,080
+you get this Get API key,
+
+169
+00:05:11,780 --> 00:05:12,620
+go here,
+
+170
+00:05:12,720 --> 00:05:13,320
+after going,
+
+171
+00:05:13,560 --> 00:05:15,480
+you will go to the console on the
+
+172
+00:05:15,480 --> 00:05:16,380
+top right corner,
+
+173
+00:05:16,640 --> 00:05:17,260
+and after entering the console,
+
+174
+00:05:17,760 --> 00:05:19,960
+you can create your API key via Get
+
+175
+00:05:19,960 --> 00:05:20,780
+API key.
+
+176
+00:05:21,240 --> 00:05:22,120
+If you want Groq,
+
+177
+00:05:22,640 --> 00:05:25,140
+you can say Groq API key,
+
+178
+00:05:26,040 --> 00:05:27,400
+and then go to the first link,
+
+179
+00:05:27,880 --> 00:05:30,480
+console.groq.com from Groq,
+
+180
+00:05:30,480 --> 00:05:32,920
+there is an API key on the top right
+
+181
+00:05:32,920 --> 00:05:33,520
+corner,
+
+182
+00:05:33,520 --> 00:05:34,740
+you can click on create API key,
+
+183
+00:05:34,740 --> 00:05:35,580
+and you will get the API key.
+
+184
+00:05:36,060 --> 00:05:37,360
+So those three API keys,
+
+185
+00:05:37,420 --> 00:05:39,300
+I have saved in Google Collab,
+
+186
+00:05:39,760 --> 00:05:40,700
+and named them,
+
+187
+00:05:40,720 --> 00:05:42,060
+Anthropic API key,
+
+188
+00:05:42,320 --> 00:05:43,100
+Groq API key,
+
+189
+00:05:43,260 --> 00:05:44,340
+and OpenAI API key.
+
+190
+00:05:45,040 --> 00:05:46,660
+So our first requirement is to get
+
+191
+00:05:46,660 --> 00:05:47,260
+the API keys,
+
+192
+00:05:47,260 --> 00:05:48,320
+and we got it.
+
+193
+00:05:48,740 --> 00:05:50,420
+Because they are ChatGPT,
+
+194
+00:05:50,580 --> 00:05:51,220
+Anthropic,
+
+195
+00:05:51,520 --> 00:05:52,520
+and paid models,
+
+196
+00:05:53,280 --> 00:05:55,740
+you need to have some credit card
+
+197
+00:05:55,740 --> 00:05:56,340
+details.
+
+198
+00:05:56,640 --> 00:05:58,520
+So if you look at the Anthropic,
+
+199
+00:05:58,520 --> 00:05:59,560
+I added $5,
+
+200
+00:06:00,600 --> 00:06:01,700
+and also ChatGPT,
+
+201
+00:06:01,840 --> 00:06:02,760
+I have added $10,
+
+202
+00:06:03,680 --> 00:06:05,940
+because I want to use these things.
+
+203
+00:06:06,160 --> 00:06:07,160
+Since Groq is free,
+
+204
+00:06:07,520 --> 00:06:08,540
+you don't have to add any money,
+
+205
+00:06:09,300 --> 00:06:10,740
+then you can directly use it for
+
+206
+00:06:10,740 --> 00:06:11,460
+free of cost.
+
+207
+00:06:12,300 --> 00:06:12,900
+Now how to communicate with these
+
+208
+00:06:12,900 --> 00:06:13,500
+APIs?
+
+209
+00:06:15,200 --> 00:06:16,760
+So to communicate like that,
+
+210
+00:06:17,360 --> 00:06:19,240
+we have multiple packages from
+
+211
+00:06:19,240 --> 00:06:19,840
+Python.
+
+212
+00:06:19,840 --> 00:06:20,540
+If you want to communicate with
+
+213
+00:06:20,540 --> 00:06:21,700
+OpenAI API,
+
+214
+00:06:23,720 --> 00:06:25,640
+you have a package called OpenAI,
+
+215
+00:06:25,700 --> 00:06:26,480
+you have to install that package.
+
+216
+00:06:26,480 --> 00:06:27,780
+If you want to communicate with
+
+217
+00:06:27,780 --> 00:06:29,220
+Anthropic Claude Models,
+
+218
+00:06:30,640 --> 00:06:32,760
+you have something called Anthropic.
+
+219
+00:06:33,060 --> 00:06:33,880
+If you want to communicate with Groq
+
+220
+00:06:33,880 --> 00:06:34,840
+Models,
+
+221
+00:06:34,900 --> 00:06:35,500
+you have Groq.
+
+222
+00:06:35,820 --> 00:06:38,700
+Since these are all APIs,
+
+223
+00:06:39,100 --> 00:06:40,820
+you can use a generic package,
+
+224
+00:06:40,880 --> 00:06:42,780
+which is called Requests as well.
+
+225
+00:06:43,780 --> 00:06:44,460
+So what are we doing here?
+
+226
+00:06:44,540 --> 00:06:46,760
+We are trying to install OpenAI,
+
+227
+00:06:47,020 --> 00:06:47,660
+Anthropic,
+
+228
+00:06:47,880 --> 00:06:48,480
+Groq,
+
+229
+00:06:48,520 --> 00:06:49,240
+and Requests.
+
+230
+00:06:49,600 --> 00:06:50,960
+So let's click on Execute.
+
+231
+00:06:51,500 --> 00:06:52,360
+Now everything is executed.
+
+232
+00:06:57,530 --> 00:06:59,050
+Okay, everything is executed.
+
+233
+00:06:59,050 --> 00:07:01,170
+Now we have the API keys in our
+
+234
+00:07:01,170 --> 00:07:01,970
+Google Collab.
+
+235
+00:07:02,850 --> 00:07:03,770
+Enable all of these to access the
+
+236
+00:07:03,770 --> 00:07:04,370
+notebook.
+
+237
+00:07:05,330 --> 00:07:06,570
+And once you enable it,
+
+238
+00:07:06,990 --> 00:07:07,810
+what am I doing here?
+
+239
+00:07:07,970 --> 00:07:10,670
+I am trying to load these API keys
+
+240
+00:07:10,670 --> 00:07:11,970
+in the notebook itself.
+
+241
+00:07:12,270 --> 00:07:14,010
+If you look at this line here,
+
+242
+00:07:14,210 --> 00:07:16,950
+so this says our OpenAI API key,
+
+243
+00:07:17,270 --> 00:07:18,710
+and then Anthropic API key,
+
+244
+00:07:18,990 --> 00:07:20,170
+and then Groq API key.
+
+245
+00:07:20,950 --> 00:07:23,110
+So using this line of code,
+
+246
+00:07:23,330 --> 00:07:25,330
+I am loading all of them in these
+
+247
+00:07:25,330 --> 00:07:25,930
+variables.
+
+248
+00:07:25,930 --> 00:07:27,490
+And after that,
+
+249
+00:07:27,490 --> 00:07:29,250
+I am importing the OpenAI package
+
+250
+00:07:29,250 --> 00:07:30,770
+and the Anthropic package.
+
+251
+00:07:31,650 --> 00:07:32,550
+And in OpenAI,
+
+252
+00:07:32,710 --> 00:07:33,310
+I am going to talk about the Charge
+
+253
+00:07:33,310 --> 00:07:35,010
+GPT 5.5 model.
+
+254
+00:07:35,770 --> 00:07:36,810
+That is why I am putting this
+
+255
+00:07:36,810 --> 00:07:37,410
+variable.
+
+256
+00:07:37,770 --> 00:07:38,570
+And in Anthropic,
+
+257
+00:07:38,710 --> 00:07:40,410
+I am going to talk about Claude
+
+258
+00:07:40,410 --> 00:07:41,470
+Sonnet 4.6
+
+259
+00:07:41,470 --> 00:07:43,030
+because it is a little bit less
+
+260
+00:07:43,030 --> 00:07:43,630
+costlier.
+
+261
+00:07:44,170 --> 00:07:44,770
+And in Groq,
+
+262
+00:07:44,950 --> 00:07:46,830
+I am going to use LLaMA models,
+
+263
+00:07:47,130 --> 00:07:48,870
+which are 70 billion parameter size.
+
+264
+00:07:49,210 --> 00:07:51,710
+So once you import these packages,
+
+265
+00:07:52,170 --> 00:07:52,770
+what do you have to do?
+
+266
+00:07:52,770 --> 00:07:54,010
+You need to create a client.
+
+267
+00:07:54,010 --> 00:07:55,490
+And using that client,
+
+268
+00:07:56,170 --> 00:07:57,030
+you can hit the API.
+
+269
+00:07:57,930 --> 00:07:59,850
+That is why I am creating the client
+
+270
+00:07:59,850 --> 00:08:00,450
+here,
+
+271
+00:08:00,470 --> 00:08:01,610
+OpenAI API client,
+
+272
+00:08:02,110 --> 00:08:03,990
+and Anthropic client,
+
+273
+00:08:04,650 --> 00:08:06,150
+and Groq to Groq client.
+
+274
+00:08:06,590 --> 00:08:07,270
+If you see here,
+
+275
+00:08:08,110 --> 00:08:11,230
+I am using a package from OpenAI for
+
+276
+00:08:11,230 --> 00:08:11,830
+Groq.
+
+277
+00:08:11,830 --> 00:08:12,430
+Why?
+
+278
+00:08:12,430 --> 00:08:13,030
+Because in OpenAI,
+
+279
+00:08:13,350 --> 00:08:16,250
+you have an option to connect via
+
+280
+00:08:16,250 --> 00:08:17,150
+Groq as well.
+
+281
+00:08:17,550 --> 00:08:18,650
+When you are doing that,
+
+282
+00:08:19,210 --> 00:08:20,670
+you need the URL.
+
+283
+00:08:21,210 --> 00:08:23,370
+So this is the URL that you need to
+
+284
+00:08:23,370 --> 00:08:23,970
+provide.
+
+285
+00:08:23,970 --> 00:08:25,790
+While connecting to the Groq
+
+286
+00:08:25,790 --> 00:08:27,530
+via OpenAI API.
+
+287
+00:08:28,050 --> 00:08:28,670
+And what is our API?
+
+288
+00:08:29,190 --> 00:08:30,010
+We have taken it for Groq API.
+
+289
+00:08:31,330 --> 00:08:32,810
+So once you load all of these
+
+290
+00:08:32,810 --> 00:08:33,410
+things,
+
+291
+00:08:33,410 --> 00:08:35,210
+you have created all of these three
+
+292
+00:08:35,210 --> 00:08:35,810
+clients.
+
+293
+00:08:35,810 --> 00:08:37,390
+And we are good to go and use the
+
+294
+00:08:37,390 --> 00:08:37,990
+APIs.
+
+295
+00:08:38,150 --> 00:08:39,410
+So let's execute this code.
+
+296
+00:08:42,950 --> 00:08:43,770
+So clients are ready.
+
+297
+00:08:44,110 --> 00:08:46,790
+GPT 5.5, Claude Sonnet 4.6,
+
+298
+00:08:46,970 --> 00:08:47,890
+and LLaMA models.
+
+299
+00:08:48,270 --> 00:08:49,010
+So see here,
+
+300
+00:08:49,030 --> 00:08:50,290
+I have a sample ticket.
+
+301
+00:08:50,850 --> 00:08:52,890
+Just wanted to give you a real time
+
+302
+00:08:52,890 --> 00:08:53,490
+example.
+
+303
+00:08:53,490 --> 00:08:54,330
+Let's say you are working in a
+
+304
+00:08:54,330 --> 00:08:55,250
+customer interface
+
+305
+00:08:55,250 --> 00:08:56,790
+per start board.
+
+306
+00:08:57,470 --> 00:08:58,370
+What happened here?
+
+307
+00:08:58,630 --> 00:08:59,790
+A customer has raised a ticket.
+
+308
+00:09:00,750 --> 00:09:02,750
+This is the third time I am writing.
+
+309
+00:09:03,110 --> 00:09:04,750
+I ordered the Aurora wireless
+
+310
+00:09:04,750 --> 00:09:05,350
+headphones.
+
+311
+00:09:05,470 --> 00:09:06,190
+What is the order number?
+
+312
+00:09:06,910 --> 00:09:10,250
+On June 14, for 7500 rupees.
+
+313
+00:09:10,870 --> 00:09:13,050
+And they arrived with a cracked left
+
+314
+00:09:13,050 --> 00:09:13,670
+ear cup.
+
+315
+00:09:13,870 --> 00:09:15,770
+I want a full refund, not a
+
+316
+00:09:15,770 --> 00:09:16,370
+replacement.
+
+317
+00:09:16,730 --> 00:09:18,750
+If I don't hear back in 48 hours,
+
+318
+00:09:18,770 --> 00:09:20,770
+I am doing a charge back on my card.
+
+319
+00:09:20,770 --> 00:09:22,990
+So here I have created a simple
+
+320
+00:09:22,990 --> 00:09:23,590
+ticket.
+
+321
+00:09:24,370 --> 00:09:25,430
+I am keeping that ticket in a
+
+322
+00:09:25,430 --> 00:09:26,030
+variable.
+
+323
+00:09:27,110 --> 00:09:28,430
+Let's execute this.
+
+324
+00:09:29,810 --> 00:09:31,850
+I will talk about how to use this
+
+325
+00:09:31,850 --> 00:09:32,450
+later on.
+
+326
+00:09:32,550 --> 00:09:33,750
+Let's not worry about it.
+
+327
+00:09:33,750 --> 00:09:34,850
+I have written it for the hook.
+
+328
+00:09:35,950 --> 00:09:38,910
+Now let's see how you can talk to
+
+329
+00:09:38,910 --> 00:09:39,750
+these APIs
+
+330
+00:09:39,750 --> 00:09:41,910
+via their package called requests.
+
+331
+00:09:42,450 --> 00:09:43,630
+What is this request package?
+
+332
+00:09:44,370 --> 00:09:46,790
+Because when the API communication
+
+333
+00:09:46,790 --> 00:09:47,390
+is happening,
+
+334
+00:09:47,390 --> 00:09:49,330
+from your laptop to the servers,
+
+335
+00:09:49,330 --> 00:09:51,850
+all of this communication happens
+
+336
+00:09:51,850 --> 00:09:53,370
+via HTTPS.
+
+337
+00:09:55,190 --> 00:09:58,450
+HTTPS communication is a single
+
+338
+00:09:58,450 --> 00:09:59,170
+framework by default.
+
+339
+00:09:59,450 --> 00:10:01,390
+So you can use the request package
+
+340
+00:10:01,390 --> 00:10:03,550
+and communicate via these things.
+
+341
+00:10:04,050 --> 00:10:04,710
+Now how to communicate using this
+
+342
+00:10:04,710 --> 00:10:05,430
+request package?
+
+343
+00:10:07,450 --> 00:10:09,650
+If you haven't watched my API
+
+344
+00:10:09,650 --> 00:10:10,510
+explained video,
+
+345
+00:10:10,750 --> 00:10:11,470
+go there and watch it.
+
+346
+00:10:11,470 --> 00:10:12,970
+You will get more clarity on
+
+347
+00:10:12,970 --> 00:10:13,570
+requests,
+
+348
+00:10:14,050 --> 00:10:15,850
+server, communication,
+
+349
+00:10:16,390 --> 00:10:16,990
+gateway,
+
+350
+00:10:17,030 --> 00:10:18,610
+all of these things.
+
+351
+00:10:18,610 --> 00:10:21,210
+So I am saying request.post.
+
+352
+00:10:21,910 --> 00:10:23,950
+And here I need to provide the URL.
+
+353
+00:10:24,750 --> 00:10:25,810
+If I want to talk to ChatGPT API,
+
+354
+00:10:26,870 --> 00:10:28,850
+I need to enter this URL.
+
+355
+00:10:29,690 --> 00:10:30,830
+And then headers.
+
+356
+00:10:31,190 --> 00:10:32,050
+What are headers?
+
+357
+00:10:32,610 --> 00:10:34,270
+If I want to hit the OpenAI,
+
+358
+00:10:35,250 --> 00:10:36,110
+I have the API key.
+
+359
+00:10:36,790 --> 00:10:38,110
+If I want to send the API key,
+
+360
+00:10:38,490 --> 00:10:39,650
+then only it will validate.
+
+361
+00:10:40,090 --> 00:10:40,850
+That's what we are doing.
+
+362
+00:10:41,110 --> 00:10:42,270
+By keeping the authorization as a
+
+363
+00:10:42,270 --> 00:10:42,870
+barrier,
+
+364
+00:10:43,430 --> 00:10:45,550
+you are sending your OpenAI key.
+
+365
+00:10:46,050 --> 00:10:47,850
+So that your message is valid
+
+366
+00:10:47,850 --> 00:10:49,570
+and OpenAI will give you the
+
+367
+00:10:49,570 --> 00:10:50,390
+response actually.
+
+368
+00:10:51,150 --> 00:10:51,970
+And after that,
+
+369
+00:10:51,970 --> 00:10:52,710
+based on what you have done,
+
+370
+00:10:53,450 --> 00:10:54,650
+what model are you using?
+
+371
+00:10:54,670 --> 00:10:57,490
+I am using OpenAI GPT 5.5 model.
+
+372
+00:10:58,210 --> 00:11:01,670
+And here I am providing this entire
+
+373
+00:11:01,670 --> 00:11:02,270
+prompt.
+
+374
+00:11:02,570 --> 00:11:04,450
+If you haven't looked at my prompt
+
+375
+00:11:04,450 --> 00:11:05,130
+engineering video,
+
+376
+00:11:05,250 --> 00:11:05,910
+I have explained there.
+
+377
+00:11:06,130 --> 00:11:07,030
+What is a role?
+
+378
+00:11:07,130 --> 00:11:08,030
+What is user?
+
+379
+00:11:08,350 --> 00:11:08,950
+What is content?
+
+380
+00:11:09,670 --> 00:11:11,370
+So just to summarize,
+
+381
+00:11:11,930 --> 00:11:13,810
+whenever you want to give a prompt
+
+382
+00:11:13,810 --> 00:11:15,730
+to an LLM via API,
+
+383
+00:11:15,730 --> 00:11:17,570
+first you need to put the role,
+
+384
+00:11:17,890 --> 00:11:18,490
+the user.
+
+385
+00:11:19,150 --> 00:11:20,450
+And what is the content the user is
+
+386
+00:11:20,450 --> 00:11:21,050
+asking?
+
+387
+00:11:21,290 --> 00:11:23,550
+Say hello in one short sentence.
+
+388
+00:11:24,010 --> 00:11:25,930
+I am giving this to a prompt or GPT
+
+389
+00:11:25,930 --> 00:11:26,810
+5.5 model.
+
+390
+00:11:27,910 --> 00:11:29,650
+And then you get the output in this
+
+391
+00:11:29,650 --> 00:11:30,250
+format.
+
+392
+00:11:30,630 --> 00:11:32,270
+So let's try and hit this one
+
+393
+00:11:32,270 --> 00:11:33,790
+and see what happens.
+
+394
+00:11:36,970 --> 00:11:38,530
+the output of the HTTP request is
+
+395
+00:11:38,530 --> 00:11:39,130
+200.
+
+396
+00:11:39,210 --> 00:11:41,190
+That means it's a valid API request.
+
+397
+00:11:41,570 --> 00:11:43,190
+And our reply is hello.
+
+398
+00:11:44,010 --> 00:11:44,610
+Simple.
+
+399
+00:11:44,790 --> 00:11:45,630
+What have we done?
+
+400
+00:11:45,630 --> 00:11:49,690
+We just hit the OpenAI 5.5 model via
+
+401
+00:11:49,690 --> 00:11:50,290
+API
+
+402
+00:11:50,290 --> 00:11:51,650
+and we got the reply as hello.
+
+403
+00:11:51,970 --> 00:11:52,610
+Very simple.
+
+404
+00:11:52,810 --> 00:11:53,710
+Nothing complex at all.
+
+405
+00:11:54,750 --> 00:11:56,370
+Now, using this request package,
+
+406
+00:11:57,450 --> 00:11:58,050
+since it is a bit complex to put a
+
+407
+00:11:58,050 --> 00:12:00,630
+URL or authorize,
+
+408
+00:12:01,690 --> 00:12:02,290
+they have built their own package
+
+409
+00:12:02,290 --> 00:12:04,450
+for charging, entropy,
+
+410
+00:12:04,490 --> 00:12:05,590
+etc.
+
+411
+00:12:08,050 --> 00:12:09,110
+So what can I do?
+
+412
+00:12:09,690 --> 00:12:12,050
+Here, if you remember the client
+
+413
+00:12:12,050 --> 00:12:13,810
+that we created at the top,
+
+414
+00:12:13,810 --> 00:12:16,730
+we created an OpenAI client.
+
+415
+00:12:17,530 --> 00:12:19,250
+And it doesn't even have a key.
+
+416
+00:12:19,250 --> 00:12:20,610
+By default, it will take all the
+
+417
+00:12:20,610 --> 00:12:21,430
+keys as well.
+
+418
+00:12:22,170 --> 00:12:23,210
+Now, let's use that client.
+
+419
+00:12:24,170 --> 00:12:25,670
+We can talk to this one.
+
+420
+00:12:25,990 --> 00:12:27,090
+So if you look at this one,
+
+421
+00:12:27,450 --> 00:12:29,290
+our OpenAI client that we created
+
+422
+00:12:29,290 --> 00:12:31,750
+and then we just say chart
+
+423
+00:12:31,750 --> 00:12:34,010
+.completions.create.
+
+424
+00:12:34,410 --> 00:12:35,950
+What model are we using inside this?
+
+425
+00:12:35,950 --> 00:12:37,610
+What is the 5.5 model?
+
+426
+00:12:38,270 --> 00:12:39,070
+And here is the message.
+
+427
+00:12:39,750 --> 00:12:41,130
+So what is the role?
+
+428
+00:12:41,550 --> 00:12:42,910
+What role is the system?
+
+429
+00:12:42,910 --> 00:12:44,470
+What is the prompt for the system?
+
+430
+00:12:44,990 --> 00:12:46,370
+What is the persona that you are
+
+431
+00:12:46,370 --> 00:12:47,130
+setting for the system?
+
+432
+00:12:47,790 --> 00:12:50,670
+You are a concise support agent,
+
+433
+00:12:51,070 --> 00:12:51,770
+max three sentences.
+
+434
+00:12:52,450 --> 00:12:53,590
+Now, I will give you a ticket.
+
+435
+00:12:54,230 --> 00:12:55,850
+I am telling you to concise that
+
+436
+00:12:55,850 --> 00:12:56,450
+ticket
+
+437
+00:12:56,450 --> 00:12:58,970
+to our RGPT 5.5 key.
+
+438
+00:12:58,990 --> 00:13:00,070
+And along with that,
+
+439
+00:13:00,070 --> 00:13:01,410
+I am providing what is the ticket
+
+440
+00:13:01,410 --> 00:13:02,010
+information.
+
+441
+00:13:02,030 --> 00:13:02,710
+What is the sample ticket?
+
+442
+00:13:03,650 --> 00:13:04,470
+Very simple.
+
+443
+00:13:04,930 --> 00:13:06,330
+So let's try to execute this
+
+444
+00:13:06,330 --> 00:13:08,210
+and see how it will return the
+
+445
+00:13:08,210 --> 00:13:09,190
+answer for us.
+
+446
+00:13:14,470 --> 00:13:15,410
+Look, OpenAI.
+
+447
+00:13:15,410 --> 00:13:16,270
+I am very sorry.
+
+448
+00:13:16,330 --> 00:13:17,990
+This has taken three messages.
+
+449
+00:13:18,470 --> 00:13:19,130
+Your order ID.
+
+450
+00:13:19,390 --> 00:13:20,990
+For the Aurora wireless headphones.
+
+451
+00:13:21,330 --> 00:13:21,930
+This is all done.
+
+452
+00:13:22,310 --> 00:13:22,910
+I understand.
+
+453
+00:13:22,910 --> 00:13:24,930
+For your chargeback concern,
+
+454
+00:13:25,030 --> 00:13:26,090
+we will treat this as an urgent.
+
+455
+00:13:26,430 --> 00:13:27,230
+So we took the ticket
+
+456
+00:13:27,230 --> 00:13:29,110
+and after taking the ticket,
+
+457
+00:13:30,110 --> 00:13:31,990
+concise the ticket and gave us the
+
+458
+00:13:31,990 --> 00:13:32,590
+output.
+
+459
+00:13:32,590 --> 00:13:33,910
+ChargePT 5.5.
+
+460
+00:13:34,010 --> 00:13:34,610
+Very simple.
+
+461
+00:13:35,110 --> 00:13:36,050
+But if I want to use the same task
+
+462
+00:13:36,050 --> 00:13:37,490
+with an anthropic package,
+
+463
+00:13:38,790 --> 00:13:39,470
+I can do
+
+464
+00:13:39,470 --> 00:13:41,830
+by initializing an anthropic client
+
+465
+00:13:41,830 --> 00:13:43,390
+and say message.create.
+
+466
+00:13:43,390 --> 00:13:45,390
+Here you can see
+
+467
+00:13:45,390 --> 00:13:47,480
+chart.completions.create
+
+468
+00:13:48,090 --> 00:13:49,770
+and here message.create.
+
+469
+00:13:49,870 --> 00:13:51,010
+Now you will have a doubt in your
+
+470
+00:13:51,010 --> 00:13:51,610
+brain.
+
+471
+00:13:51,610 --> 00:13:53,890
+What should we do if we know all
+
+472
+00:13:53,890 --> 00:13:54,490
+this?
+
+473
+00:13:54,490 --> 00:13:55,770
+That is why always documentation
+
+474
+00:13:55,770 --> 00:13:57,130
+is the first thing to go.
+
+475
+00:13:57,650 --> 00:13:59,770
+Anthropic API docs
+
+476
+00:13:59,770 --> 00:14:00,970
+Search and Google
+
+477
+00:14:01,610 --> 00:14:02,670
+documentation will come.
+
+478
+00:14:02,710 --> 00:14:05,030
+Click on this one and you will see
+
+479
+00:14:05,030 --> 00:14:05,750
+what to do.
+
+480
+00:14:05,810 --> 00:14:07,630
+Client.message.create.
+
+481
+00:14:07,810 --> 00:14:09,130
+Here we are doing the same thing.
+
+482
+00:14:09,250 --> 00:14:11,150
+Anthropic.message.create
+
+483
+00:14:11,810 --> 00:14:13,190
+Anthropic client.message.create
+
+484
+00:14:13,850 --> 00:14:15,130
+So you can go through these
+
+485
+00:14:15,130 --> 00:14:16,490
+documentation. Here we have all the
+
+486
+00:14:16,490 --> 00:14:17,090
+quick starts.
+
+487
+00:14:17,390 --> 00:14:18,590
+You can go to API reference.
+
+488
+00:14:18,690 --> 00:14:19,870
+You can read about all of these
+
+489
+00:14:19,870 --> 00:14:20,470
+things.
+
+490
+00:14:20,570 --> 00:14:21,770
+And then you will get to know more
+
+491
+00:14:21,770 --> 00:14:22,370
+details.
+
+492
+00:14:22,870 --> 00:14:24,630
+And here one of the important
+
+493
+00:14:24,630 --> 00:14:26,170
+differences is that
+
+494
+00:14:26,170 --> 00:14:27,050
+our system prompt
+
+495
+00:14:27,050 --> 00:14:29,290
+means we are giving some kind of
+
+496
+00:14:29,290 --> 00:14:29,890
+persona to our LLM.
+
+497
+00:14:30,550 --> 00:14:33,030
+In OpenAI, you have to give it like
+
+498
+00:14:33,030 --> 00:14:33,630
+this.
+
+499
+00:14:33,630 --> 00:14:34,950
+But in Anthropic,
+
+500
+00:14:35,250 --> 00:14:36,430
+we have to give a system variable
+
+501
+00:14:36,430 --> 00:14:38,310
+to that variable directly.
+
+502
+00:14:38,310 --> 00:14:40,010
+And then this is the message.
+
+503
+00:14:40,270 --> 00:14:40,870
+What is our role?
+
+504
+00:14:41,410 --> 00:14:43,030
+Same, let's click on this one.
+
+505
+00:14:43,350 --> 00:14:45,190
+So there are small changes here and
+
+506
+00:14:45,190 --> 00:14:45,790
+there
+
+507
+00:14:45,790 --> 00:14:47,070
+compared to the package of both
+
+508
+00:14:47,070 --> 00:14:48,170
+OpenAI and Anthropic.
+
+509
+00:14:48,650 --> 00:14:50,370
+And also we have the Groq.
+
+510
+00:14:50,830 --> 00:14:51,810
+What does Groq do?
+
+511
+00:14:52,330 --> 00:14:54,070
+So if you want to go understand
+
+512
+00:14:54,070 --> 00:14:55,970
+Groq client, what do you have to do
+
+513
+00:14:55,970 --> 00:14:56,570
+directly?
+
+514
+00:14:56,590 --> 00:14:58,310
+Groq API documentation.
+
+515
+00:14:59,770 --> 00:15:00,790
+Click on this one.
+
+516
+00:15:00,810 --> 00:15:01,910
+Groq API references.
+
+517
+00:15:02,510 --> 00:15:04,150
+And see how much documentation
+
+518
+00:15:04,150 --> 00:15:05,670
+is used to use Groq model.
+
+519
+00:15:05,670 --> 00:15:07,670
+You can look at this and you can
+
+520
+00:15:07,670 --> 00:15:08,710
+use all of these things.
+
+521
+00:15:08,710 --> 00:15:09,870
+Let's not go into
+
+522
+00:15:09,870 --> 00:15:10,870
+details for now.
+
+523
+00:15:11,550 --> 00:15:12,610
+And what I am doing here is Groq
+
+524
+00:15:12,610 --> 00:15:13,210
+client.
+
+525
+00:15:13,210 --> 00:15:14,890
+Since this is an OpenAI follow,
+
+526
+00:15:15,230 --> 00:15:16,570
+I am just following directly.
+
+527
+00:15:17,490 --> 00:15:19,230
+So let's click on execute.
+
+528
+00:15:20,190 --> 00:15:21,270
+And we got the output.
+
+529
+00:15:22,190 --> 00:15:22,870
+Very simple.
+
+530
+00:15:23,510 --> 00:15:24,530
+So what is our understanding?
+
+531
+00:15:25,390 --> 00:15:27,070
+Whenever you want to hit an API,
+
+532
+00:15:27,350 --> 00:15:28,730
+either you can hit via request
+
+533
+00:15:28,730 --> 00:15:29,330
+package,
+
+534
+00:15:29,930 --> 00:15:30,970
+or open AI package,
+
+535
+00:15:31,150 --> 00:15:32,470
+or Anthropic package.
+
+536
+00:15:32,470 --> 00:15:34,410
+So if they have their own packages,
+
+537
+00:15:34,410 --> 00:15:35,710
+you can use them. Otherwise,
+
+538
+00:15:35,710 --> 00:15:36,450
+you can directly
+
+539
+00:15:36,450 --> 00:15:37,430
+use request package.
+
+540
+00:15:37,990 --> 00:15:38,590
+But what happens when you use
+
+541
+00:15:38,590 --> 00:15:39,190
+request package?
+
+542
+00:15:39,650 --> 00:15:40,870
+You need to provide URL,
+
+543
+00:15:41,010 --> 00:15:42,170
+you need to provide a lot of
+
+544
+00:15:42,170 --> 00:15:42,770
+details.
+
+545
+00:15:43,150 --> 00:15:44,890
+So without giving
+
+546
+00:15:44,890 --> 00:15:46,650
+such details, you can use the other
+
+547
+00:15:46,650 --> 00:15:48,610
+packages. So you can save
+
+548
+00:15:48,610 --> 00:15:49,930
+this and you can screenshot this
+
+549
+00:15:49,930 --> 00:15:50,530
+right here
+
+550
+00:15:50,530 --> 00:15:52,010
+so that you can understand the
+
+551
+00:15:52,010 --> 00:15:52,790
+comparison between
+
+552
+00:15:52,790 --> 00:15:54,510
+how these different packages
+
+553
+00:15:54,510 --> 00:15:56,550
+differ with respect to the API
+
+554
+00:15:56,550 --> 00:15:58,950
+calling. And after that,
+
+555
+00:15:58,950 --> 00:16:00,770
+the next thing is message format.
+
+556
+00:16:00,770 --> 00:16:03,250
+So when I go
+
+557
+00:16:03,250 --> 00:16:05,410
+to ChatGPT and let's say
+
+558
+00:16:05,410 --> 00:16:07,250
+can you summarize
+
+559
+00:16:07,250 --> 00:16:08,910
+what I have
+
+560
+00:16:08,910 --> 00:16:10,410
+asked of you?
+
+561
+00:16:11,050 --> 00:16:12,450
+I gave prompt basically.
+
+562
+00:16:12,970 --> 00:16:14,750
+What does this do? It has access
+
+563
+00:16:14,750 --> 00:16:15,470
+to the history.
+
+564
+00:16:16,190 --> 00:16:17,430
+So let's ask first time,
+
+565
+00:16:17,710 --> 00:16:18,410
+let's ask Mermaid flow chart.
+
+566
+00:16:18,950 --> 00:16:20,610
+And second time, let's ask today's
+
+567
+00:16:20,610 --> 00:16:21,210
+date
+
+568
+00:16:21,210 --> 00:16:22,350
+and identify the top 3 papers.
+
+569
+00:16:22,990 --> 00:16:24,570
+So it remembers what we asked.
+
+570
+00:16:25,250 --> 00:16:26,590
+But when you go via
+
+571
+00:16:26,590 --> 00:16:28,770
+API, how does ChatGPT
+
+572
+00:16:28,770 --> 00:16:30,910
+work? Because every time you are
+
+573
+00:16:30,910 --> 00:16:32,490
+sending a request from a different
+
+574
+00:16:32,490 --> 00:16:34,190
+time and zone, right?
+
+575
+00:16:34,810 --> 00:16:36,770
+So we have something
+
+576
+00:16:36,770 --> 00:16:38,850
+which is called as conversation.
+
+577
+00:16:39,490 --> 00:16:41,130
+So what happens in this scenario
+
+578
+00:16:41,130 --> 00:16:42,510
+is, so let's say this is our
+
+579
+00:16:42,510 --> 00:16:43,410
+ChatGPT API.
+
+580
+00:16:44,350 --> 00:16:46,810
+For API, first time when you hit the
+
+581
+00:16:46,810 --> 00:16:48,390
+question, you get an answer as an
+
+582
+00:16:48,390 --> 00:16:48,990
+output.
+
+583
+00:16:49,010 --> 00:16:50,830
+That is fine. Second time when you
+
+584
+00:16:50,830 --> 00:16:51,430
+hit
+
+585
+00:16:51,430 --> 00:16:52,290
+the question, you get an answer as
+
+586
+00:16:52,290 --> 00:16:52,890
+an output.
+
+587
+00:16:53,370 --> 00:16:54,530
+But when you
+
+588
+00:16:54,530 --> 00:16:55,370
+want to send it third time,
+
+589
+00:16:56,670 --> 00:16:58,550
+can you ask a question like
+
+590
+00:16:58,550 --> 00:16:59,990
+can you summarize what are the
+
+591
+00:16:59,990 --> 00:17:00,590
+previous
+
+592
+00:17:00,590 --> 00:17:02,210
+things that I have asked for you?
+
+593
+00:17:02,630 --> 00:17:04,170
+This API does not have access to
+
+594
+00:17:04,170 --> 00:17:05,330
+these two, right? Then it cannot
+
+595
+00:17:05,330 --> 00:17:05,930
+answer.
+
+596
+00:17:06,370 --> 00:17:07,830
+So what you do in such a case is
+
+597
+00:17:07,830 --> 00:17:09,390
+when you send it third time,
+
+598
+00:17:09,590 --> 00:17:12,030
+you will get the question and answer
+
+599
+00:17:12,030 --> 00:17:13,710
+question and answer from the
+
+600
+00:17:13,710 --> 00:17:14,970
+previous conversations.
+
+601
+00:17:15,470 --> 00:17:17,210
+You will append those question
+
+602
+00:17:17,210 --> 00:17:19,390
+answers into this prompt in third
+
+603
+00:17:19,390 --> 00:17:21,570
+question and you send it via API
+
+604
+00:17:21,570 --> 00:17:23,430
+and you get the response back.
+
+605
+00:17:23,430 --> 00:17:24,810
+What are you doing here?
+
+606
+00:17:25,010 --> 00:17:27,770
+You are sending the conversation
+
+607
+00:17:27,770 --> 00:17:29,830
+that has happened before
+
+608
+00:17:29,830 --> 00:17:31,210
+as a system prompt
+
+609
+00:17:31,210 --> 00:17:33,430
+or assistant prompt and then you are
+
+610
+00:17:33,430 --> 00:17:34,690
+hitting the API again.
+
+611
+00:17:34,890 --> 00:17:37,070
+So by this, this API will know
+
+612
+00:17:37,070 --> 00:17:37,830
+what happened before.
+
+613
+00:17:38,630 --> 00:17:40,470
+It is what basically memory is.
+
+614
+00:17:41,290 --> 00:17:43,070
+Very simple. What should you do?
+
+615
+00:17:43,070 --> 00:17:44,750
+You just need to save all of the
+
+616
+00:17:44,750 --> 00:17:45,990
+conversations that happened before
+
+617
+00:17:45,990 --> 00:17:47,750
+and you send it via API.
+
+618
+00:17:48,230 --> 00:17:48,970
+Very simple.
+
+619
+00:17:49,550 --> 00:17:50,550
+So what are we doing here?
+
+620
+00:17:50,550 --> 00:17:51,190
+We are doing the same thing.
+
+621
+00:17:51,430 --> 00:17:52,890
+So what we did first is
+
+622
+00:17:52,890 --> 00:17:54,410
+what is the order number dimension.
+
+623
+00:17:55,170 --> 00:17:58,650
+So let us take this prompt
+
+624
+00:17:58,650 --> 00:17:59,870
+and let us execute this.
+
+625
+00:18:00,390 --> 00:18:01,550
+So we gave the order number
+
+626
+00:18:01,550 --> 00:18:02,790
+but it did not know the
+
+627
+00:18:02,790 --> 00:18:03,530
+order number.
+
+628
+00:18:04,590 --> 00:18:06,770
+So because we did not send any
+
+629
+00:18:06,770 --> 00:18:07,870
+conversation that happens,
+
+630
+00:18:08,670 --> 00:18:09,890
+what will I do?
+
+631
+00:18:10,230 --> 00:18:12,430
+I created a memory which is
+
+632
+00:18:12,430 --> 00:18:13,370
+basically a list.
+
+633
+00:18:13,990 --> 00:18:15,170
+Within that list,
+
+634
+00:18:15,170 --> 00:18:16,310
+we have the role system,
+
+635
+00:18:16,850 --> 00:18:18,470
+the prompt system
+
+636
+00:18:18,810 --> 00:18:21,390
+and the sample ticket content.
+
+637
+00:18:21,870 --> 00:18:23,330
+Then we have the assistant
+
+638
+00:18:23,330 --> 00:18:25,410
+and after that
+
+639
+00:18:25,410 --> 00:18:27,390
+we have the reply from the
+
+640
+00:18:28,630 --> 00:18:30,310
+What are the replies that we get?
+
+641
+00:18:30,810 --> 00:18:31,790
+So what we do next?
+
+642
+00:18:31,970 --> 00:18:33,470
+This is the point where we ask
+
+643
+00:18:33,470 --> 00:18:36,030
+our question. What order number
+
+644
+00:18:36,030 --> 00:18:37,010
+did I just mention?
+
+645
+00:18:37,410 --> 00:18:41,450
+If I give the prompt like this
+
+646
+00:18:41,450 --> 00:18:43,250
+or the command like this,
+
+647
+00:18:43,250 --> 00:18:45,270
+see, I am getting the order number
+
+648
+00:18:45,270 --> 00:18:47,030
+because now
+
+649
+00:18:47,030 --> 00:18:49,230
+OpenAI API has access to
+
+650
+00:18:49,230 --> 00:18:51,130
+this memory. That is
+
+651
+00:18:51,130 --> 00:18:52,830
+how you will maintain memory in
+
+652
+00:18:52,830 --> 00:18:53,430
+LLMs.
+
+653
+00:18:53,950 --> 00:18:54,710
+Very simple.
+
+654
+00:18:55,850 --> 00:18:57,030
+And the other thing is
+
+655
+00:18:57,030 --> 00:18:58,690
+when you look at UI,
+
+656
+00:18:58,690 --> 00:18:59,990
+when you type in UI,
+
+657
+00:19:00,610 --> 00:19:02,190
+the letters will be printed like
+
+658
+00:19:02,190 --> 00:19:02,790
+this.
+
+659
+00:19:03,210 --> 00:19:04,830
+That is what we call as streaming.
+
+660
+00:19:05,490 --> 00:19:07,430
+But when I hit the API here,
+
+661
+00:19:08,170 --> 00:19:08,770
+you will not see it as direct
+
+662
+00:19:08,770 --> 00:19:09,370
+printing.
+
+663
+00:19:09,690 --> 00:19:10,290
+You will get direct output.
+
+664
+00:19:11,510 --> 00:19:13,730
+It might not be intuitive,
+
+665
+00:19:13,730 --> 00:19:14,850
+but it is fast.
+
+666
+00:19:15,470 --> 00:19:16,490
+No, you have to print
+
+667
+00:19:16,490 --> 00:19:17,510
+one by one.
+
+668
+00:19:17,550 --> 00:19:19,550
+So that is where you stream in
+
+669
+00:19:19,550 --> 00:19:20,150
+chunks.
+
+670
+00:19:20,610 --> 00:19:21,450
+Hit the same API.
+
+671
+00:19:22,090 --> 00:19:24,430
+After hitting, you write a
+
+672
+00:19:24,430 --> 00:19:25,850
+for loop. In that for loop,
+
+673
+00:19:26,130 --> 00:19:27,770
+you are navigating through the
+
+674
+00:19:27,770 --> 00:19:28,370
+output
+
+675
+00:19:28,370 --> 00:19:29,750
+and printing one by one.
+
+676
+00:19:30,070 --> 00:19:32,170
+Very simple. It is what we call
+
+677
+00:19:32,170 --> 00:19:33,510
+as a streaming output.
+
+678
+00:19:34,110 --> 00:19:36,110
+I am sorry, it is printing one by
+
+679
+00:19:36,110 --> 00:19:36,710
+one.
+
+680
+00:19:36,710 --> 00:19:38,290
+Let me execute once again.
+
+681
+00:19:38,290 --> 00:19:42,480
+See, it is just
+
+682
+00:19:42,480 --> 00:19:43,080
+like a UI.
+
+683
+00:19:43,660 --> 00:19:44,960
+So whenever you
+
+684
+00:19:44,960 --> 00:19:45,880
+use UI,
+
+685
+00:19:46,080 --> 00:19:47,400
+when you use that UI,
+
+686
+00:19:48,380 --> 00:19:50,540
+all of these things are going to
+
+687
+00:19:50,540 --> 00:19:51,140
+happen
+
+688
+00:19:51,140 --> 00:19:51,740
+in the backend.
+
+689
+00:19:51,920 --> 00:19:53,160
+If you do not use UI,
+
+690
+00:19:54,040 --> 00:19:55,960
+all of these things, if you are
+
+691
+00:19:55,960 --> 00:19:56,560
+using via
+
+692
+00:19:56,560 --> 00:19:57,900
+API, you need to build it.
+
+693
+00:19:58,540 --> 00:20:00,700
+I hope you have learned all of these
+
+694
+00:20:00,700 --> 00:20:01,700
+things in this video.
+

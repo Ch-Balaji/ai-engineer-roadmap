@@ -1,0 +1,2476 @@
+1
+00:00:00,000 --> 00:00:02,140
+Every time companies like Anthropic,
+
+2
+00:00:02,340 --> 00:00:03,720
+OpenAI, Gemini
+
+3
+00:00:03,720 --> 00:00:05,400
+They will release new LLM model
+
+4
+00:00:05,400 --> 00:00:07,500
+And they will claim they have the
+
+5
+00:00:07,500 --> 00:00:08,800
+world's best performing model
+
+6
+00:00:09,320 --> 00:00:11,000
+And they will show you these metrics
+
+7
+00:00:12,120 --> 00:00:14,920
+But if you observe clearly
+
+8
+00:00:14,920 --> 00:00:17,420
+The metric called MMLU is almost
+
+9
+00:00:17,420 --> 00:00:19,100
+same across all of these models
+
+10
+00:00:19,100 --> 00:00:22,220
+If that metric is almost same for
+
+11
+00:00:22,220 --> 00:00:22,820
+all
+
+12
+00:00:22,820 --> 00:00:24,300
+How are they comparing and saying
+
+13
+00:00:24,300 --> 00:00:25,880
+that our model is the best in the
+
+14
+00:00:25,880 --> 00:00:26,480
+world
+
+15
+00:00:26,480 --> 00:00:29,580
+And to know which is correct in this
+
+16
+00:00:29,580 --> 00:00:31,700
+I have gone through and read every
+
+17
+00:00:31,700 --> 00:00:33,880
+single research paper on topics like
+
+18
+00:00:33,880 --> 00:00:37,420
+MMLU, MMLU Pro, GPQA, SWE-Bench
+
+19
+00:00:37,420 --> 00:00:38,020
+Testing
+
+20
+00:00:38,020 --> 00:00:39,960
+Tool Testing, and many more
+
+21
+00:00:39,960 --> 00:00:41,700
+So that you don't need to read all
+
+22
+00:00:41,700 --> 00:00:42,500
+of these papers
+
+23
+00:00:42,500 --> 00:00:45,180
+So in this video we are going to
+
+24
+00:00:45,180 --> 00:00:45,780
+understand
+
+25
+00:00:45,780 --> 00:00:47,780
+Every single metric that is needed
+
+26
+00:00:47,780 --> 00:00:49,260
+to evaluate LLMs
+
+27
+00:00:49,260 --> 00:00:50,240
+After watching this video
+
+28
+00:00:50,840 --> 00:00:53,020
+You will never see the benchmarks of
+
+29
+00:00:53,020 --> 00:00:53,780
+the LLMs
+
+30
+00:00:53,780 --> 00:00:55,620
+Like the way you used to see before
+
+31
+00:00:55,620 --> 00:00:57,400
+And I will also explain
+
+32
+00:00:57,400 --> 00:00:59,760
+How to choose the best model for
+
+33
+00:00:59,760 --> 00:01:01,220
+your specific use case
+
+34
+00:01:01,220 --> 00:01:03,020
+So without any delay let's get
+
+35
+00:01:03,020 --> 00:01:03,620
+started
+
+36
+00:01:03,620 --> 00:01:07,000
+Before we understand how to evaluate
+
+37
+00:01:07,000 --> 00:01:07,600
+LLMs
+
+38
+00:01:07,620 --> 00:01:08,940
+Before we see the metrics
+
+39
+00:01:08,940 --> 00:01:11,340
+We will see what are all the common
+
+40
+00:01:11,340 --> 00:01:11,980
+mistakes
+
+41
+00:01:11,980 --> 00:01:14,380
+That people usually make while
+
+42
+00:01:14,380 --> 00:01:15,660
+choosing the LLM models
+
+43
+00:01:15,660 --> 00:01:17,940
+So the first mistake is
+
+44
+00:01:17,940 --> 00:01:19,980
+Thinking that the higher score is
+
+45
+00:01:19,980 --> 00:01:20,700
+better model
+
+46
+00:01:20,700 --> 00:01:23,080
+If you notice properly
+
+47
+00:01:23,080 --> 00:01:24,620
+For all the top models
+
+48
+00:01:24,620 --> 00:01:27,760
+Opus 4.8, ChatGPT 5.5,
+
+49
+00:01:27,880 --> 00:01:31,200
+DeepSeek V4, Gemini 3.5 Pro
+
+50
+00:01:31,200 --> 00:01:32,100
+For all of them
+
+51
+00:01:32,100 --> 00:01:35,580
+Almost MMLU score is 89 -92
+
+52
+00:01:35,580 --> 00:01:36,480
+%
+
+53
+00:01:36,480 --> 00:01:38,340
+Almost 1 -2 % difference
+
+54
+00:01:38,340 --> 00:01:40,640
+In that 1 -2 % difference
+
+55
+00:01:40,640 --> 00:01:43,040
+How are you going to evaluate which
+
+56
+00:01:43,040 --> 00:01:44,300
+model is better model
+
+57
+00:01:44,300 --> 00:01:46,220
+That is the first mistake
+
+58
+00:01:46,220 --> 00:01:48,180
+And the second mistake is
+
+59
+00:01:48,180 --> 00:01:49,500
+Trusting one benchmark
+
+60
+00:01:49,500 --> 00:01:52,600
+If you look at any of the latest LLM
+
+61
+00:01:52,600 --> 00:01:53,200
+releases
+
+62
+00:01:53,200 --> 00:01:55,480
+They have a sheet of metrics
+
+63
+00:01:55,480 --> 00:01:58,620
+It has different different metrics
+
+64
+00:01:58,620 --> 00:02:00,080
+That are evaluated on different
+
+65
+00:02:00,080 --> 00:02:01,460
+different types of things
+
+66
+00:02:01,460 --> 00:02:04,400
+They are called benchmarks
+
+67
+00:02:04,400 --> 00:02:07,600
+So some models are good at reasoning
+
+68
+00:02:07,600 --> 00:02:10,460
+Some models are very good at coding
+
+69
+00:02:10,460 --> 00:02:13,160
+Some models are very good at agentic
+
+70
+00:02:13,160 --> 00:02:13,760
+coding
+
+71
+00:02:13,760 --> 00:02:15,620
+Some models are very good at art
+
+72
+00:02:15,620 --> 00:02:18,740
+So not every single model is good at
+
+73
+00:02:18,740 --> 00:02:19,760
+every single thing
+
+74
+00:02:19,760 --> 00:02:22,020
+So that's why when you look at
+
+75
+00:02:22,020 --> 00:02:22,620
+benchmarks
+
+76
+00:02:22,620 --> 00:02:24,640
+We have different list of benchmarks
+
+77
+00:02:25,400 --> 00:02:27,240
+In that you need to choose
+
+78
+00:02:27,240 --> 00:02:29,140
+Which is the one which is applicable
+
+79
+00:02:29,140 --> 00:02:30,740
+for your use case
+
+80
+00:02:30,740 --> 00:02:32,900
+And the third one is the data
+
+81
+00:02:32,900 --> 00:02:33,860
+contamination
+
+82
+00:02:33,860 --> 00:02:35,960
+These LLMs are very popular for the
+
+83
+00:02:35,960 --> 00:02:38,060
+last 4 -5 years
+
+84
+00:02:38,060 --> 00:02:39,300
+So before that
+
+85
+00:02:39,300 --> 00:02:42,300
+They have created a lot of data sets
+
+86
+00:02:42,300 --> 00:02:43,700
+to evaluate these LLMs
+
+87
+00:02:43,700 --> 00:02:45,980
+In the last 4 -5 years
+
+88
+00:02:45,980 --> 00:02:47,940
+All that data is being fed to these
+
+89
+00:02:47,940 --> 00:02:48,680
+new models
+
+90
+00:02:49,940 --> 00:02:52,840
+That means the paper got leaked
+
+91
+00:02:52,840 --> 00:02:55,340
+And that is why these models can
+
+92
+00:02:55,340 --> 00:02:57,140
+score very high in the benchmarks
+
+93
+00:02:57,140 --> 00:02:59,340
+And sometimes they don't perform
+
+94
+00:02:59,340 --> 00:03:01,000
+well in the real time
+
+95
+00:03:01,000 --> 00:03:03,940
+And the last one which is the mixing
+
+96
+00:03:03,940 --> 00:03:05,600
+of different leaderboards
+
+97
+00:03:05,600 --> 00:03:07,640
+Because as we talked about
+
+98
+00:03:07,640 --> 00:03:08,240
+benchmarks
+
+99
+00:03:08,280 --> 00:03:10,180
+Different different models have
+
+100
+00:03:10,180 --> 00:03:11,620
+different different capabilities
+
+101
+00:03:11,620 --> 00:03:12,940
+Where they are good at
+
+102
+00:03:12,940 --> 00:03:14,700
+So according to that
+
+103
+00:03:14,700 --> 00:03:15,740
+They have different different
+
+104
+00:03:15,740 --> 00:03:16,340
+leaderboards
+
+105
+00:03:16,740 --> 00:03:19,060
+You cannot see at one leaderboard
+
+106
+00:03:19,060 --> 00:03:19,660
+and say
+
+107
+00:03:19,660 --> 00:03:20,760
+This model is good
+
+108
+00:03:20,760 --> 00:03:23,000
+You need to look at what is the
+
+109
+00:03:23,000 --> 00:03:24,160
+specific use case
+
+110
+00:03:24,160 --> 00:03:26,900
+Now for the actual LLM evaluation
+
+111
+00:03:26,900 --> 00:03:29,600
+There are three different types of
+
+112
+00:03:29,600 --> 00:03:31,160
+techniques that usually market
+
+113
+00:03:31,160 --> 00:03:31,940
+follows
+
+114
+00:03:31,940 --> 00:03:34,360
+One is the typical benchmarks
+
+115
+00:03:34,360 --> 00:03:37,400
+You can think of them like a board
+
+116
+00:03:37,400 --> 00:03:38,000
+exams
+
+117
+00:03:38,000 --> 00:03:41,080
+They are specific set of data sets
+
+118
+00:03:41,080 --> 00:03:44,440
+They will try to evaluate on those
+
+119
+00:03:44,440 --> 00:03:45,040
+data sets
+
+120
+00:03:45,040 --> 00:03:46,160
+How well the large language model is
+
+121
+00:03:46,160 --> 00:03:46,760
+performing
+
+122
+00:03:46,760 --> 00:03:47,500
+In that
+
+123
+00:03:47,500 --> 00:03:50,020
+Some different metrics are
+
+124
+00:03:50,020 --> 00:03:53,760
+MMLU, MMLU Pro, SWE
+
+125
+00:03:53,760 --> 00:03:56,880
+Bench, GPQA Diamond and Frontier
+
+126
+00:03:56,880 --> 00:03:57,480
+Math
+
+127
+00:03:57,480 --> 00:04:00,480
+Now let's go ahead and understand
+
+128
+00:04:00,480 --> 00:04:01,980
+what is it
+
+129
+00:04:01,980 --> 00:04:03,040
+So what is the first thing
+
+130
+00:04:03,040 --> 00:04:04,160
+MMLU
+
+131
+00:04:04,160 --> 00:04:06,860
+MMLU means measuring massive
+
+132
+00:04:06,860 --> 00:04:09,160
+multitask language understanding
+
+133
+00:04:09,160 --> 00:04:12,400
+So what they do in this
+
+134
+00:04:12,400 --> 00:04:14,020
+They will try to evaluate
+
+135
+00:04:14,020 --> 00:04:15,280
+Performance in our large language
+
+136
+00:04:15,280 --> 00:04:16,640
+model
+
+137
+00:04:16,640 --> 00:04:19,400
+Across different different type of
+
+138
+00:04:19,400 --> 00:04:20,000
+domains
+
+139
+00:04:20,000 --> 00:04:22,200
+Let's say like this
+
+140
+00:04:22,200 --> 00:04:24,000
+Abstract algebra, anatomy,
+
+141
+00:04:24,420 --> 00:04:26,100
+astronomy, business ethics,
+
+142
+00:04:26,340 --> 00:04:27,400
+clinical knowledge
+
+143
+00:04:27,400 --> 00:04:29,860
+College biology, chemistry,
+
+144
+00:04:30,300 --> 00:04:31,500
+computer science, mathematics,
+
+145
+00:04:31,720 --> 00:04:32,320
+physics
+
+146
+00:04:32,320 --> 00:04:34,840
+I mean this is like a generalized
+
+147
+00:04:34,840 --> 00:04:35,720
+question and answers
+
+148
+00:04:35,720 --> 00:04:37,840
+In different different domains
+
+149
+00:04:37,840 --> 00:04:39,520
+In all those domains
+
+150
+00:04:39,520 --> 00:04:42,760
+How our LLM model performs
+
+151
+00:04:42,760 --> 00:04:44,700
+There are so many different domains
+
+152
+00:04:44,700 --> 00:04:46,140
+You don't need to go through all of
+
+153
+00:04:46,140 --> 00:04:46,960
+these things
+
+154
+00:04:46,960 --> 00:04:48,300
+And based on that
+
+155
+00:04:48,300 --> 00:04:50,880
+They will give you how much accurate
+
+156
+00:04:50,880 --> 00:04:52,920
+the LLM answers in all of these
+
+157
+00:04:52,920 --> 00:04:53,520
+questions
+
+158
+00:04:53,520 --> 00:04:55,280
+That is what a simple thing
+
+159
+00:04:55,280 --> 00:04:57,080
+And another thing is
+
+160
+00:04:57,080 --> 00:04:58,300
+MMLU Pro
+
+161
+00:04:58,300 --> 00:05:01,240
+MMLU Pro is based on different
+
+162
+00:05:01,240 --> 00:05:01,840
+domains
+
+163
+00:05:01,840 --> 00:05:03,860
+They create even harder questions
+
+164
+00:05:03,860 --> 00:05:07,100
+So they can evaluate even better
+
+165
+00:05:07,100 --> 00:05:10,280
+So if you look at MMLU and MMLU Pro
+
+166
+00:05:10,280 --> 00:05:12,780
+Always lean towards the number which
+
+167
+00:05:12,780 --> 00:05:14,940
+is better in the MMLU Pro
+
+168
+00:05:14,940 --> 00:05:15,760
+First thing
+
+169
+00:05:15,760 --> 00:05:17,640
+And let's look at the second thing
+
+170
+00:05:17,640 --> 00:05:19,540
+Which is called Chatbot Arena
+
+171
+00:05:20,100 --> 00:05:21,720
+What is this Chatbot Arena
+
+172
+00:05:21,720 --> 00:05:25,460
+It is a website that is built by
+
+173
+00:05:25,460 --> 00:05:26,100
+humans
+
+174
+00:05:26,100 --> 00:05:28,160
+Where LLMs are there
+
+175
+00:05:28,160 --> 00:05:29,440
+They will ask questions
+
+176
+00:05:29,440 --> 00:05:30,660
+They will answer
+
+177
+00:05:30,660 --> 00:05:31,640
+They will say whether the answer is
+
+178
+00:05:31,640 --> 00:05:32,440
+correct
+
+179
+00:05:33,220 --> 00:05:34,760
+People will evaluate
+
+180
+00:05:34,760 --> 00:05:35,960
+People like us
+
+181
+00:05:35,960 --> 00:05:38,400
+Not the companies who built these
+
+182
+00:05:38,400 --> 00:05:39,140
+LLMs
+
+183
+00:05:39,140 --> 00:05:40,640
+That is what we have something
+
+184
+00:05:40,640 --> 00:05:42,040
+called as Chatbot Arena
+
+185
+00:05:42,680 --> 00:05:44,760
+Usually compared to our leaderboard
+
+186
+00:05:44,760 --> 00:05:47,460
+Chatbot Arena benchmarks are much
+
+187
+00:05:47,460 --> 00:05:48,060
+better
+
+188
+00:05:48,060 --> 00:05:51,240
+Because these benchmarks are derived
+
+189
+00:05:51,240 --> 00:05:53,240
+based on the user's preference
+
+190
+00:05:53,240 --> 00:05:54,840
+Based on our user's preference
+
+191
+00:05:54,840 --> 00:05:57,380
+Human preference data collection
+
+192
+00:05:57,380 --> 00:05:59,120
+Pair wise comparison to rankings
+
+193
+00:05:59,120 --> 00:06:01,060
+There are so many things that they
+
+194
+00:06:01,060 --> 00:06:02,060
+have did this
+
+195
+00:06:02,060 --> 00:06:03,700
+And Chatbot Arena is usually the
+
+196
+00:06:03,700 --> 00:06:04,340
+better option
+
+197
+00:06:04,340 --> 00:06:07,700
+And another thing is terminal bench
+
+198
+00:06:07,700 --> 00:06:09,340
+Terminal bench is
+
+199
+00:06:09,900 --> 00:06:13,380
+How well the LLM is good at
+
+200
+00:06:13,380 --> 00:06:16,060
+understanding and doing tasks via
+
+201
+00:06:16,060 --> 00:06:17,640
+command line interface
+
+202
+00:06:17,640 --> 00:06:19,780
+Command line interface is basically
+
+203
+00:06:20,180 --> 00:06:22,680
+You are talking to your machine via
+
+204
+00:06:22,680 --> 00:06:23,500
+commands
+
+205
+00:06:23,500 --> 00:06:25,860
+So there are terminals in our
+
+206
+00:06:25,860 --> 00:06:26,460
+laptops
+
+207
+00:06:26,460 --> 00:06:28,880
+And almost every single thing that
+
+208
+00:06:28,880 --> 00:06:30,960
+you can do on your machine
+
+209
+00:06:30,960 --> 00:06:32,720
+Can be done via terminals
+
+210
+00:06:32,720 --> 00:06:34,380
+You can talk via CLI through command
+
+211
+00:06:34,380 --> 00:06:35,220
+line interface
+
+212
+00:06:35,220 --> 00:06:36,640
+You can talk to AWS
+
+213
+00:06:36,640 --> 00:06:37,880
+You can talk to Github
+
+214
+00:06:37,880 --> 00:06:39,720
+You can talk to internet via CLI
+
+215
+00:06:40,440 --> 00:06:43,200
+So what works well in CLI
+
+216
+00:06:43,720 --> 00:06:47,020
+The LLM is working very good at
+
+217
+00:06:47,020 --> 00:06:48,180
+executing tasks
+
+218
+00:06:48,180 --> 00:06:50,380
+By doing a lot of other stuff
+
+219
+00:06:50,380 --> 00:06:51,780
+So this is a paper
+
+220
+00:06:51,780 --> 00:06:55,800
+They will also evaluate how good the
+
+221
+00:06:55,800 --> 00:06:57,460
+LLM is in these tasks
+
+222
+00:06:57,460 --> 00:06:58,500
+Terminal bench
+
+223
+00:06:58,500 --> 00:07:00,620
+If you go through this paper
+
+224
+00:07:00,620 --> 00:07:03,680
+See how it performs in GPT 5.2 Codex
+
+225
+00:07:03,680 --> 00:07:05,000
+Claude
+
+226
+00:07:06,020 --> 00:07:07,200
+Resolution rate
+
+227
+00:07:07,200 --> 00:07:08,780
+Opus 4.5
+
+228
+00:07:08,780 --> 00:07:09,880
+Gemini 3.0
+
+229
+00:07:10,260 --> 00:07:11,440
+And Gemini 3 flash
+
+230
+00:07:11,440 --> 00:07:12,500
+GPT 5
+
+231
+00:07:12,500 --> 00:07:14,260
+Kimi K2 instruction model
+
+232
+00:07:14,260 --> 00:07:18,020
+So there are a lot of people who are
+
+233
+00:07:18,020 --> 00:07:19,940
+doing these evaluations for us
+
+234
+00:07:19,940 --> 00:07:22,640
+So that we can specifically rely on
+
+235
+00:07:22,640 --> 00:07:24,080
+which model is doing it
+
+236
+00:07:24,080 --> 00:07:24,760
+Which task
+
+237
+00:07:24,760 --> 00:07:27,060
+And the next paper which is called
+
+238
+00:07:27,060 --> 00:07:27,660
+GPQA
+
+239
+00:07:27,660 --> 00:07:30,440
+This GPQA is
+
+240
+00:07:30,440 --> 00:07:31,100
+It is like
+
+241
+00:07:31,100 --> 00:07:31,920
+Let's say there is a Google
+
+242
+00:07:31,920 --> 00:07:32,540
+professor
+
+243
+00:07:32,540 --> 00:07:34,260
+He is doing PhD
+
+244
+00:07:34,260 --> 00:07:36,960
+For such PhD graduate level
+
+245
+00:07:36,960 --> 00:07:37,640
+professors
+
+246
+00:07:37,640 --> 00:07:39,340
+You give questions and answers
+
+247
+00:07:39,340 --> 00:07:40,800
+If you give such questions,
+
+248
+00:07:41,160 --> 00:07:42,540
+what kind of answers will you give
+
+249
+00:07:42,540 --> 00:07:44,300
+In the same way
+
+250
+00:07:44,300 --> 00:07:45,540
+By preparing a different set of
+
+251
+00:07:45,540 --> 00:07:47,160
+questions and answers
+
+252
+00:07:47,160 --> 00:07:49,560
+And that are at a level of graduate
+
+253
+00:07:49,560 --> 00:07:50,980
+level Google professors
+
+254
+00:07:50,980 --> 00:07:52,480
+They will evaluate
+
+255
+00:07:52,480 --> 00:07:55,100
+And the LLMs how they are answering
+
+256
+00:07:55,100 --> 00:07:58,320
+If they answer correctly or if they
+
+257
+00:07:58,320 --> 00:07:58,920
+answer well
+
+258
+00:07:58,920 --> 00:07:59,520
+By evaluating
+
+259
+00:07:59,520 --> 00:08:00,860
+They will give us a score
+
+260
+00:08:00,860 --> 00:08:01,460
+See
+
+261
+00:08:01,460 --> 00:08:03,580
+Question writing and expert
+
+262
+00:08:03,580 --> 00:08:04,260
+validation
+
+263
+00:08:04,260 --> 00:08:05,240
+Non -expert validation
+
+264
+00:08:05,700 --> 00:08:07,380
+And after doing all this
+
+265
+00:08:07,380 --> 00:08:09,500
+They will give the score for these
+
+266
+00:08:09,500 --> 00:08:10,100
+questions
+
+267
+00:08:10,100 --> 00:08:12,980
+So whichever model performs well in
+
+268
+00:08:12,980 --> 00:08:13,580
+this
+
+269
+00:08:13,580 --> 00:08:15,260
+Those are very good at research
+
+270
+00:08:15,260 --> 00:08:15,860
+level
+
+271
+00:08:15,860 --> 00:08:18,340
+You can look at Opus 4.8
+
+272
+00:08:18,340 --> 00:08:19,120
+And mythos
+
+273
+00:08:19,120 --> 00:08:20,900
+The recent model Fable 5
+
+274
+00:08:20,900 --> 00:08:23,340
+They are very good at GPQA
+
+275
+00:08:23,340 --> 00:08:25,240
+And that is why they are very good
+
+276
+00:08:25,240 --> 00:08:26,000
+at research power
+
+277
+00:08:26,000 --> 00:08:28,140
+And then next we have something
+
+278
+00:08:28,140 --> 00:08:29,560
+which is called as
+
+279
+00:08:29,560 --> 00:08:31,800
+Large language models evaluation on
+
+280
+00:08:31,800 --> 00:08:32,820
+a trained code
+
+281
+00:08:32,820 --> 00:08:34,420
+What they do is
+
+282
+00:08:34,420 --> 00:08:36,260
+Taking multiple production level
+
+283
+00:08:36,260 --> 00:08:37,580
+GitHub repos
+
+284
+00:08:37,580 --> 00:08:41,200
+How our LLMs maintain those repos
+
+285
+00:08:41,200 --> 00:08:43,060
+Whether these LLMs are building new
+
+286
+00:08:43,060 --> 00:08:43,660
+stuff
+
+287
+00:08:43,660 --> 00:08:45,640
+Are they correctly pushing the code
+
+288
+00:08:45,640 --> 00:08:47,460
+How are they handling merge requests
+
+289
+00:08:47,460 --> 00:08:49,200
+Are they deploying the code or not
+
+290
+00:08:49,200 --> 00:08:51,540
+They test all of this live on a
+
+291
+00:08:51,540 --> 00:08:52,480
+production GitHub code
+
+292
+00:08:52,480 --> 00:08:55,540
+So even that is also being
+
+293
+00:08:55,540 --> 00:08:56,140
+calculated
+
+294
+00:08:56,140 --> 00:08:57,760
+While evaluating LLMs
+
+295
+00:08:57,760 --> 00:08:58,820
+And one more
+
+296
+00:08:58,820 --> 00:09:00,300
+Software engineering bench
+
+297
+00:09:00,300 --> 00:09:01,420
+How software engineering development
+
+298
+00:09:01,420 --> 00:09:02,320
+is done
+
+299
+00:09:02,320 --> 00:09:03,560
+And one more paper
+
+300
+00:09:03,560 --> 00:09:04,740
+Stable tool bench
+
+301
+00:09:04,740 --> 00:09:06,520
+How tools are used more
+
+302
+00:09:06,520 --> 00:09:08,760
+And then next training verifies
+
+303
+00:09:08,760 --> 00:09:10,240
+To solve math real world problems
+
+304
+00:09:10,240 --> 00:09:11,840
+How real world math problems are
+
+305
+00:09:11,840 --> 00:09:12,440
+solved
+
+306
+00:09:12,440 --> 00:09:14,480
+There are so many things where
+
+307
+00:09:14,480 --> 00:09:17,160
+These LLMs are being evaluated to
+
+308
+00:09:17,160 --> 00:09:18,020
+That is why
+
+309
+00:09:18,020 --> 00:09:18,940
+Taking only one metric
+
+310
+00:09:18,940 --> 00:09:21,000
+And saying that this metric is good
+
+311
+00:09:21,000 --> 00:09:23,900
+You need to look at different
+
+312
+00:09:23,900 --> 00:09:24,620
+different metrics
+
+313
+00:09:24,620 --> 00:09:26,620
+And then the next one which is
+
+314
+00:09:26,620 --> 00:09:27,220
+called
+
+315
+00:09:27,220 --> 00:09:27,820
+Human evolution
+
+316
+00:09:27,820 --> 00:09:29,820
+Of course we all know
+
+317
+00:09:29,820 --> 00:09:31,660
+Once the LLMs are released
+
+318
+00:09:31,660 --> 00:09:33,080
+We all use them
+
+319
+00:09:33,080 --> 00:09:34,960
+And we will give a review as well
+
+320
+00:09:34,960 --> 00:09:35,760
+Yes or no
+
+321
+00:09:35,760 --> 00:09:37,300
+Whether they are good or not
+
+322
+00:09:37,900 --> 00:09:40,780
+That is what human evolution is
+
+323
+00:09:40,780 --> 00:09:42,680
+In that chartbot arena is one of the
+
+324
+00:09:42,680 --> 00:09:43,280
+top
+
+325
+00:09:43,280 --> 00:09:46,240
+And there are 6.8 million plus votes
+
+326
+00:09:46,240 --> 00:09:48,440
+And it is open source to all the
+
+327
+00:09:48,440 --> 00:09:49,040
+people
+
+328
+00:09:49,040 --> 00:09:52,320
+Based on the model that we like
+
+329
+00:09:52,320 --> 00:09:54,060
+And this is a real world test
+
+330
+00:09:54,060 --> 00:09:56,000
+And these cannot be faked
+
+331
+00:09:56,000 --> 00:09:58,120
+And the third one which is
+
+332
+00:09:58,120 --> 00:09:59,240
+LLM as a judge
+
+333
+00:09:59,240 --> 00:10:01,020
+You have built an LLM
+
+334
+00:10:01,020 --> 00:10:03,340
+To evaluate that LLM
+
+335
+00:10:03,340 --> 00:10:05,580
+You use one more LLM
+
+336
+00:10:05,580 --> 00:10:07,360
+So in that you have different
+
+337
+00:10:07,360 --> 00:10:07,960
+different
+
+338
+00:10:07,960 --> 00:10:08,560
+Types of techniques
+
+339
+00:10:08,560 --> 00:10:10,120
+Which are like G avalani
+
+340
+00:10:10,120 --> 00:10:11,100
+Deep avalani
+
+341
+00:10:11,100 --> 00:10:11,780
+Ragaas
+
+342
+00:10:11,780 --> 00:10:12,940
+Custom rubiks
+
+343
+00:10:13,700 --> 00:10:14,960
+There are so many
+
+344
+00:10:14,960 --> 00:10:16,020
+But these are
+
+345
+00:10:16,020 --> 00:10:17,360
+One by one
+
+346
+00:10:17,360 --> 00:10:18,000
+Actually
+
+347
+00:10:18,000 --> 00:10:19,840
+When we build an LLM
+
+348
+00:10:19,840 --> 00:10:22,240
+If another LLM is already judged
+
+349
+00:10:22,840 --> 00:10:24,500
+That should be even more powerful
+
+350
+00:10:24,500 --> 00:10:26,480
+But who evaluated that powerful
+
+351
+00:10:26,480 --> 00:10:27,080
+model
+
+352
+00:10:27,620 --> 00:10:29,120
+We don't know
+
+353
+00:10:29,120 --> 00:10:31,100
+So there are so many things that
+
+354
+00:10:31,100 --> 00:10:33,420
+Can be done while evaluating LLMs
+
+355
+00:10:33,420 --> 00:10:34,240
+Not just one
+
+356
+00:10:34,740 --> 00:10:36,980
+So when you go via benchmarks
+
+357
+00:10:36,980 --> 00:10:38,040
+What is this
+
+358
+00:10:38,040 --> 00:10:39,460
+These can be faked
+
+359
+00:10:39,460 --> 00:10:41,780
+And it is not too reliable these
+
+360
+00:10:41,780 --> 00:10:42,380
+days
+
+361
+00:10:42,380 --> 00:10:44,300
+And when you go via human evolutions
+
+362
+00:10:44,300 --> 00:10:47,100
+Overall the best quality I would say
+
+363
+00:10:47,100 --> 00:10:49,660
+And when you go via LLM as a judge
+
+364
+00:10:49,660 --> 00:10:51,940
+You can use for a specific use case
+
+365
+00:10:51,940 --> 00:10:53,880
+If you want quick and faster results
+
+366
+00:10:53,880 --> 00:10:55,700
+Till now we have learned
+
+367
+00:10:55,700 --> 00:10:56,860
+All the different metrics
+
+368
+00:10:56,860 --> 00:10:58,980
+Let's look at it in a single glance
+
+369
+00:10:58,980 --> 00:11:00,440
+What is MMLU
+
+370
+00:11:00,440 --> 00:11:02,680
+They test on general knowledge
+
+371
+00:11:04,740 --> 00:11:07,240
+And almost 92 % of all
+
+372
+00:11:07,240 --> 00:11:07,840
+Achieved
+
+373
+00:11:07,980 --> 00:11:09,440
+And MMLU pro
+
+374
+00:11:10,380 --> 00:11:11,900
+Harder version than MMLU
+
+375
+00:11:11,900 --> 00:11:13,300
+10 multiple choice for every
+
+376
+00:11:13,300 --> 00:11:13,900
+question
+
+377
+00:11:13,900 --> 00:11:16,980
+And it is still relevant right now
+
+378
+00:11:16,980 --> 00:11:18,440
+It is not yet saturated
+
+379
+00:11:18,440 --> 00:11:20,660
+And software engineering bench
+
+380
+00:11:20,660 --> 00:11:22,900
+On real github issues
+
+381
+00:11:22,900 --> 00:11:24,200
+This is not saturated
+
+382
+00:11:24,200 --> 00:11:26,540
+Even if you look at the latest
+
+383
+00:11:26,540 --> 00:11:27,140
+models
+
+384
+00:11:27,140 --> 00:11:28,960
+They are still getting better
+
+385
+00:11:28,960 --> 00:11:30,520
+At agentic coding
+
+386
+00:11:30,520 --> 00:11:31,900
+And GPQA
+
+387
+00:11:32,540 --> 00:11:33,600
+This is basically
+
+388
+00:11:33,600 --> 00:11:34,700
+PHD level science
+
+389
+00:11:34,700 --> 00:11:37,120
+This is not yet saturated
+
+390
+00:11:37,120 --> 00:11:39,400
+Because we still see some models
+
+391
+00:11:39,400 --> 00:11:42,020
+Which are approximately at 65 %
+
+392
+00:11:42,020 --> 00:11:43,840
+There is a lot of scope
+
+393
+00:11:43,840 --> 00:11:45,620
+To learn for these LLMs
+
+394
+00:11:45,620 --> 00:11:47,740
+And frontier math is not yet
+
+395
+00:11:47,740 --> 00:11:48,360
+saturated
+
+396
+00:11:48,360 --> 00:11:49,820
+We still have
+
+397
+00:11:49,820 --> 00:11:51,380
+Less than 80 % results
+
+398
+00:11:51,380 --> 00:11:52,940
+Only for the latest models
+
+399
+00:11:52,940 --> 00:11:55,060
+And humanity's last exam
+
+400
+00:11:55,060 --> 00:11:56,300
+What is this
+
+401
+00:11:56,300 --> 00:11:58,700
+Like our AI, like our robo cinema
+
+402
+00:12:00,560 --> 00:12:03,060
+They have all the ethics
+
+403
+00:12:03,060 --> 00:12:04,440
+Psychological values
+
+404
+00:12:04,440 --> 00:12:05,340
+And all that stuff
+
+405
+00:12:06,020 --> 00:12:07,640
+That is what at least
+
+406
+00:12:07,640 --> 00:12:09,060
+Humanity's last exam
+
+407
+00:12:09,060 --> 00:12:11,380
+And it is not yet saturated
+
+408
+00:12:11,380 --> 00:12:12,560
+And chatbot arena
+
+409
+00:12:12,560 --> 00:12:14,360
+Which is also really good one
+
+410
+00:12:14,360 --> 00:12:15,460
+Now you will say
+
+411
+00:12:15,460 --> 00:12:17,180
+How to remember all these names
+
+412
+00:12:17,180 --> 00:12:20,040
+It is very hard to understand and
+
+413
+00:12:20,040 --> 00:12:21,240
+remember these things
+
+414
+00:12:21,240 --> 00:12:22,280
+That is why
+
+415
+00:12:22,280 --> 00:12:23,820
+What I have done is
+
+416
+00:12:23,820 --> 00:12:26,120
+I have classified all of these
+
+417
+00:12:26,120 --> 00:12:26,720
+results
+
+418
+00:12:26,720 --> 00:12:29,400
+Into the exams that we got used to
+
+419
+00:12:29,600 --> 00:12:30,580
+So MMLU
+
+420
+00:12:30,580 --> 00:12:32,800
+Is for 10th class exams
+
+421
+00:12:32,800 --> 00:12:34,800
+Everyone is almost passing
+
+422
+00:12:34,800 --> 00:12:36,660
+And MMLU pro
+
+423
+00:12:36,660 --> 00:12:38,640
+Is for 12th class exams
+
+424
+00:12:38,640 --> 00:12:40,440
+Everyone is going to pass
+
+425
+00:12:40,440 --> 00:12:41,580
+But little bit hard
+
+426
+00:12:41,580 --> 00:12:43,900
+And then GPQI
+
+427
+00:12:44,660 --> 00:12:46,660
+Is for gate exams
+
+428
+00:12:46,660 --> 00:12:48,120
+It is a bit difficult
+
+429
+00:12:48,120 --> 00:12:49,860
+To crack this exam
+
+430
+00:12:49,860 --> 00:12:52,780
+And then SWE Bench
+
+431
+00:12:52,780 --> 00:12:53,420
+Is for
+
+432
+00:12:53,420 --> 00:12:54,660
+After completing your education
+
+433
+00:12:54,660 --> 00:12:57,000
+You joined an internship
+
+434
+00:12:57,000 --> 00:12:58,980
+And the work you do there is
+
+435
+00:12:58,980 --> 00:13:00,280
+difficult
+
+436
+00:13:00,280 --> 00:13:01,820
+And then arena LO
+
+437
+00:13:01,820 --> 00:13:03,740
+Is basically job interview
+
+438
+00:13:03,740 --> 00:13:06,130
+And Frontier Math test
+
+439
+00:13:06,500 --> 00:13:07,990
+Is the IITJ
+
+440
+00:13:08,300 --> 00:13:09,920
+Advanced exam
+
+441
+00:13:09,920 --> 00:13:10,800
+Hopefully
+
+442
+00:13:10,800 --> 00:13:12,980
+With the names of these exams
+
+443
+00:13:13,370 --> 00:13:14,280
+You will remember the names of LLM
+
+444
+00:13:14,280 --> 00:13:15,960
+Evaluation Metrics
+
+445
+00:13:15,960 --> 00:13:19,520
+And the next part is LLM as a judge
+
+446
+00:13:19,520 --> 00:13:21,920
+There are three different modes
+
+447
+00:13:21,920 --> 00:13:23,980
+First mode is
+
+448
+00:13:23,980 --> 00:13:25,520
+Single Output Scoring
+
+449
+00:13:25,520 --> 00:13:27,040
+You have a question
+
+450
+00:13:27,040 --> 00:13:28,000
+That question is answered by
+
+451
+00:13:28,000 --> 00:13:30,240
+Rag chatbot
+
+452
+00:13:30,240 --> 00:13:32,300
+And then the answer is
+
+453
+00:13:32,300 --> 00:13:33,180
+As a judge
+
+454
+00:13:34,110 --> 00:13:36,000
+Whether this answer contains
+
+455
+00:13:36,000 --> 00:13:37,640
+The information for the given
+
+456
+00:13:37,640 --> 00:13:38,240
+question
+
+457
+00:13:38,240 --> 00:13:38,980
+Or not
+
+458
+00:13:38,980 --> 00:13:40,740
+You can put the rating
+
+459
+00:13:40,740 --> 00:13:42,020
+That is first thing
+
+460
+00:13:42,020 --> 00:13:43,500
+And second thing is
+
+461
+00:13:43,500 --> 00:13:44,780
+Pair wise comparison
+
+462
+00:13:44,780 --> 00:13:47,720
+You have multiple answers
+
+463
+00:13:47,720 --> 00:13:50,300
+They are given to the judge
+
+464
+00:13:50,300 --> 00:13:52,700
+The judge will evaluate
+
+465
+00:13:52,700 --> 00:13:54,640
+Which answer worked better
+
+466
+00:13:54,640 --> 00:13:56,560
+These multiple answers
+
+467
+00:13:56,560 --> 00:13:57,720
+Will give multiple models
+
+468
+00:13:58,560 --> 00:14:00,500
+That is what we call it as a pair
+
+469
+00:14:00,500 --> 00:14:01,100
+wise
+
+470
+00:14:01,100 --> 00:14:01,700
+Comparison
+
+471
+00:14:01,700 --> 00:14:04,340
+Comparing two models how arena works
+
+472
+00:14:04,340 --> 00:14:06,340
+And then the third one is
+
+473
+00:14:06,340 --> 00:14:07,800
+Reference based grading
+
+474
+00:14:08,420 --> 00:14:09,620
+So let's say
+
+475
+00:14:09,620 --> 00:14:11,080
+We got an LLM answer
+
+476
+00:14:11,080 --> 00:14:12,940
+But for the same question
+
+477
+00:14:12,940 --> 00:14:14,920
+We already have a gold standard
+
+478
+00:14:14,920 --> 00:14:15,520
+answer
+
+479
+00:14:15,520 --> 00:14:16,640
+The typical answer
+
+480
+00:14:16,640 --> 00:14:18,240
+By comparing those two
+
+481
+00:14:18,240 --> 00:14:20,140
+You give a score
+
+482
+00:14:20,140 --> 00:14:23,860
+This is what we call it as a
+
+483
+00:14:23,860 --> 00:14:24,620
+reference based
+
+484
+00:14:24,620 --> 00:14:26,620
+So in LLM as a judge
+
+485
+00:14:26,620 --> 00:14:27,440
+People usually use these three
+
+486
+00:14:27,440 --> 00:14:28,640
+different techniques
+
+487
+00:14:28,640 --> 00:14:31,920
+And then we have
+
+488
+00:14:31,920 --> 00:14:32,540
+Bias
+
+489
+00:14:32,540 --> 00:14:35,120
+When using LLM as a judge
+
+490
+00:14:35,120 --> 00:14:38,040
+Our judge already
+
+491
+00:14:38,040 --> 00:14:40,480
+Has more talent in some games
+
+492
+00:14:40,480 --> 00:14:41,720
+So let's say
+
+493
+00:14:41,720 --> 00:14:43,080
+When we are using a judge
+
+494
+00:14:43,080 --> 00:14:46,220
+The judge is already very good at
+
+495
+00:14:46,220 --> 00:14:47,360
+Software engineering
+
+496
+00:14:47,360 --> 00:14:48,760
+So when the results are
+
+497
+00:14:48,760 --> 00:14:50,520
+On software engineering
+
+498
+00:14:50,520 --> 00:14:53,920
+He might not be giving
+
+499
+00:14:53,920 --> 00:14:55,540
+The actual ones
+
+500
+00:14:55,540 --> 00:14:57,080
+So there are
+
+501
+00:14:57,080 --> 00:14:58,180
+Different different biases
+
+502
+00:14:58,180 --> 00:15:01,420
+Which is position bias
+
+503
+00:15:01,420 --> 00:15:03,100
+Prefers whichever answer
+
+504
+00:15:03,100 --> 00:15:04,240
+It reads first
+
+505
+00:15:04,240 --> 00:15:08,220
+And second is verbosity bias
+
+506
+00:15:08,220 --> 00:15:09,500
+And third is
+
+507
+00:15:09,500 --> 00:15:10,900
+Self preference bias
+
+508
+00:15:11,040 --> 00:15:13,500
+And the fourth is authority bias
+
+509
+00:15:13,500 --> 00:15:14,880
+What are these biases?
+
+510
+00:15:15,440 --> 00:15:16,300
+Our judge
+
+511
+00:15:16,300 --> 00:15:19,000
+LLM judge
+
+512
+00:15:19,000 --> 00:15:20,240
+Is a personality
+
+513
+00:15:20,960 --> 00:15:22,500
+Some people are angry
+
+514
+00:15:22,500 --> 00:15:24,020
+Some are loving
+
+515
+00:15:24,020 --> 00:15:25,920
+Some are kind
+
+516
+00:15:25,920 --> 00:15:27,900
+And our LLM judge
+
+517
+00:15:28,900 --> 00:15:29,620
+Is a personality
+
+518
+00:15:29,620 --> 00:15:31,160
+Because of that personality
+
+519
+00:15:31,160 --> 00:15:32,840
+The LLM we evaluate
+
+520
+00:15:32,840 --> 00:15:34,160
+The answers change
+
+521
+00:15:34,160 --> 00:15:36,800
+That is what we have in the bias
+
+522
+00:15:36,800 --> 00:15:38,140
+section of LLMs
+
+523
+00:15:38,140 --> 00:15:39,480
+And then the next one
+
+524
+00:15:39,480 --> 00:15:40,800
+Which is called
+
+525
+00:15:40,800 --> 00:15:42,340
+Why benchmarks lie
+
+526
+00:15:42,340 --> 00:15:43,660
+Now we have seen all these numbers
+
+527
+00:15:43,660 --> 00:15:44,260
+We have understood all these numbers
+
+528
+00:15:44,940 --> 00:15:48,320
+But we can believe these numbers
+
+529
+00:15:48,320 --> 00:15:49,640
+That is where the last step
+
+530
+00:15:49,640 --> 00:15:51,180
+Will come into picture
+
+531
+00:15:51,180 --> 00:15:52,940
+No, because
+
+532
+00:15:52,940 --> 00:15:54,320
+Now there is MMLU
+
+533
+00:15:54,320 --> 00:15:57,320
+All the questions in MMLU are known
+
+534
+00:15:57,320 --> 00:15:57,980
+to everyone
+
+535
+00:15:57,980 --> 00:15:59,080
+Now what they will do
+
+536
+00:15:59,080 --> 00:16:00,620
+They will feed these questions to
+
+537
+00:16:00,620 --> 00:16:01,720
+the model itself
+
+538
+00:16:01,720 --> 00:16:03,380
+So the model button is already stuck
+
+539
+00:16:03,380 --> 00:16:05,780
+So when we test them
+
+540
+00:16:05,780 --> 00:16:07,520
+They will get better results
+
+541
+00:16:07,520 --> 00:16:09,440
+So data contamination
+
+542
+00:16:09,440 --> 00:16:10,800
+Is always happening
+
+543
+00:16:10,800 --> 00:16:12,980
+And you cannot blindly trust the
+
+544
+00:16:12,980 --> 00:16:13,580
+benchmarks
+
+545
+00:16:13,580 --> 00:16:15,040
+And second thing is
+
+546
+00:16:15,040 --> 00:16:15,900
+Saturation
+
+547
+00:16:15,900 --> 00:16:17,360
+Every model
+
+548
+00:16:17,360 --> 00:16:19,940
+Scores 90 plus in MMLU
+
+549
+00:16:19,940 --> 00:16:21,840
+Then what is the point of this exact
+
+550
+00:16:21,840 --> 00:16:22,440
+metric?
+
+551
+00:16:23,140 --> 00:16:24,360
+And the third one is
+
+552
+00:16:24,360 --> 00:16:25,560
+Benchmark hacking
+
+553
+00:16:26,440 --> 00:16:28,840
+So now these benchmarks are there
+
+554
+00:16:28,840 --> 00:16:29,820
+The companies know
+
+555
+00:16:29,820 --> 00:16:32,460
+So they will train their models
+
+556
+00:16:32,460 --> 00:16:34,560
+To ace these benchmarks
+
+557
+00:16:34,560 --> 00:16:36,340
+Not for general tasks
+
+558
+00:16:36,340 --> 00:16:38,540
+So you are just like hacking into
+
+559
+00:16:38,540 --> 00:16:40,040
+The benchmark leaderboard
+
+560
+00:16:40,040 --> 00:16:41,640
+So even that thing will happen
+
+561
+00:16:41,640 --> 00:16:43,580
+And the fourth one is the vibes
+
+562
+00:16:43,580 --> 00:16:44,180
+problem
+
+563
+00:16:44,180 --> 00:16:45,240
+Or the bias problem
+
+564
+00:16:45,240 --> 00:16:48,000
+So by eliminating all these
+
+565
+00:16:48,000 --> 00:16:49,760
+To get the better one
+
+566
+00:16:49,760 --> 00:16:50,980
+The three layer approach
+
+567
+00:16:50,980 --> 00:16:53,900
+One is you shortlist the models
+
+568
+00:16:53,900 --> 00:16:55,320
+Based on benchmarks
+
+569
+00:16:55,320 --> 00:16:57,140
+And you go to the arena
+
+570
+00:16:57,140 --> 00:16:59,060
+And compare which one is better
+
+571
+00:16:59,060 --> 00:17:00,920
+From the audience perspective
+
+572
+00:17:00,920 --> 00:17:03,920
+And third you design your own
+
+573
+00:17:03,920 --> 00:17:05,720
+Evaluation metrics and decide which
+
+574
+00:17:05,720 --> 00:17:07,080
+LLM is best for you
+
+575
+00:17:07,080 --> 00:17:09,220
+That is how you will do the
+
+576
+00:17:09,220 --> 00:17:10,740
+Evaluation for these LLMs
+
+577
+00:17:10,740 --> 00:17:12,560
+And the last slide is
+
+578
+00:17:12,560 --> 00:17:14,700
+How to actually pick a model
+
+579
+00:17:14,700 --> 00:17:17,440
+That is best for your use case
+
+580
+00:17:17,440 --> 00:17:19,040
+So what should we do first?
+
+581
+00:17:19,240 --> 00:17:21,140
+Define what is the capability
+
+582
+00:17:21,140 --> 00:17:23,620
+You need, how much performance you
+
+583
+00:17:23,620 --> 00:17:24,220
+need
+
+584
+00:17:24,220 --> 00:17:25,320
+Do you want a coding model?
+
+585
+00:17:25,700 --> 00:17:27,060
+Do you want a reasoning model?
+
+586
+00:17:27,420 --> 00:17:29,020
+Or do you want to work well in art?
+
+587
+00:17:29,600 --> 00:17:30,200
+To be good in physics?
+
+588
+00:17:30,800 --> 00:17:32,360
+It depends on your use case
+
+589
+00:17:32,360 --> 00:17:35,120
+Then based on your use case
+
+590
+00:17:35,120 --> 00:17:36,960
+Shortlist three to five different
+
+591
+00:17:36,960 --> 00:17:37,560
+models
+
+592
+00:17:37,560 --> 00:17:38,540
+From these benchmarks
+
+593
+00:17:39,120 --> 00:17:42,100
+After that, you go and check
+
+594
+00:17:42,100 --> 00:17:43,560
+In the arena website
+
+595
+00:17:43,560 --> 00:17:45,540
+Whether they are in the top
+
+596
+00:17:45,540 --> 00:17:46,420
+leaderboard
+
+597
+00:17:47,080 --> 00:17:48,600
+And after that
+
+598
+00:17:48,600 --> 00:17:51,240
+Run LLM as a judge on your own data
+
+599
+00:17:52,300 --> 00:17:53,140
+Execute on your own data
+
+600
+00:17:53,140 --> 00:17:54,960
+And you pick the one which is better
+
+601
+00:17:54,960 --> 00:17:56,280
+Performing across all of these
+
+602
+00:17:56,280 --> 00:17:56,880
+things
+
+603
+00:17:56,880 --> 00:17:58,860
+So that is how you will
+
+604
+00:17:58,860 --> 00:18:01,060
+Understand how the LLM
+
+605
+00:18:01,060 --> 00:18:03,100
+Evaluation works and how to
+
+606
+00:18:03,100 --> 00:18:05,440
+Choose the best LLM based on your
+
+607
+00:18:05,440 --> 00:18:06,060
+use case
+
+608
+00:18:06,060 --> 00:18:07,680
+But not relying
+
+609
+00:18:07,680 --> 00:18:09,220
+Purely on these benchmarks
+
+610
+00:18:09,980 --> 00:18:11,060
+In this video
+
+611
+00:18:11,060 --> 00:18:13,200
+I hope you learned something
+
+612
+00:18:13,200 --> 00:18:13,980
+From this video
+
+613
+00:18:13,980 --> 00:18:16,020
+And if you have learned something
+
+614
+00:18:16,020 --> 00:18:18,220
+Please let me know what is the topic
+
+615
+00:18:18,220 --> 00:18:20,160
+That you learned best in this video
+
+616
+00:18:20,160 --> 00:18:22,660
+And share it with the one who might
+
+617
+00:18:22,660 --> 00:18:23,760
+need this video
+
+618
+00:18:23,760 --> 00:18:25,280
+That's all for this one
+
+619
+00:18:25,280 --> 00:18:25,880
+Bye bye
+
